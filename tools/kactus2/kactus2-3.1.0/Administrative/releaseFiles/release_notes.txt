@@ -1,0 +1,676 @@
+	===============================================================================
+                            RELEASE NOTES : Kactus2
+           Copyright (c) 2012-2016 Tampere University of Technology
+                            http://funbase.cs.tut.fi
+===============================================================================
+              + Improvement or feature added
+              - Bug fix or something removed
+              * Changed or Information
+===============================================================================
+
+17/06/2016 3.1.0
+----------------------------------------------------
+
++ New design for port map editor:
+	* Added feature to auto-connect logical and physical ports
+	* Logical and physical bounds are now easily editable	
++ Added support for tieoff values in design and port maps
++ Added feature to copy memory-elements along with their sub-elements
++ Improved expression support:
+	* Basic comparison operators are now accepted
+	* Values true/false are now accepted
++ System group names are now visible and editable in Bus editor
++ Generated Verilog parameters are now correctly ordered for references
++ Performance improvements
+
+* ModelSim Generator moved from core to a separate plugin
+* XML processing instructions are now retained in IP-XACT files
+* Added option for Linux installation without admin privilidges
+
+KNOWN UNRESOLVED ISSUES:
+* UI issue: paste command does not update usage count of referenced parameters.
+
+22/04/2016 3.0.0
+----------------------------------------------------
+
++ Updated all IP-XACT elements to 2014 standard
++ Improved validation for many IP-XACT elements
++ Updated Verilog generation for one-to-many ad-hoc connections.
++ Added new view related editors for component editor:
+	* Component instantiations
+	* Design instantiations
+	* Design configuration instantiations.
++ Updated port editor to accept ports without defined left and right bounds as ports with a width of 1.
++ Updated parameter referencing.
++ Updated expression parser.
++ Updated component editor memory map visualization.
++ In component editor, changed cut command to copy and remove selected cells of a table.
++ Updated HW design editor:
+	* Updated component instance creation.
+	* Updated component instance removing.
+	* Updated component instance replacing.
+	* Updated connection removing.
+	* Invalid ad-hoc interfaces and ports are displayed with a red colour.
+	* Enabled deleting of invalid ad-hoc interfaces and ports.
++ Usability fixing.
+
+KNOWN UNRESOLVED ISSUES:
+* UI issue: paste command does not update usage count of referenced parameters.
+
+18/03/2016 3.0.0 RC2
+----------------------------------------------------
+
++ Fixed Linux compilation
++ Added support for expressions in file build command flag replace
++ Improved element validation with large numbers
++ Improved expression evaluation performance
++ Other minor improvements to usability
+
+- Corrected loading sticky notes in design editor
+
+KNOWN UNRESOLVED ISSUES:
+* Memory map header generation from a system design does not work properly.
+* SystemVerilog expressions are not supported by some features including generators.
+  If expressions or references have been used, it may cause at least the following issues:
+	* VHDL generator will generate wrong values.
+	* Port maps will not automatically adjust to changes in port size.
+* VHDL import does not preserve references to model parameters.
+* In ports editor, creating a bus interface through ports is not possible for name column.
+* VHDL generator crashes unexpectedly during run
+
+
+29/02/2016 3.0.0 RC1
+----------------------------------------------------
+
++ Updated all IP-XACT elements to 2014 standard
++ Improved validation for many IP-XACT elements
+
+KNOWN UNRESOLVED ISSUES:
+* Memory map header generation from a system design does not work properly.
+* Parameters created with version 2.7.0 may not work with the latest release due to 
+  change in id formatting. The fastest way to fix this is to re-create the parameters.
+* SystemVerilog expressions are not supported by some features including generators.
+  If expressions or references have been used, it may cause at least the following issues:
+	* VHDL generator will generate wrong values.
+	* Port maps will not automatically adjust to changes in port size.
+* VHDL import does not preserve references to model parameters.
+* In ports editor, creating a bus interface through ports is not possible for name column.
+* VHDL generator crashes unexpectedly during run
+
+15/06/2015 2.8.0
+----------------------------------------------------
+
++ Added feature to import parameters from include files.
++ Improved configurable element variables editor
+	* Synchronizes with the enhanced model parameter definition.
+	* The parameters of the top component can be used in the configurable element variables.
+	* Variables are now grouped according to their location in the component.
++ Added editors for IP-XACT elements remapState and memoryRemap.
++ Added support for expressions in memory map elements.
++ Added support for parameter references in generated header files.
++ Added feature to save new versions of design configurations and designs.
++ Added support for module parameters to hierarchical views.
+
+KNOWN UNRESOLVED ISSUES:
+* Memory map header generation from a system design does not work properly.
+* Parameters created with version 2.7.0 may not work with the latest release due to 
+  change in id formatting. The fastest way to fix this is to re-create the parameters.
+* SystemVerilog expressions are not supported by some features including generators.
+  If expressions or references have been used, it may cause at least the following issues:
+	* VHDL generator will generate wrong values.
+	* Port maps will not automatically adjust to changes in port size.
+* VHDL import does not preserve references to model parameters.
+* In ports editor, creating a bus interface through ports is not possible for name column.
+
+13/05/2015 2.7.970
+----------------------------------------------------
+
++ Added support for SystemVerilog expressions in memory map and address space visualization
++ Added register dimensions in memory map visualization
++ Added remaps for memory maps
++ Added support for SystemVerilog expressions in generated memory map header files
+  excluding generation from a system design
++ Improvements in memory map editor user interface
+
+KNOWN UNRESOLVED ISSUES:
+* Memory map header generation from a system design does not work properly.
+* Parameters created with version 2.7.0 may not work with the latest release due to 
+  change in id formatting. The fastest way to fix this is to re-create the parameters.
+* SystemVerilog expressions are not supported by some features including generators.
+  If expressions or references have been used, it may cause at least the following issues:
+	* VHDL generator will generate wrong values.
+	* Port maps will not automatically adjust to changes in port size.
+* VHDL import does not preserve references to model parameters.
+
+09/04/2015 2.7.572
+----------------------------------------------------
+
++ Added import for Verilog defines as component parameters
++ Added dependency analysis for Verilog include directives
++ Added grouping of configurable element values according to location in component
++ Added placeholder for remap states in component editor
+
+* Changed types in Plugin and Source analyzer plugin interfaces
+
+KNOWN UNRESOLVED ISSUES:
+* Parameters created with version 2.7.0 may not work with the latest release due to 
+  change in id formatting. The fastest way to fix this is to re-create the parameters.
+* SystemVerilog expressions are not supported by some features including generators.
+  If expressions or references have been used, it may cause at least the following issues:
+    * Memory map header generator will generate wrong offsets for registers.
+	* Memory maps visualization shows wrong offset for register and aligns them wrong.
+	* VHDL generator will generate wrong values.
+	* Port maps will not automatically adjust to changes in port size.
+* VHDL import does not preserve references to model parameters.
+
+27/03/2015 2.7.463
+----------------------------------------------------
+
++ Added support for referencing parameters in top component of a design.
++ Added new editor for parameter values in an array.
++ Improved validation of configurable element values:
+	* Minimum, maximum and type restrictions are enforced.
+	* Choices can be selected from drop-down list.
+	* Arrays can be edited in similar fashion to component editor.
++ Added support for enabling/disabling register fields.
++ Added support for expressions in AddressBlock base addrss, range and width.
++ Added validity checks and separate display for referenced designs in hierarchical views. 
+
+* Configurable element values are now stored by default in Design Configuration instead of Design.
+* Renamed hierarchy level "Global" to "Flat".
+* Changed Quartus Pin Import plugin to conform with Import plugin interface.
+
+KNOWN UNRESOLVED ISSUES:
+* Parameters created with version 2.7.0 may not work with the latest release due to 
+  change in id formatting. The fastest way to fix this is to re-create the parameters.
+* SystemVerilog expressions are not supported by some features including generators.
+  If expressions or references have been used, it may cause at least the following issues:
+    * Memory map header generator will generate wrong offsets for registers.
+	* Memory maps visualization shows wrong offset for register and aligns them wrong.
+	* VHDL generator will generate wrong values.
+	* Port maps will not automatically adjust to changes in port size.
+* VHDL import does not preserve references to model parameters.
+
+06/03/2015 2.7.192
+----------------------------------------------------
+
++ Added support for references in Verilog generator.
++ Verilog importer accepts semicolons in comments.
++ Added memory maps and registers to html documentation.
++ Added support for references in import wizard.
+	* Replaced evaluated value with IDs in Verilog import.
++ Improved usability of expression editor.
++ Added support for references in document generator.
++ Implemented module parameters in views.
++ Added name as a frozen column to parameters, model parameters and module parameters.
+	* Name and port number columns were frozen in port table.
++ Where expressions are used, changed the table to show the expression by default.
+	* The tooltip now shows the evaluated value.
++ Register reset value and reset mask can now be inserted as a bit type value.
++ Arrays can be insterted as a value for parameters.
+
+KNOWN UNRESOLVED ISSUES:
+* Parameters created with version 2.7.0 may not work with the latest release due to 
+  change in id formatting. The fastest way to fix this is to re-create the parameters.
+* SystemVerilog expressions are not supported by some features including generators.
+  If expressions or references have been used, it may cause at least the following issues:
+    * Memory map header generator will generate wrong offsets for registers.
+	* Memory maps visualization shows wrong offset for register and aligns them wrong.
+	* VHDL generator will generate wrong values.
+	* Port maps will not automatically adjust to changes in port size.
+* VHDL import does not preserve references to model parameters.
+
+06/02/2015 2.7.0
+----------------------------------------------------
+
++ Added support for SystemVerilog expressions in
+    * component parameter and model parameter value,
+	* component port bounds and default value,
+	* component register offset, size and dimension and
+	* design configurable element values.
++ Added support for referencing parameter and model parameter values in expressions.
++ Added autocomplete feature for available parameter names in expressions.
++ Added feature to view all elements referencing a parameter or model parameter.
++ Configurable element values editor now automatically shows the configurable 
+  elements in component instance, their current and default value.
++ Added feature to show/hide elements of a component in component editor.
++ Added support for component choices.
++ Enabled different signal widths for master and slave modes in abstraction definition. 
++ Improved ribbon toolbar.
+
+KNOWN UNRESOLVED ISSUES:
+* SystemVerilog expressions are not supported by some features including generators.
+  If expressions or references have been used, it may cause at least the following issues:
+    * Memory map header generator will generate wrong offsets for registers.
+	* Memory maps visualization shows wrong offset for register and aligns them wrong.
+	* VHDL and Verilog generator will generate wrong values.
+	* Port maps will not automatically adjust to changes in port size.
+* VHDL import does not preserve references to model parameters.
+
+31/10/2014 2.6.0
+----------------------------------------------------
+
++ New plugin interface for file import.
++ New plugins:
+	* Verilog import.
+	* Verilog generator for components and designs.
+	* Makefile generator.
++ Added feature to run import from component editor.
++ Added editing of views to component wizard.
++ Added feature to sort port list by port number.
+
+* Moved VHDL import tool to import plugin.
+* Updated MCAPI to version 2.015.
+* Updated MCAPI generator.
+
+08/07/2014 2.5.0
+----------------------------------------------------
+
++ All vendor extensions are conserved in IP-XACT documents.
++ Added feature to insert notes in designs.
++ Added feature to run files e.g. script files from Filesets.
++ Added feature to define default run executable for file types.
++ Improved lock operation: Enables browsing of tabs while the document is locked.
++ Added design column for memories.
++ Improved opening of hierarchical components in design.
++ Added feature to reorder bus interfaces in component editor.
+
+- Fixed library crashing with Abstractor objects.
+- Fixed other minor bugs and usability issues.
+
+07/02/2014 2.4.17
+----------------------------------------------------
+
++ Added PadsPartGenerator and QuartusPinImport plugins.
+
+30/1/2014 2.4.0
+----------------------------------------------------
+
++ Improved Editor for port maps.
+    - Improved visualization of port maps.
+    - Added bit-by-bit port map creation.
++ Added Bus interface generation wizard.
+    - New Bus and Abstraction definition generation based on ports in a 
+      component.
+    - Bus interface and port map generation to component using the
+	  generatarted or existing Bus and Abstraction definitions.
++ Added help page for keyboard and mouse shortcuts.
+
+- Fixed numerous non-critical bugs and usability issues.
+
+* Migrated to Qt 5.2.0.
+* Separated plugin system from Kactus2 core.
+
+20/09/2013 2.3.0
+----------------------------------------------------
+
++ Added copy-paste to all designs allowing copying of component instances,
+  interfaces and whole columns excluding connections.
++ Added multi-selection capability for copy-paste and deletion to all designs.
++ Added VLNV drag & drop support to summary tables in the component editor.
++ Added the possibility to rearrange the default positions of component's
+  interfaces in the general page of the component editor.
++ Added a tooltip to show memory map size in AUB for each address block and
+  segment in the memory map and address space editors.
++ Added a check box to enable/disable local memory map.
++ Added Browse button to New dialog pages in order to have more convenient
+  directory selection if the automatically suggested location does not 
+  suffice.
++ Added 'Select All' to the right-click context menu in design editors.
++ Added library filter selections to be saved as a part of the workspace.
+
+- Fixed numerous bugs, both critical and non-critical ones.
+- Fixed a bug causing the port maps dialog to open when using the off-page
+  connection tool.
+- Fixed API/COM interface deletion to also delete the underlying interface
+  metadata from the SW component.
+- Fixed an issue of ad-hoc ports not disappearing when a bus interface
+  containing the corresponding ports is deleted.
+- Removed the 'Parameterizable' firmness attribute option.
+
+* Migrated to Qt 5.1.1.
+* Improved routing of connections in all designs with automatic overlap
+  avoidance.
+* Improved memory map visualization with the following changes:
+    - Memory block widths are now scaled acccording to the window size.
+    - Changes to colors, fonts and alignment to improve readability.
+    - Visualization of overlapping addresses and violations.
+* Improved address spaces visualization.
+* SW designs are now shown in the library and they can be mapped to
+  the CPU's SW view by dragging from the library.
+* Bus interface port maps editor now shows also the port directions.
+* Component editor now highlights the used sections in the tree view.
+* Name conflicts are now checked in all tables in the component editor.
+  This concerns also copy-paste to the tables.
+* Changed the sorting in port and generic editors to case-insensitive.
+* Renamed 'Add Signals to Bus' to 'New Abstraction Definition' to prevent
+  confusion with the Add signals option in the bus editor.
+* Changed the order of HW views in the component editor to list hierarchical
+  views before non-hierarchical ones. Hierarchical views now also show an
+  icon.
+
+
+
+05/07/2013 2.2.0
+----------------------------------------------------
+
++ NEW: Component creation wizard, including a VHDL import tool.
++ NEW: Dependency analysis tool with enhanced file set editing features.
++ NEW: Generator plugins.
+    * Memory map header generator.
+    * Altera BSP generator.
++ NEW: Source analyzer plugins for dependency analysis.
+    * VHDL source analyzer.
+    * C/C++ source analyzer.
++ Added printing of library summary report to the output window after the
+  library scan.
++ Added COM interface implementation reference to be able to specify an
+  implementing driver for each COM interface in the components.
++ Added editing features for HW view reference and file set references
+  to the system view editor in the component editor.
++ Added file set references, build commands, BSP build tools and environment
+  variables to software views in the component editor.
++ Added half-automatic port creation for draft interfaces.
++ Added copy-paste for bus interfaces in the HW design editor.
++ Added UUIDs to be used to identify component instances in the designs
+  (especially in system designs).
++ Added the ability to launch shell scripts for components.
+
+- Fixed performance issues with large libraries causing unnecessary slowdowns
+  in the library window and the component editor.
+- Removed the possibility to create new components/objects from scratch in the
+  library window.
+- Bus editor now shows width field as empty instead of an invalid -1 when the
+  optional width value is not specified in the abstraction definition.
+- Unnecessary errors about URL file paths are no longer shown.
+- Fixed the missing yellow color in the mandatory file type field in the file 
+  set editor.
+- Fixed the bus interface editor showing master interface settings by default
+  even though the interface mode is undefined.
+- Fixed the issue of an ad-hoc port not being hidden in a design after the
+  ad-hoc visibility has been unchecked in the component editor and saved.
+- Fixed a crash when trying to auto-assign addresses in the address editor
+  when the selected component instance has no bus interfaces that would
+  be shown in the editor.
+
+* Migrated to Qt 5.1.0.
+* Changed the naming of library context menu New items.
+* Replaced the old list editor with a better collection editor.
+* Disabled the instantiation of template components to designs.
+* Updated context-sensitive help content.
+* Fixed the issue of the component editor tree view not being updated
+  when making changes through the actual editor pages.
+* Added more detailed information to be generated at the beginning of the
+  generated files.
+* Generated VHDL is now formatted to max 80 character lines.
+* Enhanced editing of ports in the component editor.
+
+
+
+12/02/2013 2.1 (Build 194)
+----------------------------------------------------
+
++ Menu ribbon remade completely with better scaling behaviour. This also
+  fixes the blackout bug present in the previous version.
++ Added the possibility to select which library locations are currently active.
+
+- Fixed missing prints from the library integrity check.
+- Fixed the problem of context help not working due to a missing Qt DLL.
+- Removed any dependencies to GCF framework.
+
+* Migrated to Qt 5.0.1.
+
+
+
+06/02/2013 2.1
+----------------------------------------------------
+
++ Designs can be opened through component editor by double clicking a
+  hierarchical view.
++ Linux desktop integration added.
++ Added info column to memory maps editor displaying which bus interfaces the
+  memory map in binded to.
++ Support for local memory map within address spaces added.
++ Added visualization of memory maps to component editor.
++ Added visualization of adress space to component editor.
++ Added XML header editor to component editor for user to create custom headers
+  to XML IP-XACT files.
+
+- Fixed compilation flags on Kactus2.pro project file to support 64-bit Linux.
+- Fixed bug when drag & dropping abstraction definition to bus interface within
+  component editor.
+- Fixed bug when exporting SW in system design.
+- Fixed bugs in CSV import and export.
+- Fixed VLNV editor content assist bugs.
+
+* Migrated to Qt 5.0.
+* Changed colors of API and COM connections within system designs.
+
+
+
+10/09/2012 2.0
+----------------------------------------------------
+
++ Added address editor for setting memory addresses in HW designs.
++ Added context-sensitive help system (help pages are still work-in-progress).
++ Added support for memory maps and registers to the component editor.
++ Added Show Errors feature to the library in order to enumerate errors of a 
+  specific library item in a dialog.
++ Added naming policies to the settings dialog.
+
+- Fixed the crash after library refresh.
+
+* The hierarchical library view now shows also the designs.
+* Changed icons in the library view.
+* Kactus2 settings are now saved to an INI file in the user's AppData folder.
+* VLNV tree does not sort library items according to the item type anymore.
+
+
+
+13/07/2012 2.0 RC
+----------------------------------------------------
+
++ NEW: Fully revised system design architecture.
++ NEW: Experimental C++ plugin API for creating component generators.
++ Added design editing feature that allows component replacement using
+  drag'n'drop both from the library and within a design.
++ Added rubberband connections to new system designs.
++ Added auto-suggestion of possible generic names.
++ Added refresh button to the ribbon.
++ Added two new document types (extensions): COM definition and API definition.
++ Added CSV import for generics.
++ Added contact information to Kactus2-generated XML files.
+
+- Removed internal IP-XACT objects that are no longer needed with the new
+  system designs.
+
+* Connection bullets now indicate also the direction of the connection.
+* Broken/invalid connections and missing interfaces are now visualized in
+  red in designs.
+* Component instances referencing IP-XACT components that are not found in the
+  library are now kept in the design and visualized in red.
+* Drafted designs can now be saved without packetizing the draft components.
+* Added more information to tool tip texts shown in the library and design
+  editors.
+
+KNOWN UNRESOLVED ISSUES:
+* Kactus2 may crash when the library is refreshed after Plain IP-XACT library
+  view has been used.
+
+
+
+28/03/2012 1.3 (Build 27)
+----------------------------------------------------
+
++ Added shortcuts: Ctrl+Tab for switching tabs, Ctrl+W for closing tabs,
+  F5 for refreshing the documents and Ctrl+Space for switching protection mode.
+
+- Fixed a critical crash in system designs and components having CPU elements.
+
+
+
+22/03/2012 1.3 (Build 1)
+----------------------------------------------------
+
++ NEW CORE FEATURE: Added support for ad-hoc connections and setting ad-hoc
+  visibility for each port separately.
++ Added better validity checking for IP-Xact objects.
++ Added usage instructions to lists that are editable by double clicking.
++ Added address space editor and CPU editing features to the component editor.
+
+- Fixed an incorrect connection of Qt signals in HW designs.
+- Fixed a scroll bar issue in New dialog when using larger fonts in Windows.
+- Fixed the scaling issue of the component editor's left pane.
+- Fixed a crash when saving a design with a packetized draft component.
+- Fixed a regression bug of workspaces working incorrectly with Qt 4.8.0.
+- Removed the unnecessary dependencies to Qt ActiveX modules.
+
+* Migrated to Qt 4.8.0.
+* The library locations are now scanned automatically on program start or
+  when the library locations are changed.
+* Enhanced the error messages coming from the Quartus generator.
+* Enhanced the error messages when saving an incomplete component.
+* Error messages from the library check are now indented.
+* Library check now prints more detailed error summary.
+* Also the MCAPI channel connection function calls are now automatically
+  generated to sender side application code.
+* A flat view is now automatically added to drafted components when they
+  are packetized.
+* Changed the component instance numbering to start from zero instead of one.
+* Abstraction definition is not compulsory anymore in the component editor,
+  but is auto-filled when using bus and abstraction definitions created with
+  Kactus2.
+
+
+
+03/02/2012 1.2 (Build 396)
+----------------------------------------------------
+
++ Added more detailed error reporting to the library's check integrity tool.
++ Added workspaces for managing different window layouts easily.
++ Added bus width display for connections (can be shown/hidden using
+  visibility control).
++ Added automatic association of bus definitions and abstraction definitions
+  when drag'n'dropping bus definitions from the library to a HW design.
++ Added dot graphics for visualizing connected bus intersections.
++ Added undercrossing graphics for visualizing bus intersections which are
+  separate (i.e., not connected with each other).
+
+- Fixed a crash when trying to remove files that were already moved on the
+  disk.
+
+* Kactus2 now saves the paths to library locations, not the direct paths
+  to the XML files.
+* Changed the plain IP-XACT view so that it is not reset when items
+  are added or removed. Also the VLNV dialer now keeps it's contents
+  regardless of the tree updates.
+* New component properties are automatically named to 'unnamed' instead of
+  having no name set.
+
+
+
+19/01/2012 1.2 (Build 1)
+----------------------------------------------------
+
++ Added possibility to select the name of the generated ModelSim file with
+  an extension.
++ Added more thorough error printing for invalid/incomplete IP-XACT documents.
++ Added off-page connectors with rubber-band routing mode for often used
+  interfaces/ports to achieve more readable designs by auto-hiding the rubber-
+  band connections when they are not edited.
++ Added the ability to execute ModelSim generator through the component editor.
++ Added the possibility to select which C source file to open through the
+  system design editor when right-clicking an application component.
++ Added the SW component type visualization in the component editor.
++ Kactus2 now remembers the filter settings that were set on a previous run
+  of the program.
+
+- Fixed the modelsim generator to use the correct syntax for vmake call.
+- Fixed the inability to scroll the port map list when a bus interface is
+  selected.
+- Fixed the problem of opening the component editor by a double-click when a
+  view is not selected.
+- Fixed the out-of-sync problem of editing the same component simultaneously
+  in the component editor and design editor.
+- Fixed the crash when editing endpoints in the SW design editor.
+- Fixed the regular expression problem in the MCAPI code assist.
+- Fixed various small bugs in the system design editor.
+
+* Made the protection feature more user-friendly by not always asking
+  the confirmation whether the user wants to unlock the document.
+* Simplified some list input boxes by removing explicit add/remove buttons.
+* Reorganized the file information view in the component editor.
+* Decreased the VLNV fields area on the docking windows.
+* Moved the XML file writing order so that the general description is written
+  at the beginning part of the file.
+* Double-clicking an SW platform component in the platform stack editor now
+  opens up the hierarchy if it exists and the component editor only if it
+  does not exists (meaning a flat component).
+* Removed the always repeating question of whether the user wants to add
+  the generated VHDL-file to IP-XACT meta-data if it already exists there.
+* Docking windows are now kept visible based on the user's selection of
+  what windows to show/hide.
+
+
+
+25/11/2011 1.1 (Build 1)
+----------------------------------------------------
+
++ Added undo/redo support for system designs.
++ Added SW design editor for editing SW that will be mapped directly to HW
+  components.
++ Added a connection editor for HW designs.
++ Added VHDL template generation for drafted HW components.
++ Added comment generation to the vHDL generator.
++ Added user modifiable code areas to generated VHDL.
++ Added an option to create a new HW design based on an old one.
++ Added component port default value support to the vHDL generator.
++ Added component port type column to the component editor.
++ Default programs set in the operating system are now used to open
+  the files in the component editor.
++ Added entity name setting support for the VHDL generator.
++ Added automatic creation of views for HW components (RTL view for IP and SoC
+  level components, "hierarchical" view for Chip, Board and Product level
+  designs and a fla t view for same lvel components).
++ Added IP-XACT object path to be visible in the component editor's general
+  view.
++ Added more information about ports and model parameters to the generated
+  documentation.
++ Added the possibility to select which windows are shown and which are hidden.
++ Added a component interface editor for HW designs. 
+
+- Added missing internal bus definitions for MCAPI and SW to the program's
+  own internal library.
+- Fixed the VLNV editor crash after a library refresh.
+- IP-XACT namespace fields are now correctly writted to the generated XML files.
+- All created VLNVs are now checked for existence when creating a new object
+  through the New dialog to prevent overwrite errors.
+- Fixed content assist visibility problem on Linux.
+- Fixed the filtering of API/bus definitions according to SW/HW.
+- Fixed the crash when scrolling a locked empty design.
+- Fixed the error of changes being applied without saving when editing
+  hierarchical interfaces of a design.
+- Inout ports are now directly mapped to component instance ports as opposed
+  to using signals which did not work as expected.
+
+* General page is now shown by default in the component editor.
+* Designs can now be browsed and component details previewed even if
+  the document is locked.
+* Appropriate editor windows on the right side are now automatically
+  shown/hidden when an element is selected or deselected on a design.
+* Configuration editor is now hidden for other editors than the HW design
+  editor.
+* Unnecessary ribbon groups are now hidden automatically based on the open
+  editor.
+* Changed the report generator to categorize ports under bus interfaces
+  instead of one long list.
+
+
+
+04/10/2011 1.0 (Build 1)
+----------------------------------------------------
+
+* Public release
+* System designs and MCAPI editing are not fully featured in this release.
+  Upcoming system design features include undo/redo support, enhanced code
+  generation & validation and Makefile generation.

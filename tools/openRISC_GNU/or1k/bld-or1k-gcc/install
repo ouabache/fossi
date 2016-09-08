@@ -1,0 +1,4 @@
+../or1k-gcc/configure --target=or1k-elf --prefix=$HOME/or1k-toolchain --enable-languages=c --disable-shared --disable-libssp
+make
+make install
+

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Kactus2</title>
+	<meta name="description" content="Kactus2 website">
+	<meta name="keywords" content="Kactus2, IP-XACT, IEEE-1685, System-on-Chip, EDA, ESL, Design Automation, Design Flow, FPGA, ASIC, Embedded Systems">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" type="image/png" href="http://funbase.cs.tut.fi/favicon.png">
+	<link rel="stylesheet" href="Kactus2_files/bootstrap.css">
+	<style>
+		body {
+		  padding-top: 50px;
+		  padding-bottom: 20px;
+		}
+		.logo-center {
+		  margin-left:auto;
+		  margin-right:auto;
+		  display: block;
+		}
+	</style>
+	<link rel="stylesheet" href="Kactus2_files/bootstrap-theme.css">
+	<link rel="stylesheet" href="Kactus2_files/main.css">
+	<script id="undefined" src="Kactus2_files/inpage_linkid.js" async="" type="text/javascript"></script><script src="Kactus2_files/ga.js" async="" type="text/javascript"></script><script src="Kactus2_files/modernizr-2.js"></script>
+</head>
+<body>
+ <div class="container">
+ <div class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="tabs"> <!-- container -->
+	<div class="masthead"> <!-- valikkopalkin nappulat -->
+		<!--<h3 class="text-muted">Kactus2</h3>-->
+		<a href="#main_x">
+		<img style="margin-bottom: 4px;" src="Kactus2_files/kactus2_logo_small.png"></a>
+		<ul role="tablist" style="float: right;" class="nav nav-justified ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"> 
+			 <!-- Muista laittaa _x perään jotta sivu ei kelaudu alaspäin! -->      
+			<li aria-selected="false" aria-labelledby="ui-id-1" aria-controls="main_x" tabindex="-1" role="tab" class="ui-state-default ui-corner-top"><a id="ui-id-1" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#main_x">Main</a></li>
+			<li aria-selected="false" aria-labelledby="ui-id-2" aria-controls="ipxact_x" tabindex="-1" role="tab" class="ui-state-default ui-corner-top"><a id="ui-id-2" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#ipxact_x">IP-XACT</a></li>
+			<li aria-selected="false" aria-labelledby="ui-id-3" aria-controls="kactus2_x" tabindex="-1" role="tab" class="ui-state-default ui-corner-top"><a id="ui-id-3" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#kactus2_x">Kactus2</a></li>
+			<li aria-selected="true" aria-labelledby="ui-id-4" aria-controls="tutorials_x" tabindex="0" role="tab" class="ui-state-default ui-corner-top ui-tabs-active ui-state-active"><a id="ui-id-4" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#tutorials_x">Tutorials</a></li>
+			<li aria-selected="false" aria-labelledby="ui-id-5" aria-controls="examples_x" tabindex="-1" role="tab" class="ui-state-default ui-corner-top"><a id="ui-id-5" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#examples_x">Examples</a></li>
+			<li aria-selected="false" aria-labelledby="ui-id-6" aria-controls="about_x" tabindex="-1" role="tab" class="ui-state-default ui-corner-top"><a id="ui-id-6" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#about_x">About</a></li>
+			<li aria-selected="false" aria-labelledby="ui-id-7" aria-controls="contact_x" tabindex="-1" role="tab" class="ui-state-default ui-corner-top"><a id="ui-id-7" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#contact_x">Contact</a></li>
+			<!-- <li><a href="#woke_x">Woke</a></li> -->
+			<!-- <li><a href="#publications_x">Publications</a></li> -->
+		</ul>
+	</div> <!-- /valikkopalkin nappulat -->
+	
+	<!-- main-tab starts -------------------------------------------------------------->
+    <div style="display: none;" aria-hidden="true" aria-expanded="false" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-1" id="main_x"> <!-- main-tab -->
+		<noscript>
+			<div class="alert alert-danger"><h2>Please enable JavaScript on to access this page!</h2>
+			</div>
+		</noscript> 
+		<div class="jumbotron">
+			<br>
+			This is the home of Kactus2, the open source IP-XACT-based tool for ASIC, FPGA and embedded systems design. This and <a href="http://www.tut.fi/en/about-tut/departments/pervasive-computing/research/downloads/index.htm" target="_blank"> more</a> are brought to you by <a href="http://www.tut.fi/en/about-tut/departments/pervasive-computing/index.htm" target="_blank"> Tampere University of Technology.</a>
+			<p>
+			<a class="btn btn-primary btn-lg" href="http://sourceforge.net/projects/kactus2/files/" role="button">Download Kactus2</a>
+			<a class="btn btn-primary btn-lg" href="http://funbase.cs.tut.fi/feedback" role="button">Give us feedback</a>
+			</p>
+			<b>Important: Kactus2 3.0 is the most thorough revision since the 
+project started. With about 80% of the code lines touched we introduced 
+big architectural changes and a lot of new features to support the new 
+IEEE-1685-2014 IP-XACT standard. All of this gives better IP and Design 
+configurability and adopts the familiar SystemVerilog format for 
+parameters and expressions. We offer a conversion tool upon request for 
+the old IP-XACT XML documents created by previous versions of Kactus2.</b>
+		</div>
+    </div> <!-- /main-tab -->
+	<!-- main-tab ends -------------------------------------------------------------->
+	<!-- ip-xact-tab starts --------------------------------------------------------->
+	<div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-2" id="ipxact_x"> <!-- ip-xact-tab -->
+		<h2>IP-XACT Basics</h2>
+		<p>IP-XACT standardises the descriptions of IP-block and design as 
+well as the design flow including integration and configuration 
+information. The scope of IP-XACT covers the IP component library and HW
+ design, and offers placeholders for settings, parameters, options and 
+scripts needed in design automation. It does not specify any language to
+ be used, but XML format to store the information. IP-XACT tools are 
+used for editing and launching other tools for automated operation.</p>
+		<div align="center">
+			<img class="img-autoscale" img="" alt="ipxact_scope.png" src="Kactus2_files/ipxact_scope.png">
+		</div>
+		<p>The <b>IP-XACT Component</b> is a central placeholder for all IP 
+information. It defines the interface, parameters, registers/memory 
+areas and some non-functional properties. All these apply to one or more
+ <b>Views</b> that give the implementation of the IP by source code associated as <b>FileSets</b>. IP-XACT objects are referenced by a <b>VLNV</b>
+ (Vendor,Library, Name,Version) identifier found in the XML file. For 
+this reason the location of the IP-XACT XML file is not significant.</p>
+		<div align="center">
+			<img class="img-autoscale" img="" alt="ipxact_component.png" src="Kactus2_files/ipxact_component.png">
+		</div>
+		<p>The <b>IP-XACT Design</b> is an assembly of IP-XACT component instances. The components are connected by <b>Bus interfaces</b> that use <b>Bus Definitions</b>. Each component may have parameters and default values, which can be overridden instance by instance.</p>
+		<div align="center">
+			<img class="img-autoscale" img="" alt="ipxact_design.png" src="Kactus2_files/ipxact_design.png">
+		</div>
+		<p>IP-XACT supports infinite levels of hierarchy as depicted in the 
+Figure below. A component is hierarchical when it includes a design, 
+which includes instance(s) of other component(s). Any IP-XACT component 
+should be independently re-usable at any level of design hierarchy, but 
+it is still possible to propagate parameter values down in hierarchy.</p>
+		<div align="center">
+			<img class="img-autoscale" img="" alt="ipxact_hierarchy.png" src="Kactus2_files/ipxact_hierarchy.png">
+		</div>
+		<p>IP-XACT helps describing many variations of the component. <b>Parameters</b>
+ are used to define configurable things in many IP-XACT elements (the 
+component itself). The component can have several implementations, each 
+defined in <b>Component Instantiations</b> e.g. Verilog, VHDL and SystemC. <b>Module parameters</b>
+ are implementation language specific parameters. Module and other 
+parameters can refer to each other. A hierarchical component can have 
+different designs defined in <b>Design Instantiations</b> or a design that has different configurations defined in <b>Design Configuration Instantiations</b>.</p><p>
+		</p><div align="center">
+			<img class="img-autoscale" img="" alt="ipxact_compconf.png" src="Kactus2_files/ipxact_compconf.png">
+		</div>
+		<p><b>Views</b> are collections of the Instantiations for some 
+specific design purpose like high-level modeling, verification or 
+releasing a product. We call them "mission configurations" to separate 
+them from Instantiations that are "implementation configurations". A 
+component can have all instantiation types, but Views tell what of them 
+are used in each case.</p>
+		<div align="center">
+			<img class="img-autoscale" img="" alt="ipxact_instantiations_views.png" src="Kactus2_files/ipxact_instantiations_views.png">
+		</div>
+		<p>IP-XACT designs can be configured in two principal ways: by 
+different parameter values or by different Views for component 
+instances.  Each setup is stored in a <b>Design Configuration</b>, each 
+of which refers to the same Design. Parameters can be propagated down in
+ hierarchy as follows. The parameters and Module Parameters that are 
+defined to be configurable in Component Instances are seen as <b>Configurable Element Values (CEV)</b>
+ in the Design. The CEV can be set to a fixed value or to refer to other
+ parameter e.g. at the upper hierarchy. Design Configurations are handy 
+to define different sets of the CEVs</p>
+		<div align="center">
+			<img class="img-autoscale" img="" alt="ipxact_designconf.png" src="Kactus2_files/ipxact_designconf.png">
+		</div>
+		<p>A simplified IP-XACT design flow is depicted in the Figure below. 
+Generators produce top-level HDL code for synthesis and project files 
+for collecting included HDL code from the components. Generators are 
+often used to create HW dependent SW code, e.g. header files for the 
+registers.</p>
+		<div align="center">
+			<img class="img-autoscale" img="" alt="ipxact_designflow.png" src="Kactus2_files/ipxact_designflow.png">
+		</div>
+		<h2>Kactus2 scope on IP-XACT</h2>
+		<p>Kactus2 includes tools for all essential parts of the IP-XACT 
+design flow. Import wizards are used to create IP-XACT models from 
+legacy VHDL and Verilog code, and generators are used to create source 
+code for simulation, synthesis and SW development.</p>
+		<div align="center">
+			<img class="img-autoscale" img="" alt="kactus2_scope.png" src="Kactus2_files/kactus2_scope.png">
+		</div>
+		<h2>Legacy HDL code import to IP-XACT (VHDL, Verilog)</h2>
+		<p>Kactus2 import wizard searches for the VHDL entity and extracts the
+ ports. Parameters are extracted from the generics, and constants found 
+in packages. Kactus2 writes this information to the IP-XACT component 
+XML file. The  source files are referenced by the path and name in the 
+XML file.</p>
+		<div align="center">
+			<img class="img-autoscale" img="" alt="vhdl_import.png" src="Kactus2_files/vhdl_import.png">
+		</div>
+		<h2>HDL code generation from IP-XACT (VHDL, Verilog)</h2>
+		<p>Kactus2 VHDL generator creates the top entity for the IP-XACT 
+Design that instantiates the component entities. The Component entities 
+can also be (re)generated from the IP-XACT Component, especially if 
+there is only the IP-XACT description without any imported HDL files.</p>
+		<div align="center">
+			<img class="img-autoscale" img="" alt="vhdl_generation.png" src="Kactus2_files/vhdl_generation.png">
+		</div>
+    </div> <!-- /ip-xact-tab -->
+	<!-- ip-xact-tab ends ------------------------------------------------------------>
+	<!-- kactus2-tab starts ------------------------------------------------------>
+    <div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-3" id="kactus2_x"> <!-- kactus2-tab -->
+		<h2>Kactus2</h2>
+		<h3>Kactus2 guides towards faultless IP and design data exchange</h3>
+		<p>Kactus2 offers best of class usability that helps communication 
+between HW and SW designers, customers and subcontractors and between 
+managers and developers. Graphical designs views help explain the 
+product architecture and contribute to requirements. Kactus2 allows 
+combination of drafted and fully specified IPs at the same design. All 
+have the freedom to propose new blocks and try out different 
+alternatives, while all data is formalized and manual copying of data 
+eliminated.</p>
+		<p>Kactus2 can be fitted to current design flows. Basically there's no
+ need to change code development, synthesis, verification or other 
+critical tools, but the way of configurations might need changes. Import
+ wizards help creating IP -XACT models from existing VHDL and Verilog 
+IPs. Generators produce synthesisable code for the RTL flow.</p>
+		<p>You don't lock-in with Kactus2, because you own data and can freely access it at any time. Kactus2 is based on <a href="http://standards.ieee.org/getieee/1685/download/1685-2014.pdf" target="_blank">IEEE1685/IP-XACT metadata</a> with our free and open extensions. Kactus2 comes with a core for managing components and designs plus plugins for automation.
+		</p>
+			<div align="center">
+				<img class="img-autoscale" img="" alt="drafting" src="Kactus2_files/whiteboard_vs_kactus2.png" width="800px">
+			</div>
+		<h2>To whom</h2>
+		<p><b>Small and mid-size vendor and integrator companies </b>that now 
+have only the traditional toolset: office tools (doc, xls, ppt) for 
+specification/documentation and Verilog/VHDL, C/C++, FPGA tools for 
+designs. Kactus2 helps taking a step to metadata based design that keeps
+ products much better manageable while still using also the familiar 
+tools.</p>
+		<p><b>Universities and research laboratories</b> that implement new 
+content (IP bocks, SW modules). Kactus2 helps packetizing the content in
+ a standard way for (re)using it much easier by others, specifically 
+when the original contributor leave after e.g. a PhD project.
+		</p><p><b>Bigger companies and tool providers </b>that already have 
+modern design tool flows and resources for developing higher abstraction
+ methods. Kactus2 offers a great R&amp;D environment for trying new 
+methodology ideas and user interface innovations.
+		</p>
+			<div align="center">
+				<img class="img-autoscale" img="" alt="HW/SW mapping" src="Kactus2_files/kactus2_sysdes.png" width="800px">
+			</div>
+		
+		<h2>What you can do with Kactus2</h2>
+			<div align="center">
+			<img class="img-autoscale" img="" alt="Kactus2 flow" src="Kactus2_files/kactus2_flow.png" width="500px">
+			</div>
+		<p><b>Draft &amp; Specify from scratch</b></p>
+		<ul>
+			<li>Quickly draft block diagram blueprints for product boards (PCB), 
+chips, system-on-chip, IPs and get them stored in IP-XACT format
+			</li>
+			<li>Draft communication channel abstraction endpoint design for all processors and fixed IPs in a product
+			</li>
+			<li>For new IP-blocks generate code templates (VHDL entities, headers) from IP-XACT components defined in Kactus2
+			</li>
+		</ul>
+			<div align="center">
+				<img class="img-autoscale" img="" alt="kactus2 drafting" src="Kactus2_files/kactus2_draft.png" width="800px">
+			</div>
+		<p><b>Packetize IP for reuse and exchange</b>
+		</p>
+		<ul>
+			<li>Create "electronic datasheets" of your existing IPs for library as templates and blocks ready for integration
+			</li><li>Import, export and integrity check IP libraries from any standard compatible IP vendor
+				<div align="center">
+					<img class="img-autoscale" img="" alt="Kactus2 SW import wizard finished" src="Kactus2_files/kactus2_swimport_finish.png" width="800px">
+				</div>
+			</li><li>Analyze file dependencies between IP's source files and easily see changes in any file 
+			</li>
+		</ul>
+			<div align="center">
+				<img class="img-autoscale" img="" alt="Kactus2 dependency analyzer" src="Kactus2_files/kactus2_dependency.png" width="800px">
+			</div>
+		<p><b>Create MP-SoC products</b></p>
+		<ul>
+			<li>Create HW designs with hierarchy across PCB, Chip, SoC, IP-blocks</li>
+			<li>Define memory areas and registers for the components
+				<div align="center">
+					<img class="img-autoscale" img="" alt="Kactus2 memory visualization" src="Kactus2_files/kactus2_memvisual.png" width="800px">
+				</div>
+			</li>
+			<li>Configure base addresses
+				<div align="center">
+					<img class="img-autoscale" img="" alt="Kactus2 address editor" src="Kactus2_files/kactus2_addresseditor.png" width="800px">
+					</div>
+			</li>
+			<li>Create system designs that map SW to HW
+			</li>
+			<li>Create SW architecture with communication abstraction as channels (MCAPI, Socket and others)
+			</li>
+			<li>Configure all designs
+			</li>
+			<li>Generate everything ready for HDL synthesis and SW build for all processors
+				<div align="center">
+					<img class="img-autoscale" img="" alt="Kactus2 memory header generator" src="Kactus2_files/kactus2_memheadergen.png" width="600px">
+				</div>
+			</li>
+		</ul>
+		<h2>What you can't do with Kactus2</h2>
+		<ul>
+			<li>Create IP functionality. You should use HDL editors and SW IDEs. 
+Kactus2 can create stub code for interfaces. For HW components you may 
+use e.g. <a href="http://tce.cs.tut.fi/" target="_blank">TCE-tools</a> to create "C to VHDL" so you can create the copmponent source without knowing much of HDLs.
+			</li>
+			<li>Generate binaries/executables. You should use HDL synthesis and 
+SW compilation tools, but there is clear path from Kactus2 to other 
+tools. IP-XACT generators are the standard way to build automation 
+between tools.
+			</li>
+			<li>
+			Press money. But you save a lot of time and effort.
+		</li></ul>
+		
+		<h2>What is Metadata?</h2>
+		<p>Kactus2 follows the general platform based design paradigm with 
+extensive use of metadata. Product is created by assembling application 
+components on platforms, and all are packetized to a library with 
+metadata. Metadata makes sure unambiguous interoperability between 
+partners and tools and makes design automation possible.</p>
+		<p><b>Metadata for a component</b> is formal, vendor and technology 
+independent description of the component. It includes references to 
+source files and other related information. Components are in practice 
+HW blocks and SW codes in different abstraction and granularity levels.</p>
+		<p><b>Metadata for a design</b> is a formal structural description. It
+ includes references to component metadata, tools, configurations and 
+other design related information.</p>
+		<p><i>In brief, metadata is like an electronic datasheet + product + project documentation.</i><a href="http://funbase.cs.tut.fi/doc/KACTUS2_IP-XACT_IEEE1685_compatible_design_environment_for_embedded_MP-SoC_products_web_edition.pdf">Read more on our white paper</a> or <a href="http://funbase.cs.tut.fi/doc/MeCoES_2012_Kactus2_web.pdf">presentation on MeCoES'12 workshop.</a>
+		
+		</p><h2>What is metadata based design flow?</h2>
+		<p>First, components are encapsulated and separated from their source,
+ e.g. HDL source code is embedded via links to the source file in the 
+metadata file. IP metadata is used to assemble compopnents in a design. 
+IPs as well as the design itself may have generic parameters, which are 
+configured using generators that are typically scripts. The final 
+configured design can be seen as "instructions" on how to create the 
+final executables.</p>
+			<div align="center">
+				<img class="img-autoscale" img="" alt="metadata" src="Kactus2_files/metadata.png" width="300px">
+			</div>
+		
+		<h2>Metadata benefits</h2>
+		<ul>
+			<li>Metadata-based design flow makes selling, buying, integrating and reusing IPs and complete designs much less error prone</li>
+			<li>Saves time and effort when managing several configurations and variants of the products</li>
+			<li>Machine readable documentation also for the tools, languages and environments for backup and maintenance</li>
+			<li>Increased design automation and standard compatibility</li>
+		</ul>
+		
+		<h2>Kactus2 extensions to IP-XACT</h2>
+			<div align="center">
+				<img class="img-autoscale" img="" alt="kactus2_metadata_extensions" src="Kactus2_files/kactus2_ipxact_extensions.png" width="500px">
+			</div>
+		<dl class="dl-horizontal">
+		<dt>Implementation</dt>
+			<dd>We handle also SW components as IP-XACT objects. This allows 
+building dependencies and reusing SW easier. IP-XACT parameters and 
+vendor extensions are utilized.</dd>
+		<dt>Firmness</dt>
+			<dd>We add attributes to help managing the design process from 
+re-usable components and designs to fixed product releases. IP-XACT 
+parameters and vendor extensions are utilized.</dd>
+		<dt>Product hierarchy</dt>
+			<dd><p></p>Embedded system products consists of HW and SW design data
+ and plenty of process and other auxiliary information. We consider the 
+product as a hierarchy of its physical realization. Environments refer 
+to the context in which products are specified, verified, tested and 
+finally used. Each product level include associated information like 
+documentation, source codes, tools, configurations and production data.<p></p>
+			<p>Our product hierarchy model consists of boards containing chips 
+that are fixed-function or they can accommodate a system-on-chip (SoC), 
+which are built up from IP-blocks. All levels include both HW and SW 
+related information.</p>
+			<p>The scope of IEEE1685/IP-XACT is on the IP and SoC levels, but we 
+apply the standard also to other levels, aiming at product level 
+information management (PDM, product data management).</p></dd>
+		</dl>		
+		
+		<h2>Roadmap and Kactus2 releases</h2>
+		<p>See the completed and planned releases at <a href="http://kactus2.cs.tut.fi/" target="_blank">Kactus2 issue tracker</a> and frequently updated code statistics at <a href="https://www.openhub.net/p/kactus2" target="_blank">Openhub</a></p>
+		<div align="center">
+			<img class="img-autoscale" img="" alt="kactus2_codestatistics.png" src="Kactus2_files/kactus2_codestatistics.png">
+		</div>
+		<h2>Summary of past milestones</h2>
+		<div align="center">
+			<img class="img-autoscale" img="" alt="Kactus2 roadmap" src="Kactus2_files/kactus2_roadmap.png">
+		</div> 
+	</div> <!-- /kactus2-tab -->
+	<!-- kactus2-tab end ------------------------------------------------>
+    <!-- examples-tab starts ------------------------------------------------>
+	<div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-5" id="examples_x"> <!-- examples-tab -->
+		<h2>Examples</h2>
+		<h3>Example designs</h3>
+		<p></p>
+		<div class="well">
+			<h3>Multicore Association MCAPI implementation and demo for PC and ARM</h3>
+			<p>A demo includes VirtualBox Lubuntu image (1.2GB) including the following:</p>
+			<ul>
+				<li>POSIX-based MCAPI implementation <b>PMQ-MCAPI</b></li>
+				<li>Demo projects for PC and Altera Cyclone V FPGA-SoC ARM ready to launch</li>
+				<li>Linux build for ARM</li>
+				<li>Kactus2 libraries for the demos</li>
+				<li>Kactus2, compilers etc. to get it up and running with zero configuration</li>
+			</ul>
+			<p>Read<a href="http://www.rocketboards.org/foswiki/Projects/Kactus2SoftwareDemoWithPreConfiguredEnvironment" target="_blank"> instructions</a>,<a href="http://urn.fi/URN:NBN:fi:tty-201409301460" target="_blank">documentation</a> and get PMQ-MCAPI <a href="https://github.com/BlackFairy/PMQ-MCAPI" target="_blank">open source code.</a> </p>
+			<a href="http://funbase.cs.tut.fi/downloads/MCAPI_demo/Ubuntu-Kactus2-PMQ-MCAPI-Demo.ova" class="btn btn-default btn-lg"> Download image</a>
+			<p></p>
+			<p>Alternatively you may download only Kactus2 library (3.1MB) containing the demo projects.</p>
+			<a href="http://funbase.cs.tut.fi/downloads/MCAPI_demo/PMQ-MCAPI-Demo_Kactus2_library.zip" class="btn btn-default btn-lg"> Download Kactus2 library</a>
+			<h4>Quick guide to open Kactus2 library</h4>
+			<ul>
+				<li>Download MCAPI demo Kactus2 library and unzip it to a working folder</li>
+				<li>Download Kactus2 and install it</li>
+				<li>Open Kactus2 -&gt; Configure library -&gt; Add the path to the 
+working library where you unzipped the MCAPI Kactus2 library package <img class="img-autoscale" img="" alt="Setting_directories_for_Kactus2_library.png" src="Kactus2_files/Setting_directories_for_Kactus2_library.png"></li>
+				
+				<li>Browse the project on left. You may open the System design that shows MCAPI channels designed in Kactus2
+				<!-- <img class="img-autoscale" img alt="PMQ-MCAPI_Demo_Kactus2_System_Design_ARM.png" src="img/PMQ-MCAPI_Demo_Kactus2_System_Design_ARM.png"></img> -->
+				</li>
+			</ul>
+		</div> <!-- /well -->
+		<h2>Kactus2 Publications</h2>
+		<ul class="list-group">
+			<li class="list-group-item">
+			<a href="http://iecon2015.com/"> Esko Pekkarinen, Mikko Teuho, Erno 
+Salminen, Timo D. Hämäläinen, Resolving parameter reference management 
+in IP-XACT using Kactus2, IECON'2015 41st Annual Conference of the IEEE 
+Industrial Electronics Society, Nov 9–12, 2015, Yokohama, Japan, 6 
+pages.</a> 
+			</li>
+			<li class="list-group-item">
+			<a href="https://www.researchgate.net/publication/283256288_Semantics_analyzing_expression_editors_in_IP-XACT_design_tool_Kactus2">
+ Mikko Teuho, Esko Pekkarinen, Timo D. Hämäläinen, Semantics analyzing 
+expression editors in IP-XACT design tool Kactus2, Proceedings of the 
+14th Symposium on Programming Languages and Software Tools, Oct 9-10, 
+2015, Tampere, Finland, p. 106-118.</a> 
+			</li>
+			<li class="list-group-item">
+			<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6972441&amp;isnumber=6972425">
+ Erno Salminen, Timo D. Hämäläinen, Gamification of System-on-Chip 
+design, International Symposium on System-on-Chip, Tampere, Finland, Oct
+ 28-29, 2014, 8 pages.</a> 
+			</li>
+			<li class="list-group-item">
+			<a href="https://www.researchgate.net/publication/257958466_Extending_IP-XACT_to_embedded_system_HWSW_integration">
+ Antti Kamppi, Lauri Matilainen, Joni-Matti Määttä, Erno Salminen, Timo 
+D. Hämäläinen, Extending IP-XACT to embedded system HW/SW integration, 
+International Symposium on System-on-Chip, Tampere, Finland, Oct 23-24, 
+2013, 6 pages.</a> 
+			</li>
+			<li class="list-group-item">
+			<a href="https://www.researchgate.net/publication/257958444_Dependency_Analysis_and_Visualization_Tool_for_Kactus2_IP-XACT_Design_Framework">Joni-Matti
+ Määttä, Mikko Honkonen, Tommi Korhonen, Erno Salminen, Timo D. 
+Hämäläinen, Dependency Analysis and Visualization Tool for Kactus2 
+IP-XACT Design Framework , International Symposium on System-on-Chip, 
+Tampere, Finland, Oct 23-24, 2013, 6 pages.</a>
+			</li>
+			<li class="list-group-item">
+			Lauri Matilainen, Sakari Lahti, Otto Esko, Erno Salminen, Timo D. 
+Hämäläinen, Integration of TTA processor tools to Kactus2 IP-XACT design
+ flow, Norchip, Copenhagen, Denmark, Nov 2012, 6 pages. 
+			</li>
+			<li class="list-group-item">
+			<a href="https://www.researchgate.net/publication/259240380_Kactus2_Extended_IP-XACT_metadata_based_embedded_system_design_environment">Antti
+ Kamppi, Joni-Matti Määttä, Lauri Matilainen, Erno Salminen, Timo D. 
+Hämäläinen, Kactus2: Extended IP-XACT metadata based embedded system 
+design environment , Embedded Systems Week / MeCoES: Metamodeling and 
+Code Generation for Embedded Systems workshop, Oct 7, 2012, 6 pages.</a> 
+			</li>
+			<li class="list-group-item">
+			<a href="http://www.researchgate.net/publication/233388089_MCAPI_abstraction_on_FPGA_based_SoC_design/file/79e4150a09aeb8e578.pdf">Lauri
+ Matilainen, Erno Salminen, Timo D. Hämäläinen, MCAPI abstraction on 
+FPGA based SoC design, FPGA World 2012, Oct 5, 2012, Tampere, Finland, 6
+ pages.</a>
+			</li>
+			<li class="list-group-item">
+			Lauri Matilainen, Lasse Lehtonen, Joni-Matti Määttä, Erno Salminen, 
+Timo D. Hämäläinen, System-on-Chip deployment with MCAPI abstraction and
+ IP-XACT metadata, International Conference on Embedded Computer 
+Systems: Architectures, Modeling, and Simulation (SAMOS XI), Samos, 
+Greece, July 2012, 8 pages
+			</li>
+			<li class="list-group-item">
+			Erno Salminen, Timo D. Hämäläinen, Marko Hännikäinen, "Applying 
+IP-XACT for product data management", International Symposium on 
+System-on-Chip, Tampere, Finland, Oct 31 - Nov 2, 2011, pp. 86-91.
+			</li>
+			<li class="list-group-item">
+			Antti Kamppi, Lauri Matilainen, Joni-Matti Määttä, Erno Salminen, 
+Timo D. Hämäläinen, Marko Hännikäinen, "Kactus2: Environment for 
+Embedded Product Development Using IP-XACT and MCAPI", The 14th 
+Euromicro Conference on Digital System Design (DSD), Oulu, Finland, Aug 
+31 - Sep 2, 2011, pp. 262-265.
+			</li>
+			<li class="list-group-item">
+			Lauri Matilainen, Erno Salminen, Timo D. Hämäläinen, Marko 
+Hännikäinen, "Multicore Communications API (MCAPI) implementation on an 
+FPGA multiprocessor", International Conference on Embedded Computer 
+Systems: Architectures, Modeling, and Simulation (SAMOS XI), Samos, 
+Greece, July 18-21, 2011, pp. 286 - 293.
+			</li>
+		</ul>	
+    </div> <!-- /examples-tab -->
+	<!-- examples-tab ends------------------------------------------------>
+    <!-- publications-tab ------------------------------------------------
+	<div id="publications_x"> 
+		<p>&nbsp;</p
+		<h2>Papers</h2>
+     </div> 
+	 -->
+    <!-- tutorials-tab ----------------------------------------------------->
+    <div aria-hidden="false" aria-expanded="true" style="display: block;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-4" id="tutorials_x"> <!-- tutorials-tab -->
+		<h2>Tutorials</h2>
+		<p><a href="http://funbase.cs.tut.fi/doc/Kactus2_ORCONF2015_web_rs.pdf" target="_blank">An introduction to IP-XACT and Kactus2</a> presentation at <a href="http://orconf.org/" target="_blank">ORCONF2015, Oct 9-11 at CERN</a>
+		</p>
+		<p><a href="http://funbase.cs.tut.fi/doc/Kactus2_vlnv.pdf" target="_blank">Learn about VLNV and Kactus2 library</a>
+		</p>
+		<h3>Kactus2 keyboard shortcuts
+		</h3>
+			<dl class="dl-horizontal">
+				<dt>ctrl-{z,x,c,v,a}</dt>
+					<dd>Usual shortcuts for editing</dd>
+				<dt>ctrl-space</dt>
+					<dd>Lock/unlock</dd>
+				<dt>ctrl-tab, ctrl-shift-tab</dt>
+					<dd>Move left/right of the design view tabs</dd>
+				<dt>alt-LeftMouseButton</dt>
+					<dd>When dragging from library, drop to replace the component in design. When dragging within design, switch dropped component</dd>
+				<dt>F2</dt>
+					<dd>Open (table cell) for editing</dd>	
+			</dl>
+		<h2>Kactus2 Video tutorials</h2>
+		<div class="row"> <!-- row1 -->
+			<div class="col-lg-6 col-blue">
+				<iframe src="http://www.youtube.com/embed/PcIh8H9vgS4?feature=player_detailpage" allowfullscreen="" frameborder="0" height="315" width="420"></iframe>
+				<p><a class="btn btn-xs btn-info" data-toggle="collapse" data-target="#video3">Details <b class="caret"></b></a></p>
+					<div style="height: auto;" class="in" id="video3">
+					Tutorial on exporting pin definitions from QuartusII to Kactus2, 
+creating IP-XACT bus interfaces and port maps and generating from 
+Kactus2 the PADS Logic decals for PCB design
+					</div>
+			</div>		
+			<div class="col-lg-6 col-blue">
+				<iframe src="http://www.youtube.com/embed/ca5k5aNcBCc?feature=player_detailpage" allowfullscreen="" frameborder="0" height="315" width="420"></iframe>
+				<p><a class="btn btn-xs btn-info" data-toggle="collapse" data-target="#video0">Details <b class="caret"></b></a></p>
+					<div class="collapse" id="video0">
+					Getting started for the first time with existing libraries
+						<ul>	
+							<li>
+							Basics of docking windows and customizing workspaces
+							</li>
+							<li>
+							Adding new libraries
+							</li>
+							<li>
+							Filtering library items and browsing either VLNV name based or 
+product hierarchy that is based on VLNV references from top down
+							</li>
+						</ul>
+					</div>
+			</div>
+			
+		</div> <!-- /row1 -->
+		<div class="row"> <!-- row2 -->
+			<div class="col-lg-6 col-blue">
+				<iframe src="http://www.youtube.com/embed/e3T6JqYrqVc?feature=player_detailpage" allowfullscreen="" frameborder="0" height="315" width="420"></iframe>
+				<p><a class="btn btn-xs btn-info" data-toggle="collapse" data-target="#video1">Details <b class="caret"></b></a></p>
+					<div class="collapse" id="video1">
+					A use case how to specify a new IP-XACT metadata component in Kactus2 for a new hardware IP-block (non-existing)
+						<ul>	
+							<li>
+							Create Port definitions
+							</li>
+							<li>
+							Create Model Parameters (for VHDL generics)
+							</li>
+							<li>
+							Define local Memory areas and registers for this component (IP-XACT Memory Map Definition)
+							</li>
+							<li>
+							Create bus interfaces and port maps, this is skipped in the demo
+							</li>
+							<li>
+							Generate VHDL stub for the IP-block implementation
+							</li>
+						</ul>
+					</div>
+			</div>
+			<div class="col-lg-6 col-blue">
+				<iframe src="http://www.youtube.com/embed/sl7nzWaDuVQ?feature=player_detailpage" allowfullscreen="" frameborder="0" height="315" width="420"></iframe>
+				<p><a class="btn btn-xs btn-info" data-toggle="collapse" data-target="#video2">Details <b class="caret"></b></a></p>
+					<div class="collapse" id="video2">
+					<p>A use case how to create IP-XACT HW-Design and generate from it C header, Altera Quartus project and Top VHDL</p>
+						<ul>
+							<li>Add new IP-block to existing design
+							</li>
+							<li>
+							Set base addresses in HW design
+							</li>
+							<li>
+							Generate top-level VHDL
+							</li>
+							<li>
+							Generate Quartus II project
+							</li>
+							<li>
+							Generate C header files
+							</li>
+						</ul>
+					</div>
+			</div>
+	   </div> <!-- /row2 -->
+       <h3>Disclaimer</h3>
+       <p>All the information and any part thereof provided on this 
+website are provided « AS IS » without warranty of any kind either 
+expressed or implied including, without limitation, warranties of 
+merchantability, fitness for a particular purpose or non infringement of
+ intellectual property rights.<br><br>TUT makes no representations or 
+warranties as to the accuracy or completeness of any materials and 
+information incorporated thereto and contained on this website. TUT 
+makes no representations or warranties that access to this website will 
+be uninterrupted or error-free, that this website (the materials and/or 
+any information incorporated thereto) will be secure and free of virus 
+or other harmful components.<br></p>
+	</div> <!-- /tutorials-tab -->
+    <!---------------------------------------------------------------->
+	<div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-7" id="contact_x"> <!-- contact-tab -->
+       <h2>Contact us</h2>
+	   We welcome any feedback from the tools and suggestions to new features. Further directions are:
+	   <p></p>
+	   <ul class="list-group">
+			<li class="list-group-item">Email us <img src="Kactus2_files/sposkact.png">
+			</li>
+			<li class="list-group-item"><a href="http://kactus2.cs.tut.fi/"> Issue tracker for the tools</a>
+			</li>
+			<li class="list-group-item"><a href="http://www.ohloh.net/p/kactus2"> Kactus2 project statistics</a>
+			</li>
+			<li class="list-group-item"><a href="http://sourceforge.net/projects/kactus2/"> Kactus2 project@SourceForge</a>
+			</li>
+		</ul>
+	</div> <!-- /contact-tab-->
+	<!-- about-tab -------------------------------------------------------------->
+    <div aria-hidden="true" aria-expanded="false" style="display: none;" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-6" id="about_x"> <!-- about-tab -->
+		<h2>About us</h2>
+        <p> We are a research group in the <a target="_blank" href="http://www.tut.fi/en/about-tut/departments/pervasive-computing/index.htm">Department
+        of Pervasive Computing</a> at <a href="http://www.tut.fi/" target="_blank">Tampere University of Technology</a>.
+        We are rooted in hardware, from parallel processor boards to 
+System-on-Chip architectures. Aligned to that we have a strong track 
+record on design methodologies and tools development, as well as <a href="http://ultravideo.cs.tut.fi/" target="_blank"> video encoders</a> as a major application domain</p>
+		<p> Today we focus on improving the productivity of SoC and embedded 
+system design. The means are language and tool agnostic metadata to 
+support re-use and optimization of the design workflow. New ideas are 
+brought into life in our tools that have superior usability as the first
+ requirement.
+        </p><p>We work on close collaboration with companies to get requirements for the research and feedback on our solutions. Please <a href="#contact">contact us</a> if you are interested in a joint project.</p>
+		<h2>The Team</h2>
+		<p>
+          <span style="font-weight: bold;">Current members (Updated Apr 1 2016)</span> are 
+          <a href="http://fi.linkedin.com/in/tdhamalainen" target="_blank">Prof. Timo D. Hämäläinen</a>,
+          <a href="http://fi.linkedin.com/in/jarnovanne/" target="_blank">Dr. Jarno Vanne</a>,           
+           Esko Pekkarinen, Sakari Lahti, Janne Virtanen, Panu Sjövall, Arto Oinonen.<br>
+        <span style="font-weight: bold;">Alumni</span> are <a href="http://fi.linkedin.com/pub/erno-salminen/6/b14/b29" target="_blank">Dr. Erno Salminen</a>,
+ Dr. Kimmo Kuusilinna, Dr. Pasi Kolinummi, Dr. Tero Kangas, Dr. Panu 
+Hämäläinen, Dr. Vesa Lahtinen, Dr. Ari Kulmala, Dr. Tero Arpinen, Dr. 
+Petri Kukkala, Dr. Marko Hännikäinen, Lauri Matilainen, Mikko Honkonen, 
+Timo Korpela, Joni-Matti Määttä, Antti Kamppi, Juha Arvio, Juuso 
+Järvinen, Jussi Nieminen, Tapio Koskinen, Mikko Setälä, Kalle Holma, 
+Timo Alho, Antti Rasmus, Janne Muhonen, Pasi Liimatainen, Ville-Veikko 
+Jokinen, Marjo Kari, Pasi Pulkkinen, Kimmo Tikkanen, Eero Ryytty, Antti 
+Jore, Aki Launiainen, Timo Kaikumaa, Juha Särkijärvi, Miia Viitanen, 
+Kaisa Haapala, Tomi Sokeila.</p>
+		<h2>Videos</h2>
+			<div>
+			<iframe src="http://www.youtube.com/embed/6k1ZxmKDTWo?feature=player_detailpage" allowfullscreen="" frameborder="0" height="180" width="320"></iframe>
+			</div>
+		<h2>Roadmap</h2>
+		<div align="center">
+			<img class="img-autoscale" src="Kactus2_files/soc_tools_roadmap.png">
+        </div>
+		<h3>Some past projects</h3>
+		<p><a href="http://www.tkt.cs.tut.fi/research/funbase" target="_blank">Archived Funbase-project site</a></p>		
+	</div> <!-- /about-tab -->
+	 
+ </div><!-- tabs -->
+ <hr>
+ <footer>
+	<p><a href="http://www.tut.fi/"><img style="width: 250px;" src="Kactus2_files/tty-logo.png"></a></p>
+ </footer>
+ </div> <!-- /container --> 
+        
+		<script src="Kactus2_files/jquery.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <script src="Kactus2_files/jquery-ui-1.js"></script>        
+        <script src="Kactus2_files/bootstrap.js"></script>
+        <script src="Kactus2_files/main.js"></script>
+        <script>
+          $(function() {
+            function set_open_tab(hash)
+            {
+              if (window.location.hash !== '') {
+                window.location.hash = hash.replace("_x","");
+                var tabNum = $('a[href=' + location.hash + '_x]').parent().index();
+                $( "#tabs" ).tabs('option', 'active', tabNum);
+              } else {
+                $( "#tabs" ).tabs('option', 'active', 0);
+              }
+              _gaq.push(['_trackPageview',location.pathname + location.search + location.hash]);
+            }
+          
+           $( "#tabs" ).tabs({
+              activate: function(event, ui) {                   
+                window.location.hash = ui.newPanel.attr('id').replace("_x","");
+              }
+            });
+            $(window).bind('hashchange', function() {              
+              set_open_tab(window.location.hash);
+            });
+            
+            set_open_tab(window.location.hash);
+          });
+        </script>
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          var pluginUrl =
+             '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+          _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+          _gaq.push(['_setAllowAnchor', true]);
+          _gaq.push(['_setAccount', 'UA-45838855-1']);
+          
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>        
+
+</body></html>

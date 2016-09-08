@@ -1,0 +1,4 @@
+../or1k-src/configure --target=or1k-elf --prefix=$HOME/or1k-toolchain --enable-shared --disable-itcl --disable-tk --disable-tcl --disable-winsup --disable-libgui --disable-rda --disable-sid --disable-sim     --disable-gdb --with-sysroot --disable-newlib --disable-libgloss --disable-werror
+make
+make install
+

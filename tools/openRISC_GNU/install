@@ -1,0 +1,14 @@
+export PATH=$PATH:$HOME/or1k-toolchain/bin
+mkdir $HOME/or1k-toolchain
+cd or1k 
+git clone git://github.com/openrisc/or1k-src.git
+git clone git://github.com/openrisc/or1k-gcc.git
+cd bld-or1k-src
+./install
+cd ../bld-or1k-gcc
+./install
+cd ../bld-or1k-src
+./install2
+cd ../bld-or1k-gcc
+./install2
+
