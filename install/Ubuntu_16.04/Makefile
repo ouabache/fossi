@@ -39,7 +39,7 @@ install:
         sudo apt-get  install -y libexpat1-dev;\
         sudo apt-get  install -y libtool;\
         sudo apt-get  install -y autoconf;\
-	sudo apt-get  install -y libelf-dev;\
+        sudo apt-get  install -y libelf-dev;\
         sudo apt-get  install -y iverilog;\
         sudo apt-get  install -y gtkwave;\
 )

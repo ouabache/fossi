@@ -1,0 +1,47 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Fri Sep  9 02:54:53 2016
+[*]
+[dumpfile] "/home/ouabache/DESIGN/build/de1/sim-icarus/TEST.vcd"
+[dumpfile_mtime] "Fri Sep  9 02:53:18 2016"
+[dumpfile_size] 156743
+[savefile] "/home/ouabache/DESIGN/gtkwave.gtkw"
+[timestart] 560000
+[size] 1453 987
+[pos] 162 -545
+*-21.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] orpsoc_tb.
+[sst_width] 225
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 296
+@28
+orpsoc_tb.clk[0]
+orpsoc_tb.rst_n[0]
+@22
+orpsoc_tb.sdram_addr[11:0]
+orpsoc_tb.sdram_addr[11:0]
+@28
+orpsoc_tb.sdram_ba[1:0]
+orpsoc_tb.sdram_ba[1:0]
+orpsoc_tb.sdram_cas[0]
+orpsoc_tb.sdram_cas[0]
+orpsoc_tb.sdram_cke[0]
+orpsoc_tb.sdram_clk[0]
+orpsoc_tb.sdram_clk[0]
+orpsoc_tb.sdram_clk[0]
+orpsoc_tb.sdram_cs_n[0]
+orpsoc_tb.sdram_cs_n[0]
+orpsoc_tb.sdram_cs_n[0]
+@22
+orpsoc_tb.sdram_dq[15:0]
+orpsoc_tb.sdram_dq[15:0]
+@28
+orpsoc_tb.sdram_dqm[1:0]
+orpsoc_tb.sdram_dqm[1:0]
+orpsoc_tb.sdram_ras[0]
+orpsoc_tb.sdram_we[0]
+@29
+orpsoc_tb.uart_tx[0]
+[pattern_trace] 1
+[pattern_trace] 0

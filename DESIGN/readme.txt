@@ -1,12 +1,12 @@
 
 1) Install tools
 
-   cd tools/install/Ubuntu16.04
+   cd install/Ubuntu_16.04
    make install
 
 2) Copy this template for design environment
 
-   cp -r tools/DESIGN  . 
+   cp -r DESIGN  {your design directory} 
 
 
 3) source environment
@@ -15,8 +15,8 @@
 
 4) Install fusesoc
 
-  cd tools/fusesoc/v1.5
-  pip install fusesoc
+  cd tools/fusesoc
+  ./install 
 
 5) initialize and test
 
@@ -25,7 +25,4 @@
   fusesoc list-systems
   fusesoc list-cores
   fusesoc sim de1 --vcd --elf-load hello_nop.elf --testcase TEST --timeout 12000
-  cd build/de1/sim-icarus
-  gtkwave -f TEST.vcd
-  
-
+  gtkwave -f build/de1/sim-icarus/TEST.vcd gtkwave.gtkw
