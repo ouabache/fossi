@@ -6,17 +6,13 @@ home=$(CUR_DIR)/..
 all:   install
 
 
-.PHONY install:
+.PHONY install:  socgen
 install:
 	(\
-	sudo apt-get  install -y emacs;\
+        sudo apt-get  install -y emacs;\
         sudo apt-get  install -y cvs;\
         sudo apt-get  install -y subversion;\
         sudo apt-get  install -y git;\
-        sudo apt-get  install -y gitk;\
-        sudo apt-get  install -y git-gui;\
-        sudo apt-get  install -y xutils-dev;\
-        sudo apt-get  install -y tkcvs;\
         sudo apt-get  install -y qt5-default;\
         sudo apt-get  install -y libqt5xmlpatterns5-dev;\
         sudo apt-get  install -y qttools5-private-dev;\
@@ -40,9 +36,24 @@ install:
         sudo apt-get  install -y libtool;\
         sudo apt-get  install -y autoconf;\
         sudo apt-get  install -y libelf-dev;\
-        sudo apt-get  install -y iverilog;\
-        sudo apt-get  install -y gtkwave;\
 )
 
 
+
+.PHONY socgen:
+socgen:
+	(\
+        sudo apt-get  install -y xutils-dev;\
+        sudo apt-get  install -y tkcvs;\
+        sudo apt-get  install -y libxml-libxml-perl;\
+        sudo apt-get  install -y libberkeleydb-perl;\
+        sudo apt-get  install -y libscalar-util-numeric-perl;\
+        sudo apt-get  install -y libparallel-forkmanager-perl;\
+        sudo apt-get  install -y libverilog-perl;\
+        sudo apt-get  install -y iverilog;\
+        sudo apt-get  install -y gtkwave;\
+        sudo apt-get  install -y verilator;\
+        sudo apt-get  install -y covered;\
+        sudo apt-get  install -y crasm;\
+	)
 
