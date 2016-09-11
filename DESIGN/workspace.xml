@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<socgen:workspace  
+xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" 
+xmlns:socgen="http://opencores.org" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<socgen:number_of_cpus>1</socgen:number_of_cpus>
+
+<socgen:build_dir>work</socgen:build_dir>
+<socgen:child_dir>children</socgen:child_dir>
+<socgen:code_dir>code</socgen:code_dir>
+<socgen:data_dir>dbs</socgen:data_dir>
+<socgen:yp_dir>yp</socgen:yp_dir>
+<socgen:ports_dir>io_ports</socgen:ports_dir>
+<socgen:doc_dir>doc_dir</socgen:doc_dir>
+
+
+
+
+<socgen:repos>
+
+    <socgen:repo> 
+    <socgen:name>/Projects</socgen:name>
+    </socgen:repo>
+
+
+
+</socgen:repos>
+
+
+
+</socgen:workspace>
+
+
