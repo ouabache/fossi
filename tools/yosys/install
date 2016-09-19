@@ -1,0 +1,4 @@
+cd v0.6/yosys-yosys-0.6
+make
+make test
+sudo make install

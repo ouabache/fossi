@@ -1,0 +1,10 @@
+script uart_tx_tb.YOSYS
+hierarchy -check
+write_verilog uart_tx_tb.v
+
+
+
+
+
+
+
