@@ -6,7 +6,7 @@ home=$(CUR_DIR)/..
 all:   install
 
 
-.PHONY install:  socgen
+.PHONY install:  socgen optimsoc
 install:
 	(\
         sudo apt-get  install -y emacs;\
@@ -57,3 +57,16 @@ socgen:
         sudo apt-get  install -y crasm;\
 	)
 
+
+.PHONY optimsoc:
+optimsoc:
+	(\
+        sudo apt-get  install -y git;\
+        sudo apt-get  install -y build;\
+        sudo apt-get  install -y libusb-1.0-0-dev;\
+        sudo apt-get  install -y libboost-dev;\
+        sudo apt-get  install -y swig;\
+        sudo apt-get  install -y python3;\
+        sudo apt-get  install -y python3-yaml;\
+        sudo apt-get  install -y gtkwave;\
+	)

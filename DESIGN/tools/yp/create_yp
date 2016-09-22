@@ -95,6 +95,7 @@ mkdir $path,0755   unless( -e $path );
 $repo_db                    = new BerkeleyDB::Hash( -Filename => "${path}/repo.dbm",                   -Flags => DB_CREATE ) or die "Cannot open file: $!";
 $component_db               = new BerkeleyDB::Hash( -Filename => "${path}/component.dbm",              -Flags => DB_CREATE ) or die "Cannot open file: $!";
 $design_db                  = new BerkeleyDB::Hash( -Filename => "${path}/design.dbm",                 -Flags => DB_CREATE ) or die "Cannot open file: $!";
+$designConfiguration_db     = new BerkeleyDB::Hash( -Filename => "${path}/designConfiguration.dbm",    -Flags => DB_CREATE ) or die "Cannot open file: $!";
 $busDefinition_db           = new BerkeleyDB::Hash( -Filename => "${path}/busDefinition.dbm",          -Flags => DB_CREATE ) or die "Cannot open file: $!";
 $abstractionDefinition_db   = new BerkeleyDB::Hash( -Filename => "${path}/abstractionDefinition.dbm",  -Flags => DB_CREATE ) or die "Cannot open file: $!";
 $libraryConfiguration_db    = new BerkeleyDB::Hash( -Filename => "${path}/libraryConfiguration.dbm",   -Flags => DB_CREATE ) or die "Cannot open file: $!";
@@ -132,7 +133,7 @@ foreach my $repo ($workspace->findnodes('//socgen:workspace/socgen:external/socg
                    if(system($cmd)){};
                    }
 
-                  my $cmd = "mkdir $repo_name ;lndir  $repo_path  $repo_name;";
+                  my $cmd = "mkdir $repo_name ;lndir -silent  $repo_path  $repo_name;";
                   if(system($cmd)){};
 
 
@@ -206,23 +207,23 @@ sub link_dir {
         # recurse on items in the directory
         foreach my $item ( @contents )          
           {
-          $_ = $item;
+          $_ = $item; 
           if(/(\S+)\.xml/) 
              { 
              my $t_name                = $1;
              $_ = $src;
              if(/${home}(\S+)/) { $t_local = $1; }
-             print "creat_yp: Parsing ${home}${t_local}/${t_name}.xml \n";
+      #       print "creat_yp: Parsing ${home}${t_local}/${t_name}.xml \n";
 	     
              my    $xml_file    = $parser->parse_file("${home}${t_local}/${t_name}.xml"); 
 
-             print "creat_yp: Parsed \n";
+#             print "creat_yp: Parsed \n";
 
             if(${t_name} eq "libraryCfg"  )
                {
                foreach my $design ($xml_file->findnodes('//socgen:libraryConfiguration')) 
                   {
-		  print "creat_yp: Parsed socgen \n";
+#		  print "creat_yp: Parsed socgen \n";
                   $vendor   = $design->findnodes('./socgen:vendor/text()')->to_literal ;
                   $library  = $design->findnodes('./socgen:name/text()')->to_literal ;
                   $name     = "";
@@ -234,7 +235,7 @@ sub link_dir {
               {
               foreach my $design ($xml_file->findnodes('//socgen:componentConfiguration')) 
                   {
-		  		  print "creat_yp: Parsed socgen \n";
+#		  		  print "creat_yp: Parsed socgen \n";
                   $vendor   = $design->findnodes('./socgen:vendor/text()')->to_literal ;
                   $library  = $design->findnodes('./socgen:library/text()')->to_literal ;
                   $name     = $design->findnodes('./socgen:component/text()')->to_literal ;
@@ -245,10 +246,10 @@ sub link_dir {
 
              else
              {
-               		  print "creat_yp: Parsing spirit \n";
+#               		  print "creat_yp: Parsing spirit \n";
                foreach my $comp ($xml_file->findnodes('//ipxact:component')) 
                   {
-		                 		  print "creat_yp: Parsed spirit \n";
+#		                 		  print "creat_yp: Parsed spirit \n";
                   $vendor   = $comp->findnodes('./ipxact:vendor/text()')->to_literal ;
                   $library  = $comp->findnodes('./ipxact:library/text()')->to_literal ;
                   $type     = "ipxact:component";
@@ -264,9 +265,18 @@ sub link_dir {
                   $name     = $design->findnodes('./ipxact:name/text()')->to_literal ;
                   $version  = $design->findnodes('./ipxact:version/text()')->to_literal ;
                   $type     = "ipxact:design";
-               
                   }
-               
+
+
+               foreach my $design ($xml_file->findnodes('//ipxact:designConfiguration')) 
+                  {
+                  $vendor   = $design->findnodes('./ipxact:vendor/text()')->to_literal ;
+                  $library  = $design->findnodes('./ipxact:library/text()')->to_literal ;
+                  $name     = $design->findnodes('./ipxact:name/text()')->to_literal ;
+                  $version  = $design->findnodes('./ipxact:version/text()')->to_literal ;
+                  $type     = "ipxact:designConfiguration";
+                  }
+
                                     
                
                foreach my $design ($xml_file->findnodes('//ipxact:abstractionDefinition')) 
@@ -317,7 +327,7 @@ sub link_dir {
 
 
              
-#               print "${vendor}__${library}_${name}_${version}     $t_local  $library_match  $lib_comp_sep  $name_match    \n";
+#               print "${vendor}__${library}_${name}_${version}   $type  ---  $t_local  $library_match  $lib_comp_sep  $name_match    \n";
                $V_L_N_V  = "${vendor}__${library}_${name}_${version}"    ;
 
 
@@ -362,10 +372,15 @@ sub link_dir {
                $design_db->db_put( $V_L_N_V, join(':', @info) );
                }
 
+             elsif($type eq "ipxact:designConfiguration")
+               {
+               @info  = (".${t_local}/${t_name}.xml","${component_path}","${version}","${name}","${library}","${vendor}"         );
+               $designConfiguration_db->db_put( $V_L_N_V, join(':', @info) );
+               }
+
 
              elsif($type eq "ipxact:abstractionDefinition")
                {
-#               print "ABSDEF  $V_L_N_V    \n";
                @info  = (".${t_local}/${t_name}.xml","${component_path}","${version}","${name}","${library}","${vendor}"         );
                $abstractionDefinition_db->db_put( $V_L_N_V, join(':', @info) );
                }

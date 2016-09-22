@@ -136,7 +136,7 @@ my $path  = "${home}/${yellow_pages}";
 
 unless( -e $path )
 {
-print "$path does not exist \n";
+print "Creating Yellow Pages \n";
 my $cmd = "./tools/yp/create_yp $path \n";
 if(system($cmd)){};
 }
@@ -1796,19 +1796,31 @@ sub get_module_name
 #/                                                                                            */
 #/*********************************************************************************************/
 
-
-
 sub parse_component_file
    {
+   my @params             = @_;
+   my $version            = pop(@params);
+   my $component          = pop(@params);
+   my $library            = pop(@params);
+   my $vendor             = pop(@params);
+   my @filelist_acc       = parse_component_fileX($vendor,$library,$component,$version,1);
+   return(@filelist_acc);
+   }
+
+
+
+
+
+
+sub parse_component_fileX
+   {
    my @params     = @_;
+   my $switch     = pop(@params);
    my $version    = pop(@params);
    my $component  = pop(@params);
    my $library    = pop(@params);
    my $vendor     = pop(@params);
-
    my $parser     = XML::LibXML->new();
-
-
    my $spirit_cmp_filename =yp::lib::find_ipxact_component($vendor,$library,$component,$version ); 
 
    unless($spirit_cmp_filename)
@@ -1816,22 +1828,19 @@ sub parse_component_file
       print("ipxact:component MISSING   $vendor,$library,$component,$version \n"); 
       }
 
-
    my $spirit_component_file  = $parser->parse_file(yp::lib::find_ipxact_component($vendor,$library,$component,$version )); 
-
-
    my $line;
-
    my      @filelist_acc = (  );
-   push(@filelist_acc,"::${vendor}::${library}::${component}::${version}::");
-   
+
+   if($switch)     {   push(@filelist_acc,"::${vendor}::${library}::${component}::${version}::");}  
+
    foreach my $new_comp ($spirit_component_file->findnodes("//ipxact:component/ipxact:model/ipxact:views/ipxact:view/ipxact:vendorExtensions/ipxact:componentRef")) 
      {
      my($new_vendor)        = $new_comp->findnodes('./@ipxact:vendor')->to_literal ;
      my($new_library)       = $new_comp->findnodes('./@ipxact:library')->to_literal ;
      my($new_name)          = $new_comp->findnodes('./@ipxact:name')->to_literal ;
      my($new_version)       = $new_comp->findnodes('./@ipxact:version')->to_literal ;
-     my @filelist_sub       = parse_component_fileX($new_vendor,$new_library,$new_name,$new_version);
+     my @filelist_sub       = parse_component_fileX($new_vendor,$new_library,$new_name,$new_version,0);
                               foreach $line (@filelist_sub) { push(@filelist_acc,"$line"); }
      }
 
@@ -1845,7 +1854,8 @@ sub parse_component_file
      if(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version ))
              {
              my $spirit_design_file = $parser->parse_file(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version )); 
-             foreach  my   $i_name ($spirit_design_file->findnodes("//ipxact:design/ipxact:componentInstances/ipxact:componentInstance/ipxact:componentRef/\@ipxact:vendor"))
+             foreach  
+                my   $i_name ($spirit_design_file->findnodes("//ipxact:design/ipxact:componentInstances/ipxact:componentInstance/ipxact:componentRef/\@ipxact:vendor"))
                 {
                 my($vendor_name)         = $i_name  ->to_literal ;
                 my($library_name)        = $i_name  ->findnodes('../@ipxact:library')->to_literal ;
@@ -1853,68 +1863,38 @@ sub parse_component_file
                 my($version_name)        = $i_name  ->findnodes('../@ipxact:version')->to_literal ;
 
                 push(@filelist_acc,"::${vendor_name}::${library_name}::${component_name}::${version_name}::");
-                my  @filelist_sub = parse_component_fileX($vendor_name,$library_name,$component_name,$version_name);
+                my  @filelist_sub = parse_component_fileX($vendor_name,$library_name,$component_name,$version_name,0);
                   foreach $line (@filelist_sub) { push(@filelist_acc,"$line"); }
                 }            
              }
      }
 
-   @filelist_acc     =       sys::lib::trim_sort(@filelist_acc);
-   return(@filelist_acc);
-}
 
 
-
-
-
-sub parse_component_fileX
-   {
-   my @params     = @_;
-   my $version    = pop(@params);
-   my $component  = pop(@params);
-   my $library    = pop(@params);
-   my $vendor     = pop(@params);
-
-   my $parser     = XML::LibXML->new();
-
-
-   my $spirit_cmp_filename =yp::lib::find_ipxact_component($vendor,$library,$component,$version ); 
-
-   unless($spirit_cmp_filename)
-      {
-      print("ipxact:component MISSING   $vendor,$library,$component,$version \n"); 
-      }
-
-
-   my $spirit_component_file  = $parser->parse_file(yp::lib::find_ipxact_component($vendor,$library,$component,$version )); 
-
-
-   my $line;
-
-   my      @filelist_acc = (  );
-
-   
-   foreach my $new_comp ($spirit_component_file->findnodes("//ipxact:component/ipxact:model/ipxact:views/ipxact:view/ipxact:vendorExtensions/ipxact:componentRef")) 
+   foreach my $new_comp ($spirit_component_file->findnodes("//ipxact:component/ipxact:model/ipxact:views/ipxact:view/ipxact:designInstantiationRef/text()")) 
      {
-     my($new_vendor)        = $new_comp->findnodes('./@ipxact:vendor')->to_literal ;
-     my($new_library)       = $new_comp->findnodes('./@ipxact:library')->to_literal ;
-     my($new_name)          = $new_comp->findnodes('./@ipxact:name')->to_literal ;
-     my($new_version)       = $new_comp->findnodes('./@ipxact:version')->to_literal ;
-     my @filelist_sub       = parse_component_fileX($new_vendor,$new_library,$new_name,$new_version);
-                              foreach $line (@filelist_sub) { push(@filelist_acc,"$line"); }
-     }
+     my($designInsref_value)         = $new_comp  ->to_literal ;
+     my($designInsref_name)          = $new_comp  ->findnodes('../../ipxact:name')->to_literal ;
 
-   foreach my $new_comp ($spirit_component_file->findnodes("//ipxact:component/ipxact:model/ipxact:views/ipxact:view/ipxact:hierarchyRef")) 
-     {
-     my($new_vendor)        = $new_comp->findnodes('./@ipxact:vendor')->to_literal ;
-     my($new_library)       = $new_comp->findnodes('./@ipxact:library')->to_literal ;
-     my($new_name)          = $new_comp->findnodes('./@ipxact:name')->to_literal ;
-     my($new_version)       = $new_comp->findnodes('./@ipxact:version')->to_literal ;
+     print "FOOFOOFOO $designInsref_value ::  $designInsref_name \n";
+   foreach my $new_comp ($spirit_component_file->findnodes("//ipxact:component/ipxact:model/ipxact:instantiations/ipxact:designInstantiation/ipxact:name/text()")) 
+        {
+        my($test_value)         = $new_comp  ->to_literal ;
 
-     if(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version ))
-          {
-          my $spirit_design_file = $parser->parse_file(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version )); 
-          foreach  my   $i_name ($spirit_design_file->findnodes("//ipxact:design/ipxact:componentInstances/ipxact:componentInstance/ipxact:componentRef/\@ipxact:vendor"))
+     print "FOOFOOFOO $designInsref_value ::  $designInsref_name ::-  $test_value  \n";
+        if($test_value eq $designInsref_name )
+	{
+	         print "FOOFOOFOO MATCH  \n";
+        my($new_vendor)        = $new_comp->findnodes('./designRef/@ipxact:vendor')->to_literal ;
+        my($new_library)       = $new_comp->findnodes('./designRef/@ipxact:library')->to_literal ;
+        my($new_name)          = $new_comp->findnodes('./designRef/@ipxact:name')->to_literal ;
+        my($new_version)       = $new_comp->findnodes('./designRef/@ipxact:version')->to_literal ;
+
+        if(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version ))
+             {
+             my $spirit_design_file = $parser->parse_file(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version )); 
+             foreach  
+                my   $i_name ($spirit_design_file->findnodes("//ipxact:design/ipxact:componentInstances/ipxact:componentInstance/ipxact:componentRef/\@ipxact:vendor"))
                 {
                 my($vendor_name)         = $i_name  ->to_literal ;
                 my($library_name)        = $i_name  ->findnodes('../@ipxact:library')->to_literal ;
@@ -1922,16 +1902,29 @@ sub parse_component_fileX
                 my($version_name)        = $i_name  ->findnodes('../@ipxact:version')->to_literal ;
 
                 push(@filelist_acc,"::${vendor_name}::${library_name}::${component_name}::${version_name}::");
-                my  @filelist_sub = parse_component_fileX($vendor_name,$library_name,$component_name,$version_name);
+                my  @filelist_sub = parse_component_fileX($vendor_name,$library_name,$component_name,$version_name,0);
                   foreach $line (@filelist_sub) { push(@filelist_acc,"$line"); }
-                }       
-           
-           }
+                }            
+             }
+        }
+        }
      }
+
+
+
+
+
+
+
+   
 
    @filelist_acc     =       sys::lib::trim_sort(@filelist_acc);
    return(@filelist_acc);
 }
+
+
+
+
 
 
 
@@ -1980,7 +1973,7 @@ sub parse_component_brothers
 #/                                                                                                    */
 #/  returns parser tokens  to ip-xact design files referred to by component file vlnv                 */
 #/                                                                                                    */
-#/  my @spirit_design_files = yp::lib::find_ipxact_design_file($vendor,$library,$component,$version);  */
+#/  my @spirit_design_files = yp::lib::find_ipxact_design_files($vendor,$library,$component,$version);  */
 #/                                                                                                    */
 #/*****************************************************************************************************/
 
@@ -2007,6 +2000,22 @@ sub find_ipxact_design_files
      my @filelist_sub       = yp::lib::find_ipxact_design_files($new_vendor,$new_library,$new_name,$new_version);
                               foreach my $line (@filelist_sub) { push(@design_files,"$line"); }     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
    foreach my $comp_view ($spirit_component_file->findnodes('//ipxact:component/ipxact:model/ipxact:views/ipxact:view')) 
       {
       my($hier_ref_vendor)         = $comp_view->findnodes('./ipxact:hierarchyRef/@ipxact:vendor')->to_literal ;
@@ -2018,6 +2027,67 @@ sub find_ipxact_design_files
         push(@design_files,":::${hier_ref_vendor}:::${hier_ref_library}:::${hier_ref_design}:::${hier_ref_version}:::");           
         }
       }
+
+
+
+   foreach my $comp_view ($spirit_component_file->findnodes("//ipxact:component/ipxact:model/ipxact:views/ipxact:view/ipxact:designInstantiationRef/text()")) 
+     {
+     my($designInsref_value)         = $comp_view  ->to_literal ;
+     my($designInsref_name)          = $comp_view  ->findnodes('../../ipxact:name')->to_literal ;
+
+     print "FZZFZZFZZ $designInsref_value ::  $designInsref_name \n";
+   foreach my $comp_view ($spirit_component_file->findnodes("//ipxact:component/ipxact:model/ipxact:instantiations/ipxact:designInstantiation/ipxact:name/text()")) 
+        {
+        my($test_value)         = $comp_view  ->to_literal ;
+
+     print "FZZFZZFZZ $designInsref_value ::  $designInsref_name ::-  $test_value  \n";
+        if($test_value eq $designInsref_name )
+	{
+	         print "FZZFZZFZZ MATCH  \n";
+        my($hier_ref_vendor)        = $comp_view->findnodes('../designRef/@ipxact:vendor')->to_literal ;
+        my($hier_ref_library)       = $comp_view->findnodes('../designRef/@ipxact:library')->to_literal ;
+        my($hier_ref_design)        = $comp_view->findnodes('../designRef/@ipxact:name')->to_literal ;
+        my($hier_ref_version)       = $comp_view->findnodes('../designRef/@ipxact:version')->to_literal ;
+
+         print "FZZFZZFZZ  ${hier_ref_vendor}:${hier_ref_library}${hier_ref_design}${hier_ref_version}  \n";
+
+      if(find_ipxact_design($hier_ref_vendor,$hier_ref_library,$hier_ref_design,$hier_ref_version))
+        {
+        push(@design_files,":::${hier_ref_vendor}:::${hier_ref_library}:::${hier_ref_design}:::${hier_ref_version}:::");           
+        }
+
+
+
+		 
+
+        }
+        }
+     }
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
      return(@design_files);
    }
 

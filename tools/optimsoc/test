@@ -1,0 +1,7 @@
+source /opt/optimsoc/2016.1/optimsoc-environment.sh
+source /opt/optimsoc/setup_prebuilt.sh
+git clone https://github.com/optimsoc/baremetal-apps
+cd baremetal-apps/hello
+make
+$OPTIMSOC/examples/sim/compute_tile/compute_tile_sim_singlecore --meminit=hello.vmem
+cat stdout.000

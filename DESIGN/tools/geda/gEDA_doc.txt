@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<spirit:component 
+xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009
+http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009/index.xsd">
+
+<spirit:vendor>opencores.org</spirit:vendor>
+<spirit:library>cde</spirit:library>
+<spirit:name>mux</spirit:name>
+<spirit:version>def</spirit:version>  <spirit:configuration>default</spirit:configuration>  
+
+
+<spirit:vendorExtensions>
+
+<socgen:gEDA_symbol>
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>gates</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>mux</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>0</socgen:y_offset>
+</socgen:reference>
+
+
+
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>in_wire</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>800</socgen:y_offset>
+ <socgen:name>SEL</socgen:name>
+</socgen:reference>
+
+
+
+
+
+<socgen:parameter>
+<socgen:name>refdes</socgen:name>
+<socgen:value>U?</socgen:value>
+<socgen:x1>700</socgen:x1>
+<socgen:y1> 200</socgen:y1>
+<socgen:color>5</socgen:color>
+<socgen:size>10</socgen:size>
+<socgen:visibility>1</socgen:visibility>
+<socgen:show_name_value>1</socgen:show_name_value>
+<socgen:angle>0</socgen:angle>
+<socgen:alignment>2</socgen:alignment>
+</socgen:parameter>
+
+<socgen:parameter>
+<socgen:name>module_name</socgen:name>
+<socgen:value>cde_mux_def</socgen:value>
+<socgen:x1>400</socgen:x1>
+<socgen:y1>0</socgen:y1>
+<socgen:color>5</socgen:color>
+<socgen:size>10</socgen:size>
+<socgen:visibility>1</socgen:visibility>
+<socgen:show_name_value>1</socgen:show_name_value>
+<socgen:angle>0</socgen:angle>
+<socgen:alignment>2</socgen:alignment>
+</socgen:parameter>
+
+<socgen:parameter>
+<socgen:name>vendor</socgen:name>
+<socgen:value>opencores.org</socgen:value>
+<socgen:x1>0</socgen:x1>
+<socgen:y1>-200</socgen:y1>
+<socgen:color>0</socgen:color>
+<socgen:size>0</socgen:size>
+<socgen:visibility>0</socgen:visibility>
+<socgen:show_name_value>0</socgen:show_name_value>
+<socgen:angle>0</socgen:angle>
+<socgen:alignment>0</socgen:alignment>
+</socgen:parameter>
+
+<socgen:parameter>
+<socgen:name>library</socgen:name>
+<socgen:value>cde</socgen:value>
+<socgen:x1>0</socgen:x1>
+<socgen:y1>-300</socgen:y1>
+<socgen:color>0</socgen:color>
+<socgen:size>0</socgen:size>
+<socgen:visibility>0</socgen:visibility>
+<socgen:show_name_value>0</socgen:show_name_value>
+<socgen:angle>0</socgen:angle>
+<socgen:alignment>0</socgen:alignment>
+</socgen:parameter>
+
+
+<socgen:parameter>
+<socgen:name>component</socgen:name>
+<socgen:value>mux</socgen:value>
+<socgen:x1>0</socgen:x1>
+<socgen:y1>-400</socgen:y1>
+<socgen:color>0</socgen:color>
+<socgen:size>0</socgen:size>
+<socgen:visibility>0</socgen:visibility>
+<socgen:show_name_value>0</socgen:show_name_value>
+<socgen:angle>0</socgen:angle>
+<socgen:alignment>0</socgen:alignment>
+</socgen:parameter>
+
+
+
+<socgen:parameter>
+<socgen:name>version</socgen:name>
+<socgen:value>def</socgen:value>
+<socgen:x1>0</socgen:x1>
+<socgen:y1>-500</socgen:y1>
+<socgen:color>0</socgen:color>
+<socgen:size>0</socgen:size>
+<socgen:visibility>0</socgen:visibility>
+<socgen:show_name_value>0</socgen:show_name_value>
+<socgen:angle>0</socgen:angle>
+<socgen:alignment>0</socgen:alignment>
+</socgen:parameter>
+
+
+
+
+
+
+
+
+<socgen:graphics>
+
+<socgen:graphic>
+<socgen:name>cde_mux_def</socgen:name>
+
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>in_wire</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>300</socgen:y_offset>
+ <socgen:name>IN1</socgen:name>
+</socgen:reference>
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>in_wire</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>500</socgen:y_offset>
+ <socgen:name>IN0</socgen:name>
+</socgen:reference>
+
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>out_wire</socgen:graphic>
+ <socgen:x_offset>1000</socgen:x_offset>
+ <socgen:y_offset>600</socgen:y_offset>
+ <socgen:name>OUT</socgen:name>
+</socgen:reference>
+
+
+</socgen:graphic>
+
+
+
+
+<socgen:graphic>
+
+<socgen:name>vector</socgen:name>
+
+<socgen:parameter>
+<socgen:name>WIDTH</socgen:name>
+<socgen:value>1</socgen:value>
+<socgen:x1>0</socgen:x1>
+<socgen:y1>-600</socgen:y1>
+<socgen:color>0</socgen:color>
+<socgen:size>0</socgen:size>
+<socgen:visibility>0</socgen:visibility>
+<socgen:show_name_value>0</socgen:show_name_value>
+<socgen:angle>0</socgen:angle>
+<socgen:alignment>0</socgen:alignment>
+</socgen:parameter>
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>in_bus</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>300</socgen:y_offset>
+ <socgen:name>IN1</socgen:name>
+</socgen:reference>
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>in_bus</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>500</socgen:y_offset>
+ <socgen:name>IN0</socgen:name>
+</socgen:reference>
+
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>out_bus</socgen:graphic>
+ <socgen:x_offset>1000</socgen:x_offset>
+ <socgen:y_offset>600</socgen:y_offset>
+ <socgen:name>OUT</socgen:name>
+</socgen:reference>
+
+</socgen:graphic>
+
+
+</socgen:graphics>
+
+
+</socgen:gEDA_symbol>
+</spirit:vendorExtensions>
+
+
+</spirit:component>
+
+
+
+
+Primitives
+
+
+
+
+<socgen:line>
+<socgen:x1>0</socgen:x1>
+<socgen:y1>0</socgen:y1>
+<socgen:x2>0</socgen:x2>
+<socgen:y2>0</socgen:y2>
+<socgen:color>0</socgen:color>
+<socgen:width>0</socgen:width>
+<socgen:capstyle>0</socgen:capstyle>
+<socgen:dashstyle>0</socgen:dashstyle>
+<socgen:dashlength>-1</socgen:dashlength>
+<socgen:dashspace>-1</socgen:dashspace>
+</socgen:line>
+
+
+<socgen:picture>
+<socgen:x>0</socgen:x>
+<socgen:y>0</socgen:y>
+<socgen:width>0</socgen:width>
+<socgen:height>0</socgen:height>
+<socgen:angle>0</socgen:angle>
+<socgen:mirrored>0</socgen:mirrored>
+<socgen:embedded>0</socgen:embedded>
+<socgen:filename>relative filepath</socgen:filename>
+<socgen:data>
+<socgen:line>Serialized picture encoded using base64</socgen:line>
+<socgen:line>Serialized picture encoded using base64</socgen:line>
+<socgen:line>Serialized picture encoded using base64</socgen:line>
+<socgen:line>Serialized picture encoded using base64</socgen:line>
+</socgen:data>
+</socgen:picture>
+
+
+
+<socgen:box>
+<socgen:x>0</socgen:x>
+<socgen:y>0</socgen:y>
+<socgen:width>0</socgen:width>
+<socgen:height>0</socgen:height>
+<socgen:color>0</socgen:color>
+<socgen:linewidth>0</socgen:linewidth>
+<socgen:capstyle>0</socgen:capstyle>
+<socgen:dashstyle>0</socgen:dashstyle>
+<socgen:dashlength>-1</socgen:dashlength>
+<socgen:dashspace>-1</socgen:dashspace>
+<socgen:filltype>0</socgen:filltype>
+<socgen:fillwidth>0</socgen:fillwidth>
+<socgen:angle1>0</socgen:angle1>
+<socgen:pitch1>0</socgen:pitch1>
+<socgen:angle2>0</socgen:angle2>
+<socgen:pitch2>0</socgen:pitch2>
+</socgen:box>
+
+
+
+
+
+
+
+<socgen:circle>
+<socgen:x>1050</socgen:x>
+<socgen:y>300</socgen:y>
+<socgen:radius>50</socgen:radius>
+<socgen:color>6</socgen:color>
+<socgen:width>0</socgen:width>
+<socgen:capstyle>0</socgen:capstyle>
+<socgen:dashstyle>0</socgen:dashstyle>
+<socgen:dashlength>-1</socgen:dashlength>
+<socgen:dashspace>-1</socgen:dashspace>
+<socgen:filltype>0</socgen:filltype>
+<socgen:fillwidth>0</socgen:fillwidth>
+<socgen:angle1>-1</socgen:angle1>
+<socgen:pitch1>-1</socgen:pitch1>
+<socgen:angle2>-1</socgen:angle2>
+<socgen:pitch2>-1</socgen:pitch2>
+</socgen:circle>
+
+
+
+<socgen:arc>
+<socgen:x>700</socgen:x>
+<socgen:y>300</socgen:y>
+<socgen:radius>300</socgen:radius>
+<socgen:startangle>270</socgen:startangle>
+<socgen:sweepangle>180</socgen:sweepangle>
+<socgen:color>3</socgen:color>
+<socgen:width>0</socgen:width>
+<socgen:capstyle>0</socgen:capstyle>
+<socgen:dashstyle>0</socgen:dashstyle>
+<socgen:dashlength>-1</socgen:dashlength>
+<socgen:dashspace>-1</socgen:dashspace>
+</socgen:arc>
+
+
+<socgen:text>
+<socgen:x>0</socgen:x>
+<socgen:y>-300</socgen:y>
+<socgen:color>0</socgen:color>
+<socgen:size>0</socgen:size>
+<socgen:visibility>0</socgen:visibility>
+<socgen:show_name_value>0</socgen:show_name_value>
+<socgen:angle>0</socgen:angle>
+<socgen:alignment>0</socgen:alignment>
+<socgen:data>
+<socgen:line>text string</socgen:line>
+<socgen:line>text string</socgen:line>
+<socgen:line>text string</socgen:line>
+<socgen:line>text string</socgen:line>
+<socgen:line>text string</socgen:line>
+</socgen:data>
+</socgen:text>
+
+
+
+
+<socgen:pin>
+<socgen:x1>0</socgen:x1>
+<socgen:y1>0</socgen:y1>
+<socgen:x2>0</socgen:x2>
+<socgen:y2>0</socgen:y2>
+<socgen:color>4</socgen:color>
+<socgen:pintype>0</socgen:pintype>
+<socgen:whichend>0</socgen:whichend>
+</socgen:pin>
+
+
+
+
+
+
+<socgen:path>
+<socgen:color>6</socgen:color>
+<socgen:width>0</socgen:width>
+<socgen:capstyle>0</socgen:capstyle>
+<socgen:dashstyle>0</socgen:dashstyle>
+<socgen:dashlength>-1</socgen:dashlength>
+<socgen:dashspace>-1</socgen:dashspace>
+<socgen:filltype>0</socgen:filltype>
+<socgen:fillwidth>0</socgen:fillwidth>
+<socgen:angle1>-1</socgen:angle1>
+<socgen:pitch1>-1</socgen:pitch1>
+<socgen:angle2>-1</socgen:angle2>
+<socgen:pitch2>-1</socgen:pitch2>
+<socgen:data>
+<socgen:path_data>path data on separate lines</socgen:path_data>
+<socgen:path_data>path data on separate lines</socgen:path_data>
+<socgen:path_data>path data on separate lines</socgen:path_data>
+<socgen:path_data>path data on separate lines</socgen:path_data>
+<socgen:path_data>path data on separate lines</socgen:path_data>
+</socgen:data>
+</socgen:path>
+
+
+
+
+
+
+
+<socgen:port>
+<socgen:name>IN</socgen:name>
+<socgen:dir>in</socgen:dir>
+<socgen:typeName>wire</socgen:typeName>
+<socgen:x1>0</socgen:x1>
+<socgen:y1>0</socgen:y1>
+<socgen:x2>300</socgen:x2>
+<socgen:y2>00</socgen:y2>
+<socgen:color>4</socgen:color>
+<socgen:pintype>0</socgen:pintype>
+<socgen:whichend>0</socgen:whichend>
+<socgen:visibility>1</socgen:visibility>
+<socgen:inversion>0</socgen:inversion>
+</socgen:port>
+
+
+<socgen:parameter>
+<socgen:name>library</socgen:name>
+<socgen:value>cde</socgen:value>
+<socgen:x>0</socgen:x>
+<socgen:y>0</socgen:y>
+<socgen:color>0</socgen:color>
+<socgen:size>0</socgen:size>
+<socgen:visibility>0</socgen:visibility>
+<socgen:show_name_value>0</socgen:show_name_value>
+<socgen:angle>0</socgen:angle>
+<socgen:alignment>0</socgen:alignment>
+</socgen:parameter>
+
+
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>out_bus</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>0</socgen:y_offset>
+ <socgen:name></socgen:name>
+ <socgen:config></socgen:config>
+</socgen:reference>
+
+Index	Object type
+0	BACKGROUND_COLOR
+1	PIN_COLOR
+2	NET_ENDPOINT_COLOR
+3	GRAPHIC_COLOR
+4	NET_COLOR
+5	ATTRIBUTE_COLOR
+6	LOGIC_BUBBLE_COLOR
+7	DOTS_GRID_COLOR
+8	DETACHED_ATTRIBUTE_COLOR
+9	TEXT_COLOR
+10	BUS_COLOR
+11	SELECT_COLOR
+12	BOUNDINGBOX_COLOR
+13	ZOOM_BOX_COLOR
+14	STROKE_COLOR
+15	LOCK_COLOR
+16	OUTPUT_BACKGROUND_COLOR
+17	FREESTYLE1_COLOR
+18	FREESTYLE2_COLOR
+19	FREESTYLE3_COLOR
+20	FREESTYLE4_COLOR
+21	JUNCTION_COLOR
+22	MESH_GRID_MAJOR_COLOR
+23	MESH_GRID_MINOR_COLOR
+
+
+
+    The capstyle is an enumerated type:
+        END NONE = 0
+        END SQUARE = 1
+        END ROUND = 2
+
+    The dashstyle is an enumerated type:
+        TYPE SOLID = 0
+        TYPE DOTTED = 1
+        TYPE DASHED = 2
+        TYPE CENTER = 3
+        TYPE PHANTOM = 4
+    The dashlength parameter is not used for TYPE SOLID and TYPE DOTTED. This parameter should take on a value of -1 in these cases.
+    The dashspace parameter is not used for TYPE SOLID. This parameter should take on a value of -1 in these case.
+
+    The filltype parameter is an enumerated type:
+        FILLING HOLLOW = 0
+        FILLING FILL = 1
+        FILLING MESH = 2
+        FILLING HATCH = 3
+        FILLING VOID = 4 unused
+    If the filltype is 0 (FILLING HOLLOW), then all the fill parameters should take on a value of -1.
+    The fill type FILLING FILL is a solid color fill.
+    The two pairs of pitch and spacing control the fill or hatch if the fill type is FILLING MESH.
+    Only the first pair of pitch and spacing are used if the fill type is FILLING HATCH.
+
+
+ The pintype is an enumerated type:
+
+    NORMAL PIN = 0
+    BUS PIN = 1 unused
+
+The whichend specifies which end point of the pin is the active connection port. Only this end point can have other pins or nets connected to it.
+To make the first end point active, whichend should be 0, else to specify the other end, whichend should be 1.
+ The visibility field is an enumerated type:
+
+    INVISIBLE = 0
+    VISIBLE = 1
+
+The show_name_value is an enumerated type:
+
+    SHOW NAME VALUE = 0 (show both name and value of an attribute)
+    SHOW VALUE = 1 (show only the value of an attribute)
+    SHOW NAME = 2 (show only the name of an attribute)
+
+The show_name_value field is only valid if the string is an attribute (string has to be in the form: name=value to be considered an attribute).
+The angle of the text can only take on one of the following values: 0, 90, 180, 270. A value of 270 will always generate upright text.
+The alignment/origin field controls the relative location of the origin.
+The alignment field can take a value from 0 to 8. 
+
+
+2           5          8
+
+
+1           4          7
+
+
+0           3          6

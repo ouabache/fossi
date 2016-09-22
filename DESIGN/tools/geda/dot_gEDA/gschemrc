@@ -1,0 +1,88 @@
+;                                                         -*-Scheme-*-
+; 
+; Init file for gschem
+;
+
+; magnetic-net-mode string
+;
+; Controls the initial setting of the magnetic net mode. The magnetic
+; net mode marks a possible connection that is close to the current
+; cursor position
+(magnetic-net-mode "enabled")
+;(magnetic-net-mode "disabled")
+
+
+; log-window string
+;
+; Controls if the log message window is mapped when gschem is started up
+; Possible options:
+;       startup - opened up when gschem starts
+;       later   - NOT opened up when gschem starts
+;                 (can be opened by Options/Show Log Window)
+;
+;(log-window "startup")
+(log-window "later")
+
+; window-size width height 
+;
+; Specifies the size of the drawing area window.  The width and height
+; are specified in pixels and do not include the three menu bars and 
+; scrollbars (so the window will be larger than the specified 
+; measurements). Try to keep an aspect ratio of 1.333333 if at all possible. 
+; These numbers are NOT the true size of the window, but of the drawing area.
+;
+;(window-size 650 487)  ; Good size for 800x600
+;(window-size 900 650)   ; Good size for 1024x768
+;(window-size 950 712)  ; Good size for 1152x864
+(window-size 1100 825) ; Good size for 1280x1024
+
+
+; image-color string
+;
+; Controls if image (png) is color (enabled) or black/white (disabled)
+;
+;(image-color "enabled")
+(image-color "disabled")
+
+; Bus ripper controls
+; The following keywords control the auto bus ripper addition code
+;
+; bus-ripper-size  : Sets the size of the auto bus rippers.  
+; bus-ripper-type  : Sets the bus ripper type either a "component" or 
+;                    plain "net"
+; bus-ripper-syname  : If above is set to component, specify the symbol name.
+;                      The symbol must exist in a component library
+; bus-ripper-rotation  : Either "symmetric" or "non-symmetric".  This deals 
+;                        with how the bus ripper symbol is rotated when it 
+;                        is auto added to a schematic.
+;   
+
+; The default bus ripper
+(bus-ripper-size 200)
+(bus-ripper-type "component")
+(bus-ripper-symname "busripper-1.sym")
+(bus-ripper-rotation "non-symmetric")
+
+; A symmetric alternative 
+;(bus-ripper-size 200)
+;(bus-ripper-type "component")
+;(bus-ripper-symname "busripper-2.sym")
+;(bus-ripper-rotation "symmetric")
+
+; A simple net 
+;(bus-ripper-size 200)
+;(bus-ripper-type "net")
+
+
+; If you don't want a titleblock to be added automatically, then add one of 
+; the following lines to your gschemrc file (without the semicolon).
+; There are several ways, so just choose one:
+(define default-titleblock "")
+;   (define default-titleblock '())
+;   (define default-titleblock #f)
+;
+;(define default-titleblock "title-B.sym")
+
+
+
+

@@ -1,0 +1,4 @@
+(reset-component-library)
+(reset-source-library)
+(component-library-search "${HOME}/.gEDA/sym/gEDA" "GEDA")
+(source-library ".")

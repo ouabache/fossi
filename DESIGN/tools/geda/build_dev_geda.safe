@@ -1,0 +1,13 @@
+sudo apt-get  install -y git;
+git clone git://git.geda-project.org/geda-gaf.git;
+sudo apt-get  install -y texinfo;
+sudo apt-get  install -y autopoint;
+sudo apt-get  install -y libtool;
+sudo apt-get  build-dep geda;
+cd geda-gaf;
+./autogen.sh;
+./configure --prefix="$HOME/gEDA";
+make;
+make install;
+cd .. ;
+

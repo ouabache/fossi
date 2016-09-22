@@ -1,0 +1,398 @@
+eval 'exec `which perl` -S $0 ${1+"$@"}'
+   if 0;
+
+#/**********************************************************************/
+#/*                                                                    */
+#/*             -------                                                */
+#/*            /   SOC  \                                              */
+#/*           /    GEN   \                                             */
+#/*          /    TOOL    \                                            */
+#/*          ==============                                            */
+#/*          |            |                                            */
+#/*          |____________|                                            */
+#/*                                                                    */
+#/*                                                                    */
+#/*                                                                    */
+#/*                                                                    */
+#/*  Author(s):                                                        */
+#/*      - John Eaton, jt_eaton@opencores.org                          */
+#/*                                                                    */
+#/**********************************************************************/
+#/*                                                                    */
+#/*    Copyright (C) <2010-2011>  <Ouabache Design Works>              */
+#/*                                                                    */
+#/*  This source file may be used and distributed without              */
+#/*  restriction provided that this copyright statement is not         */
+#/*  removed from the file and that any derivative work contains       */
+#/*  the original copyright notice and the associated disclaimer.      */
+#/*                                                                    */
+#/*  This source file is free software; you can redistribute it        */
+#/*  and/or modify it under the terms of the GNU Lesser General        */
+#/*  Public License as published by the Free Software Foundation;      */
+#/*  either version 2.1 of the License, or (at your option) any        */
+#/*  later version.                                                    */
+#/*                                                                    */
+#/*  This source is distributed in the hope that it will be            */
+#/*  useful, but WITHOUT ANY WARRANTY; without even the implied        */
+#/*  warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR           */
+#/*  PURPOSE.  See the GNU Lesser General Public License for more      */
+#/*  details.                                                          */
+#/*                                                                    */
+#/*  You should have received a copy of the GNU Lesser General         */
+#/*  Public License along with this source; if not, download it        */
+#/*  from http://www.opencores.org/lgpl.shtml                          */
+#/*                                                                    */
+#/**********************************************************************/
+
+
+############################################################################
+# General PERL config
+############################################################################
+use Getopt::Long;
+use English;
+use File::Basename;
+use Cwd;
+use XML::LibXML;
+use lib './tools';
+use sys::lib;
+use yp::lib;
+
+
+$OUTPUT_AUTOFLUSH = 1; # set autoflush of stdout to TRUE.
+
+
+############################################################################
+### Process the options
+############################################################################
+
+Getopt::Long::config("require_order", "prefix=-");
+GetOptions("h","help",
+) || die "(use '$program_name -h' for help)";
+
+
+##############################################################################
+## Help option
+##############################################################################
+if (  $opt_h or $opt_help  ) 
+  { print "\n build_geda vendor_name library_name [component_name]";
+    print "\n";
+    exit 1;
+  }
+
+
+##############################################################################
+## 
+##############################################################################
+
+
+
+my $parser = XML::LibXML->new();
+
+$home = cwd();
+
+
+#############################################################################
+## 
+## 
+#############################################################################
+
+  my $vendor         = $ARGV[0];
+  my $library        = $ARGV[1];
+  my $component      = $ARGV[2];
+
+
+my @components = ();
+
+if( $component)
+{
+push (@components,$component);
+}
+else
+{
+@components   = yp::lib::find_components($vendor,$library);
+}
+
+
+foreach  $component (@components) 
+
+{
+
+#############################################################################
+## 
+## 
+#############################################################################
+
+my @versions =       yp::lib::find_component_versions($vendor,$library,$component);
+
+my($comp_name)        = $component;
+my($comp_library)     = $library;
+my($comp_vendor)      = $vendor;
+
+foreach  $comp_version   (@versions)
+   {
+
+
+   my $comp_variant;
+   if($comp_version) {$comp_variant = "${comp_name}_${comp_version}"}
+   else              {$comp_variant = "${comp_name}"}
+
+
+
+
+   print "gEDA directories  for    $library - $component  . ${comp_version}.     $comp_name -  $comp_variant \n"; 
+
+   #/*********************************************************************************************/
+   #/                                                                                            */
+   #/                                                                                            */
+   #/                                                                                            */
+   #/                                                                                            */
+   #/                                                                                            */
+   #/                                                                                            */
+   #/*********************************************************************************************/
+
+
+   my $path  = "${home}/doc/geda";
+   mkdir $path,0755             unless( -e $path );
+
+   my $path  = "${home}/doc/geda/sch";
+   mkdir $path,0755             unless( -e $path );
+
+   my $path  = "${home}/doc/geda/sym";
+   mkdir $path,0755             unless( -e $path );
+
+   my $outfile ="${home}/doc/geda/sch/${comp_variant}.sch";
+   open SCH_FILE,">$outfile" or die "unable to open $outfile";
+
+   my $outfile ="${home}/doc/geda/sym/${comp_variant}.sym";
+   open SYM_FILE,">$outfile" or die "unable to open $outfile";
+    
+
+      
+   my $spirit_component_file    = $parser->parse_file(yp::lib::find_ipxact_component($comp_vendor,$comp_library,$comp_name,$comp_version));
+
+   my($vendor)   = $spirit_component_file->findnodes('//ipxact:component/ipxact:vendor/text()')->to_literal ;
+   my($library)  = $spirit_component_file->findnodes('//ipxact:component/ipxact:library/text()')->to_literal ;
+   my($name)     = $spirit_component_file->findnodes('//ipxact:component/ipxact:name/text()')->to_literal ;
+   my($version)  = $spirit_component_file->findnodes('//ipxact:component/ipxact:version/text()')->to_literal ;
+   
+   #/**********************************************************************/
+   #/*                                                                    */
+   #/* Every hier cell is constructed from the ipxact file with seperate  */
+   #/* versions for simulation and synthesys                              */
+   #/*                                                                    */
+   #/*                                                                    */
+   #/**********************************************************************/
+     
+   my $in_count   = 0;
+   my $out_count  = 0;
+   my $in_length  = 0;
+   my $out_length = 0;
+
+   #   parse master bus interfaces
+  
+   foreach  my   $comp  ($spirit_component_file->findnodes('//ipxact:component/ipxact:busInterfaces/ipxact:busInterface/ipxact:master'))
+         {
+         my($pin_name)        = $comp ->findnodes('../ipxact:name/text()')->to_literal ;           
+         my($mmm_name)          = $comp->findnodes('../ipxact:abstractionType/@ipxact:name')->to_literal ;
+         my($mmm_version)       = $comp->findnodes('../ipxact:abstractionType/@ipxact:version')->to_literal ;
+
+         $pin_name   = $mmm_name."__".$pin_name;
+         push(@out_bus,$pin_name);
+         $out_count = $out_count+1;
+         if( length($pin_name) > $out_length){  $out_length =  length($pin_name)            }
+         }
+
+
+
+   #   parse slave bus interfaces
+
+   foreach  my   $comp  ($spirit_component_file->findnodes('//ipxact:component/ipxact:busInterfaces/ipxact:busInterface/ipxact:slave'))
+         {
+         my($pin_name)        = $comp ->findnodes('../ipxact:name/text()')->to_literal ;
+         my($mmm_name)          = $comp->findnodes('../ipxact:abstractionType/@ipxact:name')->to_literal ;
+         my($mmm_version)       = $comp->findnodes('../ipxact:abstractionType/@ipxact:version')->to_literal ;
+         $pin_name   = $mmm_name."__".$pin_name;
+
+         push(@in_bus,$pin_name);
+         $in_count = $in_count+1;
+         if( length($pin_name) > $in_length) { $in_length =  length($pin_name)};
+         }
+
+
+
+   #   parse adhoc ports
+
+   foreach  my   $comp  ($spirit_component_file->findnodes('//ipxact:component/ipxact:model/ipxact:ports/ipxact:port/ipxact:name'))
+         {
+         my($port_name)       = $comp ->findnodes('./text()')->to_literal ;
+         my($direction)       = $comp ->findnodes('../ipxact:wire/ipxact:direction/text()')->to_literal ;
+         my($left)            = $comp ->findnodes('../ipxact:wire/ipxact:vector/ipxact:left/text()')->to_literal ;
+         my($right)           = $comp ->findnodes('../ipxact:wire/ipxact:vector/ipxact:right/text()')->to_literal ;
+         my($type)            = $comp ->findnodes('../ipxact:wireTypeDefs/ipxact:wireTypeDef/ipxact:typeName/text()')->to_literal ;
+     
+         if($left)  {$width = "[${left}:${right}]";}
+         else       {$width  = " ";} 
+   
+         my $pin_name = "${port_name}${width}";
+   
+         if("in" eq  $direction)
+           {
+           push(@in_sig,$pin_name);
+           $in_count = $in_count+1;
+           if( length($pin_name) > $in_length) { $in_length =  length($pin_name)};
+           }
+         if("out" eq  $direction)
+           {
+           push(@out_sig,$pin_name);
+           $out_count = $out_count+1;
+           if( length($pin_name) > $out_length){  $out_length =  length($pin_name)            }
+           }
+         if("inout" eq  $direction)
+           {
+           push(@inout_bus,$pin_name);
+           $out_count = $out_count+1;
+           if( length($pin_name) > $out_length){  $out_length =  length($pin_name)            }
+           }
+         }
+
+   my $max_pins;
+
+   if($in_count > $out_count) {$max_pins = $in_count ;} else  {$max_pins = $out_count ;}
+
+   my $sch_color =  5; 
+   my $sch_size  = 10;
+   my $sch_pin_y = 300;
+
+   my $sch_in_edg  = ($in_length)*10*$sch_size +200;
+   my $sch_in_pad  = ($in_length)*10*$sch_size +200;
+   my $sch_out_edg = ($in_length +$out_length)*10*$sch_size +4500;
+   my $sch_out_pad = ($in_length +$out_length)*10*$sch_size +3500;
+
+   printf SCH_FILE ("v 20100214 1\n");
+   printf SCH_FILE ("T 40 40 8 10 1 1 0 0 1 1\n%srefdes=U?\n");
+
+   my $sym_color =  5;
+   my $sym_size  = 10;
+   my $sym_box_h   = ($max_pins * 200) +300;
+   my $sym_box_w   = ($in_length +$out_length)*10*$sym_size +400;
+   my $sym_out_title = ($in_length +$out_length)*10*$sym_size +600;
+   my $sym_out_edg = ($in_length +$out_length)*10*$sym_size +700;
+   my $sym_out_pad = ($in_length +$out_length)*10*$sym_size +1000;
+   my $sym_title   = $sym_box_h +150;
+   my $sym_ref_des = $sym_box_h +350;
+
+
+   printf SYM_FILE ("v 20100214 1\n");
+   printf SYM_FILE ("B 300 0  $sym_box_w $sym_box_h 3 60 0 0 -1 -1 0 -1 -1 -1 -1 -1\n");
+   printf SYM_FILE ("T 400 $sym_title   5 10 1 1 0 0 1 1\ndevice=%s\n", $comp_variant);
+   printf SYM_FILE ("T 400 -300   5 10 0 1 0 0 1 1\nsource=%s.sch\n", $comp_variant);
+   printf SYM_FILE ("T 400 $sym_ref_des 8 10 1 1 0 0 1 1\n%srefdes=U?\n");
+
+   my $sym_pin_y = 200;
+   my $sym_pin_seq = 1;
+
+   while( $name =pop(@in_sig))
+      {
+      printf SCH_FILE ("C $sch_in_pad $sch_pin_y 1 0 0 in_port.sym   \n{\nT $sch_in_edg $sch_pin_y $sch_color $sch_size 1 1 0 6 1 1\nrefdes=%s\n}\n",$name);
+      $sch_pin_y = $sch_pin_y +400;
+      printf SYM_FILE ("P 300 $sym_pin_y 0 $sym_pin_y 4 0 1 \n");
+      printf SYM_FILE ("{\nT 400 $sym_pin_y $sym_color $sym_size 1 1 0 1 1 1\npinnumber=%s\n",$name);
+      printf SYM_FILE ("T 400 $sym_pin_y $sym_color $sym_size 0 1 0 1 1 1\npinseq=%s\n}\n",$sym_pin_seq);
+      $sym_pin_seq = $sym_pin_seq +1;
+      $sym_pin_y = $sym_pin_y +200;
+      }
+
+
+   while( $name =pop(@in_bus))
+      {
+      printf SCH_FILE ("C $sch_in_pad $sch_pin_y 1 0 0 in_port_v.sym   \n{\nT $sch_in_edg $sch_pin_y $sch_color $sch_size 1 1 0 6 1 1\nrefdes=%s\n}\n",$name);
+      $sch_pin_y = $sch_pin_y +400;
+      printf SYM_FILE ("P 300 $sym_pin_y 0 $sym_pin_y 10 1 1 \n");
+      printf SYM_FILE ("{\nT 400 $sym_pin_y $sym_color $sym_size 1 1 0 1 1 1\npinnumber=%s\n",$name);
+      printf SYM_FILE ("T 400 $sym_pin_y $sym_color $sym_size 0 1 0 1 1 1\npinseq=%s\n}\n",$sym_pin_seq);
+      $sym_pin_seq = $sym_pin_seq +1;
+      $sym_pin_y = $sym_pin_y +200;
+      }
+
+      $sym_pin_y = 200;
+
+      while( $name =pop(@inpads))
+         {
+         printf SCH_FILE ("C $sch_in_pad $sch_pin_y 1 0 0 in_port.sym  \n{\nT $sch_in_edg $sch_pin_y $sch_color $sch_size 1 1 0 6 1 1 \nrefdes=%s\n}\n",$name);
+         $sch_pin_y = $sch_pin_y +400;
+         printf SYM_FILE ("P 300 $sym_pin_y 0 $sym_pin_y 4 0 1  \n");
+         printf SYM_FILE ("{\nT 400 $sym_pin_y $sym_color $sym_size 1 1 0 1 1 1 \npinnumber=%s\n",$name);
+         printf SYM_FILE ("T 400 $sym_pin_y $sym_color $sym_size 0 1 0 1 1 1 \npinseq=%s\n}\n",$sym_pin_seq);
+         $sym_pin_seq = $sym_pin_seq +1;
+         $sym_pin_y = $sym_pin_y +200;
+         }
+
+      while( $name =pop(@inout_bus))
+         {
+         printf SCH_FILE ("C $sch_in_pad $sch_pin_y 1 0 0 io_port_v.sym   \n{\nT $sch_in_edg $sch_pin_y $sch_color $sch_size 1 1 0 6 1 1\nrefdes=%s\n}\n",$name);
+         $sch_pin_y = $sch_pin_y +400;
+         printf SYM_FILE ("P $sym_out_edg $sym_pin_y $sym_out_pad $sym_pin_y 10 1 1\n");
+         printf SYM_FILE ("{\nT $sym_out_title $sym_pin_y $sym_color  $sym_size 1 1 0 7 1 1 \npinnumber=%s\n",$name);
+         printf SYM_FILE ("T $sym_out_title $sym_pin_y $sym_color  $sym_size 0 1 0 7 1 1 \npinseq=%s\n}\n",$sym_pin_seq);
+         $sym_pin_seq = $sym_pin_seq +1;
+         $sym_pin_y = $sym_pin_y +200;
+         }
+
+
+      while( $name =pop(@inoutpads))
+         {
+         printf SCH_FILE ("C $sch_in_pad $sch_pin_y 1 0 0 io_port.sym  \n{\nT $sch_in_edg $sch_pin_y $sch_color $sch_size 1 1 0 6 1 1 \nrefdes=%s\n}\n",$name);
+         $sch_pin_y = $sch_pin_y +400;
+         printf SYM_FILE ("P $sym_out_edg $sym_pin_y $sym_out_pad $sym_pin_y 4 0 1\n");
+         printf SYM_FILE ("{\nT $sym_out_title $sym_pin_y $sym_color  $sym_size 1 1 0 7 1 1\npinnumber=%s\n",$name);
+         printf SYM_FILE ("T $sym_out_edg $sym_pin_y $sym_color  $sym_size 0 1 0 7 1 1\npinseq=%s\n}\n",$sym_pin_seq);
+         $sym_pin_seq = $sym_pin_seq +1;
+         $sym_pin_y = $sym_pin_y +200;
+         }
+
+      $sch_pin_y = 300;
+      while( $name =pop(@out_sig))         
+         {
+         printf SCH_FILE ("C $sch_out_pad $sch_pin_y  1 0  0 out_port.sym\n{\nT $sch_out_edg $sch_pin_y $sch_color  $sch_size 1 1 0 0 1 1 \nrefdes=%s\n}\n",$name);
+         $sch_pin_y = $sch_pin_y +400;
+         printf SYM_FILE ("P $sym_out_edg $sym_pin_y $sym_out_pad $sym_pin_y 4 0 1\n");
+         printf SYM_FILE ("{\nT $sym_out_title $sym_pin_y $sym_color  $sym_size 1 1 0 7 1 1 \npinnumber=%s\n",$name);
+         printf SYM_FILE ("T $sym_out_title $sym_pin_y $sym_color  $sym_size 0 1 0 7 1 1 \npinseq=%s\n}\n",$sym_pin_seq);
+         $sym_pin_seq = $sym_pin_seq +1;
+         $sym_pin_y = $sym_pin_y +200;
+         }
+
+
+      while( $name =pop(@out_bus))         
+         {
+         printf SCH_FILE ("C $sch_out_pad $sch_pin_y  1 0  0 out_port_v.sym\n{\nT $sch_out_edg $sch_pin_y $sch_color  $sch_size 1 1 0 0 1 1 \nrefdes=%s\n}\n",$name);
+         $sch_pin_y = $sch_pin_y +400;
+         printf SYM_FILE ("P $sym_out_edg $sym_pin_y $sym_out_pad $sym_pin_y 10 1 1\n");
+         printf SYM_FILE ("{\nT $sym_out_title $sym_pin_y $sym_color  $sym_size 1 1 0 7 1 1 \npinnumber=%s\n",$name);
+         printf SYM_FILE ("T $sym_out_title $sym_pin_y $sym_color  $sym_size 0 1 0 7 1 1 \npinseq=%s\n}\n",$sym_pin_seq);
+         $sym_pin_seq = $sym_pin_seq +1;
+         $sym_pin_y = $sym_pin_y +200;
+         }
+   
+      while( $name =pop(@outpads))         
+         {
+         printf SCH_FILE ("C $sch_out_pad $sch_pin_y  1 0 0 out_port.sym\n{\nT $sch_out_edg $sch_pin_y $sch_color  $sch_size 1 1 0 0 1 1\nrefdes=%s\n}\n",$name);
+         $sch_pin_y = $sch_pin_y +400;
+         printf SYM_FILE ("P $sym_out_edg $sym_pin_y $sym_out_pad $sym_pin_y 4 0 1\n");
+         printf SYM_FILE ("{\nT $sym_out_title $sym_pin_y $sym_color  $sym_size 1 1 0 7 1 1\npinnumber=%s\n",$name);
+         printf SYM_FILE ("T $sym_out_edg $sym_pin_y $sym_color  $sym_size 0 1 0 7 1 1\npinseq=%s\n}\n",$sym_pin_seq);
+         $sym_pin_seq = $sym_pin_seq +1;
+         $sym_pin_y = $sym_pin_y +200;
+         }
+
+      
+}
+
+}
+
+
+
+
+
+
+

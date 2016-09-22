@@ -1,0 +1,17 @@
+source /opt/optimsoc/2016.1/optimsoc-environment.sh
+source /opt/optimsoc/setup_prebuilt.sh
+git clone https://github.com/optimsoc/baremetal-apps
+cd baremetal-apps/hello
+make
+$OPTIMSOC/examples/sim/compute_tile/compute_tile_sim_singlecore --meminit=hello.vmem
+cat stdout.000
+
+
+
+check for :
+
+# OpTiMSoC trace_monitor stdout file
+# [TIME, CORE] MESSAGE
+[               38916, 0] Hello World! Core 0 of 1 in tile 0, my absolute core id is: 0
+[               47764, 0] There are 1 compute tiles:
+[               55972, 0]  rank 0 is tile 0
