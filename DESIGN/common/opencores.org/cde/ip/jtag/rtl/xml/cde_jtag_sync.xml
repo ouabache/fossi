@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<ipxact:component 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>jtag</ipxact:name>
+<ipxact:version>sync</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+
+
+<ipxact:busInterfaces>
+
+
+ <ipxact:busInterface><ipxact:name>jtag</ipxact:name>
+  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="rpc_rtl"/>
+  <ipxact:slave/>
+    <ipxact:portMaps>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>clk</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>jtag_clk</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>test_logic_reset</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>test_logic_reset</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>capture_dr</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>capture_dr</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>shift_dr</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>shift_dr</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>update_dr</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>update_dr</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>tdi</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>tdi</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>tdo</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>tdo</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>select</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>select</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+
+    </ipxact:portMaps>
+ </ipxact:busInterface>
+
+
+ <ipxact:busInterface><ipxact:name>syn_jtag</ipxact:name>
+  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="rpc_rtl"/>
+  <ipxact:master/>
+    <ipxact:portMaps>
+
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>clk</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>syn_clk</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>capture_dr</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>syn_capture_dr</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>shift_dr</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>syn_shift_dr</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>update_dr</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>syn_update_dr</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>tdi</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>syn_tdi</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>tdo</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>syn_tdo</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>select</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>syn_select</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+    </ipxact:portMaps>
+ </ipxact:busInterface>
+
+</ipxact:busInterfaces>
+
+
+<ipxact:componentGenerators>
+
+
+
+
+<ipxact:componentGenerator>
+  <ipxact:name>gen_verilog</ipxact:name>
+  <ipxact:phase>104.0</ipxact:phase>
+  <ipxact:apiType>none</ipxact:apiType>
+  <ipxact:vendorExtensions><socgen:envIdentifier>:*common:*</socgen:envIdentifier></ipxact:vendorExtensions>
+  <ipxact:generatorExe>tools/verilog/gen_verilog</ipxact:generatorExe>
+  <ipxact:parameters>
+    <ipxact:parameter> 
+      <ipxact:name>destination</ipxact:name>
+      <ipxact:value>jtag_sync</ipxact:value>
+    </ipxact:parameter>
+  </ipxact:parameters>
+</ipxact:componentGenerator>
+
+
+
+
+</ipxact:componentGenerators>
+
+
+
+
+<ipxact:model>    
+       <ipxact:views>
+
+
+              <ipxact:view>
+              <ipxact:name>verilog</ipxact:name>              
+              <ipxact:vendorExtensions>
+              <ipxact:componentRef ipxact:vendor="opencores.org" 
+                                   ipxact:library="Testbench" 
+                                   ipxact:name="toolflow" 
+                                   ipxact:version="verilog"/> 
+              </ipxact:vendorExtensions>
+              </ipxact:view>
+
+
+
+
+              <ipxact:view>
+              <ipxact:name>common</ipxact:name><ipxact:envIdentifier>:*common:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-common</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+
+
+
+              <ipxact:view>
+              <ipxact:name>sim</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-sim</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+              <ipxact:view>
+              <ipxact:name>syn</ipxact:name><ipxact:envIdentifier>:*Synthesis:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-syn</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+
+
+              <ipxact:view>
+              <ipxact:name>doc</ipxact:name>
+              <ipxact:vendorExtensions>
+              <ipxact:componentRef ipxact:vendor="opencores.org" 
+                                   ipxact:library="Testbench" 
+                                   ipxact:name="toolflow" 
+                                   ipxact:version="documentation"/> 
+              </ipxact:vendorExtensions>
+              <ipxact:envIdentifier>:*Documentation:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              </ipxact:view>
+
+
+
+
+
+
+      </ipxact:views>
+
+
+
+
+
+<ipxact:ports>
+
+<ipxact:port><ipxact:name>clk</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+</ipxact:ports>
+
+</ipxact:model>    
+
+
+
+
+
+
+
+
+<ipxact:fileSets>
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-sim</ipxact:name>
+
+     <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/sync</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
+      </ipxact:file>
+
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/copyright</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
+      </ipxact:file>
+
+
+ 
+  </ipxact:fileSet>
+
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-sim</ipxact:name>
+
+
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../verilog/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType>
+        <ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+  </ipxact:fileSet>
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-syn</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../verilog/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType>
+        <ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+   </ipxact:fileSet>
+
+
+    <ipxact:fileSet>
+
+      <ipxact:name>fs-lint</ipxact:name>
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../verilog/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType>
+        <ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+    </ipxact:fileSet>
+
+
+
+
+</ipxact:fileSets>
+
+
+
+
+
+
+</ipxact:component>

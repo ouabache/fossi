@@ -1,0 +1,15 @@
+always@(posedge clk)
+  if(reset)
+    begin
+      io_in_mem_ready           <=  1'b0;
+      io_in_mem_valid           <=  1'b0;
+      io_mem_backup_en          <=  1'b0;
+      io_mem_req_cmd_ready           <=  1'b0;
+      io_mem_req_data_ready          <=  1'b0;
+      io_mem_resp_bits_data  <= 128'h0000_0000_0000_0000_0000_0000_0000_0000;
+      io_mem_resp_bits_tag   <= 5'b00000;
+      io_mem_resp_ready          <=  1'b0;      
+      io_mem_resp_valid          <=  1'b0;
+      io_out_mem_ready          <=  1'b0;
+      io_out_mem_valid          <=  1'b0;
+    end

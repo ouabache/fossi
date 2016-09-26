@@ -1,0 +1,22 @@
+always@(posedge clk)
+  if(reset)
+    begin
+      io_host_debug_stats_pcr    <=  1'b0;
+      io_host_in_bits            <=  16'h0000;
+      io_host_in_valid           <=  1'b0;
+      io_host_out_ready          <=  1'b0;
+    end
+
+assign io_host_clk = clk;
+
+
+
+always@(posedge clk)
+  if(reset)
+    begin
+      io_host_clk_edge           <=  1'b0;
+    end
+  else
+    begin
+      io_host_clk_edge           <= ! io_host_clk_edge;
+    end

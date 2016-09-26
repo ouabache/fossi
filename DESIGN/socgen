@@ -1,5 +1,0 @@
-mkdir Projects
-mkdir Projects/opencores.org
-git clone http://github.com/ouabache/socgen_CDE ./Projects/opencores.org/socgen_CDE
-./tools/sys/workspace opencores.org socgen_CDE
-

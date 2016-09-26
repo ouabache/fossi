@@ -1,0 +1,24 @@
+
+
+  always@(posedge clk)
+  if(reset)
+    begin
+    axi_arready <=  1'b0;
+    axi_awready <=  1'b0;
+    axi_bvalid  <=  1'b0;
+    axi_rlast   <=  1'b0;
+    axi_rvalid  <=  1'b0;
+    axi_wready  <=  1'b0;
+    axi_bresp   <=  2'b00;
+    axi_bid     <= 12'h000;
+    axi_rid     <= 12'h000;
+    axi_rdata   <= 32'h00000000;
+    exp_wdata  <=  32'h00000000;
+    mask_wdata  <= 32'h00000000;       
+   end
+
+
+
+
+
+   

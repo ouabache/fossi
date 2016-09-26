@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<ipxact:design 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>clock</ipxact:name>
+<ipxact:version>sys.design</ipxact:version>  
+
+
+
+<ipxact:vendorExtensions><socgen:nodes>
+
+
+
+
+<socgen:node><ipxact:name>ref_reset</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+</socgen:node>
+
+
+<socgen:node><ipxact:name>pwron_reset_n</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+</socgen:node>
+
+
+
+
+</socgen:nodes>
+
+</ipxact:vendorExtensions>
+
+
+  <ipxact:adHocConnections>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>ckIn</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="ckIn"/>
+      <ipxact:internalPortReference ipxact:componentRef="dll" ipxact:portRef="ref_clk"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>pwron_reset</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="pwron_reset"/>
+      <ipxact:internalPortReference ipxact:componentRef="dll" ipxact:portRef="reset"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>pwron_reset_n</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="pwron_reset_n"/>
+      <ipxact:internalPortReference ipxact:componentRef="dll_rsync" ipxact:portRef="reset_n"/>
+      <ipxact:internalPortReference ipxact:componentRef="ref_rsync" ipxact:portRef="reset_n"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>ref_reset</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="ref_reset"/>
+      <ipxact:internalPortReference ipxact:componentRef="dll_rsync" ipxact:portRef="data_in"/>
+      <ipxact:internalPortReference ipxact:componentRef="ref_rsync" ipxact:portRef="data_in"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>reset</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="reset"/>
+       <ipxact:internalPortReference ipxact:componentRef="ref_rsync" ipxact:portRef="data_out"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>dll_reset</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="dll_reset"/>
+       <ipxact:internalPortReference ipxact:componentRef="dll_rsync" ipxact:portRef="data_out"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>dll_clk</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="dll_clk"/>
+      <ipxact:internalPortReference ipxact:componentRef="dll" ipxact:portRef="dll_clk_out"/>
+      <ipxact:internalPortReference ipxact:componentRef="dll_rsync" ipxact:portRef="clk"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>div_clk_out</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="div_clk_out"/>
+      <ipxact:internalPortReference ipxact:componentRef="dll" ipxact:portRef="div_clk_out"/>
+      <ipxact:internalPortReference ipxact:componentRef="ref_rsync" ipxact:portRef="clk"/>
+    </ipxact:adHocConnection>
+
+
+
+
+
+  </ipxact:adHocConnections>
+
+
+
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dll</ipxact:instanceName> 
+<ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="clock" ipxact:version="dll" />
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue ipxact:referenceId="MULT">PLL_MULT</ipxact:configurableElementValue>
+<ipxact:configurableElementValue ipxact:referenceId="DIV">PLL_DIV</ipxact:configurableElementValue>
+<ipxact:configurableElementValue ipxact:referenceId="SIZE">PLL_SIZE</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+<ipxact:componentInstance>
+<ipxact:instanceName>ref_rsync</ipxact:instanceName> 
+<ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="sync" ipxact:version="with_reset" />
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue ipxact:referenceId="WIDTH">1</ipxact:configurableElementValue>
+<ipxact:configurableElementValue ipxact:referenceId="DEPTH">2</ipxact:configurableElementValue>
+<ipxact:configurableElementValue ipxact:referenceId="RST_VAL">1'b1</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dll_rsync</ipxact:instanceName> 
+<ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="sync" ipxact:version="with_reset" />
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue ipxact:referenceId="WIDTH">1</ipxact:configurableElementValue>
+<ipxact:configurableElementValue ipxact:referenceId="DEPTH">2</ipxact:configurableElementValue>
+<ipxact:configurableElementValue ipxact:referenceId="RST_VAL">1'b1</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+
+
+</ipxact:componentInstances>
+
+
+
+
+</ipxact:design>

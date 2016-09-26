@@ -504,7 +504,7 @@ sub process_design_files
             my($new_version)       = $new_comp->findnodes('./@ipxact:version')->to_literal ;
             if( yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version )  )
               {
-              if($opt_verbose){print "process_design_file  $new_vendor $new_library $new_name $new_version  \n"; }
+              {print "FFFFFFF  $new_vendor $new_library $new_name $new_version hierarchyRef \n"; }
               process_design_file($parser->parse_file(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version )) );
               }
     }
@@ -518,24 +518,20 @@ sub process_design_files
      my($designInsref_name)          = $new_comp  ->findnodes('../../ipxact:name')->to_literal ;
 
      print "FAAFAAFAA $designInsref_value ::  $designInsref_name \n";
-   foreach my $new_comp ($spirit_component_file->findnodes("//ipxact:component/ipxact:model/ipxact:instantiations/ipxact:designInstantiation/ipxact:name/text()")) 
+   foreach my $new_comp ($spirit_component_file->findnodes("//ipxact:component/ipxact:model/ipxact:instantiations/ipxact:designInstantiation")) 
         {
-        my($test_value)         = $new_comp  ->to_literal ;
+	my($t_ref)           = $new_comp->findnodes('./ipxact:name/text()')->to_literal ;
+	my($t_vendor)        = $new_comp->findnodes('./ipxact:designRef/@vendor')->to_literal ;
+	my($t_library)       = $new_comp->findnodes('./ipxact:designRef/@library')->to_literal ;
+	my($t_name)          = $new_comp->findnodes('./ipxact:designRef/@name')->to_literal ;
+	my($t_version)       = $new_comp->findnodes('./ipxact:designRef/@version')->to_literal ;
 
-     print "FAAFAAFAA $designInsref_value ::  $designInsref_name ::-  $test_value  \n";
-        if($test_value eq $designInsref_name )
+        if($t_ref eq $designInsref_name )
 	{
-	         print "FAAFAAFAA MATCH  \n";
-        my($new_vendor)        = $new_comp->findnodes('./designRef/@ipxact:vendor')->to_literal ;
-        my($new_library)       = $new_comp->findnodes('./designRef/@ipxact:library')->to_literal ;
-        my($new_name)          = $new_comp->findnodes('./designRef/@ipxact:name')->to_literal ;
-        my($new_version)       = $new_comp->findnodes('./designRef/@ipxact:version')->to_literal ;
-
-
-            if( yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version )  )
+            if( yp::lib::find_ipxact_design($t_vendor,$t_library,$t_name,$t_version )  )
               {
-              if($opt_verbose){print "process_design_file  $new_vendor $new_library $new_name $new_version  \n"; }
-              process_design_file($parser->parse_file(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version )) );
+              {print "FFFFFFF  $t_vendor $t_library $t_name $t_version designgInstantiationRef \n"; }
+              process_design_file($parser->parse_file(yp::lib::find_ipxact_design($t_vendor,$t_library,$t_name,$t_version )) );
               }
 
         }

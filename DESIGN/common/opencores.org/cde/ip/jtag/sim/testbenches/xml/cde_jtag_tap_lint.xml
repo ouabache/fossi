@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<ipxact:component 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>jtag</ipxact:name>
+<ipxact:version>tap_lint</ipxact:version>  
+
+
+
+<ipxact:componentGenerators>
+
+
+</ipxact:componentGenerators>
+
+
+
+
+
+<ipxact:model>    
+
+
+       <ipxact:views>
+
+              <ipxact:view>
+              <ipxact:name>Dut</ipxact:name>
+              <ipxact:vendorExtensions>
+              <ipxact:componentRef ipxact:vendor="opencores.org" 
+                                   ipxact:library="cde" 
+                                   ipxact:name="jtag" 
+                                   ipxact:version="tap_dut.params"/>
+              </ipxact:vendorExtensions>
+              </ipxact:view>
+
+
+              <ipxact:view>
+              <ipxact:name>lint</ipxact:name>
+              <ipxact:envIdentifier>:*Lint:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:fileSetRef><ipxact:localName>fs-lint</ipxact:localName></ipxact:fileSetRef>
+              </ipxact:view>
+
+
+
+              <ipxact:view>
+              <ipxact:name>rtl_check</ipxact:name>              
+              <ipxact:vendorExtensions>
+              <ipxact:componentRef ipxact:vendor="opencores.org" 
+                                   ipxact:library="Testbench" 
+                                   ipxact:name="toolflow" 
+                                   ipxact:version="rtl_check"/> 
+              </ipxact:vendorExtensions>
+              </ipxact:view>
+
+
+      </ipxact:views>
+
+
+
+</ipxact:model>    
+
+
+
+
+
+
+
+
+<ipxact:fileSets>
+
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-lint</ipxact:name>
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/lint/jtag_tap_lint</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType>
+        <ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+   </ipxact:fileSet>
+
+
+
+</ipxact:fileSets>
+
+
+
+
+
+</ipxact:component>

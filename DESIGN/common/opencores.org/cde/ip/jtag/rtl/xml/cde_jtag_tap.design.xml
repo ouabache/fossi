@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<ipxact:design 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>jtag</ipxact:name>
+<ipxact:version>tap.design</ipxact:version>  
+
+
+<ipxact:vendorExtensions><socgen:nodes>
+
+
+<socgen:node><ipxact:name>tclk</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+
+</socgen:node>
+
+<socgen:node><ipxact:name>tclk_n</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+
+</socgen:node>
+
+
+<socgen:node><ipxact:name>tap_state</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+<ipxact:wire><ipxact:vector><ipxact:left>3</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</socgen:node>
+
+
+<socgen:node><ipxact:name>next_tap_state</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+<ipxact:wire><ipxact:vector><ipxact:left>3</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</socgen:node>
+
+
+<socgen:node><ipxact:name>shift_ir</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+
+</socgen:node>
+
+<socgen:node><ipxact:name>update_ir</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+
+</socgen:node>
+
+<socgen:node><ipxact:name>capture_ir</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+
+</socgen:node>
+
+
+
+<socgen:node><ipxact:name>next_tdo</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+
+</socgen:node>
+
+
+<socgen:node><ipxact:name>bypass_tdo</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+
+</socgen:node>
+
+
+<socgen:node><ipxact:name>chip_id_tdo</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+
+</socgen:node>
+
+<socgen:node><ipxact:name>chip_id_select</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+
+</socgen:node>
+
+<socgen:node><ipxact:name>bypass_select</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+
+</socgen:node>
+
+
+<socgen:node><ipxact:name>extest</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+
+</socgen:node>
+
+
+<socgen:node><ipxact:name>sample</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+
+</socgen:node>
+
+
+<socgen:node><ipxact:name>clamp</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+
+</socgen:node>
+
+
+<socgen:node><ipxact:name>bsr_output_mode</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+</socgen:node>
+
+
+<socgen:node><ipxact:name>shiftcapture_dr</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+</socgen:node>
+
+
+<socgen:node><ipxact:name>aux_update_dr_o</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+</socgen:node>
+
+
+<socgen:node><ipxact:name>aux_jtag_clk</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+</socgen:node>
+
+
+
+
+
+</socgen:nodes></ipxact:vendorExtensions>
+
+
+<ipxact:adHocConnections>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>jtag_clk</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="jtag_clk"/>
+      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="clk"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>trst_pad_in</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="trst_pad_in"/>
+      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="reset"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>tdi_pad_in</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="JTAG_INT_JTAG_TDI_PAD_IN"/>
+      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="tdi"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>chip_id_select</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="chip_id_select"/>
+      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="select"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>chip_id_tdo</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="chip_id_tdo"/>
+      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="tdo"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>capture_dr_o</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="jtag_capture_dr"/>
+      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="capture_dr"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>shift_dr_o</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="jtag_shift_dr"/>
+      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="shift_dr"/>
+    </ipxact:adHocConnection>
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>tclk</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="tclk"/>
+      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_shift_clk" ipxact:portRef="clk_in"/>
+      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_update_clk" ipxact:portRef="clk_in"/>
+      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_clk" ipxact:portRef="clk_in"/>
+    </ipxact:adHocConnection>
+
+
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>jtag_shift_clk</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="jtag_shift_clk"/>
+      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_shift_clk" ipxact:portRef="clk_out"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>update_dr_clk_o</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="jtag_update_dr_clk"/>
+      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_update_clk" ipxact:portRef="clk_out"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>jtag_clk</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="jtag_clk"/>
+      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_clk" ipxact:portRef="clk_out"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>shiftcapture_dr</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="shiftcapture_dr"/>
+      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_shift_clk" ipxact:portRef="enable"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>update_dr_o</ipxact:name>      
+      <ipxact:externalPortReference ipxact:portRef="update_dr_o"/>
+      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_update_clk" ipxact:portRef="enable"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>chip_id_value</ipxact:name>
+      <ipxact:externalPortReference ipxact:portRef="chip_id_value" ipxact:left="31"  ipxact:right="0"  />
+      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="capture_value"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection ipxact:tiedValue="1'b1" >
+      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_clk" ipxact:portRef="enable"/>
+    </ipxact:adHocConnection>
+
+
+
+    <ipxact:adHocConnection   ipxact:tiedValue="1'b0" >
+      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_shift_clk" ipxact:portRef="atg_clk_mode"/>
+      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_update_clk" ipxact:portRef="atg_clk_mode"/>
+      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_clk" ipxact:portRef="atg_clk_mode"/>
+    </ipxact:adHocConnection>
+
+
+
+
+
+
+
+</ipxact:adHocConnections>
+
+
+
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>clk_gater_jtag_shift_clk</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="clock" ipxact:version="gater" />
+</ipxact:componentInstance>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>clk_gater_jtag_update_clk</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="clock" ipxact:version="gater" />
+</ipxact:componentInstance>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>clk_gater_jtag_clk</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="clock" ipxact:version="gater" />
+</ipxact:componentInstance>
+
+
+
+<ipxact:componentInstance>
+<ipxact:instanceName>chip_id_reg</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="rpc_in_reg" />
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue ipxact:referenceId="BITS">32</ipxact:configurableElementValue>
+<ipxact:configurableElementValue ipxact:referenceId="RESET_VALUE">CHIP_ID_VAL</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+
+
+</ipxact:componentInstances>
+
+
+
+
+
+</ipxact:design>

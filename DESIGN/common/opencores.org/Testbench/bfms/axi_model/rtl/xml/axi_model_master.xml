@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+//                                                                        //
+// Author : John Eaton  Ouabache Designworks                              //
+//                                                                        //
+//   Copyright (C) 2010 Authors and OPENCORES.ORG			  //
+//  									  //
+//   This source file may be used and distributed without		  //
+//   restriction provided that this copyright statement is not		  //
+//   removed from the file and that any derivative work contains	  //
+//   the original copyright notice and the associated disclaimer.	  //
+//  									  //
+//   This source file is free software; you can redistribute it		  //
+//   and/or modify it under the terms of the GNU Lesser General		  //
+//   Public License as published by the Free Software Foundation;	  //
+//   either version 2.1 of the License, or (at your option) any		  //
+//   later version.							  //
+//  									  //
+//   This source is distributed in the hope that it will be		  //
+//   useful, but WITHOUT ANY WARRANTY; without even the implied		  //
+//   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR		  //
+//   PURPOSE. See the GNU Lesser General Public License for more	  //
+//   details.								  //
+//  									  //
+//   You should have received a copy of the GNU Lesser General		  //
+//   Public License along with this source; if not, download it		  //
+//   from http://www.opencores.org/lgpl.shtml				  //
+//  									  //
+-->
+<ipxact:component 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>Testbench</ipxact:library>
+<ipxact:name>axi_model</ipxact:name>
+<ipxact:version>master</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+
+
+
+
+<ipxact:busInterfaces>
+
+
+<ipxact:busInterface><ipxact:name>axi</ipxact:name>
+  <ipxact:busType vendor="github.com" library="ucb-bar" name="axi" version="def"/>
+  <ipxact:abstractionType ipxact:vendor="github.com" ipxact:library="ucb-bar" ipxact:name="axi" ipxact:version="rtl"/>
+  <ipxact:master/>
+    <ipxact:portMaps>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>araddr</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_araddr</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>31</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>awaddr</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_awaddr</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>31</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>arburst</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_arburst</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>awburst</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_awburst</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>arlen</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_arlen</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>awlen</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_awlen</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+     <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>arsize</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_arsize</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>2</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+     <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>awsize</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_awsize</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>2</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>arid</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_arid</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>11</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>arready</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_arready</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>arvalid</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_arvalid</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>awid</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_awid</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>11</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>awready</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_awready</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>awvalid</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_awvalid</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>bid</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_bid</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>11</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>bready</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_bready</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>bvalid</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_bvalid</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+     <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>rdata</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_rdata</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>31</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>rid</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_rid</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>11</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>rlast</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_rlast</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>rready</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_rready</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>rvalid</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_rvalid</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+
+     <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>wdata</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_wdata</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>31</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>wstrb</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_wstrb</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>3</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>wlast</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_wlast</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>wready</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_wready</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>wvalid</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_wvalid</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+     <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>bresp</ipxact:name>
+        </ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>axi_bresp</ipxact:name>
+          <ipxact:wire><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+
+
+
+    </ipxact:portMaps>
+ </ipxact:busInterface>
+
+
+</ipxact:busInterfaces>
+
+<ipxact:componentGenerators>
+
+<ipxact:componentGenerator>
+  <ipxact:name>gen_verilog_sim</ipxact:name>
+  <ipxact:phase>104.0</ipxact:phase>
+  <ipxact:apiType>none</ipxact:apiType>
+  <ipxact:vendorExtensions><socgen:envIdentifier>:*Simulation:*</socgen:envIdentifier></ipxact:vendorExtensions>
+  <ipxact:generatorExe>tools/verilog/gen_verilog</ipxact:generatorExe>
+    <ipxact:parameters>
+    <ipxact:parameter> 
+      <ipxact:name>destination</ipxact:name>
+      <ipxact:value>axi_model_master</ipxact:value>
+    </ipxact:parameter>
+  </ipxact:parameters>
+</ipxact:componentGenerator>
+
+
+
+
+<ipxact:componentGenerator>
+  <ipxact:name>gen_verilog_syn</ipxact:name>
+  <ipxact:phase>104.0</ipxact:phase>
+  <ipxact:apiType>none</ipxact:apiType>
+  <ipxact:vendorExtensions><socgen:envIdentifier>:*Synthesis:*</socgen:envIdentifier></ipxact:vendorExtensions>
+  <ipxact:generatorExe>tools/verilog/gen_verilog</ipxact:generatorExe>
+    <ipxact:parameters>
+    <ipxact:parameter> 
+      <ipxact:name>destination</ipxact:name>
+      <ipxact:value>axi_model_master</ipxact:value>
+    </ipxact:parameter>
+  </ipxact:parameters>
+</ipxact:componentGenerator>
+
+
+</ipxact:componentGenerators>
+
+
+
+  <ipxact:fileSets>
+
+    <ipxact:fileSet>
+      <ipxact:name>fs-sim</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/copyright.v</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
+      </ipxact:file>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/top.master</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
+      </ipxact:file>
+
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/tasks</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
+      </ipxact:file>
+
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/sim/axi_model_master</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName><ipxact:name>../views/sim/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+
+
+    </ipxact:fileSet>
+
+
+    <ipxact:fileSet>
+      <ipxact:name>fs-syn</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/copyright.v</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
+      </ipxact:file>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/top.master</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
+      </ipxact:file>
+
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/syn/axi_model_master</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName><ipxact:name>../views/syn/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+    </ipxact:fileSet>
+
+
+
+  </ipxact:fileSets>
+
+
+
+
+<ipxact:model>    
+       <ipxact:views>
+
+              <ipxact:view>
+              <ipxact:name>Hierarchical</ipxact:name>
+              
+              <ipxact:hierarchyRef ipxact:vendor="opencores.org" 
+                                   ipxact:library="Testbench" 
+                                   ipxact:name="axi_model" 
+                                   ipxact:version="master.design"/>
+              </ipxact:view>
+
+              <ipxact:view>
+              <ipxact:name>verilog</ipxact:name>              
+              <ipxact:vendorExtensions>
+              <ipxact:componentRef ipxact:vendor="opencores.org" 
+                                   ipxact:library="Testbench" 
+                                   ipxact:name="toolflow" 
+                                   ipxact:version="verilog"/> 
+              </ipxact:vendorExtensions>
+              </ipxact:view>
+
+
+
+
+
+
+
+
+              <ipxact:view>
+              <ipxact:name>sim</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
+              
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-sim</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+              <ipxact:view>
+              <ipxact:name>syn</ipxact:name><ipxact:envIdentifier>:*Synthesis:*</ipxact:envIdentifier>
+              
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-syn</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+
+              <ipxact:view>
+              <ipxact:name>doc</ipxact:name>
+              <ipxact:vendorExtensions>
+              <ipxact:componentRef ipxact:vendor="opencores.org" 
+                                   ipxact:library="Testbench" 
+                                   ipxact:name="toolflow" 
+                                   ipxact:version="documentation"/> 
+              </ipxact:vendorExtensions>
+              <ipxact:envIdentifier>:*Documentation:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              </ipxact:view>
+
+      </ipxact:views>
+
+
+
+<ipxact:modelParameters>
+
+<ipxact:modelParameter><ipxact:name>addr_width</ipxact:name>
+<ipxact:value>26</ipxact:value></ipxact:modelParameter>
+
+
+</ipxact:modelParameters>
+
+
+
+
+
+<ipxact:ports>
+
+<ipxact:port><ipxact:name>clk</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>reset</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>axi_arvalid</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+<ipxact:port><ipxact:name>axi_awvalid</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>axi_bready</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>axi_rready</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>axi_wlast</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>axi_wvalid</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>axi_arburst</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>axi_awburst</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>axi_arid</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>axi_awid</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>axi_arsize</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>axi_awsize</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>axi_wstrb</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>axi_araddr</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>axi_awaddr</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>axi_wdata</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>axi_arlen</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>axi_awlen</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+</ipxact:ports>
+
+</ipxact:model>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ipxact:component>

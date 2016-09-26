@@ -11,7 +11,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 
   
-<socgen:number_of_cpus>1</socgen:number_of_cpus>
+<socgen:number_of_cpus>10</socgen:number_of_cpus>
 
 <socgen:build_dir>work</socgen:build_dir>
 <socgen:child_dir>children</socgen:child_dir>
@@ -24,11 +24,17 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 
 
+
 <socgen:repos>
 
     <socgen:repo> 
     <socgen:name>/Projects</socgen:name>
     </socgen:repo>
+
+    <socgen:repo> 
+    <socgen:name>/common</socgen:name>
+    </socgen:repo>
+
 
 
 

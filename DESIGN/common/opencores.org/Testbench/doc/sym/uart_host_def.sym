@@ -1,0 +1,126 @@
+v 20100214 1
+B 300 0  3900 2100 3 60 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 400 2250   5 10 1 1 0 0 1 1
+device=uart_host_def
+T 400 2450 5 10 1 1 0 0 1 1
+refdes=U?
+T 400 2600    0 10 0 1 0 0 1 1
+vendor=opencores.org
+T 400 2600    0 10 0 1 0 0 1 1
+library=Testbench
+T 400 2600    0 10 0 1 0 0 1 1
+component=uart_host
+T 400 2600    0 10 0 1 0 0 1 1
+version=def
+P 300 200 0 200 10 1 1 
+{
+T 400 200 5 10 1 1 0 1 1 1
+pinnumber=rxd_data_out[7:0]
+T 400 200 5 10 0 1 0 1 1 1
+pinseq=1
+}
+P 300 400 0 400 4 0 1  
+{
+T 400 400 5 10 1 1 0 1 1 1 
+pinnumber=txd_buffer_empty
+T 400 400 5 10 0 1 0 1 1 1 
+pinseq=2
+}
+P 300 600 0 600 4 0 1  
+{
+T 400 600 5 10 1 1 0 1 1 1 
+pinnumber=rxd_stop_error
+T 400 600 5 10 0 1 0 1 1 1 
+pinseq=3
+}
+P 300 800 0 800 4 0 1  
+{
+T 400 800 5 10 1 1 0 1 1 1 
+pinnumber=rxd_parity_error
+T 400 800 5 10 0 1 0 1 1 1 
+pinseq=4
+}
+P 300 1000 0 1000 4 0 1  
+{
+T 400 1000 5 10 1 1 0 1 1 1 
+pinnumber=rxd_data_avail
+T 400 1000 5 10 0 1 0 1 1 1 
+pinseq=5
+}
+P 300 1200 0 1200 4 0 1  
+{
+T 400 1200 5 10 1 1 0 1 1 1 
+pinnumber=reset
+T 400 1200 5 10 0 1 0 1 1 1 
+pinseq=6
+}
+P 300 1400 0 1400 4 0 1  
+{
+T 400 1400 5 10 1 1 0 1 1 1 
+pinnumber=clk
+T 400 1400 5 10 0 1 0 1 1 1 
+pinseq=7
+}
+P 4200 200 4500 200 10 1 1
+{
+T 4100 200 5  10 1 1 0 7 1 1 
+pinnumber=txd_data_in[7:0]
+T 4100 200 5  10 0 1 0 7 1 1 
+pinseq=8
+}
+P 4200 400 4500 400 4 0 1
+{
+T 4100 400 5  10 1 1 0 7 1 1
+pinnumber=txd_parity
+T 4200 400 5  10 0 1 0 7 1 1
+pinseq=9
+}
+P 4200 600 4500 600 4 0 1
+{
+T 4100 600 5  10 1 1 0 7 1 1
+pinnumber=txd_load
+T 4200 600 5  10 0 1 0 7 1 1
+pinseq=10
+}
+P 4200 800 4500 800 4 0 1
+{
+T 4100 800 5  10 1 1 0 7 1 1
+pinnumber=txd_force_parity
+T 4200 800 5  10 0 1 0 7 1 1
+pinseq=11
+}
+P 4200 1000 4500 1000 4 0 1
+{
+T 4100 1000 5  10 1 1 0 7 1 1
+pinnumber=txd_break
+T 4200 1000 5  10 0 1 0 7 1 1
+pinseq=12
+}
+P 4200 1200 4500 1200 4 0 1
+{
+T 4100 1200 5  10 1 1 0 7 1 1
+pinnumber=rxd_parity
+T 4200 1200 5  10 0 1 0 7 1 1
+pinseq=13
+}
+P 4200 1400 4500 1400 4 0 1
+{
+T 4100 1400 5  10 1 1 0 7 1 1
+pinnumber=rxd_force_parity
+T 4200 1400 5  10 0 1 0 7 1 1
+pinseq=14
+}
+P 4200 1600 4500 1600 4 0 1
+{
+T 4100 1600 5  10 1 1 0 7 1 1
+pinnumber=rxd_data_avail_stb
+T 4200 1600 5  10 0 1 0 7 1 1
+pinseq=15
+}
+P 4200 1800 4500 1800 4 0 1
+{
+T 4100 1800 5  10 1 1 0 7 1 1
+pinnumber=parity_enable
+T 4200 1800 5  10 0 1 0 7 1 1
+pinseq=16
+}

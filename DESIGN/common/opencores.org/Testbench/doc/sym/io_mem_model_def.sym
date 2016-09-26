@@ -1,0 +1,147 @@
+v 20100214 1
+B 300 0  6400 2500 3 60 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 400 2650   5 10 1 1 0 0 1 1
+device=io_mem_model_def
+T 400 2850 5 10 1 1 0 0 1 1
+refdes=U?
+T 400 3000    0 10 0 1 0 0 1 1
+vendor=opencores.org
+T 400 3000    0 10 0 1 0 0 1 1
+library=Testbench
+T 400 3000    0 10 0 1 0 0 1 1
+component=io_mem_model
+T 400 3000    0 10 0 1 0 0 1 1
+version=def
+P 300 200 0 200 10 1 1 
+{
+T 400 200 5 10 1 1 0 1 1 1
+pinnumber=io_mem_req_data_bits_data[127:0]
+T 400 200 5 10 0 1 0 1 1 1
+pinseq=1
+}
+P 300 400 0 400 10 1 1 
+{
+T 400 400 5 10 1 1 0 1 1 1
+pinnumber=io_mem_req_cmd_bits_tag[4:0]
+T 400 400 5 10 0 1 0 1 1 1
+pinseq=2
+}
+P 300 600 0 600 10 1 1 
+{
+T 400 600 5 10 1 1 0 1 1 1
+pinnumber=io_mem_req_cmd_bits_addr[25:0]
+T 400 600 5 10 0 1 0 1 1 1
+pinseq=3
+}
+P 300 800 0 800 4 0 1  
+{
+T 400 800 5 10 1 1 0 1 1 1 
+pinnumber=reset
+T 400 800 5 10 0 1 0 1 1 1 
+pinseq=4
+}
+P 300 1000 0 1000 4 0 1  
+{
+T 400 1000 5 10 1 1 0 1 1 1 
+pinnumber=io_mem_req_data_valid
+T 400 1000 5 10 0 1 0 1 1 1 
+pinseq=5
+}
+P 300 1200 0 1200 4 0 1  
+{
+T 400 1200 5 10 1 1 0 1 1 1 
+pinnumber=io_mem_req_cmd_valid
+T 400 1200 5 10 0 1 0 1 1 1 
+pinseq=6
+}
+P 300 1400 0 1400 4 0 1  
+{
+T 400 1400 5 10 1 1 0 1 1 1 
+pinnumber=io_mem_req_cmd_bits_rw
+T 400 1400 5 10 0 1 0 1 1 1 
+pinseq=7
+}
+P 300 1600 0 1600 4 0 1  
+{
+T 400 1600 5 10 1 1 0 1 1 1 
+pinnumber=clk
+T 400 1600 5 10 0 1 0 1 1 1 
+pinseq=8
+}
+P 6700 200 7000 200 10 1 1
+{
+T 6600 200 5  10 1 1 0 7 1 1 
+pinnumber=io_mem_resp_bits_tag[4:0]
+T 6600 200 5  10 0 1 0 7 1 1 
+pinseq=9
+}
+P 6700 400 7000 400 10 1 1
+{
+T 6600 400 5  10 1 1 0 7 1 1 
+pinnumber=io_mem_resp_bits_data[127:0]
+T 6600 400 5  10 0 1 0 7 1 1 
+pinseq=10
+}
+P 6700 600 7000 600 4 0 1
+{
+T 6600 600 5  10 1 1 0 7 1 1
+pinnumber=io_out_mem_valid
+T 6700 600 5  10 0 1 0 7 1 1
+pinseq=11
+}
+P 6700 800 7000 800 4 0 1
+{
+T 6600 800 5  10 1 1 0 7 1 1
+pinnumber=io_out_mem_ready
+T 6700 800 5  10 0 1 0 7 1 1
+pinseq=12
+}
+P 6700 1000 7000 1000 4 0 1
+{
+T 6600 1000 5  10 1 1 0 7 1 1
+pinnumber=io_mem_resp_valid
+T 6700 1000 5  10 0 1 0 7 1 1
+pinseq=13
+}
+P 6700 1200 7000 1200 4 0 1
+{
+T 6600 1200 5  10 1 1 0 7 1 1
+pinnumber=io_mem_resp_ready
+T 6700 1200 5  10 0 1 0 7 1 1
+pinseq=14
+}
+P 6700 1400 7000 1400 4 0 1
+{
+T 6600 1400 5  10 1 1 0 7 1 1
+pinnumber=io_mem_req_data_ready
+T 6700 1400 5  10 0 1 0 7 1 1
+pinseq=15
+}
+P 6700 1600 7000 1600 4 0 1
+{
+T 6600 1600 5  10 1 1 0 7 1 1
+pinnumber=io_mem_req_cmd_ready
+T 6700 1600 5  10 0 1 0 7 1 1
+pinseq=16
+}
+P 6700 1800 7000 1800 4 0 1
+{
+T 6600 1800 5  10 1 1 0 7 1 1
+pinnumber=io_mem_backup_en
+T 6700 1800 5  10 0 1 0 7 1 1
+pinseq=17
+}
+P 6700 2000 7000 2000 4 0 1
+{
+T 6600 2000 5  10 1 1 0 7 1 1
+pinnumber=io_in_mem_valid
+T 6700 2000 5  10 0 1 0 7 1 1
+pinseq=18
+}
+P 6700 2200 7000 2200 4 0 1
+{
+T 6600 2200 5  10 1 1 0 7 1 1
+pinnumber=io_in_mem_ready
+T 6700 2200 5  10 0 1 0 7 1 1
+pinseq=19
+}

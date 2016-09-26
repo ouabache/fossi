@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+initial
+  begin
+
+   TX_Data                <=  32'h00000000;
+   START                  <=  1'b0;
+
+   rx_data_exp            <=  32'h00000000;    
+
+
+
+
+   
+  end
+
+   
+
+task next;
+  input [31:0] num;
+  repeat (num)       @ (posedge clk);       
+endtask
+
+
+task send_packet;
+  input [31:0] byte_out;
+  input [31:0] byte_back;
+
+
+begin
+  $display("%t %m      %4h  --- %4h   ",$realtime ,byte_out,byte_back  );
+  TX_Data  <= byte_out;
+  rx_data_exp            <=  byte_back;    
+next(3);
+  START  <= 1'b1;
+  next(30);
+
+
+end
+endtask // send_packet
+
+
+
+
+   

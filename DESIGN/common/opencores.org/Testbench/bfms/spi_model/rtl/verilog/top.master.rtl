@@ -1,0 +1,155 @@
+
+reg [31:0]     TX_Data;
+reg            START;
+
+reg            spi_clk_roll;
+reg            spi_clk_m;
+reg [SIZE-1:0] spi_clk_cnt;
+
+
+
+
+always @(posedge clk  or posedge reset )
+  begin
+  if(reset)  spi_clk_roll <= 1'b0;
+  else
+   begin
+   spi_clk_roll <= (spi_clk_cnt == CLKCNT);
+   end
+  end
+
+
+
+always @(posedge clk  or posedge reset )
+  begin
+
+  if(reset)           spi_clk_cnt <= 8'h00;
+  else
+  begin
+   if (spi_clk_roll)  spi_clk_cnt <= 0;
+   else               spi_clk_cnt <= spi_clk_cnt + 1;
+  end
+  end
+
+
+
+
+always @(posedge clk  or posedge reset )
+  begin
+  if(reset)  spi_clk_m <= 1'b0;
+  else
+   begin
+   spi_clk_m           <=  spi_clk_roll ^ spi_clk_m ;
+   end
+  end
+
+
+
+
+
+always @(posedge clk  or posedge reset )
+  begin
+  if(reset)  spi_clk <= 1'b0;
+  else
+  if(spi_sel_n)  spi_clk <= 1'b0;
+  else
+   begin
+   spi_clk           <=  spi_clk_roll ^ spi_clk_m ;
+   end
+  end
+
+
+
+
+
+
+
+
+
+reg [5:0]  bit_cnt;
+
+
+always @(posedge clk  or posedge reset )
+  begin
+   if(reset)  bit_cnt <= 6'b000000;
+   else
+   if(!START) bit_cnt <= 6'b000000;
+   else
+
+ begin
+    if(spi_clk_roll && spi_clk_m  )
+    begin
+    if( bit_cnt == 6'b100001)     bit_cnt  <= 6'b000000;
+    else                          bit_cnt  <= bit_cnt + 6'b000001;
+    end
+   end
+
+
+
+end
+
+
+
+
+always @(posedge clk  or posedge reset )
+  begin
+
+  if(reset)  spi_sel_n <= 1'b1;
+  else
+  begin
+   if (START && spi_clk_m && spi_clk_roll )  spi_sel_n <= 1'b0;
+   else if ( bit_cnt == 6'b100001)           spi_sel_n <= 1'b1; 
+   else  spi_sel_n <= spi_sel_n;
+  end
+  end
+
+
+
+always @(posedge clk  )
+
+  begin
+   if ((!spi_sel_n)  && spi_clk_m && spi_clk_roll )  TX_Data  <= {TX_Data[30:0],1'b0};
+   else TX_Data                                               <= TX_Data;
+  end
+  
+
+
+
+
+
+always @(posedge clk  or posedge reset )
+  begin
+   if(reset)  spi_mosi <= 1'b0;
+   else       spi_mosi <= TX_Data[31];
+  end
+
+
+
+always @(posedge clk  )
+
+  begin
+   if ((!spi_sel_n)  && (!spi_clk_m) && spi_clk_roll )
+            RX_Data           <=   {RX_Data[30:0],spi_miso};
+   else     RX_Data           <=    RX_Data;
+  end
+
+
+
+always @(posedge clk  or posedge reset )
+  begin
+   if(reset)  START <= 1'b0;
+   else
+    begin
+    if(spi_clk_roll && spi_clk_m  )
+    begin
+    if( bit_cnt == 6'b100000)     START  <= 1'b0;
+    else                          START  <= START;
+    end
+   end
+   end
+
+
+wire mask;
+
+assign  mask         = ( bit_cnt == 6'b100001);
+assign  mask_rx_data = {32{mask}};

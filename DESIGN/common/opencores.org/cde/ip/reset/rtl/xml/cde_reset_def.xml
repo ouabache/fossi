@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<ipxact:component 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>reset</ipxact:name>
+<ipxact:version>def</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+
+
+
+<ipxact:componentGenerators>
+
+
+
+
+
+
+</ipxact:componentGenerators>
+
+
+
+<ipxact:fileSets>
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-sim</ipxact:name>
+
+ 
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../verilog/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+  </ipxact:fileSet>
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-syn</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../verilog/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+   </ipxact:fileSet>
+
+
+    <ipxact:fileSet>
+
+      <ipxact:name>fs-lint</ipxact:name>
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../verilog/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+    </ipxact:fileSet>
+
+
+
+</ipxact:fileSets>
+
+
+
+
+
+
+<ipxact:model>
+
+		<ipxact:instantiations>
+		<ipxact:designInstantiation>
+		<ipxact:name>Hierarchical</ipxact:name>
+		<ipxact:designRef vendor="opencores.org" library="cde" name="reset" version="def.design"/>
+		</ipxact:designInstantiation>
+		</ipxact:instantiations>
+
+
+
+
+  
+       <ipxact:views>
+
+              <ipxact:view>
+              <ipxact:name>Hierarchical</ipxact:name>
+
+            <ipxact:designInstantiationRef>Hierarchical</ipxact:designInstantiationRef>
+              </ipxact:view>
+
+
+              <ipxact:view>
+              <ipxact:name>sim</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-sim</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+              <ipxact:view>
+              <ipxact:name>syn</ipxact:name><ipxact:envIdentifier>:*Synthesis:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-syn</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+ 
+
+              <ipxact:view>
+              <ipxact:name>doc</ipxact:name>
+              <ipxact:vendorExtensions>
+              <ipxact:componentRef ipxact:vendor="opencores.org" 
+                                   ipxact:library="Testbench" 
+                                   ipxact:name="toolflow" 
+                                   ipxact:version="documentation"/> 
+              </ipxact:vendorExtensions>
+              <ipxact:envIdentifier>:*Documentation:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              </ipxact:view>
+
+
+      </ipxact:views>
+
+
+
+<ipxact:modelParameters>
+<ipxact:modelParameter><ipxact:name>WIDTH</ipxact:name><ipxact:value>1</ipxact:value></ipxact:modelParameter>
+<ipxact:modelParameter><ipxact:name>DEPTH</ipxact:name><ipxact:value>1</ipxact:value></ipxact:modelParameter>
+</ipxact:modelParameters>
+
+<ipxact:ports>
+
+<ipxact:port><ipxact:name>clk</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>async_reset_n</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>atg_asyncdisable</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>sync_reset</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>reset_n_out</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction>
+<ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+
+
+<ipxact:port><ipxact:name>reset_out</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction>
+<ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+
+
+
+
+</ipxact:ports>
+
+</ipxact:model>    
+
+
+
+
+
+
+
+
+
+</ipxact:component>

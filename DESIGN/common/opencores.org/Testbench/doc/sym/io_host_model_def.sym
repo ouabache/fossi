@@ -1,0 +1,91 @@
+v 20100214 1
+B 300 0  4900 1500 3 60 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 400 1650   5 10 1 1 0 0 1 1
+device=io_host_model_def
+T 400 1850 5 10 1 1 0 0 1 1
+refdes=U?
+T 400 2000    0 10 0 1 0 0 1 1
+vendor=opencores.org
+T 400 2000    0 10 0 1 0 0 1 1
+library=Testbench
+T 400 2000    0 10 0 1 0 0 1 1
+component=io_host_model
+T 400 2000    0 10 0 1 0 0 1 1
+version=def
+P 300 200 0 200 10 1 1 
+{
+T 400 200 5 10 1 1 0 1 1 1
+pinnumber=io_host_out_bits[15:0]
+T 400 200 5 10 0 1 0 1 1 1
+pinseq=1
+}
+P 300 400 0 400 4 0 1  
+{
+T 400 400 5 10 1 1 0 1 1 1 
+pinnumber=reset
+T 400 400 5 10 0 1 0 1 1 1 
+pinseq=2
+}
+P 300 600 0 600 4 0 1  
+{
+T 400 600 5 10 1 1 0 1 1 1 
+pinnumber=io_host_out_valid
+T 400 600 5 10 0 1 0 1 1 1 
+pinseq=3
+}
+P 300 800 0 800 4 0 1  
+{
+T 400 800 5 10 1 1 0 1 1 1 
+pinnumber=io_host_in_ready
+T 400 800 5 10 0 1 0 1 1 1 
+pinseq=4
+}
+P 300 1000 0 1000 4 0 1  
+{
+T 400 1000 5 10 1 1 0 1 1 1 
+pinnumber=clk
+T 400 1000 5 10 0 1 0 1 1 1 
+pinseq=5
+}
+P 5200 200 5500 200 10 1 1
+{
+T 5100 200 5  10 1 1 0 7 1 1 
+pinnumber=io_host_in_bits[15:0]
+T 5100 200 5  10 0 1 0 7 1 1 
+pinseq=6
+}
+P 5200 400 5500 400 4 0 1
+{
+T 5100 400 5  10 1 1 0 7 1 1
+pinnumber=io_host_out_ready
+T 5200 400 5  10 0 1 0 7 1 1
+pinseq=7
+}
+P 5200 600 5500 600 4 0 1
+{
+T 5100 600 5  10 1 1 0 7 1 1
+pinnumber=io_host_in_valid
+T 5200 600 5  10 0 1 0 7 1 1
+pinseq=8
+}
+P 5200 800 5500 800 4 0 1
+{
+T 5100 800 5  10 1 1 0 7 1 1
+pinnumber=io_host_debug_stats_pcr
+T 5200 800 5  10 0 1 0 7 1 1
+pinseq=9
+}
+P 5200 1000 5500 1000 4 0 1
+{
+T 5100 1000 5  10 1 1 0 7 1 1
+pinnumber=io_host_clk_edge
+T 5200 1000 5  10 0 1 0 7 1 1
+pinseq=10
+}
+P 5200 1200 5500 1200 4 0 1
+{
+T 5100 1200 5  10 1 1 0 7 1 1
+pinnumber=io_host_clk
+T 5200 1200 5  10 0 1 0 7 1 1
+pinseq=11
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--                                                
+//                                                //
+// Generated File Do Not EDIT                     //
+//                                                //
+// regen by adding -tb to gen_verilog script      //
+//                                                //
+-->                                                 
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>jtag</ipxact:name>
+<ipxact:version>classic_rpc_in_reg_dutg.design</ipxact:version>
+<ipxact:adHocConnections>
+
+<ipxact:adHocConnection>
+<ipxact:name>capture_dr</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="capture_dr" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="capture_dr" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>capture_value</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="capture_value" ipxact:left="BITS-1" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="capture_value" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>select</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="select" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="select" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>shift_dr</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="shift_dr" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="shift_dr" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>shiftcapture_dr_clk</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="shiftcapture_dr_clk" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="shiftcapture_dr_clk" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>tdi</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="tdi" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="tdi" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>tdo</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="tdo" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="tdo" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>test_logic_reset</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="test_logic_reset" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="test_logic_reset" />
+</ipxact:adHocConnection>
+
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dut</ipxact:instanceName>
+<ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="classic_rpc_in_reg" />
+<ipxact:configurableElementValues>
+ <ipxact:configurableElementValue ipxact:referenceId="BITS">BITS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="RESET_VALUE">RESET_VALUE</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+</ipxact:componentInstances>
+</ipxact:design>

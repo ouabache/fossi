@@ -1,0 +1,109 @@
+   
+
+   reg 			  synced_shift_dr;
+   reg 			  synced_capture_dr;
+
+
+   
+
+reg   buffer;
+
+always @(posedge shiftcapture_dr_clk or posedge test_logic_reset)
+  if (test_logic_reset)                 buffer <= 1'b0;
+  else 
+  if (select && capture_dr)             buffer <= 1'b1;
+  else                                  buffer <= 1'b0;
+
+
+
+   
+   always@(posedge clk)
+     if(!shiftcapture_dr_clk)
+       begin
+       synced_shift_dr    <= shift_dr ;
+       synced_capture_dr  <= buffer ;
+       end
+     
+     else
+       begin
+       synced_shift_dr    <= synced_shift_dr ;
+       synced_capture_dr  <= synced_capture_dr ;
+       end
+
+
+
+
+   reg [1:0]  synced_shiftcapture_dr_clk;
+   
+
+   always@(posedge clk)	      
+     synced_shiftcapture_dr_clk <= {synced_shiftcapture_dr_clk[0],shiftcapture_dr_clk};
+
+
+
+   always@(posedge clk)
+     if((select == 1'b0)||(buffer == 1'b0) )
+       begin
+       syn_capture_dr    <= 1'b0;
+       end  
+     else
+     begin
+     if(synced_shiftcapture_dr_clk == 2'b01)
+       begin
+       syn_capture_dr    <= 1'b1 ;
+       end
+     else
+       begin
+       syn_capture_dr    <= 1'b0 ;
+       end
+     end
+
+   
+
+
+   reg [1:0]  synced_update_dr_clk;
+   
+
+   always@(posedge clk)	      
+     synced_update_dr_clk <= {synced_update_dr_clk[0],update_dr_clk};
+
+
+
+   always@(posedge clk)
+     if(select == 1'b0)
+       begin
+       syn_update_dr    <= 1'b0;
+       end  
+     else
+     begin
+     if(synced_update_dr_clk == 2'b01)
+       begin
+       syn_update_dr      <= 1'b1 ;
+       end
+     else
+       begin
+       syn_update_dr      <= 1'b0 ;
+       end
+     end
+
+
+
+   
+
+
+
+
+
+   
+
+   
+
+
+   
+
+
+
+
+
+
+   

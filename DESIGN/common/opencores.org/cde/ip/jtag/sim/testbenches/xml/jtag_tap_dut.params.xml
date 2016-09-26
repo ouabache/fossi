@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--                                                
+//                                                //
+//                 //
+//                                                //
+//       //
+//                                                //
+-->                                                 
+<ipxact:component
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>jtag</ipxact:name>
+<ipxact:version>tap_dut.params</ipxact:version>
+<ipxact:model>
+	<ipxact:instantiations>
+	<ipxact:designInstantiation>
+	<ipxact:name>Dut</ipxact:name>
+	<ipxact:designRef vendor="opencores.org" library="cde" name="jtag" version="tap_dutg.design"/>
+	</ipxact:designInstantiation>
+	</ipxact:instantiations>
+
+
+
+      <ipxact:views>                                            
+                                   
+              <ipxact:view>                                   
+              <ipxact:name>Dut</ipxact:name>                                   
+              <ipxact:envIdentifier></ipxact:envIdentifier>
+<ipxact:designInstantiationRef>Dut</ipxact:designInstantiationRef>
+
+              </ipxact:view>                                   
+      </ipxact:views>                                   
+<ipxact:modelParameters>
+    <ipxact:modelParameter><ipxact:name>INST_LENGTH</ipxact:name><ipxact:value>4</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>INST_RETURN</ipxact:name><ipxact:value>4'b1101</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>EXTEST</ipxact:name><ipxact:value>4'b0000</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>SAMPLE</ipxact:name><ipxact:value>4'b0001</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>HIGHZ_MODE</ipxact:name><ipxact:value>4'b0010</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>CHIP_ID_ACCESS</ipxact:name><ipxact:value>4'b0011</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>CLAMP</ipxact:name><ipxact:value>4'b1000</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>RPC_DATA</ipxact:name><ipxact:value>4'b1010</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>RPC_ADD</ipxact:name><ipxact:value>4'b1001</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>BYPASS</ipxact:name><ipxact:value>4'b1111</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>CHIP_ID_VAL</ipxact:name><ipxact:value>32'h12345678</ipxact:value></ipxact:modelParameter>
+</ipxact:modelParameters>
+</ipxact:model>
+</ipxact:component>
