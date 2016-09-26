@@ -85,16 +85,23 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-<ipxact:model>    
+<ipxact:model>
+
+		<ipxact:instantiations>
+			<ipxact:designInstantiation>
+				<ipxact:name>Hierarchical</ipxact:name>
+				<ipxact:designRef vendor="opencores.org" library="Testbench" name="vga_model" version="def.design"/>
+			</ipxact:designInstantiation>
+		</ipxact:instantiations>
+
+
+
+  
        <ipxact:views>
 
               <ipxact:view>
               <ipxact:name>Hierarchical</ipxact:name>
-              
-              <ipxact:hierarchyRef ipxact:vendor="opencores.org" 
-                                   ipxact:library="Testbench" 
-                                   ipxact:name="vga_model" 
-                                   ipxact:version="def.design"/>
+                       <ipxact:designInstantiationRef>Hierarchical</ipxact:designInstantiationRef>
               </ipxact:view>
 
 

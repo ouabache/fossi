@@ -52,15 +52,27 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 </ipxact:modelParameters>
 
 
+
+		<ipxact:instantiations>
+			<ipxact:designInstantiation>
+				<ipxact:name>Bfm</ipxact:name>
+				<ipxact:designRef vendor="opencores.org" library="Testbench" name="ps2_model" version="bfm.design"/>
+			</ipxact:designInstantiation>
+		</ipxact:instantiations>
+
+
+		
+
+
+
        <ipxact:views>
 
 
               <ipxact:view>
               <ipxact:name>Bfm</ipxact:name>
-              <ipxact:hierarchyRef ipxact:vendor="opencores.org" 
-                                   ipxact:library="Testbench" 
-                                   ipxact:name="ps2_model" 
-                                   ipxact:version="bfm.design"/>
+
+              <ipxact:designInstantiationRef>Bfm</ipxact:designInstantiationRef>
+
               </ipxact:view>
 
       </ipxact:views>

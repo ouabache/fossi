@@ -434,7 +434,7 @@ sub parse_design_files
             my($new_version)       = $new_comp->findnodes('./@ipxact:version')->to_literal ;
             if(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version ))
               {
-              print "FFFFFF $new_vendor $new_library $new_name    $new_version     hierarchyRef    \n";
+#              print "FFFFFF $new_vendor $new_library $new_name    $new_version     hierarchyRef    \n";
               parse_design_file($parser->parse_file(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version )),$elab_root   );
               }
   }
@@ -458,7 +458,7 @@ sub parse_design_files
 
          if(yp::lib::find_ipxact_design($t_vendor,$t_library,$t_name,$t_version ))
               {
-              print "FFFFFF $t_vendor $t_library $t_name    $t_version     designInstantiationRef    \n";
+#              print "FFFFFF $t_vendor $t_library $t_name    $t_version     designInstantiationRef    \n";
               parse_design_file($parser->parse_file(yp::lib::find_ipxact_design($t_vendor,$t_library,$t_name,$t_version )),$elab_root   );
               }
 

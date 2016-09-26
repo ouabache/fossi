@@ -239,7 +239,7 @@ foreach my $bus_iface ($spirit_component_file->findnodes("//ipxact:component/ipx
         foreach my $bus_iface ($spirit_component_file->findnodes("//ipxact:busInterface[ipxact:name/text() = '$busInterface_name']/ipxact:slave/ipxact:bridge")) 
           {
           my($bridge_map)        = $bus_iface->findnodes('./@ipxact:masterRef')->to_literal ;
-#          print "FFFFFFF SLAVE BRIDGE  $busInterface_name  $memMap_name --  $bridge_map   \n";
+
 
           foreach my $mem_map ($spirit_component_file->findnodes("//ipxact:component/ipxact:memoryMaps/ipxact:memoryMap[ipxact:name/text() = '$memMap_name']/ipxact:subspaceMap[ipxact:name/text() = '$bridge_map']/ipxact:baseAddress"))
               {
@@ -251,7 +251,7 @@ foreach my $bus_iface ($spirit_component_file->findnodes("//ipxact:component/ipx
                   $busses_db->db_get( "AbsDef.${busInterface_name}.bridge", $repo_data );
                   $busses_db->db_put( "AbsDef.${busInterface_name}.bridge","${bridge_map}..${int_base_addr}::${repo_data}" );
 
-#                  print "FFFFFFF SUBSPACE   BI name  $busInterface_name MM name  $memMap_name bridge  $bridge_map  Add - $add   \n";
+
 
 
 
@@ -504,7 +504,7 @@ sub process_design_files
             my($new_version)       = $new_comp->findnodes('./@ipxact:version')->to_literal ;
             if( yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version )  )
               {
-              {print "FFFFFFF  $new_vendor $new_library $new_name $new_version hierarchyRef \n"; }
+              #print "FFFFFFF  $new_vendor $new_library $new_name $new_version hierarchyRef \n"; 
               process_design_file($parser->parse_file(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version )) );
               }
     }
@@ -517,7 +517,7 @@ sub process_design_files
      my($designInsref_value)         = $new_comp  ->to_literal ;
      my($designInsref_name)          = $new_comp  ->findnodes('../../ipxact:name')->to_literal ;
 
-     print "FAAFAAFAA $designInsref_value ::  $designInsref_name \n";
+
    foreach my $new_comp ($spirit_component_file->findnodes("//ipxact:component/ipxact:model/ipxact:instantiations/ipxact:designInstantiation")) 
         {
 	my($t_ref)           = $new_comp->findnodes('./ipxact:name/text()')->to_literal ;
@@ -530,7 +530,7 @@ sub process_design_files
 	{
             if( yp::lib::find_ipxact_design($t_vendor,$t_library,$t_name,$t_version )  )
               {
-              {print "FFFFFFF  $t_vendor $t_library $t_name $t_version designgInstantiationRef \n"; }
+              #print "FFFFFFF  $t_vendor $t_library $t_name $t_version designgInstantiationRef \n"; 
               process_design_file($parser->parse_file(yp::lib::find_ipxact_design($t_vendor,$t_library,$t_name,$t_version )) );
               }
 

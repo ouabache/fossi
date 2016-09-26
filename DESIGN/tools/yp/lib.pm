@@ -1853,7 +1853,7 @@ sub parse_component_fileX
 
      if(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version ))
      {
-	 print "FFFFFFFF  $new_vendor $new_library $new_name $new_version  hierarchyRef \n";
+#	 print "FFFFFFFF  $new_vendor $new_library $new_name $new_version  hierarchyRef \n";
              my $spirit_design_file = $parser->parse_file(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version )); 
              foreach  
                 my   $i_name ($spirit_design_file->findnodes("//ipxact:design/ipxact:componentInstances/ipxact:componentInstance/ipxact:componentRef/\@ipxact:vendor"))
@@ -1877,7 +1877,7 @@ sub parse_component_fileX
      my($designInsref_value)         = $new_comp  ->to_literal ;
      my($designInsref_name)          = $new_comp  ->findnodes('../../ipxact:name')->to_literal ;
 
-     print "FOOFOOFOO $designInsref_value ::  $designInsref_name \n";
+
    foreach my $new_comp ($spirit_component_file->findnodes("//ipxact:component/ipxact:model/ipxact:instantiations/ipxact:designInstantiation")) 
         {
  		my($t_ref)           = $new_comp->findnodes('./ipxact:name/text()')->to_literal ;
@@ -1896,7 +1896,7 @@ sub parse_component_fileX
 
         if(yp::lib::find_ipxact_design($t_vendor,$t_library,$t_name,$t_version ))
              {
-             print "FFFFFFFF  $t_vendor $t_library $t_name $t_version  designInstantiationRef \n";
+
              my $spirit_design_file = $parser->parse_file(yp::lib::find_ipxact_design($t_vendor,$t_library,$t_name,$t_version )); 
              foreach  
                 my   $i_name ($spirit_design_file->findnodes("//ipxact:design/ipxact:componentInstances/ipxact:componentInstance/ipxact:componentRef/\@ipxact:vendor"))
@@ -2029,7 +2029,7 @@ sub find_ipxact_design_files
       my($hier_ref_version)        = $comp_view->findnodes('./ipxact:hierarchyRef/@ipxact:version')->to_literal ;
       if(find_ipxact_design($hier_ref_vendor,$hier_ref_library,$hier_ref_design,$hier_ref_version))
       {
-	print "FFFFFFFF $hier_ref_vendor  $hier_ref_library $hier_ref_design  $hier_ref_version   hierarchyRef \n";
+#	print "FFFFFFFF $hier_ref_vendor  $hier_ref_library $hier_ref_design  $hier_ref_version   hierarchyRef \n";
         push(@design_files,":::${hier_ref_vendor}:::${hier_ref_library}:::${hier_ref_design}:::${hier_ref_version}:::");           
         }
       }
@@ -2056,7 +2056,7 @@ sub find_ipxact_design_files
 
       if(find_ipxact_design($t_vendor,$t_library,$t_name,$t_version))
       {
-	print "FFFFFFFF  $t_vendor $t_library $t_name $t_version  designInstantiationRef \n";
+#	print "FFFFFFFF  $t_vendor $t_library $t_name $t_version  designInstantiationRef \n";
         push(@design_files,":::${t_vendor}:::${t_library}:::${t_name}:::${t_version}:::");           
         }
 

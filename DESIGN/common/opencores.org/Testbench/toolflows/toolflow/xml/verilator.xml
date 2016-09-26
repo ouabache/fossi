@@ -184,14 +184,23 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         <ipxact:modelParameter><ipxact:name>TIMEOUT</ipxact:name><ipxact:value>100000</ipxact:value></ipxact:modelParameter>
       </ipxact:modelParameters>
 
+		<ipxact:instantiations>
+			<ipxact:designInstantiation>
+				<ipxact:name>Bfm</ipxact:name>
+				<ipxact:designRef vendor="opencores.org" library="Testbench" name="clock_gen" version="bfm.design"/>
+			</ipxact:designInstantiation>
+		</ipxact:instantiations>
+
+
+
+
+      
     <ipxact:views>
 
               <ipxact:view>
               <ipxact:name>Bfm</ipxact:name>
-              <ipxact:hierarchyRef ipxact:vendor="opencores.org" 
-                                   ipxact:library="Testbench" 
-                                   ipxact:name="clock_gen" 
-                                   ipxact:version="bfm.design"/>
+              <ipxact:designInstantiationRef>Bfm</ipxact:designInstantiationRef>
+
               </ipxact:view>
 
 
