@@ -7,11 +7,17 @@
 2) Install fusesoc
 
   cd fossi/tools/fusesoc
+  ./install
+
+
+3) Install Kactus2
+
+  cd fossi/tools/kactus2
   ./install 
 
 
 
-3) Copy this template for design environment
+4) Copy this template for design environment
 
    cp -r fossi/DESIGN  {your design directory} 
    cd DESIGN
@@ -21,7 +27,7 @@
 initialize and test fusesoc
 
   . ./profile
-  fusesoc init
+  fusesoc init  (hit return)
   ./test_fusesoc
 
 OR
@@ -35,3 +41,8 @@ initialize and test socgen
   
   check code coverage numbers
 
+  cd DESIGN
+  make clean
+  Kactus2
+  set lib to DESIGN
+  

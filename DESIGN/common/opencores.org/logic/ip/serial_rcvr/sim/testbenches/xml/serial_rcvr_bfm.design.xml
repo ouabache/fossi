@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--                                                
+//                                                //
+// Generated File Do Not EDIT                     //
+//                                                //
+// regen by adding -tb to gen_verilog script      //
+//                                                //
+-->                                                 
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>logic</ipxact:library>
+<ipxact:name>serial_rcvr</ipxact:name>
+<ipxact:version>bfm.design</ipxact:version>
+<ipxact:vendorExtensions><socgen:nodes>
+
+
+<socgen:node>
+<ipxact:name>xmit_edge_enable</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+</socgen:node>
+
+
+
+<socgen:node>
+<ipxact:name>xmit_parity_enable</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+</socgen:node>
+
+
+<socgen:node>
+<ipxact:name>xmit_parity_type</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+</socgen:node>
+
+
+
+<socgen:node>
+<ipxact:name>xmit_parity_force</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+</socgen:node>
+
+
+
+<socgen:node>
+<ipxact:name>xmit_load</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+</socgen:node>
+
+
+
+<socgen:node>
+<ipxact:name>xmit_start_value</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+</socgen:node>
+
+
+<socgen:node>
+<ipxact:name>xmit_stop_value</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+</socgen:node>
+
+
+
+
+<socgen:node>
+<ipxact:name>xmit_data</ipxact:name>
+<ipxact:typeName>reg</ipxact:typeName>
+<ipxact:wire><ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</socgen:node>
+
+
+
+<socgen:node>
+<ipxact:name>shift_buffer</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+<ipxact:wire><ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</socgen:node>
+
+
+
+
+
+
+</socgen:nodes></ipxact:vendorExtensions>
+
+
+
+<ipxact:adHocConnections>
+
+<ipxact:adHocConnection>
+<ipxact:name>clk</ipxact:name>
+<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="clk" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reset</ipxact:name>
+<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="reset" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>xmit_edge_enable</ipxact:name>
+<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="edge_enable" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>xmit_parity_enable</ipxact:name>
+<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="parity_enable" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>xmit_parity_type</ipxact:name>
+<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="parity_type" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>xmit_parity_force</ipxact:name>
+<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="parity_force" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>xmit_load</ipxact:name>
+<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="load" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>xmit_start_value</ipxact:name>
+<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="start_value" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>xmit_stop_value</ipxact:name>
+<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="stop_value" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>serial</ipxact:name>
+<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="ser_out" />
+<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="ser_in" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>xmit_buffer_empty</ipxact:name>
+<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="buffer_empty" />
+</ipxact:adHocConnection>
+
+
+
+<ipxact:adHocConnection>
+<ipxact:name>xmit_data</ipxact:name>
+<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="data" />
+</ipxact:adHocConnection>
+
+
+
+
+
+
+
+
+
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dutx</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="cde" name="serial" version="xmit" />
+<ipxact:configurableElementValues>
+ <ipxact:configurableElementValue ipxact:referenceId="WIDTH">8</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="SIZE">4</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+
+</ipxact:componentInstances>
+</ipxact:design>

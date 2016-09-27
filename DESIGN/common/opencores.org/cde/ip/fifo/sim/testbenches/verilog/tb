@@ -1,0 +1,26 @@
+
+
+
+reg [WIDTH-1:0] Din;
+
+reg [WIDTH-1:0] Dout;
+
+
+
+
+
+
+
+
+reg PUSH;
+reg POP;
+
+
+assign push = PUSH;
+assign pop  = POP;
+assign din = Din;
+
+wire Match;
+
+assign Match = !(|(Dout ^ dout));
+

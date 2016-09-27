@@ -1,0 +1,134 @@
+
+
+initial
+begin
+$display("              ");
+$display("              ===================================================");
+$display("              Test Start");
+$display("              ===================================================");
+$display("              ");
+test.PUSH = 0;
+test.POP = 0;
+test.Dout = 8'h00;
+test.Din = 8'h00;
+test.cg.next(10);
+
+
+begin
+fork
+begin
+test.PUSH = 1;
+test.cg.next(1);
+test.PUSH = 0;
+test.Din = 8'h01;
+test.cg.next(1);
+test.PUSH = 1;
+test.cg.next(1);
+test.PUSH = 0;
+test.Din = 8'h02;
+test.cg.next(1);
+test.PUSH = 1;
+test.cg.next(1);
+test.PUSH = 0;
+test.Din = 8'h03;
+test.cg.next(1);
+test.PUSH = 1;
+test.cg.next(1);
+test.PUSH = 0;
+test.Din = 8'h04;
+test.cg.next(1);
+test.PUSH = 1;
+test.cg.next(1);
+test.PUSH = 0;
+test.Din = 8'h05;
+test.cg.next(1);
+test.PUSH = 1;
+test.cg.next(1);
+test.PUSH = 0;
+test.Din = 8'h06;
+test.cg.next(1);
+test.PUSH = 1;
+test.cg.next(1);
+test.PUSH = 0;
+test.Din = 8'h07;
+test.cg.next(1);
+test.PUSH = 1;
+test.cg.next(1);
+test.PUSH = 0;
+test.cg.next(20);
+test.cg.next(4);
+test.cg.next(4);
+test.cg.next(4);
+test.cg.next(4);
+test.cg.next(4);
+test.cg.next(4);
+test.cg.next(1);
+test.cg.next(4);
+end
+
+
+begin
+test.cg.next(5);
+test.POP = 1;
+test.Dout = 8'h00;
+test.cg.next(1);
+test.POP = 0;
+test.Dout = 8'h01;
+test.cg.next(1);
+test.POP = 1;
+test.cg.next(1);
+test.POP = 0;
+test.Dout = 8'h02;
+test.cg.next(1);
+test.POP = 1;
+test.cg.next(1);
+test.POP = 0;
+test.Dout = 8'h03;
+test.cg.next(4);
+test.POP = 1;
+test.cg.next(1);
+test.POP = 0;
+test.Dout = 8'h04;
+test.cg.next(1);
+test.POP = 1;
+test.cg.next(1);
+test.POP = 0;
+test.Dout = 8'h05;
+test.cg.next(1);
+test.POP = 1;
+test.cg.next(1);
+test.POP = 0;
+test.Dout = 8'h06;
+test.cg.next(1);
+test.POP = 1;
+test.cg.next(1);
+test.POP = 0;
+test.Dout = 8'h07;
+test.cg.next(10);
+test.POP = 1;
+test.cg.next(1);
+test.POP = 0;
+test.cg.next(10);
+test.POP = 1;
+test.cg.next(1);
+test.POP = 0;
+test.cg.next(10);
+test.POP = 1;
+test.cg.next(1);
+test.POP = 0;
+
+
+end
+join
+end
+
+test.cg.exit;
+end
+
+
+
+
+
+
+
+

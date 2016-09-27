@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--           
+//                                                                                                    //
+// Generated File Do Not EDIT                                                                         //
+//                                                                                                    //
+// ./tools/verilog/gen_tb -vendor opencores.org -library cde  -component fifo  -version def //
+//                                                                                                    //
+-->           
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>fifo</ipxact:name>
+<ipxact:version>def_duth.design</ipxact:version>
+<ipxact:adHocConnections>
+
+<ipxact:adHocConnection>
+<ipxact:name>clk</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="clk" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="clk" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>din</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="din" ipxact:left="WIDTH-1" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="din" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>dout</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="dout" ipxact:left="WIDTH-1" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="dout" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>empty</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="empty" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="empty" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>full</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="full" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="full" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>over_run</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="over_run" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="over_run" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>pop</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="pop" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="pop" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>push</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="push" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="push" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reset</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="reset" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reset" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>under_run</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="under_run" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="under_run" />
+</ipxact:adHocConnection>
+
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dut</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="cde" name="fifo" version="def" />
+<ipxact:configurableElementValues>
+ <ipxact:configurableElementValue ipxact:referenceId="SIZE">SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="WIDTH">WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="WORDS">WORDS</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+</ipxact:componentInstances>
+</ipxact:design>
