@@ -43,7 +43,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:busInterfaces>
 
  <ipxact:busInterface><ipxact:name>slave_clk</ipxact:name>
-  <ipxact:busType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="clock" ipxact:version="def"/>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="clock" version="def"/>
   <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="clock" ipxact:version="rtl"/>
   <ipxact:slave/>
     <ipxact:portMaps>
@@ -56,7 +56,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
  <ipxact:busInterface><ipxact:name>slave_reset</ipxact:name>
-  <ipxact:busType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="reset" ipxact:version="def"/>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
   <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="reset" ipxact:version="rtl"/>
   <ipxact:slave/>
     <ipxact:portMaps>
@@ -70,7 +70,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
  <ipxact:busInterface><ipxact:name>uart</ipxact:name>
-  <ipxact:busType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="uart" ipxact:version="def"/>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="uart" version="def"/>
   <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="uart" ipxact:version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
@@ -94,13 +94,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
  <ipxact:busInterface><ipxact:name>txd_buffer_empty</ipxact:name>
-  <ipxact:busType ipxact:vendor="accellera.org" ipxact:library="interrupt" ipxact:name="INTERRUPT_PROCESSOR_N" ipxact:version="1.0"/>
-  <ipxact:abstractionType ipxact:vendor="accellera.org" ipxact:library="interrupt" ipxact:name="INTERRUPT_PROCESSOR_N_rtl" ipxact:version="1.0"/>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="irq" version="def"/>
+  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="irq" ipxact:version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
 
       <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>NIRQ</ipxact:name></ipxact:logicalPort>
+        <ipxact:logicalPort><ipxact:name>irq</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>txd_buffer_empty_NIRQ</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -232,15 +232,24 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:model>
-       <ipxact:views>
+
+		<ipxact:instantiations>
+			<ipxact:designInstantiation>
+				<ipxact:name>Hierarchical</ipxact:name>
+				<ipxact:designRef vendor="opencores.org" library="logic" name="uart" version="tx.design"/>
+			</ipxact:designInstantiation>
+		</ipxact:instantiations>
+
+
+		
+
+
+
+  <ipxact:views>
 
               <ipxact:view>
               <ipxact:name>Hierarchical</ipxact:name>
-              
-              <ipxact:hierarchyRef ipxact:vendor="opencores.org" 
-                                   ipxact:library="logic" 
-                                   ipxact:name="uart" 
-                                   ipxact:version="tx.design"/>
+               <ipxact:designInstantiationRef>Hierarchical</ipxact:designInstantiationRef>
               </ipxact:view>
 
 

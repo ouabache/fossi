@@ -34,9 +34,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <socgen:version>def</socgen:version>  
  <socgen:version>def_tb</socgen:version>  
  <socgen:version>def_lint</socgen:version>  
- <socgen:version>ucb</socgen:version>  
- <socgen:version>ucb_tb</socgen:version>  
- <socgen:version>ucb_lint</socgen:version>  
 
 
  <socgen:parameters>
@@ -90,37 +87,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 
 
-<socgen:testbench>
-<socgen:variant>fifo_ucb_tb</socgen:variant>
-<socgen:version>ucb_tb</socgen:version>  
-<socgen:parameters>
-    <socgen:parameter><socgen:name>PERIOD</socgen:name><socgen:value>40</socgen:value></socgen:parameter>
-    <socgen:parameter><socgen:name>TIMEOUT</socgen:name><socgen:value>10000</socgen:value></socgen:parameter>    
-</socgen:parameters>
-<socgen:code_coverage>
-  <socgen:cover>
-  <socgen:name>fifo32x32</socgen:name><socgen:componentInstance>TB.test.dut</socgen:componentInstance>
-  </socgen:cover>
-</socgen:code_coverage>
-<socgen:tools>
-  <socgen:tool>icarus</socgen:tool>
-  <socgen:tool>coverage</socgen:tool>
-</socgen:tools>
-</socgen:testbench>
-
-
-
-
-
-<socgen:testbench>
-<socgen:variant>fifo_ucb_lint</socgen:variant>
-<socgen:version>ucb_lint</socgen:version>  
-<socgen:tools>
-  <socgen:tool>rtl_check</socgen:tool>
-</socgen:tools>
-</socgen:testbench>
-
-
 
 
 </socgen:testbenches>
@@ -143,10 +109,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </socgen:lint>
 
 
-<socgen:lint>
-<socgen:name>default_ucb</socgen:name>
-<socgen:variant>fifo_ucb_lint</socgen:variant>
-</socgen:lint>
 
 
 
@@ -169,11 +131,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </socgen:test>
 
 
-<socgen:test>
-<socgen:name>ucb_default</socgen:name>
-<socgen:variant>fifo_ucb_tb</socgen:variant>
-<socgen:configuration>ucb_default</socgen:configuration>
-</socgen:test>
+
 
 
 
