@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 
 -->
@@ -11,67 +11,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>cde</ipxact:library>
-<ipxact:name>jtag</ipxact:name>
-<ipxact:version>classic_cmd_sync</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
-
-
-<ipxact:busInterfaces>
-
- <ipxact:busInterface><ipxact:name>jtag</ipxact:name>
- <ipxact:busType vendor="opencores.org" library="cde" name="jtag" version="def"/>
- <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="rpc_classic_rtl"/>
-  <ipxact:slave/>
-    <ipxact:portMaps>
-
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>test_logic_reset</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>test_logic_reset</ipxact:name></ipxact:physicalPort>
-      </ipxact:portMap>
-
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>capture_dr</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>capture_dr</ipxact:name></ipxact:physicalPort>
-      </ipxact:portMap>
-
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>shift_dr</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>shift_dr</ipxact:name></ipxact:physicalPort>
-      </ipxact:portMap>
-
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>update_dr_clk</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>update_dr_clk</ipxact:name></ipxact:physicalPort>
-      </ipxact:portMap>
-
-
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>select</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>select</ipxact:name></ipxact:physicalPort>
-      </ipxact:portMap>
-
-
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>shiftcapture_dr_clk</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>shiftcapture_dr_clk</ipxact:name>
-        <ipxact:wire></ipxact:wire>
-        </ipxact:physicalPort>
-      </ipxact:portMap>
-
-
-
-    </ipxact:portMaps>
- </ipxact:busInterface>
-
-
-</ipxact:busInterfaces>
-
+<ipxact:name>sram</ipxact:name>
+<ipxact:version>dp</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
 
 
 
 <ipxact:componentGenerators>
-
-
-
 
 <ipxact:componentGenerator>
   <ipxact:name>gen_verilog</ipxact:name>
@@ -82,15 +27,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>destination</ipxact:name>
-      <ipxact:value>jtag_classic_cmd_sync</ipxact:value>
+      <ipxact:value>sram_dp</ipxact:value>
     </ipxact:parameter>
   </ipxact:parameters>
 </ipxact:componentGenerator>
 
-
-
-
 </ipxact:componentGenerators>
+
+
+
 
 
 
@@ -109,9 +54,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
               </ipxact:vendorExtensions>
               </ipxact:view>
 
-
-
-              <ipxact:view>
+             <ipxact:view>
               <ipxact:name>common</ipxact:name><ipxact:envIdentifier>:*common:*</ipxact:envIdentifier>
               <ipxact:language>Verilog</ipxact:language>
               <ipxact:modelName></ipxact:modelName>
@@ -121,12 +64,9 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
               </ipxact:view>
 
 
-
-
               <ipxact:view>
               <ipxact:name>sim</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
               <ipxact:language>Verilog</ipxact:language>
-              <ipxact:modelName></ipxact:modelName>
                      <ipxact:fileSetRef>
                             <ipxact:localName>fs-sim</ipxact:localName>
                      </ipxact:fileSetRef>
@@ -135,12 +75,18 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
               <ipxact:view>
               <ipxact:name>syn</ipxact:name><ipxact:envIdentifier>:*Synthesis:*</ipxact:envIdentifier>
               <ipxact:language>Verilog</ipxact:language>
-              <ipxact:modelName></ipxact:modelName>
                      <ipxact:fileSetRef>
                             <ipxact:localName>fs-syn</ipxact:localName>
                      </ipxact:fileSetRef>
               </ipxact:view>
 
+              <ipxact:view>
+              <ipxact:name>lint</ipxact:name><ipxact:envIdentifier>:*Lint:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-lint</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
 
 
               <ipxact:view>
@@ -156,12 +102,11 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
               </ipxact:view>
 
 
-
+   
 
 
 
       </ipxact:views>
-
 
 
 
@@ -173,23 +118,47 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
+<ipxact:port><ipxact:name>cs</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
 
-<ipxact:port><ipxact:name>reset</ipxact:name>
+<ipxact:port><ipxact:name>wr</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>rd</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>syn_capture_dr</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:port><ipxact:name>waddr</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left>ADDR-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>raddr</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left>ADDR-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>syn_update_dr</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:port><ipxact:name>wdata</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
+
+<ipxact:port><ipxact:name>rdata</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction>
+<ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
 
 
 </ipxact:ports>
@@ -201,51 +170,47 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-
-
 <ipxact:fileSets>
 
-   <ipxact:fileSet>
+  <ipxact:fileSet>
       <ipxact:name>fs-common</ipxact:name>
 
       <ipxact:file>
         <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/classic_cmd_sync</ipxact:name>
+        <ipxact:name>../verilog/sram_dp</ipxact:name>
         <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
       </ipxact:file>
 
 
-
-
-
-   </ipxact:fileSet>
-
-
-
-
-   <ipxact:fileSet>
-      <ipxact:name>fs-sim</ipxact:name>
-
-    <ipxact:file>
+      <ipxact:file>
         <ipxact:logicalName></ipxact:logicalName>
         <ipxact:name>../verilog/copyright</ipxact:name>
         <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
       </ipxact:file>
 
 
-      <ipxact:file>
+
+   </ipxact:fileSet>
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-sim</ipxact:name>
+
+
+
+    <ipxact:file>
         <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/common/jtag_classic_cmd_sync</ipxact:name>
+        <ipxact:name>../verilog/common/sram_dp</ipxact:name>
         <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
       </ipxact:file>
 
 
-      <ipxact:file>
-        <ipxact:logicalName>dest_dir</ipxact:logicalName>
-        <ipxact:name>../views/sim/</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType>
-        <ipxact:userFileType>libraryDir</ipxact:userFileType>
+       <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName><ipxact:name>../views/sim/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
       </ipxact:file>
+
+
 
   </ipxact:fileSet>
 
@@ -256,50 +221,36 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:file>
         <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/copyright</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
-      </ipxact:file>
-
-
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/common/jtag_classic_cmd_sync</ipxact:name>
+        <ipxact:name>../verilog/common/sram_dp</ipxact:name>
         <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
       </ipxact:file>
 
 
 
-
-
-
-      <ipxact:file>
-        <ipxact:logicalName>dest_dir</ipxact:logicalName>
-        <ipxact:name>../views/syn/</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType>
-        <ipxact:userFileType>libraryDir</ipxact:userFileType>
+       <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName><ipxact:name>../views/syn/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
       </ipxact:file>
-
 
 
    </ipxact:fileSet>
 
 
-    <ipxact:fileSet>
 
+   <ipxact:fileSet>
       <ipxact:name>fs-lint</ipxact:name>
-      <ipxact:file>
-        <ipxact:logicalName>dest_dir</ipxact:logicalName>
-        <ipxact:name>../views/syn/</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType>
-        <ipxact:userFileType>libraryDir</ipxact:userFileType>
+
+       <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName><ipxact:name>../views/syn/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
       </ipxact:file>
 
-    </ipxact:fileSet>
-
-
-
+   </ipxact:fileSet>
 
 </ipxact:fileSets>
+
+
+
 
 
 

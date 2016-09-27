@@ -38,7 +38,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentGenerator>
-  <ipxact:name>gen_verilog_sim</ipxact:name>
+  <ipxact:name>gen_verilog_syn</ipxact:name>
   <ipxact:phase>104.0</ipxact:phase>
   <ipxact:apiType>none</ipxact:apiType>
   <ipxact:vendorExtensions><socgen:envIdentifier>:*Synthesis:*</socgen:envIdentifier></ipxact:vendorExtensions>

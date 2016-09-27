@@ -1,0 +1,25 @@
+assign           pad_in  = PAD;
+
+
+
+generate
+    genvar 		    i;
+
+  if(SCMD)
+    begin
+    assign           PAD     = pad_oe[0] ? pad_out  : {WIDTH{1'bz}};
+    end
+  else
+    begin
+    for (i=0; i < WIDTH; i=i+1) 
+      begin:m
+      assign           PAD[i]     = pad_oe[i] ? pad_out[i]  : {1'bz};
+      end    
+    end
+
+endgenerate
+   
+
+
+
+

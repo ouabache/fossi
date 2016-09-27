@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<ipxact:component 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>sram</ipxact:name>
+<ipxact:version>word</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+
+
+
+<ipxact:busInterfaces>
+
+ <ipxact:busInterface><ipxact:name>slave_clk</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="clock" version="def"/>
+  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="clock" ipxact:version="rtl"/>
+  <ipxact:slave/>
+    <ipxact:portMaps>
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>clk</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>clk</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+    </ipxact:portMaps>
+ </ipxact:busInterface>
+
+
+ <ipxact:busInterface><ipxact:name>mem</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
+  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="micro_bus" ipxact:version="rtl"/>
+  <ipxact:slave>
+  <ipxact:memoryMapRef ipxact:memoryMapRef="mem"/>
+  </ipxact:slave>
+    <ipxact:portMaps>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>cs</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>cs</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>wr</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>wr</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>rd</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>rd</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>addr</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>addr</ipxact:name>
+        <ipxact:wire><ipxact:vector><ipxact:left>11</ipxact:left><ipxact:right>1</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>wdata</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>wdata</ipxact:name>
+        <ipxact:wire><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>rdata</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>rdata</ipxact:name>
+        <ipxact:wire><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>be</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>be</ipxact:name>
+        <ipxact:wire><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </ipxact:portMaps>
+ </ipxact:busInterface>
+
+</ipxact:busInterfaces>
+
+
+
+<ipxact:componentGenerators>
+
+<ipxact:componentGenerator>
+  <ipxact:name>gen_verilog</ipxact:name>
+  <ipxact:phase>104.0</ipxact:phase>
+  <ipxact:apiType>none</ipxact:apiType>
+  <ipxact:vendorExtensions><socgen:envIdentifier>:*common:*</socgen:envIdentifier></ipxact:vendorExtensions>
+  <ipxact:generatorExe>tools/verilog/gen_verilog</ipxact:generatorExe>
+  <ipxact:parameters>
+    <ipxact:parameter> 
+      <ipxact:name>destination</ipxact:name>
+      <ipxact:value>sram_word</ipxact:value>
+    </ipxact:parameter>
+  </ipxact:parameters>
+</ipxact:componentGenerator>
+
+</ipxact:componentGenerators>
+
+
+
+
+
+<ipxact:model>    
+       <ipxact:views>
+
+             <ipxact:view>
+              <ipxact:name>verilog</ipxact:name>              
+              <ipxact:vendorExtensions>
+              <ipxact:componentRef ipxact:vendor="opencores.org" 
+                                   ipxact:library="Testbench" 
+                                   ipxact:name="toolflow" 
+                                   ipxact:version="verilog"/> 
+              </ipxact:vendorExtensions>
+              </ipxact:view>
+
+             <ipxact:view>
+              <ipxact:name>common</ipxact:name><ipxact:envIdentifier>:*common:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-common</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+
+
+              <ipxact:view>
+              <ipxact:name>sim</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-sim</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+              <ipxact:view>
+              <ipxact:name>syn</ipxact:name><ipxact:envIdentifier>:*Synthesis:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-syn</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+
+              <ipxact:view>
+              <ipxact:name>lint</ipxact:name><ipxact:envIdentifier>:*Lint:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-lint</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+
+
+
+
+              <ipxact:view>
+              <ipxact:name>doc</ipxact:name>
+              <ipxact:vendorExtensions>
+              <ipxact:componentRef ipxact:vendor="opencores.org" 
+                                   ipxact:library="Testbench" 
+                                   ipxact:name="toolflow" 
+                                   ipxact:version="documentation"/> 
+              </ipxact:vendorExtensions>
+              <ipxact:envIdentifier>:*Documentation:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              </ipxact:view>
+
+
+
+
+      </ipxact:views>
+
+
+
+<ipxact:ports>
+
+
+
+<ipxact:port><ipxact:name>cs</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>addr</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left>ADDR</ipxact:left><ipxact:right>1</ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>wdata</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>be</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>rdata</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction>
+<ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+
+
+</ipxact:ports>
+
+</ipxact:model>    
+
+
+
+
+
+
+
+<ipxact:fileSets>
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-common</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/sram_word</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+
+
+   </ipxact:fileSet>
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-sim</ipxact:name>
+
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/copyright</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
+      </ipxact:file>
+
+
+   <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/common/sram_word</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+
+       <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName><ipxact:name>../views/sim/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+  </ipxact:fileSet>
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-syn</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/copyright</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+   <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/common/sram_word</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+       <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName><ipxact:name>../views/syn/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+
+   </ipxact:fileSet>
+
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-lint</ipxact:name>
+
+
+       <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName><ipxact:name>../views/syn/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+
+   </ipxact:fileSet>
+
+
+
+
+
+</ipxact:fileSets>
+
+
+
+
+
+<ipxact:memoryMaps>
+
+
+ <ipxact:memoryMap>
+  <ipxact:name>mem</ipxact:name>
+  <ipxact:addressUnitBits>8</ipxact:addressUnitBits>
+   <ipxact:bank>
+     <ipxact:name>mem</ipxact:name>
+     <ipxact:baseAddress>0x0000</ipxact:baseAddress>
+      <ipxact:addressBlock>
+       <ipxact:name>mem</ipxact:name>
+     </ipxact:addressBlock>
+   </ipxact:bank>
+
+ </ipxact:memoryMap>
+
+</ipxact:memoryMaps>
+
+
+
+
+</ipxact:component>

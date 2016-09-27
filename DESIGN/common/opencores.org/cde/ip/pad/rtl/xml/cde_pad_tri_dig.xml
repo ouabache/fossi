@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<ipxact:component 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>pad</ipxact:name>
+<ipxact:version>tri_dig</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+
+<ipxact:busInterfaces>
+
+ <ipxact:busInterface><ipxact:name>pad_ring</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="ring"/>
+  <ipxact:master/>
+    <ipxact:portMaps>
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>PAD</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+    </ipxact:portMaps>
+ </ipxact:busInterface>
+
+
+
+ <ipxact:busInterface><ipxact:name>pad</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:slave/>
+    <ipxact:portMaps>
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>pad_out</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+    </ipxact:portMaps>
+ </ipxact:busInterface>
+
+</ipxact:busInterfaces>
+
+
+<ipxact:componentGenerators>
+
+
+
+
+<ipxact:componentGenerator>
+  <ipxact:name>gen_verilog</ipxact:name>
+  <ipxact:phase>104.0</ipxact:phase>
+  <ipxact:apiType>none</ipxact:apiType>
+  <ipxact:vendorExtensions><socgen:envIdentifier>:*common:*</socgen:envIdentifier></ipxact:vendorExtensions>
+  <ipxact:generatorExe>tools/verilog/gen_verilog</ipxact:generatorExe>
+  <ipxact:parameters>
+    <ipxact:parameter> 
+      <ipxact:name>destination</ipxact:name>
+      <ipxact:value>pad_tri_dig</ipxact:value>
+    </ipxact:parameter>
+  </ipxact:parameters>
+</ipxact:componentGenerator>
+
+
+
+
+</ipxact:componentGenerators>
+
+
+
+<ipxact:model>    
+       <ipxact:views>
+
+
+             <ipxact:view>
+              <ipxact:name>verilog</ipxact:name>              
+              <ipxact:vendorExtensions>
+              <ipxact:componentRef ipxact:vendor="opencores.org" 
+                                   ipxact:library="Testbench" 
+                                   ipxact:name="toolflow" 
+                                   ipxact:version="verilog"/> 
+              </ipxact:vendorExtensions>
+              </ipxact:view>
+
+
+
+              <ipxact:view>
+              <ipxact:name>common</ipxact:name><ipxact:envIdentifier>:*common:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-common</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+
+
+              <ipxact:view>
+              <ipxact:name>sim</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-sim</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+              <ipxact:view>
+              <ipxact:name>syn</ipxact:name><ipxact:envIdentifier>:*Synthesis:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-syn</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+ 
+              <ipxact:view>
+              <ipxact:name>doc</ipxact:name>
+              <ipxact:vendorExtensions>
+              <ipxact:componentRef ipxact:vendor="opencores.org" 
+                                   ipxact:library="Testbench" 
+                                   ipxact:name="toolflow" 
+                                   ipxact:version="documentation"/> 
+              </ipxact:vendorExtensions>
+              <ipxact:envIdentifier>:*Documentation:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              </ipxact:view>
+
+
+      </ipxact:views>
+
+
+
+
+<ipxact:ports>
+
+<ipxact:port><ipxact:name>PAD</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>pad_out</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>pad_oe</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+
+</ipxact:ports>
+
+</ipxact:model>    
+
+
+<ipxact:fileSets>
+
+
+ <ipxact:fileSet>
+      <ipxact:name>fs-common</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/pad_tri_dig</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+
+
+   </ipxact:fileSet>
+
+
+
+
+
+
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-sim</ipxact:name>
+
+
+   <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/copyright</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
+      </ipxact:file>
+
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/common/pad_tri_dig</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+
+       <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../views/sim/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+  </ipxact:fileSet>
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-syn</ipxact:name>
+
+  <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/copyright</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
+      </ipxact:file>
+
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/common/pad_tri_dig</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../views/syn/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+   </ipxact:fileSet>
+
+
+    <ipxact:fileSet>
+
+      <ipxact:name>fs-lint</ipxact:name>
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../views/syn/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+    </ipxact:fileSet>
+
+
+
+
+
+</ipxact:fileSets>
+
+
+
+<ipxact:vendorExtensions>
+
+
+<socgen:gEDA_symbol>
+
+
+
+
+
+
+
+
+<socgen:parameter>
+<socgen:name>refdes</socgen:name>
+<socgen:value>P?</socgen:value>
+<socgen:x>600</socgen:x>
+<socgen:y>700</socgen:y>
+<socgen:color>5</socgen:color>
+<socgen:size>10</socgen:size>
+<socgen:visibility>1</socgen:visibility>
+<socgen:show_name_value>1</socgen:show_name_value>
+<socgen:alignment>2</socgen:alignment>
+</socgen:parameter>
+
+<socgen:parameter>
+<socgen:name>module_name</socgen:name>
+<socgen:value>cde_pad_tri_dig</socgen:value>
+<socgen:x>400</socgen:x>
+<socgen:y>0</socgen:y>
+<socgen:color>5</socgen:color>
+<socgen:size>10</socgen:size>
+<socgen:visibility>0</socgen:visibility>
+<socgen:show_name_value>1</socgen:show_name_value>
+<socgen:alignment>2</socgen:alignment>
+</socgen:parameter>
+
+<socgen:parameter>
+<socgen:name>vendor</socgen:name>
+<socgen:value>opencores.org</socgen:value>
+<socgen:x>0</socgen:x>
+<socgen:y>-200</socgen:y>
+<socgen:color>0</socgen:color>
+<socgen:size>10</socgen:size>
+<socgen:visibility>0</socgen:visibility>
+<socgen:show_name_value>0</socgen:show_name_value>
+<socgen:alignment>0</socgen:alignment>
+</socgen:parameter>
+
+<socgen:parameter>
+<socgen:name>library</socgen:name>
+<socgen:value>cde</socgen:value>
+<socgen:x>0</socgen:x>
+<socgen:y>-300</socgen:y>
+<socgen:color>0</socgen:color>
+<socgen:size>10</socgen:size>
+<socgen:visibility>0</socgen:visibility>
+<socgen:show_name_value>0</socgen:show_name_value>
+<socgen:alignment>0</socgen:alignment>
+</socgen:parameter>
+
+
+<socgen:parameter>
+<socgen:name>component</socgen:name>
+<socgen:value>pad</socgen:value>
+<socgen:x>0</socgen:x>
+<socgen:y>-400</socgen:y>
+<socgen:color>0</socgen:color>
+<socgen:size>10</socgen:size>
+<socgen:visibility>0</socgen:visibility>
+<socgen:show_name_value>0</socgen:show_name_value>
+<socgen:alignment>0</socgen:alignment>
+</socgen:parameter>
+
+
+
+<socgen:parameter>
+<socgen:name>version</socgen:name>
+<socgen:value>tri_dig</socgen:value>
+<socgen:x>0</socgen:x>
+<socgen:y>-500</socgen:y>
+<socgen:color>0</socgen:color>
+<socgen:size>10</socgen:size>
+<socgen:visibility>0</socgen:visibility>
+<socgen:show_name_value>0</socgen:show_name_value>
+<socgen:alignment>0</socgen:alignment>
+</socgen:parameter>
+
+
+
+
+
+
+
+
+<socgen:graphics>
+
+<socgen:graphic>
+<socgen:name>cde_pad_tri_dig</socgen:name>
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pads</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>out_pad</socgen:graphic>
+ <socgen:x_offset>100</socgen:x_offset>
+ <socgen:y_offset>200</socgen:y_offset>
+</socgen:reference>
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pads</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>oe_wire</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>400</socgen:y_offset>
+</socgen:reference>
+
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>in_wire</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>700</socgen:y_offset>
+ <socgen:name>pad_oe</socgen:name>
+ <socgen:visibility>0</socgen:visibility>
+</socgen:reference>
+
+
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>in_wire</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>400</socgen:y_offset>
+ <socgen:name>pad_out</socgen:name>
+ <socgen:visibility>0</socgen:visibility>
+</socgen:reference>
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>out_wire</socgen:graphic>
+ <socgen:x_offset>1300</socgen:x_offset>
+ <socgen:y_offset>400</socgen:y_offset>
+ <socgen:name>PAD</socgen:name>
+ <socgen:visibility>0</socgen:visibility>
+</socgen:reference>
+
+
+</socgen:graphic>
+
+
+
+
+<socgen:graphic>
+<socgen:name>vector</socgen:name>
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pads</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>out_pad</socgen:graphic>
+ <socgen:x_offset>100</socgen:x_offset>
+ <socgen:y_offset>200</socgen:y_offset>
+</socgen:reference>
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pads</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>oe_bus</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>400</socgen:y_offset>
+</socgen:reference>
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>in_bus</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>700</socgen:y_offset>
+ <socgen:name>pad_oe</socgen:name>
+ <socgen:visibility>0</socgen:visibility>
+</socgen:reference>
+
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>in_bus</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>400</socgen:y_offset>
+ <socgen:name>pad_out</socgen:name>
+ <socgen:visibility>0</socgen:visibility>
+</socgen:reference>
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>out_bus</socgen:graphic>
+ <socgen:x_offset>1300</socgen:x_offset>
+ <socgen:y_offset>400</socgen:y_offset>
+ <socgen:name>PAD</socgen:name>
+ <socgen:visibility>0</socgen:visibility>
+</socgen:reference>
+
+
+</socgen:graphic>
+
+
+
+
+
+<socgen:graphic>
+<socgen:name>scmd</socgen:name>
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pads</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>out_pad</socgen:graphic>
+ <socgen:x_offset>100</socgen:x_offset>
+ <socgen:y_offset>200</socgen:y_offset>
+</socgen:reference>
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pads</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>oe_wire</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>400</socgen:y_offset>
+</socgen:reference>
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>in_wire</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>700</socgen:y_offset>
+ <socgen:name>pad_oe</socgen:name>
+ <socgen:visibility>0</socgen:visibility>
+</socgen:reference>
+
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>in_bus</socgen:graphic>
+ <socgen:x_offset>0</socgen:x_offset>
+ <socgen:y_offset>400</socgen:y_offset>
+ <socgen:name>pad_out</socgen:name>
+ <socgen:visibility>0</socgen:visibility>
+</socgen:reference>
+
+
+<socgen:reference>
+ <socgen:vendor>geda-project.org</socgen:vendor>
+ <socgen:library>symbols</socgen:library>
+ <socgen:component>pins</socgen:component>
+ <socgen:version>def</socgen:version>
+ <socgen:graphic>out_bus</socgen:graphic>
+ <socgen:x_offset>1300</socgen:x_offset>
+ <socgen:y_offset>400</socgen:y_offset>
+ <socgen:name>PAD</socgen:name>
+ <socgen:visibility>0</socgen:visibility>
+</socgen:reference>
+
+
+</socgen:graphic>
+
+
+
+
+
+
+
+</socgen:graphics>
+
+
+</socgen:gEDA_symbol>
+</ipxact:vendorExtensions>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ipxact:component>
