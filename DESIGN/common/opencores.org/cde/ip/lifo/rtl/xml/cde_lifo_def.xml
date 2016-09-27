@@ -11,72 +11,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>cde</ipxact:library>
-<ipxact:name>jtag</ipxact:name>
-<ipxact:version>rpc_in_reg</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
-
-
-
-
-
-<ipxact:busInterfaces>
-
-
- <ipxact:busInterface><ipxact:name>jtag</ipxact:name>
-
-<ipxact:busType vendor="opencores.org" library="Busdefs" name="jtag" version="rpc"/>
- <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="rpc_classic_rtl"/>
-  <ipxact:slave/>
-    <ipxact:portMaps>
-
-
-
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>capture_dr</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>capture_dr</ipxact:name></ipxact:physicalPort>
-      </ipxact:portMap>
-
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>shift_dr</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>shift_dr</ipxact:name></ipxact:physicalPort>
-      </ipxact:portMap>
-
-
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>tdi</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>tdi</ipxact:name></ipxact:physicalPort>
-      </ipxact:portMap>
-
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>tdo</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>tdo</ipxact:name></ipxact:physicalPort>
-      </ipxact:portMap>
-
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>select</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>select</ipxact:name></ipxact:physicalPort>
-      </ipxact:portMap>
-
-
-
-
-
-    </ipxact:portMaps>
- </ipxact:busInterface>
-
-</ipxact:busInterfaces>
-
-
-
-
-
-
-
-
+<ipxact:name>lifo</ipxact:name>
+<ipxact:version>def</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
 
 
 
 <ipxact:componentGenerators>
-
 
 
 <ipxact:componentGenerator>
@@ -88,14 +28,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>destination</ipxact:name>
-      <ipxact:value>jtag_rpc_in_reg</ipxact:value>
+      <ipxact:value>lifo_def</ipxact:value>
     </ipxact:parameter>
   </ipxact:parameters>
 </ipxact:componentGenerator>
-
-
-
-
 
 
 
@@ -105,9 +41,28 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-<ipxact:model>    
-       <ipxact:views>
 
+<ipxact:model>    
+
+
+		<ipxact:instantiations>
+			<ipxact:designInstantiation>
+				<ipxact:name>Hierarchical</ipxact:name>
+				<ipxact:designRef vendor="opencores.org" library="cde" name="lifo" version="def.design"/>
+			</ipxact:designInstantiation>
+		</ipxact:instantiations>
+
+
+		
+
+
+
+  <ipxact:views>
+
+              <ipxact:view>
+              <ipxact:name>Hierarchical</ipxact:name>
+              <ipxact:designInstantiationRef>Hierarchical</ipxact:designInstantiationRef>           
+              </ipxact:view>
 
               <ipxact:view>
               <ipxact:name>verilog</ipxact:name>              
@@ -118,6 +73,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
                                    ipxact:version="verilog"/> 
               </ipxact:vendorExtensions>
               </ipxact:view>
+
 
 
 
@@ -136,6 +92,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
               <ipxact:view>
               <ipxact:name>sim</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
+              
               <ipxact:language>Verilog</ipxact:language>
               <ipxact:modelName></ipxact:modelName>
                      <ipxact:fileSetRef>
@@ -145,6 +102,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
               <ipxact:view>
               <ipxact:name>syn</ipxact:name><ipxact:envIdentifier>:*Synthesis:*</ipxact:envIdentifier>
+              
               <ipxact:language>Verilog</ipxact:language>
               <ipxact:modelName></ipxact:modelName>
                      <ipxact:fileSetRef>
@@ -152,11 +110,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
                      </ipxact:fileSetRef>
               </ipxact:view>
 
-
-
-
-
-              <ipxact:view>
+       <ipxact:view>
               <ipxact:name>doc</ipxact:name>
               <ipxact:vendorExtensions>
               <ipxact:componentRef ipxact:vendor="opencores.org" 
@@ -170,8 +124,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-      </ipxact:views>
 
+      </ipxact:views>
 
 
 
@@ -182,12 +136,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+
    <ipxact:fileSet>
       <ipxact:name>fs-common</ipxact:name>
 
       <ipxact:file>
         <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/jtag_rpc_in_reg</ipxact:name>
+        <ipxact:name>../verilog/lifo_def</ipxact:name>
         <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
       </ipxact:file>
 
@@ -205,14 +160,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+
    <ipxact:fileSet>
       <ipxact:name>fs-sim</ipxact:name>
 
-      <ipxact:file>
+     <ipxact:file>
         <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/common/jtag_rpc_in_reg</ipxact:name>
+        <ipxact:name>../verilog/common/lifo_def</ipxact:name>
         <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
       </ipxact:file>
+
 
  
       <ipxact:file>
@@ -227,19 +184,9 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
    <ipxact:fileSet>
       <ipxact:name>fs-syn</ipxact:name>
 
-
-
       <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/common/jtag_rpc_in_reg</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
-      </ipxact:file>
-
-
-
-      <ipxact:file>
-        <ipxact:logicalName>dest_dir</ipxact:logicalName>
-        <ipxact:name>../views/syn/</ipxact:name>
+      <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../views/sim/</ipxact:name>
         <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
       </ipxact:file>
 
@@ -248,16 +195,17 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
    </ipxact:fileSet>
 
 
-
     <ipxact:fileSet>
 
       <ipxact:name>fs-lint</ipxact:name>
       <ipxact:file>
-        <ipxact:logicalName>dest_dir</ipxact:logicalName><ipxact:name>../views/syn/</ipxact:name>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../views/sim/</ipxact:name>
         <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
       </ipxact:file>
 
     </ipxact:fileSet>
+
 
 
 
@@ -267,24 +215,34 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+
 <ipxact:modelParameters>
-<ipxact:modelParameter><ipxact:name>BITS</ipxact:name><ipxact:value>16</ipxact:value></ipxact:modelParameter>
-<ipxact:modelParameter><ipxact:name>RESET_VALUE</ipxact:name><ipxact:value>'h0</ipxact:value></ipxact:modelParameter>
+<ipxact:modelParameter><ipxact:name>WIDTH</ipxact:name><ipxact:value>8</ipxact:value></ipxact:modelParameter>
+<ipxact:modelParameter><ipxact:name>SIZE</ipxact:name><ipxact:value>2</ipxact:value></ipxact:modelParameter>
+<ipxact:modelParameter><ipxact:name>WORDS</ipxact:name><ipxact:value>4</ipxact:value></ipxact:modelParameter>
+<ipxact:modelParameter><ipxact:name>WRITETHRU</ipxact:name><ipxact:value>1</ipxact:value></ipxact:modelParameter>
+
+
 </ipxact:modelParameters>
 
 <ipxact:ports>
-
-
-
-
 
 <ipxact:port><ipxact:name>clk</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
-
 <ipxact:port><ipxact:name>reset</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>push</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>pop</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
@@ -292,24 +250,27 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-
-
-
-<ipxact:port><ipxact:name>capture_value</ipxact:name>
+<ipxact:port><ipxact:name>din</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction>
-<ipxact:vector><ipxact:left>BITS-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+<ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
 
-
-
+<ipxact:port><ipxact:name>dout</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction>
+<ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
 
 
 
 </ipxact:ports>
 
 </ipxact:model>    
+
+
+
 
 
 
