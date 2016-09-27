@@ -163,7 +163,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentInstance>
-<ipxact:instanceName>rx_shift_buffer_prb</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="Testbench" ipxact:name="io_probe" ipxact:version="def" />
+<ipxact:instanceName>rx_shift_buffer_prb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="def" />
  <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="WIDTH">8</ipxact:configurableElementValue>
  <ipxact:configurableElementValue ipxact:referenceId="MESG">"uart data receive  Error"</ipxact:configurableElementValue>
@@ -172,7 +172,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentInstance>
-<ipxact:instanceName>rx_parity_err_prb</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="Testbench" ipxact:name="io_probe" ipxact:version="def" />
+<ipxact:instanceName>rx_parity_err_prb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="def" />
  <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="WIDTH">1</ipxact:configurableElementValue>
  <ipxact:configurableElementValue ipxact:referenceId="MESG">"uart parity Error"</ipxact:configurableElementValue>

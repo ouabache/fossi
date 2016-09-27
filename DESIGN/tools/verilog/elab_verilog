@@ -700,10 +700,10 @@ sub parse_design_file
             #/*                                                                    */
             #/**********************************************************************/
             my($instance_name)       = $x_name   ->findnodes('./text()')->to_literal ;
-            my($vendor_name)         = $x_name  ->findnodes('../ipxact:componentRef/@ipxact:vendor')->to_literal ;
-            my($library_name)        = $x_name  ->findnodes('../ipxact:componentRef/@ipxact:library')->to_literal ;
-            my($component_name)      = $x_name  ->findnodes('../ipxact:componentRef/@ipxact:name')->to_literal ;
-            my($version_name)        = $x_name  ->findnodes('../ipxact:componentRef/@ipxact:version')->to_literal ;
+            my($vendor_name)         = $x_name  ->findnodes('../ipxact:componentRef/@vendor')->to_literal ;
+            my($library_name)        = $x_name  ->findnodes('../ipxact:componentRef/@library')->to_literal ;
+            my($component_name)      = $x_name  ->findnodes('../ipxact:componentRef/@name')->to_literal ;
+            my($version_name)        = $x_name  ->findnodes('../ipxact:componentRef/@version')->to_literal ;
        #     print "INSTANCED $instance_name  $vendor_name $library_name $component_name $version_name   \n";
             $elab_db->db_put( "component___${elab_root}.${instance_name}","${vendor_name}:${library_name}:${component_name}:${version_name}"  );
 

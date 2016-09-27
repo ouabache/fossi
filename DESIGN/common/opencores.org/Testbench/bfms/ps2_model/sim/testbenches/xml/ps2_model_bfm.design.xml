@@ -125,7 +125,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:componentInstance>
 <ipxact:instanceName>ps2_model</ipxact:instanceName>
-<ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="Testbench" ipxact:name="ps2_model" ipxact:version="def"   />
+<ipxact:componentRef vendor="opencores.org" library="Testbench" name="ps2_model" version="def"   />
 <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="CLKCNT">PS2_MODEL_CLKCNT</ipxact:configurableElementValue>
  <ipxact:configurableElementValue ipxact:referenceId="SIZE">PS2_MODEL_SIZE</ipxact:configurableElementValue>
@@ -136,12 +136,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:componentInstance>
 <ipxact:instanceName>data_tri_buf</ipxact:instanceName>
-<ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="pad" ipxact:version="od_dig"   />
+<ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="od_dig"   />
 </ipxact:componentInstance>
 
 <ipxact:componentInstance>
 <ipxact:instanceName>clk_tri_buf</ipxact:instanceName>
-<ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="pad" ipxact:version="od_dig"   />
+<ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="od_dig"   />
 </ipxact:componentInstance>
 
 

@@ -115,7 +115,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentInstance>
-<ipxact:instanceName>rdata_tpb</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="Testbench" ipxact:name="io_probe" ipxact:version="in" />
+<ipxact:instanceName>rdata_tpb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="in" />
  <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="WIDTH">32</ipxact:configurableElementValue>
  <ipxact:configurableElementValue ipxact:referenceId="MESG">"axi rdata  Error"</ipxact:configurableElementValue>

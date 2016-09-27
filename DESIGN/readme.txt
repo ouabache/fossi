@@ -17,9 +17,6 @@
    cd DESIGN
 
 
-5) Edit fusesoc.conf and replace ${HOME} with your parent location
-
-
 
 initialize and test fusesoc
 

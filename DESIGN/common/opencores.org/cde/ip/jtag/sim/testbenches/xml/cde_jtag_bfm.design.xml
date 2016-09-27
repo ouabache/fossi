@@ -210,7 +210,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentInstance>
- <ipxact:instanceName>jtag_model</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="Testbench" ipxact:name="jtag_model" ipxact:version="def" />
+ <ipxact:instanceName>jtag_model</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="jtag_model" version="def" />
  <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="DIVCNT">JTAG_MODEL_DIVCNT</ipxact:configurableElementValue>
  <ipxact:configurableElementValue ipxact:referenceId="SIZE">JTAG_MODEL_SIZE</ipxact:configurableElementValue>
@@ -220,7 +220,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentInstance>
- <ipxact:instanceName>rpc_1</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="classic_rpc_reg" />
+ <ipxact:instanceName>rpc_1</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="classic_rpc_reg" />
  <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="BITS">JTAG_USER1_WIDTH</ipxact:configurableElementValue>
  <ipxact:configurableElementValue ipxact:referenceId="RESET_VALUE">JTAG_USER1_RESET</ipxact:configurableElementValue>
@@ -228,7 +228,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 </ipxact:componentInstance>
 
 <ipxact:componentInstance>
- <ipxact:instanceName>rpc_2</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="classic_rpc_in_reg" />
+ <ipxact:instanceName>rpc_2</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="classic_rpc_in_reg" />
  <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="BITS">JTAG_USER2_WIDTH</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
@@ -236,7 +236,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentInstance>
- <ipxact:instanceName>bsr</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="classic_rpc_reg" />
+ <ipxact:instanceName>bsr</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="classic_rpc_reg" />
  <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="BITS">32</ipxact:configurableElementValue>
  <ipxact:configurableElementValue ipxact:referenceId="RESET_VALUE">32'h12345678</ipxact:configurableElementValue>

@@ -576,10 +576,10 @@ sub process_design_file
    foreach  my   $i_name ($spirit_design_file->findnodes("//ipxact:design/ipxact:componentInstances/ipxact:componentInstance/ipxact:instanceName"))
         {
         my($instance_name)       = $i_name ->findnodes('./text()')->to_literal ;
-        my($vendor_name)         = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:vendor')->to_literal ;
-        my($library_name)        = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:library')->to_literal ;
-        my($component_name)      = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:name')->to_literal ;
-        my($version_name)        = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:version')->to_literal ;
+        my($vendor_name)         = $i_name  ->findnodes('../ipxact:componentRef/@vendor')->to_literal ;
+        my($library_name)        = $i_name  ->findnodes('../ipxact:componentRef/@library')->to_literal ;
+        my($component_name)      = $i_name  ->findnodes('../ipxact:componentRef/@name')->to_literal ;
+        my($version_name)        = $i_name  ->findnodes('../ipxact:componentRef/@version')->to_literal ;
         my $module_name          = yp::lib::get_module_name($vendor_name,$library_name,$component_name,$version_name) ;
         my $inst_path             = "${home}/${io_ports}/${vendor_name}__${library_name}/${component_name}";
 
@@ -624,10 +624,10 @@ sub process_design_file
             #/*                                                                    */
             #/**********************************************************************/
 
-            my($vendor_name)         = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:vendor')->to_literal ;
-            my($library_name)        = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:library')->to_literal ;
-            my($component_name)      = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:name')->to_literal ;
-            my($version_name)        = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:version')->to_literal ;
+            my($vendor_name)         = $i_name  ->findnodes('../ipxact:componentRef/@vendor')->to_literal ;
+            my($library_name)        = $i_name  ->findnodes('../ipxact:componentRef/@library')->to_literal ;
+            my($component_name)      = $i_name  ->findnodes('../ipxact:componentRef/@name')->to_literal ;
+            my($version_name)        = $i_name  ->findnodes('../ipxact:componentRef/@version')->to_literal ;
 
 #            print "XCCXX HIER_CONN  inst  ${hierConn_comref_name}  name  ${hierConn_name} busref  $hierConn_busref_name  child ${vendor_name}_${library_name}_${component_name}_${version_name}\n";
 
@@ -783,10 +783,10 @@ sub process_design_file
             #/*                                                                    */
             #/**********************************************************************/
 
-            my($vendor_name)         = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:vendor')->to_literal ;
-            my($library_name)        = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:library')->to_literal ;
-            my($component_name)      = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:name')->to_literal ;
-            my($version_name)        = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:version')->to_literal ;
+            my($vendor_name)         = $i_name  ->findnodes('../ipxact:componentRef/@vendor')->to_literal ;
+            my($library_name)        = $i_name  ->findnodes('../ipxact:componentRef/@library')->to_literal ;
+            my($component_name)      = $i_name  ->findnodes('../ipxact:componentRef/@name')->to_literal ;
+            my($version_name)        = $i_name  ->findnodes('../ipxact:componentRef/@version')->to_literal ;
 
 
 
@@ -837,10 +837,10 @@ sub process_design_file
            #/**********************************************************************/
 
            my($instance_name)       = $i_name ->findnodes('./text()')->to_literal ;
-           my($vendor_name)         = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:vendor')->to_literal ;
-           my($library_name)        = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:library')->to_literal ;
-           my($component_name)      = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:name')->to_literal ;
-           my($version_name)        = $i_name  ->findnodes('../ipxact:componentRef/@ipxact:version')->to_literal ;
+           my($vendor_name)         = $i_name  ->findnodes('../ipxact:componentRef/@vendor')->to_literal ;
+           my($library_name)        = $i_name  ->findnodes('../ipxact:componentRef/@library')->to_literal ;
+           my($component_name)      = $i_name  ->findnodes('../ipxact:componentRef/@name')->to_literal ;
+           my($version_name)        = $i_name  ->findnodes('../ipxact:componentRef/@version')->to_literal ;
 
            if( "$instance_name" eq  "$hierConn_comref_name"     )
              {

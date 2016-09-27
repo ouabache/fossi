@@ -254,21 +254,21 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstances>
 
 <ipxact:componentInstance>
-<ipxact:instanceName>clk_gater_jtag_shift_clk</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="clock" ipxact:version="gater" />
+<ipxact:instanceName>clk_gater_jtag_shift_clk</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="clock" version="gater" />
 </ipxact:componentInstance>
 
 <ipxact:componentInstance>
-<ipxact:instanceName>clk_gater_jtag_update_clk</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="clock" ipxact:version="gater" />
+<ipxact:instanceName>clk_gater_jtag_update_clk</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="clock" version="gater" />
 </ipxact:componentInstance>
 
 <ipxact:componentInstance>
-<ipxact:instanceName>clk_gater_jtag_clk</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="clock" ipxact:version="gater" />
+<ipxact:instanceName>clk_gater_jtag_clk</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="clock" version="gater" />
 </ipxact:componentInstance>
 
 
 
 <ipxact:componentInstance>
-<ipxact:instanceName>chip_id_reg</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="rpc_in_reg" />
+<ipxact:instanceName>chip_id_reg</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="rpc_in_reg" />
 <ipxact:configurableElementValues>
 <ipxact:configurableElementValue ipxact:referenceId="BITS">32</ipxact:configurableElementValue>
 <ipxact:configurableElementValue ipxact:referenceId="RESET_VALUE">CHIP_ID_VAL</ipxact:configurableElementValue>

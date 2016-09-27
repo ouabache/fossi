@@ -159,7 +159,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:componentInstance>
 <ipxact:instanceName>dut</ipxact:instanceName>
-<ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="tap" />
+<ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="tap" />
 <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="INST_LENGTH">INST_LENGTH</ipxact:configurableElementValue>
  <ipxact:configurableElementValue ipxact:referenceId="INST_RETURN">INST_RETURN</ipxact:configurableElementValue>

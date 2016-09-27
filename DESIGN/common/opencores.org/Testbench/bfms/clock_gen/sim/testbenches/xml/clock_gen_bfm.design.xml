@@ -118,7 +118,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:componentInstance>
 <ipxact:instanceName>cg</ipxact:instanceName>
-<ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="Testbench" ipxact:name="clock_gen" ipxact:version="def"   />
+<ipxact:componentRef vendor="opencores.org" library="Testbench" name="clock_gen" version="def"   />
 </ipxact:componentInstance>
 
 

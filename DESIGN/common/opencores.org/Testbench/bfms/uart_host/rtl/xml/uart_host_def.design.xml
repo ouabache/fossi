@@ -176,7 +176,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentInstance>
-<ipxact:instanceName>rxd_data_out_prb</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="Testbench" ipxact:name="io_probe" ipxact:version="in" />
+<ipxact:instanceName>rxd_data_out_prb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="in" />
  <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="WIDTH">8</ipxact:configurableElementValue>
  <ipxact:configurableElementValue ipxact:referenceId="MESG">"uart_host receive Error"</ipxact:configurableElementValue>
@@ -185,7 +185,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentInstance>
-<ipxact:instanceName>rxd_stop_error_prb</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="Testbench" ipxact:name="io_probe" ipxact:version="in" />
+<ipxact:instanceName>rxd_stop_error_prb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="in" />
  <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="WIDTH">1</ipxact:configurableElementValue>
  <ipxact:configurableElementValue ipxact:referenceId="MESG">"uart_host stop Error"</ipxact:configurableElementValue>
@@ -195,7 +195,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentInstance>
-<ipxact:instanceName>rxd_parity_error_prb</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="Testbench" ipxact:name="io_probe" ipxact:version="in" />
+<ipxact:instanceName>rxd_parity_error_prb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="in" />
  <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="WIDTH">1</ipxact:configurableElementValue>
  <ipxact:configurableElementValue ipxact:referenceId="MESG">"uart_host parity Error"</ipxact:configurableElementValue>

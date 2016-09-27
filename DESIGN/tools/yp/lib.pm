@@ -1856,12 +1856,12 @@ sub parse_component_fileX
 #	 print "FFFFFFFF  $new_vendor $new_library $new_name $new_version  hierarchyRef \n";
              my $spirit_design_file = $parser->parse_file(yp::lib::find_ipxact_design($new_vendor,$new_library,$new_name,$new_version )); 
              foreach  
-                my   $i_name ($spirit_design_file->findnodes("//ipxact:design/ipxact:componentInstances/ipxact:componentInstance/ipxact:componentRef/\@ipxact:vendor"))
+                my   $i_name ($spirit_design_file->findnodes("//ipxact:design/ipxact:componentInstances/ipxact:componentInstance/ipxact:componentRef"))
                 {
-                my($vendor_name)         = $i_name  ->to_literal ;
-                my($library_name)        = $i_name  ->findnodes('../@ipxact:library')->to_literal ;
-                my($component_name)      = $i_name  ->findnodes('../@ipxact:name')->to_literal ;
-                my($version_name)        = $i_name  ->findnodes('../@ipxact:version')->to_literal ;
+                my($vendor_name)         = $i_name  ->findnodes('./@vendor')->to_literal ;
+                my($library_name)        = $i_name  ->findnodes('./@library')->to_literal ;
+                my($component_name)      = $i_name  ->findnodes('./@name')->to_literal ;
+                my($version_name)        = $i_name  ->findnodes('./@version')->to_literal ;
 
                 push(@filelist_acc,"::${vendor_name}::${library_name}::${component_name}::${version_name}::");
                 my  @filelist_sub = parse_component_fileX($vendor_name,$library_name,$component_name,$version_name,0);
@@ -1899,12 +1899,12 @@ sub parse_component_fileX
 
              my $spirit_design_file = $parser->parse_file(yp::lib::find_ipxact_design($t_vendor,$t_library,$t_name,$t_version )); 
              foreach  
-                my   $i_name ($spirit_design_file->findnodes("//ipxact:design/ipxact:componentInstances/ipxact:componentInstance/ipxact:componentRef/\@ipxact:vendor"))
+                my   $i_name ($spirit_design_file->findnodes("//ipxact:design/ipxact:componentInstances/ipxact:componentInstance/ipxact:componentRef"))
                 {
-                my($vendor_name)         = $i_name  ->to_literal ;
-                my($library_name)        = $i_name  ->findnodes('../@ipxact:library')->to_literal ;
-                my($component_name)      = $i_name  ->findnodes('../@ipxact:name')->to_literal ;
-                my($version_name)        = $i_name  ->findnodes('../@ipxact:version')->to_literal ;
+                my($vendor_name)         = $i_name  ->findnodes('./@vendor')->to_literal ;
+                my($library_name)        = $i_name  ->findnodes('./@library')->to_literal ;
+                my($component_name)      = $i_name  ->findnodes('./@name')->to_literal ;
+                my($version_name)        = $i_name  ->findnodes('./@version')->to_literal ;
 
                 push(@filelist_acc,"::${vendor_name}::${library_name}::${component_name}::${version_name}::");
                 my  @filelist_sub = parse_component_fileX($vendor_name,$library_name,$component_name,$version_name,0);

@@ -144,7 +144,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentInstance>
-<ipxact:instanceName>tx_ack_err_tpb</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="Testbench" ipxact:name="io_probe" ipxact:version="in" />
+<ipxact:instanceName>tx_ack_err_tpb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="in" />
  <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="WIDTH">1</ipxact:configurableElementValue>
  <ipxact:configurableElementValue ipxact:referenceId="MESG">"spi_host tx_ack Error"</ipxact:configurableElementValue>
@@ -153,7 +153,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentInstance>
-<ipxact:instanceName>rcv_byte_tpb</ipxact:instanceName> <ipxact:componentRef ipxact:vendor="opencores.org" ipxact:library="Testbench" ipxact:name="io_probe" ipxact:version="in" />
+<ipxact:instanceName>rcv_byte_tpb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="in" />
  <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="WIDTH">8</ipxact:configurableElementValue>
  <ipxact:configurableElementValue ipxact:referenceId="MESG">"spi_host receive Error"</ipxact:configurableElementValue>

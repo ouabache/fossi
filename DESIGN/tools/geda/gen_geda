@@ -832,10 +832,10 @@ print "$cmd";
 
 
            my($instance_name)       = $x_name ->findnodes('./text()')->to_literal ;
-           my($vendor_name)         = $x_name  ->findnodes('../ipxact:componentRef/@ipxact:vendor')->to_literal ;
-           my($library_name)        = $x_name  ->findnodes('../ipxact:componentRef/@ipxact:library')->to_literal ;
-           my($component_name)      = $x_name  ->findnodes('../ipxact:componentRef/@ipxact:name')->to_literal ;
-           my($version_name)        = $x_name  ->findnodes('../ipxact:componentRef/@ipxact:version')->to_literal ;
+           my($vendor_name)         = $x_name  ->findnodes('../ipxact:componentRef/@vendor')->to_literal ;
+           my($library_name)        = $x_name  ->findnodes('../ipxact:componentRef/@library')->to_literal ;
+           my($component_name)      = $x_name  ->findnodes('../ipxact:componentRef/@name')->to_literal ;
+           my($version_name)        = $x_name  ->findnodes('../ipxact:componentRef/@version')->to_literal ;
 
            print HTML_FILE  "   <tr> \n";
            print HTML_FILE  "      <td style=\"vertical-align: top;\">$instance_name<br>      </td> \n";
