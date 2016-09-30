@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--           
+//                                                                                                    //
+// Generated File Do Not EDIT                                                                         //
+//                                                                                                    //
+// ./tools/verilog/gen_tb -vendor opencores.org -library io  -component io_module  -version mouse //
+//                                                                                                    //
+-->           
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>io</ipxact:library>
+<ipxact:name>io_module</ipxact:name>
+<ipxact:version>mouse_duth.design</ipxact:version>
+<ipxact:adHocConnections>
+
+<ipxact:adHocConnection>
+<ipxact:name>clk</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="clk" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="clk" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>cts_pad_in</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="cts_pad_in" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="cts_pad_in" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>enable</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="enable" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="enable" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_0_in</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="gpio_0_in" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="gpio_0_in" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_0_oe</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="gpio_0_oe" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="gpio_0_oe" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_0_out</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="gpio_0_out" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="gpio_0_out" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_1_in</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="gpio_1_in" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="gpio_1_in" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_1_oe</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="gpio_1_oe" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="gpio_1_oe" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_1_out</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="gpio_1_out" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="gpio_1_out" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ms_left</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ms_left" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ms_left" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ms_mid</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ms_mid" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ms_mid" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ms_right</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ms_right" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ms_right" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>new_packet</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="new_packet" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="new_packet" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>pic_irq</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="pic_irq" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="pic_irq" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>pic_irq_in</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="pic_irq_in" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="pic_irq_in" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>pic_nmi</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="pic_nmi" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="pic_nmi" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ps2_clk_pad_in</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ps2_clk_pad_in" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ps2_clk_pad_in" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ps2_clk_pad_oe</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ps2_clk_pad_oe" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ps2_clk_pad_oe" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ps2_data_avail</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ps2_data_avail" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ps2_data_avail" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ps2_data_pad_in</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ps2_data_pad_in" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ps2_data_pad_in" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ps2_data_pad_oe</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ps2_data_pad_oe" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ps2_data_pad_oe" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reg_mb_addr</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="reg_mb_addr" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reg_mb_addr" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reg_mb_cs</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="reg_mb_cs" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reg_mb_cs" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reg_mb_rd</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="reg_mb_rd" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reg_mb_rd" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reg_mb_rdata</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="reg_mb_rdata" ipxact:left="15" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reg_mb_rdata" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reg_mb_wait</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="reg_mb_wait" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reg_mb_wait" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reg_mb_wdata</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="reg_mb_wdata" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reg_mb_wdata" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reg_mb_wr</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="reg_mb_wr" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reg_mb_wr" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reset</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="reset" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reset" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>rts_pad_out</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="rts_pad_out" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rts_pad_out" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>rx_irq</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="rx_irq" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rx_irq" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>timer_irq</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="timer_irq" ipxact:left="1" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="timer_irq" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>tx_irq</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="tx_irq" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="tx_irq" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>uart_rxd_pad_in</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="uart_rxd_pad_in" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="uart_rxd_pad_in" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>uart_txd_pad_out</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="uart_txd_pad_out" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="uart_txd_pad_out" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wait_n</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="wait_n" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wait_n" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>x_pos</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="x_pos" ipxact:left="9" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="x_pos" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>y_pos</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="y_pos" ipxact:left="9" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="y_pos" />
+</ipxact:adHocConnection>
+
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dut</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="io" name="io_module" version="mouse" />
+<ipxact:configurableElementValues>
+ <ipxact:configurableElementValue ipxact:referenceId="ADDR_WIDTH">ADDR_WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="BASE_WIDTH">BASE_WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="IRQ_MODE">IRQ_MODE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="NMI_MODE">NMI_MODE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="UART_DIV">UART_DIV</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="UART_PRESCALE">UART_PRESCALE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="UART_PRE_SIZE">UART_PRE_SIZE</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+</ipxact:componentInstances>
+</ipxact:design>

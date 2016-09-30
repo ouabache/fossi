@@ -1,12 +1,18 @@
 . ./profile
 mkdir Index
-git clone http://github.com/ouabache/orpsoc-cores  ./Index/orpsoc-cores
+git clone http://github.com/ouabache/orpsoc-cores  ./Index/socgen-cores
 fusesoc fetch socgen_CDE
 fusesoc fetch socgen_Busdefs
 fusesoc fetch socgen_BFMs
 ./tools/sys/workspace opencores.org  cde
 ./tools/sys/workspace opencores.org  logic
+./tools/sys/workspace opencores.org  io
+./tools/sys/workspace opencores.org  Mos6502
+./tools/sys/workspace opencores.org  fpgas
+./tools/sys/workspace opencores.org  wishbone
 ./tools/sys/build_elab_master  
 ./tools/verilog/gen_instance_roots
 ./tools/sys/build_hw_master
+./tools/sys/build_sw_master
 ./tools/simulation/build_sim_master
+./tools/synthesys/build_fpga_master

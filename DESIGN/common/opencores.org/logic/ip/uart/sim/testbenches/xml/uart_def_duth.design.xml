@@ -72,11 +72,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rxd_data_avail" />
 </ipxact:adHocConnection>
 
-<ipxact:adHocConnection>
-<ipxact:name>rxd_data_avail_IRQ</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rxd_data_avail_IRQ" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rxd_data_avail_IRQ" />
-</ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rxd_data_avail_stb</ipxact:name>
@@ -132,11 +127,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="txd_buffer_empty" />
 </ipxact:adHocConnection>
 
-<ipxact:adHocConnection>
-<ipxact:name>txd_buffer_empty_NIRQ</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="txd_buffer_empty_NIRQ" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="txd_buffer_empty_NIRQ" />
-</ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>txd_data_in</ipxact:name>

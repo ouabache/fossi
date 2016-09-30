@@ -1,0 +1,13 @@
+./componentCfg.xml:            <socgen:parameter><socgen:name>PROG_ROM_FILE</socgen:name><socgen:value>"NONE"</socgen:value></socgen:parameter>
+./componentCfg.xml:   <socgen:parameter><socgen:name>PROG_ROM_FILE</socgen:name><socgen:value>"opencores.org__Mos6502/sw/inst_2_test/inst_2_test.abs16"</socgen:value></socgen:parameter>
+./componentCfg.xml:   <socgen:parameter><socgen:name>ROM_FILE</socgen:name><socgen:value>"opencores.org__Mos6502/sw/table/table.abs16"</socgen:value></socgen:parameter>
+./componentCfg.xml:   <socgen:parameter><socgen:name>PROG_ROM_FILE</socgen:name><socgen:value>"opencores.org__Mos6502/sw/inst_1_test/inst_1_test.abs16"</socgen:value></socgen:parameter>
+./componentCfg.xml:   <socgen:parameter><socgen:name>ROM_FILE</socgen:name>
+./componentCfg.xml:   <socgen:parameter><socgen:name>PROG_ROM_FILE</socgen:name>
+./sim/testbenches/verilog/sram.load:  if( PROG_ROM_FILE != "NONE") begin $readmemh({PREFIX,PROG_ROM_FILE},  dut.prog_rom.mem);end
+./sim/testbenches/verilog/sram.load:  if( PROG_ROM_FILE != "NONE") begin $readmemh({PREFIX,PROG_ROM_FILE},  sh_prog_rom.mem);end
+./sim/testbenches/verilog/sram.load:  if(      ROM_FILE != "NONE") begin $readmemh({PREFIX,ROM_FILE},       boot_rom.mem);end
+./sim/testbenches/xml/cpu_def_dut.params.xml:    <spirit:modelParameter><spirit:name>PROG_ROM_FILE</spirit:name><spirit:value>"NONE"</spirit:value></spirit:modelParameter>
+./sim/testbenches/xml/cpu_def_tb.xml:    <spirit:modelParameter><spirit:name>ROM_FILE</spirit:name><spirit:value>"NONE"</spirit:value></spirit:modelParameter>
+./sim/testbenches/xml/cpu_def_tb.xml:    <spirit:modelParameter><spirit:name>PROG_ROM_FILE</spirit:name><spirit:value>ROM_FILE</spirit:value></spirit:modelParameter>
+./sim/testbenches/xml/cpu_def_duth.design.xml: <spirit:configurableElementValue spirit:referenceId="PROG_ROM_FILE">PROG_ROM_FILE</spirit:configurableElementValue>

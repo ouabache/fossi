@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--           
+//                                                                                                    //
+// Generated File Do Not EDIT                                                                         //
+//                                                                                                    //
+// ./tools/verilog/gen_tb -vendor opencores.org -library adv_debug_sys  -component adv_dbg_if  -version jsp //
+//                                                                                                    //
+-->           
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>adv_debug_sys</ipxact:library>
+<ipxact:name>adv_dbg_if</ipxact:name>
+<ipxact:version>jsp_duth.design</ipxact:version>
+<ipxact:adHocConnections>
+
+<ipxact:adHocConnection>
+<ipxact:name>biu_wr_strobe</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="biu_wr_strobe" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="biu_wr_strobe" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>capture_dr_i</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="capture_dr_i" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="capture_dr_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>debug_select_i</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="debug_select_i" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="debug_select_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>int_o</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="int_o" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="int_o" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>jsp_data_out</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="jsp_data_out" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="jsp_data_out" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>rst_i</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="rst_i" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rst_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>shift_dr_i</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="shift_dr_i" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="shift_dr_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>tck_i</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="tck_i" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="tck_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>tdi_i</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="tdi_i" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="tdi_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>tdo_o</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="tdo_o" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="tdo_o" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>update_dr_i</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="update_dr_i" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="update_dr_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_clk_i</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="wb_clk_i" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_clk_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_jsp_ack_o</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="wb_jsp_ack_o" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_jsp_ack_o" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_jsp_adr_i</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="wb_jsp_adr_i" ipxact:left="31" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_jsp_adr_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_jsp_bte_i</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="wb_jsp_bte_i" ipxact:left="1" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_jsp_bte_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_jsp_cab_i</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="wb_jsp_cab_i" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_jsp_cab_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_jsp_cti_i</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="wb_jsp_cti_i" ipxact:left="2" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_jsp_cti_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_jsp_cyc_i</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="wb_jsp_cyc_i" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_jsp_cyc_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_jsp_dat_i</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="wb_jsp_dat_i" ipxact:left="31" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_jsp_dat_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_jsp_dat_o</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="wb_jsp_dat_o" ipxact:left="31" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_jsp_dat_o" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_jsp_err_o</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="wb_jsp_err_o" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_jsp_err_o" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_jsp_sel_i</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="wb_jsp_sel_i" ipxact:left="3" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_jsp_sel_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_jsp_stb_i</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="wb_jsp_stb_i" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_jsp_stb_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_jsp_we_i</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="wb_jsp_we_i" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_jsp_we_i" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wb_rst_i</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="wb_rst_i" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wb_rst_i" />
+</ipxact:adHocConnection>
+
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dut</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="adv_debug_sys" name="adv_dbg_if" version="jsp" />
+<ipxact:configurableElementValues>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+</ipxact:componentInstances>
+</ipxact:design>

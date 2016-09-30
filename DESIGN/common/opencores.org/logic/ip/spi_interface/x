@@ -1,0 +1,34 @@
+./rtl/verilog/top.body:assign cde_serial_xmit_edge_enable =( load_tx_data && force_startbit) || ps2_clk_fall ;
+./rtl/verilog/top.body:assign cde_serial_rcvr_reset       =  reset ||(ps2_clk_s && ps2_data_s && !busy);
+./rtl/verilog/top.body:       if ((bit_count == 4'b1010)&& ps2_clk_fall)  tx_ack_error <= ps2_data_s && sending ;
+./rtl/verilog/top.body:    .ps2_idle                   ( ps2_data_s &&   ps2_clk_s   ),  
+./rtl/verilog/top.body:    .ps2_clk_fall               ( ps2_clk_fall                ),  
+./rtl/verilog/top.body:    .ps2_clk_oe                 ( ps2_clk_pad_oe              ),
+./rtl/verilog/fsm:input  wire        ps2_idle,  
+./rtl/verilog/fsm:input  wire        ps2_clk_fall,
+./rtl/verilog/fsm:output reg         ps2_clk_oe,  
+./rtl/verilog/fsm:reg                next_ps2_clk_oe;
+./rtl/verilog/fsm:         ps2_clk_oe         <= 0;
+./rtl/verilog/fsm:         ps2_clk_oe         <=   next_ps2_clk_oe;
+./rtl/verilog/fsm:   next_ps2_clk_oe    = 0;
+./rtl/verilog/fsm:              if(ps2_clk_fall )             next_state            = `fsm_rx_clk_fall;
+./rtl/verilog/fsm:               if(ps2_clk_fall)             next_state            = `fsm_rx_clk_fall;
+./rtl/verilog/fsm:                                            next_ps2_clk_oe       = 1;
+./rtl/verilog/fsm:                                            next_ps2_clk_oe     = 1;
+./rtl/verilog/fsm:                                            next_ps2_clk_oe     = 0;
+./rtl/verilog/fsm:               if(ps2_clk_fall)             next_state          = `fsm_tx_clk_fall;
+./rtl/verilog/fsm:                         if(ps2_clk_fall)  next_state           = `fsm_tx_clk_fall;
+./rtl/verilog/fsm:               if(ps2_clk_fall)            next_state     = `fsm_tx_wait_idle;  
+./rtl/verilog/fsm:               if(ps2_idle)                next_state      = `fsm_idle;
+./doc/index.html:<h1><a name="ps2_interface"></a>SOCGEN <br>
+./doc/index.html:    <p style="margin-bottom: 0in;"><a href="#ps2_interface">ps2_interface<br>
+./doc/index.html:        <p><a href="../../../../../../socgen_cmp/projects/logic/ip/ps2_interface/rtl/gen/syn/ps2_interface.v">Source Code <br>
+./doc/index.html: src="./png/ps2_interface.png"><br>
+./doc/index.html:      <td style="vertical-align: top;"># of microseconds to hold ps2_clk before host -> device transfer<br>
+./doc/index.html:      <td style="vertical-align: top;"># of clk's to wait for debounce of ps2_clk and ps2_data<br>
+./doc/index.html:      <td style="vertical-align: top;"> ps2_clk_pad_oe<br>
+./doc/index.html:      <td style="vertical-align: top;"> ps2_clk_pad_in<br>
+./doc/index.html:      <td style="vertical-align: top;"> ps2_clk pad value<br>
+./doc/index.html:      <td style="vertical-align: top;"> ps2_data_pad_oe<br>
+./doc/index.html:      <td style="vertical-align: top;"> ps2_data_pad_in<br>
+./doc/index.html:      <td style="vertical-align: top;"> ps2_data pad value<br>

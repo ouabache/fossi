@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--           
+//                                                                                                    //
+// Generated File Do Not EDIT                                                                         //
+//                                                                                                    //
+// ./tools/verilog/gen_tb -vendor opencores.org -library adv_debug_sys  -component adv_dbg_if  -version wb_cpu0_jfifo //
+//                                                                                                    //
+-->           
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>adv_debug_sys</ipxact:library>
+<ipxact:name>adv_dbg_if</ipxact:name>
+<ipxact:version>wb_cpu0_jfifo_duth.design</ipxact:version>
+<ipxact:adHocConnections>
+
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dut</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="adv_debug_sys" name="adv_dbg_if" version="wb_cpu0_jfifo" />
+<ipxact:configurableElementValues>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+</ipxact:componentInstances>
+</ipxact:design>

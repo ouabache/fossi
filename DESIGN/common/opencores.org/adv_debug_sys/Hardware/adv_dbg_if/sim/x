@@ -1,0 +1,133 @@
+./testbenches/verilog/tb.cpu0:assign debug_select_i = select_o[0];
+./testbenches/verilog/tb.jfifo:assign debug_select_i = select_o[0];
+./testbenches/verilog/tb.wb:assign debug_select_i = select_o[0];
+./testbenches/verilog/tb.jfifo_sync:assign debug_select_i = syn_select[0];
+./testbenches/verilog/tb.cpu1:assign debug_select_i = select_o[0];
+./testbenches/verilog/tb.jsp:assign debug_select_i = select_o[0];
+./testbenches/xml/adv_dbg_if_wb_cpu0_jsp_dut.params.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_cpu0_jsp_dut.params.xml:                                   spirit:library="adv_debug_sys"                                    
+./testbenches/xml/adv_dbg_if_cpu1_tb.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_cpu1_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_cpu1_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_bfm.design.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_jfifo_tb.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_jfifo_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_jfifo_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_jfifo_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_wb_cpu2_jsp_dut.params.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_cpu2_jsp_dut.params.xml:                                   spirit:library="adv_debug_sys"                                    
+./testbenches/xml/adv_dbg_if_wb_cpu0_lint.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_cpu0_lint.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_jsp_bfm.design.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_cpu1_dut.params.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_cpu1_dut.params.xml:                                   spirit:library="adv_debug_sys"                                    
+./testbenches/xml/adv_dbg_if_wb_cpu0_jfifo_dut.params.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_cpu0_jfifo_dut.params.xml:                                   spirit:library="adv_debug_sys"                                    
+./testbenches/xml/adv_dbg_if_jsp_duth.design.xml:// ./tools/verilog/gen_tb -vendor opencores.org -library adv_debug_sys  -component adv_dbg_if  -version jsp //
+./testbenches/xml/adv_dbg_if_jsp_duth.design.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_jsp_duth.design.xml:<spirit:name>debug_select_i</spirit:name>
+./testbenches/xml/adv_dbg_if_jsp_duth.design.xml:<spirit:externalPortReference  spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_jsp_duth.design.xml:<spirit:internalPortReference  spirit:componentRef="dut" spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_jsp_duth.design.xml:<spirit:componentRef spirit:vendor="opencores.org" spirit:library="adv_debug_sys" spirit:name="adv_dbg_if" spirit:version="jsp" />
+./testbenches/xml/adv_dbg_if_jsp_dut.params.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_jsp_dut.params.xml:                                   spirit:library="adv_debug_sys"                                    
+./testbenches/xml/adv_dbg_if_jfifo_dut.params.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_jfifo_dut.params.xml:                                   spirit:library="adv_debug_sys"                                    
+./testbenches/xml/adv_dbg_if_wb_bfm.design.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_cpu0_dut.params.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_cpu0_dut.params.xml:                                   spirit:library="adv_debug_sys"                                    
+./testbenches/xml/adv_dbg_if_jfifo_sync_tb.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_jfifo_sync_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_jfifo_sync_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_jfifo_sync_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_wb_duth.design.xml:// ./tools/verilog/gen_tb -vendor opencores.org -library adv_debug_sys  -component adv_dbg_if  -version wb //
+./testbenches/xml/adv_dbg_if_wb_duth.design.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_duth.design.xml:<spirit:name>debug_select_i</spirit:name>
+./testbenches/xml/adv_dbg_if_wb_duth.design.xml:<spirit:externalPortReference  spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_wb_duth.design.xml:<spirit:internalPortReference  spirit:componentRef="dut" spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_wb_duth.design.xml:<spirit:componentRef spirit:vendor="opencores.org" spirit:library="adv_debug_sys" spirit:name="adv_dbg_if" spirit:version="wb" />
+./testbenches/xml/adv_dbg_if_wb_cpu0_jfifo_duth.design.xml:// ./tools/verilog/gen_tb -vendor opencores.org -library adv_debug_sys  -component adv_dbg_if  -version wb_cpu0_jfifo //
+./testbenches/xml/adv_dbg_if_wb_cpu0_jfifo_duth.design.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_cpu0_jfifo_duth.design.xml:<spirit:componentRef spirit:vendor="opencores.org" spirit:library="adv_debug_sys" spirit:name="adv_dbg_if" spirit:version="wb_cpu0_jfifo" />
+./testbenches/xml/adv_dbg_if_jfifo_duth.design.xml:// ./tools/verilog/gen_tb -vendor opencores.org -library adv_debug_sys  -component adv_dbg_if  -version jfifo //
+./testbenches/xml/adv_dbg_if_jfifo_duth.design.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_jfifo_duth.design.xml:<spirit:name>debug_select_i</spirit:name>
+./testbenches/xml/adv_dbg_if_jfifo_duth.design.xml:<spirit:externalPortReference  spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_jfifo_duth.design.xml:<spirit:internalPortReference  spirit:componentRef="dut" spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_jfifo_duth.design.xml:<spirit:componentRef spirit:vendor="opencores.org" spirit:library="adv_debug_sys" spirit:name="adv_dbg_if" spirit:version="jfifo" />
+./testbenches/xml/adv_dbg_if_wb_cpu0_jsp_duth.design.xml:// ./tools/verilog/gen_tb -vendor opencores.org -library adv_debug_sys  -component adv_dbg_if  -version wb_cpu0_jsp //
+./testbenches/xml/adv_dbg_if_wb_cpu0_jsp_duth.design.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_cpu0_jsp_duth.design.xml:<spirit:componentRef spirit:vendor="opencores.org" spirit:library="adv_debug_sys" spirit:name="adv_dbg_if" spirit:version="wb_cpu0_jsp" />
+./testbenches/xml/adv_dbg_if_wb_tb.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_wb_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_wb_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_wb_cpu0_duth.design.xml:// ./tools/verilog/gen_tb -vendor opencores.org -library adv_debug_sys  -component adv_dbg_if  -version wb_cpu0 //
+./testbenches/xml/adv_dbg_if_wb_cpu0_duth.design.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_cpu0_duth.design.xml:<spirit:name>debug_select_i</spirit:name>
+./testbenches/xml/adv_dbg_if_wb_cpu0_duth.design.xml:<spirit:externalPortReference  spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_wb_cpu0_duth.design.xml:<spirit:internalPortReference  spirit:componentRef="dut" spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_wb_cpu0_duth.design.xml:<spirit:componentRef spirit:vendor="opencores.org" spirit:library="adv_debug_sys" spirit:name="adv_dbg_if" spirit:version="wb_cpu0" />
+./testbenches/xml/adv_dbg_if_cpu1_duth.design.xml:// ./tools/verilog/gen_tb -vendor opencores.org -library adv_debug_sys  -component adv_dbg_if  -version cpu1 //
+./testbenches/xml/adv_dbg_if_cpu1_duth.design.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_cpu1_duth.design.xml:<spirit:name>debug_select_i</spirit:name>
+./testbenches/xml/adv_dbg_if_cpu1_duth.design.xml:<spirit:externalPortReference  spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_cpu1_duth.design.xml:<spirit:internalPortReference  spirit:componentRef="dut" spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_cpu1_duth.design.xml:<spirit:componentRef spirit:vendor="opencores.org" spirit:library="adv_debug_sys" spirit:name="adv_dbg_if" spirit:version="cpu1" />
+./testbenches/xml/adv_dbg_if_jfifo_lint.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_jfifo_lint.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_wb_lint.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_lint.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_jsp_tb.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_jsp_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_jsp_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_jsp_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_cpu0_tb.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_cpu0_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_cpu0_tb.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_wb_dut.params.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_dut.params.xml:                                   spirit:library="adv_debug_sys"                                    
+./testbenches/xml/adv_dbg_if_wb_cpu2_jsp_lint.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_cpu2_jsp_lint.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_cpu0_duth.design.xml:// ./tools/verilog/gen_tb -vendor opencores.org -library adv_debug_sys  -component adv_dbg_if  -version cpu0 //
+./testbenches/xml/adv_dbg_if_cpu0_duth.design.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_cpu0_duth.design.xml:<spirit:name>debug_select_i</spirit:name>
+./testbenches/xml/adv_dbg_if_cpu0_duth.design.xml:<spirit:externalPortReference  spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_cpu0_duth.design.xml:<spirit:internalPortReference  spirit:componentRef="dut" spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_cpu0_duth.design.xml:<spirit:componentRef spirit:vendor="opencores.org" spirit:library="adv_debug_sys" spirit:name="adv_dbg_if" spirit:version="cpu0" />
+./testbenches/xml/adv_dbg_if_wb_cpu2_jsp_duth.design.xml:// ./tools/verilog/gen_tb -vendor opencores.org -library adv_debug_sys  -component adv_dbg_if  -version wb_cpu2_jsp //
+./testbenches/xml/adv_dbg_if_wb_cpu2_jsp_duth.design.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_wb_cpu2_jsp_duth.design.xml:<spirit:name>debug_select_i</spirit:name>
+./testbenches/xml/adv_dbg_if_wb_cpu2_jsp_duth.design.xml:<spirit:externalPortReference  spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_wb_cpu2_jsp_duth.design.xml:<spirit:internalPortReference  spirit:componentRef="dut" spirit:portRef="debug_select_i" />
+./testbenches/xml/adv_dbg_if_wb_cpu2_jsp_duth.design.xml:<spirit:componentRef spirit:vendor="opencores.org" spirit:library="adv_debug_sys" spirit:name="adv_dbg_if" spirit:version="wb_cpu2_jsp" />
+./testbenches/xml/adv_dbg_if_jsp_lint.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_jsp_lint.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_jfifo_bfm.design.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_cpu1_lint.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_cpu1_lint.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_cpu0_lint.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_cpu0_lint.xml:                                   spirit:library="adv_debug_sys" 
+./testbenches/xml/adv_dbg_if_cpu0_dut.params.xml:<spirit:library>adv_debug_sys</spirit:library>
+./testbenches/xml/adv_dbg_if_cpu0_dut.params.xml:                                   spirit:library="adv_debug_sys"                                    
+./icarus/jfifo/wave.sav:[dumpfile] "/home/johne/Desktop/socgen/work/opencores.org__adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/jfifo_sync/TestBench.vcd"
+./icarus/jfifo/wave.sav:[savefile] "/home/johne/Desktop/socgen/projects/opencores.org/adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/jfifo_sync/wave.sav"
+./icarus/jfifo/wave.sav:TB.test.dut.debug_select_i
+./icarus/cpu1/wave.sav:[dumpfile] "/home/johne/Desktop/socgen/work/opencores.org__adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/default/TestBench.vcd"
+./icarus/cpu1/wave.sav:[savefile] "/home/johne/Desktop/socgen/projects/opencores.org/adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/default/wave.sav"
+./icarus/cpu1/wave.sav:TB.test.debug_select_i
+./icarus/cpu0/wave.sav:[dumpfile] "/home/johne/Desktop/socgen/work/opencores.org__adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/default/TestBench.vcd"
+./icarus/cpu0/wave.sav:[savefile] "/home/johne/Desktop/socgen/projects/opencores.org/adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/default/wave.sav"
+./icarus/cpu0/wave.sav:TB.test.debug_select_i
+./icarus/jfifo_sync1/wave.sav:[dumpfile] "/home/johne/Desktop/socgen/work/opencores.org__adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/jfifo_sync/TestBench.vcd"
+./icarus/jfifo_sync1/wave.sav:[savefile] "/home/johne/Desktop/socgen/projects/opencores.org/adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/jfifo_sync/wave.sav"
+./icarus/jfifo_sync1/wave.sav:TB.test.dut.debug_select_i
+./icarus/wb/wave.sav:[dumpfile] "/home/johne/Desktop/socgen/work/opencores.org__adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/wb/TestBench.vcd"
+./icarus/wb/wave.sav:[savefile] "/home/johne/Desktop/socgen/projects/opencores.org/adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/wb/wave.sav"
+./icarus/wb/wave.sav:TB.test.debug_select_i
+./icarus/jfifo_sync/wave.sav:[dumpfile] "/home/johne/Desktop/socgen/work/opencores.org__adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/jfifo_sync/TestBench.vcd"
+./icarus/jfifo_sync/wave.sav:[savefile] "/home/johne/Desktop/socgen/projects/opencores.org/adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/jfifo_sync/wave.sav"
+./icarus/jfifo_sync/wave.sav:TB.test.dut.debug_select_i
+./icarus/jsp/wave.sav:[dumpfile] "/home/johne/Desktop/socgen/work/opencores.org__adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/jsp/TestBench.vcd"
+./icarus/jsp/wave.sav:[savefile] "/home/johne/Desktop/socgen/projects/opencores.org/adv_debug_sys/Hardware/adv_dbg_if/sim/icarus/jsp/wave.sav"
+./icarus/jsp/wave.sav:TB.test.debug_select_i

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--                                                
+//                                                //
+//                 //
+//                                                //
+//       //
+//                                                //
+-->                                                 
+<ipxact:component
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>adv_debug_sys</ipxact:library>
+<ipxact:name>adv_dbg_if</ipxact:name>
+<ipxact:version>cpu1_dut.params</ipxact:version>
+<ipxact:model>
+
+      <ipxact:views>                                            
+                                   
+              <ipxact:view>                                   
+              <ipxact:name>Dut</ipxact:name>                                   
+              <ipxact:envIdentifier></ipxact:envIdentifier>                                   
+              <ipxact:hierarchyRef ipxact:vendor="opencores.org"                                    
+                                   ipxact:library="adv_debug_sys"                                    
+                                   ipxact:name="adv_dbg_if"                                    
+                                   ipxact:version="cpu1_duth.design"/>                                   
+              </ipxact:view>                                   
+      </ipxact:views>                                   
+<ipxact:modelParameters>
+</ipxact:modelParameters>
+</ipxact:model>
+</ipxact:component>

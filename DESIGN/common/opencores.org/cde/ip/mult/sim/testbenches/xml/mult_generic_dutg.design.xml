@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--                                                
+//                                                //
+// Generated File Do Not EDIT                     //
+//                                                //
+// regen by adding -tb to gen_verilog script      //
+//                                                //
+-->                                                 
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>mult</ipxact:name>
+<ipxact:version>generic_dutg.design</ipxact:version>
+
+
+
+<ipxact:adHocConnections>
+
+<ipxact:adHocConnection>
+<ipxact:name>clk</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="clk" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="clk" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reset</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="reset" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reset" />
+</ipxact:adHocConnection>
+
+
+<ipxact:adHocConnection>
+<ipxact:name>a_in</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="a_in" ipxact:left="WIDTH-1" ipxact:right="0"  />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="a_in" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>b_in</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="b_in" ipxact:left="WIDTH-1" ipxact:right="0"/>
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="b_in" />
+</ipxact:adHocConnection>
+
+
+
+<ipxact:adHocConnection>
+<ipxact:name>alu_op_mul</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="alu_op_mul" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="alu_op_mul" />
+</ipxact:adHocConnection>
+
+
+
+<ipxact:adHocConnection>
+<ipxact:name>ex_freeze</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ex_freeze" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ex_freeze" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>mul_prod_r</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="mul_prod_r" ipxact:left="2*WIDTH-1" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="mul_prod_r" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>mul_stall</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="mul_stall" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="mul_stall" />
+</ipxact:adHocConnection>
+
+
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dut</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="cde" name="mult" version="generic" />
+<ipxact:configurableElementValues>
+ <ipxact:configurableElementValue ipxact:referenceId="WIDTH">WIDTH</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+</ipxact:componentInstances>
+</ipxact:design>

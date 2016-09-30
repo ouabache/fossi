@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--           
+//                                                                                                    //
+// Generated File Do Not EDIT                                                                         //
+//                                                                                                    //
+// ./tools/verilog/gen_tb -vendor opencores.org -library io  -component io_gpio  -version def //
+//                                                                                                    //
+-->           
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>io</ipxact:library>
+<ipxact:name>io_gpio</ipxact:name>
+<ipxact:version>def_duth.design</ipxact:version>
+<ipxact:adHocConnections>
+
+<ipxact:adHocConnection>
+<ipxact:name>addr</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="addr" ipxact:left="3" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="addr" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>clk</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="clk" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="clk" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>cs</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="cs" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="cs" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>enable</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="enable" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="enable" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_0_in</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="gpio_0_in" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="gpio_0_in" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_0_oe</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="gpio_0_oe" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="gpio_0_oe" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_0_out</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="gpio_0_out" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="gpio_0_out" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_1_in</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="gpio_1_in" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="gpio_1_in" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_1_oe</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="gpio_1_oe" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="gpio_1_oe" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_1_out</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="gpio_1_out" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="gpio_1_out" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>rd</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="rd" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rd" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>rdata</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="rdata" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rdata" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reset</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="reset" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reset" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wdata</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="wdata" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wdata" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wr</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="wr" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wr" />
+</ipxact:adHocConnection>
+
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dut</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="io" name="io_gpio" version="def" />
+<ipxact:configurableElementValues>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+</ipxact:componentInstances>
+</ipxact:design>

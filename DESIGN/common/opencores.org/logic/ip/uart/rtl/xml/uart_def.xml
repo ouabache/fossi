@@ -91,36 +91,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
  </ipxact:busInterface>
 
 
- <ipxact:busInterface><ipxact:name>rxd_data_avail</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="irq" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="irq" ipxact:version="rtl"/>
-  <ipxact:master/>
-    <ipxact:portMaps>
-
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>irq</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>rxd_data_avail_IRQ</ipxact:name></ipxact:physicalPort>
-      </ipxact:portMap>
-
-    </ipxact:portMaps>
- </ipxact:busInterface>
-
-
-
- <ipxact:busInterface><ipxact:name>txd_buffer_empty</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="irq" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="irq" ipxact:version="rtl"/>
-  <ipxact:master/>
-    <ipxact:portMaps>
-
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>irq</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>txd_buffer_empty_NIRQ</ipxact:name></ipxact:physicalPort>
-      </ipxact:portMap>
-
-    </ipxact:portMaps>
- </ipxact:busInterface>
-
 
 
 

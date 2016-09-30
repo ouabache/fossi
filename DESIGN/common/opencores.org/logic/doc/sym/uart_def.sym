@@ -134,56 +134,42 @@ pinseq=17
 P 5300 600 5600 600 4 0 1
 {
 T 5200 600 5  10 1 1 0 7 1 1
-pinnumber=txd_buffer_empty_NIRQ
+pinnumber=txd_buffer_empty
 T 5300 600 5  10 0 1 0 7 1 1
 pinseq=18
 }
 P 5300 800 5600 800 4 0 1
 {
 T 5200 800 5  10 1 1 0 7 1 1
-pinnumber=txd_buffer_empty
+pinnumber=rxd_stop_error
 T 5300 800 5  10 0 1 0 7 1 1
 pinseq=19
 }
 P 5300 1000 5600 1000 4 0 1
 {
 T 5200 1000 5  10 1 1 0 7 1 1
-pinnumber=rxd_stop_error
+pinnumber=rxd_parity_error
 T 5300 1000 5  10 0 1 0 7 1 1
 pinseq=20
 }
 P 5300 1200 5600 1200 4 0 1
 {
 T 5200 1200 5  10 1 1 0 7 1 1
-pinnumber=rxd_parity_error
+pinnumber=rxd_data_avail
 T 5300 1200 5  10 0 1 0 7 1 1
 pinseq=21
 }
 P 5300 1400 5600 1400 4 0 1
 {
 T 5200 1400 5  10 1 1 0 7 1 1
-pinnumber=rxd_data_avail_IRQ
+pinnumber=rts_pad_out
 T 5300 1400 5  10 0 1 0 7 1 1
 pinseq=22
 }
 P 5300 1600 5600 1600 4 0 1
 {
 T 5200 1600 5  10 1 1 0 7 1 1
-pinnumber=rxd_data_avail
+pinnumber=cts_out
 T 5300 1600 5  10 0 1 0 7 1 1
 pinseq=23
-}
-P 5300 1800 5600 1800 4 0 1
-{
-T 5200 1800 5  10 1 1 0 7 1 1
-pinnumber=rts_pad_out
-T 5300 1800 5  10 0 1 0 7 1 1
-pinseq=24
-}
-P 5300 2000 5600 2000 4 0 1
-{
-T 5200 2000 5  10 1 1 0 7 1 1
-pinnumber=cts_out
-T 5300 2000 5  10 0 1 0 7 1 1
-pinseq=25
 }

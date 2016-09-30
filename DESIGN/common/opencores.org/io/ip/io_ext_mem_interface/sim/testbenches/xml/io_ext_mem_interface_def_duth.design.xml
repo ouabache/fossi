@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--           
+//                                                                                                    //
+// Generated File Do Not EDIT                                                                         //
+//                                                                                                    //
+// ./tools/verilog/gen_tb -vendor opencores.org -library io  -component io_ext_mem_interface  -version def //
+//                                                                                                    //
+-->           
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>io</ipxact:library>
+<ipxact:name>io_ext_mem_interface</ipxact:name>
+<ipxact:version>def_duth.design</ipxact:version>
+<ipxact:adHocConnections>
+
+<ipxact:adHocConnection>
+<ipxact:name>addr</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="addr" ipxact:left="3" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="addr" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>bank</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="bank" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="bank" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>clk</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="clk" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="clk" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>cs</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="cs" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="cs" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>enable</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="enable" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="enable" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ext_add</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="ext_add" ipxact:left="23" ipxact:right="1" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ext_add" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ext_cs</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="ext_cs" ipxact:left="1" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ext_cs" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ext_lb</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ext_lb" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ext_lb" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ext_rd</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ext_rd" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ext_rd" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ext_rdata</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="ext_rdata" ipxact:left="15" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ext_rdata" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ext_stb</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ext_stb" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ext_stb" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ext_ub</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ext_ub" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ext_ub" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ext_wait</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ext_wait" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ext_wait" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ext_wdata</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="ext_wdata" ipxact:left="15" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ext_wdata" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ext_wr</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ext_wr" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ext_wr" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>mem_addr</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="mem_addr" ipxact:left="13" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="mem_addr" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>mem_cs</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="mem_cs" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="mem_cs" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>mem_rd</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="mem_rd" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="mem_rd" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>mem_rdata</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="mem_rdata" ipxact:left="15" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="mem_rdata" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>mem_wait</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="mem_wait" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="mem_wait" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>mem_wdata</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="mem_wdata" ipxact:left="15" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="mem_wdata" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>mem_wr</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="mem_wr" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="mem_wr" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>rd</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="rd" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rd" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>rdata</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="rdata" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rdata" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reset</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="reset" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reset" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wait_st</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="wait_st" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wait_st" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wdata</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="wdata" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wdata" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wr</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="wr" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wr" />
+</ipxact:adHocConnection>
+
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dut</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="io" name="io_ext_mem_interface" version="def" />
+<ipxact:configurableElementValues>
+ <ipxact:configurableElementValue ipxact:referenceId="ADDR_WIDTH">ADDR_WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="BASE_ADDR">BASE_ADDR</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="BASE_WIDTH">BASE_WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="MEM_FRAME">MEM_FRAME</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="MEM_WIDTH">MEM_WIDTH</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+</ipxact:componentInstances>
+</ipxact:design>

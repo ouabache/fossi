@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<socgen:componentConfiguration 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"   
+xmlns:socgen="http://opencores.org" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<socgen:vendor>valentfx.com</socgen:vendor>
+<socgen:library>logipi</socgen:library>
+<socgen:component>clock</socgen:component>
+<socgen:ip_name_depth>3</socgen:ip_name_depth>
+<socgen:ip_name_vendor_sep>_</socgen:ip_name_vendor_sep>
+<socgen:ip_name_library_sep>_</socgen:ip_name_library_sep>
+<socgen:ip_name_version_sep>_</socgen:ip_name_version_sep>
+<socgen:ip_name_base_macro>VARIANT</socgen:ip_name_base_macro>
+<socgen:systems>
+  <socgen:system>
+   <socgen:name>TestBenches</socgen:name>
+   <socgen:level1>sim</socgen:level1>
+   <socgen:level2>testbenches</socgen:level2>
+   <socgen:level3>testbench</socgen:level3>
+   <socgen:level4>version</socgen:level4>
+  </socgen:system>
+  <socgen:system>
+   <socgen:name>Fpgas</socgen:name>
+   <socgen:level1>syn</socgen:level1>
+   <socgen:level2>ise</socgen:level2>
+   <socgen:level3>chip</socgen:level3>
+   <socgen:level4>variant</socgen:level4>
+  </socgen:system>
+</socgen:systems>
+
+
+
+<socgen:doc>
+
+<socgen:library_path>/doc</socgen:library_path>
+
+</socgen:doc>
+
+
+
+</socgen:componentConfiguration>  
+

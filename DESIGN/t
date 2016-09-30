@@ -1,0 +1,23 @@
+
+
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component mux  -version def 
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component nand  -version def
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component and  -version def 
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component or  -version def 
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component nor  -version def 
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component xor  -version def 
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component xnor  -version def
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component buf  -version def 
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component inv  -version def 
+
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component pad   -version in_dig 
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component pad   -version out_dig
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component pad   -version se_dig 
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component pad   -version tri_dig
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component pad   -version od_dig 
+
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component reg   -version rst    
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component reg   -version set    
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component reg   -version def    
+
+

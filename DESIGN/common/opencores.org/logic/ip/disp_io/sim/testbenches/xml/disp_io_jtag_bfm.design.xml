@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<ipxact:design 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>logic</ipxact:library>
+<ipxact:name>disp_io</ipxact:name>
+<ipxact:version>jtag_bfm.design</ipxact:version>  
+
+
+
+
+
+
+
+
+
+ <ipxact:adHocConnections>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>clk</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="clk"/>
+       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="clk"/>
+
+     </ipxact:adHocConnection>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>reset</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="reset"/>
+       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="reset"/>
+     </ipxact:adHocConnection>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>tclk_pad_in</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="tclk_pad_in"/>
+       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="tclk"/>
+       <ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="tclk_pad_in"/>
+
+     </ipxact:adHocConnection>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>tms_pad_in</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="tms_pad_in"/>
+       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="tms"/>
+       <ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="tms_pad_in"/>
+     </ipxact:adHocConnection>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>tdi_pad_in</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="tdi_pad_in"/>
+       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="tdo"/>
+       <ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="tdi_pad_in"/>
+     </ipxact:adHocConnection>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>trst_n_pad_in</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="trst_n_pad_in"/>
+       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="trst_n"/>
+       <ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="trst_n_pad_in"/>
+     </ipxact:adHocConnection>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>tdo_pad_out</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="tdo_pad_out"/>
+       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="tdi"/>
+       <ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="tdo_pad_out"/>
+     </ipxact:adHocConnection>
+
+
+
+
+
+<ipxact:adHocConnection>
+<ipxact:name>jtag_shiftcapture_dr_clk</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="jtag_shiftcapture_dr_clk"/>
+<ipxact:internalPortReference ipxact:componentRef="tap"    ipxact:portRef="shiftcapture_dr_clk_o"/>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>jtag_capture_dr</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="jtag_capture_dr"/>
+<ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="capture_dr_o"/>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>jtag_select</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="jtag_select"   />
+<ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="select_o"/>
+</ipxact:adHocConnection>
+
+
+<ipxact:adHocConnection>
+<ipxact:name>aux_jtag_select</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="aux_jtag_select"   />
+<ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="aux_select_o"/>
+</ipxact:adHocConnection>
+
+
+<ipxact:adHocConnection>
+<ipxact:name>bsr_select_o</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="bsr_select_o" />
+<ipxact:internalPortReference  ipxact:componentRef="tap" ipxact:portRef="bsr_select_o" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>jtag_shift_dr</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="jtag_shift_dr"/>
+<ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="shift_dr_o"/>
+</ipxact:adHocConnection>
+
+
+<ipxact:adHocConnection>
+<ipxact:name>jtag_tdi</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="jtag_tdi"/>
+<ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="tdi_o"/>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>jtag_tdo</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="jtga_tdo"  />
+<ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="tdo_i"/>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection ipxact:tiedValue="1'b0"  >
+<ipxact:name>aux_tdo_i</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="aux_tdo_i"  />
+<ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="aux_tdo_i"/>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection ipxact:tiedValue="1'b0"  >
+<ipxact:name>bsr_tdo_i</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="bsr_tdo_i"  />
+<ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="bsr_tdo_i"/>
+</ipxact:adHocConnection>
+
+
+
+<ipxact:adHocConnection>
+<ipxact:name>jtag_test_logic_reset</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="jtag_test_logic_reset"/>
+<ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="test_logic_reset_o"/>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>jtag_update_dr_clk</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="jtag_update_dr_clk"/>
+<ipxact:internalPortReference ipxact:componentRef="tap"          ipxact:portRef="update_dr_clk_o"/>
+</ipxact:adHocConnection>
+
+
+
+
+
+
+ </ipxact:adHocConnections>
+
+<ipxact:componentInstances>
+
+
+
+<ipxact:componentInstance>
+ <ipxact:instanceName>jtag_model</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="jtag_model" version="def" />
+ <ipxact:configurableElementValues>
+ <ipxact:configurableElementValue ipxact:referenceId="DIVCNT">JTAG_MODEL_DIVCNT</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="SIZE">JTAG_MODEL_SIZE</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+<ipxact:componentInstance>
+ <ipxact:instanceName>tap</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="tap" />
+ <ipxact:configurableElementValues>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+
+
+
+</ipxact:componentInstances>
+
+
+
+
+</ipxact:design>

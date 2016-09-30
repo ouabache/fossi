@@ -102,20 +102,15 @@ refdes=rxd_parity_error
 C 6100 2300  1 0 0 out_port.sym
 {
 T 7100 2300 5  10 1 1 0 0 1 1
-refdes=rxd_data_avail_IRQ
+refdes=rxd_data_avail
 }
 C 6100 2700  1 0 0 out_port.sym
 {
 T 7100 2700 5  10 1 1 0 0 1 1
-refdes=rxd_data_avail
+refdes=rts_pad_out
 }
 C 6100 3100  1 0 0 out_port.sym
 {
 T 7100 3100 5  10 1 1 0 0 1 1
-refdes=rts_pad_out
-}
-C 6100 3500  1 0 0 out_port.sym
-{
-T 7100 3500 5  10 1 1 0 0 1 1
 refdes=cts_out
 }

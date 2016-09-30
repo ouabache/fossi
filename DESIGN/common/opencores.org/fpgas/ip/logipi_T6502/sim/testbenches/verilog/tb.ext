@@ -1,0 +1,21 @@
+assign A_CLK   = clk;
+
+
+pullup pu_jtag ( JTAG_TDO );
+
+
+reg [1:0] SW_reg;
+reg [1:0] BTN_reg;
+
+initial
+begin
+SW_reg  = 2'b00;
+BTN_reg = 2'b00;
+end
+
+assign SW = SW_reg;
+assign BTN = BTN_reg;
+assign STOP = 1'b0;
+assign BAD = 1'b0;
+
+

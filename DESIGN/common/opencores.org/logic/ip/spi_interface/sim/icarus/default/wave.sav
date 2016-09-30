@@ -1,0 +1,53 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Sun Apr 24 17:52:41 2016
+[*]
+[dumpfile] "/home/johne/socgen/work/opencores.org__logic/ip/spi_interface/sim/icarus/default/TestBench.vcd"
+[dumpfile_mtime] "Sun Apr 24 17:46:10 2016"
+[dumpfile_size] 141943
+[savefile] "/home/johne/socgen/Projects/opencores.org/logic/ip/spi_interface/sim/icarus/default/wave.sav"
+[timestart] 6400
+[size] 1613 999
+[pos] 58 0
+*-14.000000 46140 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TB.
+[treeopen] TB.test.
+[treeopen] TB.test.dut.
+[treeopen] TB.test.spi_model_master.
+[sst_width] 387
+[signals_width] 222
+[sst_expanded] 1
+[sst_vpaned_height] 300
+@28
+TB.test.clk
+TB.test.reset
+TB.test.spi_model_master.spi_clk_roll
+@22
+TB.test.spi_model_master.spi_clk_cnt[7:0]
+@28
+TB.test.spi_model_master.spi_clk_m
+@22
+TB.test.spi_model_master.send_packet.byte_out[31:0]
+@28
+TB.test.spi_model_master.START
+@22
+TB.test.spi_model_master.TX_Data[31:0]
+TB.test.spi_model_master.send_packet.byte_back[31:0]
+TB.test.spi_model_master.rx_data_exp[31:0]
+TB.test.spi_model_master.bit_cnt[5:0]
+TB.test.spi_model_master.RX_Data[31:0]
+@28
+TB.test.dut.spi.clk
+TB.test.dut.spi.SCK
+TB.test.dut.spi.SCK_risingedge
+TB.test.dut.spi.SSEL_active
+TB.test.dut.spi.byte_received
+TB.test.dut.spi.MISO
+@22
+TB.test.dut.spi.byte_data_received[31:0]
+@28
+TB.test.dut.spi.byte_received
+@23
+TB.test.dut.spi.tx_data[15:0]
+[pattern_trace] 1
+[pattern_trace] 0

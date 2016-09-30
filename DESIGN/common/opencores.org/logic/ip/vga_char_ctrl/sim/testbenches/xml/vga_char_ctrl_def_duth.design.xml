@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--           
+//                                                                                                    //
+// Generated File Do Not EDIT                                                                         //
+//                                                                                                    //
+// ./tools/verilog/gen_tb -vendor opencores.org -library logic  -component vga_char_ctrl  -version def //
+//                                                                                                    //
+-->           
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>logic</ipxact:library>
+<ipxact:name>vga_char_ctrl</ipxact:name>
+<ipxact:version>def_duth.design</ipxact:version>
+<ipxact:adHocConnections>
+
+<ipxact:adHocConnection>
+<ipxact:name>add_h_load</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="add_h_load" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="add_h_load" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>add_l_load</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="add_l_load" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="add_l_load" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>address</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="address" ipxact:left="13" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="address" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>ascii_load</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="ascii_load" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ascii_load" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>back_color</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="back_color" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="back_color" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>blue_pad_out</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="blue_pad_out" ipxact:left="1" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="blue_pad_out" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>char_color</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="char_color" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="char_color" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>clk</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="clk" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="clk" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>cursor_color</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="cursor_color" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="cursor_color" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>green_pad_out</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="green_pad_out" ipxact:left="2" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="green_pad_out" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>hsync_n_pad_out</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="hsync_n_pad_out" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="hsync_n_pad_out" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>red_pad_out</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="red_pad_out" ipxact:left="2" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="red_pad_out" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reset</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="reset" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reset" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>vsync_n_pad_out</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="vsync_n_pad_out" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="vsync_n_pad_out" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wdata</ipxact:name>
+<ipxact:externalPortReference ipxact:portRef="wdata" ipxact:left="7" ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="wdata" />
+</ipxact:adHocConnection>
+
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dut</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="logic" name="vga_char_ctrl" version="def" />
+<ipxact:configurableElementValues>
+ <ipxact:configurableElementValue ipxact:referenceId="CHARACTER_DECODE_DELAY">CHARACTER_DECODE_DELAY</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="H_ACTIVE">H_ACTIVE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="H_BACK_PORCH">H_BACK_PORCH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="H_FRONT_PORCH">H_FRONT_PORCH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="H_SYNCH">H_SYNCH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="H_TOTAL">H_TOTAL</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="V_ACTIVE">V_ACTIVE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="V_BACK_PORCH">V_BACK_PORCH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="V_FRONT_PORCH">V_FRONT_PORCH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="V_SYNCH">V_SYNCH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="V_TOTAL">V_TOTAL</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="CHAR_RAM_ADDR">CHAR_RAM_ADDR</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="CHAR_RAM_WIDTH">CHAR_RAM_WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="CHAR_RAM_WORDS">CHAR_RAM_WORDS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="CHAR_RAM_WRITETHRU">CHAR_RAM_WRITETHRU</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+</ipxact:componentInstances>
+</ipxact:design>

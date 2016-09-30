@@ -1,0 +1,61 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Sat May  7 19:20:49 2016
+[*]
+[dumpfile] "/home/johne/socgen/work/opencores.org__fpgas/ip/logipi_T6502/sim/icarus/default/TestBench.vcd"
+[dumpfile_mtime] "Sat May  7 19:11:03 2016"
+[dumpfile_size] 4211946
+[savefile] "/home/johne/socgen/Projects/opencores.org/fpgas/ip/logipi_T6502/sim/icarus/default/wave.sav"
+[timestart] 0
+[size] 1674 1028
+[pos] -1 -1
+*-25.035568 38950000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TB.
+[treeopen] TB.test.
+[treeopen] TB.test.dut.
+[treeopen] TB.test.dut.core.
+[treeopen] TB.test.dut.core.spi_xxx.
+[treeopen] TB.test.spi_model_master.
+[sst_width] 223
+[signals_width] 222
+[sst_expanded] 1
+[sst_vpaned_height] 515
+@28
+TB.test.SYS_SPI_SCK
+TB.test.SYS_SPI_MOSI
+TB.test.SYS_SPI_MISO
+TB.test.RP_SPI_CE0N
+@22
+TB.test.spi_model_master.rx_data_exp[31:0]
+TB.test.spi_model_master.RX_Data[31:0]
+TB.test.dut.core.spi_xxx.rx_data[15:0]
+TB.test.dut.core.spi_xxx.tx_data[15:0]
+@28
+TB.test.dut.core.spi_xxx.spi.SCK_risingedge
+@c00022
+TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+@28
+(0)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(1)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(2)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(3)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(4)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(5)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(6)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(7)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(8)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(9)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(10)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(11)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(12)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(13)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(14)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+(15)TB.test.dut.core.spi_xxx.spi.byte_data_sent[15:0]
+@1401200
+-group_end
+@28
+TB.test.spi_model_master.START
+@29
+TB.test.spi_model_master.spi_sel_n
+[pattern_trace] 1
+[pattern_trace] 0

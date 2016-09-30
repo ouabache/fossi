@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--                                                
+//                                                //
+// Generated File Do Not EDIT                     //
+//                                                //
+// regen by adding -tb to gen_verilog script      //
+//                                                //
+-->                                                 
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>Mos6502</ipxact:library>
+<ipxact:name>cpu</ipxact:name>
+<ipxact:version>def.design</ipxact:version>
+
+<ipxact:vendorExtensions>
+<socgen:nodes>
+
+<socgen:node>
+<ipxact:name>addr</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+<ipxact:wire><ipxact:vector><ipxact:left>CPU_ADD-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</socgen:node>
+
+
+<socgen:node>
+<ipxact:name>prog_counter</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+<ipxact:wire><ipxact:vector><ipxact:left>CPU_ADD-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</socgen:node>
+
+
+
+</socgen:nodes>
+</ipxact:vendorExtensions>
+
+
+
+<ipxact:adHocConnections>
+
+<ipxact:adHocConnection>
+<ipxact:name>alu_status</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="alu_status"   ipxact:left="7"   ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="alu_status" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>clk</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="slave_clk_clk" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="clk" />
+<ipxact:internalPortReference  ipxact:componentRef="stack_ram" ipxact:portRef="clk" />
+<ipxact:internalPortReference ipxact:componentRef="prog_rom" ipxact:portRef="clk"/>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reset</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="slave_reset_reset" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="reset" />
+<ipxact:internalPortReference  ipxact:componentRef="stack_ram" ipxact:portRef="reset" />
+</ipxact:adHocConnection>
+
+
+<ipxact:adHocConnection>
+<ipxact:name>enable</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="enable" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="enable" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>addr</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="addr"   ipxact:left="15"   ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="addr" />
+</ipxact:adHocConnection>
+
+   <ipxact:adHocConnection>
+      <ipxact:name>addr</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="addr"   ipxact:left="PROG_ROM_ADD"   ipxact:right="1" />
+      <ipxact:internalPortReference ipxact:componentRef="prog_rom"    ipxact:portRef="waddr" />
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>prog_counter</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="prog_counter"   ipxact:left="PROG_ROM_ADD"   ipxact:right="1" />
+      <ipxact:internalPortReference ipxact:componentRef="prog_rom" ipxact:portRef="raddr" />
+    </ipxact:adHocConnection>
+
+   <ipxact:adHocConnection>
+      <ipxact:name>prog_data</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="prog_data"   ipxact:left="15"   ipxact:right="0" />
+      <ipxact:internalPortReference ipxact:componentRef="prog_rom" ipxact:portRef="rdata"/>
+    </ipxact:adHocConnection>
+
+
+
+
+<ipxact:adHocConnection>
+<ipxact:name>rd</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="cpu_rd" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="rd" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>rdata</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="cpu_rdata"   ipxact:left="15"   ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="rdata" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wdata</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="cpu_wdata"   ipxact:left="7"   ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="wdata" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>wr</ipxact:name>
+      <ipxact:externalPortReference  ipxact:portRef="cpu_wr" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="wr" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>nmi</ipxact:name>
+      <ipxact:externalPortReference  ipxact:portRef="nmi" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="nmi" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>pg0_add</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="pg0_add"   ipxact:left="7"   ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="pg0_add" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>pg0_data</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="pg0_data"   ipxact:left="7"   ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="pg0_data" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>pg0_rd</ipxact:name>
+      <ipxact:externalPortReference  ipxact:portRef="pg0_rd" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="pg0_rd" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>pg0_wr</ipxact:name>
+      <ipxact:externalPortReference  ipxact:portRef="pg0_wr" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="pg0_wr" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>prog_counter</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="prog_counter"   ipxact:left="15"   ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="prog_counter" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>prog_data</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="prog_data"   ipxact:left="15"   ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="prog_data" />
+</ipxact:adHocConnection>
+
+
+
+
+<ipxact:adHocConnection>
+<ipxact:name>vec_int</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="vec_int"   ipxact:left="7"   ipxact:right="0" />
+<ipxact:internalPortReference  ipxact:componentRef="core" ipxact:portRef="vec_int" />
+</ipxact:adHocConnection>
+
+
+
+  <ipxact:adHocConnection>
+      <ipxact:name>stk_push</ipxact:name>
+      <ipxact:externalPortReference  ipxact:portRef="stk_push" />
+      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="stk_push"/>
+      <ipxact:internalPortReference ipxact:componentRef="stack_ram" ipxact:portRef="push"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>stk_push_data</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="stk_push_data"   ipxact:left="15"   ipxact:right="0" />
+      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="stk_push_data"/>
+      <ipxact:internalPortReference ipxact:componentRef="stack_ram" ipxact:portRef="din"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>stk_pull</ipxact:name>
+      <ipxact:externalPortReference  ipxact:portRef="stk_pull" />
+      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="stk_pull"/>
+      <ipxact:internalPortReference ipxact:componentRef="stack_ram" ipxact:portRef="pop"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>stk_pull_data</ipxact:name>
+<ipxact:externalPortReference  ipxact:portRef="stk_pull_data"   ipxact:left="15"   ipxact:right="0" />
+      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="stk_pull_data"/>
+      <ipxact:internalPortReference ipxact:componentRef="stack_ram" ipxact:portRef="dout"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection  ipxact:tiedValue="1'b0"  >
+      <ipxact:externalPortReference  ipxact:portRef="" />
+         <ipxact:internalPortReference ipxact:componentRef="prog_rom" ipxact:portRef="wr"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection  ipxact:tiedValue="16'h0000" >
+      <ipxact:externalPortReference  ipxact:portRef="" />
+      <ipxact:internalPortReference ipxact:componentRef="prog_rom" ipxact:portRef="wdata"/>
+    </ipxact:adHocConnection>
+
+
+   <ipxact:adHocConnection  ipxact:tiedValue="1'b1"  >
+      <ipxact:externalPortReference  ipxact:portRef="" />
+      <ipxact:internalPortReference ipxact:componentRef="prog_rom" ipxact:portRef="cs"/>
+      <ipxact:internalPortReference ipxact:componentRef="prog_rom" ipxact:portRef="rd"/>
+    </ipxact:adHocConnection>
+
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>core</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="Mos6502" name="core" version="def" />
+<ipxact:configurableElementValues>
+ <ipxact:configurableElementValue ipxact:referenceId="VEC_TABLE">VEC_TABLE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue ipxact:referenceId="BOOT_VEC">BOOT_VEC</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>stack_ram</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="cde" name="lifo" version="def"/>
+<ipxact:configurableElementValues>
+  <ipxact:configurableElementValue ipxact:referenceId="WIDTH">STACK_RAM_WIDTH</ipxact:configurableElementValue>
+  <ipxact:configurableElementValue ipxact:referenceId="SIZE">STACK_RAM_SIZE</ipxact:configurableElementValue>
+  <ipxact:configurableElementValue ipxact:referenceId="WORDS">STACK_RAM_WORDS</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>prog_rom</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="cde" name="sram" version="dp"/>
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue ipxact:referenceId="WIDTH">PROG_ROM_WIDTH</ipxact:configurableElementValue>
+<ipxact:configurableElementValue ipxact:referenceId="ADDR">PROG_ROM_ADD</ipxact:configurableElementValue>
+<ipxact:configurableElementValue ipxact:referenceId="WORDS">PROG_ROM_WORDS</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+
+
+</ipxact:componentInstances>
+</ipxact:design>

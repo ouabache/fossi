@@ -1,0 +1,42 @@
+
+
+
+initial
+ begin
+ $display("              ");
+ $display("          ===================================================");
+ $display("%8d  Test Start",$realtime );
+ $display("          ===================================================");
+ $display("              ");
+
+
+ fork
+ begin
+ test.cg.next(1100);
+ end
+
+begin
+  test.cg.next(1000);
+  test.spi_model_master.send_packet(32'h12345678,32'h00001234);
+  test.cg.next(1000);
+  test.spi_model_master.send_packet(32'h5678abcd,32'h56785678);
+  test.cg.next(1000);
+  test.spi_model_master.send_packet(32'hffffffff,32'habcdffff);
+  test.cg.next(1000);
+  test.spi_model_master.send_packet(32'h00000000,32'hffff0000);
+  test.cg.next(1000);
+end
+
+
+  begin
+  test.cg.next(12);
+
+  end
+  join
+
+ test.cg.exit;
+end
+
+
+
+

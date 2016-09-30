@@ -1,0 +1,39 @@
+
+
+
+initial
+ begin
+ $display("              ");
+ $display("          ===================================================");
+ $display("%8d  Test Start",$realtime );
+ $display("          ===================================================");
+ $display("              ");
+ test.BTN_reg <= 2'b00;
+ test.cg.next(10);
+ test.BTN_reg <= 2'b11;
+ test.cg.next(100);
+ 
+ fork
+
+begin
+  test.cg.next(100);
+  test.spi_model_master.send_packet(32'h12345678,32'h12341234);
+  test.cg.next(10000);
+  test.spi_model_master.send_packet(32'h5678abcd,32'h12341234);
+  test.cg.next(10000);
+
+end
+
+
+  begin
+  test.cg.next(12000);
+
+  end
+  join
+
+ test.cg.exit;
+end
+
+
+
+

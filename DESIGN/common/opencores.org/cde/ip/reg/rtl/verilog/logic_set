@@ -1,0 +1,10 @@
+
+
+always@(posedge clk or negedge preset_n)
+begin
+if(!preset_n)  Q <= 1'b1;
+else
+              Q <=  D;
+   
+end
+

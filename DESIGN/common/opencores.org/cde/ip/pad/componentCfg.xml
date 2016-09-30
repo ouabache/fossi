@@ -145,5 +145,46 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
       </socgen:configurations>
 
+
+
+<socgen:sim>
+
+<socgen:comp_path>pad/sim</socgen:comp_path>
+
+
+
+
+
+
+<socgen:testbenches>  
+
+
+<socgen:testbench>
+<socgen:variant>pad_lint</socgen:variant>
+<socgen:version>lint</socgen:version>  
+<socgen:tools>
+  <socgen:tool>rtl_check</socgen:tool>
+</socgen:tools>
+</socgen:testbench>
+
+</socgen:testbenches>
+
+
+
+<socgen:rtl_check>
+
+<socgen:lint>
+<socgen:name>default</socgen:name>
+<socgen:variant>pad_lint</socgen:variant>
+</socgen:lint>
+
+</socgen:rtl_check>
+
+
+</socgen:sim>
+
+
+
+      
 </socgen:componentConfiguration>  
 

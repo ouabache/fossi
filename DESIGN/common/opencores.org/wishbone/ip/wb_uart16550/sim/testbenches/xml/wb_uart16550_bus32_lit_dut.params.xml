@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--                                                
+//                                                //
+//                 //
+//                                                //
+//       //
+//                                                //
+-->                                                 
+<ipxact:component
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>wishbone</ipxact:library>
+<ipxact:name>wb_uart16550</ipxact:name>
+<ipxact:version>bus32_lit_dut.params</ipxact:version>
+<ipxact:model>
+
+      <ipxact:views>                                            
+                                   
+              <ipxact:view>                                   
+              <ipxact:name>Dut</ipxact:name>                                   
+              <ipxact:envIdentifier></ipxact:envIdentifier>                                   
+              <ipxact:hierarchyRef ipxact:vendor="opencores.org"                                    
+                                   ipxact:library="wishbone"                                    
+                                   ipxact:name="wb_uart16550"                                    
+                                   ipxact:version="bus32_lit_duth.design"/>                                   
+              </ipxact:view>                                   
+      </ipxact:views>                                   
+
+</ipxact:model>
+</ipxact:component>

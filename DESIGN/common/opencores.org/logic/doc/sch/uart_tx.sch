@@ -87,35 +87,30 @@ refdes=txd_pad_out
 C 6100 1100  1 0 0 out_port.sym
 {
 T 7100 1100 5  10 1 1 0 0 1 1
-refdes=txd_buffer_empty_NIRQ
+refdes=txd_buffer_empty
 }
 C 6100 1500  1 0 0 out_port.sym
 {
 T 7100 1500 5  10 1 1 0 0 1 1
-refdes=txd_buffer_empty
+refdes=rxd_stop_error
 }
 C 6100 1900  1 0 0 out_port.sym
 {
 T 7100 1900 5  10 1 1 0 0 1 1
-refdes=rxd_stop_error
+refdes=rxd_parity_error
 }
 C 6100 2300  1 0 0 out_port.sym
 {
 T 7100 2300 5  10 1 1 0 0 1 1
-refdes=rxd_parity_error
+refdes=rxd_data_avail
 }
 C 6100 2700  1 0 0 out_port.sym
 {
 T 7100 2700 5  10 1 1 0 0 1 1
-refdes=rxd_data_avail
+refdes=rts_pad_out
 }
 C 6100 3100  1 0 0 out_port.sym
 {
 T 7100 3100 5  10 1 1 0 0 1 1
-refdes=rts_pad_out
-}
-C 6100 3500  1 0 0 out_port.sym
-{
-T 7100 3500 5  10 1 1 0 0 1 1
 refdes=cts_out
 }

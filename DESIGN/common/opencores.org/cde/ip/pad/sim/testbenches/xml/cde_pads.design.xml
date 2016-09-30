@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<ipxact:design 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>pad</ipxact:name>
+<ipxact:version>design</ipxact:version>  
+
+
+
+
+
+
+
+
+
+<ipxact:componentInstances>
+
+
+
+
+<ipxact:componentInstance>
+ <ipxact:instanceName>in_pad</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />
+ <ipxact:configurableElementValues>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+<ipxact:componentInstance>
+ <ipxact:instanceName>out_pad</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />
+ <ipxact:configurableElementValues>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+
+
+<ipxact:componentInstance>
+ <ipxact:instanceName>tri_pad</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="tri_dig" />
+ <ipxact:configurableElementValues>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+<ipxact:componentInstance>
+ <ipxact:instanceName>se_pad</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="se_dig" />
+ <ipxact:configurableElementValues>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+<ipxact:componentInstance>
+ <ipxact:instanceName>od_pad</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="od_dig" />
+ <ipxact:configurableElementValues>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+
+</ipxact:componentInstances>
+
+
+
+
+</ipxact:design>

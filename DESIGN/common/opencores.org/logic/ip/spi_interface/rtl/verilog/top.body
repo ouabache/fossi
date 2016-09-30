@@ -1,0 +1,17 @@
+
+
+
+
+
+
+ spi_slave spi(.clk   ( clk              ),
+               .reset ( reset            ),
+               .SCK   ( spi_clk_pad_in   ),
+	       .MOSI  ( spi_mosi_pad_in  ),
+	       .MISO  ( spi_miso_pad_out ),
+	       .SSEL  ( spi_sel_n_pad_in ),
+	       .rx_data  ( rx_data       ),
+	       .tx_data  ( tx_data       )
+	     );
+
+

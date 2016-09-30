@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<ipxact:design 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>logic</ipxact:library>
+<ipxact:name>disp_io</ipxact:name>
+<ipxact:version>bfm.design</ipxact:version>  
+
+
+ <ipxact:adHocConnections>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>clk</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="clk"/>
+       <ipxact:internalPortReference ipxact:componentRef="display_model"   ipxact:portRef="clk"/>
+
+     </ipxact:adHocConnection>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>reset</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="reset"   />
+       <ipxact:internalPortReference ipxact:componentRef="display_model"   ipxact:portRef="reset"/>
+     </ipxact:adHocConnection>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>seg_pad_out</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="seg" ipxact:left="6" ipxact:right="0"  />
+       <ipxact:internalPortReference ipxact:componentRef="display_model"   ipxact:portRef="seg"/>
+     </ipxact:adHocConnection>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>an_pad_out</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="an" ipxact:left="3" ipxact:right="0"  />
+       <ipxact:internalPortReference ipxact:componentRef="display_model"   ipxact:portRef="an"/>
+     </ipxact:adHocConnection>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>dp_pad_out</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="dp"/>
+       <ipxact:internalPortReference ipxact:componentRef="display_model"   ipxact:portRef="dp"/>
+     </ipxact:adHocConnection>
+
+
+
+
+ </ipxact:adHocConnections>
+
+<ipxact:componentInstances>
+
+
+
+<ipxact:componentInstance>
+ <ipxact:instanceName>display_model</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="display_model" version="def" />
+ <ipxact:configurableElementValues>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+
+
+
+</ipxact:componentInstances>
+
+
+
+
+</ipxact:design>

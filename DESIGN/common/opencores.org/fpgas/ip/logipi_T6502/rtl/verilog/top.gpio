@@ -1,0 +1,31 @@
+
+
+
+
+
+
+reg [27:0] COUNTER;
+
+always@(posedge clk)
+begin
+if(reset)       COUNTER <=  28'h0000000;
+else            COUNTER <= COUNTER + 28'h0000001;
+end
+
+
+assign  led_pad_out[1]        = COUNTER[27];
+assign  led_pad_out[0]        = COUNTER[26];
+assign  pwron                   = btn_pad_in[1];
+   
+
+assign   pmod1_pad_out[7:0]  = rx_data[7:0];
+assign   pmod2_pad_out[7:0]  = rx_data[15:8];
+
+
+assign   pmod1_pad_oe[7:0]   = 8'hff;
+assign   pmod2_pad_oe[7:0]   = 8'hff;
+assign   pmod3_pad_oe[7:0]   = 8'hff;
+assign   pmod4_pad_oe[7:0]   = 8'hff;
+
+assign tx_data = 16'h1234;
+
