@@ -23,7 +23,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 <socgen:doc>
 
-<socgen:library_path>/doc</socgen:library_path>
+<socgen:library_path>/ip/pad/doc</socgen:library_path>
 <socgen:comp_path>pad/doc</socgen:comp_path>
 
 

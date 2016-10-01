@@ -1,5 +1,0 @@
-
-assign OUT =  IN1 && IN0;
-   
-
-

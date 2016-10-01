@@ -1,5 +1,0 @@
-
-assign OUT =  (sel)? IN1: IN0;
-   
-
-

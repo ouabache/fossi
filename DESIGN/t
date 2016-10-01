@@ -1,14 +1,14 @@
 
 
-./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component mux  -version def 
-./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component nand  -version def
-./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component and  -version def 
-./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component or  -version def 
-./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component nor  -version def 
-./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component xor  -version def 
-./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component xnor  -version def
-./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component buf  -version def 
-./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component inv  -version def 
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component gates  -version mux
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component gates  -version nand
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component gates  -version and 
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component gates  -version or
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component gates  -version nor 
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component gates  -version xor 
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component gates  -version xnor
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component gates  -version buf 
+./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component gates  -version inv 
 
 ./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component pad   -version in_dig 
 ./tools/geda/gen_gEDA_sym -vendor opencores.org -library cde -component pad   -version out_dig

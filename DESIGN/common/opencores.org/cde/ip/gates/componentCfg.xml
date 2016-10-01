@@ -20,32 +20,63 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 <socgen:doc>
 
-<socgen:library_path>/doc</socgen:library_path>
-<socgen:comp_path>and/doc</socgen:comp_path>
+<socgen:library_path>/ip/gates/doc</socgen:library_path>
+<socgen:comp_path>gates/doc</socgen:comp_path>
 
 </socgen:doc>
 
 
+<socgen:configurations>  
 
-     <socgen:configurations>
-
-
-          <socgen:configuration>
-            <socgen:name>default</socgen:name>
-            <socgen:version>def</socgen:version>
-            <socgen:parameters>
-            <socgen:parameter><socgen:name>WIDTH</socgen:name><socgen:value>1</socgen:value></socgen:parameter>
-           </socgen:parameters>
-          </socgen:configuration>
+ <socgen:configuration>
+ <socgen:name>default</socgen:name>  
+ <socgen:version>sys</socgen:version>  
+ <socgen:version>sys_lint</socgen:version>  
+ <socgen:parameters>
+ </socgen:parameters>
+ </socgen:configuration>
 
 
-
-
-     </socgen:configurations>
+</socgen:configurations>  
 
 
 
 
+<socgen:sim>
+
+<socgen:comp_path>gates/sim</socgen:comp_path>
+
+
+
+
+
+
+<socgen:testbenches>  
+
+
+<socgen:testbench>
+<socgen:variant>gates_sys_lint</socgen:variant>
+<socgen:version>sys_lint</socgen:version>  
+<socgen:tools>
+  <socgen:tool>rtl_check</socgen:tool>
+</socgen:tools>
+</socgen:testbench>
+
+</socgen:testbenches>
+
+
+
+<socgen:rtl_check>
+
+<socgen:lint>
+<socgen:name>default</socgen:name>
+<socgen:variant>gates_sys_lint</socgen:variant>
+</socgen:lint>
+
+</socgen:rtl_check>
+
+
+</socgen:sim>
 
 </socgen:componentConfiguration>  
 

@@ -289,7 +289,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <socgen:parameter>
 <socgen:name>module_name</socgen:name>
-<socgen:value>cde_and_def</socgen:value>
+<socgen:value>cde_gates_and</socgen:value>
 <socgen:x>400</socgen:x>
 <socgen:y>0</socgen:y>
 <socgen:color>5</socgen:color>
@@ -326,7 +326,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <socgen:parameter>
 <socgen:name>component</socgen:name>
-<socgen:value>and</socgen:value>
+<socgen:value>gates</socgen:value>
 <socgen:x>0</socgen:x>
 <socgen:y>-400</socgen:y>
 <socgen:color>0</socgen:color>
@@ -340,7 +340,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <socgen:parameter>
 <socgen:name>version</socgen:name>
-<socgen:value>def</socgen:value>
+<socgen:value>and</socgen:value>
 <socgen:x>0</socgen:x>
 <socgen:y>-500</socgen:y>
 <socgen:color>0</socgen:color>
@@ -360,7 +360,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <socgen:graphics>
 
 <socgen:graphic>
-<socgen:name>cde_and_def</socgen:name>
+<socgen:name>cde_gates_and</socgen:name>
 
 
 <socgen:reference>
