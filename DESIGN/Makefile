@@ -13,13 +13,26 @@ vendor=opencores.org
 .PHONY all: clean 
 all: 
 	(\
+	${home}/tools/sys/workspace  opencores.org  fpgas;\
+	${home}/tools/sys/workspace  opencores.org  logic;\
+	${home}/tools/sys/workspace  opencores.org  adv_debug_sys;\
+	${home}/tools/sys/workspace  opencores.org  io;\
+	${home}/tools/sys/workspace  opencores.org  Mos6502;\
+	${home}/tools/sys/workspace  opencores.org  wishbone;\
 	${home}/tools/sys/workspace  opencores.org  cde;\
+	${home}/tools/sys/workspace  github.com     ucb-bar;\
 	 )
 
 
 .PHONY workspace: clean
 workspace: 
 	(\
+	${home}/tools/sys/workspace  opencores.org  fpgas;\
+	${home}/tools/sys/workspace  opencores.org  logic;\
+	${home}/tools/sys/workspace  opencores.org  adv_debug_sys;\
+	${home}/tools/sys/workspace  opencores.org  io;\
+	${home}/tools/sys/workspace  opencores.org  Mos6502;\
+	${home}/tools/sys/workspace  opencores.org  wishbone;\
 	${home}/tools/sys/workspace  opencores.org  cde;\
 	 )
 
@@ -28,6 +41,13 @@ workspace:
 dock: 
 	(\
 	${home}/tools/documentation/create_lib_doc   opencores.org  cde            ;\
+	${home}/tools/documentation/create_lib_doc   opencores.org  adv_debug_sys  ;\
+	${home}/tools/documentation/create_lib_doc   opencores.org  logic          ;\
+	${home}/tools/documentation/create_lib_doc   opencores.org  io             ;\
+	${home}/tools/documentation/create_lib_doc   opencores.org  Mos6502        ;\
+	${home}/tools/documentation/create_lib_doc   opencores.org  Testbench      ;\
+	${home}/tools/documentation/create_lib_doc   opencores.org  wishbone       ;\
+	${home}/tools/documentation/create_lib_doc   opencores.org  fpgas          ;\
 	 )
 
 

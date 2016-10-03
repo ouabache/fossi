@@ -81,14 +81,22 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
    
 
 <ipxact:model>    
-       <ipxact:views>
+
+
+		<ipxact:instantiations>
+			<ipxact:designInstantiation>
+				<ipxact:name>Hierarchical</ipxact:name>
+				<ipxact:designRef vendor="opencores.org" library="fpgas" name="Nexys2_T6502" version="core.design"/>
+			</ipxact:designInstantiation>
+		</ipxact:instantiations>
+
+
+
+  <ipxact:views>
 
               <ipxact:view>
-              <ipxact:name>Hierarchical</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
-              <ipxact:hierarchyRef ipxact:vendor="opencores.org" 
-                                   ipxact:library="fpgas" 
-                                   ipxact:name="Nexys2_T6502" 
-                                   ipxact:version="core.design"/>
+		<ipxact:name>Hierarchical</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
+   <ipxact:designInstantiationRef>Hierarchical</ipxact:designInstantiationRef>
               </ipxact:view>
 
 

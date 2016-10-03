@@ -30,6 +30,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
  <socgen:configuration>
  <socgen:name>default</socgen:name>  
+ <socgen:version>sys</socgen:version>  
  <socgen:version>sys_lint</socgen:version>  
  <socgen:parameters>
  </socgen:parameters>

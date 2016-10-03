@@ -43,8 +43,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:busInterfaces>
 
  <ipxact:busInterface><ipxact:name>slave_clk</ipxact:name>
-  <ipxact:busType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="clock" ipxact:version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="clock" ipxact:version="rtl"/>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="clock" version="def"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
   <ipxact:slave/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -56,8 +56,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
  <ipxact:busInterface><ipxact:name>slave_reset</ipxact:name>
-  <ipxact:busType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="reset" ipxact:version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="reset" ipxact:version="rtl"/>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
   <ipxact:slave/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -69,8 +69,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:busInterface><ipxact:name>mb</ipxact:name>
-   <ipxact:busType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="micro_bus" ipxact:version="def"/>
-   <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="micro_bus" ipxact:version="rtl"/>
+   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
+   <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
    <ipxact:endianness>little</ipxact:endianness>
    <ipxact:bitsInLau>8</ipxact:bitsInLau>
    <ipxact:slave><ipxact:memoryMapRef ipxact:memoryMapRef="mb"/>  </ipxact:slave>

@@ -356,10 +356,10 @@ foreach my $bus_iface ($spirit_component_file->findnodes("//ipxact:component/ipx
          foreach my $bus_iface ($spirit_component_file->findnodes("//ipxact:component/ipxact:busInterfaces/ipxact:busInterface/ipxact:${seek_type}")) 
             {
             my($mmm_cname)         = $bus_iface->findnodes('../ipxact:name/text()')->to_literal ;
-            my($mmm_vendor)        = $bus_iface->findnodes('../ipxact:abstractionType/@ipxact:vendor')->to_literal ;
-            my($mmm_library)       = $bus_iface->findnodes('../ipxact:abstractionType/@ipxact:library')->to_literal ;
-            my($mmm_name)          = $bus_iface->findnodes('../ipxact:abstractionType/@ipxact:name')->to_literal ;
-            my($mmm_version)       = $bus_iface->findnodes('../ipxact:abstractionType/@ipxact:version')->to_literal ;
+            my($mmm_vendor)        = $bus_iface->findnodes('../ipxact:abstractionType/@vendor')->to_literal ;
+            my($mmm_library)       = $bus_iface->findnodes('../ipxact:abstractionType/@library')->to_literal ;
+            my($mmm_name)          = $bus_iface->findnodes('../ipxact:abstractionType/@name')->to_literal ;
+            my($mmm_version)       = $bus_iface->findnodes('../ipxact:abstractionType/@version')->to_literal ;
    
 
 

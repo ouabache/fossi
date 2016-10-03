@@ -194,7 +194,7 @@ foreach my $bus_iface ($spirit_component_file->findnodes("//ipxact:busInterface[
    $BI_name         = $bus_iface->findnodes('../ipxact:name/text()')->to_literal ;
    $BI_endian       = $bus_iface->findnodes('../ipxact:endianness/text()')->to_literal ;
    $BI_width        = $bus_iface->findnodes('../ipxact:bitsInLau/text()')->to_literal ;
-   $BI_xname        = $bus_iface->findnodes('../ipxact:abstractionType/@ipxact:name')->to_literal ;
+   $BI_xname        = $bus_iface->findnodes('../ipxact:abstractionType/@name')->to_literal ;
    $memMap          = $bus_iface->findnodes('../ipxact:slave/ipxact:memoryMapRef/@ipxact:memoryMapRef')->to_literal ;
    }
 

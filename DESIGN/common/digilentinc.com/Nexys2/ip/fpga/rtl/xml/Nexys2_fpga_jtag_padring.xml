@@ -45,15 +45,24 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:model>
 
 
+
+  
+		<ipxact:instantiations>
+			<ipxact:designInstantiation>
+				<ipxact:name>Hierarchical</ipxact:name>
+				<ipxact:designRef vendor="digilentinc.com" library="Nexys2" name="fpga" version="jtag_design"/>
+			</ipxact:designInstantiation>
+		</ipxact:instantiations>
+
+
+		
+
   <ipxact:views>
 
     <ipxact:view>
        <ipxact:name>Hierarchical</ipxact:name>
-       
-       <ipxact:hierarchyRef ipxact:vendor="digilentinc.com" 
-                            ipxact:library="Nexys2"  
-                            ipxact:name="fpga" 
-                            ipxact:version="jtag_design"/>
+                   <ipxact:designInstantiationRef>Hierarchical</ipxact:designInstantiationRef>
+
     </ipxact:view>
 
 

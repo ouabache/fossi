@@ -53,8 +53,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
  <ipxact:busInterface><ipxact:name>wb_clk</ipxact:name>
-  <ipxact:busType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="clock" ipxact:version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="clock" ipxact:version="rtl"/>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="clock" version="def"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
   <ipxact:slave/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -66,8 +66,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
  <ipxact:busInterface><ipxact:name>wb_reset</ipxact:name>
-  <ipxact:busType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="reset" ipxact:version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="reset" ipxact:version="rtl"/>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
   <ipxact:slave/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -83,8 +83,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:busInterface><ipxact:name>wb</ipxact:name>
-   <ipxact:busType ipxact:vendor="opencores.org" ipxact:library="wishbone" ipxact:name="wishbone" ipxact:version="def"/>
-   <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="wishbone" ipxact:name="wishbone" ipxact:version="rtl"/>
+   <ipxact:busType vendor="opencores.org" library="wishbone" name="wishbone" version="def"/>
+   <ipxact:abstractionType vendor="opencores.org" library="wishbone" name="wishbone" version="rtl"/>
    <ipxact:master/>
      <ipxact:portMaps>
 

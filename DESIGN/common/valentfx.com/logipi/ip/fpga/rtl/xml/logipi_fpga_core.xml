@@ -48,7 +48,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>jtag</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="cde" name="jtag" version="rpc"/>
- <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="rpc_classic_rtl"/>
+ <ipxact:abstractionType vendor="opencores.org" library="cde" name="jtag" version="rpc_classic_rtl"/>
   <ipxact:slave/>
     <ipxact:portMaps>
 
@@ -116,7 +116,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>aux_jtag</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="cde" name="jtag" version="rpc"/>
- <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="rpc_classic_rtl"/>
+ <ipxact:abstractionType vendor="opencores.org" library="cde" name="jtag" version="rpc_classic_rtl"/>
   <ipxact:slave/>
     <ipxact:portMaps>
 
@@ -187,7 +187,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>slave_clk</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="clock" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="clock" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
   <ipxact:slave/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -200,7 +200,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>slave_reset</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="reset" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
   <ipxact:slave/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -213,7 +213,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
   <ipxact:busInterface><ipxact:name>master_reset</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="reset" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -226,7 +226,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>slave_enable</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="enable" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="enable" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="enable" version="rtl"/>
   <ipxact:slave/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -244,7 +244,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>btn_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
           <ipxact:portMap>
@@ -261,7 +261,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>sw_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
           <ipxact:portMap>
@@ -279,7 +279,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>led_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
           <ipxact:portMap>
@@ -299,7 +299,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>pmod1_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
           <ipxact:portMap>
@@ -329,7 +329,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
   <ipxact:busInterface><ipxact:name>pmod2_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
           <ipxact:portMap>
@@ -362,7 +362,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
   <ipxact:busInterface><ipxact:name>pmod3_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
           <ipxact:portMap>
@@ -393,7 +393,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:busInterface><ipxact:name>pmod4_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
           <ipxact:portMap>
@@ -428,7 +428,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>sys_spi_sck_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
           <ipxact:portMap>
@@ -444,7 +444,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>sys_spi_miso_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
           <ipxact:portMap>
@@ -460,7 +460,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>sys_spi_mosi_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
           <ipxact:portMap>
@@ -475,7 +475,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
   <ipxact:busInterface><ipxact:name>rp_spi_ce0n_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
           <ipxact:portMap>

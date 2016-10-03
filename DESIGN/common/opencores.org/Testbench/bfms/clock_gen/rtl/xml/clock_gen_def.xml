@@ -46,7 +46,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>master_clk</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="clock" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="clock" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
   <ipxact:slave/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -64,7 +64,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>master_reset</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="reset" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
       <ipxact:portMap>

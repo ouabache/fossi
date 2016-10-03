@@ -23,7 +23,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:busInterface>
   <ipxact:name>jtag</ipxact:name>
   <ipxact:busType  vendor="opencores.org" library="cde" name="jtag" version="rpc"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="rpc_classic_rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="cde" name="jtag" version="rpc_classic_rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
 
@@ -95,7 +95,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
  <ipxact:busInterface>
    <ipxact:name>aux_jtag</ipxact:name>
   <ipxact:busType  vendor="opencores.org" library="cde" name="jtag" version="rpc"/>
- <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="cde" ipxact:name="jtag" ipxact:version="rpc_classic_rtl"/>
+ <ipxact:abstractionType vendor="opencores.org" library="cde" name="jtag" version="rpc_classic_rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
 
@@ -168,7 +168,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>tclk_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -182,7 +182,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>tdi_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -196,7 +196,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>tms_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -210,7 +210,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>trst_n_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -226,7 +226,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>tdo_pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType ipxact:vendor="opencores.org" ipxact:library="Busdefs" ipxact:name="pad" ipxact:version="rtl"/>
+  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
   <ipxact:master/>
     <ipxact:portMaps>
       <ipxact:portMap>
@@ -504,6 +504,99 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+
+
+<ipxact:port><ipxact:name>test_logic_reset_o</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+<ipxact:port><ipxact:name>capture_dr_o</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>shift_dr_o</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>update_dr_clk_o</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>tdi_o</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>select_o</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>shiftcapture_dr_clk_o</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>tdo_i</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+<ipxact:port><ipxact:name>aux_capture_dr_o</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>aux_shift_dr_o</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>aux_update_dr_clk_o</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>aux_tdi_o</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>aux_select_o</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>aux_shiftcapture_dr_clk_o</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+
+
+
+
+
+  
 
 <ipxact:port><ipxact:name>tap_highz_mode</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>

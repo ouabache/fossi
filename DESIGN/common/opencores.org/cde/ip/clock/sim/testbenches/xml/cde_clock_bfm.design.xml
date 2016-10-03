@@ -189,6 +189,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentInstance>
+ <ipxact:instanceName>DUT</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="clock" version="sys" />
+</ipxact:componentInstance>
+
+
+
+
+<ipxact:componentInstance>
  <ipxact:instanceName>bsr</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="classic_rpc_reg" />
  <ipxact:configurableElementValues>
  <ipxact:configurableElementValue ipxact:referenceId="BITS">32</ipxact:configurableElementValue>
