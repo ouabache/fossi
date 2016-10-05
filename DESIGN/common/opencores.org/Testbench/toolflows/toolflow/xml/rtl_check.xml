@@ -93,6 +93,29 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+<ipxact:componentGenerator>
+  <ipxact:name>gen_yosys_filelist</ipxact:name>
+  <ipxact:phase>104.1</ipxact:phase>
+  <ipxact:apiType>none</ipxact:apiType>
+  <ipxact:vendorExtensions>
+    <socgen:envIdentifier>:*Lint:*</socgen:envIdentifier>
+  </ipxact:vendorExtensions>
+  <ipxact:generatorExe>tools/sys/gen_child_filelist</ipxact:generatorExe>
+  <ipxact:parameters>
+    <ipxact:parameter> 
+      <ipxact:name>suffix</ipxact:name>
+      <ipxact:value>yosys</ipxact:value>
+    </ipxact:parameter>
+    <ipxact:parameter> 
+      <ipxact:name>leader</ipxact:name>
+      <ipxact:value>"read_verilog "</ipxact:value>
+    </ipxact:parameter>
+  </ipxact:parameters>
+</ipxact:componentGenerator>
+
+
+
+
 
 </ipxact:componentGenerators>
 

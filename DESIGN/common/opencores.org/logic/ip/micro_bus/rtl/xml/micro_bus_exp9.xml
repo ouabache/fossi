@@ -45,20 +45,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterface><ipxact:name>mb_out</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
-  <ipxact:slave>
-  <ipxact:memoryMapRef ipxact:memoryMapRef="mb_out"/>
-  <ipxact:bridge ipxact:masterRef="mas_0" ipxact:opaque="true"/>
-  <ipxact:bridge ipxact:masterRef="mas_1" ipxact:opaque="true"/>
-  <ipxact:bridge ipxact:masterRef="mas_2" ipxact:opaque="true"/>
-  <ipxact:bridge ipxact:masterRef="mas_3" ipxact:opaque="true"/>
-  <ipxact:bridge ipxact:masterRef="mas_4" ipxact:opaque="true"/>
-  <ipxact:bridge ipxact:masterRef="mas_5" ipxact:opaque="true"/>
-  <ipxact:bridge ipxact:masterRef="mas_6" ipxact:opaque="true"/>
-  <ipxact:bridge ipxact:masterRef="mas_7" ipxact:opaque="true"/>
-  <ipxact:bridge ipxact:masterRef="mas_8" ipxact:opaque="true"/>
-  </ipxact:slave>
 
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
     <ipxact:portMaps>
 
@@ -116,6 +108,27 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+  <ipxact:slave>
+  <ipxact:memoryMapRef ipxact:memoryMapRef="mb_out"/>
+  <ipxact:bridge ipxact:masterRef="mas_0" ipxact:opaque="true"/>
+  <ipxact:bridge ipxact:masterRef="mas_1" ipxact:opaque="true"/>
+  <ipxact:bridge ipxact:masterRef="mas_2" ipxact:opaque="true"/>
+  <ipxact:bridge ipxact:masterRef="mas_3" ipxact:opaque="true"/>
+  <ipxact:bridge ipxact:masterRef="mas_4" ipxact:opaque="true"/>
+  <ipxact:bridge ipxact:masterRef="mas_5" ipxact:opaque="true"/>
+  <ipxact:bridge ipxact:masterRef="mas_6" ipxact:opaque="true"/>
+  <ipxact:bridge ipxact:masterRef="mas_7" ipxact:opaque="true"/>
+  <ipxact:bridge ipxact:masterRef="mas_8" ipxact:opaque="true"/>
+  </ipxact:slave>
+
+
+
  </ipxact:busInterface>
 
 
@@ -124,10 +137,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterface><ipxact:name>mas_0</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
-  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_0"/></ipxact:master>
 
-    <ipxact:portMaps>
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
+
+
+
+  <ipxact:portMaps>
 
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>addr</ipxact:name>
@@ -175,6 +194,17 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+
+	  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  
+
+  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_0"/></ipxact:master>
+
+
  </ipxact:busInterface>
 
 
@@ -185,8 +215,11 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterface><ipxact:name>mas_1</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
-  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_1"/></ipxact:master>
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
     <ipxact:portMaps>
 
@@ -236,6 +269,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_1"/></ipxact:master>
+
+
  </ipxact:busInterface>
 
 
@@ -247,8 +290,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterface><ipxact:name>mas_2</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
-  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_2"/></ipxact:master>
+
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
  
     <ipxact:portMaps>
@@ -299,6 +346,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_2"/></ipxact:master>
+
+
  </ipxact:busInterface>
 
 
@@ -307,8 +363,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterface><ipxact:name>mas_3</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
-  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_3"/></ipxact:master> 
+
+
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
     <ipxact:portMaps>
 
@@ -358,6 +419,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  
+
+
+  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_3"/></ipxact:master> 
+
+
  </ipxact:busInterface>
 
 
@@ -366,9 +437,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterface><ipxact:name>mas_4</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
-  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_4"/></ipxact:master>
+
+
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
 
     <ipxact:portMaps>
@@ -419,6 +495,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_4"/></ipxact:master>
+
+
  </ipxact:busInterface>
 
 
@@ -427,9 +513,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterface><ipxact:name>mas_5</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
-  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_5"/></ipxact:master>
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
+
     <ipxact:portMaps>
 
       <ipxact:portMap>
@@ -478,6 +568,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_5"/></ipxact:master>
+
  </ipxact:busInterface>
 
 
@@ -486,10 +585,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterface><ipxact:name>mas_6</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
-  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_6"/></ipxact:master>
- 
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
+
     <ipxact:portMaps>
 
       <ipxact:portMap>
@@ -538,6 +640,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+
+  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_6"/></ipxact:master>
+ 
+
  </ipxact:busInterface>
 
 
@@ -546,11 +658,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterface><ipxact:name>mas_7</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
-  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_7"/></ipxact:master>
 
- 
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
+
     <ipxact:portMaps>
 
       <ipxact:portMap>
@@ -599,6 +713,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_7"/></ipxact:master>
+
+ 
+
  </ipxact:busInterface>
 
 
@@ -607,9 +731,11 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterface><ipxact:name>mas_8</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
-  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_8"/></ipxact:master>
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
     <ipxact:portMaps>
 
@@ -659,6 +785,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+  <ipxact:master><ipxact:addressSpaceRef ipxact:addressSpaceRef="mas_8"/></ipxact:master>
+
+
  </ipxact:busInterface>
 
 

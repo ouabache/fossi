@@ -46,8 +46,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:busInterfaces>
 
  <ipxact:busInterface><ipxact:name>jtag</ipxact:name>
-  <ipxact:abstractionType vendor="opencores.org" library="cde" name="jtag" version="rpc_rtl"/>
-  <ipxact:slave/>
+ <ipxact:busType vendor="opencores.org" library="cde" name="jtag" version="rpc"/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+ <ipxact:abstractionRef vendor="opencores.org" library="cde" name="jtag" version="rpc_rtl"/>
     <ipxact:portMaps>
 
       <ipxact:portMap>
@@ -113,6 +115,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+ 
+
+  <ipxact:slave/>
+
  </ipxact:busInterface>
 
 

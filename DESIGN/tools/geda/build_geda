@@ -193,8 +193,8 @@ foreach  $comp_version   (@versions)
    foreach  my   $comp  ($spirit_component_file->findnodes('//ipxact:component/ipxact:busInterfaces/ipxact:busInterface/ipxact:master'))
          {
          my($pin_name)        = $comp ->findnodes('../ipxact:name/text()')->to_literal ;           
-         my($mmm_name)          = $comp->findnodes('../ipxact:abstractionType/@name')->to_literal ;
-         my($mmm_version)       = $comp->findnodes('../ipxact:abstractionType/@version')->to_literal ;
+         my($mmm_name)          = $comp->findnodes('../ipxact:abstractionTypes/ipxact:abstractionType/ipxact:abstractionRef/@name')->to_literal ;
+         my($mmm_version)       = $comp->findnodes('../ipxact:abstractionTypes/ipxact:abstractionType/ipxact:abstractionRef/@version')->to_literal ;
 
          $pin_name   = $mmm_name."__".$pin_name;
          push(@out_bus,$pin_name);
@@ -209,8 +209,8 @@ foreach  $comp_version   (@versions)
    foreach  my   $comp  ($spirit_component_file->findnodes('//ipxact:component/ipxact:busInterfaces/ipxact:busInterface/ipxact:slave'))
          {
          my($pin_name)        = $comp ->findnodes('../ipxact:name/text()')->to_literal ;
-         my($mmm_name)          = $comp->findnodes('../ipxact:abstractionType/@name')->to_literal ;
-         my($mmm_version)       = $comp->findnodes('../ipxact:abstractionType/@version')->to_literal ;
+         my($mmm_name)          = $comp->findnodes('../ipxact:abstractionTypes/ipxact:abstractionType/ipxact:abstractionRef/@name')->to_literal ;
+         my($mmm_version)       = $comp->findnodes('../ipxact:abstractionTypes/ipxact:abstractionType/ipxact:abstractionRef/@version')->to_literal ;
          $pin_name   = $mmm_name."__".$pin_name;
 
          push(@in_bus,$pin_name);

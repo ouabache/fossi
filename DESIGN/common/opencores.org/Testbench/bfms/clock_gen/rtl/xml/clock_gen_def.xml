@@ -46,8 +46,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>master_clk</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="clock" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
-  <ipxact:slave/>
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
+
+
     <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>clk</ipxact:name></ipxact:logicalPort>
@@ -57,15 +62,27 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
- </ipxact:busInterface>
+      </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+  <ipxact:slave/>
+  </ipxact:busInterface>
 
 
 
 
  <ipxact:busInterface><ipxact:name>master_reset</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
-  <ipxact:master/>
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+	<ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
+
+
+
     <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>reset</ipxact:name></ipxact:logicalPort>
@@ -74,7 +91,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 </ipxact:physicalPort>
       </ipxact:portMap>
     </ipxact:portMaps>
- </ipxact:busInterface>
+
+
+      </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+  </ipxact:busInterface>
 
 
 
@@ -190,6 +214,19 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:ports>
 
+
+<ipxact:port><ipxact:name>clk</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>reset</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+  
 <ipxact:port><ipxact:name>START</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>

@@ -47,8 +47,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterface><ipxact:name>mb</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
-  <ipxact:master/>
+
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
+
+
     <ipxact:portMaps>
 
 
@@ -94,7 +100,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
     </ipxact:portMaps>
- </ipxact:busInterface>
+
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+
+  </ipxact:busInterface>
 
 
 </ipxact:busInterfaces>

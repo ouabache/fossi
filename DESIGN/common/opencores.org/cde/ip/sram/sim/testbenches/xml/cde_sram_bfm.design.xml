@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<ipxact:design 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>sram</ipxact:name>
+<ipxact:version>bfm.design</ipxact:version>  
+
+
+
+
+
+
+
+
+
+ <ipxact:adHocConnections>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>clk</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="clk"/>
+
+     </ipxact:adHocConnection>
+
+     <ipxact:adHocConnection>
+       <ipxact:name>reset</ipxact:name>
+       <ipxact:externalPortReference ipxact:portRef="reset"/>
+     </ipxact:adHocConnection>
+
+
+
+
+
+ </ipxact:adHocConnections>
+
+<ipxact:componentInstances>
+
+
+
+
+<ipxact:componentInstance>
+ <ipxact:instanceName>DEF</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="sram" version="def" />
+</ipxact:componentInstance>
+
+
+
+<ipxact:componentInstance>
+ <ipxact:instanceName>BYTE</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="sram" version="byte" />
+</ipxact:componentInstance>
+
+
+
+
+<ipxact:componentInstance>
+ <ipxact:instanceName>DP</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="sram" version="dp" />
+</ipxact:componentInstance>
+
+
+
+
+<ipxact:componentInstance>
+ <ipxact:instanceName>WORD</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="sram" version="word" />
+</ipxact:componentInstance>
+
+
+
+
+
+
+
+
+
+
+
+
+</ipxact:componentInstances>
+
+
+
+
+</ipxact:design>

@@ -47,8 +47,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>debug</ipxact:name>
    <ipxact:busType vendor="opencores.org" library="Busdefs" name="or1k" version="dbg"/>
-   <ipxact:abstractionType vendor="opencores.org" library="or1k" name="or1200" version="dbg_rtl"/>
-  <ipxact:master/>
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+   <ipxact:abstractionRef vendor="opencores.org" library="or1k" name="or1200" version="dbg_rtl"/>
+
+
+
     <ipxact:portMaps>
 
         <ipxact:portMap>
@@ -155,7 +160,17 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
     </ipxact:portMaps>
- </ipxact:busInterface>
+
+   
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+
+  <ipxact:master/>
+
+  </ipxact:busInterface>
 
 
  </ipxact:busInterfaces>

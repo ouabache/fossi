@@ -50,12 +50,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
    <ipxact:fileSet>
       <ipxact:name>fs-syn</ipxact:name>
 
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/copyright.v</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType>
-        <ipxact:userFileType>include</ipxact:userFileType>
-      </ipxact:file>
 
 
       <ipxact:file>

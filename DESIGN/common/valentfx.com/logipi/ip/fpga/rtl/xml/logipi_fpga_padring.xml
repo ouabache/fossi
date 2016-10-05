@@ -114,8 +114,9 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>A_CLK</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-  <ipxact:master/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
     <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -124,6 +125,11 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 
@@ -131,8 +137,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>SW</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-  <ipxact:master/>
+  
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
     <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -142,6 +150,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 
@@ -149,8 +164,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>BTN</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-  <ipxact:master/>
+  
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
     <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -160,6 +177,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 
@@ -167,8 +191,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>LED</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-  <ipxact:master/>
+  
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
     <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -178,6 +204,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 
@@ -185,8 +218,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>PMOD1</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-  <ipxact:master/>
+  
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
     <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -196,6 +231,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 
@@ -204,8 +246,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>PMOD2</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-  <ipxact:master/>
+  
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
     <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -215,6 +259,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 
@@ -223,8 +274,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>PMOD3</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-  <ipxact:master/>
+  
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
     <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -234,6 +287,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 
@@ -242,8 +302,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>PMOD4</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-  <ipxact:master/>
+  
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
     <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -253,14 +315,23 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 
 
  <ipxact:busInterface><ipxact:name>SYS_SPI_SCK</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-  <ipxact:master/>
+  
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
     <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -269,13 +340,22 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 
   <ipxact:busInterface><ipxact:name>SYS_SPI_MISO</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-  <ipxact:master/>
+  
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
     <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -284,14 +364,23 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 
 
   <ipxact:busInterface><ipxact:name>SYS_SPI_MOSI</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-  <ipxact:master/>
+  
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
     <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -300,14 +389,23 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 
 
   <ipxact:busInterface><ipxact:name>RP_SPI_CE0N</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-  <ipxact:master/>
+  
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
     <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -316,6 +414,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 

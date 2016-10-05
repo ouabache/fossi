@@ -22,9 +22,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
  <ipxact:busInterface><ipxact:name>jtag</ipxact:name>
-  <ipxact:abstractionType vendor="opencores.org" library="cde" name="jtag" version="rpc_classic_rtl"/>
-  <ipxact:slave/>
-    <ipxact:portMaps>
+ <ipxact:busType  vendor="opencores.org" library="cde" name="jtag" version="rpc"/>
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+ <ipxact:abstractionRef vendor="opencores.org" library="cde" name="jtag" version="rpc_classic_rtl"/>
+   <ipxact:portMaps>
 
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>test_logic_reset</ipxact:name></ipxact:logicalPort>
@@ -71,6 +75,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
     </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+
+  <ipxact:slave/>
+ 
  </ipxact:busInterface>
 
 </ipxact:busInterfaces>
@@ -287,6 +299,62 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vector><ipxact:left>BITS-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
+
+
+<ipxact:port><ipxact:name>test_logic_reset</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+
+
+<ipxact:port><ipxact:name>capture_dr</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+
+
+<ipxact:port><ipxact:name>shift_dr</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>update_dr_clk</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>tdi</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>tdo</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction>
+<ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>select</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>shiftcapture_dr</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
+</ipxact:port>
 
 
 

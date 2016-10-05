@@ -45,55 +45,76 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>slave_clk</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="clock" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
-  <ipxact:slave/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
+
     <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>clk</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>clk</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
     </ipxact:portMaps>
+
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+  <ipxact:slave/>
+
  </ipxact:busInterface>
 
 
  <ipxact:busInterface><ipxact:name>slave_reset</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
-  <ipxact:slave/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
+
     <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>reset</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>reset</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
     </ipxact:portMaps>
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+  <ipxact:slave/>
+
  </ipxact:busInterface>
 
 
  <ipxact:busInterface><ipxact:name>master_enable</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="enable" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="enable" version="rtl"/>
-  <ipxact:master/>
+
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="enable" version="rtl"/>
     <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>enable</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>enable</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
     </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:master/>
  </ipxact:busInterface>
 
 
  <ipxact:busInterface><ipxact:name>cpu</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
-  <ipxact:slave>
-  <ipxact:memoryMapRef ipxact:memoryMapRef="cpu"/>
-  <ipxact:bridge ipxact:masterRef="ext_mem"          ipxact:opaque="true"/>
-  <ipxact:bridge ipxact:masterRef="io_reg"           ipxact:opaque="true"/>
-  <ipxact:bridge ipxact:masterRef="data"             ipxact:opaque="true"/>
-  <ipxact:bridge ipxact:masterRef="prog_rom_mem"     ipxact:opaque="true"/>
-  <ipxact:bridge ipxact:masterRef="sh_prog_rom_mem"  ipxact:opaque="true"/>
-  </ipxact:slave>
 
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
     <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>addr</ipxact:name></ipxact:logicalPort>
@@ -135,15 +156,31 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
     </ipxact:portMaps>
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+  <ipxact:slave>
+  <ipxact:memoryMapRef ipxact:memoryMapRef="cpu"/>
+  <ipxact:bridge ipxact:masterRef="ext_mem"          ipxact:opaque="true"/>
+  <ipxact:bridge ipxact:masterRef="io_reg"           ipxact:opaque="true"/>
+  <ipxact:bridge ipxact:masterRef="data"             ipxact:opaque="true"/>
+  <ipxact:bridge ipxact:masterRef="prog_rom_mem"     ipxact:opaque="true"/>
+  <ipxact:bridge ipxact:masterRef="sh_prog_rom_mem"  ipxact:opaque="true"/>
+  </ipxact:slave>
+
+
  </ipxact:busInterface>
 
 
 
  <ipxact:busInterface><ipxact:name>mem</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
-  <ipxact:master> <ipxact:addressSpaceRef ipxact:addressSpaceRef= "mem" /></ipxact:master>
-
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
     <ipxact:portMaps>
 
@@ -197,6 +234,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+  <ipxact:master> <ipxact:addressSpaceRef ipxact:addressSpaceRef= "mem" /></ipxact:master>
+
+
+
  </ipxact:busInterface>
 
 
@@ -205,9 +252,9 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>data</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
-
-  <ipxact:master> <ipxact:addressSpaceRef ipxact:addressSpaceRef= "data" />        </ipxact:master>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
     <ipxact:portMaps>
 
@@ -261,6 +308,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+
+  <ipxact:master> <ipxact:addressSpaceRef ipxact:addressSpaceRef= "data" />        </ipxact:master>
+
+
  </ipxact:busInterface>
 
 
@@ -268,9 +325,9 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>io_reg</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
-
-  <ipxact:master> <ipxact:addressSpaceRef ipxact:addressSpaceRef= "io_reg" />        </ipxact:master>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
     <ipxact:portMaps>
 
@@ -323,6 +380,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+
+      </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+  <ipxact:master> <ipxact:addressSpaceRef ipxact:addressSpaceRef= "io_reg" />        </ipxact:master>
+
+
  </ipxact:busInterface>
 
 
@@ -330,10 +396,9 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>ext_mem</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
-
-  <ipxact:master> <ipxact:addressSpaceRef ipxact:addressSpaceRef= "ext_mem" />        </ipxact:master>
-
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
 
     <ipxact:portMaps>
 
@@ -385,7 +450,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         </ipxact:physicalPort>
       </ipxact:portMap>
 
-    </ipxact:portMaps>
+    </ipxact:portMaps>  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+
+  <ipxact:master> <ipxact:addressSpaceRef ipxact:addressSpaceRef= "ext_mem" />        </ipxact:master>
+
+
+
  </ipxact:busInterface>
 
 
@@ -395,12 +469,11 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>prog_rom_mem</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
-
-
-  <ipxact:master/>
-    <ipxact:portMaps>
-
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
+  
+      <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>addr</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>prog_rom_mem_addr</ipxact:name>
@@ -443,6 +516,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+
+
+    </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+    
+  <ipxact:master/>
+  
+
+
  </ipxact:busInterface>
 
 
@@ -451,8 +534,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>sh_prog_rom_mem</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
-  <ipxact:master/>
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
+
     <ipxact:portMaps>
 
       <ipxact:portMap>
@@ -497,6 +584,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       </ipxact:portMap>
 
     </ipxact:portMaps>
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 

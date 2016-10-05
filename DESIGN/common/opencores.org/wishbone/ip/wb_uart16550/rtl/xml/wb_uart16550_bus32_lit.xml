@@ -43,30 +43,38 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterfaces>
 
-
  <ipxact:busInterface><ipxact:name>wb_clk</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="clock" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
-  <ipxact:slave/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+	<ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
     <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>clk</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>wb_clk_i</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
     </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
  </ipxact:busInterface>
 
 
  <ipxact:busInterface><ipxact:name>wb_reset</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
-  <ipxact:slave/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
     <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>reset</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>wb_rst_i</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
-    </ipxact:portMaps>
+    </ipxact:portMaps>	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
  </ipxact:busInterface>
 
 
@@ -74,10 +82,9 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterface><ipxact:name>wb</ipxact:name>
    <ipxact:busType vendor="opencores.org" library="wishbone" name="wishbone" version="def"/>
-   <ipxact:abstractionType vendor="opencores.org" library="wishbone" name="wishbone" version="rtl"/>
-   <ipxact:endianness>little</ipxact:endianness>
-   <ipxact:bitsInLau>8</ipxact:bitsInLau>
-   <ipxact:slave><ipxact:memoryMapRef ipxact:memoryMapRef="wb"/>  </ipxact:slave>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+   <ipxact:abstractionRef vendor="opencores.org" library="wishbone" name="wishbone" version="rtl"/>
      <ipxact:portMaps>
 
         <ipxact:portMap>
@@ -150,10 +157,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
        </ipxact:portMap>
 
 
-
-
-
      </ipxact:portMaps>
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+   <ipxact:endianness>little</ipxact:endianness>
+   <ipxact:bitsInLau>8</ipxact:bitsInLau>
+   <ipxact:slave><ipxact:memoryMapRef ipxact:memoryMapRef="wb"/>  </ipxact:slave>
+
 
 </ipxact:busInterface>
 

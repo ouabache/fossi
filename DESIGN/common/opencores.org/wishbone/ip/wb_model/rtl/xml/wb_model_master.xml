@@ -46,8 +46,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busInterface><ipxact:name>wb</ipxact:name>
    <ipxact:busType vendor="opencores.org" library="wishbone" name="wishbone" version="def"/>
-   <ipxact:abstractionType vendor="opencores.org" library="wishbone" name="wishbone" version="rtl"/>
-   <ipxact:master/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+   <ipxact:abstractionRef vendor="opencores.org" library="wishbone" name="wishbone" version="rtl"/>
+
      <ipxact:portMaps>
 
         <ipxact:portMap>
@@ -124,6 +126,11 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
      </ipxact:portMaps>
+
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+   <ipxact:master/>
 
 </ipxact:busInterface>
 

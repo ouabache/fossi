@@ -356,10 +356,10 @@ foreach my $bus_iface ($spirit_component_file->findnodes("//ipxact:component/ipx
          foreach my $bus_iface ($spirit_component_file->findnodes("//ipxact:component/ipxact:busInterfaces/ipxact:busInterface/ipxact:${seek_type}")) 
             {
             my($mmm_cname)         = $bus_iface->findnodes('../ipxact:name/text()')->to_literal ;
-            my($mmm_vendor)        = $bus_iface->findnodes('../ipxact:abstractionType/@vendor')->to_literal ;
-            my($mmm_library)       = $bus_iface->findnodes('../ipxact:abstractionType/@library')->to_literal ;
-            my($mmm_name)          = $bus_iface->findnodes('../ipxact:abstractionType/@name')->to_literal ;
-            my($mmm_version)       = $bus_iface->findnodes('../ipxact:abstractionType/@version')->to_literal ;
+            my($mmm_vendor)        = $bus_iface->findnodes('../ipxact:abstractionTypes/ipxact:abstractionType/ipxact:abstractionRef/@vendor')->to_literal ;
+            my($mmm_library)       = $bus_iface->findnodes('../ipxact:abstractionTypes/ipxact:abstractionType/ipxact:abstractionRef/@library')->to_literal ;
+            my($mmm_name)          = $bus_iface->findnodes('../ipxact:abstractionTypes/ipxact:abstractionType/ipxact:abstractionRef/@name')->to_literal ;
+            my($mmm_version)       = $bus_iface->findnodes('../ipxact:abstractionTypes/ipxact:abstractionType/ipxact:abstractionRef/@version')->to_literal ;
    
 
 
@@ -368,10 +368,10 @@ foreach my $bus_iface ($spirit_component_file->findnodes("//ipxact:component/ipx
               $busses_db->db_put( "AbsDef.${mmm_cname}.${seek_type}","${mmm_vendor}:${mmm_library}:${mmm_name}:${mmm_version}"  );
               }
 
-            foreach my $port_face ($spirit_component_file->findnodes('//ipxact:component/ipxact:busInterfaces/ipxact:busInterface/ipxact:portMaps/ipxact:portMap/ipxact:logicalPort')) 
+            foreach my $port_face ($spirit_component_file->findnodes('//ipxact:component/ipxact:busInterfaces/ipxact:busInterface/ipxact:abstractionTypes/ipxact:abstractionType/ipxact:portMaps/ipxact:portMap/ipxact:logicalPort')) 
                {
                my($rrr_log_name)      = $port_face->findnodes('./ipxact:name/text()')->to_literal ;
-               my($rrr_int_name)      = $port_face->findnodes('../../../ipxact:name/text()')->to_literal ;
+               my($rrr_int_name)      = $port_face->findnodes('../../../../../ipxact:name/text()')->to_literal ;
                my($rrr_phy_name)      = $port_face->findnodes('../ipxact:physicalPort/ipxact:name/text()')->to_literal ;
                my($rrr_type_name)     = $port_face->findnodes('../ipxact:physicalPort/ipxact:wireTypeDefs/ipxact:wireTypeDef/ipxact:typeName/text()')->to_literal ;
                my($rrr_left_value)    = $port_face->findnodes('../ipxact:physicalPort/ipxact:wire/ipxact:vector/ipxact:left/text()')->to_literal ;

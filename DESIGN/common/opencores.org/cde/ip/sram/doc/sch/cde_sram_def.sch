@@ -29,6 +29,11 @@ C 1800 2300 1 0 0 in_port.sym
 T 1800 2300 5 10 1 1 0 6 1 1 
 refdes=clk
 }
+C 1800 2700 1 0 0 in_port.sym  
+{
+T 1800 2700 5 10 1 1 0 6 1 1 
+refdes=be
+}
 C 4700 300  1 0  0 out_port_vector.sym
 {
 T 5700 300 5  10 1 1 0 0 1 1 

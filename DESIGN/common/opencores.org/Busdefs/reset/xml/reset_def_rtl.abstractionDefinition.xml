@@ -42,8 +42,23 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
   <ipxact:ports>
+
+
     <ipxact:port>
       <ipxact:logicalName>reset</ipxact:logicalName>
+      <ipxact:wire>
+        <ipxact:onMaster>
+          <ipxact:width>1</ipxact:width>
+          <ipxact:direction>out</ipxact:direction>
+        </ipxact:onMaster>
+        <ipxact:onSlave>
+          <ipxact:width>1</ipxact:width>
+          <ipxact:direction>in</ipxact:direction>
+        </ipxact:onSlave>
+      </ipxact:wire>
+    </ipxact:port>
+    <ipxact:port>
+      <ipxact:logicalName>reset_n</ipxact:logicalName>
       <ipxact:wire>
         <ipxact:onMaster>
           <ipxact:width>1</ipxact:width>

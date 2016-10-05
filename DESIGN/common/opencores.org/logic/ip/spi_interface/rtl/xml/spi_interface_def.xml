@@ -44,27 +44,43 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>slave_clk</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="clock" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
-  <ipxact:slave/>
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
     <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>clk</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>clk</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
     </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+  <ipxact:slave/>
  </ipxact:busInterface>
 
 
+ 
  <ipxact:busInterface><ipxact:name>slave_reset</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
-  <ipxact:slave/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
     <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>reset</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>reset</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
     </ipxact:portMaps>
+
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+  <ipxact:slave/>
+
  </ipxact:busInterface>
 
 
@@ -72,9 +88,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>spi</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="spi" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="spi" version="rtl"/>
-  <ipxact:slave/>
-    <ipxact:portMaps>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="spi" version="rtl"/>
+  <ipxact:portMaps>
 
 
       <ipxact:portMap>
@@ -103,6 +120,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
     </ipxact:portMaps>
+  
+        </ipxact:abstractionType>
+  </ipxact:abstractionTypes>
+  
+
+  <ipxact:slave/>
+
+
+
  </ipxact:busInterface>
 
 

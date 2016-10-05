@@ -47,14 +47,18 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>cpu0_clk</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="clock" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
-  <ipxact:slave/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
     <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>clk</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>cpu0_clk_i</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
     </ipxact:portMaps>
+      </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
  </ipxact:busInterface>
 
 
@@ -62,22 +66,29 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>cpu0_reset</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
-  <ipxact:master/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionDef vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
     <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>reset</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>cpu0_rst_o</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
     </ipxact:portMaps>
+      </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:master/>
  </ipxact:busInterface>
 
 
 
 
-<ipxact:busInterface><ipxact:name>cpu0_debug</ipxact:name>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="or1k" version="dbg_rtl"/>
-  <ipxact:master/>
+ <ipxact:busInterface><ipxact:name>cpu0_debug</ipxact:name>
+   <ipxact:busType vendor="opencores.org" library="Busdefs" name="or1k" version="def"/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+	<ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="or1k" version="dbg_rtl"/>
+	
     <ipxact:portMaps>
 
         <ipxact:portMap>
@@ -141,6 +152,11 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
     </ipxact:portMaps>
+
+	
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:master/>
  </ipxact:busInterface>
 
 

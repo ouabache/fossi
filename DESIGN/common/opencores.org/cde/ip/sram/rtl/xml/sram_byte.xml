@@ -16,6 +16,70 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+<ipxact:busInterfaces>
+
+ <ipxact:busInterface><ipxact:name>slave_clk</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="clock" version="def"/>
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
+    <ipxact:portMaps>
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>clk</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>clk</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+    </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
+ </ipxact:busInterface>
+
+
+ <ipxact:busInterface><ipxact:name>mem</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="micro_bus" version="def"/>
+
+
+
+
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="micro_bus" version="rtl"/>
+
+    <ipxact:portMaps>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>cs</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>cs</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>wr</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>wr</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>rd</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>rd</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+    </ipxact:portMaps>
+  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+
+  <ipxact:memoryMapRef ipxact:memoryMapRef="mem"/>
+  <ipxact:slave/>
+
+ </ipxact:busInterface>
+
+</ipxact:busInterfaces>
+
+
 <ipxact:componentGenerators>
 
 

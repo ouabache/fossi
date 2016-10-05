@@ -20,33 +20,40 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:busInterfaces>
 
  <ipxact:busInterface><ipxact:name>pad_ring</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-  <ipxact:master/>
-    <ipxact:portMaps>
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>PAD</ipxact:name>
-        </ipxact:physicalPort>
-      </ipxact:portMap>
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
 
-    </ipxact:portMaps>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+          <ipxact:portMaps>
+            <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>PAD</ipxact:name>        </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:master/>
+
  </ipxact:busInterface>
 
 
 
  <ipxact:busInterface><ipxact:name>pad</ipxact:name>
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionType vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
-  <ipxact:slave/>
-    <ipxact:portMaps>
-      <ipxact:portMap>
-        <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>pad_in</ipxact:name>
-        </ipxact:physicalPort>
-      </ipxact:portMap>
 
-    </ipxact:portMaps>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+          <ipxact:portMaps>
+            <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>pad_in</ipxact:name>        </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
  </ipxact:busInterface>
 
 

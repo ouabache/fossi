@@ -25,6 +25,7 @@ lint:
 	echo "################################################################################"; \
 	echo; \
 	verilator -Wall --cc  -f  ../../testbenches/filelists/$(comp).lint   --exe ../../../../../../../tools/lint/sim_main2.cpp -top-module TB -Wno-PINNOCONNECT -Wno-DECLFILENAME  -Wno-UNDRIVEN   -Wno-UNUSED  -Wno-PINMISSING  -Wno-LITENDIAN  -Wno-PINCONNECTEMPTY   2> lint.log;\
+	yosys  -S  -s  ../../testbenches/filelists/$(comp).yosys -l yosys.log -o yosys.v  ;\
 	echo "################################################################################"; \
 
 
