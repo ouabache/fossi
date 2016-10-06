@@ -46,99 +46,99 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
    <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_model" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="clk"/>
+      <ipxact:internalPortReference componentRef="uart_model" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="clk"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_model" ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="reset"/>
+      <ipxact:internalPortReference componentRef="uart_model" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="reset"/>
     </ipxact:adHocConnection>
 
 
    <ipxact:adHocConnection>
       <ipxact:name>txd_pad_out</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_model" ipxact:portRef="txd_in"/>
+      <ipxact:internalPortReference componentRef="uart_model" portRef="txd_in"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>rxd_pad_in</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_model" ipxact:portRef="rxd_out"/>
+      <ipxact:internalPortReference componentRef="uart_model" portRef="rxd_out"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>parity_enable</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="parity_enable"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="parity_enable"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>txd_parity</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="txd_parity"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="txd_parity"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>txd_force_parity</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="txd_force_parity"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="txd_force_parity"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>txd_data_in</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="txd_data_in"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="txd_data_in"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>txd_buffer_empty</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="txd_buffer_empty"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="txd_buffer_empty"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>txd_load</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="txd_load"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="txd_load"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>txd_break</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="txd_break"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="txd_break"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>rxd_parity</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="rxd_parity"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="rxd_parity"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>rxd_force_parity</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="rxd_force_parity"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="rxd_force_parity"/>
     </ipxact:adHocConnection>
 
 
    <ipxact:adHocConnection>
       <ipxact:name>rxd_data_out</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="rxd_data_out"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="rxd_data_out"/>
     </ipxact:adHocConnection>
 
 
    <ipxact:adHocConnection>
       <ipxact:name>rxd_data_avail</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="rxd_data_avail"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="rxd_data_avail"/>
     </ipxact:adHocConnection>
 
 
    <ipxact:adHocConnection>
       <ipxact:name>rxd_data_avail_stb</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="rxd_data_avail_stb"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="rxd_data_avail_stb"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>rxd_stop_error</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="rxd_stop_error"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="rxd_stop_error"/>
     </ipxact:adHocConnection>
 
 
    <ipxact:adHocConnection>
       <ipxact:name>rxd_parity_error</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="uart_host" ipxact:portRef="rxd_parity_error"/>
+      <ipxact:internalPortReference componentRef="uart_host" portRef="rxd_parity_error"/>
     </ipxact:adHocConnection>
 
 
@@ -164,8 +164,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>uart_model</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="uart_model" version="def" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="CLKCNT">UART_MODEL_CLKCNT</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SIZE">UART_MODEL_SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CLKCNT">UART_MODEL_CLKCNT</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SIZE">UART_MODEL_SIZE</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

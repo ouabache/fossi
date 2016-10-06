@@ -78,32 +78,32 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_clk_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="device_rx_data_tpb" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="slave_clk_clk"/>
+      <ipxact:internalPortReference componentRef="device_rx_data_tpb" portRef="clk"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>rx_data_exp</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="rx_data_exp"   ipxact:left="31"   ipxact:right="0"     />
-      <ipxact:internalPortReference ipxact:componentRef="device_rx_data_tpb" ipxact:portRef="expected_value"/>
+      <ipxact:externalPortReference portRef="rx_data_exp"   left="31"   right="0"     />
+      <ipxact:internalPortReference componentRef="device_rx_data_tpb" portRef="expected_value"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>mask_rx_data</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="mask_rx_data"   ipxact:left="31"   ipxact:right="0"     />
-      <ipxact:internalPortReference ipxact:componentRef="device_rx_data_tpb" ipxact:portRef="mask"/>
+      <ipxact:externalPortReference portRef="mask_rx_data"   left="31"   right="0"     />
+      <ipxact:internalPortReference componentRef="device_rx_data_tpb" portRef="mask"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>RX_Data</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="prb_rx_data"   ipxact:left="31"   ipxact:right="0"     />
-      <ipxact:internalPortReference ipxact:componentRef="device_rx_data_tpb" ipxact:portRef="signal"/>
+      <ipxact:externalPortReference portRef="prb_rx_data"   left="31"   right="0"     />
+      <ipxact:internalPortReference componentRef="device_rx_data_tpb" portRef="signal"/>
     </ipxact:adHocConnection>
 
 
@@ -122,8 +122,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>device_rx_data_tpb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="in" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="WIDTH">32</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="MESG">"spi data receive  Error"</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">32</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="MESG">"spi data receive  Error"</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

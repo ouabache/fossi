@@ -186,156 +186,156 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_clk_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="serial_rcvr" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="divider" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="slave_clk_clk"/>
+      <ipxact:internalPortReference componentRef="serial_rcvr" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="divider" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="fifo" portRef="clk"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_reset_reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="serial_rcvr" ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="reset"/>
+      <ipxact:externalPortReference portRef="slave_reset_reset"/>
+      <ipxact:internalPortReference componentRef="serial_rcvr" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="fifo" portRef="reset"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>divider_reset</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="divider" ipxact:portRef="reset"/>
+      <ipxact:internalPortReference componentRef="divider" portRef="reset"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>edge_enable</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="edge_enable"/>
-      <ipxact:internalPortReference ipxact:componentRef="divider" ipxact:portRef="enable"/>
+      <ipxact:externalPortReference portRef="edge_enable"/>
+      <ipxact:internalPortReference componentRef="divider" portRef="enable"/>
     </ipxact:adHocConnection>
 
-    <ipxact:adHocConnection  ipxact:tiedValue="4'b1111" >
+    <ipxact:adHocConnection  tiedValue="4'b1111" >
  
-      <ipxact:internalPortReference ipxact:componentRef="divider" ipxact:portRef="divider_in"/>
+      <ipxact:internalPortReference componentRef="divider" portRef="divider_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>baud_enable</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="serial_rcvr" ipxact:portRef="edge_enable"/>
-      <ipxact:internalPortReference ipxact:componentRef="divider" ipxact:portRef="divider_out"/>
+      <ipxact:internalPortReference componentRef="serial_rcvr" portRef="edge_enable"/>
+      <ipxact:internalPortReference componentRef="divider" portRef="divider_out"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>parity_enable</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="parity_enable"/>
-      <ipxact:internalPortReference ipxact:componentRef="serial_rcvr" ipxact:portRef="parity_enable"/>
+      <ipxact:externalPortReference portRef="parity_enable"/>
+      <ipxact:internalPortReference componentRef="serial_rcvr" portRef="parity_enable"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>parity_type</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="parity_type"/>
-      <ipxact:internalPortReference ipxact:componentRef="serial_rcvr" ipxact:portRef="parity_type"/>
+      <ipxact:externalPortReference portRef="parity_type"/>
+      <ipxact:internalPortReference componentRef="serial_rcvr" portRef="parity_type"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>parity_force</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="parity_force"/>
-      <ipxact:internalPortReference ipxact:componentRef="serial_rcvr" ipxact:portRef="parity_force"/>
+      <ipxact:externalPortReference portRef="parity_force"/>
+      <ipxact:internalPortReference componentRef="serial_rcvr" portRef="parity_force"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>stop_cnt</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="stop_cnt"/>
-      <ipxact:internalPortReference ipxact:componentRef="serial_rcvr" ipxact:portRef="stop_cnt"/>
+      <ipxact:externalPortReference portRef="stop_cnt"/>
+      <ipxact:internalPortReference componentRef="serial_rcvr" portRef="stop_cnt"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>last_cnt</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="last_cnt"/>
-      <ipxact:internalPortReference ipxact:componentRef="serial_rcvr" ipxact:portRef="last_cnt"/>
+      <ipxact:externalPortReference portRef="last_cnt"/>
+      <ipxact:internalPortReference componentRef="serial_rcvr" portRef="last_cnt"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="pad_in"/>
-      <ipxact:internalPortReference ipxact:componentRef="serial_rcvr" ipxact:portRef="ser_in"/>
+      <ipxact:externalPortReference portRef="pad_in"/>
+      <ipxact:internalPortReference componentRef="serial_rcvr" portRef="ser_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>next_shift_buffer</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="next_shift_buffer"/>
-      <ipxact:internalPortReference ipxact:componentRef="serial_rcvr" ipxact:portRef="shift_buffer"/>
+      <ipxact:externalPortReference portRef="next_shift_buffer"/>
+      <ipxact:internalPortReference componentRef="serial_rcvr" portRef="shift_buffer"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>next_parity_calc</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="next_parity_calc"/>
-      <ipxact:internalPortReference ipxact:componentRef="serial_rcvr" ipxact:portRef="parity_calc"/>
+      <ipxact:externalPortReference portRef="next_parity_calc"/>
+      <ipxact:internalPortReference componentRef="serial_rcvr" portRef="parity_calc"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>next_parity_samp</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="next_parity_samp"/>
-      <ipxact:internalPortReference ipxact:componentRef="serial_rcvr" ipxact:portRef="parity_samp"/>
+      <ipxact:externalPortReference portRef="next_parity_samp"/>
+      <ipxact:internalPortReference componentRef="serial_rcvr" portRef="parity_samp"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>next_frame_error</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="serial_rcvr" ipxact:portRef="frame_err"/>
+      <ipxact:internalPortReference componentRef="serial_rcvr" portRef="frame_err"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>last_cnt</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="last_cnt"/>
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="push"/>
+      <ipxact:externalPortReference portRef="last_cnt"/>
+      <ipxact:internalPortReference componentRef="fifo" portRef="push"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>fifo_din</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="din"/>
+      <ipxact:internalPortReference componentRef="fifo" portRef="din"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>rcv_stb</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="rcv_stb"/>
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="pop"/>
+      <ipxact:externalPortReference portRef="rcv_stb"/>
+      <ipxact:internalPortReference componentRef="fifo" portRef="pop"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>fifo_dout</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="dout"/>
+      <ipxact:internalPortReference componentRef="fifo" portRef="dout"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>fifo_full</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="fifo_full"/>
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="full"/>
+      <ipxact:externalPortReference portRef="fifo_full"/>
+      <ipxact:internalPortReference componentRef="fifo" portRef="full"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>fifo_empty</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="fifo_empty"/>
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="empty"/>
+      <ipxact:externalPortReference portRef="fifo_empty"/>
+      <ipxact:internalPortReference componentRef="fifo" portRef="empty"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>fifo_over_run</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="fifo_over_run"/>
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="over_run"/>
+      <ipxact:externalPortReference portRef="fifo_over_run"/>
+      <ipxact:internalPortReference componentRef="fifo" portRef="over_run"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>fifo_under_run</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="fifo_under_run"/>
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="under_run"/>
+      <ipxact:externalPortReference portRef="fifo_under_run"/>
+      <ipxact:internalPortReference componentRef="fifo" portRef="under_run"/>
     </ipxact:adHocConnection>
 
 
@@ -349,19 +349,19 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>divider</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="divider" version="def" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="SIZE">4</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SAMPLE">8</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="RESET">0</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SIZE">4</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SAMPLE">8</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="RESET">0</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
 <ipxact:componentInstance>
 <ipxact:instanceName>serial_rcvr</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="serial" version="rcvr" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="WIDTH">WIDTH</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SIZE">SIZE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="BREAK">1</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="STOP_VALUE">STOP_VALUE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SIZE">SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="BREAK">1</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="STOP_VALUE">STOP_VALUE</ipxact:configurableElementValue>
  </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -369,9 +369,9 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>fifo</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="fifo" version="def" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="WIDTH">WIDTH+2</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SIZE">RX_FIFO_SIZE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="WORDS">RX_FIFO_WORDS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">WIDTH+2</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SIZE">RX_FIFO_SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WORDS">RX_FIFO_WORDS</ipxact:configurableElementValue>
  </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

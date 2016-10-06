@@ -39,44 +39,44 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="clk"/>
+      <ipxact:internalPortReference componentRef="fifo" portRef="clk"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>push</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="push"/>
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="wr"/>
+      <ipxact:externalPortReference portRef="push"/>
+      <ipxact:internalPortReference componentRef="fifo" portRef="wr"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>push_pointer</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="push_pointer" ipxact:left="SIZE-1"  ipxact:right="0"  />
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="waddr"/>
+      <ipxact:externalPortReference portRef="push_pointer" left="SIZE-1"  right="0"  />
+      <ipxact:internalPortReference componentRef="fifo" portRef="waddr"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>pop_pointer</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="pop_pointer" ipxact:left="SIZE-1"  ipxact:right="0"  />
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="raddr"/>
+      <ipxact:externalPortReference portRef="pop_pointer" left="SIZE-1"  right="0"  />
+      <ipxact:internalPortReference componentRef="fifo" portRef="raddr"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>din</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="din" ipxact:left="WIDTH-1"  ipxact:right="0"  />
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="wdata"/>
+      <ipxact:externalPortReference portRef="din" left="WIDTH-1"  right="0"  />
+      <ipxact:internalPortReference componentRef="fifo" portRef="wdata"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>dout</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="dout" ipxact:left="WIDTH-1"  ipxact:right="0"  />
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="rdata"/>
+      <ipxact:externalPortReference portRef="dout" left="WIDTH-1"  right="0"  />
+      <ipxact:internalPortReference componentRef="fifo" portRef="rdata"/>
     </ipxact:adHocConnection>
 
-    <ipxact:adHocConnection ipxact:tiedValue="1'b1" >
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="cs"/>
-      <ipxact:internalPortReference ipxact:componentRef="fifo" ipxact:portRef="rd"/>
+    <ipxact:adHocConnection tiedValue="1'b1" >
+      <ipxact:internalPortReference componentRef="fifo" portRef="cs"/>
+      <ipxact:internalPortReference componentRef="fifo" portRef="rd"/>
     </ipxact:adHocConnection>
 
 </ipxact:adHocConnections>
@@ -88,10 +88,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>fifo</ipxact:instanceName> 
 <ipxact:componentRef vendor="opencores.org" library="cde" name="sram" version="dp" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">WIDTH</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="ADDR">SIZE</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="WORDS">WORDS</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="WRITETHRU">WRITETHRU</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">WIDTH</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="ADDR">SIZE</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WORDS">WORDS</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WRITETHRU">WRITETHRU</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 
 </ipxact:componentInstance>

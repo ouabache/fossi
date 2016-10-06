@@ -20,104 +20,104 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>A_CLK</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="A_CLK" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="A_CLK" />
+<ipxact:externalPortReference portRef="A_CLK" />
+<ipxact:internalPortReference componentRef="dut" portRef="A_CLK" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>BTN</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="BTN" ipxact:left="1" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="BTN" />
+<ipxact:externalPortReference portRef="BTN" left="1" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="BTN" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>JTAG_TCK</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="JTAG_TCK" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="JTAG_TCK" />
+<ipxact:externalPortReference portRef="JTAG_TCK" />
+<ipxact:internalPortReference componentRef="dut" portRef="JTAG_TCK" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>JTAG_TDI</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="JTAG_TDI" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="JTAG_TDI" />
+<ipxact:externalPortReference portRef="JTAG_TDI" />
+<ipxact:internalPortReference componentRef="dut" portRef="JTAG_TDI" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>JTAG_TDO</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="JTAG_TDO" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="JTAG_TDO" />
+<ipxact:externalPortReference portRef="JTAG_TDO" />
+<ipxact:internalPortReference componentRef="dut" portRef="JTAG_TDO" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>JTAG_TMS</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="JTAG_TMS" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="JTAG_TMS" />
+<ipxact:externalPortReference portRef="JTAG_TMS" />
+<ipxact:internalPortReference componentRef="dut" portRef="JTAG_TMS" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>JTAG_TRESET_N</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="JTAG_TRESET_N" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="JTAG_TRESET_N" />
+<ipxact:externalPortReference portRef="JTAG_TRESET_N" />
+<ipxact:internalPortReference componentRef="dut" portRef="JTAG_TRESET_N" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>LED</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="LED" ipxact:left="1" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="LED" />
+<ipxact:externalPortReference portRef="LED" left="1" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="LED" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>PMOD1</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="PMOD1" ipxact:left="7" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="PMOD1" />
+<ipxact:externalPortReference portRef="PMOD1" left="7" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="PMOD1" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>PMOD2</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="PMOD2" ipxact:left="7" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="PMOD2" />
+<ipxact:externalPortReference portRef="PMOD2" left="7" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="PMOD2" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>PMOD3</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="PMOD3" ipxact:left="7" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="PMOD3" />
+<ipxact:externalPortReference portRef="PMOD3" left="7" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="PMOD3" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>PMOD4</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="PMOD4" ipxact:left="7" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="PMOD4" />
+<ipxact:externalPortReference portRef="PMOD4" left="7" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="PMOD4" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>RP_SPI_CE0N</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="RP_SPI_CE0N" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="RP_SPI_CE0N" />
+<ipxact:externalPortReference portRef="RP_SPI_CE0N" />
+<ipxact:internalPortReference componentRef="dut" portRef="RP_SPI_CE0N" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>SW</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="SW" ipxact:left="1" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="SW" />
+<ipxact:externalPortReference portRef="SW" left="1" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="SW" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>SYS_SPI_MISO</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="SYS_SPI_MISO" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="SYS_SPI_MISO" />
+<ipxact:externalPortReference portRef="SYS_SPI_MISO" />
+<ipxact:internalPortReference componentRef="dut" portRef="SYS_SPI_MISO" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>SYS_SPI_MOSI</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="SYS_SPI_MOSI" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="SYS_SPI_MOSI" />
+<ipxact:externalPortReference portRef="SYS_SPI_MOSI" />
+<ipxact:internalPortReference componentRef="dut" portRef="SYS_SPI_MOSI" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>SYS_SPI_SCK</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="SYS_SPI_SCK" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="SYS_SPI_SCK" />
+<ipxact:externalPortReference portRef="SYS_SPI_SCK" />
+<ipxact:internalPortReference componentRef="dut" portRef="SYS_SPI_SCK" />
 </ipxact:adHocConnection>
 
 
@@ -128,16 +128,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>dut</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="fpgas" name="logipi_T6502" version="default" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="CLOCK_FREQ">CLOCK_FREQ</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="CLOCK_PLL_DIV">CLOCK_PLL_DIV</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="CLOCK_PLL_MULT">CLOCK_PLL_MULT</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="CLOCK_PLL_SIZE">CLOCK_PLL_SIZE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="CLOCK_SRC">CLOCK_SRC</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="JTAG_USER1_RESET">JTAG_USER1_RESET</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="JTAG_USER1_WIDTH">JTAG_USER1_WIDTH</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="JTAG_USER2_RESET">JTAG_USER2_RESET</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="JTAG_USER2_WIDTH">JTAG_USER2_WIDTH</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="RESET_SENSE">RESET_SENSE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CLOCK_FREQ">CLOCK_FREQ</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CLOCK_PLL_DIV">CLOCK_PLL_DIV</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CLOCK_PLL_MULT">CLOCK_PLL_MULT</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CLOCK_PLL_SIZE">CLOCK_PLL_SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CLOCK_SRC">CLOCK_SRC</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="JTAG_USER1_RESET">JTAG_USER1_RESET</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="JTAG_USER1_WIDTH">JTAG_USER1_WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="JTAG_USER2_RESET">JTAG_USER2_RESET</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="JTAG_USER2_WIDTH">JTAG_USER2_WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="RESET_SENSE">RESET_SENSE</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 </ipxact:componentInstances>

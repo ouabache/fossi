@@ -519,7 +519,74 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+<ipxact:ports>
 
+
+<ipxact:port><ipxact:name>A_CLK</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+ <ipxact:port><ipxact:name>SW</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ 
+ <ipxact:port><ipxact:name>BTN</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ 
+ <ipxact:port><ipxact:name>LED</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ 
+ <ipxact:port><ipxact:name>PMOD1</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ 
+ <ipxact:port><ipxact:name>PMOD2</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ 
+ <ipxact:port><ipxact:name>PMOD3</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ 
+ <ipxact:port><ipxact:name>PMOD4</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ 
+ <ipxact:port><ipxact:name>SYS_SPI_SCK</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ 
+  <ipxact:port><ipxact:name>SYS_SPI_MISO</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+  </ipxact:port>
+  
+  <ipxact:port><ipxact:name>SYS_SPI_MOSI</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+  </ipxact:port>
+  
+  <ipxact:port><ipxact:name>RP_SPI_CE0N</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+  
+ </ipxact:ports>  
 
 </ipxact:model>
 

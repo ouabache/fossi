@@ -48,14 +48,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
   <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="wb_ram" ipxact:portRef="clk_i"/>
+      <ipxact:externalPortReference portRef="clk"/>
+      <ipxact:internalPortReference componentRef="wb_ram" portRef="clk_i"/>
     </ipxact:adHocConnection>
 
   <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="wb_ram" ipxact:portRef="rst_i"/>
+      <ipxact:externalPortReference portRef="reset"/>
+      <ipxact:internalPortReference componentRef="wb_ram" portRef="rst_i"/>
     </ipxact:adHocConnection>
 
 
@@ -70,7 +70,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>wb</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="wb_ram" ipxact:busRef="wb">
+      <ipxact:activeInterface componentRef="wb_ram" busRef="wb">
           <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>adr</ipxact:name>
@@ -162,14 +162,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>wb_ram</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="wishbone" name="wb_memory" version="def" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="wb_addr_width">wb_addr_width</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="dat_width">32</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="adr_width">14</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="mem_size">65536</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SRAM_MEM_0_FILE">"NONE"</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SRAM_MEM_1_FILE">"NONE"</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SRAM_MEM_2_FILE">"NONE"</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SRAM_MEM_3_FILE">"NONE"</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="wb_addr_width">wb_addr_width</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="dat_width">32</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="adr_width">14</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="mem_size">65536</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SRAM_MEM_0_FILE">"NONE"</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SRAM_MEM_1_FILE">"NONE"</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SRAM_MEM_2_FILE">"NONE"</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SRAM_MEM_3_FILE">"NONE"</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

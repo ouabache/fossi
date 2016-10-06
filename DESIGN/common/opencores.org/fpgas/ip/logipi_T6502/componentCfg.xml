@@ -137,18 +137,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <socgen:parameter><socgen:name>PERIOD</socgen:name><socgen:value>40</socgen:value></socgen:parameter>
     <socgen:parameter><socgen:name>TIMEOUT</socgen:name><socgen:value>100000</socgen:value></socgen:parameter>    
 </socgen:parameters>
-
-
 <socgen:code_coverage>
   <socgen:cover>
-  <socgen:name>core_def</socgen:name>  <socgen:componentInstance>TB.test.dut</socgen:componentInstance>
+  <socgen:name>logipi_T6502_core</socgen:name>  <socgen:componentInstance>TB.test.dut.core</socgen:componentInstance>
   </socgen:cover>
 </socgen:code_coverage>
 <socgen:tools>
   <socgen:tool>icarus</socgen:tool>
   <socgen:tool>coverage</socgen:tool>
 </socgen:tools>
-
 </socgen:testbench>
 
 

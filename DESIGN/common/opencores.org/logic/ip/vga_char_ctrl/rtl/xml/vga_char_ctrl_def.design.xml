@@ -124,42 +124,42 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
      <ipxact:adHocConnection>
        <ipxact:name>clk</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="slave_clk_clk"/>
-       <ipxact:internalPortReference ipxact:componentRef="char_ram"   ipxact:portRef="clk"/>
-       <ipxact:internalPortReference ipxact:componentRef="char_gen_rom"   ipxact:portRef="clk"/>
+       <ipxact:externalPortReference portRef="slave_clk_clk"/>
+       <ipxact:internalPortReference componentRef="char_ram"   portRef="clk"/>
+       <ipxact:internalPortReference componentRef="char_gen_rom"   portRef="clk"/>
      </ipxact:adHocConnection>
 
 
      <ipxact:adHocConnection>
        <ipxact:name>address</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="address" ipxact:left="12" ipxact:right="0"   />
-       <ipxact:internalPortReference ipxact:componentRef="char_ram"   ipxact:portRef="waddr"/>
+       <ipxact:externalPortReference portRef="address" left="12" right="0"   />
+       <ipxact:internalPortReference componentRef="char_ram"   portRef="waddr"/>
      </ipxact:adHocConnection>
 
      <ipxact:adHocConnection>
        <ipxact:name>char_read_addr</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="char_read_addr" ipxact:left="12" ipxact:right="0"  />
-       <ipxact:internalPortReference ipxact:componentRef="char_ram"   ipxact:portRef="raddr"/>
+       <ipxact:externalPortReference portRef="char_read_addr" left="12" right="0"  />
+       <ipxact:internalPortReference componentRef="char_ram"   portRef="raddr"/>
      </ipxact:adHocConnection>
 
 
      <ipxact:adHocConnection>
        <ipxact:name>ascii_load</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="ascii_load"/>
-       <ipxact:internalPortReference ipxact:componentRef="char_ram"   ipxact:portRef="wr"/>
+       <ipxact:externalPortReference portRef="ascii_load"/>
+       <ipxact:internalPortReference componentRef="char_ram"   portRef="wr"/>
      </ipxact:adHocConnection>
 
 
      <ipxact:adHocConnection>
        <ipxact:name>wdata</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="wdata" ipxact:left="7" ipxact:right="0"  />
-       <ipxact:internalPortReference ipxact:componentRef="char_ram"   ipxact:portRef="wdata"/>
+       <ipxact:externalPortReference portRef="wdata" left="7" right="0"  />
+       <ipxact:internalPortReference componentRef="char_ram"   portRef="wdata"/>
      </ipxact:adHocConnection>
 
      <ipxact:adHocConnection>
        <ipxact:name>ascii_code</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="ascii_code" ipxact:left="7" ipxact:right="0"  />
-       <ipxact:internalPortReference ipxact:componentRef="char_ram"   ipxact:portRef="rdata"/>
+       <ipxact:externalPortReference portRef="ascii_code" left="7" right="0"  />
+       <ipxact:internalPortReference componentRef="char_ram"   portRef="rdata"/>
      </ipxact:adHocConnection>
 
 
@@ -167,38 +167,38 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
      <ipxact:adHocConnection>
        <ipxact:name>char_gen_rom_data</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="char_gen_rom_data" ipxact:left="7" ipxact:right="0"  />
-       <ipxact:internalPortReference ipxact:componentRef="char_gen_rom"   ipxact:portRef="rdata"/>
+       <ipxact:externalPortReference portRef="char_gen_rom_data" left="7" right="0"  />
+       <ipxact:internalPortReference componentRef="char_gen_rom"   portRef="rdata"/>
      </ipxact:adHocConnection>
 
 
      <ipxact:adHocConnection>
        <ipxact:name>chargen_rom_address</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="chargen_rom_address" ipxact:left="10" ipxact:right="0"  />
-       <ipxact:internalPortReference ipxact:componentRef="char_gen_rom"   ipxact:portRef="raddr"/>
+       <ipxact:externalPortReference portRef="chargen_rom_address" left="10" right="0"  />
+       <ipxact:internalPortReference componentRef="char_gen_rom"   portRef="raddr"/>
      </ipxact:adHocConnection>
 
 
 
 
 
-     <ipxact:adHocConnection  ipxact:tiedValue="1'b1">
-       <ipxact:internalPortReference ipxact:componentRef="char_ram"       ipxact:portRef="cs"/>
-       <ipxact:internalPortReference ipxact:componentRef="char_ram"       ipxact:portRef="rd"/>
-       <ipxact:internalPortReference ipxact:componentRef="char_gen_rom"   ipxact:portRef="cs"/>
-       <ipxact:internalPortReference ipxact:componentRef="char_gen_rom"   ipxact:portRef="rd"/>
+     <ipxact:adHocConnection  tiedValue="1'b1">
+       <ipxact:internalPortReference componentRef="char_ram"       portRef="cs"/>
+       <ipxact:internalPortReference componentRef="char_ram"       portRef="rd"/>
+       <ipxact:internalPortReference componentRef="char_gen_rom"   portRef="cs"/>
+       <ipxact:internalPortReference componentRef="char_gen_rom"   portRef="rd"/>
      </ipxact:adHocConnection>
 
-     <ipxact:adHocConnection  ipxact:tiedValue="1'b0">
-        <ipxact:internalPortReference ipxact:componentRef="char_gen_rom"   ipxact:portRef="wr"/>
+     <ipxact:adHocConnection  tiedValue="1'b0">
+        <ipxact:internalPortReference componentRef="char_gen_rom"   portRef="wr"/>
      </ipxact:adHocConnection>
 
-     <ipxact:adHocConnection  ipxact:tiedValue="11'b00000000000">
-        <ipxact:internalPortReference ipxact:componentRef="char_gen_rom"   ipxact:portRef="waddr"/>
+     <ipxact:adHocConnection  tiedValue="11'b00000000000">
+        <ipxact:internalPortReference componentRef="char_gen_rom"   portRef="waddr"/>
      </ipxact:adHocConnection>
 
-     <ipxact:adHocConnection  ipxact:tiedValue="8'b00000000">
-        <ipxact:internalPortReference ipxact:componentRef="char_gen_rom"   ipxact:portRef="wdata"/>
+     <ipxact:adHocConnection  tiedValue="8'b00000000">
+        <ipxact:internalPortReference componentRef="char_gen_rom"   portRef="wdata"/>
      </ipxact:adHocConnection>
 
 
@@ -229,10 +229,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>char_ram</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="sram" version="dp" />
 
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="ADDR">CHAR_RAM_ADDR</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">CHAR_RAM_WIDTH</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="WORDS">CHAR_RAM_WORDS</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="WRITETHRU">CHAR_RAM_WRITETHRU</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="ADDR">CHAR_RAM_ADDR</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">CHAR_RAM_WIDTH</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WORDS">CHAR_RAM_WORDS</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WRITETHRU">CHAR_RAM_WRITETHRU</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
  </ipxact:componentInstance>
 
@@ -242,9 +242,9 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>char_gen_rom</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="sram" version="dp" />
 
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="ADDR">11</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">8</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="WORDS">1152</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="ADDR">11</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">8</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WORDS">1152</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
  </ipxact:componentInstance>
 

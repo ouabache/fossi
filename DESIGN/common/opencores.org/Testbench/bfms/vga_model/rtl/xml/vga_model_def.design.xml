@@ -99,39 +99,39 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_clk_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="device_rx_data_tpb" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="device_rx_parity_tpb" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="slave_clk_clk"/>
+      <ipxact:internalPortReference componentRef="device_rx_data_tpb" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="device_rx_parity_tpb" portRef="clk"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>exp_device_rx_data</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="exp_device_rx_data"   ipxact:left="7"   ipxact:right="0"     />
-      <ipxact:internalPortReference ipxact:componentRef="device_rx_data_tpb" ipxact:portRef="expected_value"/>
+      <ipxact:externalPortReference portRef="exp_device_rx_data"   left="7"   right="0"     />
+      <ipxact:internalPortReference componentRef="device_rx_data_tpb" portRef="expected_value"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>exp_device_rx_parity</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="exp_device_rx_parity"        />
-      <ipxact:internalPortReference ipxact:componentRef="device_rx_parity_tpb" ipxact:portRef="expected_value"/>
+      <ipxact:externalPortReference portRef="exp_device_rx_parity"        />
+      <ipxact:internalPortReference componentRef="device_rx_parity_tpb" portRef="expected_value"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>mask_device_rx_data</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="mask_device_rx_data"   ipxact:left="7"   ipxact:right="0"     />
-      <ipxact:internalPortReference ipxact:componentRef="device_rx_data_tpb" ipxact:portRef="mask"/>
+      <ipxact:externalPortReference portRef="mask_device_rx_data"   left="7"   right="0"     />
+      <ipxact:internalPortReference componentRef="device_rx_data_tpb" portRef="mask"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>mask_device_rx_parity</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="mask_device_rx_parity"        />
-      <ipxact:internalPortReference ipxact:componentRef="device_rx_parity_tpb" ipxact:portRef="mask"/>
+      <ipxact:externalPortReference portRef="mask_device_rx_parity"        />
+      <ipxact:internalPortReference componentRef="device_rx_parity_tpb" portRef="mask"/>
     </ipxact:adHocConnection>
 
 
@@ -140,15 +140,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>prb_device_rx_data</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="prb_device_rx_data"   ipxact:left="7"   ipxact:right="0"     />
-      <ipxact:internalPortReference ipxact:componentRef="device_rx_data_tpb" ipxact:portRef="signal"/>
+      <ipxact:externalPortReference portRef="prb_device_rx_data"   left="7"   right="0"     />
+      <ipxact:internalPortReference componentRef="device_rx_data_tpb" portRef="signal"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>prb_device_rx_parity</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="prb_device_rx_parity"        />
-      <ipxact:internalPortReference ipxact:componentRef="device_rx_parity_tpb" ipxact:portRef="signal"/>
+      <ipxact:externalPortReference portRef="prb_device_rx_parity"        />
+      <ipxact:internalPortReference componentRef="device_rx_parity_tpb" portRef="signal"/>
     </ipxact:adHocConnection>
 
 
@@ -166,8 +166,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>device_rx_data_tpb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="in" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="WIDTH">8</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="MESG">"ps2 data receive  Error"</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">8</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="MESG">"ps2 data receive  Error"</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -175,8 +175,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>device_rx_parity_tpb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="in" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="WIDTH">1</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="MESG">"ps2 parity receive  Error"</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">1</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="MESG">"ps2 parity receive  Error"</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

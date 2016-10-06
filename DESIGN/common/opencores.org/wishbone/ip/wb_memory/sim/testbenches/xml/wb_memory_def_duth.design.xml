@@ -20,62 +20,62 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>ack_o</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="ack_o" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ack_o" />
+<ipxact:externalPortReference portRef="ack_o" />
+<ipxact:internalPortReference componentRef="dut" portRef="ack_o" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>adr_i</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="adr_i" ipxact:left="wb_addr_width-1" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="adr_i" />
+<ipxact:externalPortReference portRef="adr_i" left="wb_addr_width-1" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="adr_i" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>clk_i</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="clk_i" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="clk_i" />
+<ipxact:externalPortReference portRef="clk_i" />
+<ipxact:internalPortReference componentRef="dut" portRef="clk_i" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>cyc_i</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="cyc_i" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="cyc_i" />
+<ipxact:externalPortReference portRef="cyc_i" />
+<ipxact:internalPortReference componentRef="dut" portRef="cyc_i" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>dat_i</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="dat_i" ipxact:left="wb_data_width-1" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="dat_i" />
+<ipxact:externalPortReference portRef="dat_i" left="wb_data_width-1" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="dat_i" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>dat_o</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="dat_o" ipxact:left="wb_data_width-1" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="dat_o" />
+<ipxact:externalPortReference portRef="dat_o" left="wb_data_width-1" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="dat_o" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rst_i</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rst_i" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rst_i" />
+<ipxact:externalPortReference portRef="rst_i" />
+<ipxact:internalPortReference componentRef="dut" portRef="rst_i" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>sel_i</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="sel_i" ipxact:left="wb_byte_lanes-1" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="sel_i" />
+<ipxact:externalPortReference portRef="sel_i" left="wb_byte_lanes-1" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="sel_i" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>stb_i</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="stb_i" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="stb_i" />
+<ipxact:externalPortReference portRef="stb_i" />
+<ipxact:internalPortReference componentRef="dut" portRef="stb_i" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>we_i</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="we_i" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="we_i" />
+<ipxact:externalPortReference portRef="we_i" />
+<ipxact:internalPortReference componentRef="dut" portRef="we_i" />
 </ipxact:adHocConnection>
 
 
@@ -86,16 +86,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>dut</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="wishbone" name="wb_memory" version="def" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="SRAM_MEM_0_FILE">SRAM_MEM_0_FILE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SRAM_MEM_1_FILE">SRAM_MEM_1_FILE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SRAM_MEM_2_FILE">SRAM_MEM_2_FILE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SRAM_MEM_3_FILE">SRAM_MEM_3_FILE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="adr_width">adr_width</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="dat_width">dat_width</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="mem_size">mem_size</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="wb_addr_width">wb_addr_width</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="wb_byte_lanes">wb_byte_lanes</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="wb_data_width">wb_data_width</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SRAM_MEM_0_FILE">SRAM_MEM_0_FILE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SRAM_MEM_1_FILE">SRAM_MEM_1_FILE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SRAM_MEM_2_FILE">SRAM_MEM_2_FILE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SRAM_MEM_3_FILE">SRAM_MEM_3_FILE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="adr_width">adr_width</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="dat_width">dat_width</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="mem_size">mem_size</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="wb_addr_width">wb_addr_width</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="wb_byte_lanes">wb_byte_lanes</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="wb_data_width">wb_data_width</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 </ipxact:componentInstances>

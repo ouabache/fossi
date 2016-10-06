@@ -58,114 +58,114 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_model" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="clk"/>
+      <ipxact:internalPortReference componentRef="ps2_model" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="clk"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_model" ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="reset"/>
+      <ipxact:internalPortReference componentRef="ps2_model" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="reset"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_data_pad_oe</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="data_tri_buf" ipxact:portRef="pad_oe"/>
+      <ipxact:internalPortReference componentRef="data_tri_buf" portRef="pad_oe"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_data_pad_in</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="data_tri_buf" ipxact:portRef="pad_in"/>
+      <ipxact:internalPortReference componentRef="data_tri_buf" portRef="pad_in"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_data</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="data_tri_buf" ipxact:portRef="PAD"/>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_model" ipxact:portRef="ps2_data"/>
+      <ipxact:internalPortReference componentRef="data_tri_buf" portRef="PAD"/>
+      <ipxact:internalPortReference componentRef="ps2_model" portRef="ps2_data"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_clk_pad_oe</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="clk_tri_buf" ipxact:portRef="pad_oe"/>
+      <ipxact:internalPortReference componentRef="clk_tri_buf" portRef="pad_oe"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_clk_pad_in</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="clk_tri_buf" ipxact:portRef="pad_in"/>
+      <ipxact:internalPortReference componentRef="clk_tri_buf" portRef="pad_in"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_clk</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="clk_tri_buf" ipxact:portRef="PAD"/>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_model" ipxact:portRef="ps2_clk"/>
+      <ipxact:internalPortReference componentRef="clk_tri_buf" portRef="PAD"/>
+      <ipxact:internalPortReference componentRef="ps2_model" portRef="ps2_clk"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>busy</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="busy"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="busy"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>rx_clear</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="rx_clr"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="rx_clr"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>rx_data</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="rx_data"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="rx_data"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>rx_read</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="rx_read"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="rx_read"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>rx_full</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="rx_full"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="rx_full"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>rx_parity_error</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="rx_parity_error"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="rx_parity_error"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>rx_parity_rcv</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="rx_parity_rcv"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="rx_parity_rcv"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>rx_parity_cal</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="rx_parity_cal"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="rx_parity_cal"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>rx_frame_error</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="rx_frame_error"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="rx_frame_error"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>tx_ack_error</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="tx_ack_error"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="tx_ack_error"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>tx_data</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="tx_data"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="tx_data"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>tx_write</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_host" ipxact:portRef="tx_write"/>
+      <ipxact:internalPortReference componentRef="ps2_host" portRef="tx_write"/>
     </ipxact:adHocConnection>
 
 
@@ -182,7 +182,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>ps2_model</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="ps2_model" version="def" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="CLKCNT">PS2_MODEL_CLKCNT</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CLKCNT">PS2_MODEL_CLKCNT</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 
 </ipxact:componentInstance>   

@@ -85,28 +85,28 @@ pinseq=10
 P 3200 200 3500 200 10 1 1
 {
 T 3100 200 5  10 1 1 0 7 1 1 
-pinnumber=PMOD4[7:0]
+pinnumber=PMOD3[7:0]
 T 3100 200 5  10 0 1 0 7 1 1 
 pinseq=11
 }
 P 3200 400 3500 400 10 1 1
 {
 T 3100 400 5  10 1 1 0 7 1 1 
-pinnumber=PMOD3[7:0]
+pinnumber=PMOD2[7:0]
 T 3100 400 5  10 0 1 0 7 1 1 
 pinseq=12
 }
 P 3200 600 3500 600 10 1 1
 {
 T 3100 600 5  10 1 1 0 7 1 1 
-pinnumber=PMOD2[7:0]
+pinnumber=LED[1:0]
 T 3100 600 5  10 0 1 0 7 1 1 
 pinseq=13
 }
 P 3200 800 3500 800 10 1 1
 {
 T 3100 800 5  10 1 1 0 7 1 1 
-pinnumber=LED[1:0]
+pinnumber=PMOD4[7:0]
 T 3100 800 5  10 0 1 0 7 1 1 
 pinseq=14
 }

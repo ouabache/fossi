@@ -48,56 +48,56 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:componentRef="bus" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference componentRef="bus" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="clk"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:externalPortReference ipxact:componentRef="bus" ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="reset"/>
+      <ipxact:externalPortReference componentRef="bus" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="reset"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>cs</ipxact:name>
-      <ipxact:externalPortReference ipxact:componentRef="bus" ipxact:portRef="cs"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="cs"/>
+      <ipxact:externalPortReference componentRef="bus" portRef="cs"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="cs"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>wr</ipxact:name>
-      <ipxact:externalPortReference ipxact:componentRef="bus" ipxact:portRef="wr"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="wr"/>
+      <ipxact:externalPortReference componentRef="bus" portRef="wr"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="wr"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>rd</ipxact:name>
-      <ipxact:externalPortReference ipxact:componentRef="bus" ipxact:portRef="rd"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="rd"/>
+      <ipxact:externalPortReference componentRef="bus" portRef="rd"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="rd"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>addr</ipxact:name>
-      <ipxact:externalPortReference ipxact:componentRef="bus" ipxact:portRef="addr"  ipxact:left="15" ipxact:right="0"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="addr"/>
+      <ipxact:externalPortReference componentRef="bus" portRef="addr"  left="15" right="0"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="addr"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>wdata</ipxact:name>
-      <ipxact:externalPortReference ipxact:componentRef="bus" ipxact:portRef="wdata" ipxact:left="7" ipxact:right="0" />
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="wdata"/>
+      <ipxact:externalPortReference componentRef="bus" portRef="wdata" left="7" right="0" />
+      <ipxact:internalPortReference componentRef="bus" portRef="wdata"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>rdata</ipxact:name>
-      <ipxact:externalPortReference ipxact:componentRef="bus" ipxact:portRef="rdata" ipxact:left="7" ipxact:right="0" />
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="rdata"/>
+      <ipxact:externalPortReference componentRef="bus" portRef="rdata" left="7" right="0" />
+      <ipxact:internalPortReference componentRef="bus" portRef="rdata"/>
     </ipxact:adHocConnection>
 
 
@@ -122,7 +122,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>bus</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="Testbench" name="micro_bus_model" version="def"   />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="addr_width">16</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="addr_width">16</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

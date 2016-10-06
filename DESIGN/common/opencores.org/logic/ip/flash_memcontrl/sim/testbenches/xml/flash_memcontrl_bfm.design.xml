@@ -45,157 +45,157 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_clk_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus16" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="slave_clk_clk"/>
+      <ipxact:internalPortReference componentRef="bus16" portRef="clk"/>
      </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_reset_reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus16" ipxact:portRef="reset"/>
+      <ipxact:externalPortReference portRef="slave_reset_reset"/>
+      <ipxact:internalPortReference componentRef="bus16" portRef="reset"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>Addr</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="Addr"  ipxact:left="23"  ipxact:right="0"       />
-      <ipxact:internalPortReference ipxact:componentRef="bus16" ipxact:portRef="addr"/>
+      <ipxact:externalPortReference portRef="Addr"  left="23"  right="0"       />
+      <ipxact:internalPortReference componentRef="bus16" portRef="addr"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>wdata</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="wdata"  ipxact:left="15"  ipxact:right="0"       />
-      <ipxact:internalPortReference ipxact:componentRef="bus16" ipxact:portRef="wdata"/>
+      <ipxact:externalPortReference portRef="wdata"  left="15"  right="0"       />
+      <ipxact:internalPortReference componentRef="bus16" portRef="wdata"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>rdata</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="rdata"  ipxact:left="15"  ipxact:right="0"       />
-      <ipxact:internalPortReference ipxact:componentRef="bus16" ipxact:portRef="rdata"/>
+      <ipxact:externalPortReference portRef="rdata"  left="15"  right="0"       />
+      <ipxact:internalPortReference componentRef="bus16" portRef="rdata"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>cs</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="cs"        />
-      <ipxact:internalPortReference ipxact:componentRef="bus16" ipxact:portRef="cs"/>
+      <ipxact:externalPortReference portRef="cs"        />
+      <ipxact:internalPortReference componentRef="bus16" portRef="cs"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>rd</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="rd"        />
-      <ipxact:internalPortReference ipxact:componentRef="bus16" ipxact:portRef="rd"/>
+      <ipxact:externalPortReference portRef="rd"        />
+      <ipxact:internalPortReference componentRef="bus16" portRef="rd"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>wr</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="wr"        />
-      <ipxact:internalPortReference ipxact:componentRef="bus16" ipxact:portRef="wr"/>
+      <ipxact:externalPortReference portRef="wr"        />
+      <ipxact:internalPortReference componentRef="bus16" portRef="wr"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>ub</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="ub"        />
-      <ipxact:internalPortReference ipxact:componentRef="bus16" ipxact:portRef="ub"/>
+      <ipxact:externalPortReference portRef="ub"        />
+      <ipxact:internalPortReference componentRef="bus16" portRef="ub"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>lb</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="lb"        />
-      <ipxact:internalPortReference ipxact:componentRef="bus16" ipxact:portRef="lb"/>
+      <ipxact:externalPortReference portRef="lb"        />
+      <ipxact:internalPortReference componentRef="bus16" portRef="lb"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>memdb_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="memdb_out"  ipxact:left="15"  ipxact:right="0"       />
-      <ipxact:internalPortReference ipxact:componentRef="memdb_buff" ipxact:portRef="pad_out"/>
+      <ipxact:externalPortReference portRef="memdb_out"  left="15"  right="0"       />
+      <ipxact:internalPortReference componentRef="memdb_buff" portRef="pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>memdb_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="memdb_in"  ipxact:left="15"  ipxact:right="0"       />
-      <ipxact:internalPortReference ipxact:componentRef="memdb_buff" ipxact:portRef="pad_in"/>
+      <ipxact:externalPortReference portRef="memdb_in"  left="15"  right="0"       />
+      <ipxact:internalPortReference componentRef="memdb_buff" portRef="pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>memdb_io</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="memdb_io"  ipxact:left="15"  ipxact:right="0"       />
-      <ipxact:internalPortReference ipxact:componentRef="memdb_buff" ipxact:portRef="PAD"/>
-      <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="dq"/> 
+      <ipxact:externalPortReference portRef="memdb_io"  left="15"  right="0"       />
+      <ipxact:internalPortReference componentRef="memdb_buff" portRef="PAD"/>
+      <ipxact:internalPortReference componentRef="psram" portRef="dq"/> 
    </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>memdb_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="memdb_oe"        />
-      <ipxact:internalPortReference ipxact:componentRef="memdb_buff" ipxact:portRef="pad_oe"/>
+      <ipxact:externalPortReference portRef="memdb_oe"        />
+      <ipxact:internalPortReference componentRef="memdb_buff" portRef="pad_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ramclk_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="ramclk_out"/>
-      <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="ramclk_out"/>
+      <ipxact:internalPortReference componentRef="psram" portRef="clk"/>
      </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>ramadv_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="ramadv_n_out"/>
-      <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="adv_n"/>
+      <ipxact:externalPortReference portRef="ramadv_n_out"/>
+      <ipxact:internalPortReference componentRef="psram" portRef="adv_n"/>
      </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>ramcre_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="ramcre_out"/>
-      <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="cre"/>
+      <ipxact:externalPortReference portRef="ramcre_out"/>
+      <ipxact:internalPortReference componentRef="psram" portRef="cre"/>
      </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ramwait_n</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="ramwait_n"/>
-      <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="o_wait"/>
+      <ipxact:externalPortReference portRef="ramwait_n"/>
+      <ipxact:internalPortReference componentRef="psram" portRef="o_wait"/>
      </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>ramcs_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="ramcs_n_out"/>
-      <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="ce_n"/>
+      <ipxact:externalPortReference portRef="ramcs_n_out"/>
+      <ipxact:internalPortReference componentRef="psram" portRef="ce_n"/>
      </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>memoe_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="memoe_n_out"/>
-      <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="oe_n"/>
+      <ipxact:externalPortReference portRef="memoe_n_out"/>
+      <ipxact:internalPortReference componentRef="psram" portRef="oe_n"/>
      </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>memwr_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="memwr_n_out"/>
-      <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="we_n"/>
+      <ipxact:externalPortReference portRef="memwr_n_out"/>
+      <ipxact:internalPortReference componentRef="psram" portRef="we_n"/>
      </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ramlb_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="ramlb_n_out"/>
-      <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="lb_n"/>
+      <ipxact:externalPortReference portRef="ramlb_n_out"/>
+      <ipxact:internalPortReference componentRef="psram" portRef="lb_n"/>
      </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ramub_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="ramub_n_out"/>
-      <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="ub_n"/>
+      <ipxact:externalPortReference portRef="ramub_n_out"/>
+      <ipxact:internalPortReference componentRef="psram" portRef="ub_n"/>
      </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>memadr_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="memadr_out" ipxact:left="23"  ipxact:right="1"       />
-      <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="addr"/>
+      <ipxact:externalPortReference portRef="memadr_out" left="23"  right="1"       />
+      <ipxact:internalPortReference componentRef="psram" portRef="addr"/>
      </ipxact:adHocConnection>
 
      </ipxact:adHocConnections>
@@ -216,7 +216,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>memdb_buff</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="se_dig" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="WIDTH">16</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">16</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 
 </ipxact:componentInstance>

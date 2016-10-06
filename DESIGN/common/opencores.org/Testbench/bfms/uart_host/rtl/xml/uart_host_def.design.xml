@@ -101,10 +101,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_clk_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="rxd_data_out_prb" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="rxd_stop_error_prb" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="rxd_parity_error_prb" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="slave_clk_clk"/>
+      <ipxact:internalPortReference componentRef="rxd_data_out_prb" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="rxd_stop_error_prb" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="rxd_parity_error_prb" portRef="clk"/>
 
     </ipxact:adHocConnection>
 
@@ -112,59 +112,59 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>exp_rxd_data_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="exp_rxd_data_out"   ipxact:left="7"   ipxact:right="0"     />
-      <ipxact:internalPortReference ipxact:componentRef="rxd_data_out_prb" ipxact:portRef="expected_value"/>
+      <ipxact:externalPortReference portRef="exp_rxd_data_out"   left="7"   right="0"     />
+      <ipxact:internalPortReference componentRef="rxd_data_out_prb" portRef="expected_value"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>exp_rxd_stop_error</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="exp_rxd_stop_error"        />
-      <ipxact:internalPortReference ipxact:componentRef="rxd_stop_error_prb" ipxact:portRef="expected_value"/>
+      <ipxact:externalPortReference portRef="exp_rxd_stop_error"        />
+      <ipxact:internalPortReference componentRef="rxd_stop_error_prb" portRef="expected_value"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>exp_rxd_parity_error</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="exp_rxd_parity_error"        />
-      <ipxact:internalPortReference ipxact:componentRef="rxd_parity_error_prb" ipxact:portRef="expected_value"/>
+      <ipxact:externalPortReference portRef="exp_rxd_parity_error"        />
+      <ipxact:internalPortReference componentRef="rxd_parity_error_prb" portRef="expected_value"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>mask_rxd_data_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="mask_rxd_data_out"   ipxact:left="7"   ipxact:right="0"     />
-      <ipxact:internalPortReference ipxact:componentRef="rxd_data_out_prb" ipxact:portRef="mask"/>
+      <ipxact:externalPortReference portRef="mask_rxd_data_out"   left="7"   right="0"     />
+      <ipxact:internalPortReference componentRef="rxd_data_out_prb" portRef="mask"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>mask_rxd_stop_error</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="mask_rxd_stop_error"        />
-      <ipxact:internalPortReference ipxact:componentRef="rxd_stop_error_prb" ipxact:portRef="mask"/>
+      <ipxact:externalPortReference portRef="mask_rxd_stop_error"        />
+      <ipxact:internalPortReference componentRef="rxd_stop_error_prb" portRef="mask"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>mask_rxd_parity_error</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="mask_rxd_parity_error"        />
-      <ipxact:internalPortReference ipxact:componentRef="rxd_parity_error_prb" ipxact:portRef="mask"/>
+      <ipxact:externalPortReference portRef="mask_rxd_parity_error"        />
+      <ipxact:internalPortReference componentRef="rxd_parity_error_prb" portRef="mask"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>rxd_data_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="rxd_data_out"   ipxact:left="7"   ipxact:right="0"     />
-      <ipxact:internalPortReference ipxact:componentRef="rxd_data_out_prb" ipxact:portRef="signal"/>
+      <ipxact:externalPortReference portRef="rxd_data_out"   left="7"   right="0"     />
+      <ipxact:internalPortReference componentRef="rxd_data_out_prb" portRef="signal"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>rxd_stop_error</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="rxd_stop_error"        />
-      <ipxact:internalPortReference ipxact:componentRef="rxd_stop_error_prb" ipxact:portRef="signal"/>
+      <ipxact:externalPortReference portRef="rxd_stop_error"        />
+      <ipxact:internalPortReference componentRef="rxd_stop_error_prb" portRef="signal"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>rxd_parity_error</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="rxd_parity_error"        />
-      <ipxact:internalPortReference ipxact:componentRef="rxd_parity_error_prb" ipxact:portRef="signal"/>
+      <ipxact:externalPortReference portRef="rxd_parity_error"        />
+      <ipxact:internalPortReference componentRef="rxd_parity_error_prb" portRef="signal"/>
     </ipxact:adHocConnection>
 
 </ipxact:adHocConnections>
@@ -178,8 +178,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>rxd_data_out_prb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="in" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="WIDTH">8</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="MESG">"uart_host receive Error"</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">8</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="MESG">"uart_host receive Error"</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -187,8 +187,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>rxd_stop_error_prb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="in" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="WIDTH">1</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="MESG">"uart_host stop Error"</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">1</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="MESG">"uart_host stop Error"</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -197,8 +197,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>rxd_parity_error_prb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="in" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="WIDTH">1</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="MESG">"uart_host parity Error"</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">1</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="MESG">"uart_host parity Error"</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

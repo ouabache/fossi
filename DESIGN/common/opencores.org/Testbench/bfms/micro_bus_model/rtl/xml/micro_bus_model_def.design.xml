@@ -74,32 +74,32 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_clk_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="rdata_tpb" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="slave_clk_clk"/>
+      <ipxact:internalPortReference componentRef="rdata_tpb" portRef="clk"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>exp_rdata</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="exp_rdata"   ipxact:left="7"   ipxact:right="0"     />
-      <ipxact:internalPortReference ipxact:componentRef="rdata_tpb" ipxact:portRef="expected_value"/>
+      <ipxact:externalPortReference portRef="exp_rdata"   left="7"   right="0"     />
+      <ipxact:internalPortReference componentRef="rdata_tpb" portRef="expected_value"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>mask_rdata</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="mask_rdata"   ipxact:left="7"   ipxact:right="0"     />
-      <ipxact:internalPortReference ipxact:componentRef="rdata_tpb" ipxact:portRef="mask"/>
+      <ipxact:externalPortReference portRef="mask_rdata"   left="7"   right="0"     />
+      <ipxact:internalPortReference componentRef="rdata_tpb" portRef="mask"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>rdata</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="rdata"   ipxact:left="7"   ipxact:right="0"     />
-      <ipxact:internalPortReference ipxact:componentRef="rdata_tpb" ipxact:portRef="signal"/>
+      <ipxact:externalPortReference portRef="rdata"   left="7"   right="0"     />
+      <ipxact:internalPortReference componentRef="rdata_tpb" portRef="signal"/>
     </ipxact:adHocConnection>
 
 
@@ -117,8 +117,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>rdata_tpb</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="io_probe" version="in" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="WIDTH">8</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="MESG">"micro rdata  Error"</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">8</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="MESG">"micro rdata  Error"</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

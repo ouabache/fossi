@@ -26,51 +26,51 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
      <ipxact:adHocConnection>
        <ipxact:name>clk</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="clk"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="clk"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"   ipxact:portRef="clk"/>
+       <ipxact:externalPortReference portRef="clk"/>
+       <ipxact:internalPortReference componentRef="jtag_model"   portRef="clk"/>
+       <ipxact:internalPortReference componentRef="jtag_sync"   portRef="clk"/>
 
      </ipxact:adHocConnection>
 
      <ipxact:adHocConnection>
        <ipxact:name>reset</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="reset"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="reset"/>
+       <ipxact:externalPortReference portRef="reset"/>
+       <ipxact:internalPortReference componentRef="jtag_model"   portRef="reset"/>
      </ipxact:adHocConnection>
 
      <ipxact:adHocConnection>
        <ipxact:name>tclk_pad_in</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="tclk_pad_in"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="tclk"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="tclk_pad_in"/>
+       <ipxact:externalPortReference portRef="tclk_pad_in"/>
+       <ipxact:internalPortReference componentRef="jtag_model"   portRef="tclk"/>
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="tclk_pad_in"/>
      </ipxact:adHocConnection>
 
      <ipxact:adHocConnection>
        <ipxact:name>tms_pad_in</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="tms_pad_in"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="tms"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="tms_pad_in"/>
+       <ipxact:externalPortReference portRef="tms_pad_in"/>
+       <ipxact:internalPortReference componentRef="jtag_model"   portRef="tms"/>
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="tms_pad_in"/>
      </ipxact:adHocConnection>
 
      <ipxact:adHocConnection>
        <ipxact:name>tdi_pad_in</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="tdi_pad_in"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="tdo"/>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="tdi_pad_in"/>
+       <ipxact:externalPortReference portRef="tdi_pad_in"/>
+       <ipxact:internalPortReference componentRef="jtag_model"   portRef="tdo"/>
+      <ipxact:internalPortReference componentRef="jtag_tap"     portRef="tdi_pad_in"/>
      </ipxact:adHocConnection>
 
      <ipxact:adHocConnection>
        <ipxact:name>trst_n_pad_in</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="trst_n_pad_in"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="trst_n"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="trst_n_pad_in"/>
+       <ipxact:externalPortReference portRef="trst_n_pad_in"/>
+       <ipxact:internalPortReference componentRef="jtag_model"   portRef="trst_n"/>
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="trst_n_pad_in"/>
      </ipxact:adHocConnection>
 
      <ipxact:adHocConnection>
        <ipxact:name>tdo_pad_out</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="tdo_pad_out"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="tdi"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="tdo_pad_out"/> 
+       <ipxact:externalPortReference portRef="tdo_pad_out"/>
+       <ipxact:internalPortReference componentRef="jtag_model"   portRef="tdi"/>
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="tdo_pad_out"/> 
      </ipxact:adHocConnection>
 
 
@@ -80,8 +80,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>jtag_clk</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="jtag_clk"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"      ipxact:portRef="jtag_clk"/> 
+       <ipxact:externalPortReference portRef="jtag_clk"/>
+       <ipxact:internalPortReference componentRef="jtag_tap"      portRef="jtag_clk"/> 
 </ipxact:adHocConnection>
 
 
@@ -89,25 +89,25 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>capture_dr_o</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="capture_dr_o"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="capture_dr_o"/> 
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="capture_dr"/> 
+       <ipxact:externalPortReference portRef="capture_dr_o"/>
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="capture_dr_o"/> 
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="capture_dr"/> 
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>update_dr_o</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="update_dr_o"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="update_dr_o"/> 
+       <ipxact:externalPortReference portRef="update_dr_o"/>
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="update_dr_o"/> 
 </ipxact:adHocConnection>
 
 
 
 <ipxact:adHocConnection>
 <ipxact:name>select_o</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="select_o"   />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="select_o"/> 
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="select"/> 
+<ipxact:externalPortReference portRef="select_o"   />
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="select_o"/> 
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="select"/> 
 </ipxact:adHocConnection>
 
 
@@ -117,9 +117,9 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>shiftcapture_dr_clk_o</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="shiftcapture_dr_clk_o"   />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"      ipxact:portRef="shiftcapture_dr_clk_o"/> 
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="shiftcapture_dr_clk"/> 
+       <ipxact:externalPortReference portRef="shiftcapture_dr_clk_o"   />
+       <ipxact:internalPortReference componentRef="jtag_tap"      portRef="shiftcapture_dr_clk_o"/> 
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="shiftcapture_dr_clk"/> 
 </ipxact:adHocConnection>
 
 
@@ -127,8 +127,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>bsr_select_o</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="bsr_select_o" />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="bsr_select_o"/> 
+       <ipxact:externalPortReference portRef="bsr_select_o" />
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="bsr_select_o"/> 
 
 </ipxact:adHocConnection>
 
@@ -136,111 +136,111 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>shift_dr_o</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="shift_dr_o"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="shift_dr_o"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="shift_dr"/>  
+       <ipxact:externalPortReference portRef="shift_dr_o"/>
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="shift_dr_o"/>
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="shift_dr"/>  
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>tdi_o</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="tdi_o"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="tdi_o"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="tdi"/>  
+       <ipxact:externalPortReference portRef="tdi_o"/>
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="tdi_o"/>
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="tdi"/>  
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>tdo_i</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="tdo_i"  />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="tdo_i"/> 
+       <ipxact:externalPortReference portRef="tdo_i"  />
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="tdo_i"/> 
 </ipxact:adHocConnection>
 
 
 
 <ipxact:adHocConnection>
 <ipxact:name>bsr_tdo_i</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="bsr_tdo_i"  />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="bsr_tdo_i"/> 
+       <ipxact:externalPortReference portRef="bsr_tdo_i"  />
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="bsr_tdo_i"/> 
 </ipxact:adHocConnection>
 
 
 
 <ipxact:adHocConnection>
 <ipxact:name>test_logic_reset_o</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="test_logic_reset_o"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="test_logic_reset_o"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="test_logic_reset"/>  
+       <ipxact:externalPortReference portRef="test_logic_reset_o"/>
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="test_logic_reset_o"/>
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="test_logic_reset"/>  
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>update_dr_clk_o</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="update_dr_clk_o"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_tap"     ipxact:portRef="update_dr_clk_o"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="update_dr_clk"/>  
+       <ipxact:externalPortReference portRef="update_dr_clk_o"/>
+       <ipxact:internalPortReference componentRef="jtag_tap"     portRef="update_dr_clk_o"/>
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="update_dr_clk"/>  
 </ipxact:adHocConnection>
 
 
 
 <ipxact:adHocConnection>
 <ipxact:name>syn_tdo_i</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="syn_tdo_i"   />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="syn_tdo_i"/> 
+       <ipxact:externalPortReference portRef="syn_tdo_i"   />
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="syn_tdo_i"/> 
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>jtag_sync_tdo</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="jtag_sync_tdo"   />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="tdo"/> 
+       <ipxact:externalPortReference portRef="jtag_sync_tdo"   />
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="tdo"/> 
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>syn_capture_dr</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="syn_capture_dr"  />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="syn_capture_dr"/> 
+       <ipxact:externalPortReference portRef="syn_capture_dr"  />
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="syn_capture_dr"/> 
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>syn_clk</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="syn_clk"  />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="syn_clk"/> 
+       <ipxact:externalPortReference portRef="syn_clk"  />
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="syn_clk"/> 
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>syn_reset</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="syn_reset"  />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="syn_reset"/> 
+       <ipxact:externalPortReference portRef="syn_reset"  />
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="syn_reset"/> 
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>syn_select</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="syn_select"   />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="syn_select"/> 
+       <ipxact:externalPortReference portRef="syn_select"   />
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="syn_select"/> 
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>syn_shift_dr</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="syn_shift_dr"  />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="syn_shift_dr"/> 
+       <ipxact:externalPortReference portRef="syn_shift_dr"  />
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="syn_shift_dr"/> 
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>syn_tdi_o</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="syn_tdi_o"  />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="syn_tdi_o"/> 
+       <ipxact:externalPortReference portRef="syn_tdi_o"  />
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="syn_tdi_o"/> 
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>syn_update_dr</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="syn_update_dr"  />
-       <ipxact:internalPortReference ipxact:componentRef="jtag_sync"     ipxact:portRef="syn_update_dr"/> 
+       <ipxact:externalPortReference portRef="syn_update_dr"  />
+       <ipxact:internalPortReference componentRef="jtag_sync"     portRef="syn_update_dr"/> 
 </ipxact:adHocConnection>
 
 
@@ -259,8 +259,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
  <ipxact:instanceName>jtag_model</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="jtag_model" version="def" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="DIVCNT">JTAG_MODEL_DIVCNT</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SIZE">JTAG_MODEL_SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="DIVCNT">JTAG_MODEL_DIVCNT</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SIZE">JTAG_MODEL_SIZE</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

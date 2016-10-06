@@ -48,18 +48,18 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>core</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="fpgas" name="Nexys2_T6502" version="core" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="RAM_WORDS">RAM_WORDS</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="RAM_ADD">RAM_ADD</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="ROM_WORDS">ROM_WORDS</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="ROM_ADD">ROM_ADD</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="PROG_ROM_WORDS">PROG_ROM_WORDS</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="PROG_ROM_ADD">PROG_ROM_ADD</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="VEC_TABLE">VEC_TABLE</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="UART_PRESCALE">UART_PRESCALE</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="UART_PRE_SIZE">UART_PRE_SIZE</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="UART_DIV">UART_DIV</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="JTAG_USER1_WIDTH">JTAG_USER1_WIDTH</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="JTAG_USER1_RESET">JTAG_USER1_RESET</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="RAM_WORDS">RAM_WORDS</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="RAM_ADD">RAM_ADD</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="ROM_WORDS">ROM_WORDS</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="ROM_ADD">ROM_ADD</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="PROG_ROM_WORDS">PROG_ROM_WORDS</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="PROG_ROM_ADD">PROG_ROM_ADD</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="VEC_TABLE">VEC_TABLE</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="UART_PRESCALE">UART_PRESCALE</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="UART_PRE_SIZE">UART_PRE_SIZE</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="UART_DIV">UART_DIV</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="JTAG_USER1_WIDTH">JTAG_USER1_WIDTH</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="JTAG_USER1_RESET">JTAG_USER1_RESET</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

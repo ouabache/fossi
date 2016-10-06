@@ -49,38 +49,38 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="spi_model_master" ipxact:portRef="clk"/>
+      <ipxact:internalPortReference componentRef="spi_model_master" portRef="clk"/>
  </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="spi_model_master" ipxact:portRef="reset"/>
+      <ipxact:internalPortReference componentRef="spi_model_master" portRef="reset"/>
     </ipxact:adHocConnection>
 
 
 
  <ipxact:adHocConnection>
       <ipxact:name>SYS_SPI_SCK</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="spi_model_master" ipxact:portRef="spi_clk"/>
+      <ipxact:internalPortReference componentRef="spi_model_master" portRef="spi_clk"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>SYS_SPI_MISO</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="spi_model_master" ipxact:portRef="spi_miso"/>
+      <ipxact:internalPortReference componentRef="spi_model_master" portRef="spi_miso"/>
     </ipxact:adHocConnection>
 
 
      <ipxact:adHocConnection>
       <ipxact:name>SYS_SPI_MOSI</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="spi_model_master" ipxact:portRef="spi_mosi"/>
+      <ipxact:internalPortReference componentRef="spi_model_master" portRef="spi_mosi"/>
     </ipxact:adHocConnection>
 
 
      <ipxact:adHocConnection>
       <ipxact:name>RP_SPI_CE0N</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="spi_model_master" ipxact:portRef="spi_sel_n"/>
+      <ipxact:internalPortReference componentRef="spi_model_master" portRef="spi_sel_n"/>
     </ipxact:adHocConnection>
 
     
@@ -105,8 +105,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>spi_model_master</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="spi_model" version="master" />
 <ipxact:configurableElementValues>
-  <ipxact:configurableElementValue ipxact:referenceId="CLKCNT">SPI_CLKCNT</ipxact:configurableElementValue>
-  <ipxact:configurableElementValue ipxact:referenceId="SIZE">SPI_SIZE</ipxact:configurableElementValue>
+  <ipxact:configurableElementValue referenceId="CLKCNT">SPI_CLKCNT</ipxact:configurableElementValue>
+  <ipxact:configurableElementValue referenceId="SIZE">SPI_SIZE</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 
 </ipxact:componentInstance>   

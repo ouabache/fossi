@@ -44,76 +44,76 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:adHocConnections>
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="clock_sys" ipxact:portRef="div_clk_out"/>
+      <ipxact:externalPortReference portRef="clk"/>
+      <ipxact:internalPortReference componentRef="core" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="clock_sys" portRef="div_clk_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="clock_sys" ipxact:portRef="reset"/>
+      <ipxact:externalPortReference portRef="reset"/>
+      <ipxact:internalPortReference componentRef="core" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="clock_sys" portRef="reset"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>one_usec</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="one_usec"/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="one_usec"/>
-      <ipxact:internalPortReference ipxact:componentRef="clock_sys" ipxact:portRef="one_usec"/>
+      <ipxact:externalPortReference portRef="one_usec"/>
+      <ipxact:internalPortReference componentRef="core" portRef="one_usec"/>
+      <ipxact:internalPortReference componentRef="clock_sys" portRef="one_usec"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_capture_dr</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_capture_dr"/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jtag_capture_dr"/>
+      <ipxact:externalPortReference portRef="jtag_capture_dr"/>
+      <ipxact:internalPortReference componentRef="core" portRef="jtag_capture_dr"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_select</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_select"  />
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jtag_select"/>
+      <ipxact:externalPortReference portRef="jtag_select"  />
+      <ipxact:internalPortReference componentRef="core" portRef="jtag_select"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_shift_dr</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_shift_dr"/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jtag_shift_dr"/>
+      <ipxact:externalPortReference portRef="jtag_shift_dr"/>
+      <ipxact:internalPortReference componentRef="core" portRef="jtag_shift_dr"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_shiftcapture_dr_clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_shiftcapture_dr_clk"    />
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jtag_shiftcapture_dr_clk"/>
+      <ipxact:externalPortReference portRef="jtag_shiftcapture_dr_clk"    />
+      <ipxact:internalPortReference componentRef="core" portRef="jtag_shiftcapture_dr_clk"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tdi</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_tdi"/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jtag_tdi"/>
+      <ipxact:externalPortReference portRef="jtag_tdi"/>
+      <ipxact:internalPortReference componentRef="core" portRef="jtag_tdi"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tdo</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_tdo"    />
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jtag_tdo"/>
+      <ipxact:externalPortReference portRef="jtag_tdo"    />
+      <ipxact:internalPortReference componentRef="core" portRef="jtag_tdo"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_test_logic_reset</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_test_logic_reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jtag_test_logic_reset"/>
+      <ipxact:externalPortReference portRef="jtag_test_logic_reset"/>
+      <ipxact:internalPortReference componentRef="core" portRef="jtag_test_logic_reset"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_update_dr_clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_update_dr_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jtag_update_dr_clk"/>
+      <ipxact:externalPortReference portRef="jtag_update_dr_clk"/>
+      <ipxact:internalPortReference componentRef="core" portRef="jtag_update_dr_clk"/>
     </ipxact:adHocConnection>
 
 
@@ -123,54 +123,54 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_capture_dr</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="aux_jtag_capture_dr"/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="aux_jtag_capture_dr"/>
+      <ipxact:externalPortReference portRef="aux_jtag_capture_dr"/>
+      <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_capture_dr"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_select</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="aux_jtag_select"  />
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="aux_jtag_select"/>
+      <ipxact:externalPortReference portRef="aux_jtag_select"  />
+      <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_select"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_shift_dr</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="aux_jtag_shift_dr"/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="aux_jtag_shift_dr"/>
+      <ipxact:externalPortReference portRef="aux_jtag_shift_dr"/>
+      <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_shift_dr"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_shiftcapture_dr_clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="aux_jtag_shiftcapture_dr_clk"    />
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="aux_jtag_shiftcapture_dr_clk"/>
+      <ipxact:externalPortReference portRef="aux_jtag_shiftcapture_dr_clk"    />
+      <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_shiftcapture_dr_clk"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_tdi</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="aux_jtag_tdi"/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="aux_jtag_tdi"/>
+      <ipxact:externalPortReference portRef="aux_jtag_tdi"/>
+      <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_tdi"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_tdo</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="aux_jtag_tdo"    />
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="aux_jtag_tdo"/>
+      <ipxact:externalPortReference portRef="aux_jtag_tdo"    />
+      <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_tdo"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_test_logic_reset</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="aux_jtag_test_logic_reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="aux_jtag_test_logic_reset"/>
+      <ipxact:externalPortReference portRef="aux_jtag_test_logic_reset"/>
+      <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_test_logic_reset"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_update_dr_clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="aux_jtag_update_dr_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="aux_jtag_update_dr_clk"/>
+      <ipxact:externalPortReference portRef="aux_jtag_update_dr_clk"/>
+      <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_update_dr_clk"/>
     </ipxact:adHocConnection>
 
 
@@ -183,602 +183,602 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>a_clk_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="clock_sys" ipxact:portRef="a_clk_pad_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="clock_sys" portRef="a_clk_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>b_clk_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="clock_sys" ipxact:portRef="b_clk_pad_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="clock_sys" portRef="b_clk_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>uart_cts_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="clock_sys" ipxact:portRef="pwron_pad_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="clock_sys" portRef="pwron_pad_in"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>memadr_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="memadr_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="memadr_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>memdb_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="memdb_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="memdb_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>memdb_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="memdb_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="memdb_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>memdb_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="memdb_oe"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="memdb_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ramclk_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ramclk_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramclk_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ramcre_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ramcre_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramcre_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>memoe_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="memoe_n_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="memoe_n_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ramcs_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ramcs_n_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramcs_n_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ramlb_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ramlb_n_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramlb_n_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>flashcs_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="flashcs_n_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="flashcs_n_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>flashrp_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="flashrp_n_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="flashrp_n_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>flashststs_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="flashststs_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="flashststs_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ramwait_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ramwait_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramwait_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ramadv_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ramadv_n_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramadv_n_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ramub_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ramub_n_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramub_n_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>memwr_n_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="memwr_n_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="memwr_n_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ps2_data_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ps2_data_pad_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ps2_data_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ps2_data_pad_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ps2_data_pad_oe"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ps2_data_pad_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ps2_clk_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ps2_clk_pad_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ps2_clk_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ps2_clk_pad_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ps2_clk_pad_oe"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ps2_clk_pad_oe"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>uart_rxd_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="uart_rxd_pad_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="uart_rxd_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>uart_rts_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="rts_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="rts_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>uart_cts_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="cts_pad_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="cts_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>uart_txd_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="uart_txd_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="uart_txd_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>vga_red_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="vga_red_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="vga_red_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>vga_green_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="vga_green_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="vga_green_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>vga_blue_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="vga_blue_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="vga_blue_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>vga_hsync_n_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="vga_hsync_n_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="vga_hsync_n_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>vga_vsync_n_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="vga_vsync_n_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="vga_vsync_n_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>btn_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="btn_pad_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="btn_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>sw_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="sw_pad_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="sw_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>led_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="led_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="led_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>seg_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="seg_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="seg_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>an_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="an_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="an_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>dp_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="dp_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="dp_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>eppastb_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="eppastb_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="eppastb_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>eppdstb_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="eppdstb_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="eppdstb_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbflag_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbflag_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbflag_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>eppwait_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="eppwait_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="eppwait_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>eppwait_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="eppwait_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="eppwait_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>eppwait_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="eppwait_oe"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="eppwait_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbwr_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbwr_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbwr_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbwr_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbwr_oe"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbwr_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbwr_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbwr_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbwr_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbmode_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbmode_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbmode_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbmode_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbmode_oe"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbmode_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbmode_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbmode_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbmode_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usboe_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usboe_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usboe_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usboe_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usboe_oe"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usboe_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usboe_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usboe_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usboe_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbadr_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbadr_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbadr_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbadr_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbadr_oe"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbadr_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbadr_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbadr_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbadr_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbpktend_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbpktend_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbpktend_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbpktend_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbpktend_oe"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbpktend_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbpktend_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbpktend_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbpktend_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbdir_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbdir_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbdir_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbdir_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbdir_oe"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbdir_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbdir_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbdir_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbdir_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>eppdb_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="eppdb_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="eppdb_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>eppdb_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="eppdb_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="eppdb_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>eppdb_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="eppdb_oe"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="eppdb_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>eppwr_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="eppwr_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="eppwr_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbclk_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbclk_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbclk_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbclk_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbclk_oe"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbclk_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbclk_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbclk_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbclk_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>usbrdy_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="usbrdy_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="usbrdy_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ja_1_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ja_1_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ja_1_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ja_2_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ja_2_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ja_2_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ja_3_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ja_3_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ja_3_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ja_4_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ja_4_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ja_4_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ja_7_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ja_7_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ja_7_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ja_8_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ja_8_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ja_8_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ja_9_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ja_9_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ja_9_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>ja_10_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="ja_10_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="ja_10_pad_out"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>jb_1_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jb_1_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jb_1_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jb_2_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jb_2_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jb_2_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jb_3_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jb_3_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jb_3_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jb_4_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jb_4_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jb_4_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jb_7_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jb_7_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jb_7_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jb_8_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jb_8_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jb_8_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jb_9_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jb_9_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jb_9_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jb_10_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jb_10_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jb_10_pad_out"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>jc_1_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jc_1_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jc_1_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jc_2_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jc_2_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jc_2_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jc_3_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jc_3_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jc_3_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jc_4_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jc_4_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jc_4_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jc_7_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jc_7_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jc_7_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jc_8_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jc_8_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jc_8_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jc_9_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jc_9_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jc_9_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jc_10_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="jc_10_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="jc_10_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>rs_tx_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="rs_tx_pad_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="rs_tx_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>rs_rx_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="rs_rx_pad_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="rs_rx_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>pio_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="pio_in"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="pio_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>pio_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="pio_out"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="pio_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>pio_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef=""/>
-      <ipxact:internalPortReference ipxact:componentRef="core" ipxact:portRef="pio_oe"/>
+      <ipxact:externalPortReference portRef=""/>
+      <ipxact:internalPortReference componentRef="core" portRef="pio_oe"/>
     </ipxact:adHocConnection>
 
   </ipxact:adHocConnections>
@@ -793,7 +793,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>A_CLK</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="a_clk_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="a_clk_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -802,14 +802,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>
-      </ipxact:activeInterface>
+       </ipxact:activeInterface>
+       	<ipxact:hierInterface busRef="A_CLK"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>B_CLK</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="b_clk_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="b_clk_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -818,7 +819,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>
-      </ipxact:activeInterface>
+       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="B_CLK"/>
     </ipxact:interconnection>
 
 
@@ -826,7 +828,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>SW</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="sw_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="sw_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -837,6 +839,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="SW"/>
     </ipxact:interconnection>
 
 
@@ -844,7 +847,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>BTN</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="btn_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="btn_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -855,6 +858,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="BTN"/>
 
 
 
@@ -865,7 +869,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>LED</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="led_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="led_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -876,12 +880,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="LED"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>SEG</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="seg_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="seg_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -892,6 +897,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="SEG"/>
     </ipxact:interconnection>
 
 
@@ -899,7 +905,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>DP</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="dp_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="dp_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -909,6 +915,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="DP"/>
     </ipxact:interconnection>
 
 
@@ -919,7 +926,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>AN</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="an_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="an_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -930,6 +937,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="AN"/>
     </ipxact:interconnection>
 
 
@@ -937,7 +945,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>VGARED</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="vga_red_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="vga_red_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -948,12 +956,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="VGARED"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>VGAGREEN</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="vga_green_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="vga_green_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -964,13 +973,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="VGAGREEN"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>VGABLUE</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="vga_blue_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="vga_blue_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -981,6 +991,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="VGABLUE"/>
     </ipxact:interconnection>
 
 
@@ -988,7 +999,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>HSYNC_N</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="vga_hsync_n_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="vga_hsync_n_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -998,12 +1009,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="HSYNC_N"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>VSYNC_N</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="vga_vsync_n_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="vga_vsync_n_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1013,6 +1025,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="VSYNC_N"/>
     </ipxact:interconnection>
 
 
@@ -1020,7 +1033,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>PS2C</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ps2_clk_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ps2_clk_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -1030,12 +1043,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="PS2C"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>PS2D</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ps2_data_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ps2_data_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -1045,6 +1059,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="PS2D"/>
     </ipxact:interconnection>
 
 
@@ -1052,7 +1067,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>RTS</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="rts_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="rts_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1062,11 +1077,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="RTS"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>TXD</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="txd_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="txd_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1076,12 +1092,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="TXD"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>CTS</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="cts_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="cts_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -1091,12 +1108,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="CTS"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>RXD</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="rxd_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="rxd_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -1106,12 +1124,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="RXD"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>RS_RX</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="rs_rx_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="rs_rx_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -1121,12 +1140,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="RS_RX"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>RS_TX</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="rs_tx_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="rs_tx_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1136,6 +1156,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="RS_TX"/>
     </ipxact:interconnection>
 
 
@@ -1143,7 +1164,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>JA_1</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ja_1_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ja_1_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1153,11 +1174,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JA_1"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JA_2</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ja_2_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ja_2_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1167,11 +1189,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JA_2"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JA_3</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ja_3_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ja_3_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1181,11 +1204,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JA_3"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JA_4</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ja_4_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ja_4_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1195,11 +1219,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JA_4"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JA_7</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ja_7_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ja_7_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1209,11 +1234,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JA_7"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JA_8</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ja_8_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ja_8_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1223,11 +1249,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JA_8"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JA_9</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ja_9_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ja_9_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1237,11 +1264,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JA_9"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JA_10</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ja_10_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ja_10_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1251,6 +1279,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JA_10"/>
     </ipxact:interconnection>
 
 
@@ -1260,7 +1289,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>JB_1</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jb_1_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jb_1_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1270,11 +1299,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JB_1"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JB_2</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jb_2_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jb_2_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1284,11 +1314,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JB_2"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JB_3</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jb_3_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jb_3_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1298,11 +1329,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JB_3"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JB_4</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jb_4_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jb_4_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1312,11 +1344,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JB_4"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JB_7</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jb_7_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jb_7_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1326,11 +1359,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JB_7"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JB_8</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jb_8_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jb_8_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1340,11 +1374,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JB_8"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JB_9</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jb_9_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jb_9_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1354,11 +1389,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JB_9"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JB_10</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jb_10_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jb_10_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1368,6 +1404,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JB_10"/>
     </ipxact:interconnection>
 
 
@@ -1376,7 +1413,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>JC_1</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jc_1_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jc_1_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1386,11 +1423,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JC_1"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JC_2</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jc_2_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jc_2_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1400,11 +1438,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JC_2"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JC_3</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jc_3_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jc_3_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1414,11 +1453,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JC_3"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JC_4</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jc_4_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jc_4_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1428,11 +1468,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JC_4"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JC_7</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jc_7_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jc_7_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1442,11 +1483,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JC_7"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JC_8</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jc_8_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jc_8_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1456,11 +1498,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JC_8"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JC_9</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jc_9_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jc_9_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1470,11 +1513,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JC_9"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>JC_10</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jc_10_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jc_10_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1484,6 +1528,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="JC_10"/>
     </ipxact:interconnection>
 
 
@@ -1491,7 +1536,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>MEMADR</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="memadr_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="memadr_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1502,6 +1547,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="MEMADR"/>
     </ipxact:interconnection>
 
 
@@ -1511,7 +1557,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>MEMDB</ipxact:name>
 
-       <ipxact:activeInterface ipxact:componentRef="memdb_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="memdb_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -1521,12 +1567,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="MEMDB"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>MEMOE</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="memoe_n_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="memoe_n_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1536,11 +1583,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="MEMOE"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>MEMWR</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="memwr_n_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="memwr_n_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1550,13 +1598,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="MEMWR"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>RAMADV</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ramadv_n_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ramadv_n_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1566,6 +1615,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="RAMADV"/>
     </ipxact:interconnection>
 
 
@@ -1573,7 +1623,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>RAMCLK</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ramclk_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ramclk_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1583,11 +1633,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="RAMCLK"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>RAMUB</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ramub_n_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ramub_n_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1597,11 +1648,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="RAMUB"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>RAMLB</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ramlb_n_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ramlb_n_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1611,12 +1663,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="RAMLB"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>RAMCS</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ramcs_n_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ramcs_n_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1626,13 +1679,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="RAMCS"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>RAMCRE</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ramcre_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ramcre_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1642,12 +1696,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="RAMCRE"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>RAMWAIT</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="ramwait_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="ramwait_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -1657,13 +1712,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="RAMWAIT"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>FLASHSTSTS</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="flashststs_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="flashststs_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -1673,12 +1729,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="FLASHSTSTS"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>FLASHRP</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="flashrp_n_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="flashrp_n_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1688,13 +1745,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="FLASHRP"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>FLASHCS</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="flashcs_n_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="flashcs_n_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -1704,13 +1762,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="FLASHCS"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>EPPASTB</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="eppastb_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="eppastb_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -1720,13 +1779,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="EPPASTB"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>EPPDSTB</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="eppdstb_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="eppdstb_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -1736,6 +1796,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="EPPDSTB"/>
     </ipxact:interconnection>
 
 
@@ -1743,7 +1804,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>USBFLAG</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="usbflag_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="usbflag_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -1753,6 +1814,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="USBFLAG"/>
     </ipxact:interconnection>
 
 
@@ -1760,7 +1822,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>EPPWAIT</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="eppwait_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="eppwait_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -1770,6 +1832,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="EPPWAIT"/>
     </ipxact:interconnection>
 
 
@@ -1777,7 +1840,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>USBWR</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="usbwr_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="usbwr_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -1787,13 +1850,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="USBWR"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>USBMODE</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="usbmode_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="usbmode_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -1803,13 +1867,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="USBMODE"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>USBOE</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="usboe_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="usboe_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -1819,13 +1884,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="USBOE"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>USBPKTEND</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="usbpktend_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="usbpktend_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -1835,13 +1901,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="USBPKTEND"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>USBDIR</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="usbdir_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="usbdir_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -1851,11 +1918,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="USBDIR"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>USBCLK</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="usbclk_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="usbclk_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -1865,13 +1933,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="USBCLK"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>USBRDY</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="usbrdy_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="usbrdy_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -1881,6 +1950,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="USBRDY"/>
     </ipxact:interconnection>
 
 
@@ -1891,7 +1961,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>USBADR</ipxact:name>
 
-       <ipxact:activeInterface ipxact:componentRef="usbadr_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="usbadr_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -1901,6 +1971,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="USBADR"/>
 
 
 
@@ -1915,7 +1986,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>EPPDB</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="eppdb_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="eppdb_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -1926,6 +1997,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="EPPDB"/>
     </ipxact:interconnection>
 
 
@@ -1937,7 +2009,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>PIO</ipxact:name>
 
-       <ipxact:activeInterface ipxact:componentRef="pio_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="pio_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
@@ -1947,6 +2019,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="PIO"/>
 
 
 
@@ -1960,16 +2033,18 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>a_clk</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="a_clk_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="a_clk_pad" busRef="pad">
       </ipxact:activeInterface>
+
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>b_clk</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="b_clk_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="b_clk_pad" busRef="pad">
       </ipxact:activeInterface>
+
     </ipxact:interconnection>
 
 
@@ -1978,7 +2053,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>led</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="led_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="led_pad" busRef="pad">
         <ipxact:portMaps>
 
           <ipxact:portMap>
@@ -1991,13 +2066,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         </ipxact:portMaps>
       </ipxact:activeInterface>
 
+
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>seg</ipxact:name>
 
 
-      <ipxact:activeInterface ipxact:componentRef="seg_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="seg_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2008,6 +2084,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+
     </ipxact:interconnection>
 
 
@@ -2017,7 +2094,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:name>vga_red</ipxact:name>
 
 
-      <ipxact:activeInterface ipxact:componentRef="vga_red_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="vga_red_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2032,7 +2109,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>vga_green</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="vga_green_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="vga_green_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2047,7 +2124,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>vga_blue</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="vga_blue_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="vga_blue_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2063,31 +2140,31 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>vga_hsync_n</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="vga_hsync_n_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="vga_hsync_n_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>vga_vsync_n</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="vga_vsync_n_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="vga_vsync_n_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>dp</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="dp_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="dp_pad" busRef="pad">
       </ipxact:activeInterface>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>ps2_clk</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="ps2_clk_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="ps2_clk_pad" busRef="pad">
       </ipxact:activeInterface>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>ps2_data</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="ps2_data_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="ps2_data_pad" busRef="pad">
       </ipxact:activeInterface>
     </ipxact:interconnection>
 
@@ -2100,7 +2177,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>an</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="an_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="an_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2116,7 +2193,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>btn</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="btn_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="btn_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2134,7 +2211,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>sw</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="sw_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="sw_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2151,25 +2228,25 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>uart_txd</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="txd_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="txd_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>uart_rts</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="rts_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="rts_pad" busRef="pad"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>uart_rxd</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="rxd_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="rxd_pad" busRef="pad"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>uart_cts</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="cts_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="cts_pad" busRef="pad"/>
     </ipxact:interconnection>
 
 
@@ -2177,133 +2254,133 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>ja_1</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="ja_1_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="ja_1_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>ja_2</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="ja_2_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="ja_2_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>ja_3</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="ja_3_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="ja_3_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>ja_4</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="ja_4_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="ja_4_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>ja_7</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="ja_7_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="ja_7_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>ja_8</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="ja_8_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="ja_8_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>ja_9</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="ja_9_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="ja_9_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>ja_10</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="ja_10_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="ja_10_pad" busRef="pad"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>jb_1</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jb_1_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jb_1_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jb_2</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jb_2_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jb_2_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jb_3</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jb_3_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jb_3_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jb_4</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jb_4_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jb_4_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jb_7</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jb_7_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jb_7_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jb_8</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jb_8_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jb_8_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jb_9</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jb_9_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jb_9_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jb_10</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jb_10_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jb_10_pad" busRef="pad"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>jc_1</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jc_1_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jc_1_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jc_2</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jc_2_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jc_2_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jc_3</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jc_3_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jc_3_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jc_4</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jc_4_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jc_4_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jc_7</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jc_7_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jc_7_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jc_8</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jc_8_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jc_8_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jc_9</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jc_9_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jc_9_pad" busRef="pad"/>
     </ipxact:interconnection>
 
     <ipxact:interconnection>
       <ipxact:name>jc_10</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jc_10_pad" ipxact:busRef="pad"/>
+      <ipxact:activeInterface componentRef="jc_10_pad" busRef="pad"/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>memadr</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="memadr_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="memadr_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2319,7 +2396,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>memdb</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="memdb_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="memdb_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2351,7 +2428,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>memoe_n</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="memoe_n_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="memoe_n_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2368,7 +2445,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:name>memwr_n</ipxact:name>
 
 
-      <ipxact:activeInterface ipxact:componentRef="memwr_n_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="memwr_n_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2386,7 +2463,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>ramclk</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="ramclk_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="ramclk_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2402,7 +2479,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>ramcre</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="ramcre_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="ramcre_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2420,7 +2497,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>ramcs_n</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="ramcs_n_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="ramcs_n_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2437,7 +2514,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>ramub_n</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="ramub_n_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="ramub_n_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2453,7 +2530,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>ramlb_n</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="ramlb_n_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="ramlb_n_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2470,7 +2547,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>flashcs_n</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="flashcs_n_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="flashcs_n_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2486,7 +2563,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>flashrp_n</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="flashrp_n_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="flashrp_n_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2502,7 +2579,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>flashststs</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="flashststs_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="flashststs_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2517,7 +2594,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>ramwait</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="ramwait_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="ramwait_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2532,7 +2609,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>ramadv_n</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="ramadv_n_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="ramadv_n_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2548,7 +2625,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>rs_tx</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="rs_tx_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="rs_tx_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
@@ -2563,7 +2640,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>rs_rx</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="rs_rx_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="rs_rx_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2580,7 +2657,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>eppastb</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="eppastb_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="eppastb_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2595,7 +2672,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>eppdstb</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="eppdstb_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="eppdstb_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2609,7 +2686,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>eppwr</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="eppwr_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="eppwr_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2637,7 +2714,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>eppwait</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="eppwait_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="eppwait_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2668,7 +2745,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>eppdb</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="eppdb_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="eppdb_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2698,7 +2775,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>usbrdy</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="usbrdy_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="usbrdy_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2713,7 +2790,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>usbflag</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="usbflag_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="usbflag_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2729,7 +2806,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>usbwr</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="usbwr_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="usbwr_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2756,7 +2833,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>usbmode</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="usbmode_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="usbmode_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2783,7 +2860,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>usboe</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="usboe_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="usboe_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2813,7 +2890,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>usbpktend</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="usbpktend_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="usbpktend_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2841,7 +2918,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>usbdir</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="usbdir_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="usbdir_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2870,7 +2947,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>usbclk</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="usbclk_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="usbclk_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2898,7 +2975,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>usbadr</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="usbadr_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="usbadr_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2932,7 +3009,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:interconnection>
       <ipxact:name>pio</ipxact:name>
 
-      <ipxact:activeInterface ipxact:componentRef="pio_pad" ipxact:busRef="pad">
+      <ipxact:activeInterface componentRef="pio_pad" busRef="pad">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
@@ -2966,13 +3043,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   
      <ipxact:interconnection>
       <ipxact:name>jtag</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jtag_tap" ipxact:busRef="jtag"></ipxact:activeInterface>
+      <ipxact:activeInterface componentRef="jtag_tap" busRef="jtag"></ipxact:activeInterface>
       </ipxact:interconnection>
 
 
      <ipxact:interconnection>
       <ipxact:name>aux_jtag</ipxact:name>
-      <ipxact:activeInterface ipxact:componentRef="jtag_tap" ipxact:busRef="aux_jtag"></ipxact:activeInterface>
+      <ipxact:activeInterface componentRef="jtag_tap" busRef="aux_jtag"></ipxact:activeInterface>
       </ipxact:interconnection>
 
 
@@ -3000,12 +3077,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>clock_sys</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="cde" name="clock" version="sys" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="FREQ">CLOCK_FREQ</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="PLL_MULT">CLOCK_PLL_MULT</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="PLL_DIV">CLOCK_PLL_DIV</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="PLL_SIZE">CLOCK_PLL_SIZE</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="CLOCK_SRC">CLOCK_SRC</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="RESET_SENSE">RESET_SENSE</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="FREQ">CLOCK_FREQ</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="PLL_MULT">CLOCK_PLL_MULT</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="PLL_DIV">CLOCK_PLL_DIV</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="PLL_SIZE">CLOCK_PLL_SIZE</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CLOCK_SRC">CLOCK_SRC</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="RESET_SENSE">RESET_SENSE</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -3018,7 +3095,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>jtag_tap</ipxact:instanceName> 
 <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="tap" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="CHIP_ID_VAL">CHIP_ID</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CHIP_ID_VAL">CHIP_ID</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 
 </ipxact:componentInstance>
@@ -3038,7 +3115,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>seg_pad</ipxact:instanceName> 
 <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">7</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">7</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -3053,7 +3130,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>an_pad</ipxact:instanceName> 
 <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">4</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">4</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -3062,7 +3139,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>sw_pad</ipxact:instanceName> 
 <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">8</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">8</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -3070,7 +3147,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>btn_pad</ipxact:instanceName> 
 <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">4</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">4</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -3079,7 +3156,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>led_pad</ipxact:instanceName> 
 <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">8</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">8</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -3239,7 +3316,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>vga_red_pad</ipxact:instanceName> 
 <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">3</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">3</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -3248,7 +3325,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>vga_green_pad</ipxact:instanceName> 
 <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">3</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">3</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -3257,7 +3334,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>vga_blue_pad</ipxact:instanceName> 
 <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">2</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">2</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -3322,7 +3399,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>memadr_pad</ipxact:instanceName> 
 <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">23</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">23</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -3330,7 +3407,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>memdb_pad</ipxact:instanceName> 
 <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="se_dig" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">16</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">16</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -3367,7 +3444,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>usbadr_pad</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="se_dig" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">2</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">2</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -3385,7 +3462,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>eppdb_pad</ipxact:instanceName> 
 <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="se_dig" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">8</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">8</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -3402,9 +3479,9 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>pio_pad</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="se_dig" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="WIDTH">40</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="OE_WIDTH">40</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="SCMD">0</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WIDTH">40</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="OE_WIDTH">40</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="SCMD">0</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

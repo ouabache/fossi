@@ -26,15 +26,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
      <ipxact:adHocConnection>
        <ipxact:name>clk</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="clk"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="clk"/>
+       <ipxact:externalPortReference portRef="clk"/>
+       <ipxact:internalPortReference componentRef="jtag_model"   portRef="clk"/>
 
      </ipxact:adHocConnection>
 
      <ipxact:adHocConnection>
        <ipxact:name>reset</ipxact:name>
-       <ipxact:externalPortReference ipxact:portRef="reset"/>
-       <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="reset"/>
+       <ipxact:externalPortReference portRef="reset"/>
+       <ipxact:internalPortReference componentRef="jtag_model"   portRef="reset"/>
      </ipxact:adHocConnection>
 
 

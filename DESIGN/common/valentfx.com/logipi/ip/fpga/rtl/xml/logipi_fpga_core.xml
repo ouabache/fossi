@@ -569,9 +569,251 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-   
+<ipxact:model>
+
+<ipxact:ports>  
 
 
+
+      <ipxact:port><ipxact:name>jtag_test_logic_reset</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>jtag_shift_dr</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>jtag_capture_dr</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>jtag_shiftcapture_dr_clk</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>jtag_update_dr_clk</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>jtag_select</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>jtag_tdi</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>jtag_tdo</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>aux_jtag_test_logic_reset</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>aux_jtag_shift_dr</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>aux_jtag_capture_dr</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>aux_jtag_shiftcapture_dr_clk</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>aux_jtag_update_dr_clk</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>aux_jtag_select</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>aux_jtag_tdi</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>aux_jtag_tdo</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>clk</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>reset</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>pwron</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+        <ipxact:port><ipxact:name>one_usec</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>btn_pad_in</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>sw_pad_in</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>led_pad_out</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>pmod1_pad_out</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>pmod1_pad_in</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>pmod1_pad_oe</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>pmod2_pad_out</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>pmod2_pad_in</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>pmod2_pad_oe</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>pmod3_pad_out</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>pmod3_pad_in</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>pmod3_pad_oe</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>pmod4_pad_out</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>pmod4_pad_in</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>pmod4_pad_oe</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>sys_spi_sck_pad_in</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>sys_spi_miso_pad_out</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>sys_spi_mosi_pad_in</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+          <ipxact:port><ipxact:name>rp_spi_ce0n_pad_in</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+  
+ </ipxact:ports>  
+
+</ipxact:model>
 
 
 

@@ -726,7 +726,7 @@ sub parse_design_file
 
             if  ($instance_name)
               {  
-            foreach  my   $i_parameter ($spirit_design_file->findnodes("//ipxact:componentInstance[ipxact:instanceName/text() = '$instance_name']/ipxact:configurableElementValues/ipxact:configurableElementValue/\@ipxact:referenceId"))
+            foreach  my   $i_parameter ($spirit_design_file->findnodes("//ipxact:componentInstance[ipxact:instanceName/text() = '$instance_name']/ipxact:configurableElementValues/ipxact:configurableElementValue/\@referenceId"))
              {
              my($foo_name)       = $i_parameter ->to_literal ;
              my($foo_value)      = $i_parameter ->findnodes('../text()')->to_literal ;

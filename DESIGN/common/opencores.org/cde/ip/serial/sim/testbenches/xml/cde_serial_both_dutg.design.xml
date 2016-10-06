@@ -115,66 +115,66 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>clk</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="clk" />
-<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="clk" />
+<ipxact:internalPortReference componentRef="dutx" portRef="clk" />
+<ipxact:internalPortReference componentRef="dutr" portRef="clk" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>reset</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="reset" />
-<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="reset" />
+<ipxact:internalPortReference componentRef="dutx" portRef="reset" />
+<ipxact:internalPortReference componentRef="dutr" portRef="reset" />
 </ipxact:adHocConnection>
 
 
-<ipxact:adHocConnection ipxact:tiedValue="1'b1" >
-<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="edge_enable" />
+<ipxact:adHocConnection tiedValue="1'b1" >
+<ipxact:internalPortReference componentRef="dutr" portRef="edge_enable" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>xmit_parity_enable</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="parity_enable" />
+<ipxact:internalPortReference componentRef="dutr" portRef="parity_enable" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>xmit_parity_type</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="parity_type" />
+<ipxact:internalPortReference componentRef="dutr" portRef="parity_type" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>xmit_parity_force</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="parity_force" />
+<ipxact:internalPortReference componentRef="dutr" portRef="parity_force" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>shift_buffer</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="shift_buffer" />
+<ipxact:internalPortReference componentRef="dutr" portRef="shift_buffer" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>stop_cnt</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="stop_cnt" />
+<ipxact:internalPortReference componentRef="dutr" portRef="stop_cnt" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>last_cnt</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="last_cnt" />
+<ipxact:internalPortReference componentRef="dutr" portRef="last_cnt" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>parity_calc</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="parity_calc" />
+<ipxact:internalPortReference componentRef="dutr" portRef="parity_calc" />
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>parity_samp</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="parity_samp" />
+<ipxact:internalPortReference componentRef="dutr" portRef="parity_samp" />
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>frame_err</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="frame_err" />
+<ipxact:internalPortReference componentRef="dutr" portRef="frame_err" />
 </ipxact:adHocConnection>
 
 
@@ -183,48 +183,48 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>xmit_edge_enable</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="edge_enable" />
+<ipxact:internalPortReference componentRef="dutx" portRef="edge_enable" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>xmit_parity_enable</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="parity_enable" />
+<ipxact:internalPortReference componentRef="dutx" portRef="parity_enable" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>xmit_parity_type</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="parity_type" />
+<ipxact:internalPortReference componentRef="dutx" portRef="parity_type" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>xmit_parity_force</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="parity_force" />
+<ipxact:internalPortReference componentRef="dutx" portRef="parity_force" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>xmit_load</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="load" />
+<ipxact:internalPortReference componentRef="dutx" portRef="load" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>xmit_start_value</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="start_value" />
+<ipxact:internalPortReference componentRef="dutx" portRef="start_value" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>xmit_stop_value</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="stop_value" />
+<ipxact:internalPortReference componentRef="dutx" portRef="stop_value" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>serial</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="ser_out" />
-<ipxact:internalPortReference  ipxact:componentRef="dutr" ipxact:portRef="ser_in" />
+<ipxact:internalPortReference componentRef="dutx" portRef="ser_out" />
+<ipxact:internalPortReference componentRef="dutr" portRef="ser_in" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>xmit_buffer_empty</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="buffer_empty" />
+<ipxact:internalPortReference componentRef="dutx" portRef="buffer_empty" />
 </ipxact:adHocConnection>
 
 
@@ -234,7 +234,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>xmit_data</ipxact:name>
-<ipxact:internalPortReference  ipxact:componentRef="dutx" ipxact:portRef="data" />
+<ipxact:internalPortReference componentRef="dutx" portRef="data" />
 </ipxact:adHocConnection>
 
 
@@ -253,8 +253,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>dutx</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="cde" name="serial" version="xmit" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="WIDTH">WIDTH</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SIZE">SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SIZE">SIZE</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -263,8 +263,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>dutr</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="cde" name="serial" version="rcvr" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="WIDTH">WIDTH</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SIZE">SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SIZE">SIZE</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

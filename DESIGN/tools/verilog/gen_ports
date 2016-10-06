@@ -606,12 +606,12 @@ sub process_design_file
 
 
 #        print "XCCCD  Process HierConns \n";
-        foreach  my   $i_name ($spirit_design_file->findnodes('//ipxact:hierConnections/ipxact:hierConnection/@ipxact:interfaceRef'))
+        foreach  my   $i_name ($spirit_design_file->findnodes('//ipxact:hierConnections/ipxact:hierConnection/@interfaceRef'))
         {
 
         my($hierConn_name)                   = $i_name ->to_literal ;
-        my($hierConn_comref_name)            = $i_name ->findnodes('../ipxact:interface/@ipxact:componentRef')->to_literal ;
-        my($hierConn_busref_name)            = $i_name ->findnodes('../ipxact:interface/@ipxact:busRef')->to_literal ;
+        my($hierConn_comref_name)            = $i_name ->findnodes('../ipxact:interface/@componentRef')->to_literal ;
+        my($hierConn_busref_name)            = $i_name ->findnodes('../ipxact:interface/@busRef')->to_literal ;
      
 #        print "XCCCC HIER_CONN  inst  ${hierConn_comref_name}  name  ${hierConn_name} busref  $hierConn_busref_name \n";
 
@@ -693,8 +693,8 @@ sub process_design_file
 
         foreach  my  $i_name ($spirit_design_file->findnodes('//ipxact:interconnections/ipxact:interconnection/ipxact:activeInterface'))
            {
-           my($lp_componentref_name)   = $i_name ->findnodes('./@ipxact:componentRef')->to_literal ;
-           my($lp_busref_name)         = $i_name ->findnodes('./@ipxact:busRef')->to_literal ;
+           my($lp_componentref_name)   = $i_name ->findnodes('./@componentRef')->to_literal ;
+           my($lp_busref_name)         = $i_name ->findnodes('./@busRef')->to_literal ;
            my($lp_interconnect_name)   = $i_name ->findnodes('../ipxact:name/text()')->to_literal ;
 
            my $repo_data;
@@ -719,10 +719,10 @@ sub process_design_file
 
 
 
-     foreach  my   $i_name ($spirit_design_file->findnodes('//ipxact:interconnections/ipxact:interconnection/ipxact:activeInterface/@ipxact:componentRef'))
+     foreach  my   $i_name ($spirit_design_file->findnodes('//ipxact:interconnections/ipxact:interconnection/ipxact:activeInterface/@componentRef'))
         {
         my($hierConn_comref_name)            = $i_name ->to_literal;
-        my($hierConn_busref_name)            = $i_name ->findnodes('../@ipxact:busRef')->to_literal ;
+        my($hierConn_busref_name)            = $i_name ->findnodes('../@busRef')->to_literal ;
         my($hierConn_name)                   = $i_name ->findnodes('../../ipxact:name/text()')->to_literal ;
 
 
@@ -742,8 +742,8 @@ sub process_design_file
            my($lp_pname)               = $i_name ->findnodes('../../ipxact:physicalPort/ipxact:name/text()')->to_literal ;
            my($lp_left)                = $i_name ->findnodes('../../ipxact:physicalPort/ipxact:wire/ipxact:vector/ipxact:left/text()')->to_literal ;
            my($lp_right)               = $i_name ->findnodes('../../ipxact:physicalPort/ipxact:wire/ipxact:vector/ipxact:right/text()')->to_literal ;
-           my($lp_componentref_name)   = $i_name ->findnodes('../../../../@ipxact:componentRef')->to_literal ;
-           my($lp_busref_name)         = $i_name ->findnodes('../../../../@ipxact:busRef')->to_literal ;
+           my($lp_componentref_name)   = $i_name ->findnodes('../../../../@componentRef')->to_literal ;
+           my($lp_busref_name)         = $i_name ->findnodes('../../../../@busRef')->to_literal ;
            my($lp_interconnect_name)   = $i_name ->findnodes('../../../../../ipxact:name/text()')->to_literal ;
            $lp_vector = "vector";
 
@@ -892,15 +892,15 @@ sub process_design_file
 
 
 
-     foreach  my   $i_name ($spirit_design_file->findnodes('//ipxact:adHocConnections/ipxact:adHocConnection/ipxact:internalPortReference/@ipxact:componentRef'))
+     foreach  my   $i_name ($spirit_design_file->findnodes('//ipxact:adHocConnections/ipxact:adHocConnection/ipxact:internalPortReference/@componentRef'))
         {
         my($componentRef_name)      = $i_name ->to_literal;
         my($adhocConnection_name)   = $i_name ->findnodes('../../ipxact:name/text()')->to_literal ;
-        my($tied_value)             = $i_name ->findnodes('../../@ipxact:tiedValue')->to_literal ;
-        my($int_portRef_name)       = $i_name ->findnodes('../@ipxact:portRef')->to_literal ;
-        my($ext_portRef_name)       = $i_name ->findnodes('../../ipxact:externalPortReference/@ipxact:portRef')->to_literal ;
-        my($left)                   = $i_name ->findnodes('../../ipxact:externalPortReference/@ipxact:left')->to_literal ;
-        my($right)                  = $i_name ->findnodes('../../ipxact:externalPortReference/@ipxact:right')->to_literal ;
+        my($tied_value)             = $i_name ->findnodes('../../@tiedValue')->to_literal ;
+        my($int_portRef_name)       = $i_name ->findnodes('../@portRef')->to_literal ;
+        my($ext_portRef_name)       = $i_name ->findnodes('../../ipxact:externalPortReference/@portRef')->to_literal ;
+        my($left)                   = $i_name ->findnodes('../../ipxact:externalPortReference/@left')->to_literal ;
+        my($right)                  = $i_name ->findnodes('../../ipxact:externalPortReference/@right')->to_literal ;
 
 
         if(  $left ne "" ) 

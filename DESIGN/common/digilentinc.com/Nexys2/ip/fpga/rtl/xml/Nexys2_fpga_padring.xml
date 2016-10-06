@@ -1687,6 +1687,323 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+
+<ipxact:ports>
+
+
+<ipxact:port><ipxact:name>A_CLK</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+<ipxact:port><ipxact:name>B_CLK</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+<ipxact:port><ipxact:name>SW</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+<ipxact:port><ipxact:name>BTN</ipxact:name>
+<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+ <ipxact:port><ipxact:name>LED</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>AN</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>SEG</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>DP</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>VGARED</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>VGAGREEN</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>VGABLUE</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>HSYNC_N</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>VSYNC_N</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>PS2C</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>PS2D</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>RTS</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>TXD</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>CTS</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>RXD</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>RS_RX</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>RS_TX</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JA_1</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JA_2</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JA_3</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JA_4</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JA_7</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JA_8</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JA_9</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JA_10</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JB_1</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JB_2</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JB_3</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JB_4</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JB_7</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JB_8</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JB_9</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JB_10</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JC_1</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JC_2</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JC_3</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JC_4</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JC_7</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JC_8</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JC_9</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>JC_10</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>MEMADR</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>MEMDB</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>MEMOE</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>MEMWR</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>RAMADV</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>RAMCLK</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>RAMUB</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>RAMLB</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>RAMCS</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>RAMCRE</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>RAMWAIT</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>FLASHSTSTS</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>FLASHRP</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>FLASHCS</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>EPPASTB</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>EPPDSTB</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>USBFLAG</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>EPPWAIT</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>USBWR</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>USBMODE</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>USBOE</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>USBPKTEND</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>USBDIR</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>USBCLK</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>USBRDY</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>USBADR</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+ <ipxact:port><ipxact:name>EPPDB</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+ </ipxact:port>
+<ipxact:port><ipxact:name>PIO</ipxact:name>
+ <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+ <ipxact:wire><ipxact:direction>inout</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+
+
+</ipxact:ports>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ipxact:model>
 
 

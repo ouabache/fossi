@@ -67,47 +67,47 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="cg" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="clk"/>
+      <ipxact:internalPortReference componentRef="cg" portRef="clk"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="cg" ipxact:portRef="reset"/>
+      <ipxact:externalPortReference portRef="reset"/>
+      <ipxact:internalPortReference componentRef="cg" portRef="reset"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>START</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="START"/>
-      <ipxact:internalPortReference ipxact:componentRef="cg" ipxact:portRef="START"/>
+      <ipxact:externalPortReference portRef="START"/>
+      <ipxact:internalPortReference componentRef="cg" portRef="START"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>FAIL</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="FAIL"/>
-      <ipxact:internalPortReference ipxact:componentRef="cg" ipxact:portRef="FAIL"/>
+      <ipxact:externalPortReference portRef="FAIL"/>
+      <ipxact:internalPortReference componentRef="cg" portRef="FAIL"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>FINISH</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="FINISH"/>
-      <ipxact:internalPortReference ipxact:componentRef="cg" ipxact:portRef="FINISH"/>
+      <ipxact:externalPortReference portRef="FINISH"/>
+      <ipxact:internalPortReference componentRef="cg" portRef="FINISH"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>STOP</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cg" ipxact:portRef="STOP"/>
+      <ipxact:internalPortReference componentRef="cg" portRef="STOP"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>BAD</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cg" ipxact:portRef="BAD"/>
+      <ipxact:internalPortReference componentRef="cg" portRef="BAD"/>
     </ipxact:adHocConnection>
 
 

@@ -208,168 +208,168 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_clk_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="clk_filter" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="data_filter" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_xmit" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_rcvr" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="slave_clk_clk"/>
+      <ipxact:internalPortReference componentRef="clk_filter" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="data_filter" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="cde_serial_xmit" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="cde_serial_rcvr" portRef="clk"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_reset_reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="clk_filter" ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="data_filter" ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_xmit" ipxact:portRef="reset"/>
+      <ipxact:externalPortReference portRef="slave_reset_reset"/>
+      <ipxact:internalPortReference componentRef="clk_filter" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="data_filter" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="cde_serial_xmit" portRef="reset"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_clk_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="ps2_clk_pad_in"/>
-      <ipxact:internalPortReference ipxact:componentRef="clk_filter" ipxact:portRef="data_in"/>
+      <ipxact:externalPortReference portRef="ps2_clk_pad_in"/>
+      <ipxact:internalPortReference componentRef="clk_filter" portRef="data_in"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_data_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="ps2_data_pad_in"/>
-      <ipxact:internalPortReference ipxact:componentRef="data_filter" ipxact:portRef="data_in"/>
+      <ipxact:externalPortReference portRef="ps2_data_pad_in"/>
+      <ipxact:internalPortReference componentRef="data_filter" portRef="data_in"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_clk_s</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="clk_filter" ipxact:portRef="data_out"/>
+      <ipxact:internalPortReference componentRef="clk_filter" portRef="data_out"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_clk_rise</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="clk_filter" ipxact:portRef="data_rise"/>
+      <ipxact:internalPortReference componentRef="clk_filter" portRef="data_rise"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_clk_fall</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="clk_filter" ipxact:portRef="data_fall"/>
+      <ipxact:internalPortReference componentRef="clk_filter" portRef="data_fall"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_data_s</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="data_filter" ipxact:portRef="data_out"/>
+      <ipxact:internalPortReference componentRef="data_filter" portRef="data_out"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name></ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="data_filter" ipxact:portRef="data_rise"/>
-      <ipxact:internalPortReference ipxact:componentRef="data_filter" ipxact:portRef="data_fall"/>
+      <ipxact:internalPortReference componentRef="data_filter" portRef="data_rise"/>
+      <ipxact:internalPortReference componentRef="data_filter" portRef="data_fall"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>cde_serial_xmit_edge_enable</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_xmit" ipxact:portRef="edge_enable"/>
+      <ipxact:internalPortReference componentRef="cde_serial_xmit" portRef="edge_enable"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>cde_serial_xmit_load</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_xmit" ipxact:portRef="load"/>
+      <ipxact:internalPortReference componentRef="cde_serial_xmit" portRef="load"/>
     </ipxact:adHocConnection>
 
 
- <ipxact:adHocConnection ipxact:tiedValue="1'b1"  >
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_xmit" ipxact:portRef="parity_enable"/>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_xmit" ipxact:portRef="start_value"/>
+ <ipxact:adHocConnection tiedValue="1'b1"  >
+      <ipxact:internalPortReference componentRef="cde_serial_xmit" portRef="parity_enable"/>
+      <ipxact:internalPortReference componentRef="cde_serial_xmit" portRef="start_value"/>
     </ipxact:adHocConnection>
 
 
- <ipxact:adHocConnection ipxact:tiedValue="1'b0" >
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_xmit" ipxact:portRef="parity_type"/>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_xmit" ipxact:portRef="parity_force"/>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_xmit" ipxact:portRef="stop_value"/>
+ <ipxact:adHocConnection tiedValue="1'b0" >
+      <ipxact:internalPortReference componentRef="cde_serial_xmit" portRef="parity_type"/>
+      <ipxact:internalPortReference componentRef="cde_serial_xmit" portRef="parity_force"/>
+      <ipxact:internalPortReference componentRef="cde_serial_xmit" portRef="stop_value"/>
     </ipxact:adHocConnection>
 
 
 
  <ipxact:adHocConnection>
       <ipxact:name>~tx_data</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_xmit" ipxact:portRef="data"/>
+      <ipxact:internalPortReference componentRef="cde_serial_xmit" portRef="data"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>tx_buffer_empty</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_xmit" ipxact:portRef="buffer_empty"/>
+      <ipxact:internalPortReference componentRef="cde_serial_xmit" portRef="buffer_empty"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_data_pad_oe</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="ps2_data_pad_oe"/>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_xmit" ipxact:portRef="ser_out"/>
+      <ipxact:externalPortReference portRef="ps2_data_pad_oe"/>
+      <ipxact:internalPortReference componentRef="cde_serial_xmit" portRef="ser_out"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>cde_serial_rcvr_reset</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_rcvr" ipxact:portRef="reset"/>
+      <ipxact:internalPortReference componentRef="cde_serial_rcvr" portRef="reset"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_clk_fall</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_rcvr" ipxact:portRef="edge_enable"/>
+      <ipxact:internalPortReference componentRef="cde_serial_rcvr" portRef="edge_enable"/>
     </ipxact:adHocConnection>
 
 
- <ipxact:adHocConnection ipxact:tiedValue="1'b1" >
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_rcvr" ipxact:portRef="parity_enable"/>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_rcvr" ipxact:portRef="parity_type"/>
+ <ipxact:adHocConnection tiedValue="1'b1" >
+      <ipxact:internalPortReference componentRef="cde_serial_rcvr" portRef="parity_enable"/>
+      <ipxact:internalPortReference componentRef="cde_serial_rcvr" portRef="parity_type"/>
     </ipxact:adHocConnection>
 
 
- <ipxact:adHocConnection ipxact:tiedValue="1'b0" >
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_rcvr" ipxact:portRef="parity_force"/>
+ <ipxact:adHocConnection tiedValue="1'b0" >
+      <ipxact:internalPortReference componentRef="cde_serial_rcvr" portRef="parity_force"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>ps2_data_s</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_rcvr" ipxact:portRef="ser_in"/>
+      <ipxact:internalPortReference componentRef="cde_serial_rcvr" portRef="ser_in"/>
     </ipxact:adHocConnection>
 
  <ipxact:adHocConnection>
       <ipxact:name>x_shift_buffer</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_rcvr" ipxact:portRef="shift_buffer"/>
+      <ipxact:internalPortReference componentRef="cde_serial_rcvr" portRef="shift_buffer"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>x_stop_cnt</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_rcvr" ipxact:portRef="stop_cnt"/>
+      <ipxact:internalPortReference componentRef="cde_serial_rcvr" portRef="stop_cnt"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>x_last_cnt</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_rcvr" ipxact:portRef="last_cnt"/>
+      <ipxact:internalPortReference componentRef="cde_serial_rcvr" portRef="last_cnt"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>x_parity_calc</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_rcvr" ipxact:portRef="parity_calc"/>
+      <ipxact:internalPortReference componentRef="cde_serial_rcvr" portRef="parity_calc"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>x_parity_samp</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_rcvr" ipxact:portRef="parity_samp"/>
+      <ipxact:internalPortReference componentRef="cde_serial_rcvr" portRef="parity_samp"/>
     </ipxact:adHocConnection>
 
 
  <ipxact:adHocConnection>
       <ipxact:name>x_frame_err</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="cde_serial_rcvr" ipxact:portRef="frame_err"/>
+      <ipxact:internalPortReference componentRef="cde_serial_rcvr" portRef="frame_err"/>
     </ipxact:adHocConnection>
 
 
@@ -383,14 +383,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>clk_filter</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="sync" version="with_hysteresis" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="DEBOUNCE_DELAY">DEBOUNCE_DELAY</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="DEBOUNCE_DELAY">DEBOUNCE_DELAY</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>   
 
 <ipxact:componentInstance>
 <ipxact:instanceName>data_filter</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="sync" version="with_hysteresis" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="DEBOUNCE_DELAY">DEBOUNCE_DELAY</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="DEBOUNCE_DELAY">DEBOUNCE_DELAY</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>   
 

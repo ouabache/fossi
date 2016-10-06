@@ -20,116 +20,116 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>busy</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="busy" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="busy" />
+<ipxact:externalPortReference portRef="busy" />
+<ipxact:internalPortReference componentRef="dut" portRef="busy" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>clk</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="clk" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="clk" />
+<ipxact:externalPortReference portRef="clk" />
+<ipxact:internalPortReference componentRef="dut" portRef="clk" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>ps2_clk_pad_in</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="ps2_clk_pad_in" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ps2_clk_pad_in" />
+<ipxact:externalPortReference portRef="ps2_clk_pad_in" />
+<ipxact:internalPortReference componentRef="dut" portRef="ps2_clk_pad_in" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>ps2_clk_pad_oe</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="ps2_clk_pad_oe" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ps2_clk_pad_oe" />
+<ipxact:externalPortReference portRef="ps2_clk_pad_oe" />
+<ipxact:internalPortReference componentRef="dut" portRef="ps2_clk_pad_oe" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>ps2_data_pad_in</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="ps2_data_pad_in" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ps2_data_pad_in" />
+<ipxact:externalPortReference portRef="ps2_data_pad_in" />
+<ipxact:internalPortReference componentRef="dut" portRef="ps2_data_pad_in" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>ps2_data_pad_oe</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="ps2_data_pad_oe" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="ps2_data_pad_oe" />
+<ipxact:externalPortReference portRef="ps2_data_pad_oe" />
+<ipxact:internalPortReference componentRef="dut" portRef="ps2_data_pad_oe" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>reset</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="reset" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reset" />
+<ipxact:externalPortReference portRef="reset" />
+<ipxact:internalPortReference componentRef="dut" portRef="reset" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rx_clear</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rx_clear" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rx_clear" />
+<ipxact:externalPortReference portRef="rx_clear" />
+<ipxact:internalPortReference componentRef="dut" portRef="rx_clear" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rx_data</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="rx_data" ipxact:left="7" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rx_data" />
+<ipxact:externalPortReference portRef="rx_data" left="7" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="rx_data" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rx_frame_error</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rx_frame_error" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rx_frame_error" />
+<ipxact:externalPortReference portRef="rx_frame_error" />
+<ipxact:internalPortReference componentRef="dut" portRef="rx_frame_error" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rx_full</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rx_full" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rx_full" />
+<ipxact:externalPortReference portRef="rx_full" />
+<ipxact:internalPortReference componentRef="dut" portRef="rx_full" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rx_parity_cal</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rx_parity_cal" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rx_parity_cal" />
+<ipxact:externalPortReference portRef="rx_parity_cal" />
+<ipxact:internalPortReference componentRef="dut" portRef="rx_parity_cal" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rx_parity_error</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rx_parity_error" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rx_parity_error" />
+<ipxact:externalPortReference portRef="rx_parity_error" />
+<ipxact:internalPortReference componentRef="dut" portRef="rx_parity_error" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rx_parity_rcv</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rx_parity_rcv" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rx_parity_rcv" />
+<ipxact:externalPortReference portRef="rx_parity_rcv" />
+<ipxact:internalPortReference componentRef="dut" portRef="rx_parity_rcv" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rx_read</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rx_read" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rx_read" />
+<ipxact:externalPortReference portRef="rx_read" />
+<ipxact:internalPortReference componentRef="dut" portRef="rx_read" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>tx_ack_error</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="tx_ack_error" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="tx_ack_error" />
+<ipxact:externalPortReference portRef="tx_ack_error" />
+<ipxact:internalPortReference componentRef="dut" portRef="tx_ack_error" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>tx_buffer_empty</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="tx_buffer_empty" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="tx_buffer_empty" />
+<ipxact:externalPortReference portRef="tx_buffer_empty" />
+<ipxact:internalPortReference componentRef="dut" portRef="tx_buffer_empty" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>tx_data</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="tx_data" ipxact:left="7" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="tx_data" />
+<ipxact:externalPortReference portRef="tx_data" left="7" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="tx_data" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>tx_write</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="tx_write" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="tx_write" />
+<ipxact:externalPortReference portRef="tx_write" />
+<ipxact:internalPortReference componentRef="dut" portRef="tx_write" />
 </ipxact:adHocConnection>
 
 
@@ -140,10 +140,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>dut</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="logic" name="ps2_interface" version="def" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="CLK_HOLD_DELAY">CLK_HOLD_DELAY</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="DATA_SETUP_DELAY">DATA_SETUP_DELAY</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="DEBOUNCE_DELAY">DEBOUNCE_DELAY</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="FREQ">FREQ</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CLK_HOLD_DELAY">CLK_HOLD_DELAY</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="DATA_SETUP_DELAY">DATA_SETUP_DELAY</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="DEBOUNCE_DELAY">DEBOUNCE_DELAY</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="FREQ">FREQ</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 </ipxact:componentInstances>

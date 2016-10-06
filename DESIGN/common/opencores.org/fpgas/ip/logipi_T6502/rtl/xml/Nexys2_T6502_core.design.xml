@@ -45,12 +45,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:hierConnections>
 
-    <ipxact:hierConnection       ipxact:interfaceRef="jtag" >
-    <ipxact:interface ipxact:componentRef="jtag_rpc1" ipxact:busRef="jtag"/>
+    <ipxact:hierConnection       interfaceRef="jtag" >
+    <ipxact:interface componentRef="jtag_rpc1" busRef="jtag"/>
     </ipxact:hierConnection>
 
-    <ipxact:hierConnection       ipxact:interfaceRef="aux_jtag" >
-    <ipxact:interface ipxact:componentRef="jtag_rpc2" ipxact:busRef="jtag"/>
+    <ipxact:hierConnection       interfaceRef="aux_jtag" >
+    <ipxact:interface componentRef="jtag_rpc2" busRef="jtag"/>
     </ipxact:hierConnection>
 
     
@@ -74,77 +74,77 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_clk_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="spi_xxx" ipxact:portRef="clk" />
+      <ipxact:externalPortReference portRef="slave_clk_clk"/>
+      <ipxact:internalPortReference componentRef="spi_xxx" portRef="clk" />
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_reset_reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="spi_xxx" ipxact:portRef="reset" />
+      <ipxact:externalPortReference portRef="slave_reset_reset"/>
+      <ipxact:internalPortReference componentRef="spi_xxx" portRef="reset" />
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>btn_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="btn_pad_pad_in"/>
+      <ipxact:externalPortReference portRef="btn_pad_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>sw_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="sw_pad_pad_in"/>
+      <ipxact:externalPortReference portRef="sw_pad_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>led_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="led_pad_pad_out"/>
+      <ipxact:externalPortReference portRef="led_pad_pad_out"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>sys_spi_sck_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="sys_spi_sck_pad_pad_in"/>
-      <ipxact:internalPortReference ipxact:componentRef="spi_xxx" ipxact:portRef="spi_clk_pad_in" />
+      <ipxact:externalPortReference portRef="sys_spi_sck_pad_pad_in"/>
+      <ipxact:internalPortReference componentRef="spi_xxx" portRef="spi_clk_pad_in" />
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>sys_spi_mosi_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="sys_spi_mosi_pad_pad_in"/>
-      <ipxact:internalPortReference ipxact:componentRef="spi_xxx" ipxact:portRef="spi_mosi_pad_in" />
+      <ipxact:externalPortReference portRef="sys_spi_mosi_pad_pad_in"/>
+      <ipxact:internalPortReference componentRef="spi_xxx" portRef="spi_mosi_pad_in" />
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>sys_spi_miso_pad_out</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="sys_spi_miso_pad_pad_out"/>
-      <ipxact:internalPortReference ipxact:componentRef="spi_xxx" ipxact:portRef="spi_miso_pad_out" />
+      <ipxact:externalPortReference portRef="sys_spi_miso_pad_pad_out"/>
+      <ipxact:internalPortReference componentRef="spi_xxx" portRef="spi_miso_pad_out" />
     </ipxact:adHocConnection>
 
 
     
     <ipxact:adHocConnection>
       <ipxact:name>rp_spi_ce0n_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="rp_spi_ce0n_pad_pad_in"/>
-      <ipxact:internalPortReference ipxact:componentRef="spi_xxx" ipxact:portRef="spi_sel_n_pad_in" />
+      <ipxact:externalPortReference portRef="rp_spi_ce0n_pad_pad_in"/>
+      <ipxact:internalPortReference componentRef="spi_xxx" portRef="spi_sel_n_pad_in" />
     </ipxact:adHocConnection>
 
 
         
 <ipxact:adHocConnection>
 <ipxact:name>tx_data</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="tx_data"  ipxact:left="15"    ipxact:right="0"/>
-<ipxact:internalPortReference  ipxact:componentRef="spi_xxx" ipxact:portRef="tx_data" />
+<ipxact:externalPortReference portRef="tx_data"  left="15"    right="0"/>
+<ipxact:internalPortReference componentRef="spi_xxx" portRef="tx_data" />
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>rx_data</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rx_data"  ipxact:left="15"    ipxact:right="0"/>
-<ipxact:internalPortReference  ipxact:componentRef="spi_xxx" ipxact:portRef="rx_data" />
+<ipxact:externalPortReference portRef="rx_data"  left="15"    right="0"/>
+<ipxact:internalPortReference componentRef="spi_xxx" portRef="rx_data" />
 </ipxact:adHocConnection>
 
 
@@ -154,17 +154,17 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     
 <ipxact:adHocConnection>
 <ipxact:name>pmod3_pad_out</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="update_value"  ipxact:left="7"    ipxact:right="0"/>
-<ipxact:internalPortReference  ipxact:componentRef="jtag_rpc1" ipxact:portRef="update_value" />
-<ipxact:internalPortReference  ipxact:componentRef="jtag_rpc1" ipxact:portRef="capture_value" />
+<ipxact:externalPortReference portRef="update_value"  left="7"    right="0"/>
+<ipxact:internalPortReference componentRef="jtag_rpc1" portRef="update_value" />
+<ipxact:internalPortReference componentRef="jtag_rpc1" portRef="capture_value" />
 </ipxact:adHocConnection>
 
 
 <ipxact:adHocConnection>
 <ipxact:name>pmod4_pad_out</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="update_value"  ipxact:left="7"    ipxact:right="0"/>
-<ipxact:internalPortReference  ipxact:componentRef="jtag_rpc2" ipxact:portRef="update_value" />
-<ipxact:internalPortReference  ipxact:componentRef="jtag_rpc2" ipxact:portRef="capture_value" />
+<ipxact:externalPortReference portRef="update_value"  left="7"    right="0"/>
+<ipxact:internalPortReference componentRef="jtag_rpc2" portRef="update_value" />
+<ipxact:internalPortReference componentRef="jtag_rpc2" portRef="capture_value" />
 </ipxact:adHocConnection>
 
 
@@ -184,8 +184,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
  <ipxact:instanceName>jtag_rpc1</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="classic_rpc_reg" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="BITS">8</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="RESET_VALUE">8'haa</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="BITS">8</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="RESET_VALUE">8'haa</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -194,8 +194,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
  <ipxact:instanceName>jtag_rpc2</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="classic_rpc_reg" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="BITS">8</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="RESET_VALUE">8'h55</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="BITS">8</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="RESET_VALUE">8'h55</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

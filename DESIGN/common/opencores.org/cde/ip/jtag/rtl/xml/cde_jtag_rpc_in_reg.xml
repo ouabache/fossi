@@ -23,7 +23,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  <ipxact:busInterface><ipxact:name>jtag</ipxact:name>
 
-<ipxact:busType vendor="opencores.org" library="Busdefs" name="jtag" version="rpc"/>
+<ipxact:busType vendor="opencores.org" library="cde" name="jtag" version="rpc"/>
 
 
   <ipxact:abstractionTypes>

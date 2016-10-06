@@ -91,29 +91,29 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:hierConnections>
 
-    <ipxact:hierConnection      ipxact:interfaceRef="JTAG_TCK" >
-      <ipxact:interface ipxact:componentRef="jtag_tclk_pad" ipxact:busRef="pad_ring"/>
+    <ipxact:hierConnection      interfaceRef="JTAG_TCK" >
+      <ipxact:interface componentRef="jtag_tclk_pad" busRef="pad_ring"/>
       </ipxact:hierConnection>
 
 
-    <ipxact:hierConnection      ipxact:interfaceRef="JTAG_TRESET_N" >
-      <ipxact:interface ipxact:componentRef="jtag_trst_n_pad" ipxact:busRef="pad_ring"/>
+    <ipxact:hierConnection      interfaceRef="JTAG_TRESET_N" >
+      <ipxact:interface componentRef="jtag_trst_n_pad" busRef="pad_ring"/>
       </ipxact:hierConnection>
 
 
 
-    <ipxact:hierConnection      ipxact:interfaceRef="JTAG_TMS" >
-      <ipxact:interface ipxact:componentRef="jtag_tms_pad" ipxact:busRef="pad_ring"/>
+    <ipxact:hierConnection      interfaceRef="JTAG_TMS" >
+      <ipxact:interface componentRef="jtag_tms_pad" busRef="pad_ring"/>
       </ipxact:hierConnection>
 
 
-    <ipxact:hierConnection      ipxact:interfaceRef="JTAG_TDI" >
-      <ipxact:interface ipxact:componentRef="jtag_tdi_pad" ipxact:busRef="pad_ring"/>
+    <ipxact:hierConnection      interfaceRef="JTAG_TDI" >
+      <ipxact:interface componentRef="jtag_tdi_pad" busRef="pad_ring"/>
       </ipxact:hierConnection>
 
 
-    <ipxact:hierConnection      ipxact:interfaceRef="JTAG_TDO" >
-      <ipxact:interface ipxact:componentRef="jtag_tdo_pad" ipxact:busRef="pad_ring"/>
+    <ipxact:hierConnection      interfaceRef="JTAG_TDO" >
+      <ipxact:interface componentRef="jtag_tdo_pad" busRef="pad_ring"/>
       </ipxact:hierConnection>
 
 
@@ -130,7 +130,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:interconnection>
       <ipxact:name>JTAG_TCK</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jtag_tclk_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jtag_tclk_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -139,13 +139,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>
-      </ipxact:activeInterface>
+       </ipxact:activeInterface>
+      <ipxact:hierInterface busRef="JTAG_TCK"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>JTAG_TRESET_N</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jtag_trst_n_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jtag_trst_n_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -155,13 +156,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+      <ipxact:hierInterface busRef=""/>
     </ipxact:interconnection>
 
 
 
     <ipxact:interconnection>
       <ipxact:name>JTAG_TDI</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jtag_tdi_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jtag_tdi_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -171,12 +173,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+      <ipxact:hierInterface busRef="JTAG_TDI"/>
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>JTAG_TMS</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jtag_tms_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jtag_tms_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
@@ -185,13 +188,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>
-      </ipxact:activeInterface>
+       </ipxact:activeInterface>
+      <ipxact:hierInterface busRef="JTAG_TMS"/>       
     </ipxact:interconnection>
 
 
     <ipxact:interconnection>
       <ipxact:name>JTAG_TDO</ipxact:name>
-       <ipxact:activeInterface ipxact:componentRef="jtag_tdo_pad" ipxact:busRef="pad_ring">
+       <ipxact:activeInterface componentRef="jtag_tdo_pad" busRef="pad_ring">
         <ipxact:portMaps>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
@@ -201,6 +205,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
+      <ipxact:hierInterface busRef="JTAG_TDO"/>
     </ipxact:interconnection>
 
 
@@ -219,8 +224,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tclk_pad_in</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_tap" ipxact:portRef="tclk_pad_in"/>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_tclk_pad" ipxact:portRef="pad_in"/>
+      <ipxact:internalPortReference componentRef="jtag_tap" portRef="tclk_pad_in"/>
+      <ipxact:internalPortReference componentRef="jtag_tclk_pad" portRef="pad_in"/>
     </ipxact:adHocConnection>
 
 
@@ -230,34 +235,34 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_trst_n_pad_in</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_tap" ipxact:portRef="trst_n_pad_in"/>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_trst_n_pad" ipxact:portRef="pad_in"/>
+      <ipxact:internalPortReference componentRef="jtag_tap" portRef="trst_n_pad_in"/>
+      <ipxact:internalPortReference componentRef="jtag_trst_n_pad" portRef="pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tdi_pad_in</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_tap" ipxact:portRef="tdi_pad_in"/>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_tdi_pad" ipxact:portRef="pad_in"/>
+      <ipxact:internalPortReference componentRef="jtag_tap" portRef="tdi_pad_in"/>
+      <ipxact:internalPortReference componentRef="jtag_tdi_pad" portRef="pad_in"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tms_pad_in</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_tap" ipxact:portRef="tms_pad_in"/>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_tms_pad" ipxact:portRef="pad_in"/>
+      <ipxact:internalPortReference componentRef="jtag_tap" portRef="tms_pad_in"/>
+      <ipxact:internalPortReference componentRef="jtag_tms_pad" portRef="pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tdo_pad_out</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_tap" ipxact:portRef="tdo_pad_out"/>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_tdo_pad" ipxact:portRef="pad_out"/>
+      <ipxact:internalPortReference componentRef="jtag_tap" portRef="tdo_pad_out"/>
+      <ipxact:internalPortReference componentRef="jtag_tdo_pad" portRef="pad_out"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tdo_pad_oe</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_tap" ipxact:portRef="tdo_pad_oe"/>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_tdo_pad" ipxact:portRef="pad_oe"/>
+      <ipxact:internalPortReference componentRef="jtag_tap" portRef="tdo_pad_oe"/>
+      <ipxact:internalPortReference componentRef="jtag_tdo_pad" portRef="pad_oe"/>
     </ipxact:adHocConnection>
 
   </ipxact:adHocConnections>

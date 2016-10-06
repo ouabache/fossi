@@ -43,8 +43,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:hierConnections>
 
-    <ipxact:hierConnection ipxact:interfaceRef="vga">
-      <ipxact:interface ipxact:componentRef="vga_char_ctrl" ipxact:busRef="vga"/>
+    <ipxact:hierConnection interfaceRef="vga">
+      <ipxact:interface componentRef="vga_char_ctrl" busRef="vga"/>
       </ipxact:hierConnection>
 
     </ipxact:hierConnections>
@@ -111,62 +111,62 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
    <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_clk_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="vga_char_ctrl" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="slave_clk_clk"/>
+      <ipxact:internalPortReference componentRef="vga_char_ctrl" portRef="clk"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="slave_reset_reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="vga_char_ctrl" ipxact:portRef="reset"/>
+      <ipxact:externalPortReference portRef="slave_reset_reset"/>
+      <ipxact:internalPortReference componentRef="vga_char_ctrl" portRef="reset"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>ascii_load</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="ascii_load"/>
-      <ipxact:internalPortReference ipxact:componentRef="vga_char_ctrl" ipxact:portRef="ascii_load"/>
+      <ipxact:externalPortReference portRef="ascii_load"/>
+      <ipxact:internalPortReference componentRef="vga_char_ctrl" portRef="ascii_load"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>add_l_load</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="add_l_load"/>
-      <ipxact:internalPortReference ipxact:componentRef="vga_char_ctrl" ipxact:portRef="add_l_load"/>
+      <ipxact:externalPortReference portRef="add_l_load"/>
+      <ipxact:internalPortReference componentRef="vga_char_ctrl" portRef="add_l_load"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>add_h_load</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="add_h_load"/>
-      <ipxact:internalPortReference ipxact:componentRef="vga_char_ctrl" ipxact:portRef="add_h_load"/>
+      <ipxact:externalPortReference portRef="add_h_load"/>
+      <ipxact:internalPortReference componentRef="vga_char_ctrl" portRef="add_h_load"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>lat_wdata</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="lat_wdata" ipxact:left="7" ipxact:right="0" />
-      <ipxact:internalPortReference ipxact:componentRef="vga_char_ctrl" ipxact:portRef="wdata"/>
+      <ipxact:externalPortReference portRef="lat_wdata" left="7" right="0" />
+      <ipxact:internalPortReference componentRef="vga_char_ctrl" portRef="wdata"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>vga_address</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="vga_address"  ipxact:left="13" ipxact:right="0"/>
-      <ipxact:internalPortReference ipxact:componentRef="vga_char_ctrl" ipxact:portRef="address"/>
+      <ipxact:externalPortReference portRef="vga_address"  left="13" right="0"/>
+      <ipxact:internalPortReference componentRef="vga_char_ctrl" portRef="address"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>char_color</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="char_color"  ipxact:left="7" ipxact:right="0" />
-      <ipxact:internalPortReference ipxact:componentRef="vga_char_ctrl" ipxact:portRef="char_color"/>
+      <ipxact:externalPortReference portRef="char_color"  left="7" right="0" />
+      <ipxact:internalPortReference componentRef="vga_char_ctrl" portRef="char_color"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>back_color</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="back_color"  ipxact:left="7" ipxact:right="0" />
-      <ipxact:internalPortReference ipxact:componentRef="vga_char_ctrl" ipxact:portRef="back_color"/>
+      <ipxact:externalPortReference portRef="back_color"  left="7" right="0" />
+      <ipxact:internalPortReference componentRef="vga_char_ctrl" portRef="back_color"/>
     </ipxact:adHocConnection>
 
    <ipxact:adHocConnection>
       <ipxact:name>cursor_color</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="cursor_color" ipxact:left="7" ipxact:right="0"  />
-      <ipxact:internalPortReference ipxact:componentRef="vga_char_ctrl" ipxact:portRef="cursor_color"/>
+      <ipxact:externalPortReference portRef="cursor_color" left="7" right="0"  />
+      <ipxact:internalPortReference componentRef="vga_char_ctrl" portRef="cursor_color"/>
     </ipxact:adHocConnection>
 
 

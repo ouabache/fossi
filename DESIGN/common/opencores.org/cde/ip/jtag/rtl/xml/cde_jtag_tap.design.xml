@@ -134,55 +134,55 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="jtag_clk"/>
+      <ipxact:internalPortReference componentRef="chip_id_reg" portRef="clk"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>trst_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="trst_pad_in"/>
-      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="reset"/>
+      <ipxact:externalPortReference portRef="trst_pad_in"/>
+      <ipxact:internalPortReference componentRef="chip_id_reg" portRef="reset"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>tdi_pad_in</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="JTAG_INT_JTAG_TDI_PAD_IN"/>
-      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="tdi"/>
+      <ipxact:externalPortReference portRef="tdi_pad_in"/>
+      <ipxact:internalPortReference componentRef="chip_id_reg" portRef="tdi"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>chip_id_select</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="chip_id_select"/>
-      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="select"/>
+      <ipxact:externalPortReference portRef="chip_id_select"/>
+      <ipxact:internalPortReference componentRef="chip_id_reg" portRef="select"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>chip_id_tdo</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="chip_id_tdo"/>
-      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="tdo"/>
+      <ipxact:externalPortReference portRef="chip_id_tdo"/>
+      <ipxact:internalPortReference componentRef="chip_id_reg" portRef="tdo"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>capture_dr_o</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_capture_dr"/>
-      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="capture_dr"/>
+      <ipxact:externalPortReference portRef="jtag_capture_dr"/>
+      <ipxact:internalPortReference componentRef="chip_id_reg" portRef="capture_dr"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>shift_dr_o</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_shift_dr"/>
-      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="shift_dr"/>
+      <ipxact:externalPortReference portRef="jtag_shift_dr"/>
+      <ipxact:internalPortReference componentRef="chip_id_reg" portRef="shift_dr"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>tclk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="tclk"/>
-      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_shift_clk" ipxact:portRef="clk_in"/>
-      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_update_clk" ipxact:portRef="clk_in"/>
-      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_clk" ipxact:portRef="clk_in"/>
+      <ipxact:externalPortReference portRef="tclk"/>
+      <ipxact:internalPortReference componentRef="clk_gater_jtag_shift_clk" portRef="clk_in"/>
+      <ipxact:internalPortReference componentRef="clk_gater_jtag_update_clk" portRef="clk_in"/>
+      <ipxact:internalPortReference componentRef="clk_gater_jtag_clk" portRef="clk_in"/>
     </ipxact:adHocConnection>
 
 
@@ -191,54 +191,54 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_shift_clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_shift_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_shift_clk" ipxact:portRef="clk_out"/>
+      <ipxact:externalPortReference portRef="jtag_shift_clk"/>
+      <ipxact:internalPortReference componentRef="clk_gater_jtag_shift_clk" portRef="clk_out"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>update_dr_clk_o</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_update_dr_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_update_clk" ipxact:portRef="clk_out"/>
+      <ipxact:externalPortReference portRef="jtag_update_dr_clk"/>
+      <ipxact:internalPortReference componentRef="clk_gater_jtag_update_clk" portRef="clk_out"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="jtag_clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_clk" ipxact:portRef="clk_out"/>
+      <ipxact:externalPortReference portRef="jtag_clk"/>
+      <ipxact:internalPortReference componentRef="clk_gater_jtag_clk" portRef="clk_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>shiftcapture_dr</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="shiftcapture_dr"/>
-      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_shift_clk" ipxact:portRef="enable"/>
+      <ipxact:externalPortReference portRef="shiftcapture_dr"/>
+      <ipxact:internalPortReference componentRef="clk_gater_jtag_shift_clk" portRef="enable"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>update_dr_o</ipxact:name>      
-      <ipxact:externalPortReference ipxact:portRef="update_dr_o"/>
-      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_update_clk" ipxact:portRef="enable"/>
+      <ipxact:externalPortReference portRef="update_dr_o"/>
+      <ipxact:internalPortReference componentRef="clk_gater_jtag_update_clk" portRef="enable"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>chip_id_value</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="chip_id_value" ipxact:left="31"  ipxact:right="0"  />
-      <ipxact:internalPortReference ipxact:componentRef="chip_id_reg" ipxact:portRef="capture_value"/>
+      <ipxact:externalPortReference portRef="chip_id_value" left="31"  right="0"  />
+      <ipxact:internalPortReference componentRef="chip_id_reg" portRef="capture_value"/>
     </ipxact:adHocConnection>
 
 
-    <ipxact:adHocConnection ipxact:tiedValue="1'b1" >
-      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_clk" ipxact:portRef="enable"/>
+    <ipxact:adHocConnection tiedValue="1'b1" >
+      <ipxact:internalPortReference componentRef="clk_gater_jtag_clk" portRef="enable"/>
     </ipxact:adHocConnection>
 
 
 
-    <ipxact:adHocConnection   ipxact:tiedValue="1'b0" >
-      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_shift_clk" ipxact:portRef="atg_clk_mode"/>
-      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_update_clk" ipxact:portRef="atg_clk_mode"/>
-      <ipxact:internalPortReference ipxact:componentRef="clk_gater_jtag_clk" ipxact:portRef="atg_clk_mode"/>
+    <ipxact:adHocConnection   tiedValue="1'b0" >
+      <ipxact:internalPortReference componentRef="clk_gater_jtag_shift_clk" portRef="atg_clk_mode"/>
+      <ipxact:internalPortReference componentRef="clk_gater_jtag_update_clk" portRef="atg_clk_mode"/>
+      <ipxact:internalPortReference componentRef="clk_gater_jtag_clk" portRef="atg_clk_mode"/>
     </ipxact:adHocConnection>
 
 
@@ -270,8 +270,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>chip_id_reg</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="rpc_in_reg" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="BITS">32</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="RESET_VALUE">CHIP_ID_VAL</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="BITS">32</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="RESET_VALUE">CHIP_ID_VAL</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

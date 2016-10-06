@@ -44,153 +44,153 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:adHocConnections>
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_model" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="uart_model" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="vga_model" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_model" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="display_model" ipxact:portRef="clk"/>
+      <ipxact:internalPortReference componentRef="ps2_model" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="uart_model" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="vga_model" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="jtag_model" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="display_model" portRef="clk"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:internalPortReference ipxact:componentRef="ps2_model" ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="uart_model" ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="vga_model" ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="jtag_model" ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="display_model" ipxact:portRef="reset"/>
+      <ipxact:internalPortReference componentRef="ps2_model" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="uart_model" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="vga_model" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="jtag_model" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="display_model" portRef="reset"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection><ipxact:name>JTAG_TCK</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="tclk"/>
+    <ipxact:internalPortReference componentRef="jtag_model"   portRef="tclk"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection><ipxact:name>JTAG_TMS</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="tms"/>
+    <ipxact:internalPortReference componentRef="jtag_model"   portRef="tms"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection><ipxact:name>JTAG_TDO</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="tdi"/>
+    <ipxact:internalPortReference componentRef="jtag_model"   portRef="tdi"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection><ipxact:name>JTAG_TDI</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="tdo"/>
+    <ipxact:internalPortReference componentRef="jtag_model"   portRef="tdo"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection><ipxact:name>JTAG_TRESET_N</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="jtag_model"   ipxact:portRef="trst_n"/>
+    <ipxact:internalPortReference componentRef="jtag_model"   portRef="trst_n"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection><ipxact:name>PS2C</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="ps2_model" ipxact:portRef="ps2_clk"/>
+    <ipxact:internalPortReference componentRef="ps2_model" portRef="ps2_clk"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>PS2D</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="ps2_model" ipxact:portRef="ps2_data"/>
+    <ipxact:internalPortReference componentRef="ps2_model" portRef="ps2_data"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>TXD</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="uart_model" ipxact:portRef="txd_in"/>
+    <ipxact:internalPortReference componentRef="uart_model" portRef="txd_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>RXD</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="uart_model" ipxact:portRef="rxd_out"/>
+    <ipxact:internalPortReference componentRef="uart_model" portRef="rxd_out"/>
     </ipxact:adHocConnection>
 
 
 
 
     <ipxact:adHocConnection><ipxact:name>VGARED</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="vga_model" ipxact:portRef="red"/>
+    <ipxact:internalPortReference componentRef="vga_model" portRef="red"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection><ipxact:name>VGAGREEN</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="vga_model" ipxact:portRef="green"/>
+    <ipxact:internalPortReference componentRef="vga_model" portRef="green"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection><ipxact:name>VGABLUE</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="vga_model" ipxact:portRef="blue"/>
+    <ipxact:internalPortReference componentRef="vga_model" portRef="blue"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection><ipxact:name>VSYNC_N</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="vga_model" ipxact:portRef="vsync_n"/>
+    <ipxact:internalPortReference componentRef="vga_model" portRef="vsync_n"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection><ipxact:name>HSYNC_N</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="vga_model" ipxact:portRef="hsync_n"/>
+    <ipxact:internalPortReference componentRef="vga_model" portRef="hsync_n"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection><ipxact:name>RAMCLK</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="clk"/>
+    <ipxact:internalPortReference componentRef="psram" portRef="clk"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>RAMADV</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="adv_n"/>
+    <ipxact:internalPortReference componentRef="psram" portRef="adv_n"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>RAMCRE</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="cre"/>
+    <ipxact:internalPortReference componentRef="psram" portRef="cre"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>RAMWAIT</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="o_wait"/>
+    <ipxact:internalPortReference componentRef="psram" portRef="o_wait"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>RAMCS</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="ce_n"/>
+    <ipxact:internalPortReference componentRef="psram" portRef="ce_n"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>MEMOE</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="oe_n"/>
+    <ipxact:internalPortReference componentRef="psram" portRef="oe_n"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>MEMWR</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="we_n"/>
+    <ipxact:internalPortReference componentRef="psram" portRef="we_n"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>RAMLB</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="lb_n"/>
+    <ipxact:internalPortReference componentRef="psram" portRef="lb_n"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>RAMUB</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="ub_n"/>
+    <ipxact:internalPortReference componentRef="psram" portRef="ub_n"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>MEMADR</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="addr"/>
+    <ipxact:internalPortReference componentRef="psram" portRef="addr"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>MEMDB</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="psram" ipxact:portRef="dq"/>
+    <ipxact:internalPortReference componentRef="psram" portRef="dq"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection><ipxact:name>AN</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="display_model" ipxact:portRef="an"/>
+    <ipxact:internalPortReference componentRef="display_model" portRef="an"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection><ipxact:name>SEG</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="display_model" ipxact:portRef="seg"/>
+    <ipxact:internalPortReference componentRef="display_model" portRef="seg"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection><ipxact:name>DP</ipxact:name>
-    <ipxact:internalPortReference ipxact:componentRef="display_model" ipxact:portRef="dp"/>
+    <ipxact:internalPortReference componentRef="display_model" portRef="dp"/>
     </ipxact:adHocConnection>
 
 
@@ -205,8 +205,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>ps2_model</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="Testbench" name="ps2_model" version="def" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="CLKCNT">PS2_MODEL_CLKCNT</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="SIZE">PS2_MODEL_SIZE</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CLKCNT">PS2_MODEL_CLKCNT</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="SIZE">PS2_MODEL_SIZE</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -214,8 +214,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>uart_model</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="Testbench" name="uart_model" version="def" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="CLKCNT">UART_MODEL_CLKCNT</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="SIZE">UART_MODEL_SIZE</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CLKCNT">UART_MODEL_CLKCNT</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="SIZE">UART_MODEL_SIZE</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -236,7 +236,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
  <ipxact:instanceName>jtag_model</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="jtag_model" version="def" />
  <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="DIVCNT">JTAG_MODEL_DIVCNT</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="DIVCNT">JTAG_MODEL_DIVCNT</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

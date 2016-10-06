@@ -48,10 +48,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>core</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="fpgas" name="logipi_T6502" version="core" />
 <ipxact:configurableElementValues>
-<ipxact:configurableElementValue ipxact:referenceId="JTAG_USER1_WIDTH">JTAG_USER1_WIDTH</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="JTAG_USER1_RESET">JTAG_USER1_RESET</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="JTAG_USER2_WIDTH">JTAG_USER2_WIDTH</ipxact:configurableElementValue>
-<ipxact:configurableElementValue ipxact:referenceId="JTAG_USER2_RESET">JTAG_USER2_RESET</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="JTAG_USER1_WIDTH">JTAG_USER1_WIDTH</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="JTAG_USER1_RESET">JTAG_USER1_RESET</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="JTAG_USER2_WIDTH">JTAG_USER2_WIDTH</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="JTAG_USER2_RESET">JTAG_USER2_RESET</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

@@ -47,85 +47,85 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
   <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="i_wb_master" ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="uart_model" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="clk"/>
+      <ipxact:internalPortReference componentRef="i_wb_master" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="uart_model" portRef="clk"/>
     </ipxact:adHocConnection>
 
   <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="i_wb_master" ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="uart_model" ipxact:portRef="reset"/>
+      <ipxact:externalPortReference portRef="reset"/>
+      <ipxact:internalPortReference componentRef="i_wb_master" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="uart_model" portRef="reset"/>
     </ipxact:adHocConnection>
 
   <ipxact:adHocConnection>
       <ipxact:name>srx_pad_i</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="srx_pad_i"/>
-      <ipxact:internalPortReference ipxact:componentRef="uart_model" ipxact:portRef="rxd_out"/>
+      <ipxact:externalPortReference portRef="srx_pad_i"/>
+      <ipxact:internalPortReference componentRef="uart_model" portRef="rxd_out"/>
     </ipxact:adHocConnection>
 
 
   <ipxact:adHocConnection>
       <ipxact:name>stx_pad_o</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="stx_pad_o"/>
-      <ipxact:internalPortReference ipxact:componentRef="uart_model" ipxact:portRef="txd_in"/>
+      <ipxact:externalPortReference portRef="stx_pad_o"/>
+      <ipxact:internalPortReference componentRef="uart_model" portRef="txd_in"/>
     </ipxact:adHocConnection>
 
 
   <ipxact:adHocConnection>
       <ipxact:name>wb_adr_i</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="wb_adr_i" ipxact:left="WB_ADDR_WIDTH-1" ipxact:right="0"/>
-      <ipxact:internalPortReference ipxact:componentRef="i_wb_master" ipxact:portRef="adr"/>
+      <ipxact:externalPortReference portRef="wb_adr_i" left="WB_ADDR_WIDTH-1" right="0"/>
+      <ipxact:internalPortReference componentRef="i_wb_master" portRef="adr"/>
     </ipxact:adHocConnection>
 
   <ipxact:adHocConnection>
       <ipxact:name>wb_dat_o</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="wb_dat_o"  ipxact:left="WB_DATA_WIDTH-1" ipxact:right="0" />
-      <ipxact:internalPortReference ipxact:componentRef="i_wb_master" ipxact:portRef="din"/>
+      <ipxact:externalPortReference portRef="wb_dat_o"  left="WB_DATA_WIDTH-1" right="0" />
+      <ipxact:internalPortReference componentRef="i_wb_master" portRef="din"/>
     </ipxact:adHocConnection>
 
   <ipxact:adHocConnection>
       <ipxact:name>wb_dat_i</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="wb_dat_i"  ipxact:left="WB_DATA_WIDTH-1" ipxact:right="0" />
-      <ipxact:internalPortReference ipxact:componentRef="i_wb_master" ipxact:portRef="dout"/>
+      <ipxact:externalPortReference portRef="wb_dat_i"  left="WB_DATA_WIDTH-1" right="0" />
+      <ipxact:internalPortReference componentRef="i_wb_master" portRef="dout"/>
     </ipxact:adHocConnection>
 
   <ipxact:adHocConnection>
       <ipxact:name>wb_ack_o</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="wb_ack_o"/>
-      <ipxact:internalPortReference ipxact:componentRef="i_wb_master" ipxact:portRef="ack"/>
+      <ipxact:externalPortReference portRef="wb_ack_o"/>
+      <ipxact:internalPortReference componentRef="i_wb_master" portRef="ack"/>
     </ipxact:adHocConnection>
 
   <ipxact:adHocConnection>
       <ipxact:name>wb_sel_i</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="wb_sel_i"/>
-      <ipxact:internalPortReference ipxact:componentRef="i_wb_master" ipxact:portRef="sel"/>
+      <ipxact:externalPortReference portRef="wb_sel_i"/>
+      <ipxact:internalPortReference componentRef="i_wb_master" portRef="sel"/>
     </ipxact:adHocConnection>
 
   <ipxact:adHocConnection>
       <ipxact:name>wb_stb_i</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="wb_stb_i"/>
-      <ipxact:internalPortReference ipxact:componentRef="i_wb_master" ipxact:portRef="stb"/>
+      <ipxact:externalPortReference portRef="wb_stb_i"/>
+      <ipxact:internalPortReference componentRef="i_wb_master" portRef="stb"/>
     </ipxact:adHocConnection>
 
   <ipxact:adHocConnection>
       <ipxact:name>wb_cyc_i</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="wb_cyc_i"/>
-      <ipxact:internalPortReference ipxact:componentRef="i_wb_master" ipxact:portRef="cyc"/>
+      <ipxact:externalPortReference portRef="wb_cyc_i"/>
+      <ipxact:internalPortReference componentRef="i_wb_master" portRef="cyc"/>
     </ipxact:adHocConnection>
 
   <ipxact:adHocConnection>
       <ipxact:name>wb_we_i</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="wb_we_i"/>
-      <ipxact:internalPortReference ipxact:componentRef="i_wb_master" ipxact:portRef="we"/>
+      <ipxact:externalPortReference portRef="wb_we_i"/>
+      <ipxact:internalPortReference componentRef="i_wb_master" portRef="we"/>
     </ipxact:adHocConnection>
 
 
 
-  <ipxact:adHocConnection ipxact:tiedValue="1'b0"  >
-      <ipxact:internalPortReference ipxact:componentRef="i_wb_master" ipxact:portRef="err"/> 
-      <ipxact:internalPortReference ipxact:componentRef="i_wb_master" ipxact:portRef="rty"/>
+  <ipxact:adHocConnection tiedValue="1'b0"  >
+      <ipxact:internalPortReference componentRef="i_wb_master" portRef="err"/> 
+      <ipxact:internalPortReference componentRef="i_wb_master" portRef="rty"/>
     </ipxact:adHocConnection>
 
 
@@ -141,8 +141,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>i_wb_master</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="wishbone" name="model" version="master" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="dwidth">WB_DATA_WIDTH</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="awidth">WB_ADDR_WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="dwidth">WB_DATA_WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="awidth">WB_ADDR_WIDTH</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
@@ -150,7 +150,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentInstance>
 <ipxact:instanceName>uart_model</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="uart_model" version="def" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="CLKCNT">UART_MODEL_CLKCNT</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CLKCNT">UART_MODEL_CLKCNT</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

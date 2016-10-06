@@ -65,56 +65,56 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="clk"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="clk"/>
+      <ipxact:externalPortReference portRef="clk"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="clk"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="reset"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="reset"/>
+      <ipxact:externalPortReference portRef="reset"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="reset"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>cs</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="cs"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="cs"/>
+      <ipxact:externalPortReference portRef="cs"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="cs"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>wr</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="wr"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="wr"/>
+      <ipxact:externalPortReference portRef="wr"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="wr"/>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>rd</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="rd"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="rd"/>
+      <ipxact:externalPortReference portRef="rd"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="rd"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>addr</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="addr"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="addr"/>
+      <ipxact:externalPortReference portRef="addr"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="addr"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>wdata</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="wdata"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="wdata"/>
+      <ipxact:externalPortReference portRef="wdata"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="wdata"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>rdata</ipxact:name>
-      <ipxact:externalPortReference ipxact:portRef="rdata"/>
-      <ipxact:internalPortReference ipxact:componentRef="bus" ipxact:portRef="rdata"/>
+      <ipxact:externalPortReference portRef="rdata"/>
+      <ipxact:internalPortReference componentRef="bus" portRef="rdata"/>
     </ipxact:adHocConnection>
 
 </ipxact:adHocConnections>
@@ -129,7 +129,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>bus</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="Testbench" name="micro_bus_model" version="def"   />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="addr_width">16</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="addr_width">16</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 

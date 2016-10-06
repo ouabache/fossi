@@ -20,74 +20,74 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>clk</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="clk" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="clk" />
+<ipxact:externalPortReference portRef="clk" />
+<ipxact:internalPortReference componentRef="dut" portRef="clk" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>data_avail</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="data_avail" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="data_avail" />
+<ipxact:externalPortReference portRef="data_avail" />
+<ipxact:internalPortReference componentRef="dut" portRef="data_avail" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>data_out</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="data_out" ipxact:left="WIDTH-1" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="data_out" />
+<ipxact:externalPortReference portRef="data_out" left="WIDTH-1" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="data_out" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>edge_enable</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="edge_enable" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="edge_enable" />
+<ipxact:externalPortReference portRef="edge_enable" />
+<ipxact:internalPortReference componentRef="dut" portRef="edge_enable" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>pad_in</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="pad_in" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="pad_in" />
+<ipxact:externalPortReference portRef="pad_in" />
+<ipxact:internalPortReference componentRef="dut" portRef="pad_in" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>parity_enable</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="parity_enable" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="parity_enable" />
+<ipxact:externalPortReference portRef="parity_enable" />
+<ipxact:internalPortReference componentRef="dut" portRef="parity_enable" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>parity_error</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="parity_error" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="parity_error" />
+<ipxact:externalPortReference portRef="parity_error" />
+<ipxact:internalPortReference componentRef="dut" portRef="parity_error" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>parity_force</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="parity_force" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="parity_force" />
+<ipxact:externalPortReference portRef="parity_force" />
+<ipxact:internalPortReference componentRef="dut" portRef="parity_force" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>parity_type</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="parity_type" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="parity_type" />
+<ipxact:externalPortReference portRef="parity_type" />
+<ipxact:internalPortReference componentRef="dut" portRef="parity_type" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rcv_stb</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rcv_stb" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rcv_stb" />
+<ipxact:externalPortReference portRef="rcv_stb" />
+<ipxact:internalPortReference componentRef="dut" portRef="rcv_stb" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>reset</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="reset" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reset" />
+<ipxact:externalPortReference portRef="reset" />
+<ipxact:internalPortReference componentRef="dut" portRef="reset" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>stop_error</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="stop_error" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="stop_error" />
+<ipxact:externalPortReference portRef="stop_error" />
+<ipxact:internalPortReference componentRef="dut" portRef="stop_error" />
 </ipxact:adHocConnection>
 
 
@@ -98,11 +98,11 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>dut</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="logic" name="serial_rcvr" version="def" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="SAMPLE">SAMPLE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SIZE">SIZE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="START_VALUE">START_VALUE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="STOP_VALUE">STOP_VALUE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="WIDTH">WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SAMPLE">SAMPLE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SIZE">SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="START_VALUE">START_VALUE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="STOP_VALUE">STOP_VALUE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">WIDTH</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 </ipxact:componentInstances>

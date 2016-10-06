@@ -20,144 +20,144 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>clk</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="clk" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="clk" />
+<ipxact:externalPortReference portRef="clk" />
+<ipxact:internalPortReference componentRef="dut" portRef="clk" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>cts_out</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="cts_out" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="cts_out" />
+<ipxact:externalPortReference portRef="cts_out" />
+<ipxact:internalPortReference componentRef="dut" portRef="cts_out" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>cts_pad_in</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="cts_pad_in" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="cts_pad_in" />
+<ipxact:externalPortReference portRef="cts_pad_in" />
+<ipxact:internalPortReference componentRef="dut" portRef="cts_pad_in" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>divider_in</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="divider_in" ipxact:left="DIV_SIZE-1" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="divider_in" />
+<ipxact:externalPortReference portRef="divider_in" left="DIV_SIZE-1" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="divider_in" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>parity_enable</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="parity_enable" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="parity_enable" />
+<ipxact:externalPortReference portRef="parity_enable" />
+<ipxact:internalPortReference componentRef="dut" portRef="parity_enable" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>reset</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="reset" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="reset" />
+<ipxact:externalPortReference portRef="reset" />
+<ipxact:internalPortReference componentRef="dut" portRef="reset" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rts_in</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rts_in" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rts_in" />
+<ipxact:externalPortReference portRef="rts_in" />
+<ipxact:internalPortReference componentRef="dut" portRef="rts_in" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rts_pad_out</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rts_pad_out" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rts_pad_out" />
+<ipxact:externalPortReference portRef="rts_pad_out" />
+<ipxact:internalPortReference componentRef="dut" portRef="rts_pad_out" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rxd_data_avail</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rxd_data_avail" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rxd_data_avail" />
+<ipxact:externalPortReference portRef="rxd_data_avail" />
+<ipxact:internalPortReference componentRef="dut" portRef="rxd_data_avail" />
 </ipxact:adHocConnection>
 
 
 
 <ipxact:adHocConnection>
 <ipxact:name>rxd_data_avail_stb</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rxd_data_avail_stb" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rxd_data_avail_stb" />
+<ipxact:externalPortReference portRef="rxd_data_avail_stb" />
+<ipxact:internalPortReference componentRef="dut" portRef="rxd_data_avail_stb" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rxd_data_out</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="rxd_data_out" ipxact:left="SIZE-1" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rxd_data_out" />
+<ipxact:externalPortReference portRef="rxd_data_out" left="SIZE-1" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="rxd_data_out" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rxd_force_parity</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rxd_force_parity" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rxd_force_parity" />
+<ipxact:externalPortReference portRef="rxd_force_parity" />
+<ipxact:internalPortReference componentRef="dut" portRef="rxd_force_parity" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rxd_pad_in</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rxd_pad_in" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rxd_pad_in" />
+<ipxact:externalPortReference portRef="rxd_pad_in" />
+<ipxact:internalPortReference componentRef="dut" portRef="rxd_pad_in" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rxd_parity</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rxd_parity" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rxd_parity" />
+<ipxact:externalPortReference portRef="rxd_parity" />
+<ipxact:internalPortReference componentRef="dut" portRef="rxd_parity" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rxd_parity_error</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rxd_parity_error" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rxd_parity_error" />
+<ipxact:externalPortReference portRef="rxd_parity_error" />
+<ipxact:internalPortReference componentRef="dut" portRef="rxd_parity_error" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rxd_stop_error</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="rxd_stop_error" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="rxd_stop_error" />
+<ipxact:externalPortReference portRef="rxd_stop_error" />
+<ipxact:internalPortReference componentRef="dut" portRef="rxd_stop_error" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>txd_break</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="txd_break" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="txd_break" />
+<ipxact:externalPortReference portRef="txd_break" />
+<ipxact:internalPortReference componentRef="dut" portRef="txd_break" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>txd_buffer_empty</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="txd_buffer_empty" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="txd_buffer_empty" />
+<ipxact:externalPortReference portRef="txd_buffer_empty" />
+<ipxact:internalPortReference componentRef="dut" portRef="txd_buffer_empty" />
 </ipxact:adHocConnection>
 
 
 
 <ipxact:adHocConnection>
 <ipxact:name>txd_data_in</ipxact:name>
-<ipxact:externalPortReference ipxact:portRef="txd_data_in" ipxact:left="SIZE-1" ipxact:right="0" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="txd_data_in" />
+<ipxact:externalPortReference portRef="txd_data_in" left="SIZE-1" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="txd_data_in" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>txd_force_parity</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="txd_force_parity" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="txd_force_parity" />
+<ipxact:externalPortReference portRef="txd_force_parity" />
+<ipxact:internalPortReference componentRef="dut" portRef="txd_force_parity" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>txd_load</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="txd_load" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="txd_load" />
+<ipxact:externalPortReference portRef="txd_load" />
+<ipxact:internalPortReference componentRef="dut" portRef="txd_load" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>txd_pad_out</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="txd_pad_out" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="txd_pad_out" />
+<ipxact:externalPortReference portRef="txd_pad_out" />
+<ipxact:internalPortReference componentRef="dut" portRef="txd_pad_out" />
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>txd_parity</ipxact:name>
-<ipxact:externalPortReference  ipxact:portRef="txd_parity" />
-<ipxact:internalPortReference  ipxact:componentRef="dut" ipxact:portRef="txd_parity" />
+<ipxact:externalPortReference portRef="txd_parity" />
+<ipxact:internalPortReference componentRef="dut" portRef="txd_parity" />
 </ipxact:adHocConnection>
 
 
@@ -168,15 +168,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>dut</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="logic" name="uart" version="rxtx" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue ipxact:referenceId="DIV">DIV</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="DIV_SIZE">DIV_SIZE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="PRESCALE">PRESCALE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="PRE_SIZE">PRE_SIZE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="RX_FIFO_SIZE">RX_FIFO_SIZE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="RX_FIFO_WORDS">RX_FIFO_WORDS</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="SIZE">SIZE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="TX_FIFO_SIZE">TX_FIFO_SIZE</ipxact:configurableElementValue>
- <ipxact:configurableElementValue ipxact:referenceId="TX_FIFO_WORDS">TX_FIFO_WORDS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="DIV">DIV</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="DIV_SIZE">DIV_SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="PRESCALE">PRESCALE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="PRE_SIZE">PRE_SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="RX_FIFO_SIZE">RX_FIFO_SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="RX_FIFO_WORDS">RX_FIFO_WORDS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SIZE">SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="TX_FIFO_SIZE">TX_FIFO_SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="TX_FIFO_WORDS">TX_FIFO_WORDS</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 </ipxact:componentInstances>
