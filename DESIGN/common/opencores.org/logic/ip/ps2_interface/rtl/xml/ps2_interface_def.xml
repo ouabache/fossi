@@ -247,70 +247,70 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:ports>
 
 <ipxact:port><ipxact:name>busy</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>tx_data</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction>
 <ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>tx_write</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>rx_data</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction>
 <ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>rx_read</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>rx_full</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>rx_parity_error</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>rx_parity_rcv</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>rx_parity_cal</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>rx_frame_error</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>rx_clear</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>tx_buffer_empty</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>tx_ack_error</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>x
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>x
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
  </ipxact:ports>

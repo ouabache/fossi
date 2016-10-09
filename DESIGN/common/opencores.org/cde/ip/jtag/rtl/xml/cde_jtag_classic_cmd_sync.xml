@@ -202,79 +202,79 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:ports>
 
 <ipxact:port><ipxact:name>clk</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
 <ipxact:port><ipxact:name>reset</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
 <ipxact:port><ipxact:name>syn_capture_dr</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
 <ipxact:port><ipxact:name>syn_update_dr</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
 
 <ipxact:port><ipxact:name>test_logic_reset</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
 <ipxact:port><ipxact:name>capture_dr</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
 <ipxact:port><ipxact:name>shift_dr</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
 <ipxact:port><ipxact:name>update_dr_clk</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
 
 <ipxact:port><ipxact:name>select</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
 
 <ipxact:port><ipxact:name>shiftcapture_dr_clk</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
 
 <ipxact:port><ipxact:name>tdi</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
 
 <ipxact:port><ipxact:name>tdo</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 

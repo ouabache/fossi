@@ -55,7 +55,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         </ipxact:qualifier>
         <ipxact:onSystem>
           <ipxact:vendorExtensions><socgen:envIdentifier>CLOCK</socgen:envIdentifier></ipxact:vendorExtensions>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
         </ipxact:onSystem>
         <ipxact:onSystem>
           <ipxact:vendorExtensions><socgen:envIdentifier>ENABLE</socgen:envIdentifier></ipxact:vendorExtensions>
@@ -66,12 +66,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:presence>illegal</ipxact:presence>
         </ipxact:onSystem>
         <ipxact:onMaster>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>out</ipxact:direction>
         </ipxact:onMaster>
         <ipxact:onSlave>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>in</ipxact:direction>
         </ipxact:onSlave>
@@ -89,7 +89,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         </ipxact:qualifier>
         <ipxact:onSystem>
           <ipxact:vendorExtensions><socgen:envIdentifier>CLOCK</socgen:envIdentifier></ipxact:vendorExtensions>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
         </ipxact:onSystem>
         <ipxact:onSystem>
           <ipxact:vendorExtensions><socgen:envIdentifier>ENABLE</socgen:envIdentifier></ipxact:vendorExtensions>
@@ -100,12 +100,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:presence>illegal</ipxact:presence>
         </ipxact:onSystem>
         <ipxact:onMaster>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>out</ipxact:direction>
         </ipxact:onMaster>
         <ipxact:onSlave>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>in</ipxact:direction>
         </ipxact:onSlave>
@@ -127,15 +127,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         </ipxact:onSystem>
         <ipxact:onSystem>
           <ipxact:vendorExtensions><socgen:envIdentifier>RESET</socgen:envIdentifier></ipxact:vendorExtensions>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
         </ipxact:onSystem>
         <ipxact:onMaster>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>out</ipxact:direction>
         </ipxact:onMaster>
         <ipxact:onSlave>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>in</ipxact:direction>
         </ipxact:onSlave>
@@ -190,12 +190,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:presence>illegal</ipxact:presence>
         </ipxact:onSystem>
         <ipxact:onMaster>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>out</ipxact:direction>
         </ipxact:onMaster>
         <ipxact:onSlave>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>in</ipxact:direction>
         </ipxact:onSlave>
@@ -213,19 +213,19 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         </ipxact:onSystem>
         <ipxact:onSystem>
           <ipxact:vendorExtensions><socgen:envIdentifier>ENABLE</socgen:envIdentifier></ipxact:vendorExtensions>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
         </ipxact:onSystem>
         <ipxact:onSystem>
           <ipxact:vendorExtensions><socgen:envIdentifier>RESET</socgen:envIdentifier></ipxact:vendorExtensions>
           <ipxact:presence>illegal</ipxact:presence>
         </ipxact:onSystem>
         <ipxact:onMaster>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>out</ipxact:direction>
         </ipxact:onMaster>
         <ipxact:onSlave>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>in</ipxact:direction>
         </ipxact:onSlave>
@@ -245,19 +245,19 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         </ipxact:onSystem>
         <ipxact:onSystem>
           <ipxact:vendorExtensions><socgen:envIdentifier>ENABLE</socgen:envIdentifier></ipxact:vendorExtensions>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
         </ipxact:onSystem>
         <ipxact:onSystem>
           <ipxact:vendorExtensions><socgen:envIdentifier>RESET</socgen:envIdentifier></ipxact:vendorExtensions>
           <ipxact:presence>illegal</ipxact:presence>
         </ipxact:onSystem>
         <ipxact:onMaster>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>out</ipxact:direction>
         </ipxact:onMaster>
         <ipxact:onSlave>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>in</ipxact:direction>
         </ipxact:onSlave>
@@ -282,12 +282,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:presence>illegal</ipxact:presence>
         </ipxact:onSystem>
         <ipxact:onMaster>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>out</ipxact:direction>
         </ipxact:onMaster>
         <ipxact:onSlave>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>in</ipxact:direction>
         </ipxact:onSlave>
@@ -314,12 +314,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:presence>illegal</ipxact:presence>
         </ipxact:onSystem>
         <ipxact:onMaster>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>in</ipxact:direction>
         </ipxact:onMaster>
         <ipxact:onSlave>
-          <ipxact:presence>required</ipxact:presence>
+          <ipxact:presence>optional</ipxact:presence>
           <ipxact:width>1</ipxact:width>
           <ipxact:direction>out</ipxact:direction>
         </ipxact:onSlave>

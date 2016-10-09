@@ -219,8 +219,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tclk_pad_in</ipxact:name>
+      <ipxact:portReferences>
       <ipxact:internalPortReference componentRef="jtag_tap" portRef="tclk_pad_in"/>
       <ipxact:internalPortReference componentRef="jtag_tclk_pad" portRef="pad_in"/>
+      </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
@@ -230,34 +232,44 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_trst_n_pad_in</ipxact:name>
+            <ipxact:portReferences>
       <ipxact:internalPortReference componentRef="jtag_tap" portRef="trst_n_pad_in"/>
       <ipxact:internalPortReference componentRef="jtag_trst_n_pad" portRef="pad_in"/>
+	    </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tdi_pad_in</ipxact:name>
+      <ipxact:portReferences>
       <ipxact:internalPortReference componentRef="jtag_tap" portRef="tdi_pad_in"/>
       <ipxact:internalPortReference componentRef="jtag_tdi_pad" portRef="pad_in"/>
+      </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tms_pad_in</ipxact:name>
+      <ipxact:portReferences>
       <ipxact:internalPortReference componentRef="jtag_tap" portRef="tms_pad_in"/>
       <ipxact:internalPortReference componentRef="jtag_tms_pad" portRef="pad_in"/>
+      </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tdo_pad_out</ipxact:name>
+      <ipxact:portReferences>
       <ipxact:internalPortReference componentRef="jtag_tap" portRef="tdo_pad_out"/>
       <ipxact:internalPortReference componentRef="jtag_tdo_pad" portRef="pad_out"/>
+      </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tdo_pad_oe</ipxact:name>
+      <ipxact:portReferences>
       <ipxact:internalPortReference componentRef="jtag_tap" portRef="tdo_pad_oe"/>
       <ipxact:internalPortReference componentRef="jtag_tdo_pad" portRef="pad_oe"/>
+      </ipxact:portReferences>
     </ipxact:adHocConnection>
 
   </ipxact:adHocConnections>

@@ -1,19 +1,74 @@
-//********************************************************************
-//*** assignments for 2nd channel
-//********************************************************************
+/**********************************************************************/
+/*                                                                    */
+/*                                                                    */
+/*   Copyright (c) 2012 Ouabache Design Works                         */
+/*                                                                    */
+/*          All Rights Reserved Worldwide                             */
+/*                                                                    */
+/*   Licensed under the Apache License,Version2.0 (the'License');     */
+/*   you may not use this file except in compliance with the License. */
+/*   You may obtain a copy of the License at                          */
+/*                                                                    */
+/*       http://www.apache.org/licenses/LICENSE-2.0                   */
+/*                                                                    */
+/*   Unless required by applicable law or agreed to in                */
+/*   writing, software distributed under the License is               */
+/*   distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES              */
+/*   OR CONDITIONS OF ANY KIND, either express or implied.            */
+/*   See the License for the specific language governing              */
+/*   permissions and limitations under the License.                   */
+/**********************************************************************/
 
 
- assign      aux_jtag_clk               = jtag_clk;
- assign      aux_update_dr_clk_o        = update_dr_clk_o;
- assign      aux_shiftcapture_dr_clk_o  = shiftcapture_dr_clk_o;
- assign      aux_test_logic_reset_o     = test_logic_reset_o;
- assign      aux_tdi_o                  = tdi_o;
- assign      aux_capture_dr_o           = capture_dr_o;
- assign      aux_shift_dr_o             = shift_dr_o;
- assign      aux_update_dr_o            = update_dr_o;
+ module 
+
+  cde_jtag_tap_sm 
+    #( parameter 
+      NUM_USER=2,
+      INST_LENGTH=4,
+      INST_RESET=4'b1111,
+      INST_RETURN=4'b1101,
+      BYPASS=4'b1111,
+      CHIP_ID_ACCESS=4'b0011,
+      CLAMP=4'b1000,
+      EXTEST=4'b0000,
+      HIGHZ_MODE=4'b0010,
+      RPC_ADD=4'b1001,
+      RPC_DATA=4'b1010,
+      SAMPLE=4'b0001
+      )
+
+     (
+ input wire               clk,
+ input wire               clk_n,
+ input wire               reset_n,
+      
+ input wire [NUM_USR-1:0] tdo_i,
+ input wire               bsr_tdo_i,
+ input wire               tdi_pad_in,
+ input wire               tms_pad_in,
 
 
 
+ output reg               bsr_output_mode,
+ output reg               capture_dr_o,
+ output reg               shift_dr_o,
+ output reg               tap_highz_mode,
+ output reg               test_logic_reset_o,
+ output reg                update_dr_o,
+ 
+ output wire               tdi_o,
+ output wire [NUM_USR-1:0] select_o,
+ output wire tdo_pad_oe,
+ output wire tdo_pad_out,
+ output wire jtag_clk,
+ output wire update_dr_clk_o,
+ output wire shiftcapture_dr_clk_o,
+ output wire bsr_select_o
+);
+
+assign jtag_clk = clk;
+   
 //********************************************************************
 //*** TAP Controller State Machine
 //********************************************************************
@@ -66,9 +121,9 @@ always @(*)
 //********************************************************************
 
 
-always @(posedge jtag_clk or negedge trst_n_pad_in)
-  if (!trst_n_pad_in)     tap_state <= TEST_LOGIC_RESET;
-  else             tap_state <= next_tap_state;
+always @(posedge jtag_clk or negedge reset_n)
+  if (!reset_n)     tap_state <= TEST_LOGIC_RESET;
+  else              tap_state <= next_tap_state;
 
 
 // Decode tap_state to get Shift, Update, and Capture signals
@@ -88,8 +143,8 @@ always @(posedge jtag_clk or negedge trst_n_pad_in)
 
 // Decode tap_state to get test_logic_reset  signal
 
-always @(posedge jtag_clk  or negedge trst_n_pad_in)
-if (!trst_n_pad_in)                               test_logic_reset_o <= 1'b1;
+always @(posedge jtag_clk  or negedge reset_n)
+if (!reset_n)                               test_logic_reset_o <= 1'b1;
 else 
 if (next_tap_state == TEST_LOGIC_RESET)    test_logic_reset_o <= 1'b1;
 else                                       test_logic_reset_o <= 1'b0;
@@ -104,15 +159,15 @@ reg	[INST_LENGTH-1:0]      instruction;
 
 // buffer the instruction register while shifting
 
-always @(posedge jtag_clk or negedge trst_n_pad_in)
-  if (!trst_n_pad_in)          instruction_buffer <= INST_RESET;
+always @(posedge jtag_clk or negedge reset_n)
+  if (!reset_n)                instruction_buffer <= INST_RESET;
   else 
   if (capture_ir)              instruction_buffer <= INST_RETURN;  
   else 
   if (shift_ir)                instruction_buffer <= {tdi_pad_in,instruction_buffer[INST_LENGTH-1:1]};
 
-always @(posedge jtag_clk  or negedge trst_n_pad_in)
-  if (!trst_n_pad_in)                   instruction <= INST_RESET;
+always @(posedge jtag_clk  or negedge reset_n)
+  if (!reset_n)                   instruction <= INST_RESET;
   else 
   if (tap_state == TEST_LOGIC_RESET)    instruction <= INST_RESET;
   else 
@@ -122,12 +177,9 @@ always @(posedge jtag_clk  or negedge trst_n_pad_in)
 
 
 
-
-assign tclk              =  tclk_pad_in;
-assign tclk_n            = !tclk_pad_in;
-assign shift_capture_dr  =  shift_dr_o || capture_dr_o;   
+assign shiftcapture_dr  =  shift_dr_o || capture_dr_o;   
 assign tdi_o             =  tdi_pad_in;   
-assign trst_pad_in       = !trst_n_pad_in;
+
 
 // Instruction Decoder
 assign  extest          = ( instruction == EXTEST );
@@ -141,10 +193,10 @@ assign  chip_id_select  = ( instruction == CHIP_ID_ACCESS );
 assign   bypass_select  = ( instruction == CLAMP ) || ( instruction == BYPASS );
 
 assign  shiftcapture_dr_clk_o     =  jtag_shift_clk;
-assign  select_o                  = ( instruction == RPC_ADD );
-assign  aux_select_o              = ( instruction == RPC_DATA );
 assign  bsr_select_o              = ( instruction == EXTEST ) || ( instruction == SAMPLE )       ;
 
+assign  select_o[0]               = ( instruction == RPC_ADD );
+assign  select_o[1]               = ( instruction == RPC_DATA );
 
 
 
@@ -154,19 +206,19 @@ assign  bsr_select_o              = ( instruction == EXTEST ) || ( instruction =
 
 
 
-always @(posedge jtag_clk  or negedge trst_n_pad_in)
-  if (!trst_n_pad_in)                             bsr_output_mode <= 1'b0;
+always @(posedge jtag_clk  or negedge reset_n)
+  if (!reset_n)                                   bsr_output_mode <= 1'b0;
   else 
-  if (tap_state == TEST_LOGIC_RESET)       bsr_output_mode <= 1'b0;
+  if (tap_state == TEST_LOGIC_RESET)              bsr_output_mode <= 1'b0;
   else 
-  if (update_ir)                           bsr_output_mode <=    (instruction_buffer  == EXTEST) 
+  if (update_ir)                                  bsr_output_mode <=    (instruction_buffer  == EXTEST) 
                                                               || (instruction_buffer  == CLAMP);
    
 
 // Control chip pads when we are in highz_mode
    
-always @(posedge jtag_clk  or negedge trst_n_pad_in)
-  if (!trst_n_pad_in)                                 tap_highz_mode <= 1'b0;
+always @(posedge jtag_clk  or negedge reset_n)
+  if (!reset_n)                                 tap_highz_mode <= 1'b0;
   else if (tap_state == TEST_LOGIC_RESET)      tap_highz_mode <= 1'b0;
   else if (update_ir)                          tap_highz_mode <= (instruction_buffer  == HIGHZ_MODE);
    
@@ -200,32 +252,32 @@ always @(posedge jtag_clk or negedge trst_n_pad_in)
 
 always@(*)
   begin
-     if( tap_state[3] )    next_tdo =  instruction_buffer[0];
+     if( tap_state[3] )       next_tdo  =  instruction_buffer[0];
      else
-     if(bypass_select)     next_tdo =  bypass_tdo;
+     if(bypass_select)        next_tdo  =  bypass_tdo;
      else
-     if(chip_id_select)    next_tdo =  chip_id_tdo;
+     if(chip_id_select)       next_tdo  =  chip_id_tdo;
      else
-     if(select_o)         next_tdo =  tdo_i;
+     if(select_o[0])          next_tdo  =  tdo_i[0];
      else
-     if(aux_select_o)         next_tdo =  aux_tdo_i;
-     else                  next_tdo =  1'b0;
+     if(select_o[1])          next_tdo  =  tdo_i[1];
+     else                     next_tdo  =  1'b0;
   end
 
    
 reg tdo_pad_out_reg;
 reg tdo_pad_oe_reg;
 
-always @(posedge tclk_n or negedge trst_n_pad_in)
-        if (!trst_n_pad_in)         tdo_pad_out_reg <= 1'b0;
+always @(posedge clk_n or negedge reset_n)
+        if (!reset_in)         tdo_pad_out_reg <= 1'b0;
         else                        tdo_pad_out_reg <= next_tdo;
    
 
 
 // output enable for TDO pad
 
-always @(posedge tclk_n or negedge trst_n_pad_in)
-	if ( !trst_n_pad_in )    tdo_pad_oe_reg   <= 1'b0;
+always @(posedge clk_n or negedge reset_n)
+	if ( !reset_n )    tdo_pad_oe_reg   <= 1'b0;
 	else                     tdo_pad_oe_reg   <= ( (tap_state == SHIFT_DR) || (tap_state == SHIFT_IR) );
 
 
@@ -268,19 +320,21 @@ reg [8*16-1:0] inst_string;
 
 always @(instruction) begin
    case (instruction)
-      EXTEST: inst_string = "EXTEST";
-      SAMPLE: inst_string = "SAMPLE";
-      HIGHZ_MODE: inst_string = "HIGHZ_MODE";
-      CHIP_ID_ACCESS: inst_string = "CHIP_ID_ACCESS";
-      CLAMP: inst_string = "CLAMP";
-      RPC_DATA: inst_string = "RPC_DATA";
-      RPC_ADD: inst_string = "RPC_ADD";
-      BYPASS: inst_string = "BYPASS";
-      default:          inst_string = "-XXXXXX-";
+      EXTEST:            inst_string = "EXTEST";
+      SAMPLE:            inst_string = "SAMPLE";
+      HIGHZ_MODE:        inst_string = "HIGHZ_MODE";
+      CHIP_ID_ACCESS:    inst_string = "CHIP_ID_ACCESS";
+      CLAMP:             inst_string = "CLAMP";
+      RPC_DATA:          inst_string = "RPC_DATA";
+      RPC_ADD:           inst_string = "RPC_ADD";
+      BYPASS:            inst_string = "BYPASS";
+      default:           inst_string = "-XXXXXX-";
    endcase
 
    $display("%t  %m   Instruction = %s",$realtime, inst_string);
 end
    
 `endif
+
+endmodule
 

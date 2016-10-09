@@ -46,7 +46,22 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:model>    
-<ipxact:modelParameters>
+  <ipxact:modelParameters>
+
+  <ipxact:modelParameter><ipxact:name>INST_LENGTH</ipxact:name><ipxact:value>4</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>INST_RETURN</ipxact:name><ipxact:value>4'b1101</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>EXTEST</ipxact:name><ipxact:value>4'b0000</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>SAMPLE</ipxact:name><ipxact:value>4'b0001</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>HIGHZ_MODE</ipxact:name><ipxact:value>4'b0010</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>CHIP_ID_ACCESS</ipxact:name><ipxact:value>4'b0011</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>CLAMP</ipxact:name><ipxact:value>4'b1000</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>RPC_DATA</ipxact:name><ipxact:value>4'b1010</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>RPC_ADD</ipxact:name><ipxact:value>4'b1001</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>BYPASS</ipxact:name><ipxact:value>4'b1111</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>CHIP_ID_VAL</ipxact:name><ipxact:value>32'h12345678</ipxact:value></ipxact:modelParameter>
+
+
+    
     <ipxact:modelParameter><ipxact:name>JTAG_SEL</ipxact:name><ipxact:value>2</ipxact:value></ipxact:modelParameter>
     <ipxact:modelParameter><ipxact:name>JTAG_USER1_WIDTH</ipxact:name><ipxact:value>8</ipxact:value></ipxact:modelParameter>
     <ipxact:modelParameter><ipxact:name>JTAG_USER1_RESET</ipxact:name><ipxact:value>8'h12</ipxact:value></ipxact:modelParameter>
@@ -63,23 +78,26 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 	<ipxact:name>Bfm</ipxact:name>
 	<ipxact:designRef vendor="opencores.org" library="cde" name="jtag" version="bfm.design"/>
 	</ipxact:designInstantiation>
+
+		<ipxact:designInstantiation>
+	<ipxact:name>Dut</ipxact:name>
+	<ipxact:designRef vendor="opencores.org" library="cde" name="jtag" version="tap_dutg.design"/>
+	</ipxact:designInstantiation>
+
 	</ipxact:instantiations>
 
 
 
     <ipxact:views>
 
-              <ipxact:view>
-              <ipxact:name>Params</ipxact:name>
-              <ipxact:vendorExtensions>
-              <ipxact:componentRef ipxact:vendor="opencores.org" 
-                                   ipxact:library="cde" 
-                                   ipxact:name="jtag" 
-                                   ipxact:version="tap_dut.params"/>  
-             </ipxact:vendorExtensions>
-              </ipxact:view>
+                              
+              <ipxact:view>                                   
+              <ipxact:name>Dut</ipxact:name>                                   
+              <ipxact:designInstantiationRef>Dut</ipxact:designInstantiationRef>
+              </ipxact:view>              
 
 
+	      
               <ipxact:view>
               <ipxact:name>Bfm</ipxact:name>
               <ipxact:designInstantiationRef>Bfm</ipxact:designInstantiationRef>

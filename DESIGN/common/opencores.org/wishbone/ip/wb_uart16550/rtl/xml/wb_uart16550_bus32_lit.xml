@@ -480,54 +480,54 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:ports>
 
 <ipxact:port><ipxact:name>baud_o</ipxact:name>
-  <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-  <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+  <ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>cts_pad_i</ipxact:name>
-  <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-  <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+  <ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>dcd_pad_i</ipxact:name>
-  <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-  <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+  <ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>dsr_pad_i</ipxact:name>
-  <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-  <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+  <ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>dtr_pad_o</ipxact:name>
-  <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-  <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+  <ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>int_o</ipxact:name>
-  <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-  <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+  <ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
 <ipxact:port><ipxact:name>ri_pad_i</ipxact:name>
-  <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-  <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+  <ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>rts_pad_o</ipxact:name>
-  <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-  <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+  <ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>srx_pad_i</ipxact:name>
-  <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-  <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+  <ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>stx_pad_o</ipxact:name>
-  <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-  <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
+  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+  <ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 

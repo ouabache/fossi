@@ -42,6 +42,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
   <ipxact:adHocConnections>
+
+
     <ipxact:adHocConnection>
       <ipxact:name>clk</ipxact:name>
       <ipxact:externalPortReference portRef="clk"/>
@@ -49,9 +51,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:internalPortReference componentRef="clock_sys" portRef="div_clk_out"/>
     </ipxact:adHocConnection>
 
+
+
+
+
+
+    
     <ipxact:adHocConnection>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:externalPortReference portRef="reset"/>
+      <ipxact:externalPortReference  portRef="reset"/>
       <ipxact:internalPortReference componentRef="core" portRef="reset"/>
       <ipxact:internalPortReference componentRef="clock_sys" portRef="reset"/>
     </ipxact:adHocConnection>
@@ -59,7 +67,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>pwron</ipxact:name>
-      <ipxact:externalPortReference portRef="pwron"/>
+      <ipxact:externalPortReference  portRef="pwron"/>
       <ipxact:internalPortReference componentRef="core" portRef="pwron"/>
       <ipxact:internalPortReference componentRef="clock_sys" portRef="pwron_pad_in"/>
     </ipxact:adHocConnection>
@@ -68,7 +76,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>one_usec</ipxact:name>
-      <ipxact:externalPortReference portRef="one_usec"/>
+      <ipxact:externalPortReference  portRef="one_usec"/>
       <ipxact:internalPortReference componentRef="core" portRef="one_usec"/>
       <ipxact:internalPortReference componentRef="clock_sys" portRef="one_usec"/>
     </ipxact:adHocConnection>
@@ -76,54 +84,68 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_capture_dr</ipxact:name>
-      <ipxact:externalPortReference portRef="jtag_capture_dr"/>
+      <ipxact:externalPortReference  portRef="jtag_capture_dr"/>
       <ipxact:internalPortReference componentRef="core" portRef="jtag_capture_dr"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_select</ipxact:name>
-      <ipxact:externalPortReference portRef="jtag_select"  />
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="jtag_select"  />
       <ipxact:internalPortReference componentRef="core" portRef="jtag_select"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_shift_dr</ipxact:name>
-      <ipxact:externalPortReference portRef="jtag_shift_dr"/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="jtag_shift_dr"/>
       <ipxact:internalPortReference componentRef="core" portRef="jtag_shift_dr"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_shiftcapture_dr_clk</ipxact:name>
-      <ipxact:externalPortReference portRef="jtag_shiftcapture_dr_clk"    />
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="jtag_shiftcapture_dr_clk"    />
       <ipxact:internalPortReference componentRef="core" portRef="jtag_shiftcapture_dr_clk"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tdi</ipxact:name>
-      <ipxact:externalPortReference portRef="jtag_tdi"/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="jtag_tdi"/>
       <ipxact:internalPortReference componentRef="core" portRef="jtag_tdi"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_tdo</ipxact:name>
-      <ipxact:externalPortReference portRef="jtag_tdo"    />
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="jtag_tdo"    />
       <ipxact:internalPortReference componentRef="core" portRef="jtag_tdo"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_test_logic_reset</ipxact:name>
-      <ipxact:externalPortReference portRef="jtag_test_logic_reset"/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="jtag_test_logic_reset"/>
       <ipxact:internalPortReference componentRef="core" portRef="jtag_test_logic_reset"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>jtag_update_dr_clk</ipxact:name>
-      <ipxact:externalPortReference portRef="jtag_update_dr_clk"/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="jtag_update_dr_clk"/>
       <ipxact:internalPortReference componentRef="core" portRef="jtag_update_dr_clk"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
@@ -133,54 +155,70 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_capture_dr</ipxact:name>
-      <ipxact:externalPortReference portRef="aux_jtag_capture_dr"/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="aux_jtag_capture_dr"/>
       <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_capture_dr"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_select</ipxact:name>
-      <ipxact:externalPortReference portRef="aux_jtag_select"  />
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="aux_jtag_select"  />
       <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_select"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_shift_dr</ipxact:name>
-      <ipxact:externalPortReference portRef="aux_jtag_shift_dr"/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="aux_jtag_shift_dr"/>
       <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_shift_dr"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_shiftcapture_dr_clk</ipxact:name>
-      <ipxact:externalPortReference portRef="aux_jtag_shiftcapture_dr_clk"    />
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="aux_jtag_shiftcapture_dr_clk"    />
       <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_shiftcapture_dr_clk"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_tdi</ipxact:name>
-      <ipxact:externalPortReference portRef="aux_jtag_tdi"/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="aux_jtag_tdi"/>
       <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_tdi"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_tdo</ipxact:name>
-      <ipxact:externalPortReference portRef="aux_jtag_tdo"    />
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="aux_jtag_tdo"    />
       <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_tdo"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_test_logic_reset</ipxact:name>
-      <ipxact:externalPortReference portRef="aux_jtag_test_logic_reset"/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="aux_jtag_test_logic_reset"/>
       <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_test_logic_reset"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>aux_jtag_update_dr_clk</ipxact:name>
-      <ipxact:externalPortReference portRef="aux_jtag_update_dr_clk"/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="aux_jtag_update_dr_clk"/>
       <ipxact:internalPortReference componentRef="core" portRef="aux_jtag_update_dr_clk"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
@@ -193,8 +231,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>a_clk_pad_in</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="clock_sys" portRef="a_clk_pad_in"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
@@ -203,79 +243,103 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
     <ipxact:adHocConnection>
       <ipxact:name>btn_pad_in</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="btn_pad_in"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>sw_pad_in</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="sw_pad_in"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>led_pad_out</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="led_pad_out"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>pmod1_pad_out</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="pmod1_pad_out"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>pmod1_pad_in</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="pmod1_pad_in"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>    
 
     <ipxact:adHocConnection>
       <ipxact:name>pmod1_pad_oe</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="pmod1_pad_oe"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
     
 
 
         <ipxact:adHocConnection>
       <ipxact:name>pmod2_pad_out</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="pmod2_pad_out"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>pmod2_pad_in</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="pmod2_pad_in"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>    
 
     <ipxact:adHocConnection>
       <ipxact:name>pmod2_pad_oe</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="pmod2_pad_oe"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
     
        <ipxact:adHocConnection>
       <ipxact:name>pmod3_pad_out</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="pmod3_pad_out"/>
-       </ipxact:adHocConnection>
+            </ipxact:portReferences>
+    </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>pmod3_pad_in</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="pmod3_pad_in"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>    
 
     <ipxact:adHocConnection>
       <ipxact:name>pmod3_pad_oe</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="pmod3_pad_oe"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
@@ -283,50 +347,64 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
        
     <ipxact:adHocConnection>
       <ipxact:name>pmod4_pad_out</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="pmod4_pad_out"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>pmod4_pad_in</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="pmod4_pad_in"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>    
 
     <ipxact:adHocConnection>
       <ipxact:name>pmod4_pad_oe</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="pmod4_pad_oe"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>sys_spi_sck_pad_in</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="sys_spi_sck_pad_in"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>sys_spi_miso_pad_out</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="sys_spi_miso_pad_out"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
       <ipxact:name>sys_spi_mosi_pad_in</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="sys_spi_mosi_pad_in"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
     
 
 
     <ipxact:adHocConnection>
       <ipxact:name>rp_spi_ce0n_pad_in</ipxact:name>
-      <ipxact:externalPortReference portRef=""/>
+            <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
       <ipxact:internalPortReference componentRef="core" portRef="rp_spi_ce0n_pad_in"/>
+         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
 
@@ -843,7 +921,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
      <ipxact:interconnection>
       <ipxact:name>aux_jtag</ipxact:name>
       <ipxact:activeInterface componentRef="jtag_tap" busRef="aux_jtag"></ipxact:activeInterface>
-      </ipxact:interconnection>
+     </ipxact:interconnection>
 
 
 

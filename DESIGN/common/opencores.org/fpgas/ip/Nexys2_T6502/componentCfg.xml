@@ -521,32 +521,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     </socgen:chip>
 
 
-    <socgen:chip>   
-    <socgen:name>tim_2</socgen:name>
-    <socgen:variant>Nexys2_T6502_tim_2</socgen:variant>
-    <socgen:configuration>tim_2</socgen:configuration>
-        <socgen:parameters>
-         <socgen:parameter><socgen:name>ROM_FILE</socgen:name>
-         <socgen:value>"opencores.org__Mos6502/table_tim1/table_tim1.abs16"</socgen:value></socgen:parameter>
-         <socgen:parameter><socgen:name>ROM_WORDS</socgen:name><socgen:value>128</socgen:value></socgen:parameter>
-         <socgen:parameter><socgen:name>ROM_ADD</socgen:name><socgen:value>7</socgen:value></socgen:parameter>
-         <socgen:parameter><socgen:name>PROG_ROM_FILE</socgen:name>
-         <socgen:value>"opencores.org__Mos6502/tim_2/tim_2.abs16"</socgen:value></socgen:parameter>
-         <socgen:parameter><socgen:name>PROG_ROM_WORDS</socgen:name><socgen:value>2048</socgen:value></socgen:parameter>
-         <socgen:parameter><socgen:name>PROG_ROM_ADD</socgen:name><socgen:value>11</socgen:value></socgen:parameter>  
-         <socgen:parameter><socgen:name>STARTUP</socgen:name>
-         <socgen:value>"opencores.org__fpgas/vga_startup_screen/vga_startup_screen.abs"</socgen:value></socgen:parameter>  
-         <socgen:parameter><socgen:name>FONT</socgen:name>
-         <socgen:value>"opencores.org__fpgas/vga_font/vga_font.abs"</socgen:value></socgen:parameter>  
-         <socgen:parameter><socgen:name>UART_DIV</socgen:name><socgen:value>1</socgen:value></socgen:parameter>  
-        </socgen:parameters>
-    <socgen:target>
-    <socgen:vendor>digilentinc.com</socgen:vendor>  
-    <socgen:library>Nexys2</socgen:library>  
-    <socgen:component>fpga</socgen:component>  
-    <socgen:part>xc3s1200e-fg320-5</socgen:part>  
-    </socgen:target>
-    </socgen:chip>
    </socgen:ise>
 
 
@@ -575,22 +549,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 
 
-<socgen:fpga> 
-<socgen:variant>Nexys2_T6502_tim_2</socgen:variant>
-<socgen:version>tim_2</socgen:version>  
-<socgen:configuration>default</socgen:configuration>
-<socgen:parameters>
-</socgen:parameters>
-<socgen:tools>
-  <socgen:tool>ise</socgen:tool>
-</socgen:tools>
-<socgen:target>
-    <socgen:vendor>digilentinc.com</socgen:vendor>  
-    <socgen:library>Nexys2</socgen:library>  
-    <socgen:component>fpga</socgen:component>  
-    <socgen:part>xc3s1200e-fg320-5</socgen:part>  
-</socgen:target>
-</socgen:fpga>
 
 
 

@@ -33,9 +33,9 @@ xmlns:socgen="http://opencores.org"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
-<ipxact:vendor>valentfx.com</ipxact:vendor>
-<ipxact:library>logipi</ipxact:library>
-<ipxact:name>fpga</ipxact:name>
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>fpgas</ipxact:library>
+<ipxact:name>logipi_T6502</ipxact:name>
 <ipxact:version>padring</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
 
 <ipxact:componentGenerators>
@@ -496,15 +496,26 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:modelParameter><ipxact:name>CHIP_ID</ipxact:name><ipxact:value>32'hf1c2e093</ipxact:value></ipxact:modelParameter>
 </ipxact:modelParameters>
 
+
+
+		<ipxact:instantiations>
+			<ipxact:designInstantiation>
+				<ipxact:name>Hierarchical</ipxact:name>
+				<ipxact:designRef vendor="valentfx.com" library="logipi" name="fpga" version="design"/>
+			</ipxact:designInstantiation>
+		</ipxact:instantiations>
+
+
+
+
+
+
   <ipxact:views>
 
     <ipxact:view>
        <ipxact:name>Hierarchical</ipxact:name>
-       
-       <ipxact:hierarchyRef ipxact:vendor="valentfx.com" 
-                            ipxact:library="logipi"  
-                            ipxact:name="fpga" 
-                            ipxact:version="design"/>
+            <ipxact:designInstantiationRef>Hierarchical</ipxact:designInstantiationRef>
+
     </ipxact:view>
 
     <ipxact:view>

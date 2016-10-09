@@ -31,7 +31,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
           <socgen:configuration>
             <socgen:name>default</socgen:name>
-            <socgen:version>def</socgen:version>
+            <socgen:version>master</socgen:version>
             <socgen:parameters>
               <socgen:parameter><socgen:name>CLKCNT</socgen:name><socgen:value>10'h1f0</socgen:value></socgen:parameter>
               <socgen:parameter><socgen:name>SIZE</socgen:name><socgen:value>10</socgen:value></socgen:parameter>

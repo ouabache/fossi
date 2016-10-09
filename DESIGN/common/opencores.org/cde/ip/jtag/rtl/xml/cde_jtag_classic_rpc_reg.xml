@@ -14,20 +14,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:name>jtag</ipxact:name>
 <ipxact:version>classic_rpc_reg</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
 
-
-
-
-
 <ipxact:busInterfaces>
-
-
  <ipxact:busInterface><ipxact:name>jtag</ipxact:name>
  <ipxact:busType  vendor="opencores.org" library="cde" name="jtag" version="rpc"/>
-
-
   <ipxact:abstractionTypes>
-      <ipxact:abstractionType>
- <ipxact:abstractionRef vendor="opencores.org" library="cde" name="jtag" version="rpc_classic_rtl"/>
+  <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="cde" name="jtag" version="rpc_classic_rtl"/>
    <ipxact:portMaps>
 
       <ipxact:portMap>
@@ -84,6 +76,53 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:slave/>
  
  </ipxact:busInterface>
+
+
+		<ipxact:busInterface>
+			<ipxact:name>update_value</ipxact:name>
+			<ipxact:busType vendor="opencores.org" library="Busdefs" name="adhoc" version="def"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="adhoc" version="rtl"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>adhoc</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>update_value</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+		</ipxact:busInterface>
+
+
+				<ipxact:busInterface>
+			<ipxact:name>capture_value</ipxact:name>
+			<ipxact:busType vendor="opencores.org" library="Busdefs" name="adhoc" version="def"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="adhoc" version="rtl"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>adhoc</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>capture_value</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+		</ipxact:busInterface>
+
+
+		
 
 </ipxact:busInterfaces>
 
@@ -287,47 +326,47 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:port><ipxact:name>capture_value</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction>
 <ipxact:vector><ipxact:left>BITS-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
 
 <ipxact:port><ipxact:name>update_value</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction>
 <ipxact:vector><ipxact:left>BITS-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
 
 
 <ipxact:port><ipxact:name>test_logic_reset</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction>
 <ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
 
 
 <ipxact:port><ipxact:name>capture_dr</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction>
 <ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
 
 
 <ipxact:port><ipxact:name>shift_dr</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction>
 <ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
 
 
 <ipxact:port><ipxact:name>shiftcapture_dr_clk</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction>
 <ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
@@ -335,34 +374,34 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:port><ipxact:name>update_dr_clk</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction>
 <ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
 
 <ipxact:port><ipxact:name>tdi</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction>
 <ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>tdo</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction>
 <ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>select</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction>
 <ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 
 
 <ipxact:port><ipxact:name>shiftcapture_dr</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction>
 <ipxact:vector><ipxact:left></ipxact:left><ipxact:right></ipxact:right></ipxact:vector></ipxact:wire>
 </ipxact:port>
 

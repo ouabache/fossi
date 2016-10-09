@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<ipxact:design
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+    xmlns:kactus2="http://kactus2.cs.tut.fi"
+    xmlns:socgen="http://opencores.org"
+    xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>opencores.org</ipxact:vendor>
+	<ipxact:library>cde</ipxact:library>
+	<ipxact:name>jtag</ipxact:name>
+	<ipxact:version>tap.design</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>clk_gater_jtag_shift_clk</ipxact:instanceName>
+			<ipxact:componentRef vendor="opencores.org" library="cde" name="clock" version="gater"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{474e6402-97eb-4bf9-a052-f61553fe58b7}</kactus2:uuid>
+				<kactus2:position x="600" y="390"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>clk_gater_jtag_update_clk</ipxact:instanceName>
+			<ipxact:componentRef vendor="opencores.org" library="cde" name="clock" version="gater"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{226d1f0a-6ef5-4bd2-a8d1-4c54e68c84b1}</kactus2:uuid>
+				<kactus2:position x="600" y="270"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>clk_gater_jtag_clk</ipxact:instanceName>
+			<ipxact:componentRef vendor="opencores.org" library="cde" name="clock" version="gater"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{e25925e7-7e25-4dc7-adb9-508800ce201b}</kactus2:uuid>
+				<kactus2:position x="600" y="150"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>chip_id_reg</ipxact:instanceName>
+			<ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="rpc_in_reg"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{d19643b5-6528-4936-bb5d-377ba1569a17}</kactus2:uuid>
+				<kactus2:position x="600" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>jtag_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="tap_logic"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{059bec2a-8066-4dfe-a5b3-2239907ce171}</kactus2:uuid>
+				<kactus2:position x="600" y="510"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>jtag_1</ipxact:instanceName>
+			<ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="tap_sm"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{71c3d94b-f3bc-41b5-a81b-6d8596151a2b}</kactus2:uuid>
+				<kactus2:position x="600" y="870"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:interconnections>
+		<ipxact:interconnection>
+			<ipxact:name>jtag_0_trst_n_pad_to_trst_n_pad</ipxact:name>
+			<ipxact:activeInterface componentRef="jtag_0" busRef="trst_n_pad"/>
+			<ipxact:hierInterface busRef="trst_n_pad"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>jtag_0_tdi_pad_to_tdi_pad</ipxact:name>
+			<ipxact:activeInterface componentRef="jtag_0" busRef="tdi_pad"/>
+			<ipxact:hierInterface busRef="tdi_pad"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>jtag_0_tclk_pad_to_tclk_pad</ipxact:name>
+			<ipxact:activeInterface componentRef="jtag_0" busRef="tclk_pad"/>
+			<ipxact:hierInterface busRef="tclk_pad"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>jtag_1_tms_pad_to_tms_pad</ipxact:name>
+			<ipxact:activeInterface componentRef="jtag_1" busRef="tms_pad"/>
+			<ipxact:hierInterface busRef="tms_pad"/>
+		</ipxact:interconnection>
+	</ipxact:interconnections>
+	<ipxact:adHocConnections>
+		<ipxact:adHocConnection>
+			<ipxact:name>jtag_clk</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>trst_pad_in</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>tdi_pad_in</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>chip_id_select</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>chip_id_tdo</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>capture_dr_o</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>shift_dr_o</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>tclk</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>jtag_shift_clk</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>update_dr_clk_o</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>jtag_clk</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>shiftcapture_dr</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>update_dr_o</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>chip_id_value</ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name></ipxact:name>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name></ipxact:name>
+		</ipxact:adHocConnection>
+	</ipxact:adHocConnections>
+	<ipxact:vendorExtensions>
+		<socgen:nodes>
+			<socgen:node>
+				<ipxact:name>tclk</ipxact:name>
+				<ipxact:typeName>wire</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>tclk_n</ipxact:name>
+				<ipxact:typeName>wire</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>tap_state</ipxact:name>
+				<ipxact:typeName>reg</ipxact:typeName>
+				<ipxact:wire>
+					<ipxact:vector>
+						<ipxact:left>3</ipxact:left>
+						<ipxact:right>0</ipxact:right>
+					</ipxact:vector>
+				</ipxact:wire>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>next_tap_state</ipxact:name>
+				<ipxact:typeName>reg</ipxact:typeName>
+				<ipxact:wire>
+					<ipxact:vector>
+						<ipxact:left>3</ipxact:left>
+						<ipxact:right>0</ipxact:right>
+					</ipxact:vector>
+				</ipxact:wire>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>shift_ir</ipxact:name>
+				<ipxact:typeName>reg</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>update_ir</ipxact:name>
+				<ipxact:typeName>reg</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>capture_ir</ipxact:name>
+				<ipxact:typeName>reg</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>next_tdo</ipxact:name>
+				<ipxact:typeName>reg</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>bypass_tdo</ipxact:name>
+				<ipxact:typeName>reg</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>chip_id_tdo</ipxact:name>
+				<ipxact:typeName>wire</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>chip_id_select</ipxact:name>
+				<ipxact:typeName>wire</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>bypass_select</ipxact:name>
+				<ipxact:typeName>wire</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>extest</ipxact:name>
+				<ipxact:typeName>wire</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>sample</ipxact:name>
+				<ipxact:typeName>wire</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>clamp</ipxact:name>
+				<ipxact:typeName>wire</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>bsr_output_mode</ipxact:name>
+				<ipxact:typeName>reg</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>shiftcapture_dr</ipxact:name>
+				<ipxact:typeName>wire</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>aux_update_dr_o</ipxact:name>
+				<ipxact:typeName>wire</ipxact:typeName>
+			</socgen:node>
+			<socgen:node>
+				<ipxact:name>aux_jtag_clk</ipxact:name>
+				<ipxact:typeName>wire</ipxact:typeName>
+			</socgen:node>
+		</socgen:nodes>
+		<kactus2:columnLayout>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="0"/>
+			<kactus2:column name="Buses" contentType="1" allowedItems="12" minWidth="319" width="319" x="120"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="440"/>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="760"/>
+		</kactus2:columnLayout>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>jtag</kactus2:name>
+			<kactus2:position x="820" y="260"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>aux_jtag</kactus2:name>
+			<kactus2:position x="820" y="190"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>tclk_pad</kactus2:name>
+			<kactus2:position x="60" y="850"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>tdi_pad</kactus2:name>
+			<kactus2:position x="60" y="520"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>tms_pad</kactus2:name>
+			<kactus2:position x="60" y="630"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>trst_n_pad</kactus2:name>
+			<kactus2:position x="60" y="580"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>tdo_pad</kactus2:name>
+			<kactus2:position x="60" y="690"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:adHocVisibilities/>
+		<kactus2:routes>
+			<kactus2:route kactus2:connRef="jtag_0_trst_n_pad_to_trst_n_pad" kactus2:offPage="false">
+				<kactus2:position x="490" y="580"/>
+				<kactus2:position x="60" y="580"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="jtag_0_tdi_pad_to_tdi_pad" kactus2:offPage="false">
+				<kactus2:position x="490" y="610"/>
+				<kactus2:position x="80" y="610"/>
+				<kactus2:position x="80" y="520"/>
+				<kactus2:position x="60" y="520"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="jtag_0_tclk_pad_to_tclk_pad" kactus2:offPage="false">
+				<kactus2:position x="710" y="580"/>
+				<kactus2:position x="730" y="580"/>
+				<kactus2:position x="730" y="850"/>
+				<kactus2:position x="60" y="850"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="jtag_1_tms_pad_to_tms_pad" kactus2:offPage="false">
+				<kactus2:position x="710" y="940"/>
+				<kactus2:position x="730" y="940"/>
+				<kactus2:position x="730" y="630"/>
+				<kactus2:position x="60" y="630"/>
+			</kactus2:route>
+		</kactus2:routes>
+	</ipxact:vendorExtensions>
+</ipxact:design>
