@@ -1,6 +1,6 @@
 eval 'exec `which perl` -S $0 ${1+"$@"}'
    if 0;
-#/**********************************************************************/
+#/*********************************************************************/
 #/*                                                                    */
 #/*             -------                                                */
 #/*            /   SOC  \                                              */
@@ -432,9 +432,10 @@ foreach my $bus_iface ($spirit_component_file->findnodes("//ipxact:component/ipx
         my($direction)       = $i_name ->findnodes('../ipxact:wire/ipxact:direction/text()')->to_literal ;
         my($left)            = $i_name ->findnodes('../ipxact:wire/ipxact:vector/ipxact:left/text()')->to_literal ;
         my($right)           = $i_name ->findnodes('../ipxact:wire/ipxact:vector/ipxact:right/text()')->to_literal ;
-        my($type)            = $i_name ->findnodes('../ipxact:wireTypeDefs/ipxact:wireTypeDef/ipxact:typeName/text()')->to_literal ;
+        my($type)            = $i_name ->findnodes('../ipxact:wire/ipxact:wireTypeDefs/ipxact:wireTypeDef/ipxact:typeName/text()')->to_literal ;
 
-
+        unless (defined $type) {$type = "wire";}
+	
         if    ($direction eq "in")  { $direction = "input";}
         elsif ($direction eq "out") { $direction = "output";}
 
@@ -901,8 +902,6 @@ sub process_design_file
         my($ext_portRef_name)       = $i_name ->findnodes('../../ipxact:externalPortReference/@portRef')->to_literal ;
         my($left)                   = $i_name ->findnodes('../../ipxact:externalPortReference/@left')->to_literal ;
         my($right)                  = $i_name ->findnodes('../../ipxact:externalPortReference/@right')->to_literal ;
-
-
         if(  $left ne "" ) 
           { 
           if(  $right  eq "" ){ $right = $left; } 
@@ -914,28 +913,18 @@ sub process_design_file
           $left   = "none";
           $right  = "none";
           }
-
-
-
           if ( ${adhocConnection_name} eq "" )  { $adhocConnection_name = "***";}
           if (  ${ext_portRef_name} eq ""    )  { $ext_portRef_name     = "***";}
-
-
-#print "NNNNNNNNNN $componentRef_name $adhocConnection_name ||${tied_value}||  $int_portRef_name $ext_portRef_name $left $right \n";
-
+#print "NNNNNNNNN $componentRef_name $adhocConnection_name ||${tied_value}||  $int_portRef_name $ext_portRef_name $left $right \n";
         if($tied_value )
           { 
           $busses_db->db_put( "AdHoc_${componentRef_name}__${int_portRef_name}","${tied_value}:${ext_portRef_name}:${type}:${vector}:${left}:${right}"  );
-
-#print"NNNNNNNNNNNNN  AdHoc_${componentRef_name}__${int_portRef_name}    ${tied_value}:${ext_portRef_name}:${type}:${vector}:${left}:${right}\n"  ;
-
+#print"NNNNNNNNN  AdHoc_${componentRef_name}__${int_portRef_name}    ${tied_value}:${ext_portRef_name}:${type}:${vector}:${left}:${right}\n"  ;
           }
          else
           {
           $busses_db->db_put( "AdHoc_${componentRef_name}__${int_portRef_name}","${adhocConnection_name}:${ext_portRef_name}:${type}:${vector}:${left}:${right}"  );
-#          print "NNNNNNNNN   AdHoc_${componentRef_name}__${int_portRef_name}    ${adhocConnection_name}:${ext_portRef_name}:${type}:${vector}:${left}:${right} \n"  ;
-
-
+#print "NNNNNNNNN   AdHoc_${componentRef_name}__${int_portRef_name}    ${adhocConnection_name}:${ext_portRef_name}:${type}:${vector}:${left}:${right} \n"  ;
         $_ = ${adhocConnection_name};
         if(/(\w+)/)   
             {        
@@ -946,11 +935,73 @@ sub process_design_file
                   uplift_busref("adhoc", ${adhocConnection_name} , "node" , "wire" , ${vector}, ${left} , ${right}, ${adhocConnection_name});
                   }
             }
-
           }
-
-
         }
+
+
+
+
+
+     #/**********************************************************************/
+     #/*   1685_2014 version                                                */
+     #/* Read all adHocConnections and load instance connect info into array*/
+     #/*                                                                    */
+     #/**********************************************************************/
+
+
+
+     foreach  my   $i_name ($spirit_design_file->findnodes('//ipxact:adHocConnections/ipxact:adHocConnection/ipxact:portReferences/ipxact:internalPortReference/@componentRef'))
+        {
+        my($componentRef_name)      = $i_name ->to_literal;
+        my($adhocConnection_name)   = $i_name ->findnodes('../../../ipxact:name/text()')->to_literal ;
+        my($tied_value)             = $i_name ->findnodes('../../../@tiedValue')->to_literal ;
+        my($int_portRef_name)       = $i_name ->findnodes('../@portRef')->to_literal ;
+        my($ext_portRef_name)       = $i_name ->findnodes('../../ipxact:externalPortReference/@portRef')->to_literal ;
+        my($left)                   = $i_name ->findnodes('../../ipxact:externalPortReference/@left')->to_literal ;
+        my($right)                  = $i_name ->findnodes('../../ipxact:externalPortReference/@right')->to_literal ;
+        if(  $left ne "" ) 
+          { 
+          if(  $right  eq "" ){ $right = $left; } 
+          $vector = "vector";
+          }
+        else                     
+          { 
+          $vector = "scaler";
+          $left   = "none";
+          $right  = "none";
+          }
+          if ( ${adhocConnection_name} eq "" )  { $adhocConnection_name = "***";}
+          if (  ${ext_portRef_name} eq ""    )  { $ext_portRef_name     = "***";}
+#print "NNNNNNNNN-N $componentRef_name $adhocConnection_name ||${tied_value}||  $int_portRef_name $ext_portRef_name $left $right \n";
+        if($tied_value )
+          { 
+          $busses_db->db_put( "AdHoc_${componentRef_name}__${int_portRef_name}","${tied_value}:${ext_portRef_name}:${type}:${vector}:${left}:${right}"  );
+#print "NNNNNNNNN-N  AdHoc_${componentRef_name}__${int_portRef_name}    ${tied_value}:${ext_portRef_name}:${type}:${vector}:${left}:${right}\n"  ;
+          }
+         else
+          {
+          $busses_db->db_put( "AdHoc_${componentRef_name}__${int_portRef_name}","${adhocConnection_name}:${ext_portRef_name}:${type}:${vector}:${left}:${right}"  );
+#print "NNNNNNNNN-N   AdHoc_${componentRef_name}__${int_portRef_name}    ${adhocConnection_name}:${ext_portRef_name}:${type}:${vector}:${left}:${right} \n"  ;
+        $_ = ${adhocConnection_name};
+        if(/(\w+)/)   
+            {        
+            $adhocConnection_name      = $1;
+            unless( looks_like_number($adhocConnection_name) ) 
+                  {
+#                  print "ADHOC_NODE   ${adhocConnection_name}  ,  node  ,  wire  , $vector, $left , $right  \n";
+                  uplift_busref("adhoc", ${adhocConnection_name} , "node" , "wire" , ${vector}, ${left} , ${right}, ${adhocConnection_name});
+                  }
+            }
+          }
+        }
+
+
+
+
+
+
+
+
 }
 
 
