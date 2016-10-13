@@ -226,8 +226,8 @@ foreach  $comp_version   (@versions)
          {
          my($port_name)       = $comp ->findnodes('./text()')->to_literal ;
          my($direction)       = $comp ->findnodes('../ipxact:wire/ipxact:direction/text()')->to_literal ;
-         my($left)            = $comp ->findnodes('../ipxact:wire/ipxact:vector/ipxact:left/text()')->to_literal ;
-         my($right)           = $comp ->findnodes('../ipxact:wire/ipxact:vector/ipxact:right/text()')->to_literal ;
+         my($left)            = $comp ->findnodes('../ipxact:wire/ipxact:vectors/ipxact:vector/ipxact:left/text()')->to_literal ;
+         my($right)           = $comp ->findnodes('../ipxact:wire/ipxact:vectors/ipxact:vector/ipxact:right/text()')->to_literal ;
          my($type)            = $comp ->findnodes('../ipxact:wire/ipxact:wireTypeDefs/ipxact:wireTypeDef/ipxact:typeName/text()')->to_literal ;
 
          unless (defined $type)  {$type ="wire";}

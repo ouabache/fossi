@@ -167,7 +167,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire>
 <ipxact:direction>inout</ipxact:direction>
- <ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector>
+ <ipxact:vectors><ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>
  </ipxact:wire>
 </ipxact:port>
 
@@ -175,14 +175,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire>
  <ipxact:direction>out</ipxact:direction>
- <ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector>
+ <ipxact:vectors><ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>
 </ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
  <ipxact:wire><ipxact:direction>in</ipxact:direction>
- <ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector>
+ <ipxact:vectors><ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>
 </ipxact:wire>
 </ipxact:port>
 
@@ -190,7 +190,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire>
  <ipxact:direction>in</ipxact:direction>
- <ipxact:vector><ipxact:left>OE_WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector>
+ <ipxact:vectors><ipxact:vector><ipxact:left>OE_WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>
 </ipxact:wire>
 </ipxact:port>
 

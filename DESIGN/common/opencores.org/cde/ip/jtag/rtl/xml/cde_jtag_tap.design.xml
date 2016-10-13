@@ -15,119 +15,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:version>tap.design</ipxact:version>  
 
 
-<ipxact:vendorExtensions><socgen:nodes>
-
-
-<socgen:node><ipxact:name>tclk</ipxact:name>
-<ipxact:typeName>wire</ipxact:typeName>
-
-</socgen:node>
-
-<socgen:node><ipxact:name>tclk_n</ipxact:name>
-<ipxact:typeName>wire</ipxact:typeName>
-
-</socgen:node>
-
-
-<socgen:node><ipxact:name>tap_state</ipxact:name>
-<ipxact:typeName>reg</ipxact:typeName>
-<ipxact:wire><ipxact:vector><ipxact:left>3</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
-</socgen:node>
-
-
-<socgen:node><ipxact:name>next_tap_state</ipxact:name>
-<ipxact:typeName>reg</ipxact:typeName>
-<ipxact:wire><ipxact:vector><ipxact:left>3</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
-</socgen:node>
-
-
-<socgen:node><ipxact:name>shift_ir</ipxact:name>
-<ipxact:typeName>reg</ipxact:typeName>
-
-</socgen:node>
-
-<socgen:node><ipxact:name>update_ir</ipxact:name>
-<ipxact:typeName>reg</ipxact:typeName>
-
-</socgen:node>
-
-<socgen:node><ipxact:name>capture_ir</ipxact:name>
-<ipxact:typeName>reg</ipxact:typeName>
-
-</socgen:node>
-
-
-
-<socgen:node><ipxact:name>next_tdo</ipxact:name>
-<ipxact:typeName>reg</ipxact:typeName>
-
-</socgen:node>
-
-
-<socgen:node><ipxact:name>bypass_tdo</ipxact:name>
-<ipxact:typeName>reg</ipxact:typeName>
-
-</socgen:node>
-
-
-<socgen:node><ipxact:name>chip_id_tdo</ipxact:name>
-<ipxact:typeName>wire</ipxact:typeName>
-
-</socgen:node>
-
-<socgen:node><ipxact:name>chip_id_select</ipxact:name>
-<ipxact:typeName>wire</ipxact:typeName>
-
-</socgen:node>
-
-<socgen:node><ipxact:name>bypass_select</ipxact:name>
-<ipxact:typeName>wire</ipxact:typeName>
-
-</socgen:node>
-
-
-<socgen:node><ipxact:name>extest</ipxact:name>
-<ipxact:typeName>wire</ipxact:typeName>
-
-</socgen:node>
-
-
-<socgen:node><ipxact:name>sample</ipxact:name>
-<ipxact:typeName>wire</ipxact:typeName>
-
-</socgen:node>
-
-
-<socgen:node><ipxact:name>clamp</ipxact:name>
-<ipxact:typeName>wire</ipxact:typeName>
-
-</socgen:node>
-
-
-<socgen:node><ipxact:name>bsr_output_mode</ipxact:name>
-<ipxact:typeName>reg</ipxact:typeName>
-</socgen:node>
-
-
-<socgen:node><ipxact:name>shiftcapture_dr</ipxact:name>
-<ipxact:typeName>wire</ipxact:typeName>
-</socgen:node>
-
-
-<socgen:node><ipxact:name>aux_update_dr_o</ipxact:name>
-<ipxact:typeName>wire</ipxact:typeName>
-</socgen:node>
-
-
-<socgen:node><ipxact:name>aux_jtag_clk</ipxact:name>
-<ipxact:typeName>wire</ipxact:typeName>
-</socgen:node>
 
 
 
 
-
-</socgen:nodes></ipxact:vendorExtensions>
 
 
 <ipxact:adHocConnections>
@@ -136,50 +27,98 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:name>jtag_clk</ipxact:name>
       <ipxact:externalPortReference portRef="jtag_clk"/>
       <ipxact:internalPortReference componentRef="chip_id_reg" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="jtag_clk"/>      
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>trst_pad_in</ipxact:name>
-      <ipxact:externalPortReference portRef="trst_pad_in"/>
+      <ipxact:name>jtag_reset</ipxact:name>
+      <ipxact:externalPortReference portRef="jtag_reset"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="jtag_reset"/>      
       <ipxact:internalPortReference componentRef="chip_id_reg" portRef="reset"/>
     </ipxact:adHocConnection>
 
+
+    <ipxact:adHocConnection>
+      <ipxact:name>trst_n_pad_in</ipxact:name>
+      <ipxact:externalPortReference portRef="trst_n_pad_in"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="trst_n_pad_in"/>      
+    </ipxact:adHocConnection>
+
+    
+
+
+    
     <ipxact:adHocConnection>
       <ipxact:name>tdi_pad_in</ipxact:name>
-      <ipxact:externalPortReference portRef="JTAG_INT_JTAG_TDI_PAD_IN"/>
+      <ipxact:externalPortReference portRef="tdi_pad_in"/>
       <ipxact:internalPortReference componentRef="chip_id_reg" portRef="tdi"/>
+            <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="tdi_pad_in"/>      
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="tdi_pad_in"/>      
     </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>tdo_pad_out</ipxact:name>
+      <ipxact:externalPortReference portRef="tdo_pad_out"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="tdo_pad_out"/>      
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>tdo_pad_oe</ipxact:name>
+      <ipxact:externalPortReference portRef="tdo_pad_oe"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="tdo_pad_oe"/>      
+    </ipxact:adHocConnection>
+
+    
+
+
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>tms_pad_in</ipxact:name>
+      <ipxact:externalPortReference portRef="tms_pad_in"/>
+            <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="tms_pad_in"/>      
+    </ipxact:adHocConnection>
+    
 
     <ipxact:adHocConnection>
       <ipxact:name>chip_id_select</ipxact:name>
       <ipxact:externalPortReference portRef="chip_id_select"/>
       <ipxact:internalPortReference componentRef="chip_id_reg" portRef="select"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="chip_id_select"/>      
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>chip_id_tdo</ipxact:name>
       <ipxact:externalPortReference portRef="chip_id_tdo"/>
       <ipxact:internalPortReference componentRef="chip_id_reg" portRef="tdo"/>
+            <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="chip_id_tdo"/>      
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>capture_dr_o</ipxact:name>
       <ipxact:externalPortReference portRef="jtag_capture_dr"/>
       <ipxact:internalPortReference componentRef="chip_id_reg" portRef="capture_dr"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="capture_dr_o"/>
+            <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="capture_dr_o"/>      
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
       <ipxact:name>shift_dr_o</ipxact:name>
       <ipxact:externalPortReference portRef="jtag_shift_dr"/>
       <ipxact:internalPortReference componentRef="chip_id_reg" portRef="shift_dr"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="shift_dr_o"/>
+            <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="shift_dr_o"/>      
     </ipxact:adHocConnection>
 
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>tclk</ipxact:name>
-      <ipxact:externalPortReference portRef="tclk"/>
+      <ipxact:name>tclk_pad_in</ipxact:name>
+      <ipxact:externalPortReference portRef="tclk_pad_in"/>
       <ipxact:internalPortReference componentRef="clk_gater_jtag_shift_clk" portRef="clk_in"/>
       <ipxact:internalPortReference componentRef="clk_gater_jtag_update_clk" portRef="clk_in"/>
       <ipxact:internalPortReference componentRef="clk_gater_jtag_clk" portRef="clk_in"/>
@@ -193,6 +132,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:name>jtag_shift_clk</ipxact:name>
       <ipxact:externalPortReference portRef="jtag_shift_clk"/>
       <ipxact:internalPortReference componentRef="clk_gater_jtag_shift_clk" portRef="clk_out"/>
+            <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="jtag_shift_clk"/>      
     </ipxact:adHocConnection>
 
 
@@ -210,15 +150,23 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>shiftcapture_dr</ipxact:name>
-      <ipxact:externalPortReference portRef="shiftcapture_dr"/>
+      <ipxact:name>shiftcapture_dr_o</ipxact:name>
+      <ipxact:externalPortReference portRef="shiftcapture_dr_o"/>
       <ipxact:internalPortReference componentRef="clk_gater_jtag_shift_clk" portRef="enable"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="shiftcapture_dr_o"/>      
     </ipxact:adHocConnection>
 
+
+
+
+
+    
     <ipxact:adHocConnection>
       <ipxact:name>update_dr_o</ipxact:name>      
-      <ipxact:externalPortReference portRef="update_dr_o"/>
+      <ipxact:externalPortReference portRef="update_dr_o"/>      
       <ipxact:internalPortReference componentRef="clk_gater_jtag_update_clk" portRef="enable"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="update_dr_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="update_dr_o"/>      
     </ipxact:adHocConnection>
 
 
@@ -226,9 +174,181 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:name>chip_id_value</ipxact:name>
       <ipxact:externalPortReference portRef="chip_id_value" left="31"  right="0"  />
       <ipxact:internalPortReference componentRef="chip_id_reg" portRef="capture_value"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="chip_id_value"/>            
     </ipxact:adHocConnection>
 
 
+    <ipxact:adHocConnection>
+      <ipxact:name>instruction</ipxact:name>
+      <ipxact:externalPortReference portRef="instruction" left="3"  right="0"  />
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="instruction"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="instruction"/>
+    </ipxact:adHocConnection>
+    
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>bsr_output_mode</ipxact:name>      
+      <ipxact:externalPortReference portRef="bsr_output_mode"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="bsr_output_mode"/>
+    </ipxact:adHocConnection>
+
+
+        <ipxact:adHocConnection>
+      <ipxact:name>tap_highz_mode</ipxact:name>      
+      <ipxact:externalPortReference portRef="tap_highz_mode"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="tap_highz_mode"/>
+    </ipxact:adHocConnection>
+
+
+
+        <ipxact:adHocConnection>
+      <ipxact:name>test_logic_reset_o</ipxact:name>      
+      <ipxact:externalPortReference portRef="test_logic_reset_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="test_logic_reset_o"/>
+    </ipxact:adHocConnection>
+
+
+        <ipxact:adHocConnection>
+      <ipxact:name>next_tdo</ipxact:name>      
+      <ipxact:externalPortReference portRef="next_tdo"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_sm" portRef="tdo_in"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="next_tdo"/>
+	</ipxact:adHocConnection>
+
+
+        <ipxact:adHocConnection>
+      <ipxact:name>tdo_i</ipxact:name>      
+      <ipxact:externalPortReference portRef="tdo_i"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="tdo_i"/>
+    </ipxact:adHocConnection>
+
+        <ipxact:adHocConnection>
+      <ipxact:name>aux_tdo_i</ipxact:name>      
+      <ipxact:externalPortReference portRef="aux_tdo_i"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="aux_tdo_i"/>
+	</ipxact:adHocConnection>
+
+
+        <ipxact:adHocConnection>
+      <ipxact:name>bsr_select_o</ipxact:name>      
+      <ipxact:externalPortReference portRef="bsr_select_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="bsr_select_o"/>
+	</ipxact:adHocConnection>
+
+        <ipxact:adHocConnection>
+      <ipxact:name>chip_id_select</ipxact:name>      
+      <ipxact:externalPortReference portRef="chip_id_select"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="chip_id_select"/>
+	</ipxact:adHocConnection>
+
+        <ipxact:adHocConnection>
+      <ipxact:name>extest</ipxact:name>      
+      <ipxact:externalPortReference portRef="extest"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="extest"/>
+	</ipxact:adHocConnection>
+
+        <ipxact:adHocConnection>
+      <ipxact:name>sample</ipxact:name>      
+      <ipxact:externalPortReference portRef="sample"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="sample"/>
+	</ipxact:adHocConnection>	
+	
+
+        <ipxact:adHocConnection>
+      <ipxact:name>clamp</ipxact:name>      
+      <ipxact:externalPortReference portRef="clamp"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="clamp"/>
+	</ipxact:adHocConnection>
+	
+
+        <ipxact:adHocConnection>
+      <ipxact:name>select_o</ipxact:name>      
+      <ipxact:externalPortReference portRef="select_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="select_o"/>
+    </ipxact:adHocConnection>
+	
+	
+
+            <ipxact:adHocConnection>
+      <ipxact:name>aux_select_o</ipxact:name>      
+      <ipxact:externalPortReference portRef="aux_select_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="aux_select_o"/>
+    </ipxact:adHocConnection>
+
+    
+
+    <ipxact:adHocConnection>
+      <ipxact:name>shiftcapture_dr_clk_o</ipxact:name>
+      <ipxact:externalPortReference portRef="shiftcapture_dr_clk_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="shiftcapture_dr_clk_o"/>      
+    </ipxact:adHocConnection>
+
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>aux_jtag_clk</ipxact:name>
+      <ipxact:externalPortReference portRef="aux_jtag_clk"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="aux_jtag_clk"/>      
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>aux_update_dr_clk_o</ipxact:name>
+      <ipxact:externalPortReference portRef="aux_update_dr_clk_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="aux_update_dr_clk_o"/>      
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>aux_shiftcapture_dr_clk_o</ipxact:name>
+      <ipxact:externalPortReference portRef="aux_shiftcapture_dr_clk_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="aux_shiftcapture_dr_clk_o"/>      
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>aux_test_logic_reset_o</ipxact:name>
+      <ipxact:externalPortReference portRef="aux_test_logic_reset_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="aux_test_logic_reset_o"/>      
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>aux_tdi_o</ipxact:name>
+      <ipxact:externalPortReference portRef="aux_tdi_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="aux_tdi_o"/>      
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>aux_capture_dr_o</ipxact:name>
+      <ipxact:externalPortReference portRef="aux_capture_dr_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="aux_capture_dr_o"/>      
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>aux_shift_dr_o</ipxact:name>
+      <ipxact:externalPortReference portRef="aux_shift_dr_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="aux_shift_dr_o"/>      
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>aux_update_dr_o</ipxact:name>
+      <ipxact:externalPortReference portRef="aux_update_dr_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="aux_update_dr_o"/>      
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>tdi_o</ipxact:name>
+      <ipxact:externalPortReference portRef="tdi_o"/>
+      <ipxact:internalPortReference componentRef="cde_jtag_tap_logic" portRef="tdi_o"/>      
+    </ipxact:adHocConnection>
+
+
+
+
+    
+
+
+    
+    
     <ipxact:adHocConnection tiedValue="1'b1" >
       <ipxact:internalPortReference componentRef="clk_gater_jtag_clk" portRef="enable"/>
     </ipxact:adHocConnection>
@@ -251,6 +371,129 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+	<ipxact:interconnections>
+
+	  
+        <ipxact:interconnection>
+        <ipxact:name>tdi_pad</ipxact:name>
+       <ipxact:activeInterface componentRef="cde_jtag_tap_sm" busRef="tdi_pad">
+        <ipxact:portMaps>
+          <ipxact:portMap>
+          <ipxact:logicalPort><ipxact:name>tdi_pad_in</ipxact:name>
+          </ipxact:logicalPort>
+          <ipxact:physicalPort><ipxact:name>tdi_pad_in</ipxact:name>
+          </ipxact:physicalPort>
+          </ipxact:portMap>
+        </ipxact:portMaps>
+       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="tdi_pad"/>
+    </ipxact:interconnection>
+
+
+            <ipxact:interconnection>
+        <ipxact:name>tms_pad</ipxact:name>
+       <ipxact:activeInterface componentRef="cde_jtag_tap_sm" busRef="tms_pad">
+        <ipxact:portMaps>
+          <ipxact:portMap>
+          <ipxact:logicalPort><ipxact:name>tms_pad_in</ipxact:name>
+          </ipxact:logicalPort>
+          <ipxact:physicalPort><ipxact:name>tms_pad_in</ipxact:name>
+          </ipxact:physicalPort>
+          </ipxact:portMap>
+        </ipxact:portMaps>
+       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="tms_pad"/>
+    </ipxact:interconnection>
+
+
+            <ipxact:interconnection>
+        <ipxact:name>trst_n_pad</ipxact:name>
+       <ipxact:activeInterface componentRef="cde_jtag_tap_sm" busRef="trst_n_pad">
+        <ipxact:portMaps>
+          <ipxact:portMap>
+          <ipxact:logicalPort><ipxact:name>trst_n_pad_in</ipxact:name>
+          </ipxact:logicalPort>
+          <ipxact:physicalPort><ipxact:name>trst_n_pad_in</ipxact:name>
+          </ipxact:physicalPort>
+          </ipxact:portMap>
+        </ipxact:portMaps>
+       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="trst_n_pad"/>
+    </ipxact:interconnection>
+
+
+            <ipxact:interconnection>
+        <ipxact:name>tclk_pad</ipxact:name>
+       <ipxact:activeInterface componentRef="cde_jtag_tap_sm" busRef="tclk_pad">
+        <ipxact:portMaps>
+          <ipxact:portMap>
+          <ipxact:logicalPort><ipxact:name>tclk_pad_in</ipxact:name>
+          </ipxact:logicalPort>
+          <ipxact:physicalPort><ipxact:name>tclk_pad_in</ipxact:name>
+          </ipxact:physicalPort>
+          </ipxact:portMap>
+        </ipxact:portMaps>
+       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="tclk_pad"/>
+	    </ipxact:interconnection>
+
+
+
+            <ipxact:interconnection>
+        <ipxact:name>tdo_pad</ipxact:name>
+       <ipxact:activeInterface componentRef="cde_jtag_tap_sm" busRef="tdo_pad">
+        <ipxact:portMaps>
+          <ipxact:portMap>
+          <ipxact:logicalPort><ipxact:name>tdo_pad_out</ipxact:name></ipxact:logicalPort>
+          <ipxact:physicalPort><ipxact:name>tdo_pad_out</ipxact:name></ipxact:physicalPort>
+          </ipxact:portMap>
+          <ipxact:portMap>
+          <ipxact:logicalPort><ipxact:name>tdo_pad_oe</ipxact:name></ipxact:logicalPort>
+          <ipxact:physicalPort><ipxact:name>tdo_pad_oe</ipxact:name></ipxact:physicalPort>
+          </ipxact:portMap>
+	  	  
+        </ipxact:portMaps>
+       </ipxact:activeInterface>
+       <ipxact:hierInterface busRef="tdo_pad"/>
+    </ipxact:interconnection>
+	    
+
+
+
+
+
+    
+       	</ipxact:interconnections>
+
+
+    <ipxact:hierConnections>
+
+    <ipxact:hierConnection      interfaceRef="tclk_pad" >
+      <ipxact:interface componentRef="cde_jtag_tap_sm" busRef="tclk_pad"/>
+      </ipxact:hierConnection>
+
+
+    <ipxact:hierConnection      interfaceRef="tms_pad" >
+      <ipxact:interface componentRef="cde_jtag_tap_sm" busRef="tms_pad"/>
+      </ipxact:hierConnection>
+
+
+
+    <ipxact:hierConnection      interfaceRef="tdi_pad" >
+      <ipxact:interface componentRef="cde_jtag_tap_sm" busRef="tdi_pad"/>
+      </ipxact:hierConnection>
+
+
+    <ipxact:hierConnection      interfaceRef="trst_n_pad" >
+      <ipxact:interface componentRef="cde_jtag_tap_sm" busRef="trst_n_pad"/>
+      </ipxact:hierConnection>
+
+
+    </ipxact:hierConnections>
+
+
+
+	
 <ipxact:componentInstances>
 
 <ipxact:componentInstance>
@@ -276,12 +519,44 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 </ipxact:componentInstance>
 
 <ipxact:componentInstance>
-<ipxact:instanceName>cde_jtag_tap_logic</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="tap_logic" />
+  <ipxact:instanceName>cde_jtag_tap_logic</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="tap_logic" />
+  <ipxact:configurableElementValues>
+    <ipxact:configurableElementValue referenceId="INST_LENGTH">INST_LENGTH</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="INST_RETURN">INST_RETURN</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="INST_RESET">INST_RESET</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="CHIP_ID_VAL">CHIP_ID_VAL</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="NUM_USER">NUM_USER</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="EXTEST">EXTEST</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="USER">USER</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="SAMPLE">SAMPLE</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="HIGHZ_MODE">HIGHZ_MODE</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="CHIP_ID_ACCESS">CHIP_ID_ACCESS</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="CLAMP">CLAMP</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="RPC_DATA">RPC_DATA</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="RPC_ADD">RPC_ADD</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="BYPASS">BYPASS</ipxact:configurableElementValue> 
+</ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
 
 <ipxact:componentInstance>
 <ipxact:instanceName>cde_jtag_tap_sm</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="tap_sm" />
+
+  <ipxact:configurableElementValues>
+    <ipxact:configurableElementValue referenceId="INST_LENGTH">INST_LENGTH</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="INST_RETURN">INST_RETURN</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="INST_RESET">INST_RESET</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="NUM_USER">NUM_USER</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="EXTEST">EXTEST</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="USER">USER</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="SAMPLE">SAMPLE</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="HIGHZ_MODE">HIGHZ_MODE</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="CHIP_ID_ACCESS">CHIP_ID_ACCESS</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="CLAMP">CLAMP</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="RPC_DATA">RPC_DATA</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="RPC_ADD">RPC_ADD</ipxact:configurableElementValue>
+    <ipxact:configurableElementValue referenceId="BYPASS">BYPASS</ipxact:configurableElementValue> 
+</ipxact:configurableElementValues>
 </ipxact:componentInstance>
 
 

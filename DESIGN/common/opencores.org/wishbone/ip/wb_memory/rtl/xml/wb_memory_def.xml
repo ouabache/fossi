@@ -89,7 +89,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          <ipxact:logicalPort><ipxact:name>adr</ipxact:name>
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>adr_i</ipxact:name>
-           <ipxact:wire><ipxact:vector><ipxact:left>wb_addr_width-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>wb_addr_width-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -99,7 +99,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          <ipxact:logicalPort><ipxact:name>wdata</ipxact:name>
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>dat_i</ipxact:name>
-           <ipxact:wire><ipxact:vector><ipxact:left>wb_data_width-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>wb_data_width-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -108,7 +108,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          <ipxact:logicalPort><ipxact:name>rdata</ipxact:name>
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>dat_o</ipxact:name>
-           <ipxact:wire><ipxact:vector><ipxact:left>wb_data_width-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>wb_data_width-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -117,7 +117,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          <ipxact:logicalPort><ipxact:name>sel</ipxact:name>
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>sel_i</ipxact:name>
-           <ipxact:wire><ipxact:vector><ipxact:left>wb_byte_lanes-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>wb_byte_lanes-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 

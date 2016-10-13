@@ -51,6 +51,17 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 </socgen:node>
 
 
+<socgen:node>
+<ipxact:name>data_addr</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+<ipxact:wire><ipxact:vector><ipxact:left>RAM_ADD</ipxact:left><ipxact:right>1</ipxact:right></ipxact:vector></ipxact:wire>
+</socgen:node>
+
+
+
+
+
+
 
 </socgen:nodes>
 </ipxact:vendorExtensions>

@@ -1,16 +1,16 @@
 v 20100214 1
-B 300 0  4900 2100 3 60 0 0 -1 -1 0 -1 -1 -1 -1 -1
-T 400 2250   5 10 1 1 0 0 1 1
+B 300 0  4900 1900 3 60 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 400 2050   5 10 1 1 0 0 1 1
 device=cde_jtag_classic_rpc_reg
-T 400 2450 5 10 1 1 0 0 1 1
+T 400 2250 5 10 1 1 0 0 1 1
 refdes=U?
-T 400 2600    0 10 0 1 0 0 1 1
+T 400 2400    0 10 0 1 0 0 1 1
 vendor=opencores.org
-T 400 2600    0 10 0 1 0 0 1 1
+T 400 2400    0 10 0 1 0 0 1 1
 library=cde
-T 400 2600    0 10 0 1 0 0 1 1
+T 400 2400    0 10 0 1 0 0 1 1
 component=jtag
-T 400 2600    0 10 0 1 0 0 1 1
+T 400 2400    0 10 0 1 0 0 1 1
 version=classic_rpc_reg
 P 300 200 0 200 10 1 1 
 {
@@ -50,42 +50,35 @@ pinseq=5
 P 300 1200 0 1200 4 0 1  
 {
 T 400 1200 5 10 1 1 0 1 1 1 
-pinnumber=shiftcapture_dr
+pinnumber=shift_dr
 T 400 1200 5 10 0 1 0 1 1 1 
 pinseq=6
 }
 P 300 1400 0 1400 4 0 1  
 {
 T 400 1400 5 10 1 1 0 1 1 1 
-pinnumber=shift_dr
+pinnumber=select
 T 400 1400 5 10 0 1 0 1 1 1 
 pinseq=7
 }
 P 300 1600 0 1600 4 0 1  
 {
 T 400 1600 5 10 1 1 0 1 1 1 
-pinnumber=select
+pinnumber=capture_dr
 T 400 1600 5 10 0 1 0 1 1 1 
 pinseq=8
-}
-P 300 1800 0 1800 4 0 1  
-{
-T 400 1800 5 10 1 1 0 1 1 1 
-pinnumber=capture_dr
-T 400 1800 5 10 0 1 0 1 1 1 
-pinseq=9
 }
 P 5200 200 5500 200 10 1 1
 {
 T 5100 200 5  10 1 1 0 7 1 1 
 pinnumber=update_value[BITS-1:0]
 T 5100 200 5  10 0 1 0 7 1 1 
-pinseq=10
+pinseq=9
 }
 P 5200 400 5500 400 4 0 1
 {
 T 5100 400 5  10 1 1 0 7 1 1
 pinnumber=tdo
 T 5200 400 5  10 0 1 0 7 1 1
-pinseq=11
+pinseq=10
 }

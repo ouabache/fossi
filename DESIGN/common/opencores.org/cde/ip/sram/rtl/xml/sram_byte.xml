@@ -218,20 +218,20 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:port><ipxact:name>addr</ipxact:name>
 <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:direction>in</ipxact:direction>
-<ipxact:vector><ipxact:left>ADDR-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+<ipxact:vectors><ipxact:vector><ipxact:left>ADDR-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
 </ipxact:port>
 
 
 <ipxact:port><ipxact:name>wdata</ipxact:name>
 <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:direction>in</ipxact:direction>
-<ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+<ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
 </ipxact:port>
 
 <ipxact:port><ipxact:name>rdata</ipxact:name>
 <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:direction>out</ipxact:direction>
-<ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+<ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
 </ipxact:port>
 
 

@@ -1,7 +1,43 @@
+//********************************************************************
+//*** assignments for 2nd channel
+//********************************************************************
+
+ assign      aux_jtag_clk               = jtag_clk;
+ assign      aux_update_dr_clk_o        = update_dr_clk_o;
+ assign      aux_shiftcapture_dr_clk_o  = shiftcapture_dr_clk_o;
+ assign      aux_test_logic_reset_o     = test_logic_reset_o;
+ assign      aux_tdi_o                  = tdi_o;
+ assign      aux_capture_dr_o           = capture_dr_o;
+ assign      aux_shift_dr_o             = shift_dr_o;
+ assign      aux_update_dr_o            = update_dr_o;
+ assign      chip_id_value              = CHIP_ID_VAL ;
+ assign      shiftcapture_dr_o          =  shift_dr_o || capture_dr_o;   
+ assign      tdi_o                      =  tdi_pad_in;   
+
+// Instruction Decoder
+ assign      extest          = ( instruction == EXTEST );
+ assign      sample          = ( instruction == SAMPLE );
+ assign      clamp           = ( instruction == CLAMP );
+ assign      chip_id_select  = ( instruction == CHIP_ID_ACCESS );
+  
+// bypass anytime we are not doing a defined instructions, or if in clamp or bypass mode
 
 
+ assign      shiftcapture_dr_clk_o     =  jtag_shift_clk;
+ assign      select_o                  = ( instruction == RPC_ADD );
+ assign      aux_select_o              = ( instruction == RPC_DATA );
+ assign      bsr_select_o              = ( instruction == EXTEST ) || ( instruction == SAMPLE )       ;
 
-
-
-
-
+//****************************************************************
+//*** Choose what goes out on the TDO pin
+//****************************************************************
+   
+always@(*)
+  begin
+     if(chip_id_select)       next_tdo =  chip_id_tdo;
+     else
+     if(select_o)             next_tdo =  tdo_i;
+     else
+     if(aux_select_o)         next_tdo =  aux_tdo_i;
+     else                     next_tdo =  1'b0;
+  end

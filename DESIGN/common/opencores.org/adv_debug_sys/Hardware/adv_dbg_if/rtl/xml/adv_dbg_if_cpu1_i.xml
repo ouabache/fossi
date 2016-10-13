@@ -95,7 +95,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          <ipxact:logicalPort><ipxact:name>addr</ipxact:name>
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>cpu1_addr_o</ipxact:name>
-           <ipxact:wire><ipxact:vector><ipxact:left>31</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>31</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -104,7 +104,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          <ipxact:logicalPort><ipxact:name>wdata</ipxact:name>
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>cpu1_data_o</ipxact:name>
-           <ipxact:wire><ipxact:vector><ipxact:left>31</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>31</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -113,7 +113,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          <ipxact:logicalPort><ipxact:name>rdata</ipxact:name>
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>cpu1_data_i</ipxact:name>
-           <ipxact:wire><ipxact:vector><ipxact:left>31</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>31</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 

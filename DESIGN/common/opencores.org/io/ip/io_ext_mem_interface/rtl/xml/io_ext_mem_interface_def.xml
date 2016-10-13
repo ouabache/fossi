@@ -89,7 +89,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          <ipxact:logicalPort><ipxact:name>rdata</ipxact:name>
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>rdata</ipxact:name>
-           <ipxact:wire><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -98,7 +98,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          <ipxact:logicalPort><ipxact:name>addr</ipxact:name>
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>addr</ipxact:name>
-           <ipxact:wire><ipxact:vector><ipxact:left>3</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>3</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -106,7 +106,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          <ipxact:logicalPort><ipxact:name>wdata</ipxact:name>
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>wdata</ipxact:name>
-           <ipxact:wire><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -168,7 +168,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          <ipxact:logicalPort><ipxact:name>addr</ipxact:name>
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>mem_addr</ipxact:name>
-           <ipxact:wire><ipxact:vector><ipxact:left>13</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>13</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -184,7 +184,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          <ipxact:logicalPort><ipxact:name>rdata</ipxact:name>
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>mem_rdata</ipxact:name>
-           <ipxact:wire><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -194,7 +194,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          <ipxact:logicalPort><ipxact:name>wdata</ipxact:name>
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>mem_wdata</ipxact:name>
-           <ipxact:wire><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -256,7 +256,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>ext_add</ipxact:name>
 	            <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-           <ipxact:wire><ipxact:vector><ipxact:left>23</ipxact:left><ipxact:right>1</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>23</ipxact:left><ipxact:right>1</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -266,7 +266,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>ext_wdata</ipxact:name>
            <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-           <ipxact:wire><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -276,7 +276,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>ext_rdata</ipxact:name>
            <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-           <ipxact:wire><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -313,7 +313,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
          </ipxact:logicalPort>
          <ipxact:physicalPort><ipxact:name>ext_cs</ipxact:name>
            <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-           <ipxact:wire><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
          </ipxact:physicalPort>
        </ipxact:portMap>
 
@@ -555,7 +555,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:port><ipxact:name>wait_st</ipxact:name>
 <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:direction>out</ipxact:direction>
-<ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+<ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
 </ipxact:port>
 
 
@@ -566,7 +566,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:port><ipxact:name>bank</ipxact:name>
 <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:direction>out</ipxact:direction>
-<ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+<ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
 </ipxact:port>
 
 

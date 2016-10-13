@@ -1,5 +1,5 @@
 // Memory Array
-reg [7:0] mem[0:WORDS-1];
+reg [7:0] mem [0:WORDS-1];
 
 initial 
   begin

@@ -1,112 +1,126 @@
 v 20100214 1
-B 300 0  3500 2300 3 60 0 0 -1 -1 0 -1 -1 -1 -1 -1
-T 400 2450   5 10 1 1 0 0 1 1
+B 300 0  3500 2500 3 60 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 400 2650   5 10 1 1 0 0 1 1
 device=cde_jtag_tap_sm
-T 400 2650 5 10 1 1 0 0 1 1
+T 400 2850 5 10 1 1 0 0 1 1
 refdes=U?
-T 400 2800    0 10 0 1 0 0 1 1
+T 400 3000    0 10 0 1 0 0 1 1
 vendor=opencores.org
-T 400 2800    0 10 0 1 0 0 1 1
+T 400 3000    0 10 0 1 0 0 1 1
 library=cde
-T 400 2800    0 10 0 1 0 0 1 1
+T 400 3000    0 10 0 1 0 0 1 1
 component=jtag
-T 400 2800    0 10 0 1 0 0 1 1
+T 400 3000    0 10 0 1 0 0 1 1
 version=tap_sm
 P 300 200 0 200 4 0 1  
 {
 T 400 200 5 10 1 1 0 1 1 1 
-pinnumber=tms_pad_in
+pinnumber=trst_n_pad_in
 T 400 200 5 10 0 1 0 1 1 1 
 pinseq=1
 }
 P 300 400 0 400 4 0 1  
 {
 T 400 400 5 10 1 1 0 1 1 1 
-pinnumber=tdi_in
+pinnumber=tms_pad_in
 T 400 400 5 10 0 1 0 1 1 1 
 pinseq=2
 }
 P 300 600 0 600 4 0 1  
 {
 T 400 600 5 10 1 1 0 1 1 1 
-pinnumber=reset
+pinnumber=tdo_in
 T 400 600 5 10 0 1 0 1 1 1 
 pinseq=3
 }
 P 300 800 0 800 4 0 1  
 {
 T 400 800 5 10 1 1 0 1 1 1 
-pinnumber=clk
+pinnumber=tdi_pad_in
 T 400 800 5 10 0 1 0 1 1 1 
 pinseq=4
 }
-P 3800 200 4100 200 4 0 1
+P 300 1000 0 1000 4 0 1  
 {
-T 3700 200 5  10 1 1 0 7 1 1
-pinnumber=update_dr_o
-T 3800 200 5  10 0 1 0 7 1 1
+T 400 1000 5 10 1 1 0 1 1 1 
+pinnumber=clk
+T 400 1000 5 10 0 1 0 1 1 1 
 pinseq=5
+}
+P 3800 200 4100 200 10 1 1
+{
+T 3700 200 5  10 1 1 0 7 1 1 
+pinnumber=instruction[3:0]
+T 3700 200 5  10 0 1 0 7 1 1 
+pinseq=6
 }
 P 3800 400 4100 400 4 0 1
 {
 T 3700 400 5  10 1 1 0 7 1 1
-pinnumber=update_dr_clk_o
+pinnumber=update_dr_o
 T 3800 400 5  10 0 1 0 7 1 1
-pinseq=6
+pinseq=7
 }
 P 3800 600 4100 600 4 0 1
 {
 T 3700 600 5  10 1 1 0 7 1 1
-pinnumber=test_logic_reset_o
+pinnumber=update_dr_clk_o
 T 3800 600 5  10 0 1 0 7 1 1
-pinseq=7
+pinseq=8
 }
 P 3800 800 4100 800 4 0 1
 {
 T 3700 800 5  10 1 1 0 7 1 1
-pinnumber=tap_highz_mode
+pinnumber=test_logic_reset_o
 T 3800 800 5  10 0 1 0 7 1 1
-pinseq=8
+pinseq=9
 }
 P 3800 1000 4100 1000 4 0 1
 {
 T 3700 1000 5  10 1 1 0 7 1 1
-pinnumber=shiftcapture_dr_clk_o
+pinnumber=tdo_pad_out
 T 3800 1000 5  10 0 1 0 7 1 1
-pinseq=9
+pinseq=10
 }
 P 3800 1200 4100 1200 4 0 1
 {
 T 3700 1200 5  10 1 1 0 7 1 1
-pinnumber=shift_dr_o
+pinnumber=tdo_pad_oe
 T 3800 1200 5  10 0 1 0 7 1 1
-pinseq=10
+pinseq=11
 }
 P 3800 1400 4100 1400 4 0 1
 {
 T 3700 1400 5  10 1 1 0 7 1 1
-pinnumber=select_o
+pinnumber=tap_highz_mode
 T 3800 1400 5  10 0 1 0 7 1 1
-pinseq=11
+pinseq=12
 }
 P 3800 1600 4100 1600 4 0 1
 {
 T 3700 1600 5  10 1 1 0 7 1 1
-pinnumber=capture_dr_o
+pinnumber=shift_dr_o
 T 3800 1600 5  10 0 1 0 7 1 1
-pinseq=12
+pinseq=13
 }
 P 3800 1800 4100 1800 4 0 1
 {
 T 3700 1800 5  10 1 1 0 7 1 1
-pinnumber=bsr_select_o
+pinnumber=jtag_reset
 T 3800 1800 5  10 0 1 0 7 1 1
-pinseq=13
+pinseq=14
 }
 P 3800 2000 4100 2000 4 0 1
 {
 T 3700 2000 5  10 1 1 0 7 1 1
-pinnumber=bsr_output_mode
+pinnumber=capture_dr_o
 T 3800 2000 5  10 0 1 0 7 1 1
-pinseq=14
+pinseq=15
+}
+P 3800 2200 4100 2200 4 0 1
+{
+T 3700 2200 5  10 1 1 0 7 1 1
+pinnumber=bsr_output_mode
+T 3800 2200 5  10 0 1 0 7 1 1
+pinseq=16
 }

@@ -1,5 +1,5 @@
 // Memory Array
-reg [WIDTH-1:0] mem[0:WORDS-1];
+reg [WIDTH-1:0] mem [0:WORDS-1];
 // If used as Rom then load a memory image at startup
 initial 
   begin

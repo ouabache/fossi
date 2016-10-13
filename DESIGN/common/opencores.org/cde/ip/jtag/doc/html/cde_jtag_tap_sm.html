@@ -47,7 +47,7 @@
    </li>  
  </ul>  
  </div>  
- <img style="width: 489.75px; height: 350px;" alt=""  src="../png/cde_jtag_tap_sm_sym.png"><br>  
+ <img style="width: 489.75px; height: 374px;" alt=""  src="../png/cde_jtag_tap_sm_sym.png"><br>  
  <b><br>  
  <h2><b><a name="Parameters"></a>Parameters<br></b></h2>  
  <b><br>  
@@ -60,6 +60,71 @@
       <td style="vertical-align: top;">default <br>      </td> 
       <td style="vertical-align: top;">Description<br></td> 
     </tr> 
+   <tr> 
+      <td style="vertical-align: top;">BYPASS<br>      </td> 
+          <td style="vertical-align: top;">4'b1111<br>      </td> 
+          <td style="vertical-align: top;"><br></td> 
+         </tr> 
+   <tr> 
+      <td style="vertical-align: top;">CHIP_ID_ACCESS<br>      </td> 
+          <td style="vertical-align: top;">4'b0011<br>      </td> 
+          <td style="vertical-align: top;"><br></td> 
+         </tr> 
+   <tr> 
+      <td style="vertical-align: top;">CLAMP<br>      </td> 
+          <td style="vertical-align: top;">4'b1000<br>      </td> 
+          <td style="vertical-align: top;"><br></td> 
+         </tr> 
+   <tr> 
+      <td style="vertical-align: top;">EXTEST<br>      </td> 
+          <td style="vertical-align: top;">4'b0000<br>      </td> 
+          <td style="vertical-align: top;"><br></td> 
+         </tr> 
+   <tr> 
+      <td style="vertical-align: top;">HIGHZ_MODE<br>      </td> 
+          <td style="vertical-align: top;">4'b0010<br>      </td> 
+          <td style="vertical-align: top;"><br></td> 
+         </tr> 
+   <tr> 
+      <td style="vertical-align: top;">INST_LENGTH<br>      </td> 
+          <td style="vertical-align: top;">4<br>      </td> 
+          <td style="vertical-align: top;"><br></td> 
+         </tr> 
+   <tr> 
+      <td style="vertical-align: top;">INST_RESET<br>      </td> 
+          <td style="vertical-align: top;">4'b1111<br>      </td> 
+          <td style="vertical-align: top;"><br></td> 
+         </tr> 
+   <tr> 
+      <td style="vertical-align: top;">INST_RETURN<br>      </td> 
+          <td style="vertical-align: top;">4'b1101<br>      </td> 
+          <td style="vertical-align: top;"><br></td> 
+         </tr> 
+   <tr> 
+      <td style="vertical-align: top;">NUM_USER<br>      </td> 
+          <td style="vertical-align: top;">2<br>      </td> 
+          <td style="vertical-align: top;"><br></td> 
+         </tr> 
+   <tr> 
+      <td style="vertical-align: top;">RPC_ADD<br>      </td> 
+          <td style="vertical-align: top;">4'b1001<br>      </td> 
+          <td style="vertical-align: top;"><br></td> 
+         </tr> 
+   <tr> 
+      <td style="vertical-align: top;">RPC_DATA<br>      </td> 
+          <td style="vertical-align: top;">4'b1010<br>      </td> 
+          <td style="vertical-align: top;"><br></td> 
+         </tr> 
+   <tr> 
+      <td style="vertical-align: top;">SAMPLE<br>      </td> 
+          <td style="vertical-align: top;">4'b0001<br>      </td> 
+          <td style="vertical-align: top;"><br></td> 
+         </tr> 
+   <tr> 
+      <td style="vertical-align: top;">USER<br>      </td> 
+          <td style="vertical-align: top;">8'b1010_1001<br>      </td> 
+          <td style="vertical-align: top;"><br></td> 
+         </tr> 
    </tbody>  
   </table>  
  <p><b><b><br>  
@@ -91,12 +156,12 @@
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">reset<br>      </td>  
+        <td style="vertical-align: top;">tdi_pad_in<br>      </td>  
        <td style="vertical-align: top;">input<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">tdi_in<br>      </td>  
+        <td style="vertical-align: top;">tdo_in<br>      </td>  
        <td style="vertical-align: top;">input<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
@@ -106,12 +171,12 @@
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">bsr_output_mode<br>      </td>  
-       <td style="vertical-align: top;">output<br>      </td>  
+        <td style="vertical-align: top;">trst_n_pad_in<br>      </td>  
+       <td style="vertical-align: top;">input<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">bsr_select_o<br>      </td>  
+        <td style="vertical-align: top;">bsr_output_mode<br>      </td>  
        <td style="vertical-align: top;">output<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
@@ -121,7 +186,7 @@
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">select_o<br>      </td>  
+        <td style="vertical-align: top;">jtag_reset<br>      </td>  
        <td style="vertical-align: top;">output<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
@@ -131,12 +196,17 @@
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">shiftcapture_dr_clk_o<br>      </td>  
+        <td style="vertical-align: top;">tap_highz_mode<br>      </td>  
        <td style="vertical-align: top;">output<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">tap_highz_mode<br>      </td>  
+        <td style="vertical-align: top;">tdo_pad_oe<br>      </td>  
+       <td style="vertical-align: top;">output<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">tdo_pad_out<br>      </td>  
        <td style="vertical-align: top;">output<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
@@ -152,6 +222,11 @@
      </tr>  
      <tr>  
         <td style="vertical-align: top;">update_dr_o<br>      </td>  
+       <td style="vertical-align: top;">output<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">instruction[3:0]<br>      </td>  
        <td style="vertical-align: top;">output<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
@@ -183,7 +258,7 @@
  <br>  
  <br>  
  <br>  
- <img style="width: 489.75px; height: 350px;" alt=""  src="../png/cde_jtag_tap_sm_sch.png"><br>  
+ <img style="width: 489.75px; height: 374px;" alt=""  src="../png/cde_jtag_tap_sm_sch.png"><br>  
  <b><br>  
  <br>  
  <br>  

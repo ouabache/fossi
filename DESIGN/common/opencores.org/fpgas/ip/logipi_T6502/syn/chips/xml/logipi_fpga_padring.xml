@@ -146,7 +146,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
           </ipxact:logicalPort>
           <ipxact:physicalPort><ipxact:name>SW</ipxact:name>
-          <ipxact:wire><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+          <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -173,7 +173,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
           </ipxact:logicalPort>
           <ipxact:physicalPort><ipxact:name>BTN</ipxact:name>
-          <ipxact:wire><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+          <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -200,7 +200,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
           </ipxact:logicalPort>
           <ipxact:physicalPort><ipxact:name>LED</ipxact:name>
-          <ipxact:wire><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+          <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -227,7 +227,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
           </ipxact:logicalPort>
           <ipxact:physicalPort><ipxact:name>PMOD1</ipxact:name>
-	  <ipxact:wire><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+	  <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -255,7 +255,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
           </ipxact:logicalPort>
           <ipxact:physicalPort><ipxact:name>PMOD2</ipxact:name>
-	  <ipxact:wire><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+	  <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -283,7 +283,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
           </ipxact:logicalPort>
           <ipxact:physicalPort><ipxact:name>PMOD3</ipxact:name>
-	  <ipxact:wire><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+	  <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -311,7 +311,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
           </ipxact:logicalPort>
           <ipxact:physicalPort><ipxact:name>PMOD4</ipxact:name>
-	  <ipxact:wire><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+	  <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>

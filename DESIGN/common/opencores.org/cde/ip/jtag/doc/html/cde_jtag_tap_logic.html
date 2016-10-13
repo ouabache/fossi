@@ -47,7 +47,7 @@
    </li>  
  </ul>  
  </div>  
- <img style="width: 512.25px; height: 470px;" alt=""  src="../png/cde_jtag_tap_logic_sym.png"><br>  
+ <img style="width: 579.75px; height: 638px;" alt=""  src="../png/cde_jtag_tap_logic_sym.png"><br>  
  <b><br>  
  <h2><b><a name="Parameters"></a>Parameters<br></b></h2>  
  <b><br>  
@@ -156,12 +156,27 @@
        <td style="vertical-align: top;">Description<br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">bsr_tdo_i<br>      </td>  
+        <td style="vertical-align: top;">aux_tdo_i<br>      </td>  
        <td style="vertical-align: top;">input<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">tclk_pad_in<br>      </td>  
+        <td style="vertical-align: top;">capture_dr_o<br>      </td>  
+       <td style="vertical-align: top;">input<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">chip_id_tdo<br>      </td>  
+       <td style="vertical-align: top;">input<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">jtag_shift_clk<br>      </td>  
+       <td style="vertical-align: top;">input<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">shift_dr_o<br>      </td>  
        <td style="vertical-align: top;">input<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
@@ -176,12 +191,67 @@
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">trst_n_pad_in<br>      </td>  
+        <td style="vertical-align: top;">test_logic_reset_o<br>      </td>  
        <td style="vertical-align: top;">input<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">bsr_output_mode<br>      </td>  
+        <td style="vertical-align: top;">update_dr_clk_o<br>      </td>  
+       <td style="vertical-align: top;">input<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">update_dr_o<br>      </td>  
+       <td style="vertical-align: top;">input<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">instruction[3:0]<br>      </td>  
+       <td style="vertical-align: top;">input<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">aux_capture_dr_o<br>      </td>  
+       <td style="vertical-align: top;">output<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">aux_jtag_clk<br>      </td>  
+       <td style="vertical-align: top;">output<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">aux_select_o<br>      </td>  
+       <td style="vertical-align: top;">output<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">aux_shift_dr_o<br>      </td>  
+       <td style="vertical-align: top;">output<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">aux_shiftcapture_dr_clk_o<br>      </td>  
+       <td style="vertical-align: top;">output<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">aux_tdi_o<br>      </td>  
+       <td style="vertical-align: top;">output<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">aux_test_logic_reset_o<br>      </td>  
+       <td style="vertical-align: top;">output<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">aux_update_dr_clk_o<br>      </td>  
+       <td style="vertical-align: top;">output<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">aux_update_dr_o<br>      </td>  
        <td style="vertical-align: top;">output<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
@@ -191,7 +261,17 @@
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">capture_dr_o<br>      </td>  
+        <td style="vertical-align: top;">chip_id_select<br>      </td>  
+       <td style="vertical-align: top;">output<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">clamp<br>      </td>  
+       <td style="vertical-align: top;">output<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">extest<br>      </td>  
        <td style="vertical-align: top;">output<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
@@ -206,12 +286,17 @@
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">select_o<br>      </td>  
+        <td style="vertical-align: top;">next_tdo<br>      </td>  
        <td style="vertical-align: top;">output<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">shift_dr_o<br>      </td>  
+        <td style="vertical-align: top;">sample<br>      </td>  
+       <td style="vertical-align: top;">output<br>      </td>  
+       <td style="vertical-align: top;"><br>      </td>  
+     </tr>  
+     <tr>  
+        <td style="vertical-align: top;">select_o<br>      </td>  
        <td style="vertical-align: top;">output<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
@@ -221,7 +306,7 @@
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">tap_highz_mode<br>      </td>  
+        <td style="vertical-align: top;">shiftcapture_dr_o<br>      </td>  
        <td style="vertical-align: top;">output<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
@@ -231,27 +316,7 @@
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
      <tr>  
-        <td style="vertical-align: top;">tdo_pad_oe<br>      </td>  
-       <td style="vertical-align: top;">output<br>      </td>  
-       <td style="vertical-align: top;"><br>      </td>  
-     </tr>  
-     <tr>  
-        <td style="vertical-align: top;">tdo_pad_out<br>      </td>  
-       <td style="vertical-align: top;">output<br>      </td>  
-       <td style="vertical-align: top;"><br>      </td>  
-     </tr>  
-     <tr>  
-        <td style="vertical-align: top;">test_logic_reset_o<br>      </td>  
-       <td style="vertical-align: top;">output<br>      </td>  
-       <td style="vertical-align: top;"><br>      </td>  
-     </tr>  
-     <tr>  
-        <td style="vertical-align: top;">update_dr_clk_o<br>      </td>  
-       <td style="vertical-align: top;">output<br>      </td>  
-       <td style="vertical-align: top;"><br>      </td>  
-     </tr>  
-     <tr>  
-        <td style="vertical-align: top;">update_dr_o<br>      </td>  
+        <td style="vertical-align: top;">chip_id_value[31:0]<br>      </td>  
        <td style="vertical-align: top;">output<br>      </td>  
        <td style="vertical-align: top;"><br>      </td>  
      </tr>  
@@ -283,7 +348,7 @@
  <br>  
  <br>  
  <br>  
- <img style="width: 512.25px; height: 470px;" alt=""  src="../png/cde_jtag_tap_logic_sch.png"><br>  
+ <img style="width: 579.75px; height: 638px;" alt=""  src="../png/cde_jtag_tap_logic_sch.png"><br>  
  <b><br>  
  <br>  
  <br>  

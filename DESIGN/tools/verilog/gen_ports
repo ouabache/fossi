@@ -374,8 +374,8 @@ foreach my $bus_iface ($spirit_component_file->findnodes("//ipxact:component/ipx
                my($rrr_int_name)      = $port_face->findnodes('../../../../../ipxact:name/text()')->to_literal ;
                my($rrr_phy_name)      = $port_face->findnodes('../ipxact:physicalPort/ipxact:name/text()')->to_literal ;
                my($rrr_type_name)     = $port_face->findnodes('../ipxact:physicalPort/ipxact:wireTypeDefs/ipxact:wireTypeDef/ipxact:typeName/text()')->to_literal ;
-               my($rrr_left_value)    = $port_face->findnodes('../ipxact:physicalPort/ipxact:wire/ipxact:vector/ipxact:left/text()')->to_literal ;
-               my($rrr_right_value)   = $port_face->findnodes('../ipxact:physicalPort/ipxact:wire/ipxact:vector/ipxact:right/text()')->to_literal ;
+               my($rrr_left_value)    = $port_face->findnodes('../ipxact:physicalPort/ipxact:wire/ipxact:vectors/ipxact:vector/ipxact:left/text()')->to_literal ;
+               my($rrr_right_value)   = $port_face->findnodes('../ipxact:physicalPort/ipxact:wire/ipxact:vectors/ipxact:vector/ipxact:right/text()')->to_literal ;
     
                unless ($rrr_type_name)  {$rrr_type_name = "wire";}
                unless ($rrr_phy_name)   {$rrr_phy_name  = ${rrr_log_name} ;}
@@ -430,8 +430,8 @@ foreach my $bus_iface ($spirit_component_file->findnodes("//ipxact:component/ipx
         {
         my($port_name)       = $i_name ->findnodes('./text()')->to_literal ;
         my($direction)       = $i_name ->findnodes('../ipxact:wire/ipxact:direction/text()')->to_literal ;
-        my($left)            = $i_name ->findnodes('../ipxact:wire/ipxact:vector/ipxact:left/text()')->to_literal ;
-        my($right)           = $i_name ->findnodes('../ipxact:wire/ipxact:vector/ipxact:right/text()')->to_literal ;
+        my($left)            = $i_name ->findnodes('../ipxact:wire/ipxact:vectors/ipxact:vector/ipxact:left/text()')->to_literal ;
+        my($right)           = $i_name ->findnodes('../ipxact:wire/ipxact:vectors/ipxact:vector/ipxact:right/text()')->to_literal ;
         my($type)            = $i_name ->findnodes('../ipxact:wire/ipxact:wireTypeDefs/ipxact:wireTypeDef/ipxact:typeName/text()')->to_literal ;
 
         unless (defined $type) {$type = "wire";}
