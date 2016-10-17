@@ -259,7 +259,7 @@ $cmd ="./tools/verilog/trace_bus -prefix  ${prefix}  -vendor ${vendor}  -library
    #/                                                                                            */
    #/*********************************************************************************************/
 
-   foreach  my   $i_name ($socgen_file->findnodes("//socgen:componentConfiguration/socgen:syn/socgen:ise/socgen:chip/socgen:name"))
+   foreach  my   $i_name ($socgen_file->findnodes("//socgen:componentConfiguration/socgen:syn/socgen:fpgas/socgen:fpga/socgen:name"))
       {
       my $chip_name            = $i_name ->findnodes('./text()')->to_literal ;
       my $chip_variant          = $i_name ->findnodes('../socgen:variant/text()')->to_literal ;

@@ -1,0 +1,296 @@
+// The following three files are copied directly from GTKWave and we do not
+// have control over them. Tony has a specific programming style so these
+// problems will not be fixed.
+
+// fstapi.c from GTKWave
+obsoleteFunctionsasctime:fstapi.c:929
+obsoleteFunctionsalloca:fstapi.c:2304
+unreadVariable:fstapi.c:1647
+variableScope:fstapi.c:665
+variableScope:fstapi.c:1337
+variableScope:fstapi.c:1338
+variableScope:fstapi.c:1395
+variableScope:fstapi.c:1978
+variableScope:fstapi.c:2107
+variableScope:fstapi.c:2540
+variableScope:fstapi.c:2541
+variableScope:fstapi.c:2732
+variableScope:fstapi.c:2733
+variableScope:fstapi.c:2737
+variableScope:fstapi.c:2853
+variableScope:fstapi.c:2892
+variableScope:fstapi.c:2893
+variableScope:fstapi.c:3611
+variableScope:fstapi.c:3785
+variableScope:fstapi.c:3787
+variableScope:fstapi.c:4229
+variableScope:fstapi.c:4230
+variableScope:fstapi.c:4239
+variableScope:fstapi.c:4502
+variableScope:fstapi.c:4773
+variableScope:fstapi.c:4776
+variableScope:fstapi.c:5270
+variableScope:fstapi.c:5274
+variableScope:fstapi.c:5275
+variableScope:fstapi.c:5431
+variableScope:fstapi.c:5489
+variableScope:fstapi.c:5802
+variableScope:fstapi.c:5805
+variableScope:fstapi.c:6041
+variableScope:fstapi.c:6146
+variableScope:fstapi.c:6147
+variableScope:fstapi.c:6178
+variableScope:fstapi.c:6406
+// These functions are not used by Icarus
+// fstReaderClrFacProcessMask()
+unusedFunction:fstapi.c:3343
+// fstReaderClrFacProcessMaskAll()
+unusedFunction:fstapi.c:3372
+// fstReaderGetAliasCount()
+unusedFunction:fstapi.c:3435
+// fstReaderGetCurrentFlatScope()
+unusedFunction:fstapi.c:3181
+// fstReaderGetAliasCount()
+unusedFunction:fstapi.c:3278
+// fstReaderGetCurrentScopeUserInfo()
+unusedFunction:fstapi.c:3195
+// fstReaderGetDateString()
+unusedFunction:fstapi.c:3463
+// fstReaderGetDoubleEndianMatchState()
+unusedFunction:fstapi.c:3449
+// fstReaderGetDumpActivityChangeTime()
+unusedFunction:fstapi.c:3491
+// fstReaderGetDumpActivityChangeValue()
+unusedFunction:fstapi.c:3506
+// fstReaderGetEndTime()
+unusedFunction:fstapi.c:3400
+// fstReaderGetFacProcessMask()
+unusedFunction:fstapi.c:3306
+// fstReaderGetFileType()
+unusedFunction:fstapi.c:3470
+// fstReaderGetFseekFailed()
+unusedFunction:fstapi.c:3291
+// fstReaderGetMaxHandle()
+unusedFunction:fstapi.c:3428
+// fstReaderGetMemoryUsedByWriter()
+unusedFunction:fstapi.c:3407
+// fstReaderGetNumberDumpActivityChanges()
+unusedFunction:fstapi.c:3484
+// fstReaderGetScopeCount()
+unusedFunction:fstapi.c:3414
+// fstReaderGetStartTime()
+unusedFunction:fstapi.c:3393
+// fstReaderGetTimescale()
+unusedFunction:fstapi.c:3386
+// fstReaderGetTimezero()
+unusedFunction:fstapi.c:3477
+// fstReaderGetValueChangeSectionCount()
+unusedFunction:fstapi.c:3442
+// fstReaderGetValueFromHandleAtTime()
+unusedFunction:fstapi.c:5684
+// fstReaderGetVarCount()
+unusedFunction:fstapi.c:3421
+// fstReaderGetVersionString()
+unusedFunction:fstapi.c:3456
+// fstReaderIterBlocks()
+unusedFunction:fstapi.c:4651
+// fstReaderIterBlocksSetNativeDoublesOnCallback()
+unusedFunction:fstapi.c:3556
+// fstReaderIterateHier()
+unusedFunction:fstapi.c:3781
+// fstReaderIterateHierRewind()
+unusedFunction:fstapi.c:3761
+// fstReaderOpen()
+unusedFunction:fstapi.c:4549
+// fstReaderOpenForUtilitiesOnly()
+unusedFunction:fstapi.c:4541
+// fstReaderPushScope()
+unusedFunction:fstapi.c:3243
+// fstReaderResetScope()
+unusedFunction:fstapi.c:3232
+// fstReaderSetFacProcessMask()
+unusedFunction:fstapi.c:3325
+// fstReaderSetFacProcessMaskAll()
+unusedFunction:fstapi.c:3361
+// fstReaderSetLimitTimeRange()
+unusedFunction:fstapi.c:3521
+// fstReaderSetUnlimitedTimeRange()
+unusedFunction:fstapi.c:3534
+// fstReaderSetVcdExtensions()
+unusedFunction:fstapi.c:3545
+// fstUtilityEscToBin()
+unusedFunction:fstapi.c:6484
+// fstWriterCreateVar2()
+unusedFunction:fstapi.c:2527
+// fstWriterEmitVariableLengthValueChange()
+unusedFunction:fstapi.c:2846
+// fstWriterGetFseekFailed()
+unusedFunction:fstapi.c:2510
+// fstWriterSetAttrEnd()
+unusedFunction:fstapi.c:2713
+// fstWriterSetComment()
+unusedFunction:fstapi.c:2359
+// fstWriterSetEnvVar()
+unusedFunction:fstapi.c:2371
+// fstWriterSetFileType()
+unusedFunction:fstapi.c:2234
+// fstWriterSetParallelMode()
+unusedFunction:fstapi.c:2470
+// fstWriterSetTimezero()
+unusedFunction:fstapi.c:2435
+// fstWriterSetValueList()
+unusedFunction:fstapi.c:2365
+
+// These functions are not used by Icarus
+//unusedFunction:fstapi.c:226
+
+// lxt2_write.c from GTKWave
+obsoleteFunctionsalloca:lxt2_write.c:1813
+obsoleteFunctionsalloca:lxt2_write.c:1819
+variableScope:lxt2_write.c:33
+variableScope:lxt2_write.c:63
+variableScope:lxt2_write.c:196
+variableScope:lxt2_write.c:463
+variableScope:lxt2_write.c:464
+variableScope:lxt2_write.c:523
+variableScope:lxt2_write.c:581
+variableScope:lxt2_write.c:587
+variableScope:lxt2_write.c:1157
+variableScope:lxt2_write.c:1613
+variableScope:lxt2_write.c:2060
+// These functions are not used by Icarus
+// lxt2_wr_emit_value_int()
+unusedFunction:lxt2_write.c:1611
+// lxt2_wr_inc_time_by_delta()
+unusedFunction:lxt2_write.c:997
+// lxt2_wr_inc_time_by_delta64()
+unusedFunction:lxt2_write.c:1007
+// lxt2_wr_set_checkpoint_off()
+unusedFunction:lxt2_write.c:835
+// lxt2_wr_set_checkpoint_on()
+unusedFunction:lxt2_write.c:843
+// lxt2_wr_set_maxgranule()
+unusedFunction:lxt2_write.c:1567
+// lxt2_wr_set_partial_preference()
+unusedFunction:lxt2_write.c:812
+// lxt2_wr_set_timezero()
+unusedFunction:lxt2_write.c:2198
+// lxt2_wr_symbol_bracket_stripping()
+unusedFunction:lxt2_write.c:1581
+// lxt2_wr_symbol_find()
+unusedFunction:lxt2_write.c:877
+
+// lxt_write.c from GTKWave
+variableScope:lxt_write.c:31
+variableScope:lxt_write.c:83
+variableScope:lxt_write.c:527
+variableScope:lxt_write.c:528
+variableScope:lxt_write.c:587
+variableScope:lxt_write.c:640
+variableScope:lxt_write.c:780
+variableScope:lxt_write.c:880
+variableScope:lxt_write.c:1056
+variableScope:lxt_write.c:1057
+variableScope:lxt_write.c:1058
+variableScope:lxt_write.c:1194
+variableScope:lxt_write.c:1850
+variableScope:lxt_write.c:2029
+variableScope:lxt_write.c:2030
+variableScope:lxt_write.c:2147
+variableScope:lxt_write.c:2148
+variableScope:lxt_write.c:2265
+variableScope:lxt_write.c:2266
+variableScope:lxt_write.c:2595
+variableScope:lxt_write.c:2596
+variableScope:lxt_write.c:2597
+variableScope:lxt_write.c:2598
+// These functions are not used by Icarus
+// lt_emit_value_int()
+unusedFunction:lxt_write.c:1661
+// lt_emit_value_string()
+unusedFunction:lxt_write.c:2144
+// lt_inc_time_by_delta()
+unusedFunction:lxt_write.c:1374
+// lt_inc_time_by_delta64()
+unusedFunction:lxt_write.c:1384
+// lt_set_chg_compress()
+unusedFunction:lxt_write.c:1457
+// lt_set_dict_compress()
+unusedFunction:lxt_write.c:1474
+// lt_set_time()
+unusedFunction:lxt_write.c:1379
+// lt_set_timezero()
+unusedFunction:lxt_write.c:2820
+// lt_symbol_bracket_stripping()
+unusedFunction:lxt_write.c:1585
+// lt_symbol_find()
+unusedFunction:lxt_write.c:1277
+
+// fastlz.c from GTKWave
+// These functions are not used by Icarus
+// fastlz_compress_level()
+unusedFunction:fastlz.c:150
+
+// lz4.c from GTKWave
+// These functions are not used by Icarus
+// LZ4_compress_continue()
+unusedFunction:lz4.c:883
+// LZ4_compress_forceExtDict()
+unusedFunction:lz4.c:895
+// LZ4_compress_limitedOutput()
+unusedFunction:lz4.c:730
+// LZ4_compress_limitedOutput_continue()
+unusedFunction:lz4.c:888
+// LZ4_compress_limitedOutput_withState()
+unusedFunction:lz4.c:1343
+// LZ4_compress_withState()
+unusedFunction:lz4.c:1332
+// LZ4_create()
+unusedFunction:lz4.c:1314
+// LZ4_createStream()
+unusedFunction:lz4.c:765
+// LZ4_createStreamDecode()
+unusedFunction:lz4.c:1152
+// LZ4_decompress_fast_continue()
+unusedFunction:lz4.c:1217
+// LZ4_decompress_fast_usingDict()
+unusedFunction:lz4.c:1272
+// LZ4_decompress_fast_withPrefix64k()
+unusedFunction:lz4.c:1361
+// LZ4_decompress_safe_continue()
+unusedFunction:lz4.c:1188
+// LZ4_decompress_safe_forceExtDict()
+unusedFunction:lz4.c:1278
+// LZ4_decompress_safe_usingDict()
+unusedFunction:lz4.c:1267
+// LZ4_decompress_safe_withPrefix64k()
+unusedFunction:lz4.c:1356
+// LZ4_freeStream()
+unusedFunction:lz4.c:773
+// LZ4_freeStreamDecode()
+unusedFunction:lz4.c:1158
+// LZ4_loadDict()
+unusedFunction:lz4.c:780
+// LZ4_resetStreamState()
+unusedFunction:lz4.c:1307
+// LZ4_setStreamDecode()
+unusedFunction:lz4.c:1171
+// LZ4_sizeofState()
+unusedFunction:lz4.c:1330
+// LZ4_sizeofStreamState()
+unusedFunction:lz4.c:1299
+// LZ4_slideInputBuffer()
+unusedFunction:lz4.c:1321
+// LZ4_uncompress()
+unusedFunction:lz4.c:1293
+// LZ4_uncompress_unknownOutputSize()
+unusedFunction:lz4.c:1294
+// LZ4_versionNumber()
+unusedFunction:lz4.c:428
+
+// The routines in sys_random.c are exact copies from IEEE1364-2005 and
+// they have scope warnings that we need to ignore.
+variableScope:sys_random.c:46
+variableScope:sys_random.c:69
+variableScope:sys_random.c:92
+variableScope:sys_random.c:147

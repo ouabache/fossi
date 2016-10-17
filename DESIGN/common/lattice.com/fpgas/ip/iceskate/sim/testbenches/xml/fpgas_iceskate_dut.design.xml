@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--           
+//                                                                                                   
+//                                                                                                    //
+// ./tools/verilog/gen_tb -vendor opencores.org -library fpgas  -component iceskate  -version default //
+//                                                                                                    //
+-->           
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>lattice.com</ipxact:vendor>
+<ipxact:library>fpgas</ipxact:library>
+<ipxact:name>iceskate</ipxact:name>
+<ipxact:version>dut.design</ipxact:version>
+<ipxact:adHocConnections>
+
+<ipxact:adHocConnection>
+<ipxact:name>A_CLK</ipxact:name>
+<ipxact:externalPortReference portRef="A_CLK" />
+<ipxact:internalPortReference componentRef="dut" portRef="A_CLK" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>BTN</ipxact:name>
+<ipxact:externalPortReference portRef="BTN" left="1" right="0" />
+<ipxact:internalPortReference componentRef="dut" portRef="BTN" />
+</ipxact:adHocConnection>
+
+
+<ipxact:adHocConnection>
+<ipxact:name>PMOD1</ipxact:name>
+<ipxact:externalPortReference portRef="PMOD1"  />
+<ipxact:internalPortReference componentRef="dut" portRef="PMOD1" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>PMOD2</ipxact:name>
+<ipxact:externalPortReference portRef="PMOD2"  />
+<ipxact:internalPortReference componentRef="dut" portRef="PMOD2" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>PMOD3</ipxact:name>
+<ipxact:externalPortReference portRef="PMOD3"  />
+<ipxact:internalPortReference componentRef="dut" portRef="PMOD3" />
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>PMOD4</ipxact:name>
+<ipxact:externalPortReference portRef="PMOD4"  />
+<ipxact:internalPortReference componentRef="dut" portRef="PMOD4" />
+</ipxact:adHocConnection>
+
+
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dut</ipxact:instanceName>
+<ipxact:componentRef vendor="lattice.com" library="fpgas" name="iceskate" version="default" />
+<ipxact:configurableElementValues>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+</ipxact:componentInstances>
+</ipxact:design>

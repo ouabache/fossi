@@ -479,26 +479,20 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 </socgen:icarus>
 
-
 </socgen:sim>
-
-
-
 
 
 <socgen:syn>
 
-
 <socgen:comp_path>Nexys2_T6502/syn</socgen:comp_path>
 
+<socgen:fpgas> 
 
-   <socgen:ise>
-
-    <socgen:chip>
-    <socgen:name>kim_2</socgen:name>
-    <socgen:variant>Nexys2_T6502_kim_2</socgen:variant>
-    <socgen:configuration>kim_2</socgen:configuration>
-        <socgen:parameters>
+<socgen:fpga> 
+<socgen:variant>Nexys2_T6502_kim_2</socgen:variant>
+<socgen:version>kim_2</socgen:version>  
+<socgen:configuration>kim_2</socgen:configuration>
+<socgen:parameters>
          <socgen:parameter><socgen:name>ROM_FILE</socgen:name>
          <socgen:value>"opencores.org__Mos6502/table_tim1/table_tim1.abs16"</socgen:value></socgen:parameter>
          <socgen:parameter><socgen:name>ROM_WORDS</socgen:name><socgen:value>128</socgen:value></socgen:parameter>
@@ -511,34 +505,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
          <socgen:value>"opencores.org__fpgas/vga_startup_screen/vga_startup_screen.abs"</socgen:value></socgen:parameter>  
          <socgen:parameter><socgen:name>FONT</socgen:name>
          <socgen:value>"opencores.org__fpgas/vga_font/vga_font.abs"</socgen:value></socgen:parameter> 
-        </socgen:parameters>
-    <socgen:target>
-    <socgen:vendor>digilentinc.com</socgen:vendor>  
-    <socgen:library>Nexys2</socgen:library>  
-    <socgen:component>fpga</socgen:component>  
-    <socgen:part>xc3s1200e-fg320-5</socgen:part>  
-    </socgen:target>
-    </socgen:chip>
-
-
-   </socgen:ise>
-
-
-
-
-
-
-<socgen:fpgas> 
-
-<socgen:fpga> 
-<socgen:variant>Nexys2_T6502_kim_2</socgen:variant>
-<socgen:version>kim_2</socgen:version>  
-<socgen:configuration>default</socgen:configuration>
-<socgen:parameters>
 </socgen:parameters>
-<socgen:tools>
-  <socgen:tool>ise</socgen:tool>
-</socgen:tools>
+<socgen:tool>ise</socgen:tool>
 <socgen:target>
     <socgen:vendor>digilentinc.com</socgen:vendor>  
     <socgen:library>Nexys2</socgen:library>  

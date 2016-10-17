@@ -230,13 +230,13 @@ foreach my $component (@components)
    #/                                                                                            */
    #/*********************************************************************************************/
 
-   foreach  my   $i_name ($socgen_file->findnodes("//socgen:syn/socgen:ise/socgen:chip/socgen:name"))
+   foreach  my   $i_name ($socgen_file->findnodes("//socgen:syn/socgen:fpgas/socgen:fpga/socgen:version"))
       {
-        my $ise_name   = $i_name ->findnodes('./text()')->to_literal ;
-        print "  SYN ISE   $vendor    $library  $component   $ise_name  \n"; 
+        my $ise_version   = $i_name ->findnodes('./text()')->to_literal ;
+        print "  SYN ISE   $vendor    $library  $component   $ise_version  \n"; 
 
         @filelist      = (  );
-        @filelist      = yp::lib::parse_component_file("$vendor","$library","$component","$ise_name");
+        @filelist      = yp::lib::parse_component_file("$vendor","$library","$component","$ise_version");
 
         foreach $line (@filelist) 
           {
@@ -249,9 +249,9 @@ foreach my $component (@components)
             $new_version   = $4;        
             }
 
-         if( ($vendor eq  $new_vendor)   &&  ( $library eq  $new_proj)   && ( $component eq  $new_comp )   &&   ( $ise_name eq  $new_version )        )
+         if( ($vendor eq  $new_vendor)   &&  ( $library eq  $new_proj)   && ( $component eq  $new_comp )   &&   ( $ise_version eq  $new_version )        )
            {
-           push @kids , "::${prefix}::${library}::${component}::${vendor}::${ise_name}::";
+           push @kids , "::${prefix}::${library}::${component}::${vendor}::${ise_version}::";
            }
          else
            {

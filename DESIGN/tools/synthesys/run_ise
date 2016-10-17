@@ -97,8 +97,12 @@ my $library          = $ARGV[1];
 my $syn_library_path = $ARGV[2];
 my $chip_name        = $ARGV[3];
 my $chip_part        = $ARGV[4]; 
+my $chip_tool        = $ARGV[5];
 
-chdir  "./${prefix}/${vendor}__${library}${syn_library_path}/ise/${chip_name}";
+
+if($chip_tool eq "ise")
+{
+chdir  "./${prefix}/${vendor}__${library}${syn_library_path}/${chip_tool}/${chip_name}";
 
 $cmd ="echo \"run -ifn ./filelists/${chip_name}.ISE -ifmt mixed -top $chip_name  -ofn  ${chip_name}.ngc -ofmt NGC  -p $chip_part -opt_mode Speed -opt_level 1 \" > Yst;   \n";
 if (system($cmd)) {}
@@ -115,6 +119,31 @@ if (system($cmd)) {}
 $cmd ="make bitgen \n";
 if (system($cmd)) {}
      
+}
+
+elsif ($chip_tool eq "ara")
+{
+chdir  "./${prefix}/${vendor}__${library}${syn_library_path}/${chip_tool}/${chip_name}";
+
+print "ARA Tool NOW  \n";
+
+
+$cmd= "yosys -p \"synth_ice40 -blif result.blif\" -s ./filelists/${chip_name}.ARA > ara.log \n";
+if (system($cmd)) {}
+
+$cmd= "arachne-pnr -d 1k -p ./target/padring.pcf result.blif -o result.asc >> ara.log\n";
+if (system($cmd)) {}
+
+$cmd= "icepack result.asc fpga.bin >> ara.log \n";
+if (system($cmd)) {}
+
+$cmd = "icetime -tmd hx1k result.asc >> ara.log\n";
+if (system($cmd)) {}
+
+
+
+}
+
 
 chdir  "$home";
 

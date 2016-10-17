@@ -165,12 +165,13 @@ sub run_vendor_library
         my $manager = new Parallel::ForkManager( $number_of_cpus );
 
 
-        foreach  my   $i_name ($socgen_file->findnodes("//socgen:componentConfiguration/socgen:syn/socgen:ise/socgen:chip/socgen:variant"))
+        foreach  my   $i_name ($socgen_file->findnodes("//socgen:componentConfiguration/socgen:syn/socgen:fpgas/socgen:fpga/socgen:variant"))
            {
            my($chip_variant)     = $i_name ->findnodes('./text()')->to_literal ;
            my($chip_part)        = $i_name ->findnodes('../socgen:target/socgen:part/text()')->to_literal ;
-           print "  FPGAs     $chip_variant       $chip_part    \n"; 
-           $cmd ="./tools/synthesys/run_ise   $vendor $library $syn_library_path  $chip_variant    $chip_part       \n";
+	   my($chip_tool)        = $i_name ->findnodes('../socgen:tool/text()')->to_literal ;
+           print "  FPGAs     $chip_variant       $chip_part  |||| $chip_tool   \n"; 
+           $cmd ="./tools/synthesys/run_ise   $vendor $library $syn_library_path  $chip_variant    $chip_part  $chip_tool     \n";
            push @cmds,$cmd;
            }
 

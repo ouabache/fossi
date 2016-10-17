@@ -1,0 +1,34 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Sun Oct 16 02:16:08 2016
+[*]
+[dumpfile] "/home/johne/socgen/work/lattice.com__fpgas/ip/iceskate/sim/icarus/default/TestBench.vcd"
+[dumpfile_mtime] "Sun Oct 16 02:13:37 2016"
+[dumpfile_size] 55598
+[savefile] "/home/johne/socgen/Projects/lattice.com/fpgas/ip/iceskate/sim/icarus/default/wave.sav"
+[timestart] 0
+[size] 1674 1028
+[pos] -1 -1
+*-7.035568 1800000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TB.
+[treeopen] TB.test.
+[treeopen] TB.test.dut.
+[treeopen] TB.test.dut.core.
+[sst_width] 473
+[signals_width] 241
+[sst_expanded] 1
+[sst_vpaned_height] 515
+@28
+TB.test.SYS_SPI_SCK
+TB.test.SYS_SPI_MOSI
+TB.test.SYS_SPI_MISO
+TB.test.RP_SPI_CE0N
+@22
+TB.test.dut.core.COUNTER[27:0]
+@28
+TB.test.dut.core.clk
+TB.test.dut.core.btn_pad_in[1:0]
+TB.test.dut.a_clk_pad.PAD
+TB.test.dut.core.reset
+[pattern_trace] 1
+[pattern_trace] 0

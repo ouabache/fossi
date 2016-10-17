@@ -1,0 +1,5 @@
+set_io   A_CLK                    21
+set_io   PMOD1                78
+set_io   PMOD2                       79
+set_io   PMOD3                       80
+set_io   PMOD4                       81

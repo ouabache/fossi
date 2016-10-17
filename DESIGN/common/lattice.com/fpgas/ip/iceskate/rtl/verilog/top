@@ -1,0 +1,30 @@
+
+wire clk;
+wire reset;
+
+assign clk            = a_clk_pad_in;
+assign  reset         = ! btn_pad_in[1];
+
+
+reg [27:0] COUNTER;
+
+always@(posedge clk)
+begin
+if(reset)       COUNTER <=  28'h0000000;
+else            COUNTER <= COUNTER + 28'h0000001;
+end
+
+reg temp;
+
+always@(posedge clk)
+begin
+if(reset)       temp <=  1'b0;
+else            temp <= pmod4_pad_in;
+end
+   
+
+assign   pmod1_pad_out   = COUNTER[27];
+assign   pmod2_pad_out   = COUNTER[26];
+assign   pmod3_pad_out   = temp;
+
+

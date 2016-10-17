@@ -1,0 +1,100 @@
+Getting Started with IP-Xact
+
+
+This presentation is intended to introduce the IEEE-1685 Standard to IC designers and to show how it can be used to improve the design process.
+
+<X>
+
+I will be referring to several scripts that are available for download from the socgen project on the opencores.org website. Socgen is a opensourced EDA toolset designed to promote of reuse between components and SOC designs. 
+
+The socgen project takes selected projects form the opencores.org collection and reconstructs them so that they are easier to reuse. This involves adding IP-Xact files to every component and rewriting the code to conform to the socgen design for reuse guidelines.
+
+All code on the opencores site is in the alpha state and will change frequently. A beta release of the tools will be made to sourceforge along with the next release of the 1685 standard.
+
+<X>
+
+Lets start with an asic design team that is buying a CPU from Joes IP Emporium. The receive the bits and then unpack them into Joes directory in the work area. They find the FOO cpu inside of the cpu library with two files. One is a verilog module and the other is a IP-xact xml file.
+
+The ip-xact file provides the VLNV values to identify the component along with a parameter list with defaults and a complete port list.The filesSet shows that the design consists only of one verilog file.
+
+
+That verilog module is unusable in it's present form for two reasons. First of all verilog components might use `(tic) macros that share a global namespace with all other components. If any two components use the same name for a `define then the chip would not build correctly.  The second reason is that Joe has hardcoded the module name into the file. While that will probably work we do need to have some means to change module names if there is a problem.
+
+
+The solution to both of these issues is to simply pass all component IP through a verilog preprocessor before loading it into the SOC design.
+
+<X>
+
+The foo.v file is edited and its module name is replaced by `VARIANT. The socgen build_leaf script is run and it parses the ip-xact file to create two preprocessor commands. The first one sets the `VARIANT back to "foo", preprocesses the foo.v file and saves the result in foo/rtl/gen/sim/foo.v. The second one repeats that but also set the SYNTHESIS variable and saves the result in foo/rtl/gen/syn/foo.v
+
+Setting `define SYNTHESYS is the recomended way to seperate out any non-synthesizable code for a verilog module. It works for all tools even if they don't support synopsys translate off pragmas.
+
+<X>
+
+Most components have more that one module. If Joe had added a foo_fsm module then we would have to change its module name to `VARIANT`FSM in the foo_fsm file as well as in foo.v where the module is instantiated. The ip-xact file will include foo_fsm as a verilogSource file with the name of fsm. You can only have one verilogSourceTop file but you can have as many verilogSource files as needed.
+
+The build_leaf script will now process both files and place them both in one output file. It is now a verilog library file.
+
+<X>
+
+It is common for designers to place all `defines into a seperate file. Joe now has a foo_include.v that lets you configure the cpu with instruction cache, data cache and a debugger. It is listed in the ip-xact fileset as a verilogInclude file. The build_leaf script will process all verilogInclude files before it processes any files with rtl code. 
+
+This means that you do NOT put a `include "foo_include.v" inside any other file or else it will be loaded twice.
+
+So now we need to decide how the design team wants to configure the foo_include file. We discover that several designers are planning to use Joes cpu and that of the eight possible configurations that we are going to need all of them.
+
+<X> 
+  
+The way to handle this is simple. If we want to create another variant with debugger and no caches:
+
+  1) Copy foo_include.v to foo_include_nocache.v
+  2) Edit foo_include_nocache.v to comment out the two cache `defines
+  3) Copy foo.xml to foo_nocache.xml
+  4  Edit foo_nocahe.xml to change its version to nocache and it's verilogInclude to foo_include_nocache.v
+  5) Run build_leaf on foo_nocache
+
+This will produce a pair of output files named foo_nocache.v that do not share any module names with foo.v files.
+
+If there are any verilogSource files that are not needed because the caches are disabled then they may be removed from the fileSet so that they will not be loaded.
+
+
+<X>
+
+The last verilog file type that we need to know about is the verilogFragment. A fragment is a disembodied piece of rtl that is usually `included into the middle of a verilog module. We can extract the body of code from foo.v and put into into a seperate file name foo.rtl that is then reinserted back into foo.v using a `include statement.
+
+The mechanism that enables this is that the build_leaf script also has /rtl/ver in its preprocessor search path. It does not use the verilogFragment filesets.
+
+
+
+
+
+
+<X>
+
+The build_verilog script will use the verilogFragement filesets.  We can delete foo.v and then use the build_verilog script to rebuild it using the ip-xact parameters and ports list instead of the verilog lists.  The advantage of doing it this way is that the verilog will always match the data that is in the ip-xact file
+
+
+<X> 
+
+
+This is only the beginning of what you can do with ip-xact. State machine and Register tools that create verilog modules can be run before the build_leaf script so that their outputs are included in the generated files
+
+
+Ip-xact supports component generation so that each ip-xact file can control what tools are run on it and in what order. ALl you need is the socgen soc_generate script that reads a ip-xact file and runs all its component generators.
+
+
+Any component that is not a leaf cell will declare all of its component children so that when the parent component is built it will also build the entire tree.
+
+
+Registers and buses take ip-xact into a new level when they combine the knowledge of each modules register map with the knowledge of the bus interconnect
+
+
+<X>
+
+Take aways
+
+
+
+
+
+ 

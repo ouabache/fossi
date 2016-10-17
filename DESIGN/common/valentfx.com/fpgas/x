@@ -1,0 +1,99 @@
+./sw/vga_font/xml/vga_font.xml:<ipxact:vendor>opencores.org</ipxact:vendor>
+./sw/vga_startup_screen/xml/vga_startup_screen.xml:<ipxact:vendor>opencores.org</ipxact:vendor>
+./ip/logipi_T6502/syn/ise/logipi_T6502_kim_2/xml/Nexys2_T6502_kim_2.xml:     <ipxact:componentRef ipxact:vendor="opencores.org" 
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/syn/chips/xml/logipi_fpga_padring.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/sim/testbenches/xml/Nexys2_T6502_default_lint.xml:              <ipxact:componentRef ipxact:vendor="opencores.org" 
+./ip/logipi_T6502/sim/testbenches/xml/Nexys2_T6502_default_tb.xml:              <ipxact:componentRef ipxact:vendor="opencores.org" 
+./ip/logipi_T6502/sim/testbenches/xml/logipi_T6502_default_duth.design.xml:// ./tools/verilog/gen_tb -vendor opencores.org -library fpgas  -component logipi_T6502  -version default //
+./ip/logipi_T6502/sim/testbenches/xml/logipi_T6502_bfm.design.xml:<ipxact:instanceName>spi_model_master</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="Testbench" name="spi_model" version="master" />
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="cde" name="jtag" version="rpc"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="cde" name="jtag" version="rpc_classic_rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="cde" name="jtag" version="rpc"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="cde" name="jtag" version="rpc_classic_rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="clock" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="clock" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="enable" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="enable" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.xml:              <ipxact:componentRef ipxact:vendor="opencores.org" 
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.design.xml:<ipxact:vendor>opencores.org</ipxact:vendor>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.design.xml: <ipxact:instanceName>jtag_rpc1</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="classic_rpc_reg" />
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.design.xml: <ipxact:instanceName>jtag_rpc2</ipxact:instanceName> <ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="classic_rpc_reg" />
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_core.design.xml:<ipxact:componentRef vendor="opencores.org" library="logic" name="spi_interface" version="def" />
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:<ipxact:vendor>opencores.org</ipxact:vendor>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:<ipxact:designRef vendor="opencores.org" library="fpgas" name="logipi_T6502" version="fpga.design"/>
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:              <ipxact:componentRef ipxact:vendor="opencores.org" 
+./ip/logipi_T6502/rtl/xml/Nexys2_T6502_default.xml:              <ipxact:componentRef ipxact:vendor="opencores.org" 
+./ip-xact/libraryCfg.xml:<socgen:vendor>opencores.org</socgen:vendor>

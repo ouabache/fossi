@@ -1,0 +1,2 @@
+gs -q -dSAFER -dNOPAUSE -dBATCH -sOutputFile=poster.pdf    -sDEVICE=pdfwrite -sPAPERSIZE=a0  -c .setpdfwrite  -f poster.ps 
+gs -q -dSAFER -dNOPAUSE -dBATCH -sOutputFile=poster_a1.pdf    -sDEVICE=pdfwrite -sPAPERSIZE=a1  -c .setpdfwrite  -f poster_a1.ps 

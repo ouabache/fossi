@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Interrupt System Design</title>
+  <meta name="GENERATOR" content="OpenOffice.org 3.0  (Linux)">
+  <meta name="CREATED" content="0;0">
+  <meta name="CHANGED" content="20100309;9305300">
+  <meta name="KEYWORDS" content="start">
+  <meta name="Info 3" content="">
+  <meta name="Info 4" content="">
+  <meta name="date" content="2008-01-08T12:01:41-0500">
+  <meta name="robots" content="index,follow">
+  <style type="text/css">
+	<!--
+		H3.western { font-family: "Albany", sans-serif }
+		H3.cjk { font-family: "HG Mincho Light J" }
+		H3.ctl { font-family: "Arial Unicode MS" }
+	-->
+	</style>
+</head>
+<body dir="ltr" lang="en-US">
+<div id="toc__header" dir="ltr">
+<h1><a name="socgen_project"></a>Interrupt System Design Guidelines<br>
+</h1>
+<p></p>
+</div>
+<h1>
+</h1>
+<br>
+The interrupt system provides the essential function of monitoring the
+myriad of asynchronous inputs from all the i/o devices&nbsp; and
+directing&nbsp; the cpu
+to the highest priority event requiring attention. This frees the cpu
+from the need to poll devices to check on their status.<br>
+<br>
+<br>
+<div id="toc__header" dir="ltr">
+<div id="toc__header" dir="ltr">
+<h1><a name="socgen_project"></a><small>Component level Guidelines</small><br>
+</h1>
+<p>
+</p>
+</div>
+<h1>
+</h1>
+<br>
+<h3 class="western">What interrupts should a component create?<br>
+</h3>
+&nbsp;
+<br>
+Every component is different but a good design will create a separate
+interrupt&nbsp; for each condition that requires a response from the
+cpu. More is better since the chip architects can omit any that they do
+not feel are needed. External asynchronous events should always have
+interrupts. Internal processes that take a significant amount of time
+to finish are also good candidates.
+<h1> <br>
+</h1>
+<p>
+</p>
+</div>
+<h1>
+</h1>
+<h3 class="western">Is the interrupt source well behaved?<br>
+</h3>
+&nbsp;
+<br>
+Is the source signal synchronized to the CPU's clock? Does it need
+debounce logic? Can it deassert itself without cpu
+intervention(spurious)? If so then a signal conditioner is needed to
+filter and re sync the signal and maintain a state variable of the
+signals condition.&nbsp; You do not want to feed changes from an
+external event directly to the cpu. Is is better to create an internal
+state variable that follows the external event and then use that as a
+proxy for the external event.&nbsp; Digital noise filters should
+include an array of options to allow tuning once the real system is
+available.&nbsp; Design a filter with hysteresis and make it
+adjustable. The time constants&nbsp; for the filters should be
+programmable and not hard wired to the cpu's clock.<br>
+<br>
+No one has ever made a digital&nbsp; filter that can reject an ESD
+event. There are times when&nbsp; analog filters are the best
+choice.&nbsp; <br>
+<br>
+<br>
+<br>
+<br>
+<h3 class="western">Is the interrupt perishable?<br>
+</h3>
+&nbsp;Some&nbsp; interrupts must be serviced within a certain time
+frame or else they will be lost forever. A transmit buffer empty
+interrupt for a uart is not perishable&nbsp; because once triggered it
+will remain in that state until serviced. The receive buffer full
+interrupt on the other hand must be serviced before the next&nbsp;
+incoming character or else data will be lost. A receiver that can hold
+off further transmissions until the receive character has been
+processed is not perishable.<br>
+<br>
+The timeout interrupt from a one-shot timer is not perishable but the
+timeout from a periodic timer could be. If the periodic timer can
+maintain a count of unserviced interrupts then this can be used to
+correct for any that are missed so any missed interrupts could be
+recovered.<br>
+<br>
+<br>
+<br>
+<h3 class="western">Is the interrupt dependent on a signals state or
+the change of its state?<br>
+</h3>
+Sometimes an&nbsp; interrupt source&nbsp; will remain active even after
+the cpu has serviced it.&nbsp; A push button that interrupts when
+pressed will remain active until the button is released. In this case
+you do not want to interrupt when the button is pressed, you want to
+interrupt when the button changes state. Then the cpu can read it's
+current state and perform the appropriate action. Otherwise the button
+press service routine must disable the interrupt until after the button
+is released<br>
+<br>
+<br>
+<br>
+<h3 class="western"><br>
+</h3>
+<p>
+</p>
+<h3 class="western">Does the interrupt have a "payload"?<br>
+</h3>
+&nbsp;
+Every interrupt will send some information to the CPU. In some cases
+the fact that the interrupt was sent is all of the information that the
+CPU needs. An example of this is a falling edge detect on a push button
+input. The cpu could read the state of the switch but that would only
+tell it if the switch was still pressed. All the cpu needs to know is
+that it was pressed. &nbsp; But others tell&nbsp; the CPU that there is
+some additional data that now needs processed. A uart receive data
+interrupt&nbsp; will tell that cpu that it must now process a recently
+received data byte.&nbsp; Interrupts without a payload should be
+configured as edge triggered interrupts since they do not need to
+perform an acknowledge handshake. &nbsp; <br>
+<br>
+Interrupts with payloads should&nbsp; be configured&nbsp; as level
+sensitive&nbsp; and must perform an acknowledge handshake after the cpu
+has accepted the payload. This can be challenging to design.&nbsp; The
+source cannot acknowledge when its service routine starts because with
+nested interrupts it could be interrupted and&nbsp; there could be a
+sizable delay before the CPU can read the data. It has to hold off the
+handshake until the payload has been transferred before it can continue
+receiving. But once the CPU has the payload it is in a race to remove
+the interrupt request before the CPU can exit the service routine. If
+the CPU exists before the interrupt request is removed then it is
+treated like a new interrupt. <br>
+<p></p>
+<p><br>
+<br>
+</p>
+<p><br>
+</p>
+<h3 class="western">Is the interrupt "Maskable"?<br>
+</h3>
+&nbsp;
+Every interrupt must have an associated register that can mask the
+interrupt so that the cpu does not see it. Mask is an arcadic term that
+has hung around since the days of active low signaling and refers to
+writing a "1" to mask the interrupt and a "0" to enable it.&nbsp;
+Modern designs all use active high signaling and will refer to this as
+a interrupt enable. It will always default to "0" at reset.<br>
+<p><br>
+</p>
+<h3 class="western">Is the interrupt "Spurious"?<br>
+</h3>
+&nbsp; Never issue a spurious interrupt!!!! If something happens where
+need for service is gone by the time the CPU gets to it&nbsp; then
+maintain the interrupt and provide a bit that simply says that the need
+has gone. Otherwise that CPU will&nbsp; process it as a spurious
+interrupt which it has no idea of what to do other than increment a
+spurious interrupt counter and return.&nbsp; This will cause a lot of
+grief within the design team because bugs sometimes manifest themselves
+as spurious interrupts and you can't ship code until you can find the
+cause for any spurious interrupt.<br>
+<p><br>
+<br>
+</p>
+<p><br>
+<br>
+</p>
+<p><br>
+<br>
+</p>
+<p><br>
+<br>
+</p>
+<p><br>
+<br>
+</p>
+<p><br>
+<br>
+</p>
+<p><br>
+<br>
+</p>
+<p><br>
+<br>
+</p>
+<p><br>
+<br>
+</p>
+<p><br>
+<br>
+</p>
+<p><br>
+<br>
+</p>
+<p><br>
+<br>
+</p>
+</body>
+</html>

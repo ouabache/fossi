@@ -37,7 +37,6 @@ install:
         sudo apt-get  install -y autoconf;\
         sudo apt-get  install -y libelf-dev;\
 	sudo apt-get  install -y geda-gschem;\
-	sudo apt-get  install -y yosys;\
 )
 
 
@@ -52,7 +51,6 @@ socgen:
         sudo apt-get  install -y libscalar-util-numeric-perl;\
         sudo apt-get  install -y libparallel-forkmanager-perl;\
         sudo apt-get  install -y libverilog-perl;\
-        sudo apt-get  install -y iverilog;\
         sudo apt-get  install -y gtkwave;\
         sudo apt-get  install -y verilator;\
         sudo apt-get  install -y covered;\

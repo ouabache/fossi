@@ -1,0 +1,5 @@
+cd verilog-10.0
+./configure
+make
+sudo make install
+

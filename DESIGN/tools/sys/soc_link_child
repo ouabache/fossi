@@ -118,7 +118,7 @@ else         {$variant = "${component}";}
 my $socgen_file     = $parser->parse_file(yp::lib::find_componentConfiguration($vendor,$library,$component));
 
 
-foreach  my   $i_name ($socgen_file->findnodes("//socgen:syn/socgen:ise/socgen:chip[socgen:variant/text() = '$variant']"))
+foreach  my   $i_name ($socgen_file->findnodes("//socgen:syn/socgen:fpgas/socgen:fpga[socgen:variant/text() = '$variant']"))
    {
    my($replace_vendor)  = $i_name ->findnodes('socgen:target/socgen:vendor/text()')->to_literal ;
    my($replace_library)  = $i_name ->findnodes('socgen:target/socgen:library/text()')->to_literal ;

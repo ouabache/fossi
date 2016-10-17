@@ -1,0 +1,28 @@
+
+
+
+initial
+ begin
+ $display("              ");
+ $display("          ===================================================");
+ $display("%8d  Test Start",$realtime );
+ $display("          ===================================================");
+ $display("              ");
+
+ test.PMOD4_reg <= 1'b1;
+ test.BTN_reg <= 2'b00;
+ test.cg.next(10);
+ test.BTN_reg <= 2'b11;
+ test.cg.next(100);
+ test.PMOD4_reg <= 1'b0;
+
+ test.cg.next(1000);
+
+
+
+ test.cg.exit;
+end
+
+
+
+
