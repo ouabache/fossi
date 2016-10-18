@@ -6,7 +6,7 @@ home=$(CUR_DIR)/..
 all:   install
 
 
-.PHONY install:  socgen optimsoc
+.PHONY install:  socgen optimsoc icestorm
 install:
 	(\
         sudo apt-get  install -y emacs;\
@@ -69,4 +69,26 @@ optimsoc:
         sudo apt-get  install -y python3;\
         sudo apt-get  install -y python3-yaml;\
         sudo apt-get  install -y gtkwave;\
+	)
+
+
+
+.PHONY icestorm:
+icestorm:
+	(\
+        sudo apt-get install -y build-essential;\
+        sudo apt-get install -y clang;\
+        sudo apt-get install -y bison;\
+        sudo apt-get install -y flex;\
+        sudo apt-get install -y libreadline-dev;\
+        sudo apt-get install -y gawk;\
+        sudo apt-get install -y tcl-dev;\
+        sudo apt-get install -y libffi-dev;\
+        sudo apt-get install -y mercurial;\
+        sudo apt-get install -y graphviz;\
+        sudo apt-get install -y xdot;\
+        sudo apt-get install -y pkg-config;\
+        sudo apt-get install -y python;\
+        sudo apt-get install -y python3;\
+        sudo apt-get install -y libftdi-dev;\
 	)

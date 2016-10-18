@@ -1,4 +1,5 @@
 cd verilog-10.0
+autoconf
 ./configure
 make
 sudo make install
