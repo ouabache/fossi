@@ -1,19 +1,11 @@
-assign A_CLK   = clk;
+assign CLK   = clk;
 
 
 
 
 reg       PMOD4_reg;
-
-reg [1:0] BTN_reg;
-
-initial
-begin
-BTN_reg = 2'b00;
-end
-
 assign PMOD4 = PMOD4_reg;
-assign BTN = BTN_reg;
+
 assign STOP = 1'b0;
 assign BAD = 1'b0;
 

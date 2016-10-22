@@ -1,0 +1,1511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:kactus2="http://kactus2.cs.tut.fi"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+                    http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+
+  
+<ipxact:vendor>lattice.com</ipxact:vendor> 
+<ipxact:library>fpgas</ipxact:library> 
+<ipxact:name>iceskate</ipxact:name> 
+<ipxact:version>padring.design</ipxact:version> 
+
+ <ipxact:interconnections> 
+ <ipxact:interconnection>                                                              
+ <ipxact:name>CLK</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="clk_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>CLK</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="CLK"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>clk</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="clk_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>clk_pad_in</ipxact:name>                  
+     </ipxact:physicalPort>     </ipxact:portMap>                      
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="clk_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                               
+	  <ipxact:logicalPort><ipxact:name>clk_pad_in</ipxact:name></ipxact:logicalPort>           
+          <ipxact:physicalPort><ipxact:name>clk_pad_in</ipxact:name>             
+          </ipxact:physicalPort></ipxact:portMap>                                         
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>CTSN</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="ctsn_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>CTSN</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="CTSN"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>ctsn</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="ctsn_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>ctsn_pad_in</ipxact:name>                  
+     </ipxact:physicalPort>     </ipxact:portMap>                      
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="ctsn_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                               
+	  <ipxact:logicalPort><ipxact:name>ctsn_pad_in</ipxact:name></ipxact:logicalPort>           
+          <ipxact:physicalPort><ipxact:name>ctsn_pad_in</ipxact:name>             
+          </ipxact:physicalPort></ipxact:portMap>                                         
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>DCDN</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="dcdn_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>DCDN</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="DCDN"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>dcdn</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="dcdn_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>dcdn_pad_in</ipxact:name>                  
+     </ipxact:physicalPort>     </ipxact:portMap>                      
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="dcdn_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                               
+	  <ipxact:logicalPort><ipxact:name>dcdn_pad_in</ipxact:name></ipxact:logicalPort>           
+          <ipxact:physicalPort><ipxact:name>dcdn_pad_in</ipxact:name>             
+          </ipxact:physicalPort></ipxact:portMap>                                         
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>DSRN</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="dsrn_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>DSRN</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="DSRN"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>dsrn</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="dsrn_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>dsrn_pad_in</ipxact:name>                  
+     </ipxact:physicalPort>     </ipxact:portMap>                      
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="dsrn_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                               
+	  <ipxact:logicalPort><ipxact:name>dsrn_pad_in</ipxact:name></ipxact:logicalPort>           
+          <ipxact:physicalPort><ipxact:name>dsrn_pad_in</ipxact:name>             
+          </ipxact:physicalPort></ipxact:portMap>                                         
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>DTRN</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="dtrn_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>DTRN</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="DTRN"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>dtrn</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="dtrn_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>dtrn_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="dtrn_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>dtrn_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>dtrn_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J1_10</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j1_10_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J1_10</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J1_10"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j1_10</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j1_10_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j1_10_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j1_10_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j1_10_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j1_10_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J1_3</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j1_3_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J1_3</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J1_3"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j1_3</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j1_3_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j1_3_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j1_3_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j1_3_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j1_3_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J1_4</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j1_4_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J1_4</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J1_4"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j1_4</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j1_4_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j1_4_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j1_4_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j1_4_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j1_4_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J1_5</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j1_5_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J1_5</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J1_5"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j1_5</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j1_5_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j1_5_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j1_5_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j1_5_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j1_5_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J1_6</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j1_6_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J1_6</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J1_6"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j1_6</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j1_6_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j1_6_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j1_6_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j1_6_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j1_6_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J1_7</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j1_7_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J1_7</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J1_7"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j1_7</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j1_7_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j1_7_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j1_7_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j1_7_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j1_7_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J1_8</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j1_8_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J1_8</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J1_8"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j1_8</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j1_8_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j1_8_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j1_8_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j1_8_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j1_8_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J1_9</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j1_9_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J1_9</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J1_9"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j1_9</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j1_9_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j1_9_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j1_9_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j1_9_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j1_9_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J3_10</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j3_10_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J3_10</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J3_10"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j3_10</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j3_10_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j3_10_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j3_10_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j3_10_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j3_10_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J3_3</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j3_3_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J3_3</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J3_3"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j3_3</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j3_3_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j3_3_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j3_3_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j3_3_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j3_3_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J3_4</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j3_4_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J3_4</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J3_4"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j3_4</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j3_4_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j3_4_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j3_4_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j3_4_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j3_4_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J3_5</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j3_5_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J3_5</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J3_5"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j3_5</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j3_5_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j3_5_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j3_5_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j3_5_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j3_5_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J3_6</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j3_6_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J3_6</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J3_6"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j3_6</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j3_6_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j3_6_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j3_6_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j3_6_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j3_6_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J3_7</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j3_7_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J3_7</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J3_7"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j3_7</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j3_7_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j3_7_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j3_7_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j3_7_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j3_7_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J3_8</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j3_8_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J3_8</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J3_8"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j3_8</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j3_8_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j3_8_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j3_8_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j3_8_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j3_8_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>J3_9</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="j3_9_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>J3_9</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="J3_9"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>j3_9</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="j3_9_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>j3_9_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="j3_9_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>j3_9_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>j3_9_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>LED1</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="led1_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>LED1</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="LED1"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>led1</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="led1_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>led1_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="led1_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>led1_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>led1_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>LED2</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="led2_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>LED2</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="LED2"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>led2</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="led2_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>led2_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="led2_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>led2_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>led2_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>LED3</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="led3_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>LED3</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="LED3"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>led3</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="led3_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>led3_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="led3_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>led3_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>led3_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>LED4</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="led4_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>LED4</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="LED4"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>led4</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="led4_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>led4_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="led4_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>led4_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>led4_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>LED5</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="led5_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>LED5</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="LED5"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>led5</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="led5_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>led5_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="led5_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>led5_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>led5_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>PMOD_1</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="pmod_1_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>PMOD_1</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="PMOD_1"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>pmod_1</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="pmod_1_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>pmod_1_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="pmod_1_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>pmod_1_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>pmod_1_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>PMOD_10</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="pmod_10_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>PMOD_10</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="PMOD_10"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>pmod_10</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="pmod_10_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>pmod_10_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="pmod_10_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>pmod_10_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>pmod_10_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>PMOD_2</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="pmod_2_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>PMOD_2</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="PMOD_2"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>pmod_2</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="pmod_2_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>pmod_2_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="pmod_2_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>pmod_2_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>pmod_2_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>PMOD_3</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="pmod_3_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>PMOD_3</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="PMOD_3"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>pmod_3</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="pmod_3_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>pmod_3_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="pmod_3_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>pmod_3_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>pmod_3_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>PMOD_4</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="pmod_4_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>PMOD_4</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="PMOD_4"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>pmod_4</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="pmod_4_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>pmod_4_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="pmod_4_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>pmod_4_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>pmod_4_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>PMOD_7</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="pmod_7_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>PMOD_7</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="PMOD_7"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>pmod_7</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="pmod_7_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>pmod_7_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="pmod_7_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>pmod_7_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>pmod_7_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>PMOD_8</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="pmod_8_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>PMOD_8</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="PMOD_8"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>pmod_8</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="pmod_8_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>pmod_8_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="pmod_8_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>pmod_8_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>pmod_8_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>PMOD_9</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="pmod_9_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>PMOD_9</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="PMOD_9"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>pmod_9</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="pmod_9_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>pmod_9_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="pmod_9_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>pmod_9_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>pmod_9_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>RS232_RX</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="rs232_rx_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>RS232_RX</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="RS232_RX"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>rs232_rx</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="rs232_rx_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>rs232_rx_pad_in</ipxact:name>                  
+     </ipxact:physicalPort>     </ipxact:portMap>                      
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="rs232_rx_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                               
+	  <ipxact:logicalPort><ipxact:name>rs232_rx_pad_in</ipxact:name></ipxact:logicalPort>           
+          <ipxact:physicalPort><ipxact:name>rs232_rx_pad_in</ipxact:name>             
+          </ipxact:physicalPort></ipxact:portMap>                                         
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>RS232_TX</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="rs232_tx_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>RS232_TX</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="RS232_TX"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>rs232_tx</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="rs232_tx_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>rs232_tx_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="rs232_tx_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>rs232_tx_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>rs232_tx_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>RTSN</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="rtsn_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>RTSN</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="RTSN"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>rtsn</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="rtsn_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>rtsn_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="rtsn_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>rtsn_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>rtsn_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>RXD</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="rxd_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>RXD</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="RXD"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>rxd</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="rxd_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>rxd_pad_in</ipxact:name>                  
+     </ipxact:physicalPort>     </ipxact:portMap>                      
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="rxd_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                               
+	  <ipxact:logicalPort><ipxact:name>rxd_pad_in</ipxact:name></ipxact:logicalPort>           
+          <ipxact:physicalPort><ipxact:name>rxd_pad_in</ipxact:name>             
+          </ipxact:physicalPort></ipxact:portMap>                                         
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>SD</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="sd_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>SD</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="SD"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>sd</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="sd_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>sd_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="sd_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>sd_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>sd_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+ <ipxact:interconnection>                                                              
+ <ipxact:name>TXD</ipxact:name>                                                
+ <ipxact:activeInterface  componentRef="txd_pad" busRef="pad_ring">        
+    <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>TXD</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+    </ipxact:portMaps>                                                
+  </ipxact:activeInterface>                                           
+  <ipxact:hierInterface busRef="TXD"/>                      
+  </ipxact:interconnection>                                           
+
+ <ipxact:interconnection>                                             
+ <ipxact:name>txd</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="txd_pad" busRef="pad">            
+    <ipxact:portMaps>                                                                 
+          <ipxact:portMap>                                                         
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
+          <ipxact:physicalPort><ipxact:name>txd_pad_out</ipxact:name>                  
+         </ipxact:physicalPort> </ipxact:portMap>                                          
+    </ipxact:portMaps>                                                                   
+  </ipxact:activeInterface>                                                 
+ <ipxact:activeInterface  componentRef="core" busRef="txd_pad">           
+    <ipxact:portMaps>                                                                    
+          <ipxact:portMap>                                                                 
+	  <ipxact:logicalPort><ipxact:name>txd_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>txd_pad_out</ipxact:name>              
+       </ipxact:physicalPort>   </ipxact:portMap>                                           
+    </ipxact:portMaps>                                                                               
+  </ipxact:activeInterface>                                                 
+  </ipxact:interconnection>                                                                         
+
+
+ </ipxact:interconnections> 
+ 
+ <ipxact:componentInstances> 
+
+ <ipxact:componentInstance>  <ipxact:instanceName>core</ipxact:instanceName>      
+ <ipxact:componentRef vendor="lattice.com" library="fpgas" name="iceskate" version="core" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>clk_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>ctsn_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>dcdn_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>dsrn_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>dtrn_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j1_10_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j1_3_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j1_4_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j1_5_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j1_6_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j1_7_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j1_8_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j1_9_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j3_10_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j3_3_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j3_4_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j3_5_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j3_6_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j3_7_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j3_8_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>j3_9_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>led1_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>led2_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>led3_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>led4_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>led5_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>pmod_1_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>pmod_10_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>pmod_2_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>pmod_3_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>pmod_4_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>pmod_7_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>pmod_8_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>pmod_9_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>rs232_rx_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>rs232_tx_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>rtsn_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>rxd_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>sd_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+ <ipxact:componentInstance>  <ipxact:instanceName>txd_pad</ipxact:instanceName>      
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+  </ipxact:componentInstance>                                                                                
+
+
+ </ipxact:componentInstances> 
+ 
+ </ipxact:design> 
+ 

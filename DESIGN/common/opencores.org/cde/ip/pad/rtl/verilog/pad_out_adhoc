@@ -1,0 +1,5 @@
+	   
+assign           pad_out     = adhoc_pad_out;
+   
+
+

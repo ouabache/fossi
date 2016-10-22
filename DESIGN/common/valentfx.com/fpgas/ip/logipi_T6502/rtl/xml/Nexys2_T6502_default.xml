@@ -36,35 +36,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>valentfx.com</ipxact:vendor>
 <ipxact:library>fpgas</ipxact:library>
 <ipxact:name>logipi_T6502</ipxact:name>
-<ipxact:version>default</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>default</ipxact:version>
+<ipxact:configuration>default</ipxact:configuration>  
 
 <ipxact:componentGenerators>
-
-
-
-
-
-
-
-
-
-
-
-<ipxact:componentGenerator>
-  <ipxact:name>gen_verilog_pad</ipxact:name>
-  <ipxact:phase>104.0</ipxact:phase>
-  <ipxact:apiType>none</ipxact:apiType>
-  <ipxact:vendorExtensions><socgen:envIdentifier>pad</socgen:envIdentifier></ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/verilog/gen_verilog</ipxact:generatorExe>
-   <ipxact:parameters>
-    <ipxact:parameter> 
-      <ipxact:name>destination</ipxact:name>
-      <ipxact:value>top.fpga</ipxact:value>
-    </ipxact:parameter>
-  </ipxact:parameters>
-</ipxact:componentGenerator>
-
-
 
 <ipxact:componentGenerator>
   <ipxact:name>gen_ise_filelist</ipxact:name>
@@ -106,13 +81,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   </ipxact:parameters>
 </ipxact:componentGenerator>
 
-
-
-
-
-  
-
-
 <ipxact:componentGenerator>
   <ipxact:name>gen_verilog</ipxact:name>
   <ipxact:phase>104.0</ipxact:phase>
@@ -128,15 +96,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 </ipxact:componentGenerator>
 
 </ipxact:componentGenerators>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -498,57 +457,48 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-  
-  <ipxact:instantiations>
+<ipxact:instantiations>
 
-			<ipxact:designInstantiation>
-				<ipxact:name>Hierarchical2</ipxact:name>
-				<ipxact:designRef vendor="valentfx.com" library="logipi" name="fpga" version="design"/>
-			</ipxact:designInstantiation>
+ <ipxact:designInstantiation>
+	<ipxact:name>Hierarchical2</ipxact:name>
+	<ipxact:designRef vendor="valentfx.com" library="logipi" name="fpga" version="design"/>
+ </ipxact:designInstantiation>
 
 
     
-   <ipxact:designInstantiation>
+ <ipxact:designInstantiation>
      <ipxact:name>Hierarchical</ipxact:name>
-<ipxact:designRef vendor="valentfx.com" library="fpgas" name="logipi_T6502" version="fpga.design"/>
-   </ipxact:designInstantiation>
+     <ipxact:designRef vendor="valentfx.com" library="fpgas" name="logipi_T6502" version="fpga.design"/>
+ </ipxact:designInstantiation>
 
 
-      <ipxact:designInstantiation>
+ <ipxact:designInstantiation>
      <ipxact:name>Padring_jtag</ipxact:name>
-<ipxact:designRef vendor="valentfx.com" library="logipi" name="fpga" version="jtag_design"/>
-	</ipxact:designInstantiation>
-
-
+     <ipxact:designRef vendor="valentfx.com" library="logipi" name="fpga" version="jtag_design"/>
+  </ipxact:designInstantiation>
 
   </ipxact:instantiations>
 
 
-		
-  
+		  
   <ipxact:views>
 
 
     <ipxact:view>
        <ipxact:name>Hierarchical2</ipxact:name>
-            <ipxact:designInstantiationRef>Hierarchical2</ipxact:designInstantiationRef>
-
+       <ipxact:designInstantiationRef>Hierarchical2</ipxact:designInstantiationRef>
     </ipxact:view>
     
    <ipxact:view>
-<ipxact:name>Hierarchical</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
-  <ipxact:designInstantiationRef>Hierarchical</ipxact:designInstantiationRef>
-    </ipxact:view>
+       <ipxact:name>Hierarchical</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
+       <ipxact:designInstantiationRef>Hierarchical</ipxact:designInstantiationRef>
+   </ipxact:view>
 
 
-       <ipxact:view>
-<ipxact:name>Padring_jtag</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
-  <ipxact:designInstantiationRef>Padring_jtag</ipxact:designInstantiationRef>
-    </ipxact:view>
-
-
-
-
+   <ipxact:view>
+       <ipxact:name>Padring_jtag</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
+       <ipxact:designInstantiationRef>Padring_jtag</ipxact:designInstantiationRef>
+   </ipxact:view>
 
 
     <ipxact:view>
@@ -559,65 +509,47 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
                                    ipxact:name="toolflow" 
                                    ipxact:version="verilog"/> 
               </ipxact:vendorExtensions>
-              </ipxact:view>
+    </ipxact:view>
 
 
 
     <ipxact:view>
-    <ipxact:name>common</ipxact:name><ipxact:envIdentifier>:*common:*</ipxact:envIdentifier>
-    <ipxact:language>Verilog</ipxact:language>
-    <ipxact:modelName></ipxact:modelName>
-    <ipxact:fileSetRef><ipxact:localName>fs-common</ipxact:localName></ipxact:fileSetRef>
+      <ipxact:name>common</ipxact:name><ipxact:envIdentifier>:*common:*</ipxact:envIdentifier>
+      <ipxact:language>Verilog</ipxact:language>
+      <ipxact:modelName></ipxact:modelName>
+      <ipxact:fileSetRef><ipxact:localName>fs-common</ipxact:localName></ipxact:fileSetRef>
     </ipxact:view>
-
-
 
   <ipxact:view>
-       <ipxact:name>pad</ipxact:name>
-       
-       <ipxact:language>Verilog</ipxact:language>
-       <ipxact:modelName></ipxact:modelName>
-       <ipxact:fileSetRef><ipxact:localName>fs-pad</ipxact:localName></ipxact:fileSetRef>
-    </ipxact:view>
-
-    
-
-    <ipxact:view>
     <ipxact:name>sim</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
     <ipxact:language>Verilog</ipxact:language>
     <ipxact:modelName></ipxact:modelName>
     <ipxact:fileSetRef><ipxact:localName>fs-sim</ipxact:localName></ipxact:fileSetRef>
-    </ipxact:view>
+  </ipxact:view>
 
 
-    <ipxact:view>
+  <ipxact:view>
     <ipxact:name>syn</ipxact:name><ipxact:envIdentifier>:*Synthesis:*</ipxact:envIdentifier>
     <ipxact:language>Verilog</ipxact:language>
     <ipxact:modelName></ipxact:modelName>
     <ipxact:fileSetRef><ipxact:localName>fs-sim</ipxact:localName></ipxact:fileSetRef>
-    </ipxact:view>
+  </ipxact:view>
 
 
-
-
-              <ipxact:view>
-              <ipxact:name>doc</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
-              <ipxact:vendorExtensions>
-              <ipxact:componentRef ipxact:vendor="opencores.org" 
-                                   ipxact:library="Testbench" 
-                                   ipxact:name="toolflow" 
-                                   ipxact:version="documentation"/> 
-              </ipxact:vendorExtensions>
-              <ipxact:envIdentifier>:*Documentation:*</ipxact:envIdentifier>
-              <ipxact:language>Verilog</ipxact:language>
-              </ipxact:view>
+  <ipxact:view>
+    <ipxact:name>doc</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
+    <ipxact:vendorExtensions>
+    <ipxact:componentRef ipxact:vendor="opencores.org" 
+                         ipxact:library="Testbench" 
+                         ipxact:name="toolflow" 
+                         ipxact:version="documentation"/> 
+    </ipxact:vendorExtensions>
+    <ipxact:envIdentifier>:*Documentation:*</ipxact:envIdentifier>
+    <ipxact:language>Verilog</ipxact:language>
+  </ipxact:view>
 
 
  </ipxact:views>
-
-
-
-
 
 
 

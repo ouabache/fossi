@@ -43,24 +43,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-
-
-<ipxact:componentGenerator>
-  <ipxact:name>gen_verilog_pad</ipxact:name>
-  <ipxact:phase>104.0</ipxact:phase>
-  <ipxact:apiType>none</ipxact:apiType>
-  <ipxact:vendorExtensions><socgen:envIdentifier>pad</socgen:envIdentifier></ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/verilog/gen_verilog</ipxact:generatorExe>
-   <ipxact:parameters>
-    <ipxact:parameter> 
-      <ipxact:name>destination</ipxact:name>
-      <ipxact:value>top.fpga</ipxact:value>
-    </ipxact:parameter>
-  </ipxact:parameters>
-</ipxact:componentGenerator>
-
-
-
 <ipxact:componentGenerator>
   <ipxact:name>gen_ise_filelist</ipxact:name>
   <ipxact:phase>104.0</ipxact:phase>
@@ -443,42 +425,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-
-
-
-
-
-
-
-  <ipxact:fileSets>
-
-    <ipxact:fileSet>
-      <ipxact:name>fs-pad</ipxact:name>
-
-
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/pad/top.fpga</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
-      </ipxact:file>
-
-
-      <ipxact:file>
-        <ipxact:name>../views/pad/</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
-      </ipxact:file>
-
-
-
-
-
-    </ipxact:fileSet>
-
-
-
-
-
-  </ipxact:fileSets>
 
 
 

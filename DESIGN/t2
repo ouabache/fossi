@@ -1,7 +1,7 @@
 . ./profile
-./tools/sys/workspace  opencores.org  cde
-./tools/sys/workspace  opencores.org  logic
+./tools/sys/workspace  lattice.com    fpgas
 ./tools/sys/build_elab_master  
 ./tools/verilog/gen_instance_roots
 ./tools/sys/build_hw_master
 ./tools/simulation/build_sim_master
+./tools/synthesys/build_fpga_master

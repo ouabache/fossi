@@ -40,9 +40,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:componentGenerators>
-
-
-
+  
 <ipxact:componentGenerator>
   <ipxact:name>gen_verilog_syn</ipxact:name>
   <ipxact:phase>104.0</ipxact:phase>
@@ -55,7 +53,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     </ipxact:parameter>
     <ipxact:parameter> 
       <ipxact:name>destination</ipxact:name>
-      <ipxact:value>top.spi.syn</ipxact:value>
+      <ipxact:value>top.syn</ipxact:value>
     </ipxact:parameter>
   </ipxact:parameters>
 </ipxact:componentGenerator>
@@ -76,11 +74,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
       <ipxact:file>
         <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/syn/top.spi.syn</ipxact:name>
+        <ipxact:name>../verilog/syn/top.syn</ipxact:name>
         <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
       </ipxact:file>
 
     </ipxact:fileSet>
+
 
 
 
@@ -90,62 +89,62 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <ipxact:model>
 
 
-
-
-		<ipxact:instantiations>
-			<ipxact:designInstantiation>
-				<ipxact:name>Hierarchical</ipxact:name>
-				<ipxact:designRef vendor="lattice.com" library="fpgas" name="iceskate" version="fpga.design"/>
-			</ipxact:designInstantiation>
-		</ipxact:instantiations>
 
 
 
 
 
   
+ 
+
+
+
   <ipxact:views>
 
-    <ipxact:view>
-    <ipxact:name>Hierarchical</ipxact:name>
-     <ipxact:designInstantiationRef>Hierarchical</ipxact:designInstantiationRef>
-    </ipxact:view>
-
-   <ipxact:view>
-     <ipxact:name>Pad_Ring</ipxact:name>
-          <ipxact:vendorExtensions>
-     <ipxact:componentRef ipxact:vendor="lattice.com" 
-                          ipxact:library="fpgas" 
-                          ipxact:name="iceskate" 
-                          ipxact:version="padring"/>
-     </ipxact:vendorExtensions>
-
-    </ipxact:view>
 
 
-    <ipxact:view>
-     <ipxact:name>Chip</ipxact:name>
+ 
+     <ipxact:view>
+     <ipxact:name>padring</ipxact:name>              
      <ipxact:vendorExtensions>
      <ipxact:componentRef ipxact:vendor="lattice.com" 
                           ipxact:library="fpgas" 
                           ipxact:name="iceskate" 
-                          ipxact:version="chip"/>
+                          ipxact:version="padring"/> 
      </ipxact:vendorExtensions>
-    </ipxact:view>
+     </ipxact:view>
 
+ 
      <ipxact:view>
-     <ipxact:name>ise</ipxact:name>              
+     <ipxact:name>ara</ipxact:name>              
      <ipxact:vendorExtensions>
      <ipxact:componentRef ipxact:vendor="opencores.org" 
                           ipxact:library="Testbench" 
                           ipxact:name="toolflow" 
-                          ipxact:version="ise"/> 
+                          ipxact:version="ara"/> 
      </ipxact:vendorExtensions>
      </ipxact:view>
 
+
+
+
+
+     
     <ipxact:view>
     <ipxact:name>syn</ipxact:name><ipxact:envIdentifier>:*Synthesis:*</ipxact:envIdentifier>
     
@@ -155,7 +154,11 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     </ipxact:view>
 
 
- </ipxact:views>
+
+
+  </ipxact:views>
+
+  
 
 </ipxact:model>
 

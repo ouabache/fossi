@@ -41,78 +41,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentGenerators>
 
 
-
-
-
-
-
-
-
-
-
-<ipxact:componentGenerator>
-  <ipxact:name>gen_verilog_pad</ipxact:name>
-  <ipxact:phase>104.0</ipxact:phase>
-  <ipxact:apiType>none</ipxact:apiType>
-  <ipxact:vendorExtensions><socgen:envIdentifier>pad</socgen:envIdentifier></ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/verilog/gen_verilog</ipxact:generatorExe>
-   <ipxact:parameters>
-    <ipxact:parameter> 
-      <ipxact:name>destination</ipxact:name>
-      <ipxact:value>top.fpga</ipxact:value>
-    </ipxact:parameter>
-  </ipxact:parameters>
-</ipxact:componentGenerator>
-
-
-
-<ipxact:componentGenerator>
-  <ipxact:name>gen_ise_filelist</ipxact:name>
-  <ipxact:phase>104.0</ipxact:phase>
-  <ipxact:apiType>none</ipxact:apiType>
-  <ipxact:vendorExtensions>
-    <socgen:envIdentifier>:*Synthesis:*</socgen:envIdentifier>
-  </ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/sys/gen_child_filelist</ipxact:generatorExe>
-  <ipxact:parameters>
-    <ipxact:parameter> 
-      <ipxact:name>top</ipxact:name>
-    </ipxact:parameter>
-    <ipxact:parameter> 
-      <ipxact:name>suffix</ipxact:name>
-      <ipxact:value>ISE</ipxact:value>
-    </ipxact:parameter>
-    <ipxact:parameter> 
-      <ipxact:name>leader</ipxact:name>
-      <ipxact:value>"verilog work "</ipxact:value>
-    </ipxact:parameter>
-    <ipxact:parameter> 
-      <ipxact:name>overlay_src_ven</ipxact:name>
-      <ipxact:value>opencores.org</ipxact:value>
-    </ipxact:parameter>
-    <ipxact:parameter> 
-      <ipxact:name>overlay_src_lib</ipxact:name>
-      <ipxact:value>cde</ipxact:value>
-    </ipxact:parameter>
-    <ipxact:parameter> 
-      <ipxact:name>overlay_des_ven</ipxact:name>
-      <ipxact:value>lattice.com</ipxact:value>
-    </ipxact:parameter>
-    <ipxact:parameter> 
-      <ipxact:name>overlay_des_lib</ipxact:name>
-      <ipxact:value>iceskate</ipxact:value>
-    </ipxact:parameter>
-
-  </ipxact:parameters>
-</ipxact:componentGenerator>
-
-
-
-
-
-  
-
-
 <ipxact:componentGenerator>
   <ipxact:name>gen_verilog</ipxact:name>
   <ipxact:phase>104.0</ipxact:phase>
@@ -139,220 +67,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-
-
-
-
- <ipxact:busInterfaces>
-
-
- <ipxact:busInterface><ipxact:name>A_CLK</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionTypes>
-      <ipxact:abstractionType>
-  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-    <ipxact:portMaps>
-          <ipxact:portMap>
-          <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
-          </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>A_CLK</ipxact:name>
-          </ipxact:physicalPort>
-          </ipxact:portMap>
-    </ipxact:portMaps>
-	
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-  <ipxact:master/>
-
- </ipxact:busInterface>
-
-
-
-
-
- <ipxact:busInterface><ipxact:name>BTN</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  
-  <ipxact:abstractionTypes>
-      <ipxact:abstractionType>
-  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-    <ipxact:portMaps>
-          <ipxact:portMap>
-          <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name>
-          </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>BTN</ipxact:name>
-          <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
-          </ipxact:physicalPort>
-          </ipxact:portMap>
-    </ipxact:portMaps>
-	
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-
-
-  <ipxact:master/>
-
- </ipxact:busInterface>
-
-
-
-
-
-
-
- <ipxact:busInterface><ipxact:name>PMOD1</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  
-  <ipxact:abstractionTypes>
-      <ipxact:abstractionType>
-  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-    <ipxact:portMaps>
-          <ipxact:portMap>
-          <ipxact:logicalPort><ipxact:name>PAD_io</ipxact:name>
-          </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>PMOD1</ipxact:name>
-          </ipxact:physicalPort>
-          </ipxact:portMap>
-    </ipxact:portMaps>
-	
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-
-
-  <ipxact:master/>
-
- </ipxact:busInterface>
-
-
-
- 
-
- <ipxact:busInterface><ipxact:name>PMOD2</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  
-  <ipxact:abstractionTypes>
-      <ipxact:abstractionType>
-  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-    <ipxact:portMaps>
-          <ipxact:portMap>
-          <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
-          </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>PMOD2</ipxact:name>
-          </ipxact:physicalPort>
-          </ipxact:portMap>
-    </ipxact:portMaps>
-	
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-
-
-  <ipxact:master/>
-
- </ipxact:busInterface>
-
-
-
- 
-
- <ipxact:busInterface><ipxact:name>PMOD3</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  
-  <ipxact:abstractionTypes>
-      <ipxact:abstractionType>
-  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-    <ipxact:portMaps>
-          <ipxact:portMap>
-          <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
-          </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>PMOD3</ipxact:name>
-          </ipxact:physicalPort>
-          </ipxact:portMap>
-    </ipxact:portMaps>
-	
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-
-
-  <ipxact:master/>
-
- </ipxact:busInterface>
-
-
-
-
-
- <ipxact:busInterface><ipxact:name>PMOD4</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  
-  <ipxact:abstractionTypes>
-      <ipxact:abstractionType>
-  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>
-    <ipxact:portMaps>
-          <ipxact:portMap>
-          <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name>
-          </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>PMOD4</ipxact:name>
-          </ipxact:physicalPort>
-          </ipxact:portMap>
-    </ipxact:portMaps>
-	
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-
-
-  <ipxact:master/>
-
- </ipxact:busInterface>
-
-
-
-
- 
- 
-
- </ipxact:busInterfaces>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ipxact:model>
 
 
-<ipxact:modelParameters>
-
-</ipxact:modelParameters>
-
-
 
 
   
-  <ipxact:instantiations>
-
-			<ipxact:designInstantiation>
-				<ipxact:name>Hierarchical2</ipxact:name>
-				<ipxact:designRef vendor="lattice.com" library="iceskate" name="fpga" version="design"/>
-			</ipxact:designInstantiation>
-
-
-    
-   <ipxact:designInstantiation>
-     <ipxact:name>Hierarchical</ipxact:name>
-<ipxact:designRef vendor="lattice.com" library="fpgas" name="iceskate" version="fpga.design"/>
-   </ipxact:designInstantiation>
-
-
-
-  </ipxact:instantiations>
 
 
 		
@@ -360,32 +80,37 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:views>
 
 
-    <ipxact:view>
-       <ipxact:name>Hierarchical2</ipxact:name>
-            <ipxact:designInstantiationRef>Hierarchical2</ipxact:designInstantiationRef>
+    
 
+
+
+
+
+
+
+
+
+    <ipxact:view>
+     <ipxact:name>padring</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>              
+     <ipxact:vendorExtensions>
+     <ipxact:componentRef ipxact:vendor="lattice.com" 
+                          ipxact:library="fpgas" 
+                          ipxact:name="iceskate" 
+                          ipxact:version="padring"/> 
+     </ipxact:vendorExtensions>
+    </ipxact:view>
+
+    
+    <ipxact:view>
+     <ipxact:name>verilog</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>              
+     <ipxact:vendorExtensions>
+     <ipxact:componentRef ipxact:vendor="opencores.org" 
+                          ipxact:library="Testbench" 
+                          ipxact:name="toolflow" 
+                          ipxact:version="verilog"/> 
+     </ipxact:vendorExtensions>
     </ipxact:view>
     
-   <ipxact:view>
-<ipxact:name>Hierarchical</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
-  <ipxact:designInstantiationRef>Hierarchical</ipxact:designInstantiationRef>
-    </ipxact:view>
-
-
-
-
-
-
-    <ipxact:view>
-              <ipxact:name>verilog</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>              
-              <ipxact:vendorExtensions>
-              <ipxact:componentRef ipxact:vendor="opencores.org" 
-                                   ipxact:library="Testbench" 
-                                   ipxact:name="toolflow" 
-                                   ipxact:version="verilog"/> 
-              </ipxact:vendorExtensions>
-              </ipxact:view>
-
 
 
     <ipxact:view>
@@ -396,14 +121,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     </ipxact:view>
 
 
-
-  <ipxact:view>
-       <ipxact:name>pad</ipxact:name>
-       
-       <ipxact:language>Verilog</ipxact:language>
-       <ipxact:modelName></ipxact:modelName>
-       <ipxact:fileSetRef><ipxact:localName>fs-pad</ipxact:localName></ipxact:fileSetRef>
-    </ipxact:view>
 
     
 
@@ -447,48 +164,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-<ipxact:ports>
-
-
-<ipxact:port><ipxact:name>A_CLK</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
- 
- <ipxact:port><ipxact:name>BTN</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
- </ipxact:port>
- 
- 
- <ipxact:port><ipxact:name>PMOD1</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
- </ipxact:port>
- 
- <ipxact:port><ipxact:name>PMOD2</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
- </ipxact:port>
- 
- <ipxact:port><ipxact:name>PMOD3</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
- </ipxact:port>
- 
- <ipxact:port><ipxact:name>PMOD4</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
- </ipxact:port>
- 
-
-
-  
- </ipxact:ports>  
-
- 
 
 
 </ipxact:model>
@@ -497,28 +172,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
   <ipxact:fileSets>
-
-
-
-    <ipxact:fileSet>
-      <ipxact:name>fs-pad</ipxact:name>
-
-
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/pad/top.fpga</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
-      </ipxact:file>
-
-
-      <ipxact:file>
-        <ipxact:name>../views/pad/</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
-      </ipxact:file>
-
-
-
-    </ipxact:fileSet>
 
 
 

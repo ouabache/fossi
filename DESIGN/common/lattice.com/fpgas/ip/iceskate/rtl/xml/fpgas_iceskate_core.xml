@@ -39,15 +39,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:name>iceskate</ipxact:name>
 <ipxact:version>core</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
 
-
-
-
-
 <ipxact:componentGenerators>
-
-
-
-
 
 <ipxact:componentGenerator>
   <ipxact:name>gen_verilog</ipxact:name>
@@ -63,157 +55,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   </ipxact:parameters>
 </ipxact:componentGenerator>
 
-
-
-
-
-
-
-
-
-
 </ipxact:componentGenerators>
-
-
-
-
-
-<ipxact:busInterfaces>
-
-
-
-
-
-
- <ipxact:busInterface><ipxact:name>a_clk_pad</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionTypes>
-      <ipxact:abstractionType>
-  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
-    <ipxact:portMaps>
-          <ipxact:portMap>
-          <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
-          </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>a_clk_pad_in</ipxact:name>
-          </ipxact:physicalPort>
-          </ipxact:portMap>
-    </ipxact:portMaps>
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-  <ipxact:master/>
- </ipxact:busInterface>
-
-
- 
-
- <ipxact:busInterface><ipxact:name>btn_pad</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionTypes>
-      <ipxact:abstractionType>
-  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
-    <ipxact:portMaps>
-          <ipxact:portMap>
-          <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
-          </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>btn_pad_in</ipxact:name>
-          <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
-          </ipxact:physicalPort>
-          </ipxact:portMap>
-    </ipxact:portMaps>
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-  <ipxact:master/>
- </ipxact:busInterface>
-
-
-
-
-
-
- <ipxact:busInterface><ipxact:name>pmod1_pad</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-
-  <ipxact:abstractionTypes>
-      <ipxact:abstractionType>
-  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
-    <ipxact:portMaps>
-          <ipxact:portMap>
-          <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
-          </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>pmod1_pad_out</ipxact:name>
-          </ipxact:physicalPort>
-          </ipxact:portMap>
-    </ipxact:portMaps>
-	
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-  <ipxact:master/>
- </ipxact:busInterface>
-
-
-  <ipxact:busInterface><ipxact:name>pmod2_pad</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionTypes>
-      <ipxact:abstractionType>
-  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
-    <ipxact:portMaps>
-          <ipxact:portMap>
-          <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
-          </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>pmod2_pad_out</ipxact:name>
-          </ipxact:physicalPort>
-          </ipxact:portMap>
-    </ipxact:portMaps>
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-  <ipxact:master/>
- </ipxact:busInterface>
-
-
-  <ipxact:busInterface><ipxact:name>pmod3_pad</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionTypes>
-      <ipxact:abstractionType>
-  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
-    <ipxact:portMaps>
-          <ipxact:portMap>
-          <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
-          </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>pmod3_pad_out</ipxact:name>
-          </ipxact:physicalPort>
-          </ipxact:portMap>
-    </ipxact:portMaps>
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-  <ipxact:master/>
-  </ipxact:busInterface>
-
-
-
-    <ipxact:busInterface><ipxact:name>pmod4_pad</ipxact:name>
-  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
-  <ipxact:abstractionTypes>
-      <ipxact:abstractionType>
-  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
-    <ipxact:portMaps>
-          <ipxact:portMap>
-          <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
-          </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>pmod4_pad_in</ipxact:name>
-          </ipxact:physicalPort>
-          </ipxact:portMap>
-    </ipxact:portMaps>
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-  <ipxact:master/>
- </ipxact:busInterface>
-
-
-
-
-</ipxact:busInterfaces>
-
-
 
 
 
@@ -225,78 +67,26 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-
-<ipxact:ports>  
-
-
-
-
-
-          <ipxact:port><ipxact:name>a_clk_pad_in</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-          <ipxact:port><ipxact:name>btn_pad_in</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-
-
-          <ipxact:port><ipxact:name>pmod1_pad_out</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-
-
-          <ipxact:port><ipxact:name>pmod2_pad_out</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-
-
-          <ipxact:port><ipxact:name>pmod3_pad_out</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-
-          <ipxact:port><ipxact:name>pmod4_pad_in</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-
-  
- </ipxact:ports>  
-  
-	<ipxact:instantiations>
-	<ipxact:designInstantiation>
-	<ipxact:name>Hierarchical</ipxact:name>
-	<ipxact:designRef vendor="lattice.com" library="fpgas" name="iceskate" version="core.design"/>
-	</ipxact:designInstantiation>
-	</ipxact:instantiations>
-
-
-
-
+	
+ 
 
   <ipxact:views>
 
-        <ipxact:view>
-	<ipxact:name>Hierarchical</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
-    <ipxact:designInstantiationRef>Hierarchical</ipxact:designInstantiationRef>	
-         </ipxact:view>
 
+              <ipxact:view>
+              <ipxact:name>padring</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>              
+              <ipxact:vendorExtensions>
+              <ipxact:componentRef ipxact:vendor="lattice.com" 
+                                   ipxact:library="fpgas" 
+                                   ipxact:name="iceskate" 
+                                   ipxact:version="CORE"/> 
+              </ipxact:vendorExtensions>
+              </ipxact:view>
+
+
+	
+
+	
 	      
               <ipxact:view>
               <ipxact:name>verilog</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>              

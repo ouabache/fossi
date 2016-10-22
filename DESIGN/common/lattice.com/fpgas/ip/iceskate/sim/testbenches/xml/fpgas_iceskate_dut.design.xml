@@ -18,40 +18,9 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:adHocConnections>
 
 <ipxact:adHocConnection>
-<ipxact:name>A_CLK</ipxact:name>
-<ipxact:externalPortReference portRef="A_CLK" />
-<ipxact:internalPortReference componentRef="dut" portRef="A_CLK" />
-</ipxact:adHocConnection>
-
-<ipxact:adHocConnection>
-<ipxact:name>BTN</ipxact:name>
-<ipxact:externalPortReference portRef="BTN" left="1" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="BTN" />
-</ipxact:adHocConnection>
-
-
-<ipxact:adHocConnection>
-<ipxact:name>PMOD1</ipxact:name>
-<ipxact:externalPortReference portRef="PMOD1"  />
-<ipxact:internalPortReference componentRef="dut" portRef="PMOD1" />
-</ipxact:adHocConnection>
-
-<ipxact:adHocConnection>
-<ipxact:name>PMOD2</ipxact:name>
-<ipxact:externalPortReference portRef="PMOD2"  />
-<ipxact:internalPortReference componentRef="dut" portRef="PMOD2" />
-</ipxact:adHocConnection>
-
-<ipxact:adHocConnection>
-<ipxact:name>PMOD3</ipxact:name>
-<ipxact:externalPortReference portRef="PMOD3"  />
-<ipxact:internalPortReference componentRef="dut" portRef="PMOD3" />
-</ipxact:adHocConnection>
-
-<ipxact:adHocConnection>
-<ipxact:name>PMOD4</ipxact:name>
-<ipxact:externalPortReference portRef="PMOD4"  />
-<ipxact:internalPortReference componentRef="dut" portRef="PMOD4" />
+<ipxact:name>CLK</ipxact:name>
+<ipxact:externalPortReference portRef="CLK" />
+<ipxact:internalPortReference componentRef="dut" portRef="CLK" />
 </ipxact:adHocConnection>
 
 

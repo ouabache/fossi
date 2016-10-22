@@ -28,7 +28,7 @@ TB.test.dut.core.COUNTER[27:0]
 @28
 TB.test.dut.core.clk
 TB.test.dut.core.btn_pad_in[1:0]
-TB.test.dut.a_clk_pad.PAD
+TB.test.dut.clk_pad.PAD
 TB.test.dut.core.reset
 [pattern_trace] 1
 [pattern_trace] 0

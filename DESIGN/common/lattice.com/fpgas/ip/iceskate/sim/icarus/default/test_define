@@ -10,9 +10,6 @@ initial
  $display("              ");
 
  test.PMOD4_reg <= 1'b1;
- test.BTN_reg <= 2'b00;
- test.cg.next(10);
- test.BTN_reg <= 2'b11;
  test.cg.next(100);
  test.PMOD4_reg <= 1'b0;
 
