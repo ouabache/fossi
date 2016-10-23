@@ -1,3 +1,4 @@
+sudo apt-get remove iverilog
 cd verilog-10.0
 autoconf
 ./configure

@@ -20,7 +20,8 @@ all:
 	${home}/tools/sys/workspace  opencores.org  Mos6502;\
 	${home}/tools/sys/workspace  opencores.org  wishbone;\
 	${home}/tools/sys/workspace  opencores.org  cde;\
-	${home}/tools/sys/workspace  github.com     ucb-bar;\
+	${home}/tools/sys/workspace  lattice.com    fpgas;\
+	${home}/tools/sys/workspace  valentfx.com   fpgas;\
 	 )
 
 
@@ -151,11 +152,15 @@ check_sims:
 check_fpgas: 
 	(\
 	cd ${home}/work  ;\
-	echo " number of fpgas";\
+	echo " number of xilinx fpgas";\
 	find . | grep syn/ise |grep Yst |  wc -l   ;\
 	echo " number that finished";\
 	find . | grep Board_Design_jtag.bit | wc -l ;\
-	 )
+	echo " number of lattice fpgas";\
+	find . | grep syn/ara |grep Makefile |  wc -l   ;\
+	echo " number that finished";\
+	find . | grep fpga.bin | wc -l ;\
+	)
 
 
 
