@@ -520,10 +520,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     </ipxact:adHocConnection>
 
 
-    <ipxact:adHocConnection   tiedValue="'b0" >
+    <ipxact:adHocConnection   tiedValue="1'b0" >
       <ipxact:internalPortReference componentRef="boot_rom" portRef="wr"/>
-      <ipxact:internalPortReference componentRef="boot_rom" portRef="wdata"/>
       <ipxact:internalPortReference componentRef="io_module" portRef="cts_pad_in"/>
+    </ipxact:adHocConnection>
+
+
+
+        <ipxact:adHocConnection   tiedValue="16'h0000" >
+      <ipxact:internalPortReference componentRef="boot_rom" portRef="wdata"/>
     </ipxact:adHocConnection>
 
 

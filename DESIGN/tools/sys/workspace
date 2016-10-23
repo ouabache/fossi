@@ -72,6 +72,9 @@ my $home    = cwd();
 my $prefix   =  yp::lib::get_workspace();
    $prefix   =  "/${prefix}";
 
+my $child_dir   =  yp::lib::get_child_dir;
+
+
 my $path = "${home}${prefix}";
 
 mkdir $path,0755          unless( -e $path );
@@ -154,7 +157,7 @@ symlink( "${home}/tools/bin/Makefile",      "${home}${prefix}/${vendor}__${libra
 
 
 
-my $path  = "${home}/children";
+my $path  = "${home}/${child_dir}";
 mkdir $path,0755          unless( -e $path );
 
 my @components =       yp::lib::find_components($vendor,$library);

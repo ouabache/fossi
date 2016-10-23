@@ -175,12 +175,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
          <socgen:parameter><socgen:name>ROM_ADD</socgen:name><socgen:value>0</socgen:value></socgen:parameter>
          <socgen:parameter><socgen:name>PROG_ROM_WORDS</socgen:name><socgen:value>0</socgen:value></socgen:parameter>
          <socgen:parameter><socgen:name>PROG_ROM_ADD</socgen:name><socgen:value>0</socgen:value></socgen:parameter>  
-         <socgen:parameter><socgen:name>VEC_TABLE</socgen:name><socgen:value>0'h00</socgen:value></socgen:parameter>  
-         <socgen:parameter><socgen:name>UART_PRESCALE</socgen:name><socgen:value>0'b00000</socgen:value></socgen:parameter>  
-         <socgen:parameter><socgen:name>UART_PRE_SIZE</socgen:name><socgen:value>0</socgen:value></socgen:parameter>  
+         <socgen:parameter><socgen:name>VEC_TABLE</socgen:name><socgen:value>8'h00</socgen:value></socgen:parameter>  
+         <socgen:parameter><socgen:name>UART_PRESCALE</socgen:name><socgen:value>5'b00000</socgen:value></socgen:parameter>  
+         <socgen:parameter><socgen:name>UART_PRE_SIZE</socgen:name><socgen:value>5</socgen:value></socgen:parameter>  
          <socgen:parameter><socgen:name>UART_DIV</socgen:name><socgen:value>0</socgen:value></socgen:parameter>  
-         <socgen:parameter><socgen:name>JTAG_USER1_WIDTH</socgen:name><socgen:value>0</socgen:value></socgen:parameter>  
-         <socgen:parameter><socgen:name>JTAG_USER1_RESET</socgen:name><socgen:value>0'h00</socgen:value></socgen:parameter>  
+         <socgen:parameter><socgen:name>JTAG_USER1_WIDTH</socgen:name><socgen:value>8</socgen:value></socgen:parameter>  
+         <socgen:parameter><socgen:name>JTAG_USER1_RESET</socgen:name><socgen:value>8'h00</socgen:value></socgen:parameter>  
         </socgen:parameters>
        </socgen:configuration>
 

@@ -620,7 +620,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-    <ipxact:adHocConnection tiedValue="'b0"  >
+    <ipxact:adHocConnection tiedValue="16'h0000"  >
       <ipxact:internalPortReference componentRef="boot_rom" portRef="wdata"/>
     </ipxact:adHocConnection>
 

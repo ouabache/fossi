@@ -193,31 +193,32 @@ sub link_child {
 
                  my $lib_comp_sep    = yp::lib::find_lib_comp_sep($child_vendor,$child_library,$child_component);
                  my $repo            = yp::lib::find_component_repo($child_vendor,$child_library,$child_component);
+                 my $child_dir       = yp::lib::get_child_dir;
 
 
 
-                 my $path  = "./children";
+                 my $path  = "./${child_dir}";
                  mkdir $path,0755             unless( -e $path );
-                 my $path  = "./children/${child_vendor}__${child_library}";
+                 my $path  = "./${child_dir}/${child_vendor}__${child_library}";
                  mkdir $path,0755             unless( -e $path );
-                 my $path  = "./children/${child_vendor}__${child_library}/bin";
+                 my $path  = "./$child_dir/${child_vendor}__${child_library}/bin";
 
                  unless( -e $path )
                    {
                    mkdir $path,0755;
                    $root = "${home}/${repo}/${child_vendor}/${child_library}/bin";
-                   $dest = "${home}/children/${child_vendor}__${child_library}/bin";
+                   $dest = "${home}/${child_dir}/${child_vendor}__${child_library}/bin";
                    &sys::lib::link_dir( "$root", "$dest"  );
-                   symlink( "${home}/tools/bin/Makefile.root", "${home}/children/${child_vendor}__${child_library}/bin/Makefile.root");
-                   symlink( "${home}/tools/bin/Makefile",      "${home}/children/${child_vendor}__${child_library}/bin/Makefile");
+                   symlink( "${home}/tools/bin/Makefile.root", "${home}/${child_dir}/${child_vendor}__${child_library}/bin/Makefile.root");
+                   symlink( "${home}/tools/bin/Makefile",      "${home}/${child_dir}/${child_vendor}__${child_library}/bin/Makefile");
                    }
 
 
 
-                   my $path  = "./children/${child_vendor}__${child_library}${lib_comp_sep}";
+                   my $path  = "./${child_dir}/${child_vendor}__${child_library}${lib_comp_sep}";
                    mkdir $path,0755             unless( -e $path );
                    
-                   my $path  = "./children/${child_vendor}__${child_library}${lib_comp_sep}${child_component}";
+                   my $path  = "./${child_dir}/${child_vendor}__${child_library}${lib_comp_sep}${child_component}";
 
 
                    unless( -e $path )
@@ -225,7 +226,7 @@ sub link_child {
                    mkdir $path,0755;
 
                    $root = "${home}/${repo}/${child_vendor}/${child_library}${lib_comp_sep}${child_component}";
-                   $dest = "./children/${child_vendor}__${child_library}${lib_comp_sep}${child_component}";
+                   $dest = "./${child_dir}/${child_vendor}__${child_library}${lib_comp_sep}${child_component}";
                    &sys::lib::link_dir( "$root", "$dest"  );
                    
 
@@ -243,14 +244,14 @@ sub link_child {
                       $sim_library_path            = $socgen_file->findnodes("//socgen:componentConfiguration/socgen:sim/socgen:library_path/text()")->to_literal;
                       }
 
-                   my $sim_full_path            = "./children/${child_vendor}__${child_library}${sim_library_path}";     
+                   my $sim_full_path            = "./${child_dir}/${child_vendor}__${child_library}${sim_library_path}";     
 
 
                    if(  $sim_library_path)
                      {  
                       if(-e $sim_full_path)  
                       { 
-                      my $cmd = "rm -r    ./children/${child_vendor}__${child_library}${sim_library_path}  \n";     
+                      my $cmd = "rm -r    ./${child_dir}/${child_vendor}__${child_library}${sim_library_path}  \n";     
                       if (system($cmd)) {}
                       }
                      }
@@ -270,14 +271,14 @@ sub link_child {
                       }
 
 
-                   my $syn_full_path            = "./children/${child_vendor}__${child_library}${syn_library_path}";     
+                   my $syn_full_path            = "./${child_dir}/${child_vendor}__${child_library}${syn_library_path}";     
 
                    if(  $syn_library_path)
                      {  
                    if(-e $syn_full_path)  
                     { 
 
-                    my $cmd = "rm -r    ./children/${child_vendor}__${child_library}${syn_library_path}  \n";     
+                    my $cmd = "rm -r    ./${child_dir}/${child_vendor}__${child_library}${syn_library_path}  \n";     
                     if (system($cmd)) {}
                     }
                     }

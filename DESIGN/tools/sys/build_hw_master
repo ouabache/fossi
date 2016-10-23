@@ -79,6 +79,8 @@ if ( $opt_h or $opt_help  )
   }
 
 
+my $child_dir = yp::lib::get_child_dir;
+
 my $parser = XML::LibXML->new();
 
 
@@ -190,7 +192,7 @@ foreach my $component (@components)
            }
          else
            {
-           push @kids , "::/children::${new_proj}::${new_comp}::${new_vendor}::${new_version}::";
+           push @kids , "::/${child_dir}::${new_proj}::${new_comp}::${new_vendor}::${new_version}::";
            }
           }
        }
@@ -255,7 +257,7 @@ foreach my $component (@components)
            }
          else
            {
-           push @kids , "::/children::${new_proj}::${new_comp}::${new_vendor}::${new_version}::";
+           push @kids , "::/${child_dir}::${new_proj}::${new_comp}::${new_vendor}::${new_version}::";
            }
           }        
       }

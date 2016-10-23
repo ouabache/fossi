@@ -93,6 +93,8 @@ if ( $opt_h  or $opt_help)
 
 $home = cwd();
 
+my  $child_dir =       yp::lib::get_child_dir;
+
 my $variant = "";
 if($version) {$variant = "${component}_${version}"}
 else         {$variant = "${component}"}
@@ -185,7 +187,7 @@ if(($new_vendor eq $vendor ) &&  ($new_proj eq $library ) &&  ($new_comp eq $com
 
               if(($file_type eq "libraryDir")&& (($view_file eq "fs-lint") ) &&  ($logical_name eq "dest_dir")  )
                  { 
-                 push(@filelist_sim,"../../../../../../children/${new_vendor}__${new_proj}${library_path}/${file_name}${new_variant}.v\n");
+                 push(@filelist_sim,"../../../../../../${child_dir}/${new_vendor}__${new_proj}${library_path}/${file_name}${new_variant}.v\n");
                  };
               } 
            

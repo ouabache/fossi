@@ -111,6 +111,7 @@ my $parser = XML::LibXML->new();
 my $spirit_component_file  = $parser->parse_file(yp::lib::find_ipxact_component($vendor,$library,$component,$version));
 my $comp_xml_sep           = yp::lib::find_comp_xml_sep($vendor,$library,$component,$version);
 my $lib_comp_sep           = yp::lib::find_lib_comp_sep($vendor,$library,$component);
+my $child_dir              = yp::lib::get_child_dir;
 
 
 
@@ -209,8 +210,8 @@ push @simfilelist,"${home}${prefix}/${top_filename}_${config}.v \n";
 
 #       print "FIND  ${ven} ${lib} ${cmp} ${ver} ${cfg} $view \n";
        my $filename = find_filename( $filesetref_name, $ven, $lib,$cmp,$ver);
-#       print SIMFILE "${home}/children/${filename}_${cfg}.v \n";
-       push @simfilelist,"${home}/children/${filename}_${cfg}.v \n";
+#       print SIMFILE "${home}/${child_dir}/${filename}_${cfg}.v \n";
+       push @simfilelist,"${home}/${child_dir}/${filename}_${cfg}.v \n";
 
        }
      }

@@ -110,6 +110,7 @@ my $parser = XML::LibXML->new();
 my $spirit_component_file  = $parser->parse_file(yp::lib::find_ipxact_component($vendor,$library,$component,$version));
 my $comp_xml_sep           = yp::lib::find_comp_xml_sep($vendor,$library,$component,$version);
 my $lib_comp_sep           = yp::lib::find_lib_comp_sep($vendor,$library,$component);
+my $child_dir              = yp::lib::get_child_dir;
 
 
 #print "XXXXXS   $vendor,$library,$component,$version \n";
@@ -211,7 +212,7 @@ foreach $line (@filelist)
 
 
            my $fileXX =       find_filename($filesetref_name  ,$new_vendor,$new_proj,$new_comp,$new_version);
-           if($fileXX){push(@filelist_sim,"${home}/children/${fileXX}\n");}
+           if($fileXX){push(@filelist_sim,"${home}/${child_dir}/${fileXX}\n");}
         }
        }
 
