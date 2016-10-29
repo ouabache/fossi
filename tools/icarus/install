@@ -4,4 +4,5 @@ autoconf
 ./configure
 make
 sudo make install
+cd ..
 

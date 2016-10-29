@@ -1,4 +1,4 @@
 cp -r dot_gEDA   ~/.gEDA
-cat readme.txt
+
 
 

@@ -1,3 +1,4 @@
 cd arachne-pnr
 make -j$(nproc)
 sudo make install
+cd ..

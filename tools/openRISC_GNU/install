@@ -11,4 +11,5 @@ cd ../bld-or1k-src
 ./install2
 cd ../bld-or1k-gcc
 ./install2
+cd ../..
 

@@ -1,3 +1,4 @@
 cd icestorm
 make -j$(nproc)
 sudo make install
+cd ..

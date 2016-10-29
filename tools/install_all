@@ -1,0 +1,24 @@
+cd ./fusesoc
+./install
+cd ..
+cd ./IceStorm
+./install
+cd ..
+cd ./yosys
+./install
+cd ..
+cd ./Arachne-PNR
+./install
+cd ..
+cd ./icarus
+./install
+cd ..
+cd ./gEDA
+./install
+cd ..
+cd ./kactus2
+./install
+cd ..
+
+
+

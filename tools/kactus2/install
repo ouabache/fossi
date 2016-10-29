@@ -3,3 +3,4 @@ cd kactus2-3.2.35
 ./configure
 make
 sudo make install
+cd ..
