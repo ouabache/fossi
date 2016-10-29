@@ -195,33 +195,18 @@ sub link_child {
                  my $repo            = yp::lib::find_component_repo($child_vendor,$child_library,$child_component);
                  my $child_dir       = yp::lib::get_child_dir;
 
-
-
-                 my $path  = "./${child_dir}";
+                 my $path            = "./${child_dir}";
+                 mkdir $path,0755      unless( -e $path );
+                 my $path            = "./${child_dir}/${child_vendor}__${child_library}";
+                 mkdir $path,0755      unless( -e $path );
+		 
+                 my $path  = "./${child_dir}/${child_vendor}__${child_library}${lib_comp_sep}";
                  mkdir $path,0755             unless( -e $path );
-                 my $path  = "./${child_dir}/${child_vendor}__${child_library}";
-                 mkdir $path,0755             unless( -e $path );
-                 my $path  = "./$child_dir/${child_vendor}__${child_library}/bin";
+                   
+                 my $path  = "./${child_dir}/${child_vendor}__${child_library}${lib_comp_sep}${child_component}";
+
 
                  unless( -e $path )
-                   {
-                   mkdir $path,0755;
-                   $root = "${home}/${repo}/${child_vendor}/${child_library}/bin";
-                   $dest = "${home}/${child_dir}/${child_vendor}__${child_library}/bin";
-                   &sys::lib::link_dir( "$root", "$dest"  );
-                   symlink( "${home}/tools/bin/Makefile.root", "${home}/${child_dir}/${child_vendor}__${child_library}/bin/Makefile.root");
-                   symlink( "${home}/tools/bin/Makefile",      "${home}/${child_dir}/${child_vendor}__${child_library}/bin/Makefile");
-                   }
-
-
-
-                   my $path  = "./${child_dir}/${child_vendor}__${child_library}${lib_comp_sep}";
-                   mkdir $path,0755             unless( -e $path );
-                   
-                   my $path  = "./${child_dir}/${child_vendor}__${child_library}${lib_comp_sep}${child_component}";
-
-
-                   unless( -e $path )
                    {
                    mkdir $path,0755;
 
@@ -229,7 +214,6 @@ sub link_child {
                    $dest = "./${child_dir}/${child_vendor}__${child_library}${lib_comp_sep}${child_component}";
                    &sys::lib::link_dir( "$root", "$dest"  );
                    
-
                    my $socgen_file               = $parser->parse_file(yp::lib::find_componentConfiguration($child_vendor,$child_library,$child_component));
                    my $sim_library_path ;
                    my $lib_comp_sep             = yp::lib::find_lib_comp_sep($child_vendor,$child_library,$child_component);

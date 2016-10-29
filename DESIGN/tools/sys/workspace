@@ -139,12 +139,6 @@ print "Vendor $vendor_status  Library  $library_status        \n";
 &link_sub( $root,$root, ".${prefix}/${vendor}__${library}" );
 
 
-
-
-if (system("chmod 755    ${home}/${repo}/${vendor}/${library}/bin/* \n"   )) {}
-
-
-
 my $path  = "${home}/${child_dir}";
 mkdir $path,0755          unless( -e $path );
 
