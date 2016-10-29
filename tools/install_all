@@ -19,6 +19,9 @@ cd ..
 cd ./kactus2
 ./install
 cd ..
+cd ./gEDA
+./install
+cd ..
 
 
 
