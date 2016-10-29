@@ -1,0 +1,85 @@
+
+
+
+reg [31:0] COUNTER;
+
+always@(posedge clk)
+begin
+               COUNTER <= COUNTER + 32'h00000001;
+end
+
+
+
+
+assign jtag_tdo = 1'b0;
+
+
+assign PosD = COUNTER[29:14];
+
+
+
+
+assign   PosL[0]    = PosS[0];
+assign   PosL[1]    = PosS[1];
+assign   PosL[2]    = PosS[2];
+assign   PosL[3]    = PosS[3];
+assign   PosL[4]    = COUNTER[18];
+assign   PosL[5]    = COUNTER[19];
+assign   PosL[6]    = PosB[0];
+assign   PosL[7]    = reset;
+
+
+
+assign    eppdb_pad_out            =    8'h00;                             
+assign    flashcs_n_pad_out        =    1'b1;                             
+assign    flashrp_pad_out          =    1'b0;                             
+assign    ja_1_pad_out             =    1'b0;                             
+assign    ja_10_pad_out            =    1'b0;                             
+assign    ja_2_pad_out             =    1'b0;                             
+assign    ja_3_pad_out             =    1'b0;                             
+assign    ja_4_pad_out             =    1'b0;                             
+assign    ja_7_pad_out             =    1'b0;                             
+assign    ja_8_pad_out             =    1'b0;                             
+assign    ja_9_pad_out             =    1'b0;                             
+assign    jb_1_pad_out             =    1'b0;                             
+assign    jb_10_pad_out            =    1'b0;                             
+assign    jb_2_pad_out             =    1'b0;                             
+assign    jb_3_pad_out             =    1'b0;                             
+assign    jb_4_pad_out             =    1'b0;                             
+assign    jb_7_pad_out             =    1'b0;                             
+assign    jb_8_pad_out             =    1'b0;                             
+assign    jb_9_pad_out             =    1'b0;                             
+assign    jc_1_pad_out             =    1'b0;                             
+assign    jc_10_pad_out            =    1'b0;                             
+assign    jc_2_pad_out             =    1'b0;                             
+assign    jc_3_pad_out             =    1'b0;                             
+assign    jc_4_pad_out             =    1'b0;                             
+assign    jc_7_pad_out             =    1'b0;                             
+assign    jc_8_pad_out             =    1'b0;                             
+assign    jc_9_pad_out             =    1'b0;                             
+
+assign    memadr_pad_out           =    23'b0;                             
+assign    memdb_pad_out            =    16'b0;                             
+assign    memoe_pad_out            =    1'b0;                             
+assign    memwr_n_pad_out          =    1'b1;                             
+assign    pio_pad_out              =    40'b0;                             
+assign    ps2_clk_pad_out          =    1'b0;                             
+assign    ps2_data_pad_out         =    1'b0;                             
+assign    ramadv_n_pad_out         =    1'b1;                             
+assign    ramclk_pad_out           =    1'b0;                             
+assign    ramcre_pad_out           =    1'b0;                             
+assign    ramcs_pad_out            =    1'b0;                             
+assign    ramlb_n_pad_out          =    1'b1;                             
+assign    ramub_n_pad_out          =    1'b1;                             
+assign    rs_tx_pad_out            =    1'b1;                             
+assign    rts_pad_out              =    1'b0;                             
+assign    txd_pad_out              =    1'b1;                             
+assign    usbrdy_pad_out           =    1'b0;                             
+assign    vga_blue_pad_out         =    2'b00;                             
+assign    vga_green_pad_out        =    3'b000;                             
+assign    vga_hsync_n_pad_out      =    1'b1;                             
+assign    vga_red_pad_out          =    3'b000;                             
+assign    vga_vsync_n_pad_out      =    1'b1;                             
+
+
+

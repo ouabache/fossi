@@ -27,6 +27,11 @@ refdes=reset
 C 1700 2300 1 0 0 in_port.sym  
 {
 T 1700 2300 5 10 1 1 0 6 1 1 
+refdes=enable
+}
+C 1700 2700 1 0 0 in_port.sym  
+{
+T 1700 2700 5 10 1 1 0 6 1 1 
 refdes=clk
 }
 C 4600 300  1 0  0 out_port_vector.sym

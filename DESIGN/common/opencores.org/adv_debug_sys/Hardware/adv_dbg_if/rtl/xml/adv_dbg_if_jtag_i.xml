@@ -37,7 +37,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>adv_debug_sys</ipxact:library>
 <ipxact:name>adv_dbg_if</ipxact:name>
-<ipxact:version>jtag_i</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>jtag_i</ipxact:version>    
 
 
 

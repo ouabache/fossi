@@ -36,7 +36,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>valentfx.com</ipxact:vendor>
 <ipxact:library>fpgas</ipxact:library>
 <ipxact:name>logipi_T6502</ipxact:name>
-<ipxact:version>padring</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>padring</ipxact:version>    
 
 <ipxact:componentGenerators>
 

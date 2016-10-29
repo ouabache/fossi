@@ -37,7 +37,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>logic</ipxact:library>
 <ipxact:name>vga_char_ctrl</ipxact:name>
-<ipxact:version>def</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>def</ipxact:version>    
 
 
 
@@ -383,10 +383,77 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:ports>
 
 
-<ipxact:port><ipxact:name>ascii_load</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:port><ipxact:name>clk</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs>
+  <ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef>
+ </ipxact:wireTypeDefs>
 <ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
+
+
+<ipxact:port><ipxact:name>reset</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs>
+  <ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef>
+ </ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+
+
+<ipxact:port><ipxact:name>hsync_n_pad_out</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs>
+  <ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef>
+ </ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>vsync_n_pad_out</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs>
+  <ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef>
+ </ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+<ipxact:port><ipxact:name>red_pad_out</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs>
+  <ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef>
+ </ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>green_pad_out</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs>
+  <ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef>
+ </ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>blue_pad_out</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs>
+  <ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef>
+ </ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>ascii_load</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs>
+  <ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef>
+ </ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+
+
 
 <ipxact:port><ipxact:name>add_l_load</ipxact:name>
 <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>

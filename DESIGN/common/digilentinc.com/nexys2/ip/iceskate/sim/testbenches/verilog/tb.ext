@@ -1,0 +1,24 @@
+
+
+
+reg [3:0]   btn_reg;
+
+
+
+reg [7:0]   sw_reg;
+
+
+
+
+assign A_CLK   = clk;
+assign CTS     = reset;
+assign SW      = sw_reg;
+assign BTN     = btn_reg;
+
+
+
+
+assign STOP = 1'b0;
+assign BAD = 1'b0;
+
+

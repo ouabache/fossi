@@ -63,24 +63,35 @@ module cde_jtag_tap
 #(parameter  CHIP_ID_VAL=32'h00000000 ) 
 (
 		 
-input   wire           tdo_i,
-output  wire           shiftcapture_dr_clk_o,
-output  wire           tdi_o,
-output  wire           test_logic_reset_o,
-output  wire           shift_dr_o,
-output  wire           capture_dr_o,
-output  wire           update_dr_clk_o,
-output  wire           select_o,
+ input wire  tdo_i,
 
 
-input   wire           aux_tdo_i,
-output  wire           aux_shiftcapture_dr_clk_o,
-output  wire           aux_tdi_o,
-output  wire           aux_test_logic_reset_o,
-output  wire           aux_shift_dr_o,
-output  wire           aux_capture_dr_o,
-output  wire           aux_update_dr_clk_o,
-output  wire           aux_select_o
+ input wire  tclk_pad_in,
+ input wire  tms_pad_in,
+ input wire  tdi_pad_in,
+ input wire  trst_n_pad_in,
+ output wire tdo_pad_out,
+ 
+
+
+ 
+ output wire shiftcapture_dr_clk_o,
+ output wire tdi_o,
+ output wire test_logic_reset_o,
+ output wire shift_dr_o,
+ output wire capture_dr_o,
+ output wire update_dr_clk_o,
+ output wire select_o,
+
+
+ input wire  aux_tdo_i,
+ output wire aux_shiftcapture_dr_clk_o,
+ output wire aux_tdi_o,
+ output wire aux_test_logic_reset_o,
+ output wire aux_shift_dr_o,
+ output wire aux_capture_dr_o,
+ output wire aux_update_dr_clk_o,
+ output wire aux_select_o
  	 
 );
 

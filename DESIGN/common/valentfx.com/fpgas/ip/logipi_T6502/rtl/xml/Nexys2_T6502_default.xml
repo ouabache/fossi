@@ -37,7 +37,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:library>fpgas</ipxact:library>
 <ipxact:name>logipi_T6502</ipxact:name>
 <ipxact:version>default</ipxact:version>
-<ipxact:configuration>default</ipxact:configuration>  
+  
 
 <ipxact:componentGenerators>
 

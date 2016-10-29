@@ -879,7 +879,7 @@
 <ipxact:fileSet>
 			<ipxact:name>external_SM</ipxact:name>
 			<ipxact:file>
-				<ipxact:name>/home/johne/socgen/children/opencores.org__cde/ip/jtag/rtl/xml/../verilog/jtag_tap_sm.v</ipxact:name>
+				<ipxact:name>../verilog/jtag_tap_sm.v</ipxact:name>
 				<ipxact:fileType>verilogSource</ipxact:fileType>
 				<ipxact:vendorExtensions>
 					<kactus2:hash>4b1c284ce1b0fe2edd33aa56ca0821eb773c9774</kactus2:hash>

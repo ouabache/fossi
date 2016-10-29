@@ -41,6 +41,58 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:componentGenerators>
 
+
+
+
+
+<ipxact:componentGenerator>
+  <ipxact:name>gen_ise_filelist</ipxact:name>
+  <ipxact:phase>104.0</ipxact:phase>
+  <ipxact:apiType>none</ipxact:apiType>
+  <ipxact:vendorExtensions>
+    <socgen:envIdentifier>:*Synthesis:*</socgen:envIdentifier>
+  </ipxact:vendorExtensions>
+  <ipxact:generatorExe>tools/sys/gen_child_filelist</ipxact:generatorExe>
+  <ipxact:parameters>
+    <ipxact:parameter> 
+      <ipxact:name>top</ipxact:name>
+    </ipxact:parameter>
+    <ipxact:parameter> 
+      <ipxact:name>suffix</ipxact:name>
+      <ipxact:value>ISE</ipxact:value>
+    </ipxact:parameter>
+    <ipxact:parameter> 
+      <ipxact:name>leader</ipxact:name>
+      <ipxact:value>"verilog work "</ipxact:value>
+    </ipxact:parameter>
+    <ipxact:parameter> 
+      <ipxact:name>overlay_src_ven</ipxact:name>
+      <ipxact:value>opencores.org</ipxact:value>
+    </ipxact:parameter>
+    <ipxact:parameter> 
+      <ipxact:name>overlay_src_lib</ipxact:name>
+      <ipxact:value>cde</ipxact:value>
+    </ipxact:parameter>
+    <ipxact:parameter> 
+      <ipxact:name>overlay_des_ven</ipxact:name>
+      <ipxact:value>digilentinc.com</ipxact:value>
+    </ipxact:parameter>
+    <ipxact:parameter> 
+      <ipxact:name>overlay_des_lib</ipxact:name>
+      <ipxact:value>Nexys2</ipxact:value>
+    </ipxact:parameter>
+
+  </ipxact:parameters>
+</ipxact:componentGenerator>
+
+
+
+
+
+
+
+
+  
 <ipxact:componentGenerator>
   <ipxact:name>gen_verilogLib_syn</ipxact:name>
   <ipxact:phase>105.0</ipxact:phase>

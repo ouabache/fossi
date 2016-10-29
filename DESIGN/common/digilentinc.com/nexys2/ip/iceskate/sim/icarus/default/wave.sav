@@ -1,0 +1,49 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Thu Oct 27 16:32:35 2016
+[*]
+[dumpfile] "/home/johne/socgen/work/digilentinc.com__nexys2/ip/iceskate/sim/icarus/default/TestBench.vcd"
+[dumpfile_mtime] "Thu Oct 27 16:26:45 2016"
+[dumpfile_size] 115770
+[savefile] "/home/johne/socgen/Projects/digilentinc.com/nexys2/ip/iceskate/sim/icarus/default/wave.sav"
+[timestart] 0
+[size] 1674 1028
+[pos] -1 -1
+*-23.035568 3750000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TB.
+[treeopen] TB.test.
+[treeopen] TB.test.dut.
+[treeopen] TB.test.dut.core.
+[sst_width] 473
+[signals_width] 241
+[sst_expanded] 1
+[sst_vpaned_height] 515
+@28
+TB.test.jtag_model.trst_n
+TB.test.jtag_model.tclk
+TB.test.jtag_model.tms
+TB.test.jtag_model.tdo
+TB.test.jtag_model.tdi
+TB.test.jtag_model.clk
+TB.test.jtag_model.reset
+TB.test.dut.core.a_clk_pad_in
+TB.test.dut.core.cts_pad_in
+TB.test.dut.core.clk
+TB.test.dut.core.one_usec
+TB.test.dut.core.reset
+TB.test.tclk_pad_in
+TB.test.tdi_pad_in
+TB.test.tdo_pad_out
+TB.test.tms_pad_in
+TB.test.trst_n_pad_in
+TB.test.dut.core.jtag_capture_dr
+TB.test.dut.core.jtag_select
+TB.test.dut.core.jtag_shift_dr
+TB.test.dut.core.jtag_shiftcapture_dr_clk
+TB.test.dut.core.jtag_tdi
+TB.test.dut.core.jtag_tdo
+TB.test.dut.core.jtag_test_logic_reset
+@29
+TB.test.dut.core.jtag_update_dr_clk
+[pattern_trace] 1
+[pattern_trace] 0

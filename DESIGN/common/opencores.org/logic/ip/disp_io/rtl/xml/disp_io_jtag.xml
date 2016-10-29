@@ -37,7 +37,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>logic</ipxact:library>
 <ipxact:name>disp_io</ipxact:name>
-<ipxact:version>jtag</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>jtag</ipxact:version>    
 
 
 <ipxact:busInterfaces>
@@ -69,18 +69,222 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         <ipxact:logicalPort><ipxact:name>reset</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>reset</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
-    </ipxact:portMaps>
+    </ipxact:portMaps>  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
+ </ipxact:busInterface>
+
+
+
+  <ipxact:busInterface><ipxact:name>slave_enable</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="enable" version="def"/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="enable" version="rtl"/>
+    <ipxact:portMaps>
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>enable</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>enable</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+    </ipxact:portMaps>  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
+ </ipxact:busInterface>
+
+
+
+
+
+
+ 
+
+ <ipxact:busInterface><ipxact:name>btn_pad</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+    <ipxact:portMaps>
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>btn_pad_in</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+    </ipxact:portMaps>  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
+ </ipxact:busInterface>
+
+
+  <ipxact:busInterface><ipxact:name>sw_pad</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+    <ipxact:portMaps>
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>sw_pad_in</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+    </ipxact:portMaps>  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
+  </ipxact:busInterface>
+
+
+
+  <ipxact:busInterface><ipxact:name>led_pad</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+    <ipxact:portMaps>
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>led_pad_out</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+    </ipxact:portMaps>  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
+ </ipxact:busInterface>
   
+
+
+  <ipxact:busInterface><ipxact:name>seg_pad</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+    <ipxact:portMaps>
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>seg_pad_out</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+    </ipxact:portMaps>  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
+ </ipxact:busInterface>
+  
+
+
+ 
+ 
+   <ipxact:busInterface><ipxact:name>dp_pad</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+    <ipxact:portMaps>
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>dp_pad_out</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+    </ipxact:portMaps>  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
+ </ipxact:busInterface>
+  
+
+
+
+  <ipxact:busInterface><ipxact:name>an_pad</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>
+    <ipxact:portMaps>
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>an_pad_out</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+    </ipxact:portMaps>  
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
+ </ipxact:busInterface>
+  
+
+
+
+ 
+</ipxact:busInterfaces>
+
+ <ipxact:busInterface>
+  <ipxact:name>jtag</ipxact:name>
+  <ipxact:busType  vendor="opencores.org" library="cde" name="jtag" version="rpc"/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="cde" name="jtag" version="rpc_classic_rtl"/>
+
+
+    <ipxact:portMaps>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>test_logic_reset</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>test_logic_reset_o</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>capture_dr</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>capture_dr_o</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>shift_dr</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort>
+        <ipxact:name>shift_dr_o</ipxact:name>
+        </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>update_dr_clk</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>update_dr_clk_o</ipxact:name>
+       </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>tdi</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>tdi_o</ipxact:name>
+      </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+      <ipxact:logicalPort><ipxact:name>tdo</ipxact:name>
+      </ipxact:logicalPort>
+      <ipxact:physicalPort><ipxact:name>tdo_i</ipxact:name>
+      </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+      <ipxact:logicalPort><ipxact:name>select</ipxact:name>
+      </ipxact:logicalPort>
+      <ipxact:physicalPort><ipxact:name>select_o</ipxact:name>
+      </ipxact:physicalPort>
+      </ipxact:portMap>
+
+      <ipxact:portMap>
+      <ipxact:logicalPort><ipxact:name>shiftcapture_dr_clk</ipxact:name>
+      </ipxact:logicalPort>
+      <ipxact:physicalPort><ipxact:name>shiftcapture_dr_clk_o</ipxact:name>
+      </ipxact:physicalPort>
+      </ipxact:portMap>
+
+    </ipxact:portMaps>
+
+	
         </ipxact:abstractionType>
       </ipxact:abstractionTypes>
 
 
+
   <ipxact:slave/>
 
- </ipxact:busInterface>
-
-</ipxact:busInterfaces>
-
+  </ipxact:busInterface>
 
 
 
@@ -207,7 +411,28 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
  
 <ipxact:ports>
 
+<ipxact:port><ipxact:name>clk</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
 
+
+<ipxact:port><ipxact:name>reset</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+<ipxact:port><ipxact:name>enable</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+  
 <ipxact:port><ipxact:name>PosD</ipxact:name>
 <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:direction>in</ipxact:direction>

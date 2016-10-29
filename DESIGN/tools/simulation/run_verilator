@@ -86,12 +86,24 @@ my $sim_library_path  = $ARGV[2];
 my $sim_name          = $ARGV[3];
 my $sim_variant       = $ARGV[4];
    
-
 chdir  "./${prefix}/${vendor}__${library}${sim_library_path}/verilator/${sim_name}";
-
-$cmd ="make verilator \n";
-if (system($cmd)) {}
 print "  SIM verilator     $sim_name        $sim_configuration   $sim_variant   \n";
+
+$cmd ="verilator --trace --cc   -f  ../../testbenches/filelists/${sim_variant}.syn  --exe ../../../../../../../tools/lint/sim_main2.cpp -top-module TB -Wno-PINNOCONNECT -Wno-DECLFILENAME  -Wno-UNDRIVEN   -Wno-UNUSED  -Wno-PINMISSING  -Wno-LITENDIAN  -Wno-PINCONNECTEMPTY         2> ${sim_name}_elab.log \n";
+if (system($cmd)) {}
+
+
+$cmd ="make -j -C obj_dir/ -f VTB.mk VTB \n";
+if (system($cmd)) {}
+
+$cmd ="obj_dir/VTB 800000  2 > ${sim_name}_sim.log \n";
+if (system($cmd)) {}
+
+
+$cmd ="grep PASSED  ./${sim_name}_sim.log \n";
+
+if (system($cmd)) {}
+
  
 chdir $home;
 

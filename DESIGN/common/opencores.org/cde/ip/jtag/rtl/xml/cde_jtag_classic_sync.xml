@@ -12,7 +12,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>cde</ipxact:library>
 <ipxact:name>jtag</ipxact:name>
-<ipxact:version>classic_sync</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>classic_sync</ipxact:version>    
 
 
 <ipxact:busInterfaces>
@@ -57,7 +57,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>tdo</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>tdo</ipxact:name>
-     <ipxact:wire></ipxact:wire>
+     
       </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -70,7 +70,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>shiftcapture_dr_clk</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>shiftcapture_dr_clk</ipxact:name>
-        <ipxact:wire></ipxact:wire>
+        
         </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -139,7 +139,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>tdo</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>syn_tdo_i</ipxact:name>
-        <ipxact:wire></ipxact:wire>
+        
      </ipxact:physicalPort>
       </ipxact:portMap>
 

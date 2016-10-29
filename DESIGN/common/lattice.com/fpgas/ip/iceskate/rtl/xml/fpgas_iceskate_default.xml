@@ -36,7 +36,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>lattice.com</ipxact:vendor>
 <ipxact:library>fpgas</ipxact:library>
 <ipxact:name>iceskate</ipxact:name>
-<ipxact:version>default</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>default</ipxact:version>    
 
 <ipxact:componentGenerators>
 

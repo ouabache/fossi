@@ -171,8 +171,16 @@ sub run_vendor_library
            my($chip_part)        = $i_name ->findnodes('../socgen:target/socgen:part/text()')->to_literal ;
 	   my($chip_tool)        = $i_name ->findnodes('../socgen:tool/text()')->to_literal ;
            print "  FPGAs     $chip_variant       $chip_part  |||| $chip_tool   \n"; 
-           $cmd ="./tools/synthesys/run_ise   $vendor $library $syn_library_path  $chip_variant    $chip_part  $chip_tool     \n";
-           push @cmds,$cmd;
+           if($chip_tool eq "ise")
+            {
+            $cmd ="./tools/synthesys/run_ise   $vendor $library $syn_library_path  $chip_variant    $chip_part  $chip_tool     \n";
+            push @cmds,$cmd;
+            }
+           elsif($chip_tool eq "ara")
+            {
+            $cmd ="./tools/synthesys/run_ara   $vendor $library $syn_library_path  $chip_variant    $chip_part  $chip_tool     \n";
+            push @cmds,$cmd;
+            }
            }
 
         foreach $cmd (@cmds)

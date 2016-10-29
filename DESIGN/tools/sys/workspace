@@ -139,21 +139,9 @@ print "Vendor $vendor_status  Library  $library_status        \n";
 &link_sub( $root,$root, ".${prefix}/${vendor}__${library}" );
 
 
-#/*********************************************************************************************/
-#/                                                                                            */
-#/ Each library is given access to the system tools by giving each of them a link to the      */
-#/ Master Makefiles in tools/bin                                                              */
-#/                                                                                            */
-#/                                                                                            */
-#/*********************************************************************************************/
-
 
 
 if (system("chmod 755    ${home}/${repo}/${vendor}/${library}/bin/* \n"   )) {}
-
-
-symlink( "${home}/tools/bin/Makefile.root", "${home}${prefix}/${vendor}__${library}/bin/Makefile.root");
-symlink( "${home}/tools/bin/Makefile",      "${home}${prefix}/${vendor}__${library}/bin/Makefile");
 
 
 
@@ -170,12 +158,7 @@ foreach my $component (@components)
    my $socgen_filename     = yp::lib::find_componentConfiguration($vendor,$library,$component);
    if($socgen_filename)
    {
-
    my $socgen_file     = $parser->parse_file(yp::lib::find_componentConfiguration($vendor,$library,$component));
-
-
-
-
    my @versions =       yp::lib::find_component_versions($vendor,$library,$component);
 
    foreach $comp_version (@versions)
@@ -195,35 +178,10 @@ foreach my $component (@components)
       if (system($cmd)) {}
       }
 
-   #/*********************************************************************************************/
-   #/   link chip files for synthesys                                                            */
-   #/                                                                                            */
-   #/                                                                                            */
-   #/                                                                                            */
-   #/                                                                                            */
-   #/                                                                                            */
-   #/*********************************************************************************************/
-   
-   print "Linking synthesys targets for  $vendor  $library  $component      \n";
-   my $lib_comp_sep    = yp::lib::find_lib_comp_sep($vendor,$library,$component);
+
 
  
-   foreach  my   $i_name ($socgen_file->findnodes("//socgen:syn/socgen:fpgas/socgen:fpga/socgen:variant"))
-      {
-      my($chip_variant)  = $i_name ->findnodes('./text()')->to_literal ;
-      my($chip_target)   = $i_name ->findnodes('../socgen:target/socgen:library/text()')->to_literal ;
-      my($chip_part)     = $i_name ->findnodes('../socgen:target/socgen:part/text()')->to_literal ;
-      my($chip_tool)     = $i_name ->findnodes('../socgen:tool/text()')->to_literal ;
-      $outfile ="${home}${prefix}/${vendor}__${library}${lib_comp_sep}${component}/syn/${chip_tool}/${chip_variant}/Makefile";
-      open  MAKSYNFILE,">$outfile" or die "unable to open $outfile";
-      print MAKSYNFILE  "include ${home}/tools/bin/Makefile.root\n";
-      print MAKSYNFILE  "Part=${chip_part}\n";
-      print MAKSYNFILE  "board=${chip_target}\n";
-      print MAKSYNFILE  "Design=${chip_variant}\n";
-      my $path  = "${home}${prefix}/${vendor}__${library}${lib_comp_sep}${component}/syn/${chip_tool}/${chip_variant}/target";
-      mkdir $path,0755          unless( -e $path );
-      &sys::lib::link_dir( "${home}/tools/synthesys/targets/ip/${chip_target}", "${home}${prefix}/${vendor}__${library}${lib_comp_sep}${component}/syn/${chip_tool}/${chip_variant}/target"  );
-      }
+
    }
 
    }

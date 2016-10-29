@@ -30,7 +30,7 @@ HIR 0 ;
 TDR 0 ;
 HDR 0 ;
 // Loading device with a `USER1' instruction. 
-SIR 6 TDI (02) ;
+SIR 6 TDI (03) ;
 SDR 18 TDI (38000) SMASK (ff) TDO (00000) MASK (00) ;
 RUNTEST 100000 TCK;
 SDR 18 TDI (1fc21) SMASK (3ffff) TDO (00000) MASK (00000) ;

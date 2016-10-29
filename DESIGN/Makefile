@@ -13,15 +13,16 @@ vendor=opencores.org
 .PHONY all: clean 
 all: 
 	(\
-	${home}/tools/sys/workspace  opencores.org  fpgas;\
-	${home}/tools/sys/workspace  opencores.org  logic;\
-	${home}/tools/sys/workspace  opencores.org  adv_debug_sys;\
-	${home}/tools/sys/workspace  opencores.org  io;\
-	${home}/tools/sys/workspace  opencores.org  Mos6502;\
-	${home}/tools/sys/workspace  opencores.org  wishbone;\
-	${home}/tools/sys/workspace  opencores.org  cde;\
-	${home}/tools/sys/workspace  lattice.com    fpgas;\
-	${home}/tools/sys/workspace  valentfx.com   fpgas;\
+	${home}/tools/sys/workspace  opencores.org    fpgas;\
+	${home}/tools/sys/workspace  opencores.org    logic;\
+	${home}/tools/sys/workspace  opencores.org    adv_debug_sys;\
+	${home}/tools/sys/workspace  opencores.org    io;\
+	${home}/tools/sys/workspace  opencores.org    Mos6502;\
+	${home}/tools/sys/workspace  opencores.org    wishbone;\
+	${home}/tools/sys/workspace  opencores.org    cde;\
+	${home}/tools/sys/workspace  digilentinc.com  nexys2;\
+	${home}/tools/sys/workspace  lattice.com      fpgas;\
+	${home}/tools/sys/workspace  valentfx.com     fpgas;\
 	 )
 
 
@@ -157,9 +158,9 @@ check_fpgas:
 	echo " number that finished";\
 	find . | grep Board_Design_jtag.bit | wc -l ;\
 	echo " number of lattice fpgas";\
-	find . | grep syn/ara |grep Makefile |  wc -l   ;\
+	find . | grep syn/ara |grep Bits.bin |  wc -l   ;\
 	echo " number that finished";\
-	find . | grep fpga.bin | wc -l ;\
+	find . | grep Bits.bin | wc -l ;\
 	)
 
 

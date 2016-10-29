@@ -37,7 +37,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>digilentinc.com</ipxact:vendor>
 <ipxact:library>Nexys2</ipxact:library>
 <ipxact:name>fpga</ipxact:name>
-<ipxact:version>core</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>core</ipxact:version>    
 
 
 
@@ -75,7 +75,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>shiftcapture_dr_clk</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>jtag_shiftcapture_dr_clk</ipxact:name>
-          <ipxact:wire></ipxact:wire>
+          
       </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -88,7 +88,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>select</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>jtag_select</ipxact:name>
-          <ipxact:wire></ipxact:wire>
+          
 </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -102,7 +102,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>tdo</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>jtag_tdo</ipxact:name>
-          <ipxact:wire></ipxact:wire>
+          
 </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -148,7 +148,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>shiftcapture_dr_clk</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>aux_jtag_shiftcapture_dr_clk</ipxact:name>
-          <ipxact:wire></ipxact:wire>
+          
       </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -161,7 +161,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>select</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>aux_jtag_select</ipxact:name>
-          <ipxact:wire></ipxact:wire>
+          
 </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -175,7 +175,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>tdo</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>aux_jtag_tdo</ipxact:name>
-          <ipxact:wire></ipxact:wire>
+          
 </ipxact:physicalPort>
       </ipxact:portMap>
 

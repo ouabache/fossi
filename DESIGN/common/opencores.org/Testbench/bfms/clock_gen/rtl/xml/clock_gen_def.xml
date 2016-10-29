@@ -37,7 +37,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>Testbench</ipxact:library>
 <ipxact:name>clock_gen</ipxact:name>
-<ipxact:version>def</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>def</ipxact:version>    
 
 
 <ipxact:busInterfaces>
@@ -157,9 +157,46 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:model>    
-       <ipxact:views>
 
 
+
+
+
+
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>verilog</ipxact:name>
+				<ipxact:language>verilog</ipxact:language>
+				<ipxact:moduleName>clock_gen_def</ipxact:moduleName>
+				<ipxact:moduleParameters>
+					<ipxact:moduleParameter parameterId="STOP_WIDTH" usageCount="1" usageType="nontyped">
+						<ipxact:name>STOP_WIDTH</ipxact:name>
+						<ipxact:value>1</ipxact:value>
+					</ipxact:moduleParameter>
+				<ipxact:moduleParameter parameterId="BAD_WIDTH" usageCount="2" usageType="nontyped">
+						<ipxact:name>BAD_WIDTH</ipxact:name>
+						<ipxact:value>1</ipxact:value>
+					</ipxact:moduleParameter>
+				</ipxact:moduleParameters>
+				<ipxact:fileSetRef>
+					<ipxact:localName>fs-sim</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+
+
+
+
+
+  <ipxact:views>
+
+
+
+			<ipxact:view>
+				<ipxact:name>rtl</ipxact:name>
+				<ipxact:envIdentifier>verilog:Kactus2:</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>verilog</ipxact:componentInstantiationRef>
+			</ipxact:view>
              <ipxact:view>
               <ipxact:name>verilog</ipxact:name>              
               <ipxact:vendorExtensions>

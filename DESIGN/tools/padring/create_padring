@@ -135,6 +135,7 @@ exit;
 
 my @pad_list;
 my %Pin_type;
+my %Pad_name;
 my %Pin_dir;
 my %Pin_port;
 my %Pin_portDir;
@@ -182,35 +183,50 @@ if(/(\S+),(\S+)/)
 
       $_ = $remainder;
 
-      if(/(\w+)[\[](\d+)[\]]/)
+
+if(/(\S+),(\S+)/)
+      {
+      $remainder      =$1;
+      $pin_name       =lc  $2;
+      }
+
+      $_ = $remainder;
+
+
+
+
+   if(/(\w+)[\[](\d+)[\]]/)
         {
-        $pin_name    = $1;
+        $pad_name    = uc $1;
         $pin_bit     = $2;
         $pin_type    = "vector";
 
 
+        $Pad_name{$pin_name} = $pad_name;      
+
 
         if(defined $Pin_min{$pin_name})
-         {  if($Pin_min{$pin_name} gt $pin_bit) { $Pin_min{$pin_name} = $pin_bit;}      }
+         {  if($Pin_min{$pin_name} >= $pin_bit) { $Pin_min{$pin_name} = $pin_bit;}      }
          else
          { $Pin_min{$pin_name} = $pin_bit ; }
 
 
         if(defined $Pin_max{$pin_name})
-         {  if($Pin_max{$pin_name} lt $pin_bit) { $Pin_max{$pin_name} = $pin_bit;}      }
+         {  if($Pin_max{$pin_name} <= $pin_bit) { $Pin_max{$pin_name} = $pin_bit;}      }
          else
          { $Pin_max{$pin_name} = $pin_bit ; }
 
          }
        else
         {
-
-        $pin_name    = $remainder;
+	$Pad_name{$pin_name} = uc $_ ;      
         $pin_bit     = "xx";
         $pin_type    = "scaler";
         }
 	
-        push (@pad_list,  "${pin_name}::${pin_type}::${pin_bit}::${pin_dir}::${pin_reset}::${pin_ucf}");
+      #print "${pin_name}::${pin_type}::${pin_bit}::${pin_dir}::${pin_reset}::${pin_ucf}  \n";
+      
+      push (@pad_list,  "${pin_name}::${pin_type}::${pin_bit}::${pin_dir}::${pin_reset}::${pin_ucf}");
 
 
       if(defined $Pin_type{$pin_name})
@@ -250,6 +266,15 @@ if(/(\S+),(\S+)/)
            $Has_in{$pin_name}   = 1;
            $Has_out{$pin_name}  = 1;
            $Has_oe{$pin_name}   = 1;       
+           }
+       elsif($pin_dir eq "inouts")
+           {
+	   $Pin_port{$pin_name} ="io";
+	   $Pin_portDir{$pin_name} ="inout" ;
+	   $Pad_type{$pin_name} ="se" ;
+           $Has_in{$pin_name}   = 1;
+           $Has_out{$pin_name}  = 1;
+           $Has_oe{$pin_name}   = 2;       
            }
        elsif($pin_dir eq "tsout")
            {
@@ -300,7 +325,7 @@ if(/(\S+),(\S+)/)
 my @names = keys %Pin_type;
 @names      = sys::lib::trim_sort(@names);
 
-#for my $name (@names){print "$name   [ $Pin_max{$name}  $Pin_min{$name}]     $Pin_type{$name}   $Pin_dir{$name}     \n"}
+for my $name (@names){print "$name   [ $Pin_max{$name}  $Pin_min{$name}]     $Pin_type{$name}   $Pin_dir{$name}     \n"}
 
 
 
@@ -348,7 +373,7 @@ print COMP_FILE  "\n <ipxact:busInterfaces> \n";
 
 foreach $pin_name (@names)
   {
-  $PIN_name   =  uc $pin_name;
+  $PIN_name   =  $Pad_name{$pin_name};
 
   print COMP_FILE  " <ipxact:busInterface>                                                                                  \n";
   print COMP_FILE  " <ipxact:name>${PIN_name}</ipxact:name>                                                                \n";
@@ -395,8 +420,8 @@ print COMP_FILE  "\n <ipxact:ports> \n";
 
 foreach $pin_name (@names)
   {
+  $PIN_name   =  $Pad_name{$pin_name};
 
-  $PIN_name   =  uc $pin_name;
   print COMP_FILE  " <ipxact:port>  <ipxact:name>${PIN_name}</ipxact:name>                                                 \n";
   print COMP_FILE  " <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>         \n";     
   print COMP_FILE  "  <ipxact:direction>${Pin_portDir{$pin_name}}</ipxact:direction>      \n";     
@@ -447,7 +472,8 @@ print DESIGN_FILE  "<ipxact:version>${version}.design</ipxact:version> \n";
 print DESIGN_FILE  "\n <ipxact:interconnections> \n";
 foreach $pin_name (@names)
   {
-  my $PIN_name   =  uc $pin_name;
+  $PIN_name   =  $Pad_name{$pin_name};
+  
   print DESIGN_FILE  " <ipxact:interconnection>                                                              \n";
   print DESIGN_FILE  " <ipxact:name>${PIN_name}</ipxact:name>                                                \n";
   print DESIGN_FILE  " <ipxact:activeInterface  componentRef=\"${pin_name}_pad\" busRef=\"pad_ring\">        \n";     
@@ -494,7 +520,7 @@ if($Pin_type{$pin_name} eq "vector")
   print DESIGN_FILE  "          <ipxact:portMap>                                                         \n";
   print DESIGN_FILE  "	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    \n";
   print DESIGN_FILE  "          <ipxact:physicalPort><ipxact:name>${pin_name}_pad_out</ipxact:name>                  \n";
-if($Pin_type{$pin_name} eq "vector")
+  if($Pin_type{$pin_name} eq "vector")
   {
   print DESIGN_FILE  "   <ipxact:wire>         \n"; 
   print DESIGN_FILE  "   <ipxact:vector><ipxact:left>$Pin_max{$pin_name}</ipxact:left><ipxact:right>$Pin_min{$pin_name}</ipxact:right></ipxact:vector>\n"; 
@@ -503,13 +529,35 @@ if($Pin_type{$pin_name} eq "vector")
          
   print DESIGN_FILE  "         </ipxact:physicalPort> </ipxact:portMap>                                          \n";
   }
-  if ($Has_oe{$pin_name} == 1)
+
+
+
+if ($Has_oe{$pin_name} == 1)
   {
   print DESIGN_FILE  "          <ipxact:portMap>                                                               \n";
   print DESIGN_FILE  "	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>           \n";
-  print DESIGN_FILE  "          <ipxact:physicalPort><ipxact:name>${pin_name}_pad_oe</ipxact:name></ipxact:physicalPort>   \n";         
-  print DESIGN_FILE  "          </ipxact:portMap>                                                              \n";
+  print DESIGN_FILE  "          <ipxact:physicalPort><ipxact:name>${pin_name}_pad_oe</ipxact:name>  \n";         
+  print DESIGN_FILE  "         </ipxact:physicalPort> </ipxact:portMap>                                                              \n";
   }
+
+
+if ($Has_oe{$pin_name} == 2)
+  {
+  print DESIGN_FILE  "          <ipxact:portMap>                                                               \n";
+  print DESIGN_FILE  "	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>           \n";
+  print DESIGN_FILE  "          <ipxact:physicalPort><ipxact:name>${pin_name}_pad_oe</ipxact:name>  \n";         
+  print DESIGN_FILE  "   <ipxact:wire>         \n"; 
+  print DESIGN_FILE  "   <ipxact:vector><ipxact:left>$Pin_max{$pin_name}</ipxact:left><ipxact:right>$Pin_min{$pin_name}</ipxact:right></ipxact:vector>\n"; 
+  print DESIGN_FILE  "   </ipxact:wire>         \n"; 
+  print DESIGN_FILE  "         </ipxact:physicalPort> </ipxact:portMap>                                                              \n";
+  }
+
+
+
+
+
+
+
   print DESIGN_FILE  "    </ipxact:portMaps>                                                                   \n";
   print DESIGN_FILE  "  </ipxact:activeInterface>                                                 \n";
 
@@ -549,9 +597,27 @@ if($Pin_type{$pin_name} eq "vector")
   {
   print DESIGN_FILE  "          <ipxact:portMap>                                                                     \n";
   print DESIGN_FILE  "	  <ipxact:logicalPort><ipxact:name>${pin_name}_pad_oe</ipxact:name></ipxact:logicalPort>                  \n";
-  print DESIGN_FILE  "          <ipxact:physicalPort></ipxact:physicalPort><ipxact:name>${pin_name}_pad_oe</ipxact:name>  \n";         
-  print DESIGN_FILE  "          </ipxact:portMap>                                                                         \n";
+  print DESIGN_FILE  "          <ipxact:physicalPort><ipxact:name>${pin_name}_pad_oe</ipxact:name>  \n";         
+  print DESIGN_FILE  "         </ipxact:physicalPort>  </ipxact:portMap>                                                                         \n";
   }
+
+
+
+  if ($Has_oe{$pin_name} == 2)
+  {
+  print DESIGN_FILE  "          <ipxact:portMap>                                                                     \n";
+  print DESIGN_FILE  "	  <ipxact:logicalPort><ipxact:name>${pin_name}_pad_oe</ipxact:name></ipxact:logicalPort>                  \n";
+  print DESIGN_FILE  "          <ipxact:physicalPort><ipxact:name>${pin_name}_pad_oe</ipxact:name>  \n";         
+  print DESIGN_FILE  "   <ipxact:wire>         \n"; 
+  print DESIGN_FILE  "   <ipxact:vector><ipxact:left>$Pin_max{$pin_name}</ipxact:left><ipxact:right>$Pin_min{$pin_name}</ipxact:right></ipxact:vector>\n"; 
+  print DESIGN_FILE  "   </ipxact:wire>         \n"; 
+print DESIGN_FILE  "         </ipxact:physicalPort>  </ipxact:portMap>                                                                         \n";
+}
+
+
+
+
+
   print DESIGN_FILE  "    </ipxact:portMaps>                                                                               \n";
   print DESIGN_FILE  "  </ipxact:activeInterface>                                                 \n";
   print DESIGN_FILE  "  </ipxact:interconnection>                                                                         \n\n";
@@ -576,7 +642,15 @@ if($Pin_type{$pin_name} eq "vector")
   {
   my $width = $Pin_max{$pin_name} - $Pin_min{$pin_name} + 1  ; 
   print DESIGN_FILE  " <ipxact:configurableElementValues>      \n"; 
-  print DESIGN_FILE  " <ipxact:configurableElementValue referenceId=\"WIDTH\">${width}</ipxact:configurableElementValue>      \n"; 
+  print DESIGN_FILE  " <ipxact:configurableElementValue referenceId=\"WIDTH\">${width}</ipxact:configurableElementValue>      \n";
+
+  if($Has_oe{$pin_name} == 2)
+    {
+  print DESIGN_FILE  " <ipxact:configurableElementValue referenceId=\"OE_WIDTH\">${width}</ipxact:configurableElementValue>      \n";
+    }
+
+
+
   print DESIGN_FILE  " </ipxact:configurableElementValues>      \n"; 
   }  
 
@@ -652,13 +726,31 @@ if($Pin_type{$pin_name} eq "vector")
   }
   print COMP_FILE  "      </ipxact:physicalPort>    </ipxact:portMap>                                                                             \n";
   }
- if($Has_oe{$pin_name})
+ if($Has_oe{$pin_name} == 1)
   {
   print COMP_FILE  "          <ipxact:portMap>                                                                              \n";
   print COMP_FILE  "	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       \n";
-  print COMP_FILE  "          <ipxact:physicalPort><ipxact:name>${pin_name}_pad_oe</ipxact:name></ipxact:physicalPort>     \n";         
-  print COMP_FILE  "          </ipxact:portMap>                                                                             \n";
+  print COMP_FILE  "          <ipxact:physicalPort><ipxact:name>${pin_name}_pad_oe</ipxact:name>     \n";         
+  print COMP_FILE  "          </ipxact:physicalPort></ipxact:portMap>                                                                             \n";
   }
+
+
+ if($Has_oe{$pin_name} == 2)
+  {
+  print COMP_FILE  "          <ipxact:portMap>                                                                              \n";
+  print COMP_FILE  "	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       \n";
+  print COMP_FILE  "          <ipxact:physicalPort><ipxact:name>${pin_name}_pad_oe</ipxact:name>     \n";         
+  print COMP_FILE  "   <ipxact:wire>         \n"; 
+  print COMP_FILE  "   <ipxact:vectors><ipxact:vector><ipxact:left>$Pin_max{$pin_name}</ipxact:left><ipxact:right>$Pin_min{$pin_name}</ipxact:right></ipxact:vector></ipxact:vectors>         \n"; 
+  print COMP_FILE  "   </ipxact:wire>         \n"; 
+
+  print COMP_FILE  "          </ipxact:physicalPort></ipxact:portMap>                                                                             \n";
+  }
+
+
+
+
+
   print COMP_FILE  "    </ipxact:portMaps>                                                                                  \n";
   print COMP_FILE  "  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              \n";
   print COMP_FILE  "  <ipxact:master/>                                                                                      \n";
@@ -715,13 +807,28 @@ if($Has_out{$pin_name})
   }
 
 
-if($Has_oe{$pin_name})
+if($Has_oe{$pin_name} == 1)
   {
   print COMP_FILE  " <ipxact:port>  <ipxact:name>${pin_name}_pad_oe</ipxact:name>                             \n";
   print COMP_FILE  " <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  \n";
-  print COMP_FILE  "  <ipxact:direction>out</ipxact:direction></ipxact:wire>                                                     \n";
-  print COMP_FILE  "  </ipxact:port>                                                                                \n\n";
+  print COMP_FILE  "  <ipxact:direction>out</ipxact:direction>                                                    \n";
+  print COMP_FILE  "  </ipxact:wire> </ipxact:port>                                                                                \n\n";
   }
+
+
+if($Has_oe{$pin_name} == 2)
+  {
+  print COMP_FILE  " <ipxact:port>  <ipxact:name>${pin_name}_pad_oe</ipxact:name>                             \n";
+  print COMP_FILE  " <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  \n";
+  print COMP_FILE  "  <ipxact:direction>out</ipxact:direction>                                                     \n";
+  print COMP_FILE  "   <ipxact:vectors><ipxact:vector><ipxact:left>$Pin_max{$pin_name}</ipxact:left><ipxact:right>$Pin_min{$pin_name}</ipxact:right></ipxact:vector></ipxact:vectors>         \n"; 
+
+print COMP_FILE  "  </ipxact:wire> </ipxact:port>                                                                                \n\n";
+  }
+
+
+
+
 }  
 
 
@@ -736,7 +843,7 @@ close COMP_FILE;
 # Create Core design file
 #
 
-$outfile = "${xml_file}/${component}_${core}.design.xml";
+$outfile = "${xml_file}/${component}_padring_dut.design.xml";
 
 my $cmd = "cp ${home}/tools/padring/design_boilerplate ${outfile}\n";
 
@@ -747,7 +854,48 @@ open DESIGN_FILE,">>$outfile" or die "unable to open $outfile";
 print DESIGN_FILE  "<ipxact:vendor>${vendor}</ipxact:vendor> \n";
 print DESIGN_FILE  "<ipxact:library>${library}</ipxact:library> \n";
 print DESIGN_FILE  "<ipxact:name>${component}</ipxact:name> \n";
-print DESIGN_FILE  "<ipxact:version>${core}.design</ipxact:version> \n";
+print DESIGN_FILE  "<ipxact:version>padring_dut.design</ipxact:version> \n";
+
+print DESIGN_FILE  "<ipxact:componentInstances> \n";
+print DESIGN_FILE  "<ipxact:componentInstance> \n";
+print DESIGN_FILE  "<ipxact:instanceName>dut<\/ipxact:instanceName> \n";
+print DESIGN_FILE  "<ipxact:componentRef vendor=\"${vendor}\" library=\"${library}\" name=\"${component}\" version=\"padring\" \/> \n";
+print DESIGN_FILE  "<ipxact:configurableElementValues> \n";
+print DESIGN_FILE  "<\/ipxact:configurableElementValues> \n";
+print DESIGN_FILE  "<\/ipxact:componentInstance> \n";
+print DESIGN_FILE  "<\/ipxact:componentInstances> \n";
+
+
+
+
+print DESIGN_FILE  "\n <ipxact:adHocConnections> \n";
+foreach $pin_name (@names)
+  {
+  $PIN_name   =  $Pad_name{$pin_name};
+  $pin_min    =  $Pin_min{$pin_name};
+  $pin_max    =  $Pin_max{$pin_name};
+
+  print DESIGN_FILE  " <ipxact:adHocConnection>                                                              \n";
+  print DESIGN_FILE  " <ipxact:name>${PIN_name}</ipxact:name>                                                \n";
+if($Pin_type{$pin_name} eq "vector")
+  {
+  print DESIGN_FILE  " <ipxact:externalPortReference  portRef=\"${PIN_name}\"   left=\"${pin_max}\" right=\"${pin_min}\" /> \n";     
+  }
+else
+  {
+  print DESIGN_FILE  " <ipxact:externalPortReference  portRef=\"${PIN_name}\"/>        \n";     
+  }
+
+
+
+print DESIGN_FILE  " <ipxact:internalPortReference  componentRef=\"dut\" portRef=\"${PIN_name}\"/>        \n";     
+  print DESIGN_FILE  " </ipxact:adHocConnection>                                                             \n";
+
+  }
+
+
+print DESIGN_FILE  "\n </ipxact:adHocConnections> \n";
+
 
 print DESIGN_FILE  "\n </ipxact:design> \n ";
 
@@ -764,14 +912,15 @@ open ARA_FILE,">$outfile" or die "unable to open $outfile";
 foreach $pad (@pad_list)
  {
  ( ${pin_name},${pin_type},${pin_bit},${pin_dir},${pin_reset},${pin_ucf}) = split( /::/ , $pad);
- $pin_name = uc $pin_name;
+
+  $PIN_name = $Pad_name{$pin_name};
 if (${pin_type} eq "vector")
    {
-   print ARA_FILE  "set_io ${pin_name}[${pin_bit}]  ${pin_ucf}    \n";
+   print ARA_FILE  "set_io ${PIN_name}[${pin_bit}]  ${pin_ucf}    \n";
    }
  else
    {
-   print ARA_FILE  "set_io ${pin_name} ${pin_ucf}    \n";
+   print ARA_FILE  "set_io ${PIN_name} ${pin_ucf}    \n";
    }
 }
 
@@ -779,7 +928,7 @@ close ARA_FILE;
 
 
 
-$outfile ="${home}${component_repo}/${vendor}/${library}${lib_comp_sep}${component}/${pads_csv_path}pads.ise";
+$outfile ="${home}${component_repo}/${vendor}/${library}${lib_comp_sep}${component}/${pads_csv_path}padring.ucf";
 
 print "creating  $outfile  \n";
 
@@ -789,14 +938,14 @@ foreach $pad (@pad_list) {
 
 
  ( ${pin_name},${pin_type},${pin_bit},${pin_dir},${pin_reset},${pin_ucf}) = split( /::/ , $pad);
- $pin_name = uc $pin_name;
+ $PIN_name = $Pad_name{$pin_name};
 if (${pin_type} eq "vector")
    {
-   print ISE_FILE  "NET  \"${pin_name}<${pin_bit}>\"  lOC=\"${pin_ucf}\"; \n";
+   print ISE_FILE  "NET  \"${PIN_name}<${pin_bit}>\"  lOC=\"${pin_ucf}\"; \n";
    }
  else
    {
-   print ISE_FILE  "NET  \"${pin_name}\"  LOC=\"${pin_ucf}\";\n";
+   print ISE_FILE  "NET  \"${PIN_name}\"  LOC=\"${pin_ucf}\";\n";
    }
 
 

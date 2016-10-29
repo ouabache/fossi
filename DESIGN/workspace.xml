@@ -14,7 +14,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <socgen:number_of_cpus>10</socgen:number_of_cpus>
 
 <socgen:build_dir>work</socgen:build_dir>
-<socgen:child_dir>children</socgen:child_dir>
+<socgen:child_dir>work</socgen:child_dir>
 <socgen:code_dir>code</socgen:code_dir>
 <socgen:data_dir>dbs</socgen:data_dir>
 <socgen:yp_dir>yp</socgen:yp_dir>

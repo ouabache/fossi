@@ -89,11 +89,16 @@ my $sim_variant       = $ARGV[4];
 
 chdir  "./${prefix}/${vendor}__${library}${sim_library_path}/icarus/${sim_name}";
 
-$cmd ="make sim \n";
+$cmd= "iverilog -f ../../testbenches/filelists/${sim_variant}.sim -D VCD  2> ./${sim_name}_elab.log  | tee >> ./${sim_name}_elab.log \n";
 if (system($cmd)) {}
-#$cmd ="./a.out 2>    ./${sim_name}_sim.log     | tee >> ./${sim_name}_sim.log  \n";
-print "  SIM Icarus     $sim_name        $sim_configuration   $sim_variant  \n "; 
+
+
+
+#$cmd ="make sim \n";
 #if (system($cmd)) {}
+$cmd ="./a.out 2>    ./${sim_name}_sim.log     | tee >> ./${sim_name}_sim.log  \n";
+print "  SIM Icarus     $sim_name        $sim_configuration   $sim_variant  \n "; 
+if (system($cmd)) {}
 $cmd ="grep PASSED  ./${sim_name}_sim.log \n";
 if (system($cmd)) {}
 $cmd ="rm a.out \n";

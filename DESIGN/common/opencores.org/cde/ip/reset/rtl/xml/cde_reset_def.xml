@@ -12,7 +12,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>cde</ipxact:library>
 <ipxact:name>reset</ipxact:name>
-<ipxact:version>def</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>def</ipxact:version>    
 
 
 
@@ -79,10 +79,30 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:model>
 
 		<ipxact:instantiations>
-		<ipxact:designInstantiation>
+
+
+
+	        <ipxact:designInstantiation>
 		<ipxact:name>Hierarchical</ipxact:name>
 		<ipxact:designRef vendor="opencores.org" library="cde" name="reset" version="def.design"/>
 		</ipxact:designInstantiation>
+
+
+			<ipxact:componentInstantiation>
+				<ipxact:name>verilog</ipxact:name>
+				<ipxact:language>verilog</ipxact:language>
+				<ipxact:moduleName>cde_reset_def</ipxact:moduleName>
+				<ipxact:moduleParameters>
+					<ipxact:moduleParameter parameterId="WIDTH" usageCount="1" usageType="nontyped">
+						<ipxact:name>WIDTH</ipxact:name>
+						<ipxact:value>1</ipxact:value>
+					</ipxact:moduleParameter>
+				</ipxact:moduleParameters>
+				<ipxact:fileSetRef>
+					<ipxact:localName>fs-sim</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		
 		</ipxact:instantiations>
 
 
@@ -91,6 +111,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   
        <ipxact:views>
 
+
+
+	<ipxact:view>
+	<ipxact:name>rtl</ipxact:name>
+	<ipxact:envIdentifier>verilog:Kactus2:</ipxact:envIdentifier>
+	<ipxact:componentInstantiationRef>verilog</ipxact:componentInstantiationRef>
+	</ipxact:view>
+
+	 
               <ipxact:view>
               <ipxact:name>Hierarchical</ipxact:name>
 

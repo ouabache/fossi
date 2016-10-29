@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:kactus2="http://kactus2.cs.tut.fi"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+                    http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+
+  
+<ipxact:vendor>digilentinc.com</ipxact:vendor> 
+<ipxact:library>nexys2</ipxact:library> 
+<ipxact:name>iceskate</ipxact:name> 
+<ipxact:version>jtag.design</ipxact:version> 
+
+
+ <ipxact:adHocConnections> 
+
+ <ipxact:adHocConnection>                                                              
+ <ipxact:name>tclk_pad_in</ipxact:name>                                                
+ <ipxact:externalPortReference  portRef="tclk_pad_in"/>        
+ <ipxact:internalPortReference  componentRef="core" portRef="tclk_pad_in"/>        
+ </ipxact:adHocConnection>
+
+ <ipxact:adHocConnection>                                                              
+ <ipxact:name>tms_pad_in</ipxact:name>                                                
+ <ipxact:externalPortReference  portRef="tms_pad_in"/>        
+ <ipxact:internalPortReference  componentRef="core" portRef="tms_pad_in"/>        
+ </ipxact:adHocConnection>
+ 
+ <ipxact:adHocConnection>                                                              
+ <ipxact:name>tdi_pad_in</ipxact:name>                                                
+ <ipxact:externalPortReference  portRef="tdi_pad_in"/>        
+ <ipxact:internalPortReference  componentRef="core" portRef="tdi_pad_in"/>        
+ </ipxact:adHocConnection>
+
+
+  <ipxact:adHocConnection>                                                              
+ <ipxact:name>trst_n_pad_in</ipxact:name>                                                
+ <ipxact:externalPortReference  portRef="trst_n_pad_in"/>        
+ <ipxact:internalPortReference  componentRef="core" portRef="trst_n_pad_in"/>        
+ </ipxact:adHocConnection>
+
+
+ <ipxact:adHocConnection>                                                              
+ <ipxact:name>tdo_pad_out</ipxact:name>                                                
+ <ipxact:externalPortReference  portRef="tdo_pad_out"/>        
+ <ipxact:internalPortReference  componentRef="core" portRef="tdo_pad_out"/>        
+ </ipxact:adHocConnection>
+ 
+ 
+ </ipxact:adHocConnections> 
+
+ </ipxact:design> 
+ 

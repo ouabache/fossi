@@ -169,7 +169,7 @@ foreach my $vendor (@vendors)
                  my($sim_configuration)  = $i_name ->findnodes('../socgen:configuration/text()')->to_literal ;
                  my($sim_variant)        = $i_name ->findnodes('../socgen:variant/text()')->to_literal ;
                  print "  lint     $sim_name        $sim_configuration   $sim_variant   "; 
-                 $cmd ="cd .${prefix}/${vendor}__${library}${sim_library_path}/rtl_check/${sim_name};make lint";
+                 $cmd ="./tools/simulation/run_lint  $vendor   $library $sim_library_path $sim_name     $sim_variant \n";
                  push @cmds,$cmd;
                  }
 

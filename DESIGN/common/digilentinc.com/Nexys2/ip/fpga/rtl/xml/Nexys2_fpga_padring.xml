@@ -36,7 +36,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>digilentinc.com</ipxact:vendor>
 <ipxact:library>Nexys2</ipxact:library>
 <ipxact:name>fpga</ipxact:name>
-<ipxact:version>padring</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>padring</ipxact:version>    
 
 <ipxact:componentGenerators>
 

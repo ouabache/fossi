@@ -12,7 +12,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>cde</ipxact:library>
 <ipxact:name>jtag</ipxact:name>
-<ipxact:version>rpc_in_reg</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>rpc_in_reg</ipxact:version>    
 
 
 
@@ -118,10 +118,42 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:model>    
-       <ipxact:views>
 
 
-              <ipxact:view>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>verilog</ipxact:name>
+				<ipxact:language>verilog</ipxact:language>
+				<ipxact:moduleName>cde_jtag_rpc_in_reg</ipxact:moduleName>
+				<ipxact:moduleParameters>
+					<ipxact:moduleParameter parameterId="BITS" usageCount="1" usageType="nontyped">
+						<ipxact:name>BITS</ipxact:name>
+						<ipxact:value>16</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter parameterId="RESET_VALUE" usageCount="2" usageType="nontyped">
+						<ipxact:name>RESET_VALUE</ipxact:name>
+						<ipxact:value>16'h0000</ipxact:value>
+					</ipxact:moduleParameter>
+				</ipxact:moduleParameters>
+				<ipxact:fileSetRef>
+					<ipxact:localName>fs-sim</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+
+
+
+  <ipxact:views>
+
+
+    <ipxact:view>
+
+		<ipxact:view>
+				<ipxact:name>rtl</ipxact:name>
+				<ipxact:envIdentifier>verilog:Kactus2:</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>verilog</ipxact:componentInstantiationRef>
+			</ipxact:view>
+      
               <ipxact:name>verilog</ipxact:name>              
               <ipxact:vendorExtensions>
               <ipxact:componentRef ipxact:vendor="opencores.org" 
@@ -184,6 +216,87 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
       </ipxact:views>
 
+
+
+
+
+
+
+
+<ipxact:modelParameters>
+<ipxact:modelParameter><ipxact:name>BITS</ipxact:name><ipxact:value>16</ipxact:value></ipxact:modelParameter>
+<ipxact:modelParameter><ipxact:name>RESET_VALUE</ipxact:name><ipxact:value>'h0</ipxact:value></ipxact:modelParameter>
+</ipxact:modelParameters>
+
+<ipxact:ports>
+
+
+
+
+
+<ipxact:port><ipxact:name>clk</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>reset</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+
+
+
+<ipxact:port><ipxact:name>capture_value</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction>
+<ipxact:vectors><ipxact:vector><ipxact:left>BITS-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
+</ipxact:port>
+
+
+
+
+<ipxact:port><ipxact:name>capture_dr</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>shift_dr</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>tdi</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>tdo</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+<ipxact:port><ipxact:name>select</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+</ipxact:ports>
+
+</ipxact:model>    
 
 
 
@@ -274,87 +387,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 </ipxact:fileSets>
-
-
-
-
-
-<ipxact:modelParameters>
-<ipxact:modelParameter><ipxact:name>BITS</ipxact:name><ipxact:value>16</ipxact:value></ipxact:modelParameter>
-<ipxact:modelParameter><ipxact:name>RESET_VALUE</ipxact:name><ipxact:value>'h0</ipxact:value></ipxact:modelParameter>
-</ipxact:modelParameters>
-
-<ipxact:ports>
-
-
-
-
-
-<ipxact:port><ipxact:name>clk</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-<ipxact:port><ipxact:name>reset</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-
-
-
-
-
-<ipxact:port><ipxact:name>capture_value</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>in</ipxact:direction>
-<ipxact:vectors><ipxact:vector><ipxact:left>BITS-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
-</ipxact:port>
-
-
-
-
-<ipxact:port><ipxact:name>capture_dr</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-<ipxact:port><ipxact:name>shift_dr</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-<ipxact:port><ipxact:name>tdi</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-<ipxact:port><ipxact:name>tdo</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>out</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-
-
-<ipxact:port><ipxact:name>select</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-
-
-</ipxact:ports>
-
-</ipxact:model>    
-
-
 
 
 

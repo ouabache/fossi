@@ -1,2 +1,0 @@
-include ../../../bin/Makefile.root
-

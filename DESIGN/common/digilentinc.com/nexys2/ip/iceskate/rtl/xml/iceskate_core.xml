@@ -1,0 +1,2093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:kactus2="http://kactus2.cs.tut.fi"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+                    http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+
+  
+<ipxact:vendor>digilentinc.com</ipxact:vendor> 
+<ipxact:library>nexys2</ipxact:library> 
+<ipxact:name>iceskate</ipxact:name> 
+<ipxact:version>CORE</ipxact:version> 
+
+ <ipxact:busInterfaces> 
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>a_clk_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>a_clk_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>an_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>an_pad_out</ipxact:name>   
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>3</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>b_clk_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>b_clk_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>btn_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>btn_pad_in</ipxact:name>      
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>3</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>cts_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>cts_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>dp_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>dp_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>eppastb_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>eppastb_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>eppdb_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>eppdb_pad_in</ipxact:name>      
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>eppdb_pad_out</ipxact:name>   
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>eppdb_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>eppdstb_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>eppdstb_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>eppwait_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>eppwait_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>flashcs_n_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>flashcs_n_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>flashrp_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>flashrp_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>flashststs_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>flashststs_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ja_1_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_1_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_1_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_1_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ja_10_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_10_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_10_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_10_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ja_2_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_2_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_2_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_2_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ja_3_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_3_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_3_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_3_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ja_4_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_4_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_4_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_4_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ja_7_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_7_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_7_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_7_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ja_8_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_8_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_8_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_8_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ja_9_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_9_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_9_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ja_9_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jb_1_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_1_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_1_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_1_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jb_10_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_10_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_10_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_10_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jb_2_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_2_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_2_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_2_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jb_3_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_3_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_3_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_3_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jb_4_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_4_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_4_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_4_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jb_7_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_7_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_7_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_7_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jb_8_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_8_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_8_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_8_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jb_9_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_9_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_9_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jb_9_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jc_1_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_1_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_1_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_1_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jc_10_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_10_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_10_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_10_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jc_2_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_2_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_2_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_2_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jc_3_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_3_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_3_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_3_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jc_4_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_4_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_4_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_4_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jc_7_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_7_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_7_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_7_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jc_8_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_8_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_8_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_8_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>jc_9_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_9_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_9_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>jc_9_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>led_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>led_pad_out</ipxact:name>   
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>memadr_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>memadr_pad_out</ipxact:name>   
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>23</ipxact:left><ipxact:right>1</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>memdb_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>memdb_pad_in</ipxact:name>      
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>memdb_pad_out</ipxact:name>   
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>memdb_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>memoe_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>memoe_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>memwr_n_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>memwr_n_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>pio_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>pio_pad_in</ipxact:name>      
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>39</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>pio_pad_out</ipxact:name>   
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>39</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>pio_pad_oe</ipxact:name>     
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>39</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ps2_clk_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ps2_clk_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ps2_clk_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ps2_clk_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ps2_data_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ps2_data_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ps2_data_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ps2_data_pad_oe</ipxact:name>     
+          </ipxact:physicalPort></ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ramadv_n_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ramadv_n_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ramclk_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ramclk_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ramcre_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ramcre_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ramcs_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ramcs_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ramlb_n_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ramlb_n_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ramub_n_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ramub_n_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>ramwait_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>ramwait_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>rs_rx_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>rs_rx_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>rs_tx_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>rs_tx_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>rts_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>rts_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>rxd_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>rxd_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>seg_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>seg_pad_out</ipxact:name>   
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>6</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>sw_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>sw_pad_in</ipxact:name>      
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>txd_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>txd_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>usbadr_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>usbadr_pad_in</ipxact:name>      
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>usbclk_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>usbclk_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>usbdir_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>usbdir_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>usbflag_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>usbflag_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>usbmode_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>usbmode_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>usboe_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>usboe_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>usbpktend_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>usbpktend_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>usbrdy_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>usbrdy_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>usbwr_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>usbwr_pad_in</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>vga_blue_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>vga_blue_pad_out</ipxact:name>   
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>vga_green_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>vga_green_pad_out</ipxact:name>   
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>2</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>vga_hsync_n_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>vga_hsync_n_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>vga_red_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>vga_red_pad_out</ipxact:name>   
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>2</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+ <ipxact:busInterface>                                                                                  
+ <ipxact:name>vga_vsync_n_pad</ipxact:name>                                                             
+ <ipxact:busType vendor="opencores.org" library="Busdefs" name="pad" version="def"/>            
+ <ipxact:abstractionTypes><ipxact:abstractionType>                                                      
+  <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="rtl"/>  
+    <ipxact:portMaps>                                                                                   
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>vga_vsync_n_pad_out</ipxact:name>   
+      </ipxact:physicalPort>    </ipxact:portMap>                                                                             
+    </ipxact:portMaps>                                                                                  
+  </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
+  <ipxact:master/>                                                                                      
+  </ipxact:busInterface>                                                                                
+
+
+ </ipxact:busInterfaces> 
+ 
+ <ipxact:model> 
+  <ipxact:instantiations> 
+   <ipxact:designInstantiation> 
+     <ipxact:name>Core</ipxact:name> 
+    <ipxact:designRef vendor="digilentinc.com" library="nexys2" name="iceskate" version="core.design"/> 
+   </ipxact:designInstantiation> 
+  </ipxact:instantiations> 
+ 
+  <ipxact:views> 
+    <ipxact:view> 
+      <ipxact:name>Core</ipxact:name> 
+      <ipxact:designInstantiationRef>Core</ipxact:designInstantiationRef> 
+    </ipxact:view>   
+  </ipxact:views> 
+
+ <ipxact:ports> 
+ <ipxact:port>  <ipxact:name>a_clk_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>an_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+   <ipxact:vectors><ipxact:vector><ipxact:left>3</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>b_clk_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>btn_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+   <ipxact:vectors><ipxact:vector><ipxact:left>3</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>cts_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>dp_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>eppastb_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>eppdb_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+   <ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>eppdb_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+   <ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>eppdb_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>eppdstb_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>eppwait_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>flashcs_n_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>flashrp_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>flashststs_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_1_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_1_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_1_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_10_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_10_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_10_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_2_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_2_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_2_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_3_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_3_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_3_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_4_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_4_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_4_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_7_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_7_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_7_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_8_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_8_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_8_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_9_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_9_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ja_9_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_1_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_1_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_1_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_10_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_10_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_10_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_2_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_2_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_2_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_3_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_3_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_3_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_4_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_4_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_4_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_7_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_7_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_7_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_8_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_8_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_8_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_9_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_9_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jb_9_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_1_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_1_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_1_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_10_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_10_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_10_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_2_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_2_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_2_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_3_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_3_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_3_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_4_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_4_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_4_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_7_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_7_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_7_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_8_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_8_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_8_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_9_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_9_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>jc_9_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>led_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+   <ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>memadr_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+   <ipxact:vectors><ipxact:vector><ipxact:left>23</ipxact:left><ipxact:right>1</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>memdb_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+   <ipxact:vectors><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>memdb_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+   <ipxact:vectors><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>memdb_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>memoe_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>memwr_n_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>pio_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+   <ipxact:vectors><ipxact:vector><ipxact:left>39</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>pio_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+   <ipxact:vectors><ipxact:vector><ipxact:left>39</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>pio_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+   <ipxact:vectors><ipxact:vector><ipxact:left>39</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ps2_clk_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ps2_clk_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ps2_clk_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ps2_data_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ps2_data_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ps2_data_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire> </ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ramadv_n_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ramclk_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ramcre_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ramcs_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ramlb_n_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ramub_n_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>ramwait_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>rs_rx_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>rs_tx_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>rts_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>rxd_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>seg_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+   <ipxact:vectors><ipxact:vector><ipxact:left>6</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>sw_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+   <ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>txd_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>usbadr_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+   <ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>usbclk_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>usbdir_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>usbflag_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>usbmode_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>usboe_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>usbpktend_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>usbrdy_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>usbwr_pad_in</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>in</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>vga_blue_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+   <ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>vga_green_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+   <ipxact:vectors><ipxact:vector><ipxact:left>2</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>vga_hsync_n_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>vga_red_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+   <ipxact:vectors><ipxact:vector><ipxact:left>2</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+  </ipxact:wire></ipxact:port>                                                                                
+
+ <ipxact:port>  <ipxact:name>vga_vsync_n_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                     
+  </ipxact:wire></ipxact:port>                                                                                
+
+
+ </ipxact:ports> 
+ 
+ </ipxact:model> 
+ 
+ </ipxact:component> 
+ 

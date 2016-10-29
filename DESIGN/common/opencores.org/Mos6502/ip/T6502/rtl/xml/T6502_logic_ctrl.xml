@@ -37,7 +37,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>Mos6502</ipxact:library>
 <ipxact:name>T6502</ipxact:name>
-<ipxact:version>logic_ctrl</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>logic_ctrl</ipxact:version>    
 
 
 <ipxact:model>

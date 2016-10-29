@@ -37,7 +37,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>Testbench</ipxact:library>
 <ipxact:name>mt45w8mw12</ipxact:name>
-<ipxact:version>def</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>def</ipxact:version>    
 
 
 
@@ -83,10 +83,46 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-<ipxact:model>    
+<ipxact:model>
+
+
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>verilog</ipxact:name>
+				<ipxact:language>verilog</ipxact:language>
+				<ipxact:moduleName>mt45w8mw12_def</ipxact:moduleName>
+				<ipxact:moduleParameters>
+					<ipxact:moduleParameter parameterId="ADDR_BITS" usageCount="1" usageType="nontyped">
+						<ipxact:name>ADDR_BITS</ipxact:name>
+						<ipxact:value>23</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter parameterId="DQ_BITS" usageCount="2" usageType="nontyped">
+						<ipxact:name>DQ_BITS</ipxact:name>
+						<ipxact:value>16</ipxact:value>
+					</ipxact:moduleParameter>
+				</ipxact:moduleParameters>
+				<ipxact:fileSetRef>
+					<ipxact:localName>fs-sim</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+
+
+
+
+
+  
        <ipxact:views>
 
 
+
+			<ipxact:view>
+				<ipxact:name>rtl</ipxact:name>
+				<ipxact:envIdentifier>verilog:Kactus2:</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>verilog</ipxact:componentInstantiationRef>
+			</ipxact:view>
+
+			
               <ipxact:view>
               <ipxact:name>verilog</ipxact:name>              
               <ipxact:vendorExtensions>

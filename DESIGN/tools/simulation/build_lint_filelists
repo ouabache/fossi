@@ -326,20 +326,9 @@ foreach my $comp ($spirit_component_file->findnodes('//ipxact:component'))
       $path  = "${home}${work_site}/${vendor}__${library}${sim_library_path}/rtl_check/${simulation}";
       mkdir $path,0755   unless (-e $path);
 
-      my $outfile ="${home}${work_site}/${vendor}__${library}${sim_library_path}/rtl_check/${simulation}/Makefile";
-      open  MAKSIMFILE,">$outfile" or die "unable to open $outfile";
-
-
 
       $outfile ="${home}${work_site}/${vendor}__${library}${sim_library_path}/rtl_check/${simulation}/TestBench";
       open SIM_PARM_FILE,">$outfile" or die "unable to open $outfile";
-
-
-      print MAKSIMFILE  "include ${home}/tools/bin/Makefile.root\n";
-      print MAKSIMFILE  "comp=${variant}\n";
-      print MAKSIMFILE  "test=${simulation}\n";
-
-
 
       my %local_parameters =  %default_parameters;
       my @local_order      =  @parameter_order;

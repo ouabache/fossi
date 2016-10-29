@@ -337,22 +337,9 @@ foreach  my   $i_name ($socgen_file->findnodes("//socgen:testbench[socgen:varian
 
 
 
-      my $outfile ="${home}${work_site}/${vendor}__${library}${sim_library_path}/icarus/${simulation}/Makefile";
-      open  MAKSIMFILE,">$outfile" or die "unable to open $outfile";
-
-
       my $outfile ="${home}${work_site}/${vendor}__${library}${sim_library_path}/icarus/${simulation}/TestBench";
       open SIM_PARM_FILE,">$outfile" or die "unable to open $outfile";
          
-      print MAKSIMFILE  "include ${home}/tools/bin/Makefile.root\n";
-      print MAKSIMFILE  "comp=${variant}\n";
-      print MAKSIMFILE  "test=${simulation}\n";
-      print MAKSIMFILE  "simulator=icarus\n";
-      print MAKSIMFILE  "config=${config_n}\n";
-
-
-
-
 
       my %local_parameters =  %default_parameters;
       my @local_order      =  @parameter_order;

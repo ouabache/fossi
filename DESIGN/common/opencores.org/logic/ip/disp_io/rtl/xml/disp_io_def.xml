@@ -37,7 +37,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>logic</ipxact:library>
 <ipxact:name>disp_io</ipxact:name>
-<ipxact:version>def</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>def</ipxact:version>    
 
 
 <ipxact:busInterfaces>
@@ -55,9 +55,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     </ipxact:portMaps>
           </ipxact:abstractionType>
       </ipxact:abstractionTypes>
-
   <ipxact:slave/>
-
  </ipxact:busInterface>
 
 
@@ -72,15 +70,35 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         <ipxact:physicalPort><ipxact:name>reset</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
     </ipxact:portMaps>
-  
-        </ipxact:abstractionType>
+          </ipxact:abstractionType>
       </ipxact:abstractionTypes>
-
-
   <ipxact:slave/>
-
  </ipxact:busInterface>
 
+
+
+ 
+ <ipxact:busInterface><ipxact:name>slave_enable</ipxact:name>
+  <ipxact:busType vendor="opencores.org" library="Busdefs" name="enable" version="def"/>
+  <ipxact:abstractionTypes>
+      <ipxact:abstractionType>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="enable" version="rtl"/>
+    <ipxact:portMaps>
+      <ipxact:portMap>
+        <ipxact:logicalPort><ipxact:name>enable</ipxact:name></ipxact:logicalPort>
+        <ipxact:physicalPort><ipxact:name>enable</ipxact:name></ipxact:physicalPort>
+      </ipxact:portMap>
+    </ipxact:portMaps>
+          </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+  <ipxact:slave/>
+ </ipxact:busInterface>
+
+
+
+
+
+ 
 </ipxact:busInterfaces>
 
 
@@ -208,6 +226,24 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
  
 <ipxact:ports>
+
+<ipxact:port><ipxact:name>clk</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>reset</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>enable</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
 
 
 <ipxact:port><ipxact:name>PosD</ipxact:name>

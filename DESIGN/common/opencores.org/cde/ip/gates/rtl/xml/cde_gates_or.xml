@@ -12,7 +12,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>cde</ipxact:library>
 <ipxact:name>gates</ipxact:name>
-<ipxact:version>or</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>or</ipxact:version>    
 
 
 <ipxact:componentGenerators>

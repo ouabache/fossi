@@ -659,7 +659,8 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  </ipxact:busInterfaces> 
  
  <ipxact:model> 
-  <ipxact:instantiations> 
+
+<ipxact:instantiations> 
    <ipxact:designInstantiation> 
      <ipxact:name>Padring</ipxact:name> 
     <ipxact:designRef vendor="lattice.com" library="fpgas" name="iceskate" version="padring.design"/> 
@@ -667,12 +668,15 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
   </ipxact:instantiations> 
  
   <ipxact:views> 
+
     <ipxact:view> 
       <ipxact:name>Padring</ipxact:name> 
       <ipxact:designInstantiationRef>Padring</ipxact:designInstantiationRef> 
     </ipxact:view>   
-  </ipxact:views> 
+ </ipxact:views> 
 
+
+  
  <ipxact:ports> 
  <ipxact:port>  <ipxact:name>CLK</ipxact:name>                                                 
  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>         

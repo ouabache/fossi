@@ -12,7 +12,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>cde</ipxact:library>
 <ipxact:name>mult</ipxact:name>
-<ipxact:version>ord_r4</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>ord_r4</ipxact:version>    
 
 
 
@@ -75,6 +75,174 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 </ipxact:componentGenerators>
+
+
+
+
+
+
+
+
+<ipxact:model>
+
+	<ipxact:instantiations>
+
+			<ipxact:componentInstantiation>
+				<ipxact:name>verilog</ipxact:name>
+				<ipxact:language>verilog</ipxact:language>
+				<ipxact:moduleName>cde_mult_ord_r4</ipxact:moduleName>
+				<ipxact:moduleParameters>
+					<ipxact:moduleParameter parameterId="WIDTH" usageCount="1" usageType="nontyped">
+						<ipxact:name>WIDTH</ipxact:name>
+						<ipxact:value>16</ipxact:value>
+					</ipxact:moduleParameter>
+				</ipxact:moduleParameters>
+				<ipxact:fileSetRef>
+					<ipxact:localName>fs-sim</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+
+
+
+  
+       <ipxact:views>
+
+
+
+	<ipxact:view>
+	<ipxact:name>rtl</ipxact:name>
+	<ipxact:envIdentifier>verilog:Kactus2:</ipxact:envIdentifier>
+	<ipxact:componentInstantiationRef>verilog</ipxact:componentInstantiationRef>
+	</ipxact:view>
+
+
+	 
+              <ipxact:view>
+              <ipxact:name>common</ipxact:name><ipxact:envIdentifier>:*common:*</ipxact:envIdentifier>
+              
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-common</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+
+              <ipxact:view>
+              <ipxact:name>sim</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
+              
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-sim</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+
+
+              <ipxact:view>
+              <ipxact:name>syn</ipxact:name><ipxact:envIdentifier>:*Synthesis:*</ipxact:envIdentifier>
+              
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-syn</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+
+              <ipxact:view>
+              <ipxact:name>doc</ipxact:name>
+              <ipxact:vendorExtensions>
+              <ipxact:componentRef ipxact:vendor="opencores.org" 
+                                   ipxact:library="Testbench" 
+                                   ipxact:name="toolflow" 
+                                   ipxact:version="documentation"/> 
+              </ipxact:vendorExtensions>
+              <ipxact:envIdentifier>:*Documentation:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              </ipxact:view>
+
+
+
+
+
+      </ipxact:views>
+
+
+<ipxact:modelParameters>
+<ipxact:modelParameter><ipxact:name>WIDTH</ipxact:name><ipxact:value>16</ipxact:value></ipxact:modelParameter>
+</ipxact:modelParameters>
+
+
+
+
+
+<ipxact:ports>
+
+<ipxact:port><ipxact:name>clk</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+<ipxact:port><ipxact:name>reset</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+
+
+<ipxact:port><ipxact:name>a_in</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction>
+<ipxact:vectors><ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>b_in</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction>
+<ipxact:vectors><ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>alu_op_mul</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>ex_freeze</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>in</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+<ipxact:port><ipxact:name>mul_prod_r</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction>
+<ipxact:vectors><ipxact:vector><ipxact:left>2*WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
+</ipxact:port>
+
+
+<ipxact:port><ipxact:name>mul_stall</ipxact:name>
+<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
+<ipxact:direction>out</ipxact:direction></ipxact:wire>
+</ipxact:port>
+
+
+
+
+</ipxact:ports>
+
+</ipxact:model>    
+
 
 
 
@@ -155,137 +323,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 </ipxact:fileSets>
-
-
-
-
-
-
-
-<ipxact:model>    
-       <ipxact:views>
-
-              <ipxact:view>
-              <ipxact:name>common</ipxact:name><ipxact:envIdentifier>:*common:*</ipxact:envIdentifier>
-              
-              <ipxact:language>Verilog</ipxact:language>
-              <ipxact:modelName></ipxact:modelName>
-                     <ipxact:fileSetRef>
-                            <ipxact:localName>fs-common</ipxact:localName>
-                     </ipxact:fileSetRef>
-              </ipxact:view>
-
-
-              <ipxact:view>
-              <ipxact:name>sim</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
-              
-              <ipxact:language>Verilog</ipxact:language>
-              <ipxact:modelName></ipxact:modelName>
-                     <ipxact:fileSetRef>
-                            <ipxact:localName>fs-sim</ipxact:localName>
-                     </ipxact:fileSetRef>
-              </ipxact:view>
-
-
-
-              <ipxact:view>
-              <ipxact:name>syn</ipxact:name><ipxact:envIdentifier>:*Synthesis:*</ipxact:envIdentifier>
-              
-              <ipxact:language>Verilog</ipxact:language>
-              <ipxact:modelName></ipxact:modelName>
-                     <ipxact:fileSetRef>
-                            <ipxact:localName>fs-syn</ipxact:localName>
-                     </ipxact:fileSetRef>
-              </ipxact:view>
-
-
-              <ipxact:view>
-              <ipxact:name>doc</ipxact:name>
-              <ipxact:vendorExtensions>
-              <ipxact:componentRef ipxact:vendor="opencores.org" 
-                                   ipxact:library="Testbench" 
-                                   ipxact:name="toolflow" 
-                                   ipxact:version="documentation"/> 
-              </ipxact:vendorExtensions>
-              <ipxact:envIdentifier>:*Documentation:*</ipxact:envIdentifier>
-              <ipxact:language>Verilog</ipxact:language>
-              </ipxact:view>
-
-
-
-
-
-      </ipxact:views>
-
-
-
-
-
-<ipxact:ports>
-
-<ipxact:port><ipxact:name>clk</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-<ipxact:port><ipxact:name>reset</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-
-
-
-
-<ipxact:port><ipxact:name>a_in</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>in</ipxact:direction>
-<ipxact:vectors><ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
-</ipxact:port>
-
-
-<ipxact:port><ipxact:name>b_in</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>in</ipxact:direction>
-<ipxact:vectors><ipxact:vector><ipxact:left>WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
-</ipxact:port>
-
-
-<ipxact:port><ipxact:name>alu_op_mul</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-<ipxact:port><ipxact:name>ex_freeze</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-
-
-<ipxact:port><ipxact:name>mul_prod_r</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>reg</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>out</ipxact:direction>
-<ipxact:vectors><ipxact:vector><ipxact:left>2*WIDTH-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
-</ipxact:port>
-
-
-<ipxact:port><ipxact:name>mul_stall</ipxact:name>
-<ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:direction>out</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-
-
-</ipxact:ports>
-
-</ipxact:model>    
-
-
 
 
 

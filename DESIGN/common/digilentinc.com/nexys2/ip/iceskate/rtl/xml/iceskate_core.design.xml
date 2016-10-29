@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+//                                                                        //
+// Author : John Eaton  Ouabache Designworks                              //
+//                                                                        //
+//   Copyright (C) 2010 Authors and OPENCORES.ORG			  //
+//  									  //
+//   This source file may be used and distributed without		  //
+//   restriction provided that this copyright statement is not		  //
+//   removed from the file and that any derivative work contains	  //
+//   the original copyright notice and the associated disclaimer.	  //
+//  									  //
+//   This source file is free software; you can redistribute it		  //
+//   and/or modify it under the terms of the GNU Lesser General		  //
+//   Public License as published by the Free Software Foundation;	  //
+//   either version 2.1 of the License, or (at your option) any		  //
+//   later version.							  //
+//  									  //
+//   This source is distributed in the hope that it will be		  //
+//   useful, but WITHOUT ANY WARRANTY; without even the implied		  //
+//   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR		  //
+//   PURPOSE. See the GNU Lesser General Public License for more	  //
+//   details.								  //
+//  									  //
+//   You should have received a copy of the GNU Lesser General		  //
+//   Public License along with this source; if not, download it		  //
+//   from http://www.opencores.org/lgpl.shtml				  //
+//  									  //
+-->
+<ipxact:design 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>digilentinc.com</ipxact:vendor>
+<ipxact:library>nexys2</ipxact:library>
+<ipxact:name>iceskate</ipxact:name>
+<ipxact:version>core.design</ipxact:version>  
+
+
+
+
+  <ipxact:adHocConnections>
+    <ipxact:adHocConnection>
+      <ipxact:name>clk</ipxact:name>
+      <ipxact:portReferences>
+      <ipxact:externalPortReference portRef="clk"/>
+      <ipxact:internalPortReference componentRef="clock_sys" portRef="div_clk_out"/>
+      <ipxact:internalPortReference componentRef="disp_io_jtag" portRef="clk"/>
+      </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+    
+    <ipxact:adHocConnection>
+     <ipxact:name>reset</ipxact:name>
+      <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="reset"/>
+      <ipxact:internalPortReference componentRef="clock_sys" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="disp_io_jtag" portRef="reset"/>
+     </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>one_usec</ipxact:name>
+           <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef="one_usec"/>
+      <ipxact:internalPortReference componentRef="clock_sys" portRef="one_usec"/>
+      <ipxact:internalPortReference componentRef="disp_io_jtag" portRef="enable"/>
+           </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>a_clk_pad_in</ipxact:name>
+           <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
+      <ipxact:internalPortReference componentRef="clock_sys" portRef="a_clk_pad_in"/>
+        </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>b_clk_pad_in</ipxact:name>
+           <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
+      <ipxact:internalPortReference componentRef="clock_sys" portRef="b_clk_pad_in"/>
+        </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>cts_pad_in</ipxact:name>
+           <ipxact:portReferences>
+      <ipxact:externalPortReference  portRef=""/>
+      <ipxact:internalPortReference componentRef="clock_sys" portRef="pwron_pad_in"/>
+        </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>tclk_pad_in</ipxact:name>
+         <ipxact:portReferences>
+         <ipxact:externalPortReference  portRef="tclk_pad_in"/>
+         <ipxact:internalPortReference componentRef="jtag_tap" portRef="tclk_pad_in"/>
+      </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>tms_pad_in</ipxact:name>
+         <ipxact:portReferences>
+         <ipxact:externalPortReference  portRef="tms_pad_in"/>
+         <ipxact:internalPortReference componentRef="jtag_tap" portRef="tms_pad_in"/>
+      </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+    
+    <ipxact:adHocConnection>
+      <ipxact:name>tdi_pad_in</ipxact:name>
+         <ipxact:portReferences>
+         <ipxact:externalPortReference  portRef="tdi_pad_in"/>
+         <ipxact:internalPortReference componentRef="jtag_tap" portRef="tdi_pad_in"/>
+      </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>trst_n_pad_in</ipxact:name>
+         <ipxact:portReferences>
+         <ipxact:externalPortReference  portRef="trst_n_pad_in"/>
+         <ipxact:internalPortReference componentRef="jtag_tap" portRef="trst_n_pad_in"/>
+      </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>tdo_pad_out</ipxact:name>
+         <ipxact:portReferences>
+         <ipxact:externalPortReference  portRef="tdo_pad_out"/>
+         <ipxact:internalPortReference componentRef="jtag_tap" portRef="tdo_pad_out"/>
+      </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+
+     <ipxact:adHocConnection>
+      <ipxact:name>PosD</ipxact:name>
+         <ipxact:portReferences>
+         <ipxact:externalPortReference  portRef="PosD"  left="15" right="0"      />
+         <ipxact:internalPortReference componentRef="disp_io_jtag" portRef="PosD"/>
+      </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+
+         <ipxact:adHocConnection>
+      <ipxact:name>PosL</ipxact:name>
+         <ipxact:portReferences>
+         <ipxact:externalPortReference  portRef="PosL"  left="7" right="0"      />
+         <ipxact:internalPortReference componentRef="disp_io_jtag" portRef="PosL"/>
+      </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+
+             <ipxact:adHocConnection>
+      <ipxact:name>PosS</ipxact:name>
+         <ipxact:portReferences>
+         <ipxact:externalPortReference  portRef="PosS"  left="7" right="0"      />
+         <ipxact:internalPortReference componentRef="disp_io_jtag" portRef="PosS"/>
+      </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+
+
+         <ipxact:adHocConnection>
+      <ipxact:name>PosB</ipxact:name>
+         <ipxact:portReferences>
+         <ipxact:externalPortReference  portRef="PosB"  left="3" right="0"      />
+         <ipxact:internalPortReference componentRef="disp_io_jtag" portRef="PosB"/>
+      </ipxact:portReferences>
+    </ipxact:adHocConnection>
+
+    
+    
+    
+
+  </ipxact:adHocConnections>
+
+
+
+
+ <ipxact:interconnections>
+
+
+
+
+  
+     <ipxact:interconnection>
+      <ipxact:name>jtag</ipxact:name>
+      <ipxact:activeInterface componentRef="jtag_tap" busRef="jtag"></ipxact:activeInterface>
+      </ipxact:interconnection>
+
+
+     <ipxact:interconnection>
+      <ipxact:name>aux_jtag</ipxact:name>
+      <ipxact:activeInterface componentRef="jtag_tap" busRef="aux_jtag"></ipxact:activeInterface>
+      <ipxact:activeInterface componentRef="disp_io_jtag" busRef="jtag"></ipxact:activeInterface>
+
+     </ipxact:interconnection>
+
+
+     <ipxact:interconnection>
+      <ipxact:name>btn_pad</ipxact:name>
+      <ipxact:activeInterface componentRef="disp_io_jtag" busRef="btn_pad">
+       <ipxact:portMaps>                                                                  
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort> 
+          <ipxact:physicalPort><ipxact:name>btn_pad_in</ipxact:name>                  
+       </ipxact:physicalPort>   </ipxact:portMap>                     
+       </ipxact:portMaps>                         
+
+      </ipxact:activeInterface>
+      <ipxact:hierInterface busRef="btn_pad"/>  
+     </ipxact:interconnection>
+
+
+      <ipxact:interconnection>
+      <ipxact:name>sw_pad</ipxact:name>
+      <ipxact:activeInterface componentRef="disp_io_jtag" busRef="sw_pad"></ipxact:activeInterface>
+      <ipxact:hierInterface busRef="sw_pad"/>  
+      </ipxact:interconnection>
+
+
+     <ipxact:interconnection>
+      <ipxact:name>an_pad</ipxact:name>
+      <ipxact:activeInterface componentRef="disp_io_jtag" busRef="an_pad"></ipxact:activeInterface>
+      <ipxact:hierInterface busRef="an_pad"/>  
+     </ipxact:interconnection>
+
+
+     <ipxact:interconnection>
+      <ipxact:name>dp_pad</ipxact:name>
+      <ipxact:activeInterface componentRef="disp_io_jtag" busRef="dp_pad"></ipxact:activeInterface>
+      <ipxact:hierInterface busRef="dp_pad"/>  
+        </ipxact:interconnection>
+
+     <ipxact:interconnection>
+      <ipxact:name>seg_pad</ipxact:name>
+      <ipxact:activeInterface componentRef="disp_io_jtag" busRef="seg_pad"></ipxact:activeInterface>
+      <ipxact:hierInterface busRef="seg_pad"/>  
+     </ipxact:interconnection>
+
+
+     <ipxact:interconnection>
+      <ipxact:name>led_pad</ipxact:name>
+      <ipxact:activeInterface componentRef="disp_io_jtag" busRef="led_pad"></ipxact:activeInterface>
+      <ipxact:hierInterface busRef="seg_pad"/>  
+     </ipxact:interconnection>
+     
+
+      
+      
+
+    </ipxact:interconnections>
+
+
+
+
+
+
+
+
+
+<ipxact:componentInstances>
+
+
+
+<ipxact:componentInstance>
+<ipxact:instanceName>clock_sys</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="cde" name="clock" version="sys" />
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue referenceId="FREQ">CLOCK_FREQ</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="PLL_MULT">CLOCK_PLL_MULT</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="PLL_DIV">CLOCK_PLL_DIV</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="PLL_SIZE">CLOCK_PLL_SIZE</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CLOCK_SRC">CLOCK_SRC</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="RESET_SENSE">RESET_SENSE</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+<ipxact:componentInstance>
+<ipxact:instanceName>jtag_tap</ipxact:instanceName> 
+<ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="tap" />
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue referenceId="CHIP_ID_VAL">CHIP_ID</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+
+<ipxact:componentInstance>
+<ipxact:instanceName>disp_io_jtag</ipxact:instanceName> 
+<ipxact:componentRef vendor="opencores.org" library="logic" name="disp_io" version="jtag" />
+<ipxact:configurableElementValues>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+
+
+</ipxact:componentInstances>
+
+
+
+
+
+</ipxact:design>
+
+
+
+   
+
+
+
+
+
+
+
+
+
+

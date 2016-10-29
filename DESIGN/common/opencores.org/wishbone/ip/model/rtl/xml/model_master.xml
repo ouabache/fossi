@@ -37,7 +37,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>wishbone</ipxact:library>
 <ipxact:name>model</ipxact:name>
-<ipxact:version>master</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>master</ipxact:version>    
 
 
 
@@ -185,12 +185,41 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:model>    
 
 
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>verilog</ipxact:name>
+				<ipxact:language>verilog</ipxact:language>
+				<ipxact:moduleName>model_master</ipxact:moduleName>
+				<ipxact:moduleParameters>
+					<ipxact:moduleParameter parameterId="awidth" usageCount="1" usageType="nontyped">
+						<ipxact:name>awidth</ipxact:name>
+						<ipxact:value>32</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter parameterId="dwidth" usageCount="2" usageType="nontyped">
+						<ipxact:name>dwidth</ipxact:name>
+						<ipxact:value>32</ipxact:value>
+					</ipxact:moduleParameter>
+				</ipxact:moduleParameters>
+				<ipxact:fileSetRef>
+					<ipxact:localName>fs-sim</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
 
+  
 
 
 
       <ipxact:views>
 
+
+	<ipxact:view>
+	<ipxact:name>rtl</ipxact:name>
+	<ipxact:envIdentifier>verilog:Kactus2:</ipxact:envIdentifier>
+	<ipxact:componentInstantiationRef>verilog</ipxact:componentInstantiationRef>
+	</ipxact:view>
+
+	
               <ipxact:view>
               <ipxact:name>verilog</ipxact:name>              
               <ipxact:vendorExtensions>

@@ -73,95 +73,38 @@ GetOptions("h","help",
 ## Help option
 ##############################################################################
 if ( $opt_h or $opt_help  ) 
-  { print "\n run_lint vendor__library";
+  { print "\n run_icarus vendor   library sim_library_path sim_name     sim_variant";
     print "\n";
     exit 1;
   }
 
-
-#/**********************************************************************/
-#/*  Process each library by finding any ip-xact file in any component */
-#/*                                                                    */
-#/*  Each ip-xact file is parsed and it's filename and the names of any*/
-#/*  modules that it uses are saved.                                   */
-#/*                                                                    */
-#/*                                                                    */
-#/**********************************************************************/
-
-
 my $home              = cwd();
-my $vendor ;
-my $library  ;
-
-
-my $prefix = yp::lib::get_workspace();
-$prefix   = "/${prefix}";
-$_               = $ARGV[0];
-
-
-
-if(/(\S+)__(\S+)/) 
-     { 
-     $vendor           = $1;
-     $library         = $2;
-     }
-
-
-
-
-
-
-
-my $parser = XML::LibXML->new();
-
-
-
-my @components   = yp::lib::find_components($vendor,$library);
-
-foreach my $component (@components) 
-   {
-   my $socgen_filename     = yp::lib::find_componentConfiguration($vendor,$library,$component);
-
-
-   if($socgen_filename)
-   {
-   my $socgen_file     = $parser->parse_file($socgen_filename);
-   my $sim_library_path ;
-   my $lib_comp_sep             = yp::lib::find_lib_comp_sep($vendor,$library,$component);
-
-   my $sim_comp_path            = $socgen_file->findnodes("//socgen:componentConfiguration/socgen:sim/socgen:comp_path/text()")->to_literal;
-
-   if ($sim_comp_path)
-      {
-      $sim_library_path            ="${lib_comp_sep}${sim_comp_path}";
-      }
-   else
-      {
-      $sim_library_path            = $socgen_file->findnodes("//socgen:componentConfiguration/socgen:sim/socgen:library_path/text()")->to_literal;
-      }
-
-   #/*********************************************************************************************/
-   #/   files for simulation                                                                     */
-   #/                                                                                            */
-   #/*********************************************************************************************/
-
-   foreach  my   $i_name ($socgen_file->findnodes("//socgen:componentConfiguration/socgen:sim/socgen:rtl_check/socgen:lint/socgen:name"))
-      {
-      my($sim_name)           = $i_name ->findnodes('./text()')->to_literal ;
-      my($sim_configuration)  = $i_name ->findnodes('../socgen:configuration/text()')->to_literal ;
-      my($sim_variant)        = $i_name ->findnodes('../socgen:variant/text()')->to_literal ;
+my $prefix            = yp::lib::get_workspace();
+my $vendor            = $ARGV[0]; 
+my $library           = $ARGV[1];
+my $sim_library_path  = $ARGV[2];
+my $sim_name          = $ARGV[3];
+my $sim_variant       = $ARGV[4];
    
-      print "  lint     $sim_name        $sim_configuration   $sim_variant   "; 
 
-      $cmd ="cd .${prefix}/${vendor}__${library}${sim_library_path}/rtl_check/${sim_name};make lint";
-      if (system($cmd)) {}
-      chdir $home;
+chdir  "./${prefix}/${vendor}__${library}${sim_library_path}/rtl_check/${sim_name}";
 
-      }
+print "  LINT     $sim_name        $sim_configuration   $sim_variant  \n "; 
+$cmd ="verilator -Wall --cc  -f  ../../testbenches/filelists/${sim_variant}.lint   --exe ../../../../../../../tools/lint/sim_main2.cpp -top-module TB -Wno-PINNOCONNECT -Wno-DECLFILENAME  -Wno-UNDRIVEN   -Wno-UNUSED  -Wno-PINMISSING  -Wno-LITENDIAN  -Wno-PINCONNECTEMPTY   2> lint.log \n";
+if (system($cmd)) {}
 
-   }
 
-}
+$cmd ="yosys  -S  -s  ../../testbenches/filelists/${sim_variant}.yosys -l yosys.log -o yosys.v\n"; 
+if (system($cmd)) {}
+
+chdir $home;
+
+
+
+
+
+
+
 
 
 

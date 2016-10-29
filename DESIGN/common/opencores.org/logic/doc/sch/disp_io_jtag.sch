@@ -62,6 +62,11 @@ refdes=jtag_capture_dr
 C 2600 5100 1 0 0 in_port.sym  
 {
 T 2600 5100 5 10 1 1 0 6 1 1 
+refdes=enable
+}
+C 2600 5500 1 0 0 in_port.sym  
+{
+T 2600 5500 5 10 1 1 0 6 1 1 
 refdes=clk
 }
 C 5500 300  1 0  0 out_port_vector.sym

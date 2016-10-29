@@ -12,7 +12,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>cde</ipxact:library>
 <ipxact:name>jtag</ipxact:name>
-<ipxact:version>tap</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>tap</ipxact:version>
+
 
 
 
@@ -32,38 +33,30 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>test_logic_reset</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort><ipxact:name>test_logic_reset_o</ipxact:name>
-        <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-        </ipxact:physicalPort>
+        <ipxact:physicalPort><ipxact:name>test_logic_reset_o</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
 
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>capture_dr</ipxact:name></ipxact:logicalPort>
-        <ipxact:physicalPort>
-        <ipxact:name>capture_dr_o</ipxact:name>
-        <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-        </ipxact:physicalPort>
+        <ipxact:physicalPort><ipxact:name>capture_dr_o</ipxact:name></ipxact:physicalPort>
       </ipxact:portMap>
 
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>shift_dr</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort>
         <ipxact:name>shift_dr_o</ipxact:name>
-        <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
         </ipxact:physicalPort>
       </ipxact:portMap>
 
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>update_dr_clk</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>update_dr_clk_o</ipxact:name>
-        <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
        </ipxact:physicalPort>
       </ipxact:portMap>
 
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>tdi</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>tdi_o</ipxact:name>
-       <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
       </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -71,7 +64,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:logicalPort><ipxact:name>tdo</ipxact:name>
       </ipxact:logicalPort>
       <ipxact:physicalPort><ipxact:name>tdo_i</ipxact:name>
-      <ipxact:wire></ipxact:wire>
       </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -79,7 +71,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:logicalPort><ipxact:name>select</ipxact:name>
       </ipxact:logicalPort>
       <ipxact:physicalPort><ipxact:name>select_o</ipxact:name>
-      <ipxact:wire></ipxact:wire>
       </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -87,7 +78,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:logicalPort><ipxact:name>shiftcapture_dr_clk</ipxact:name>
       </ipxact:logicalPort>
       <ipxact:physicalPort><ipxact:name>shiftcapture_dr_clk_o</ipxact:name>
-      <ipxact:wire></ipxact:wire>
       </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -116,7 +106,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>test_logic_reset</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>aux_test_logic_reset_o</ipxact:name>
-        <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
         </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -124,7 +113,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         <ipxact:logicalPort><ipxact:name>capture_dr</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort>
         <ipxact:name>aux_capture_dr_o</ipxact:name>
-        <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
         </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -132,21 +120,18 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         <ipxact:logicalPort><ipxact:name>shift_dr</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort>
         <ipxact:name>aux_shift_dr_o</ipxact:name>
-        <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
         </ipxact:physicalPort>
       </ipxact:portMap>
 
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>update_dr_clk</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>aux_update_dr_clk_o</ipxact:name>
-        <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
        </ipxact:physicalPort>
       </ipxact:portMap>
 
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>tdi</ipxact:name></ipxact:logicalPort>
         <ipxact:physicalPort><ipxact:name>aux_tdi_o</ipxact:name>
-       <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
       </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -154,7 +139,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:logicalPort><ipxact:name>tdo</ipxact:name>
       </ipxact:logicalPort>
       <ipxact:physicalPort><ipxact:name>aux_tdo_i</ipxact:name>
-      <ipxact:wire></ipxact:wire>
       </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -162,7 +146,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:logicalPort><ipxact:name>select</ipxact:name>
       </ipxact:logicalPort>
       <ipxact:physicalPort><ipxact:name>aux_select_o</ipxact:name>
-      <ipxact:wire></ipxact:wire>
       </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -170,7 +153,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
       <ipxact:logicalPort><ipxact:name>shiftcapture_dr_clk</ipxact:name>
       </ipxact:logicalPort>
       <ipxact:physicalPort><ipxact:name>aux_shiftcapture_dr_clk_o</ipxact:name>
-      <ipxact:wire></ipxact:wire>
       </ipxact:physicalPort>
       </ipxact:portMap>
 
@@ -457,94 +439,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-<ipxact:fileSets>
-
-
-
-   <ipxact:fileSet>
-      <ipxact:name>fs-common</ipxact:name>
-
-
-   </ipxact:fileSet>
-
-
-
-
-   <ipxact:fileSet>
-      <ipxact:name>fs-sim</ipxact:name>
-
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/copyright</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
-      </ipxact:file>
-
-
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/common/jtag_tap</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
-      </ipxact:file>
-
-      <ipxact:file>
-        <ipxact:logicalName>dest_dir</ipxact:logicalName>
-        <ipxact:name>../views/sim/</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
-      </ipxact:file>
-
-   </ipxact:fileSet>
-
-
-   <ipxact:fileSet>
-      <ipxact:name>fs-syn</ipxact:name>
-
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/SYNTHESIS</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
-      </ipxact:file>
-
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/copyright</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
-      </ipxact:file>
-
-
-
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/common/jtag_tap</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
-      </ipxact:file>
-
-
-      <ipxact:file>
-        <ipxact:logicalName>dest_dir</ipxact:logicalName>
-        <ipxact:name>../views/syn/</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
-      </ipxact:file>
-
-
-   </ipxact:fileSet>
-
-
-    <ipxact:fileSet>
-
-      <ipxact:name>fs-lint</ipxact:name>
-      <ipxact:file>
-        <ipxact:logicalName>dest_dir</ipxact:logicalName>
-        <ipxact:name>../views/syn/</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
-      </ipxact:file>
-
-    </ipxact:fileSet>
-
-
-
-
-</ipxact:fileSets>
-
 
 
 <ipxact:modelParameters>
@@ -747,6 +641,94 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+
+<ipxact:fileSets>
+
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-common</ipxact:name>
+
+
+   </ipxact:fileSet>
+
+
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-sim</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/copyright</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
+      </ipxact:file>
+
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/common/jtag_tap</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../views/sim/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+   </ipxact:fileSet>
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-syn</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/SYNTHESIS</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
+      </ipxact:file>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/copyright</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/common/jtag_tap</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../views/syn/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+
+   </ipxact:fileSet>
+
+
+    <ipxact:fileSet>
+
+      <ipxact:name>fs-lint</ipxact:name>
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../views/syn/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+    </ipxact:fileSet>
+
+
+
+
+</ipxact:fileSets>
 
 
 

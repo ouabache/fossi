@@ -12,7 +12,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>cde</ipxact:library>
 <ipxact:name>jtag</ipxact:name>
-<ipxact:version>classic_rpc_reg</ipxact:version>  <ipxact:configuration>default</ipxact:configuration>  
+<ipxact:version>classic_rpc_reg</ipxact:version>    
 
 <ipxact:busInterfaces>
  <ipxact:busInterface><ipxact:name>jtag</ipxact:name>
@@ -158,8 +158,38 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 <ipxact:model>    
-       <ipxact:views>
 
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>verilog</ipxact:name>
+				<ipxact:language>verilog</ipxact:language>
+				<ipxact:moduleName>cde_jtag_classic_rpc_reg</ipxact:moduleName>
+				<ipxact:moduleParameters>
+					<ipxact:moduleParameter parameterId="BITS" usageCount="1" usageType="nontyped">
+						<ipxact:name>BITS</ipxact:name>
+						<ipxact:value>16</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter parameterId="RESET_VALUE" usageCount="2" usageType="nontyped">
+						<ipxact:name>RESET_VALUE</ipxact:name>
+						<ipxact:value>16'h0000</ipxact:value>
+					</ipxact:moduleParameter>
+				</ipxact:moduleParameters>
+				<ipxact:fileSetRef>
+					<ipxact:localName>fs-sim</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+
+
+  <ipxact:views>
+
+		<ipxact:view>
+				<ipxact:name>rtl</ipxact:name>
+				<ipxact:envIdentifier>verilog:Kactus2:</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>verilog</ipxact:componentInstantiationRef>
+			</ipxact:view>
+
+    
                <ipxact:view>
               <ipxact:name>verilog</ipxact:name>              
               <ipxact:vendorExtensions>
@@ -224,93 +254,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-
-
-<ipxact:fileSets>
-
-
-   <ipxact:fileSet>
-      <ipxact:name>fs-common</ipxact:name>
-
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/classic_rpc_reg</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
-      </ipxact:file>
-
-
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/copyright</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
-      </ipxact:file>
-
-
-
-   </ipxact:fileSet>
-
-   <ipxact:fileSet>
-      <ipxact:name>fs-sim</ipxact:name>
-
- 
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/common/jtag_classic_rpc_reg</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
-      </ipxact:file>
-
-
-      <ipxact:file>
-        <ipxact:logicalName>dest_dir</ipxact:logicalName>
-        <ipxact:name>../views/sim/</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
-      </ipxact:file>
-
-  </ipxact:fileSet>
-
-
-   <ipxact:fileSet>
-      <ipxact:name>fs-syn</ipxact:name>
-
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/common/jtag_classic_rpc_reg</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
-      </ipxact:file>
-
-
-      <ipxact:file>
-        <ipxact:logicalName>dest_dir</ipxact:logicalName>
-        <ipxact:name>../views/syn/</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
-      </ipxact:file>
-
-
-
-   </ipxact:fileSet>
-
-
-    <ipxact:fileSet>
-
-      <ipxact:name>fs-lint</ipxact:name>
-
-      <ipxact:file>
-        <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/common/jtag_classic_rpc_reg</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
-      </ipxact:file>
-
-
-
-      <ipxact:file>
-        <ipxact:logicalName>dest_dir</ipxact:logicalName><ipxact:name>../views/syn/</ipxact:name>
-        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
-      </ipxact:file>
-
-    </ipxact:fileSet>
-
-
-</ipxact:fileSets>
 
 
 
@@ -408,6 +351,93 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+
+
+<ipxact:fileSets>
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-common</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/classic_rpc_reg</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
+      </ipxact:file>
+
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/copyright</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+   </ipxact:fileSet>
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-sim</ipxact:name>
+
+ 
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/common/jtag_classic_rpc_reg</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../views/sim/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+  </ipxact:fileSet>
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-syn</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/common/jtag_classic_rpc_reg</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName>
+        <ipxact:name>../views/syn/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+   </ipxact:fileSet>
+
+
+    <ipxact:fileSet>
+
+      <ipxact:name>fs-lint</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/common/jtag_classic_rpc_reg</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+
+
+      <ipxact:file>
+        <ipxact:logicalName>dest_dir</ipxact:logicalName><ipxact:name>../views/syn/</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+    </ipxact:fileSet>
+
+
+</ipxact:fileSets>
 
 
 

@@ -295,9 +295,6 @@ foreach  my   $i_name ($socgen_file->findnodes("//socgen:testbench[socgen:varian
       $path ="${home}${work_site}/${vendor}__${library}${sim_library_path}/verilator/${simulation}";
       mkdir $path,0755          unless( -e $path );
 
-      my $outfile ="${home}${work_site}/${vendor}__${library}${sim_library_path}/verilator/${simulation}/Makefile";
-      open  MAKSIMFILE,">$outfile" or die "unable to open $outfile";
-
 
       my $outfile ="${home}${work_site}/${vendor}__${library}${sim_library_path}/verilator/${simulation}/TestBench";
       open SIM_PARM_FILE,">$outfile" or die "unable to open $outfile";
@@ -340,13 +337,6 @@ foreach  my   $i_name ($socgen_file->findnodes("//socgen:testbench[socgen:varian
          }
 
      my $timeout = $local_parameters{"TIMEOUT"};
-
-      print MAKSIMFILE  "include ${home}/tools/bin/Makefile.root\n";
-      print MAKSIMFILE  "comp=${variant}\n";
-      print MAKSIMFILE  "test=${simulation}\n";
-      print MAKSIMFILE  "timeout=${timeout}\n";
-      print MAKSIMFILE  "simulator=verilator\n";
-
 
 
 

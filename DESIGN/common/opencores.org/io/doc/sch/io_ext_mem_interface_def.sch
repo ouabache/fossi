@@ -102,40 +102,45 @@ refdes=ext_cs[1:0]
 C 4500 2300  1 0  0 out_port_vector.sym
 {
 T 5500 2300 5  10 1 1 0 0 1 1 
-refdes=ext_add[23:1]
+refdes=ext_addr[23:0]
 }
 C 4500 2700  1 0  0 out_port_vector.sym
 {
 T 5500 2700 5  10 1 1 0 0 1 1 
-refdes=bank[7:0]
+refdes=ext_add[23:1]
 }
-C 4500 3100  1 0 0 out_port.sym
+C 4500 3100  1 0  0 out_port_vector.sym
 {
-T 5500 3100 5  10 1 1 0 0 1 1
-refdes=mem_wait
+T 5500 3100 5  10 1 1 0 0 1 1 
+refdes=bank[7:0]
 }
 C 4500 3500  1 0 0 out_port.sym
 {
 T 5500 3500 5  10 1 1 0 0 1 1
-refdes=ext_wr
+refdes=mem_wait
 }
 C 4500 3900  1 0 0 out_port.sym
 {
 T 5500 3900 5  10 1 1 0 0 1 1
-refdes=ext_ub
+refdes=ext_wr
 }
 C 4500 4300  1 0 0 out_port.sym
 {
 T 5500 4300 5  10 1 1 0 0 1 1
-refdes=ext_stb
+refdes=ext_ub
 }
 C 4500 4700  1 0 0 out_port.sym
 {
 T 5500 4700 5  10 1 1 0 0 1 1
-refdes=ext_rd
+refdes=ext_stb
 }
 C 4500 5100  1 0 0 out_port.sym
 {
 T 5500 5100 5  10 1 1 0 0 1 1
+refdes=ext_rd
+}
+C 4500 5500  1 0 0 out_port.sym
+{
+T 5500 5500 5  10 1 1 0 0 1 1
 refdes=ext_lb
 }
