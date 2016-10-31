@@ -13,9 +13,6 @@ cd ..
 cd ./icarus
 ./install
 cd ..
-cd ./gEDA
-./install
-cd ..
 cd ./kactus2
 ./install
 cd ..
