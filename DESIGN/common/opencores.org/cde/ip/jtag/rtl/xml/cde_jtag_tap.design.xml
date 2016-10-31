@@ -466,30 +466,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
        	</ipxact:interconnections>
 
 
-    <ipxact:hierConnections>
-
-    <ipxact:hierConnection      interfaceRef="tclk_pad" >
-      <ipxact:interface componentRef="cde_jtag_tap_sm" busRef="tclk_pad"/>
-      </ipxact:hierConnection>
-
-
-    <ipxact:hierConnection      interfaceRef="tms_pad" >
-      <ipxact:interface componentRef="cde_jtag_tap_sm" busRef="tms_pad"/>
-      </ipxact:hierConnection>
-
-
-
-    <ipxact:hierConnection      interfaceRef="tdi_pad" >
-      <ipxact:interface componentRef="cde_jtag_tap_sm" busRef="tdi_pad"/>
-      </ipxact:hierConnection>
-
-
-    <ipxact:hierConnection      interfaceRef="trst_n_pad" >
-      <ipxact:interface componentRef="cde_jtag_tap_sm" busRef="trst_n_pad"/>
-      </ipxact:hierConnection>
-
-
-    </ipxact:hierConnections>
 
 
 

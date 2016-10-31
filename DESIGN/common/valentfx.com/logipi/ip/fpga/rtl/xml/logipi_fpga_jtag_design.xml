@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--
 //                                                                        //
 // Author : John Eaton  Ouabache Designworks                              //
@@ -88,39 +88,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-
-    <ipxact:hierConnections>
-
-    <ipxact:hierConnection      interfaceRef="JTAG_TCK" >
-      <ipxact:interface componentRef="jtag_tclk_pad" busRef="pad_ring"/>
-      </ipxact:hierConnection>
-
-
-    <ipxact:hierConnection      interfaceRef="JTAG_TRESET_N" >
-      <ipxact:interface componentRef="jtag_trst_n_pad" busRef="pad_ring"/>
-      </ipxact:hierConnection>
-
-
-
-    <ipxact:hierConnection      interfaceRef="JTAG_TMS" >
-      <ipxact:interface componentRef="jtag_tms_pad" busRef="pad_ring"/>
-      </ipxact:hierConnection>
-
-
-    <ipxact:hierConnection      interfaceRef="JTAG_TDI" >
-      <ipxact:interface componentRef="jtag_tdi_pad" busRef="pad_ring"/>
-      </ipxact:hierConnection>
-
-
-    <ipxact:hierConnection      interfaceRef="JTAG_TDO" >
-      <ipxact:interface componentRef="jtag_tdo_pad" busRef="pad_ring"/>
-      </ipxact:hierConnection>
-
-
-
-
-    </ipxact:hierConnections>
-
  <ipxact:interconnections>
 
 
@@ -156,7 +123,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           </ipxact:portMap>
         </ipxact:portMaps>
       </ipxact:activeInterface>
-      <ipxact:hierInterface busRef=""/>
+      <ipxact:hierInterface busRef="JTAG_TRESET_N"/>
     </ipxact:interconnection>
 
 

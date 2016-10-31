@@ -1,31 +1,24 @@
 
-1) Install tools
+1) Install Ubuntu app store tools
 
-   cd fossi/install/Ubuntu_16.04
+   cd fossi/install/Ubuntu
    make install
 
-2) Install fusesoc
+2) Install rest of tools
 
-  cd fossi/tools/fusesoc
-  ./install
-
-
-3) Install Kactus2
-
-  cd fossi/tools/kactus2
-  ./install 
+  cd fossi/tools
+  ./install_all
 
 
+3) Copy this template for design environment
 
-4) Copy this template for design environment
-
-   cp -r fossi/DESIGN  {your design directory} 
-   cd DESIGN
+   cp -r fossi/DESIGN  ~ 
+   cd ~/DESIGN
 
 
 
 initialize and test fusesoc
-
+  cp fusesoc.xxx fusesoc.conf
   . ./profile
   fusesoc init  (hit return)
   ./test_fusesoc
@@ -41,8 +34,4 @@ initialize and test socgen
   
   check code coverage numbers
 
-  cd DESIGN
-  make clean
-  Kactus2
-  set lib to DESIGN
   

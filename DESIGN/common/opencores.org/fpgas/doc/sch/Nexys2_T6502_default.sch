@@ -212,142 +212,142 @@ refdes=JC_2
 C 4100 10300  1 0 0 out_port.sym
 {
 T 5100 10300 5  10 1 1 0 0 1 1
-refdes=JB_9
+refdes=JC_1
 }
 C 4100 10700  1 0 0 out_port.sym
 {
 T 5100 10700 5  10 1 1 0 0 1 1
-refdes=JB_8
+refdes=JB_9
 }
 C 4100 11100  1 0 0 out_port.sym
 {
 T 5100 11100 5  10 1 1 0 0 1 1
-refdes=JB_7
+refdes=JB_8
 }
 C 4100 11500  1 0 0 out_port.sym
 {
 T 5100 11500 5  10 1 1 0 0 1 1
-refdes=JB_4
+refdes=JB_7
 }
 C 4100 11900  1 0 0 out_port.sym
 {
 T 5100 11900 5  10 1 1 0 0 1 1
-refdes=JB_3
+refdes=JB_4
 }
 C 4100 12300  1 0 0 out_port.sym
 {
 T 5100 12300 5  10 1 1 0 0 1 1
-refdes=JB_2
+refdes=JB_3
 }
 C 4100 12700  1 0 0 out_port.sym
 {
 T 5100 12700 5  10 1 1 0 0 1 1
-refdes=JB_1
+refdes=JB_2
 }
 C 4100 13100  1 0 0 out_port.sym
 {
 T 5100 13100 5  10 1 1 0 0 1 1
-refdes=JA_7
+refdes=JB_1
 }
 C 4100 13500  1 0 0 out_port.sym
 {
 T 5100 13500 5  10 1 1 0 0 1 1
-refdes=JA_10
+refdes=JA_7
 }
 C 4100 13900  1 0 0 out_port.sym
 {
 T 5100 13900 5  10 1 1 0 0 1 1
-refdes=HSYNC_N
+refdes=JA_10
 }
 C 4100 14300  1 0 0 out_port.sym
 {
 T 5100 14300 5  10 1 1 0 0 1 1
-refdes=FLASHRP
+refdes=HSYNC_N
 }
 C 4100 14700  1 0 0 out_port.sym
 {
 T 5100 14700 5  10 1 1 0 0 1 1
-refdes=FLASHCS
+refdes=FLASHRP
 }
 C 4100 15100  1 0 0 out_port.sym
 {
 T 5100 15100 5  10 1 1 0 0 1 1
-refdes=DP
+refdes=FLASHCS
 }
-C 4100 15500  1 0  0 io_port_vector.sym
+C 4100 15500  1 0 0 out_port.sym
 {
-T 5100 15500 5  10 1 1 0 0 1 1 
-refdes=USBADR[1:0]
+T 5100 15500 5  10 1 1 0 0 1 1
+refdes=DP
 }
 C 4100 15900  1 0  0 io_port_vector.sym
 {
 T 5100 15900 5  10 1 1 0 0 1 1 
-refdes=PIO[39:0]
+refdes=USBADR[1:0]
 }
 C 4100 16300  1 0  0 io_port_vector.sym
 {
 T 5100 16300 5  10 1 1 0 0 1 1 
-refdes=MEMDB[15:0]
+refdes=PIO[39:0]
 }
 C 4100 16700  1 0  0 io_port_vector.sym
 {
 T 5100 16700 5  10 1 1 0 0 1 1 
-refdes=EPPDB[7:0]
+refdes=MEMDB[15:0]
 }
-C 4100 17100  1 0 0 io_port.sym
+C 4100 17100  1 0  0 io_port_vector.sym
 {
-T 5100 17100 5  10 1 1 0 0 1 1
-refdes=USBWR
+T 5100 17100 5  10 1 1 0 0 1 1 
+refdes=EPPDB[7:0]
 }
 C 4100 17500  1 0 0 io_port.sym
 {
 T 5100 17500 5  10 1 1 0 0 1 1
-refdes=USBPKTEND
+refdes=USBWR
 }
 C 4100 17900  1 0 0 io_port.sym
 {
 T 5100 17900 5  10 1 1 0 0 1 1
-refdes=USBOE
+refdes=USBPKTEND
 }
 C 4100 18300  1 0 0 io_port.sym
 {
 T 5100 18300 5  10 1 1 0 0 1 1
-refdes=USBMODE
+refdes=USBOE
 }
 C 4100 18700  1 0 0 io_port.sym
 {
 T 5100 18700 5  10 1 1 0 0 1 1
-refdes=USBDIR
+refdes=USBMODE
 }
 C 4100 19100  1 0 0 io_port.sym
 {
 T 5100 19100 5  10 1 1 0 0 1 1
-refdes=USBCLK
+refdes=USBDIR
 }
 C 4100 19500  1 0 0 io_port.sym
 {
 T 5100 19500 5  10 1 1 0 0 1 1
-refdes=PS2D
+refdes=USBCLK
 }
 C 4100 19900  1 0 0 io_port.sym
 {
 T 5100 19900 5  10 1 1 0 0 1 1
-refdes=PS2C
+refdes=PS2D
 }
 C 4100 20300  1 0 0 io_port.sym
 {
 T 5100 20300 5  10 1 1 0 0 1 1
-refdes=JC_8
+refdes=PS2C
 }
 C 4100 20700  1 0 0 io_port.sym
 {
 T 5100 20700 5  10 1 1 0 0 1 1
-refdes=JC_10
+refdes=JC_8
 }
 C 4100 21100  1 0 0 io_port.sym
 {
 T 5100 21100 5  10 1 1 0 0 1 1
-refdes=JC_1
+refdes=JC_10
 }
 C 4100 21500  1 0 0 io_port.sym
 {

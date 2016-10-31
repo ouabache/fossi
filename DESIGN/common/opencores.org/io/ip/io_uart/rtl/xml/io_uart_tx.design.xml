@@ -85,13 +85,19 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-    <ipxact:hierConnections>
 
-    <ipxact:hierConnection       interfaceRef="uart" >
-      <ipxact:interface componentRef="uart" busRef="uart" />
-      </ipxact:hierConnection>
 
-    </ipxact:hierConnections>
+   <ipxact:interconnections>
+	           <ipxact:interconnection>
+      <ipxact:name>uart</ipxact:name>
+       <ipxact:activeInterface componentRef="uart" busRef="uart"></ipxact:activeInterface>
+    <ipxact:hierInterface busRef="uart"/>
+    </ipxact:interconnection>   
+    
+        
+
+  </ipxact:interconnections>
+
 
 
 <ipxact:adHocConnections>

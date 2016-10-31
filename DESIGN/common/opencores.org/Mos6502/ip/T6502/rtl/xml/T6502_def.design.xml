@@ -70,28 +70,31 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
- <ipxact:hierConnections>
-
-    <ipxact:hierConnection       interfaceRef="vga" >
-      <ipxact:interface componentRef="io_module" busRef="vga"/>
-      </ipxact:hierConnection>
-
-    <ipxact:hierConnection        interfaceRef="ps2">
-      <ipxact:interface componentRef="io_module" busRef="ps2"/>
-      </ipxact:hierConnection>
-
-    <ipxact:hierConnection      interfaceRef="uart">
-      <ipxact:interface componentRef="io_module" busRef="uart"/>
-      </ipxact:hierConnection>
-
-
-    </ipxact:hierConnections>
-
-
 
 
  <ipxact:interconnections>
 
+   <ipxact:interconnection>
+      <ipxact:name>uart</ipxact:name>
+       <ipxact:activeInterface componentRef="io_module" busRef="uart"></ipxact:activeInterface>
+    <ipxact:hierInterface busRef="uart"/>
+    </ipxact:interconnection>   
+
+   
+   <ipxact:interconnection>
+      <ipxact:name>ps2</ipxact:name>
+       <ipxact:activeInterface componentRef="io_module" busRef="ps2"></ipxact:activeInterface>
+    <ipxact:hierInterface busRef="ps2"/>
+   </ipxact:interconnection>
+
+   <ipxact:interconnection>
+      <ipxact:name>vga</ipxact:name>
+       <ipxact:activeInterface componentRef="io_module" busRef="vga"></ipxact:activeInterface>
+    <ipxact:hierInterface busRef="vga"/>
+    </ipxact:interconnection>   
+   
+    
+        
 
 
     <ipxact:interconnection>

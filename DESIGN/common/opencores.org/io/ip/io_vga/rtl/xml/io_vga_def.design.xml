@@ -41,14 +41,17 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-    <ipxact:hierConnections>
+  <ipxact:interconnections>
 
-    <ipxact:hierConnection interfaceRef="vga">
-      <ipxact:interface componentRef="vga_char_ctrl" busRef="vga"/>
-      </ipxact:hierConnection>
+	           <ipxact:interconnection>
+      <ipxact:name>vga</ipxact:name>
+       <ipxact:activeInterface componentRef="vga_char_ctrl" busRef="vga"></ipxact:activeInterface>
+    <ipxact:hierInterface busRef="vga"/>
+    </ipxact:interconnection>   
+    
+        
 
-    </ipxact:hierConnections>
-
+  </ipxact:interconnections>
 
 
 

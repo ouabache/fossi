@@ -1,0 +1,94 @@
+
+./index.xsd:// Description: index.xsd
+./index.xsd:	<xs:include schemaLocation="component.xsd"/>
+./index.xsd:	<xs:include schemaLocation="design.xsd"/>
+./index.xsd:	<xs:include schemaLocation="designConfig.xsd"/>
+
+
+./component.xsd:// Description : component.xsd
+./component.xsd:    <xs:include schemaLocation="identifier.xsd"/>
+./component.xsd:    <xs:include schemaLocation="generator.xsd"/>
+./component.xsd:    <xs:include schemaLocation="commonStructures.xsd"/>
+./component.xsd:    <xs:include schemaLocation="model.xsd"/>
+./component.xsd:    <xs:include schemaLocation="subInstances.xsd"/>
+./component.xsd:    <xs:include schemaLocation="constraints.xsd"/>
+
+
+
+./generator.xsd:// Description : generator.xsd
+./generator.xsd:  <xs:include schemaLocation="file.xsd"/>
+./generator.xsd:  <xs:include schemaLocation="identifier.xsd"/>
+./generator.xsd:  <xs:include schemaLocation="commonStructures.xsd"/>
+
+
+./design.xsd:// Description : design.xsd
+./design.xsd:    <xs:include schemaLocation="commonStructures.xsd"/>
+./design.xsd:    <xs:include schemaLocation="subInstances.xsd"/>
+./design.xsd:    <xs:include schemaLocation="model.xsd"/>
+./design.xsd:    <xs:include schemaLocation="port.xsd"/>
+
+
+
+
+
+./designConfig.xsd:// Description: designConfig.xsd
+./designConfig.xsd:  <xs:include schemaLocation="commonStructures.xsd"/>
+./designConfig.xsd:  <xs:include schemaLocation="identifier.xsd"/>
+./designConfig.xsd:  <xs:include schemaLocation="model.xsd"/>
+./designConfig.xsd:  <xs:include schemaLocation="subInstances.xsd"/>
+
+
+
+./model.xsd:// Description : model.xsd
+./model.xsd:    <xs:include schemaLocation="commonStructures.xsd"/>
+./model.xsd:    <xs:include schemaLocation="file.xsd"/>
+./model.xsd:    <xs:include schemaLocation="port.xsd"/>
+
+
+
+./port.xsd:// Description : port.xsd
+./port.xsd:    <xs:include schemaLocation="commonStructures.xsd"/>
+./port.xsd:    <xs:include schemaLocation="constraints.xsd"/>
+./port.xsd:    <xs:include schemaLocation="file.xsd"/>
+
+
+./file.xsd:// Description : file.xsd
+./file.xsd:    <xs:include schemaLocation="commonStructures.xsd"/>
+./file.xsd:    <xs:include schemaLocation="identifier.xsd"/>
+./file.xsd:    <xs:include schemaLocation="fileType.xsd"/>
+
+./subInstances.xsd:// Description : subInstances.xsd
+./subInstances.xsd:    <xs:include schemaLocation="simpleTypes.xsd"/>
+./subInstances.xsd:    <xs:include schemaLocation="commonStructures.xsd"/>
+./subInstances.xsd:    <xs:include schemaLocation="identifier.xsd"/>
+./subInstances.xsd:    <xs:include schemaLocation="autoConfigure.xsd"/>
+
+./constraints.xsd:// Description : constraints.xsd
+./constraints.xsd:    <xs:include schemaLocation="commonStructures.xsd"/>
+./constraints.xsd:    <xs:include schemaLocation="autoConfigure.xsd"/>
+./constraints.xsd:    <xs:include schemaLocation="signalDrivers.xsd"/>
+
+
+./commonStructures.xsd:// Description : commonStructures.xsd
+./commonStructures.xsd:    <xs:include schemaLocation="autoConfigure.xsd"/>
+./commonStructures.xsd:    <xs:include schemaLocation="simpleTypes.xsd"/>
+
+
+
+./signalDrivers.xsd:// Description : signalDrivers.xsd
+./signalDrivers.xsd:	<xs:include schemaLocation="simpleTypes.xsd"/>
+./signalDrivers.xsd:	<xs:include schemaLocation="autoConfigure.xsd"/>
+
+
+./autoConfigure.xsd:// Description: autoConfigure.xsd
+./autoConfigure.xsd:    <xs:include schemaLocation="configurable.xsd"/>
+
+
+
+./configurable.xsd:// Description : configurable.xsd
+
+./fileType.xsd:// Description : fileType.xsd
+
+./identifier.xsd:// Description : identifier.xsd
+
+./simpleTypes.xsd:// Description : simpleTypes.xsd

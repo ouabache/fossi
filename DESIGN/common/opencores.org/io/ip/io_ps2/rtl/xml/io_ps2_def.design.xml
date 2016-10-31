@@ -43,17 +43,19 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-    <ipxact:hierConnections>
-
-    <ipxact:hierConnection     interfaceRef="ps2" >
-      <ipxact:interface componentRef="ps2" busRef="ps2"/>
-      </ipxact:hierConnection>
-
-    </ipxact:hierConnections>
 
 
+  <ipxact:interconnections>
 
+	           <ipxact:interconnection>
+      <ipxact:name>ps2</ipxact:name>
+       <ipxact:activeInterface componentRef="ps2" busRef="ps2"></ipxact:activeInterface>
+    <ipxact:hierInterface busRef="ps2"/>
+    </ipxact:interconnection>   
+    
+        
 
+  </ipxact:interconnections>
 
 
 

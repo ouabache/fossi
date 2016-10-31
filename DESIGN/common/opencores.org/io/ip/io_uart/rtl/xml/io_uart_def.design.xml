@@ -86,29 +86,29 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 </socgen:nodes></ipxact:vendorExtensions>
 
 
+  <ipxact:interconnections>
 
-    <ipxact:hierConnections>
+   <ipxact:interconnection>
 
-    <ipxact:hierConnection      interfaceRef="uart" >
-      <ipxact:interface componentRef="uart" busRef="uart"/>
-      </ipxact:hierConnection>
+     <ipxact:name>uart</ipxact:name>
+       <ipxact:activeInterface componentRef="uart" busRef="uart"></ipxact:activeInterface>
+       <ipxact:hierInterface busRef="uart"/>
+      </ipxact:interconnection>   
+            
+   <ipxact:interconnection>
+      <ipxact:name>rxd_data_avail</ipxact:name>
+       <ipxact:activeInterface componentRef="uart" busRef="rxd_data_avail"></ipxact:activeInterface>
+       <ipxact:hierInterface busRef="rxd_data_avail"/>
+      </ipxact:interconnection>   
+            
 
-
-    <ipxact:hierConnection       interfaceRef="rxd_data_avail" >
-      <ipxact:interface componentRef="uart" busRef="rxd_data_avail"/>
-      </ipxact:hierConnection>
-
-
-    <ipxact:hierConnection       interfaceRef="txd_buffer_empty" >
-      <ipxact:interface componentRef="uart" busRef="txd_buffer_empty"/>
-      </ipxact:hierConnection>
-
-
-
-
-
-    </ipxact:hierConnections>
-
+   <ipxact:interconnection>
+      <ipxact:name>txd_buffer_empty</ipxact:name>
+       <ipxact:activeInterface componentRef="uart" busRef="txd_buffer_empty"></ipxact:activeInterface>
+       <ipxact:hierInterface busRef="txd_buffer_empty"/>
+      </ipxact:interconnection>   
+            
+  </ipxact:interconnections>
 
 <ipxact:adHocConnections>
 

@@ -43,26 +43,29 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
- <ipxact:hierConnections>
 
-    <ipxact:hierConnection       interfaceRef="jtag" >
-    <ipxact:interface componentRef="jtag_rpc1" busRef="jtag"/>
-    </ipxact:hierConnection>
 
-    <ipxact:hierConnection       interfaceRef="aux_jtag" >
-    <ipxact:interface componentRef="jtag_rpc2" busRef="jtag"/>
-    </ipxact:hierConnection>
 
+  <ipxact:interconnections>
+
+
+
+  <ipxact:interconnection>
+      <ipxact:name>jtag</ipxact:name>
+       <ipxact:activeInterface componentRef="jtag_rpc1" busRef="jtag"></ipxact:activeInterface>
+    <ipxact:hierInterface busRef="jtag"/>
+  </ipxact:interconnection>
+
+
+    <ipxact:interconnection>
+      <ipxact:name>aux_jtag</ipxact:name>
+       <ipxact:activeInterface componentRef="jtag_rpc2" busRef="jtag"></ipxact:activeInterface>
+    <ipxact:hierInterface busRef="aux_jtag"/>
+    </ipxact:interconnection>   
     
+        
 
-
-    </ipxact:hierConnections>
-
-
-
-
-
-
+  </ipxact:interconnections>
 
 
 
