@@ -68,7 +68,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:busType vendor="opencores.org" library="Busdefs" name="reset" version="def"/>
   <ipxact:abstractionTypes>
       <ipxact:abstractionType>
-  <ipxact:abstractionDef vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
+  <ipxact:abstractionRef vendor="opencores.org" library="Busdefs" name="reset" version="rtl"/>
     <ipxact:portMaps>
       <ipxact:portMap>
         <ipxact:logicalPort><ipxact:name>reset</ipxact:name></ipxact:logicalPort>
