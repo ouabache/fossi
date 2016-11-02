@@ -1,4 +1,6 @@
 . ./profile
+cp fusesoc.xxx fusesoc.conf
+fusesoc init
 fusesoc list-systems
 fusesoc list-cores
 fusesoc sim de1 --vcd --elf-load hello_nop.elf --testcase TEST --timeout 12000
