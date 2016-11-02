@@ -1,5 +1,6 @@
 . ./profile
 cp fusesoc.xxx fusesoc.conf
+mkdir Index
 fusesoc init
 fusesoc list-systems
 fusesoc list-cores

@@ -1,4 +1,5 @@
 . ./profile
+cp fusesoc.yyy fusesoc.conf
 mkdir Index
 git clone http://github.com/ouabache/orpsoc-cores  ./Index/socgen-cores
 fusesoc fetch socgen_CDE

@@ -1,7 +1,5 @@
-
 export PATH=".:$PWD/tools/bin:/usr/local/bin:$PATH"
-
-
+export SOCGEN_TOOLS="$PWD/tools"
 export XDG_CONFIG_HOME="$PWD/config"
 export XDG_CACHE_HOME="$PWD/Projects"
 export XDG_DATA_HOME="$PWD/Index"
