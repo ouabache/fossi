@@ -23,16 +23,32 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 
 
+<socgen:external>
+
+    <socgen:repo> 
+    <socgen:name>Base</socgen:name>
+    <socgen:path>/home/johne/repos</socgen:path>
+    </socgen:repo>
+
+
+    
+
+</socgen:external>
 
 
 <socgen:repos>
 
-
+    <socgen:repo> 
+    <socgen:name>/Projects</socgen:name>
+    </socgen:repo>
 
     <socgen:repo> 
     <socgen:name>/common</socgen:name>
     </socgen:repo>
 
+    <socgen:repo> 
+    <socgen:name>/Base</socgen:name>
+    </socgen:repo>
 
 
 

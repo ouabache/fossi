@@ -78,4 +78,5 @@
 
 
 (component-library-search "./common" "CDE")
+(component-library-search "./Projects" "PRJ")
 (source-library ".")

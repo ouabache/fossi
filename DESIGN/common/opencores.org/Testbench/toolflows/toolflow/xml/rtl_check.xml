@@ -50,7 +50,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:vendorExtensions>
     <socgen:envIdentifier>:*Lint:*</socgen:envIdentifier>
   </ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/sys/gen_child_filelist</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/sys/gen_child_filelist</ipxact:generatorExe>
     <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>top</ipxact:name>
@@ -69,7 +69,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:phase>104.0</ipxact:phase>
   <ipxact:apiType>none</ipxact:apiType>
   <ipxact:vendorExtensions><socgen:envIdentifier>:*Lint:*</socgen:envIdentifier></ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/verilog/gen_verilog</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/verilog/gen_verilog</ipxact:generatorExe>
   <ipxact:parameters>
   </ipxact:parameters>
 </ipxact:componentGenerator>
@@ -82,7 +82,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:phase>105.0</ipxact:phase>
   <ipxact:apiType>none</ipxact:apiType>
   <ipxact:vendorExtensions><socgen:envIdentifier>:*Lint:*</socgen:envIdentifier></ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/verilog/gen_verilogLib</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/verilog/gen_verilogLib</ipxact:generatorExe>
     <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>view</ipxact:name>
@@ -100,7 +100,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:vendorExtensions>
     <socgen:envIdentifier>:*Lint:*</socgen:envIdentifier>
   </ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/sys/gen_child_filelist</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/sys/gen_child_filelist</ipxact:generatorExe>
   <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>suffix</ipxact:name>

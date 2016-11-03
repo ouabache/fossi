@@ -95,7 +95,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:phase>104.0</ipxact:phase>
   <ipxact:apiType>none</ipxact:apiType>
   <ipxact:vendorExtensions><socgen:envIdentifier>:*common:*</socgen:envIdentifier></ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/verilog/gen_verilog</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/verilog/gen_verilog</ipxact:generatorExe>
     <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>destination</ipxact:name>

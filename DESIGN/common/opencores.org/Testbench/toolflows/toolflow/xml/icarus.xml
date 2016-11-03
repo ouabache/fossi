@@ -50,7 +50,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <socgen:envIdentifier>:*Simulation:*</socgen:envIdentifier>
     <socgen:envIdentifier>:*Synthesis:*</socgen:envIdentifier>
   </ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/sys/gen_elab_child_filelist</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/sys/gen_elab_child_filelist</ipxact:generatorExe>
   <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>top_file</ipxact:name>
@@ -71,7 +71,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <socgen:envIdentifier>:*Simulation:*</socgen:envIdentifier>
     <socgen:envIdentifier>:*Synthesis:*</socgen:envIdentifier>
   </ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/sys/gen_child_filelist</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/sys/gen_child_filelist</ipxact:generatorExe>
   <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>top_file</ipxact:name>
@@ -93,7 +93,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:vendorExtensions>
     <socgen:envIdentifier>:*Lint:*</socgen:envIdentifier>
   </ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/sys/gen_child_filelist</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/sys/gen_child_filelist</ipxact:generatorExe>
   <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>top_file</ipxact:name>
@@ -125,7 +125,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:phase>105.0</ipxact:phase>
   <ipxact:apiType>none</ipxact:apiType>
   <ipxact:vendorExtensions><socgen:envIdentifier>:*Simulation:*</socgen:envIdentifier></ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/verilog/gen_verilogLib</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/verilog/gen_verilogLib</ipxact:generatorExe>
     <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>view</ipxact:name>
@@ -140,7 +140,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:phase>105.0</ipxact:phase>
   <ipxact:apiType>none</ipxact:apiType>
   <ipxact:vendorExtensions><socgen:envIdentifier>:*Synthesis:*</socgen:envIdentifier></ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/verilog/gen_verilogLib</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/verilog/gen_verilogLib</ipxact:generatorExe>
     <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>view</ipxact:name>
@@ -155,7 +155,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:phase>105.0</ipxact:phase>
   <ipxact:apiType>none</ipxact:apiType>
   <ipxact:vendorExtensions><socgen:envIdentifier>:*Lint:*</socgen:envIdentifier></ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/verilog/gen_verilogLib</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/verilog/gen_verilogLib</ipxact:generatorExe>
     <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>view</ipxact:name>

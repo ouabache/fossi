@@ -1,0 +1,15 @@
+Welcome to the the SOCGEN design environment
+
+
+To build and run all tools:
+
+
+./test
+
+
+To check results type:
+
+make check_sims
+make check_fpgas
+
+

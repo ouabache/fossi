@@ -50,7 +50,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:vendorExtensions>
     <socgen:envIdentifier>:*Synthesis:*</socgen:envIdentifier>
   </ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/sys/gen_child_filelist</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/sys/gen_child_filelist</ipxact:generatorExe>
   <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>top</ipxact:name>

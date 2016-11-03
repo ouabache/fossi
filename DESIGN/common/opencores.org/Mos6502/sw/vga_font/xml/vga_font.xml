@@ -49,7 +49,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:vendorExtensions>
     <socgen:envIdentifier>:*Simulation:*</socgen:envIdentifier>
   </ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/firmware/gen_crasm</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/firmware/gen_crasm</ipxact:generatorExe>
   <ipxact:parameters>
     <ipxact:parameter> 
       <ipxact:name>output</ipxact:name>

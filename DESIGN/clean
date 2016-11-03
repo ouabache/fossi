@@ -1,5 +1,6 @@
 ./tools/yp/clean     ;
 rm -f -r doc/geda/*  ;
+rm -f -r Projects/guile  ;
 find . | grep "~" | xargs rm -f  $1 ;
 
 

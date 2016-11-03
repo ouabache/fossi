@@ -47,7 +47,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:phase>110.0</ipxact:phase>
   <ipxact:apiType>none</ipxact:apiType>
   <ipxact:vendorExtensions><socgen:envIdentifier>:*Documentation:*</socgen:envIdentifier></ipxact:vendorExtensions>
-  <ipxact:generatorExe>tools/geda/gen_geda</ipxact:generatorExe>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/geda/gen_geda</ipxact:generatorExe>
 </ipxact:componentGenerator>
 
 </ipxact:componentGenerators>
