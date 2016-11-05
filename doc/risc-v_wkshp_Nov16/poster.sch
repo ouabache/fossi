@@ -6,7 +6,7 @@ A design for reuse environment
 FOSS  EDA tool flow scripting project
 
 
-T 78300 60000 1 50 1 0 180 0 13
+T 80700 60000 1 50 1 0 180 0 13
 Free opensourced toolkit  for creating IP-Xact based Soc Designs
 
 Concept to programmed FPGA with NO proprietary Software
@@ -18,7 +18,7 @@ ICARUS                 verilog Simulation           VERILATOR     verilog Simula
 COVERED             Code coverage               SOCGEN         IP-Xact utilities
 VERILOG-PERL    utilities                             YOSYS            Synthesys
 ARACHE-PNR       Place and Route             ICESTORM      Fpga creation
-FIZZIM                   State Machine Design                   
+FIZZIM                   State Machine Design     GTKWAVE       Waveform Viewer              
   
 L 45700 65500 78800 65500 3 0 0 0 -1 -1
 L 45700 61700 78800 61700 3 0 0 0 -1 -1

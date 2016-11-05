@@ -1,0 +1,24 @@
+Notes:
+
+
+make files
+
+
+git submodules
+
+
+repository management
+
+
+git ignore files
+
+
+search paths
+
+
+Hard coded module names
+
+
+
+
+

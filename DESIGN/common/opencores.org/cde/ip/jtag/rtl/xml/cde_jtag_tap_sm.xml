@@ -172,8 +172,25 @@
 
 <ipxact:componentGenerators>
 
+<ipxact:componentGenerator>
+  <ipxact:name>gen_fizzim</ipxact:name>
+  <ipxact:phase>103.0</ipxact:phase>
+  <ipxact:apiType>none</ipxact:apiType>
+  <ipxact:vendorExtensions><socgen:envIdentifier>:*common:*</socgen:envIdentifier></ipxact:vendorExtensions>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/fizzim/gen_fizzim</ipxact:generatorExe>
+  <ipxact:parameters>
+    <ipxact:parameter> 
+      <ipxact:value>rtl/fzm/tap_sm.fzm</ipxact:value>
+    </ipxact:parameter>
+        <ipxact:parameter> 
+      <ipxact:value>rtl/verilog/tap_FSM</ipxact:value>
+    </ipxact:parameter>
+  </ipxact:parameters>
+</ipxact:componentGenerator>
 
 
+
+  
 
 <ipxact:componentGenerator>
   <ipxact:name>gen_verilog</ipxact:name>
