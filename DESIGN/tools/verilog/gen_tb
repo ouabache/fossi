@@ -268,12 +268,12 @@ if($opt_verbose) {   print "-- ${list}|||  \n"; }
           if ( $vector eq "vector" ) 
              {
         print   "  $name  [${index}]          \n";  
-             push (@tb_adhoc_list,  "<ipxact:adHocConnection>\n<ipxact:name>${name}<\/ipxact:name>\n<ipxact:externalPortReference ipxact:portRef=\"${name}\" ipxact:left=\"${left}\" ipxact:right=\"${right}\" \/>\n<ipxact:internalPortReference  ipxact:componentRef=\"dut\" ipxact:portRef=\"${name}\" \/>\n<\/ipxact:adHocConnection>\n"     );
+             push (@tb_adhoc_list,  "<ipxact:adHocConnection>\n<ipxact:name>${name}<\/ipxact:name>\n<ipxact:portReferences>\n<ipxact:externalPortReference portRef=\"${name}\" left=\"${left}\" right=\"${right}\" \/>\n<ipxact:internalPortReference  componentRef=\"dut\" portRef=\"${name}\" \/>\n<\/ipxact:portReferences>\n<\/ipxact:adHocConnection>\n"     );
              }
              else
             {
         print   "  $name           \n";  
-            push (@tb_adhoc_list,  "<ipxact:adHocConnection>\n<ipxact:name>${name}<\/ipxact:name>\n<ipxact:externalPortReference  ipxact:portRef=\"${name}\" \/>\n<ipxact:internalPortReference  ipxact:componentRef=\"dut\" ipxact:portRef=\"${name}\" \/>\n<\/ipxact:adHocConnection>\n"     );
+            push (@tb_adhoc_list,  "<ipxact:adHocConnection>\n<ipxact:name>${name}<\/ipxact:name>\n <ipxact:portReferences>\n<ipxact:externalPortReference  portRef=\"${name}\" \/>\n<ipxact:internalPortReference  componentRef=\"dut\" portRef=\"${name}\" \/>\n<\/ipxact:portReferences>\n<\/ipxact:adHocConnection>\n"     );
              }
 
 
@@ -356,20 +356,16 @@ else                 {$sim_library_path  = $socgen_file->findnodes("//socgen:com
    print TB_DESIGN_FILE  "// ./tools/verilog/gen_tb -vendor $vendor -library $library  -component $component  -version $version //\n";
    print TB_DESIGN_FILE  "//                                                                                                    //\n";
    print TB_DESIGN_FILE  "-->           \n";     
-   print TB_DESIGN_FILE  "<ipxact:design\n"; 
-   print TB_DESIGN_FILE  "xmlns:spirit=\"http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009\"\n";
+   print TB_DESIGN_FILE  "<ipxact:design\n";
+   print TB_DESIGN_FILE  "xmlns:ipxact=\"http://www.accellera.org/XMLSchema/IPXACT/1685-2014\"\n";
    print TB_DESIGN_FILE  "xmlns:socgen=\"http://opencores.org\"\n";
    print TB_DESIGN_FILE  "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n";
-   print TB_DESIGN_FILE  "xsi:schemaLocation=\"http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009\n";
-   print TB_DESIGN_FILE  "http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009/index.xsd\">\n";
+   print TB_DESIGN_FILE  "xsi:schemaLocation=\"http://www.accellera.org/XMLSchema/IPXACT/1685-2014\n";
+   print TB_DESIGN_FILE  "    http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd\">\n";
    print TB_DESIGN_FILE  "<ipxact:vendor>${vendor}</ipxact:vendor>\n";
    print TB_DESIGN_FILE  "<ipxact:library>${library}</ipxact:library>\n";
    print TB_DESIGN_FILE  "<ipxact:name>${component}</ipxact:name>\n";
    print TB_DESIGN_FILE  "<ipxact:version>${version}_duth.design</ipxact:version>\n";  
-
-
-
-
 
      @tb_adhoc_list      = sys::lib::trim_sort(@tb_adhoc_list); 
      print TB_DESIGN_FILE  "<ipxact:adHocConnections>\n\n";
@@ -396,7 +392,7 @@ print TB_DESIGN_FILE    "<ipxact:componentInstances>\n\n";
 
 print TB_DESIGN_FILE    "<ipxact:componentInstance>\n";
 print TB_DESIGN_FILE    "<ipxact:instanceName>dut</ipxact:instanceName>\n";
-print TB_DESIGN_FILE    "<ipxact:componentRef ipxact:vendor=\"${vendor}\" ipxact:library=\"${library}\" ipxact:name=\"$component\" ipxact:version=\"${version}\" />\n";
+print TB_DESIGN_FILE    "<ipxact:componentRef vendor=\"${vendor}\" library=\"${library}\" name=\"$component\" version=\"${version}\" />\n";
 print TB_DESIGN_FILE    "<ipxact:configurableElementValues>\n";
 
 
@@ -404,7 +400,7 @@ print TB_DESIGN_FILE    "<ipxact:configurableElementValues>\n";
 
 
         {
-        print TB_DESIGN_FILE  " <ipxact:configurableElementValue ipxact:referenceId=\"${parameter_name}\">${parameter_name}<\/ipxact:configurableElementValue>\n";
+        print TB_DESIGN_FILE  " <ipxact:configurableElementValue referenceId=\"${parameter_name}\">${parameter_name}<\/ipxact:configurableElementValue>\n";
         }
       
 print TB_DESIGN_FILE    "</ipxact:configurableElementValues>\n";

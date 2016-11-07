@@ -11,7 +11,7 @@ xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
 xmlns:socgen="http://opencores.org"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
-http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+    http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>wishbone</ipxact:library>
 <ipxact:name>wb_uart16550</ipxact:name>
@@ -20,122 +20,162 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>baud_o</ipxact:name>
-<ipxact:externalPortReference portRef="baud_o" />
-<ipxact:internalPortReference componentRef="dut" portRef="baud_o" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="baud_o" />
+<ipxact:internalPortReference  componentRef="dut" portRef="baud_o" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>cts_pad_i</ipxact:name>
-<ipxact:externalPortReference portRef="cts_pad_i" />
-<ipxact:internalPortReference componentRef="dut" portRef="cts_pad_i" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="cts_pad_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="cts_pad_i" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>dcd_pad_i</ipxact:name>
-<ipxact:externalPortReference portRef="dcd_pad_i" />
-<ipxact:internalPortReference componentRef="dut" portRef="dcd_pad_i" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="dcd_pad_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="dcd_pad_i" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>dsr_pad_i</ipxact:name>
-<ipxact:externalPortReference portRef="dsr_pad_i" />
-<ipxact:internalPortReference componentRef="dut" portRef="dsr_pad_i" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="dsr_pad_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="dsr_pad_i" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>dtr_pad_o</ipxact:name>
-<ipxact:externalPortReference portRef="dtr_pad_o" />
-<ipxact:internalPortReference componentRef="dut" portRef="dtr_pad_o" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="dtr_pad_o" />
+<ipxact:internalPortReference  componentRef="dut" portRef="dtr_pad_o" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>int_o</ipxact:name>
-<ipxact:externalPortReference portRef="int_o" />
-<ipxact:internalPortReference componentRef="dut" portRef="int_o" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="int_o" />
+<ipxact:internalPortReference  componentRef="dut" portRef="int_o" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>ri_pad_i</ipxact:name>
-<ipxact:externalPortReference portRef="ri_pad_i" />
-<ipxact:internalPortReference componentRef="dut" portRef="ri_pad_i" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="ri_pad_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="ri_pad_i" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rts_pad_o</ipxact:name>
-<ipxact:externalPortReference portRef="rts_pad_o" />
-<ipxact:internalPortReference componentRef="dut" portRef="rts_pad_o" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="rts_pad_o" />
+<ipxact:internalPortReference  componentRef="dut" portRef="rts_pad_o" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>srx_pad_i</ipxact:name>
-<ipxact:externalPortReference portRef="srx_pad_i" />
-<ipxact:internalPortReference componentRef="dut" portRef="srx_pad_i" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="srx_pad_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="srx_pad_i" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>stx_pad_o</ipxact:name>
-<ipxact:externalPortReference portRef="stx_pad_o" />
-<ipxact:internalPortReference componentRef="dut" portRef="stx_pad_o" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="stx_pad_o" />
+<ipxact:internalPortReference  componentRef="dut" portRef="stx_pad_o" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>wb_ack_o</ipxact:name>
-<ipxact:externalPortReference portRef="wb_ack_o" />
-<ipxact:internalPortReference componentRef="dut" portRef="wb_ack_o" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="wb_ack_o" />
+<ipxact:internalPortReference  componentRef="dut" portRef="wb_ack_o" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>wb_adr_i</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="wb_adr_i" left="7" right="2" />
-<ipxact:internalPortReference componentRef="dut" portRef="wb_adr_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="wb_adr_i" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>wb_clk_i</ipxact:name>
-<ipxact:externalPortReference portRef="wb_clk_i" />
-<ipxact:internalPortReference componentRef="dut" portRef="wb_clk_i" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="wb_clk_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="wb_clk_i" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>wb_cyc_i</ipxact:name>
-<ipxact:externalPortReference portRef="wb_cyc_i" />
-<ipxact:internalPortReference componentRef="dut" portRef="wb_cyc_i" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="wb_cyc_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="wb_cyc_i" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>wb_dat_i</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="wb_dat_i" left="31" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="wb_dat_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="wb_dat_i" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>wb_dat_o</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="wb_dat_o" left="31" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="wb_dat_o" />
+<ipxact:internalPortReference  componentRef="dut" portRef="wb_dat_o" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>wb_rst_i</ipxact:name>
-<ipxact:externalPortReference portRef="wb_rst_i" />
-<ipxact:internalPortReference componentRef="dut" portRef="wb_rst_i" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="wb_rst_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="wb_rst_i" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>wb_sel_i</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="wb_sel_i" left="3" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="wb_sel_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="wb_sel_i" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>wb_stb_i</ipxact:name>
-<ipxact:externalPortReference portRef="wb_stb_i" />
-<ipxact:internalPortReference componentRef="dut" portRef="wb_stb_i" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="wb_stb_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="wb_stb_i" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>wb_we_i</ipxact:name>
-<ipxact:externalPortReference portRef="wb_we_i" />
-<ipxact:internalPortReference componentRef="dut" portRef="wb_we_i" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="wb_we_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="wb_we_i" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 

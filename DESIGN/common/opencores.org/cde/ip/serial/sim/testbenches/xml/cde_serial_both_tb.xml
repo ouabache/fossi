@@ -49,17 +49,23 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:model>    
 
-       <ipxact:views>
+	<ipxact:instantiations>
+	<ipxact:designInstantiation>
+	<ipxact:name>Dut</ipxact:name>
+	<ipxact:designRef vendor="opencores.org" library="cde" name="serial" version="both_dut.design"/>
+	</ipxact:designInstantiation>
+	</ipxact:instantiations>
 
-              <ipxact:view>
-              <ipxact:name>Params</ipxact:name>
-              <ipxact:vendorExtensions>
-              <ipxact:componentRef ipxact:vendor="opencores.org" 
-                                   ipxact:library="cde" 
-                                   ipxact:name="serial" 
-                                   ipxact:version="both_dut.params"/>  
-              </ipxact:vendorExtensions>
+
+  
+	<ipxact:views>
+
+	  
+          <ipxact:view>
+              <ipxact:name>Dut</ipxact:name>
+                  <ipxact:designInstantiationRef>Dut</ipxact:designInstantiationRef>         
               </ipxact:view>
+
 
 
 
@@ -112,6 +118,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
       </ipxact:views>
 
+<ipxact:modelParameters>
+    <ipxact:modelParameter><ipxact:name>WIDTH</ipxact:name><ipxact:value>8</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>SIZE</ipxact:name><ipxact:value>4</ipxact:value></ipxact:modelParameter>
+</ipxact:modelParameters>
 
 
 

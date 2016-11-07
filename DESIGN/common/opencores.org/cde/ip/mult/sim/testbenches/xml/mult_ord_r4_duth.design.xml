@@ -3,7 +3,7 @@
 //                                                                                                    //
 // Generated File Do Not EDIT                                                                         //
 //                                                                                                    //
-// ./tools/verilog/gen_tb -vendor opencores.org -library io  -component io_utimer  -version def //
+// ./tools/verilog/gen_tb -vendor opencores.org -library cde  -component mult  -version ord_r4 //
 //                                                                                                    //
 -->           
 <ipxact:design
@@ -13,16 +13,32 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
     http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
-<ipxact:library>io</ipxact:library>
-<ipxact:name>io_utimer</ipxact:name>
-<ipxact:version>def_duth.design</ipxact:version>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>mult</ipxact:name>
+<ipxact:version>ord_r4_duth.design</ipxact:version>
 <ipxact:adHocConnections>
 
 <ipxact:adHocConnection>
-<ipxact:name>addr</ipxact:name>
+<ipxact:name>a_in</ipxact:name>
 <ipxact:portReferences>
-<ipxact:externalPortReference portRef="addr" left="3" right="0" />
-<ipxact:internalPortReference  componentRef="dut" portRef="addr" />
+<ipxact:externalPortReference portRef="a_in" left="WIDTH-1" right="0" />
+<ipxact:internalPortReference  componentRef="dut" portRef="a_in" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>alu_op_mul</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="alu_op_mul" />
+<ipxact:internalPortReference  componentRef="dut" portRef="alu_op_mul" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>b_in</ipxact:name>
+<ipxact:portReferences>
+<ipxact:externalPortReference portRef="b_in" left="WIDTH-1" right="0" />
+<ipxact:internalPortReference  componentRef="dut" portRef="b_in" />
 </ipxact:portReferences>
 </ipxact:adHocConnection>
 
@@ -35,34 +51,26 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
-<ipxact:name>cs</ipxact:name>
+<ipxact:name>ex_freeze</ipxact:name>
  <ipxact:portReferences>
-<ipxact:externalPortReference  portRef="cs" />
-<ipxact:internalPortReference  componentRef="dut" portRef="cs" />
+<ipxact:externalPortReference  portRef="ex_freeze" />
+<ipxact:internalPortReference  componentRef="dut" portRef="ex_freeze" />
 </ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
-<ipxact:name>enable</ipxact:name>
- <ipxact:portReferences>
-<ipxact:externalPortReference  portRef="enable" />
-<ipxact:internalPortReference  componentRef="dut" portRef="enable" />
-</ipxact:portReferences>
-</ipxact:adHocConnection>
-
-<ipxact:adHocConnection>
-<ipxact:name>rd</ipxact:name>
- <ipxact:portReferences>
-<ipxact:externalPortReference  portRef="rd" />
-<ipxact:internalPortReference  componentRef="dut" portRef="rd" />
-</ipxact:portReferences>
-</ipxact:adHocConnection>
-
-<ipxact:adHocConnection>
-<ipxact:name>rdata</ipxact:name>
+<ipxact:name>mul_prod_r</ipxact:name>
 <ipxact:portReferences>
-<ipxact:externalPortReference portRef="rdata" left="7" right="0" />
-<ipxact:internalPortReference  componentRef="dut" portRef="rdata" />
+<ipxact:externalPortReference portRef="mul_prod_r" left="2*WIDTH-1" right="0" />
+<ipxact:internalPortReference  componentRef="dut" portRef="mul_prod_r" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>mul_stall</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="mul_stall" />
+<ipxact:internalPortReference  componentRef="dut" portRef="mul_stall" />
 </ipxact:portReferences>
 </ipxact:adHocConnection>
 
@@ -74,31 +82,15 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
 </ipxact:portReferences>
 </ipxact:adHocConnection>
 
-<ipxact:adHocConnection>
-<ipxact:name>wdata</ipxact:name>
-<ipxact:portReferences>
-<ipxact:externalPortReference portRef="wdata" left="7" right="0" />
-<ipxact:internalPortReference  componentRef="dut" portRef="wdata" />
-</ipxact:portReferences>
-</ipxact:adHocConnection>
-
-<ipxact:adHocConnection>
-<ipxact:name>wr</ipxact:name>
- <ipxact:portReferences>
-<ipxact:externalPortReference  portRef="wr" />
-<ipxact:internalPortReference  componentRef="dut" portRef="wr" />
-</ipxact:portReferences>
-</ipxact:adHocConnection>
-
 
 </ipxact:adHocConnections>
 <ipxact:componentInstances>
 
 <ipxact:componentInstance>
 <ipxact:instanceName>dut</ipxact:instanceName>
-<ipxact:componentRef vendor="opencores.org" library="io" name="io_utimer" version="def" />
+<ipxact:componentRef vendor="opencores.org" library="cde" name="mult" version="ord_r4" />
 <ipxact:configurableElementValues>
- <ipxact:configurableElementValue referenceId="FREQ">FREQ</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="WIDTH">WIDTH</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 </ipxact:componentInstances>

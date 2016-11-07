@@ -77,16 +77,15 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
    
 <ipxact:views>
 
-              <ipxact:view>
-              <ipxact:name>Params</ipxact:name>
-              <ipxact:vendorExtensions>
-              <ipxact:componentRef ipxact:vendor="opencores.org" 
-                                   ipxact:library="Mos6502" 
-                                   ipxact:name="T6502" 
-                                   ipxact:version="def_dut.params"/>
-              </ipxact:vendorExtensions>
-              </ipxact:view>
 
+      <ipxact:view>                                   
+              <ipxact:name>Dut</ipxact:name>                                   
+              <ipxact:envIdentifier></ipxact:envIdentifier>                                   
+              <ipxact:hierarchyRef ipxact:vendor="opencores.org"                                    
+                                   ipxact:library="Mos6502"                                    
+                                   ipxact:name="T6502"                                    
+                                   ipxact:version="def_duth.design"/>                                   
+              </ipxact:view>                                   
 
 
               <ipxact:view>
@@ -153,7 +152,23 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
       </ipxact:views>
 
+<ipxact:modelParameters>
+    <ipxact:modelParameter><ipxact:name>ROM_FILE</ipxact:name><ipxact:value>"NONE"</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>PROG_ROM_FILE</ipxact:name><ipxact:value>ROM_FILE</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>STARTUP</ipxact:name><ipxact:value>"NONE"</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>FONT</ipxact:name><ipxact:value>"NONE"</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>ADDR</ipxact:name><ipxact:value>11</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>BOOT_ROM_WIDTH</ipxact:name><ipxact:value>16</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>ROM_WRITETHRU</ipxact:name><ipxact:value>0</ipxact:value></ipxact:modelParameter>
 
+
+
+
+</ipxact:modelParameters>
+
+
+
+      
 </ipxact:model>    
    
 

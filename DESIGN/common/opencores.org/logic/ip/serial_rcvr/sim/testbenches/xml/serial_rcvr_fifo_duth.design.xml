@@ -11,7 +11,7 @@ xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
 xmlns:socgen="http://opencores.org"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
-http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+    http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>logic</ipxact:library>
 <ipxact:name>serial_rcvr</ipxact:name>
@@ -20,74 +20,98 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>clk</ipxact:name>
-<ipxact:externalPortReference portRef="clk" />
-<ipxact:internalPortReference componentRef="dut" portRef="clk" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="clk" />
+<ipxact:internalPortReference  componentRef="dut" portRef="clk" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>data_avail</ipxact:name>
-<ipxact:externalPortReference portRef="data_avail" />
-<ipxact:internalPortReference componentRef="dut" portRef="data_avail" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="data_avail" />
+<ipxact:internalPortReference  componentRef="dut" portRef="data_avail" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>data_out</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="data_out" left="WIDTH-1" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="data_out" />
+<ipxact:internalPortReference  componentRef="dut" portRef="data_out" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>edge_enable</ipxact:name>
-<ipxact:externalPortReference portRef="edge_enable" />
-<ipxact:internalPortReference componentRef="dut" portRef="edge_enable" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="edge_enable" />
+<ipxact:internalPortReference  componentRef="dut" portRef="edge_enable" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>pad_in</ipxact:name>
-<ipxact:externalPortReference portRef="pad_in" />
-<ipxact:internalPortReference componentRef="dut" portRef="pad_in" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="pad_in" />
+<ipxact:internalPortReference  componentRef="dut" portRef="pad_in" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>parity_enable</ipxact:name>
-<ipxact:externalPortReference portRef="parity_enable" />
-<ipxact:internalPortReference componentRef="dut" portRef="parity_enable" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="parity_enable" />
+<ipxact:internalPortReference  componentRef="dut" portRef="parity_enable" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>parity_error</ipxact:name>
-<ipxact:externalPortReference portRef="parity_error" />
-<ipxact:internalPortReference componentRef="dut" portRef="parity_error" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="parity_error" />
+<ipxact:internalPortReference  componentRef="dut" portRef="parity_error" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>parity_force</ipxact:name>
-<ipxact:externalPortReference portRef="parity_force" />
-<ipxact:internalPortReference componentRef="dut" portRef="parity_force" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="parity_force" />
+<ipxact:internalPortReference  componentRef="dut" portRef="parity_force" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>parity_type</ipxact:name>
-<ipxact:externalPortReference portRef="parity_type" />
-<ipxact:internalPortReference componentRef="dut" portRef="parity_type" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="parity_type" />
+<ipxact:internalPortReference  componentRef="dut" portRef="parity_type" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rcv_stb</ipxact:name>
-<ipxact:externalPortReference portRef="rcv_stb" />
-<ipxact:internalPortReference componentRef="dut" portRef="rcv_stb" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="rcv_stb" />
+<ipxact:internalPortReference  componentRef="dut" portRef="rcv_stb" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>reset</ipxact:name>
-<ipxact:externalPortReference portRef="reset" />
-<ipxact:internalPortReference componentRef="dut" portRef="reset" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="reset" />
+<ipxact:internalPortReference  componentRef="dut" portRef="reset" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>stop_error</ipxact:name>
-<ipxact:externalPortReference portRef="stop_error" />
-<ipxact:internalPortReference componentRef="dut" portRef="stop_error" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="stop_error" />
+<ipxact:internalPortReference  componentRef="dut" portRef="stop_error" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 

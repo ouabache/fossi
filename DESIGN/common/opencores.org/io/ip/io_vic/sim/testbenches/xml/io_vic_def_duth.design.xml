@@ -11,7 +11,7 @@ xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
 xmlns:socgen="http://opencores.org"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
-http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+    http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>io</ipxact:library>
 <ipxact:name>io_vic</ipxact:name>
@@ -20,74 +20,98 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>addr</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="addr" left="3" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="addr" />
+<ipxact:internalPortReference  componentRef="dut" portRef="addr" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>clk</ipxact:name>
-<ipxact:externalPortReference portRef="clk" />
-<ipxact:internalPortReference componentRef="dut" portRef="clk" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="clk" />
+<ipxact:internalPortReference  componentRef="dut" portRef="clk" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>cs</ipxact:name>
-<ipxact:externalPortReference portRef="cs" />
-<ipxact:internalPortReference componentRef="dut" portRef="cs" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="cs" />
+<ipxact:internalPortReference  componentRef="dut" portRef="cs" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>enable</ipxact:name>
-<ipxact:externalPortReference portRef="enable" />
-<ipxact:internalPortReference componentRef="dut" portRef="enable" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="enable" />
+<ipxact:internalPortReference  componentRef="dut" portRef="enable" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>int_in</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="int_in" left="7" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="int_in" />
+<ipxact:internalPortReference  componentRef="dut" portRef="int_in" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>irq_out</ipxact:name>
-<ipxact:externalPortReference portRef="irq_out" />
-<ipxact:internalPortReference componentRef="dut" portRef="irq_out" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="irq_out" />
+<ipxact:internalPortReference  componentRef="dut" portRef="irq_out" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rd</ipxact:name>
-<ipxact:externalPortReference portRef="rd" />
-<ipxact:internalPortReference componentRef="dut" portRef="rd" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="rd" />
+<ipxact:internalPortReference  componentRef="dut" portRef="rd" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>rdata</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="rdata" left="7" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="rdata" />
+<ipxact:internalPortReference  componentRef="dut" portRef="rdata" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>reset</ipxact:name>
-<ipxact:externalPortReference portRef="reset" />
-<ipxact:internalPortReference componentRef="dut" portRef="reset" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="reset" />
+<ipxact:internalPortReference  componentRef="dut" portRef="reset" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>vector</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="vector" left="7" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="vector" />
+<ipxact:internalPortReference  componentRef="dut" portRef="vector" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>wdata</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="wdata" left="7" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="wdata" />
+<ipxact:internalPortReference  componentRef="dut" portRef="wdata" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>wr</ipxact:name>
-<ipxact:externalPortReference portRef="wr" />
-<ipxact:internalPortReference componentRef="dut" portRef="wr" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="wr" />
+<ipxact:internalPortReference  componentRef="dut" portRef="wr" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 
@@ -98,6 +122,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>dut</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="io" name="io_vic" version="def" />
 <ipxact:configurableElementValues>
+ <ipxact:configurableElementValue referenceId="IRQ_MODE">IRQ_MODE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="VEC_00">VEC_00</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="VEC_01">VEC_01</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="VEC_02">VEC_02</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="VEC_03">VEC_03</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="VEC_04">VEC_04</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="VEC_05">VEC_05</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="VEC_06">VEC_06</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="VEC_07">VEC_07</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="VEC_NONE">VEC_NONE</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 </ipxact:componentInstances>

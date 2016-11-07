@@ -26,7 +26,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
               <ipxact:hierarchyRef ipxact:vendor="opencores.org"                                    
                                    ipxact:library="cde"                                    
                                    ipxact:name="mult"                                    
-                                   ipxact:version="generic_dutg.design"/>                                   
+                                   ipxact:version="generic_duth.design"/>                                   
               </ipxact:view>                                   
       </ipxact:views>                                   
 <ipxact:modelParameters>

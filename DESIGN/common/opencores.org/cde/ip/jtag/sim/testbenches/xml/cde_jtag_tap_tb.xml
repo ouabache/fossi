@@ -48,8 +48,9 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:model>    
   <ipxact:modelParameters>
 
-  <ipxact:modelParameter><ipxact:name>INST_LENGTH</ipxact:name><ipxact:value>4</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>INST_LENGTH</ipxact:name><ipxact:value>4</ipxact:value></ipxact:modelParameter>
     <ipxact:modelParameter><ipxact:name>INST_RETURN</ipxact:name><ipxact:value>4'b1101</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>INST_RESET</ipxact:name><ipxact:value>4'b1111</ipxact:value></ipxact:modelParameter>
     <ipxact:modelParameter><ipxact:name>EXTEST</ipxact:name><ipxact:value>4'b0000</ipxact:value></ipxact:modelParameter>
     <ipxact:modelParameter><ipxact:name>SAMPLE</ipxact:name><ipxact:value>4'b0001</ipxact:value></ipxact:modelParameter>
     <ipxact:modelParameter><ipxact:name>HIGHZ_MODE</ipxact:name><ipxact:value>4'b0010</ipxact:value></ipxact:modelParameter>
@@ -60,8 +61,8 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:modelParameter><ipxact:name>BYPASS</ipxact:name><ipxact:value>4'b1111</ipxact:value></ipxact:modelParameter>
     <ipxact:modelParameter><ipxact:name>CHIP_ID_VAL</ipxact:name><ipxact:value>32'h12345678</ipxact:value></ipxact:modelParameter>
 
-
-    
+    <ipxact:modelParameter><ipxact:name>NUM_USER</ipxact:name><ipxact:value>2</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>USER</ipxact:name><ipxact:value>8'b1010_1001</ipxact:value></ipxact:modelParameter>
     <ipxact:modelParameter><ipxact:name>JTAG_SEL</ipxact:name><ipxact:value>2</ipxact:value></ipxact:modelParameter>
     <ipxact:modelParameter><ipxact:name>JTAG_USER1_WIDTH</ipxact:name><ipxact:value>8</ipxact:value></ipxact:modelParameter>
     <ipxact:modelParameter><ipxact:name>JTAG_USER1_RESET</ipxact:name><ipxact:value>8'h12</ipxact:value></ipxact:modelParameter>
@@ -81,7 +82,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 		<ipxact:designInstantiation>
 	<ipxact:name>Dut</ipxact:name>
-	<ipxact:designRef vendor="opencores.org" library="cde" name="jtag" version="tap_dutg.design"/>
+	<ipxact:designRef vendor="opencores.org" library="cde" name="jtag" version="tap_duth.design"/>
 	</ipxact:designInstantiation>
 
 	</ipxact:instantiations>

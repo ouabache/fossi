@@ -51,16 +51,20 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
        <ipxact:views>
 
-              <ipxact:view>
-              <ipxact:name>Dut</ipxact:name>              
-              <ipxact:vendorExtensions>
-              <ipxact:componentRef ipxact:vendor="opencores.org" 
-                                   ipxact:library="Mos6502" 
-                                   ipxact:name="cpu" 
-                                   ipxact:version="def_dut.params"/> 
-              </ipxact:vendorExtensions>
-              </ipxact:view>
 
+                             
+              <ipxact:view>                                   
+              <ipxact:name>Dut</ipxact:name>                                   
+              <ipxact:envIdentifier></ipxact:envIdentifier>                                   
+              <ipxact:hierarchyRef ipxact:vendor="opencores.org"                                    
+                                   ipxact:library="Mos6502"                                    
+                                   ipxact:name="cpu"                                    
+                                   ipxact:version="def_duth.design"/>                                   
+              </ipxact:view>                                   
+
+
+
+	 
 
               <ipxact:view>
               <ipxact:name>lint</ipxact:name>
@@ -83,6 +87,28 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+<ipxact:modelParameters>
+    <ipxact:modelParameter><ipxact:name>VEC_TABLE</ipxact:name><ipxact:value>8'hff</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>BOOT_VEC</ipxact:name><ipxact:value>8'hfc</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>CPU_ADD</ipxact:name><ipxact:value>16</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>UART_MODEL_CLKCNT</ipxact:name><ipxact:value>4'b1100</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>UART_MODEL_SIZE</ipxact:name><ipxact:value>4</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>STARTUP</ipxact:name><ipxact:value>"NONE"</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>FONT</ipxact:name><ipxact:value>"NONE"</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>RAM_ADD</ipxact:name><ipxact:value>11</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>RAM_WORDS</ipxact:name><ipxact:value>2048</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>ROM_ADD</ipxact:name><ipxact:value>12</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>ROM_WORDS</ipxact:name><ipxact:value>4096</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>ROM_FILE</ipxact:name><ipxact:value>"NONE"</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>PROG_ROM_ADD</ipxact:name><ipxact:value>ROM_ADD</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>PROG_ROM_WORDS</ipxact:name><ipxact:value>ROM_WORDS</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>PROG_ROM_WIDTH</ipxact:name><ipxact:value>16</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>PROG_ROM_FILE</ipxact:name><ipxact:value>ROM_FILE</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>STACK_RAM_SIZE</ipxact:name><ipxact:value>8</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>STACK_RAM_WIDTH</ipxact:name><ipxact:value>16</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>STACK_RAM_WORDS</ipxact:name><ipxact:value>256</ipxact:value></ipxact:modelParameter>
+
+</ipxact:modelParameters>
 
 
 </ipxact:model>    

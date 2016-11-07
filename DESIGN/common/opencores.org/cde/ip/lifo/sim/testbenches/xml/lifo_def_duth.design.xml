@@ -11,7 +11,7 @@ xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
 xmlns:socgen="http://opencores.org"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
-http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+    http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>cde</ipxact:library>
 <ipxact:name>lifo</ipxact:name>
@@ -20,38 +20,50 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>clk</ipxact:name>
-<ipxact:externalPortReference portRef="clk" />
-<ipxact:internalPortReference componentRef="dut" portRef="clk" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="clk" />
+<ipxact:internalPortReference  componentRef="dut" portRef="clk" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>din</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="din" left="WIDTH-1" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="din" />
+<ipxact:internalPortReference  componentRef="dut" portRef="din" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>dout</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="dout" left="WIDTH-1" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="dout" />
+<ipxact:internalPortReference  componentRef="dut" portRef="dout" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>pop</ipxact:name>
-<ipxact:externalPortReference portRef="pop" />
-<ipxact:internalPortReference componentRef="dut" portRef="pop" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="pop" />
+<ipxact:internalPortReference  componentRef="dut" portRef="pop" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>push</ipxact:name>
-<ipxact:externalPortReference portRef="push" />
-<ipxact:internalPortReference componentRef="dut" portRef="push" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="push" />
+<ipxact:internalPortReference  componentRef="dut" portRef="push" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>reset</ipxact:name>
-<ipxact:externalPortReference portRef="reset" />
-<ipxact:internalPortReference componentRef="dut" portRef="reset" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="reset" />
+<ipxact:internalPortReference  componentRef="dut" portRef="reset" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 

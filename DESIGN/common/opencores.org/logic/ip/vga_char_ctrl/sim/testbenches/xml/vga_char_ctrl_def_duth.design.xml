@@ -11,7 +11,7 @@ xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
 xmlns:socgen="http://opencores.org"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
-http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+    http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>logic</ipxact:library>
 <ipxact:name>vga_char_ctrl</ipxact:name>
@@ -20,92 +20,122 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>add_h_load</ipxact:name>
-<ipxact:externalPortReference portRef="add_h_load" />
-<ipxact:internalPortReference componentRef="dut" portRef="add_h_load" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="add_h_load" />
+<ipxact:internalPortReference  componentRef="dut" portRef="add_h_load" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>add_l_load</ipxact:name>
-<ipxact:externalPortReference portRef="add_l_load" />
-<ipxact:internalPortReference componentRef="dut" portRef="add_l_load" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="add_l_load" />
+<ipxact:internalPortReference  componentRef="dut" portRef="add_l_load" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>address</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="address" left="13" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="address" />
+<ipxact:internalPortReference  componentRef="dut" portRef="address" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>ascii_load</ipxact:name>
-<ipxact:externalPortReference portRef="ascii_load" />
-<ipxact:internalPortReference componentRef="dut" portRef="ascii_load" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="ascii_load" />
+<ipxact:internalPortReference  componentRef="dut" portRef="ascii_load" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>back_color</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="back_color" left="7" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="back_color" />
+<ipxact:internalPortReference  componentRef="dut" portRef="back_color" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>blue_pad_out</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="blue_pad_out" left="1" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="blue_pad_out" />
+<ipxact:internalPortReference  componentRef="dut" portRef="blue_pad_out" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>char_color</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="char_color" left="7" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="char_color" />
+<ipxact:internalPortReference  componentRef="dut" portRef="char_color" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>clk</ipxact:name>
-<ipxact:externalPortReference portRef="clk" />
-<ipxact:internalPortReference componentRef="dut" portRef="clk" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="clk" />
+<ipxact:internalPortReference  componentRef="dut" portRef="clk" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>cursor_color</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="cursor_color" left="7" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="cursor_color" />
+<ipxact:internalPortReference  componentRef="dut" portRef="cursor_color" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>green_pad_out</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="green_pad_out" left="2" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="green_pad_out" />
+<ipxact:internalPortReference  componentRef="dut" portRef="green_pad_out" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>hsync_n_pad_out</ipxact:name>
-<ipxact:externalPortReference portRef="hsync_n_pad_out" />
-<ipxact:internalPortReference componentRef="dut" portRef="hsync_n_pad_out" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="hsync_n_pad_out" />
+<ipxact:internalPortReference  componentRef="dut" portRef="hsync_n_pad_out" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>red_pad_out</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="red_pad_out" left="2" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="red_pad_out" />
+<ipxact:internalPortReference  componentRef="dut" portRef="red_pad_out" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>reset</ipxact:name>
-<ipxact:externalPortReference portRef="reset" />
-<ipxact:internalPortReference componentRef="dut" portRef="reset" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="reset" />
+<ipxact:internalPortReference  componentRef="dut" portRef="reset" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>vsync_n_pad_out</ipxact:name>
-<ipxact:externalPortReference portRef="vsync_n_pad_out" />
-<ipxact:internalPortReference componentRef="dut" portRef="vsync_n_pad_out" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="vsync_n_pad_out" />
+<ipxact:internalPortReference  componentRef="dut" portRef="vsync_n_pad_out" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>wdata</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="wdata" left="7" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="wdata" />
+<ipxact:internalPortReference  componentRef="dut" portRef="wdata" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 
@@ -117,6 +147,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:componentRef vendor="opencores.org" library="logic" name="vga_char_ctrl" version="def" />
 <ipxact:configurableElementValues>
  <ipxact:configurableElementValue referenceId="CHARACTER_DECODE_DELAY">CHARACTER_DECODE_DELAY</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CHAR_RAM_ADDR">CHAR_RAM_ADDR</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CHAR_RAM_WIDTH">CHAR_RAM_WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CHAR_RAM_WORDS">CHAR_RAM_WORDS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CHAR_RAM_WRITETHRU">CHAR_RAM_WRITETHRU</ipxact:configurableElementValue>
  <ipxact:configurableElementValue referenceId="H_ACTIVE">H_ACTIVE</ipxact:configurableElementValue>
  <ipxact:configurableElementValue referenceId="H_BACK_PORCH">H_BACK_PORCH</ipxact:configurableElementValue>
  <ipxact:configurableElementValue referenceId="H_FRONT_PORCH">H_FRONT_PORCH</ipxact:configurableElementValue>
@@ -127,10 +161,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
  <ipxact:configurableElementValue referenceId="V_FRONT_PORCH">V_FRONT_PORCH</ipxact:configurableElementValue>
  <ipxact:configurableElementValue referenceId="V_SYNCH">V_SYNCH</ipxact:configurableElementValue>
  <ipxact:configurableElementValue referenceId="V_TOTAL">V_TOTAL</ipxact:configurableElementValue>
- <ipxact:configurableElementValue referenceId="CHAR_RAM_ADDR">CHAR_RAM_ADDR</ipxact:configurableElementValue>
- <ipxact:configurableElementValue referenceId="CHAR_RAM_WIDTH">CHAR_RAM_WIDTH</ipxact:configurableElementValue>
- <ipxact:configurableElementValue referenceId="CHAR_RAM_WORDS">CHAR_RAM_WORDS</ipxact:configurableElementValue>
- <ipxact:configurableElementValue referenceId="CHAR_RAM_WRITETHRU">CHAR_RAM_WRITETHRU</ipxact:configurableElementValue>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>
 </ipxact:componentInstances>

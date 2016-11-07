@@ -15,7 +15,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>cde</ipxact:library>
 <ipxact:name>serial</ipxact:name>
-<ipxact:version>both_dutg.design</ipxact:version>
+<ipxact:version>both_dut.design</ipxact:version>
 <ipxact:vendorExtensions><socgen:nodes>
 
 

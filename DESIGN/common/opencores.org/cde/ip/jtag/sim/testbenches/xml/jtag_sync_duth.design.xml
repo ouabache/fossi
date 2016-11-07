@@ -3,7 +3,7 @@
 //                                                                                                    //
 // Generated File Do Not EDIT                                                                         //
 //                                                                                                    //
-// ./tools/verilog/gen_tb -vendor opencores.org -library adv_debug_sys  -component adv_dbg_if  -version wb_cpu0_jsp //
+// ./tools/verilog/gen_tb -vendor opencores.org -library cde  -component jtag  -version sync //
 //                                                                                                    //
 -->           
 <ipxact:design
@@ -13,9 +13,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
     http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
-<ipxact:library>adv_debug_sys</ipxact:library>
-<ipxact:name>adv_dbg_if</ipxact:name>
-<ipxact:version>wb_cpu0_jsp_duth.design</ipxact:version>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>jtag</ipxact:name>
+<ipxact:version>sync_duth.design</ipxact:version>
 <ipxact:adHocConnections>
 
 
@@ -24,7 +24,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
 
 <ipxact:componentInstance>
 <ipxact:instanceName>dut</ipxact:instanceName>
-<ipxact:componentRef vendor="opencores.org" library="adv_debug_sys" name="adv_dbg_if" version="wb_cpu0_jsp" />
+<ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="sync" />
 <ipxact:configurableElementValues>
 </ipxact:configurableElementValues>
 </ipxact:componentInstance>

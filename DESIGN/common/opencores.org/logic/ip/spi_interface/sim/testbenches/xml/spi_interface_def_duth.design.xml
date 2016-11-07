@@ -11,7 +11,7 @@ xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
 xmlns:socgen="http://opencores.org"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
-http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+    http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:vendor>opencores.org</ipxact:vendor>
 <ipxact:library>logic</ipxact:library>
 <ipxact:name>spi_interface</ipxact:name>
@@ -20,63 +20,75 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:adHocConnection>
 <ipxact:name>busy</ipxact:name>
-<ipxact:externalPortReference portRef="busy" />
-<ipxact:internalPortReference componentRef="dut" portRef="busy" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="busy" />
+<ipxact:internalPortReference  componentRef="dut" portRef="busy" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>clk</ipxact:name>
-<ipxact:externalPortReference portRef="clk" />
-<ipxact:internalPortReference componentRef="dut" portRef="clk" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="clk" />
+<ipxact:internalPortReference  componentRef="dut" portRef="clk" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reset</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="reset" />
+<ipxact:internalPortReference  componentRef="dut" portRef="reset" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>rx_data</ipxact:name>
+<ipxact:portReferences>
+<ipxact:externalPortReference portRef="rx_data" left="15" right="0" />
+<ipxact:internalPortReference  componentRef="dut" portRef="rx_data" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>spi_clk_pad_in</ipxact:name>
-<ipxact:externalPortReference portRef="spi_clk_pad_in" />
-<ipxact:internalPortReference componentRef="dut" portRef="spi_clk_pad_in" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="spi_clk_pad_in" />
+<ipxact:internalPortReference  componentRef="dut" portRef="spi_clk_pad_in" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>spi_miso_pad_out</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="spi_miso_pad_out" />
+<ipxact:internalPortReference  componentRef="dut" portRef="spi_miso_pad_out" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>spi_mosi_pad_in</ipxact:name>
-<ipxact:externalPortReference portRef="spi_mosi_pad_in" />
-<ipxact:internalPortReference componentRef="dut" portRef="spi_mosi_pad_in" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="spi_mosi_pad_in" />
+<ipxact:internalPortReference  componentRef="dut" portRef="spi_mosi_pad_in" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
-
-
-<ipxact:adHocConnection>
-<ipxact:name>spi_miso_pad_out</ipxact:name>
-<ipxact:externalPortReference portRef="spi_miso_pad_out" />
-<ipxact:internalPortReference componentRef="dut" portRef="spi_miso_pad_out" />
-</ipxact:adHocConnection>
-
-
 
 <ipxact:adHocConnection>
 <ipxact:name>spi_sel_n_pad_in</ipxact:name>
-<ipxact:externalPortReference portRef="spi_sle_n_pad_in" />
-<ipxact:internalPortReference componentRef="dut" portRef="spi_sel_n_pad_in" />
-</ipxact:adHocConnection>
-
-
-<ipxact:adHocConnection>
-<ipxact:name>reset</ipxact:name>
-<ipxact:externalPortReference portRef="reset" />
-<ipxact:internalPortReference componentRef="dut" portRef="reset" />
-</ipxact:adHocConnection>
-
-
-<ipxact:adHocConnection>
-<ipxact:name>rx_data</ipxact:name>
-<ipxact:externalPortReference portRef="rx_data" left="15" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="rx_data" />
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="spi_sel_n_pad_in" />
+<ipxact:internalPortReference  componentRef="dut" portRef="spi_sel_n_pad_in" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
 
 <ipxact:adHocConnection>
 <ipxact:name>tx_data</ipxact:name>
+<ipxact:portReferences>
 <ipxact:externalPortReference portRef="tx_data" left="15" right="0" />
-<ipxact:internalPortReference componentRef="dut" portRef="tx_data" />
+<ipxact:internalPortReference  componentRef="dut" portRef="tx_data" />
+</ipxact:portReferences>
 </ipxact:adHocConnection>
-
 
 
 </ipxact:adHocConnections>

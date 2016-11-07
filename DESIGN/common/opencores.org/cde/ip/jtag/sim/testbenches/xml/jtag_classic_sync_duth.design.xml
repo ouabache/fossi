@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--           
+//                                                                                                    //
+// Generated File Do Not EDIT                                                                         //
+//                                                                                                    //
+// ./tools/verilog/gen_tb -vendor opencores.org -library cde  -component jtag  -version classic_sync //
+//                                                                                                    //
+-->           
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+    http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>cde</ipxact:library>
+<ipxact:name>jtag</ipxact:name>
+<ipxact:version>classic_sync_duth.design</ipxact:version>
+<ipxact:adHocConnections>
+
+<ipxact:adHocConnection>
+<ipxact:name>capture_dr</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="capture_dr" />
+<ipxact:internalPortReference  componentRef="dut" portRef="capture_dr" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>clk</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="clk" />
+<ipxact:internalPortReference  componentRef="dut" portRef="clk" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>select</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="select" />
+<ipxact:internalPortReference  componentRef="dut" portRef="select" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>shift_dr</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="shift_dr" />
+<ipxact:internalPortReference  componentRef="dut" portRef="shift_dr" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>shiftcapture_dr_clk</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="shiftcapture_dr_clk" />
+<ipxact:internalPortReference  componentRef="dut" portRef="shiftcapture_dr_clk" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>syn_capture_dr</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="syn_capture_dr" />
+<ipxact:internalPortReference  componentRef="dut" portRef="syn_capture_dr" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>syn_clk</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="syn_clk" />
+<ipxact:internalPortReference  componentRef="dut" portRef="syn_clk" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>syn_reset</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="syn_reset" />
+<ipxact:internalPortReference  componentRef="dut" portRef="syn_reset" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>syn_select</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="syn_select" />
+<ipxact:internalPortReference  componentRef="dut" portRef="syn_select" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>syn_shift_dr</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="syn_shift_dr" />
+<ipxact:internalPortReference  componentRef="dut" portRef="syn_shift_dr" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>syn_tdi_o</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="syn_tdi_o" />
+<ipxact:internalPortReference  componentRef="dut" portRef="syn_tdi_o" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>syn_tdo_i</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="syn_tdo_i" />
+<ipxact:internalPortReference  componentRef="dut" portRef="syn_tdo_i" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>syn_update_dr</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="syn_update_dr" />
+<ipxact:internalPortReference  componentRef="dut" portRef="syn_update_dr" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>tdi</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="tdi" />
+<ipxact:internalPortReference  componentRef="dut" portRef="tdi" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>tdo</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="tdo" />
+<ipxact:internalPortReference  componentRef="dut" portRef="tdo" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>test_logic_reset</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="test_logic_reset" />
+<ipxact:internalPortReference  componentRef="dut" portRef="test_logic_reset" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>update_dr_clk</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="update_dr_clk" />
+<ipxact:internalPortReference  componentRef="dut" portRef="update_dr_clk" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dut</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="cde" name="jtag" version="classic_sync" />
+<ipxact:configurableElementValues>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+</ipxact:componentInstances>
+</ipxact:design>
