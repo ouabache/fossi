@@ -20,5 +20,16 @@ Hard coded module names
 
 
 
+Manage `defines
+
+Manage Module names
+
+Manage signal names
+
+
+defparms effect on build system
+
+Process centric v module centric
+
 
 
