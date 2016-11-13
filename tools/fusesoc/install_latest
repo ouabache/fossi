@@ -1,0 +1,4 @@
+git clone https://github.com/olofk/fusesoc
+cd fusesoc
+sudo pip install -e .
+cd ..
