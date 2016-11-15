@@ -75,7 +75,7 @@ my $sim_variant       = $ARGV[4];
 
 chdir  "./${prefix}/${vendor}__${library}${sim_library_path}/icarus/${sim_name}";
 
-$cmd= "iverilog -f ../../testbenches/filelists/${sim_variant}.sim -D VCD  2> ./${sim_name}_elab.log  | tee >> ./${sim_name}_elab.log \n";
+$cmd= "iverilog -DREFIX=${home} -f ../../testbenches/filelists/${sim_variant}.sim -D VCD  2> ./${sim_name}_elab.log  | tee >> ./${sim_name}_elab.log \n";
 if (system($cmd)) {}
 
 

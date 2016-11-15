@@ -296,13 +296,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-<ipxact:componentInstance>
-<ipxact:instanceName>disp_io_jtag</ipxact:instanceName> 
-<ipxact:componentRef vendor="opencores.org" library="logic" name="disp_io" version="jtag" />
-<ipxact:configurableElementValues>
-</ipxact:configurableElementValues>
-</ipxact:componentInstance>
-
 
 
 

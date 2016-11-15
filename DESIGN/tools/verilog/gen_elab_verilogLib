@@ -180,6 +180,9 @@ mkdir $path,0755             unless( -e $path );
     my $outfile ="${home}${prefix}/${vendor}__${library}${lib_comp_sep}${component}${comp_xml_sep}/${dest_dir}/../defines/${variant}.v";
     open DEFLIST,">$outfile" or die "unable to open $outfile";
 
+    print  DEFLIST "   \`define HOME     \"${home}\"\n";
+    print  DEFLIST "   \`define CODE     \"/code/\" \n";
+
         if(defined $configuration && length $configuration >0 )
           {
           print  DEFLIST "   \`define $ip_name_base_macro     ${module_name}_${configuration}  \n";
@@ -392,12 +395,12 @@ foreach $line (@filelist)
 
 
         if(defined $configuration && length $configuration >0 )
-             {
-        $cmd ="vppreproc --noline --noblank  $cmd_path  -f  ${home}${prefix}/${vendor}__${library}${lib_comp_sep}${component}${comp_xml_sep}/${dest_dir}/../filelists/${variant}.INC  -f  ${home}${prefix}/${vendor}__${library}${lib_comp_sep}${component}${comp_xml_sep}/${dest_dir}/../filelists/${variant}_${configuration}.MOD    >>  $file_out \n";
+             { 
+        $cmd ="vppreproc  --noline --noblank  $cmd_path  -f  ${home}${prefix}/${vendor}__${library}${lib_comp_sep}${component}${comp_xml_sep}/${dest_dir}/../filelists/${variant}.INC  -f  ${home}${prefix}/${vendor}__${library}${lib_comp_sep}${component}${comp_xml_sep}/${dest_dir}/../filelists/${variant}_${configuration}.MOD    >>  $file_out \n";
              }
         else
              {
-        $cmd ="vppreproc --noline --noblank  $cmd_path  -f  ${home}${prefix}/${vendor}__${library}${lib_comp_sep}${component}${comp_xml_sep}/${dest_dir}/../filelists/${variant}.INC  -f  ${home}${prefix}/${vendor}__${library}${lib_comp_sep}${component}${comp_xml_sep}/${dest_dir}/../filelists/${variant}.MOD    >>  $file_out \n";
+        $cmd ="vppreproc  --noline --noblank  $cmd_path  -f  ${home}${prefix}/${vendor}__${library}${lib_comp_sep}${component}${comp_xml_sep}/${dest_dir}/../filelists/${variant}.INC  -f  ${home}${prefix}/${vendor}__${library}${lib_comp_sep}${component}${comp_xml_sep}/${dest_dir}/../filelists/${variant}.MOD    >>  $file_out \n";
              }
 
 

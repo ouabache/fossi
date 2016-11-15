@@ -78,6 +78,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
       </ipxact:file>
 
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/sram.load</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
+      </ipxact:file>
+      
+
     </ipxact:fileSet>
 
 

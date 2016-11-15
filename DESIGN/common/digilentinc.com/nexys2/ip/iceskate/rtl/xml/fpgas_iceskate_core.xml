@@ -41,11 +41,31 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:componentGenerators>
 
-<ipxact:componentGenerator>
-  <ipxact:name>gen_verilog</ipxact:name>
+
+
+
+
+  <ipxact:componentGenerator>
+  <ipxact:name>gen_verilog_sim</ipxact:name>
   <ipxact:phase>104.0</ipxact:phase>
   <ipxact:apiType>none</ipxact:apiType>
-  <ipxact:vendorExtensions><socgen:envIdentifier>:*common:*</socgen:envIdentifier></ipxact:vendorExtensions>
+  <ipxact:vendorExtensions><socgen:envIdentifier>:*Simulation:*</socgen:envIdentifier></ipxact:vendorExtensions>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/verilog/gen_verilog</ipxact:generatorExe>
+  <ipxact:parameters>
+    <ipxact:parameter> 
+      <ipxact:name>destination</ipxact:name>
+      <ipxact:value>iceskate_core</ipxact:value>
+    </ipxact:parameter>
+  </ipxact:parameters>
+  </ipxact:componentGenerator>
+
+
+
+    <ipxact:componentGenerator>
+  <ipxact:name>gen_verilog_syn</ipxact:name>
+  <ipxact:phase>104.0</ipxact:phase>
+  <ipxact:apiType>none</ipxact:apiType>
+  <ipxact:vendorExtensions><socgen:envIdentifier>:*Synthesis:*</socgen:envIdentifier></ipxact:vendorExtensions>
   <ipxact:generatorExe>${SOCGEN_TOOLS}/verilog/gen_verilog</ipxact:generatorExe>
   <ipxact:parameters>
     <ipxact:parameter> 
@@ -54,6 +74,17 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     </ipxact:parameter>
   </ipxact:parameters>
 </ipxact:componentGenerator>
+
+
+
+
+
+
+
+
+
+
+
 
 </ipxact:componentGenerators>
 
@@ -65,12 +96,23 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:model>    
 
 
+		<ipxact:instantiations>
+			<ipxact:designInstantiation>
+				<ipxact:name>Hierarchical</ipxact:name>
+				<ipxact:designRef vendor="opencores.org" library="fpgas" name="Nexys2_T6502" version="core.design"/>
+			</ipxact:designInstantiation>
+		</ipxact:instantiations>
 
 
-	
- 
 
-  <ipxact:views>
+		<ipxact:views>
+
+		  
+              <ipxact:view>
+		<ipxact:name>Hierarchical</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
+               <ipxact:designInstantiationRef>Hierarchical</ipxact:designInstantiationRef>
+              </ipxact:view>
+
 
 
               <ipxact:view>
@@ -98,14 +140,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
               </ipxact:vendorExtensions>
               </ipxact:view>
 
-              <ipxact:view>
-              <ipxact:name>common</ipxact:name><ipxact:envIdentifier>:*common:*</ipxact:envIdentifier>
-              <ipxact:language>Verilog</ipxact:language>
-              <ipxact:modelName></ipxact:modelName>
-                     <ipxact:fileSetRef>
-                            <ipxact:localName>fs-common</ipxact:localName>
-                     </ipxact:fileSetRef>
-              </ipxact:view>
+
 
               <ipxact:view>
               <ipxact:name>sim</ipxact:name><ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
@@ -122,7 +157,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
               <ipxact:language>Verilog</ipxact:language>
               <ipxact:modelName></ipxact:modelName>
                      <ipxact:fileSetRef>
-                            <ipxact:localName>fs-sim</ipxact:localName>
+                            <ipxact:localName>fs-syn</ipxact:localName>
                      </ipxact:fileSetRef>
               </ipxact:view>
 
@@ -141,6 +176,27 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:modelParameter><ipxact:name>JTAG_USER2_WIDTH</ipxact:name><ipxact:value>8</ipxact:value></ipxact:modelParameter>  
   <ipxact:modelParameter><ipxact:name>JTAG_USER2_RESET</ipxact:name><ipxact:value>8'h78</ipxact:value></ipxact:modelParameter>
   <ipxact:modelParameter><ipxact:name>CHIP_ID</ipxact:name><ipxact:value>32'h12345678</ipxact:value></ipxact:modelParameter>
+  <ipxact:modelParameter><ipxact:name>ROM_FILE</ipxact:name>
+  <ipxact:value>"opencores.org__Mos6502/table_tim1/table_tim1.abs16"</ipxact:value></ipxact:modelParameter>
+  <ipxact:modelParameter><ipxact:name>ROM_WORDS</ipxact:name><ipxact:value>128</ipxact:value></ipxact:modelParameter>
+  <ipxact:modelParameter><ipxact:name>ROM_ADD</ipxact:name><ipxact:value>7</ipxact:value></ipxact:modelParameter>
+  <ipxact:modelParameter><ipxact:name>PROG_ROM_FILE</ipxact:name>
+  <ipxact:value>"opencores.org__Mos6502/kim_2/kim_2.abs16"</ipxact:value></ipxact:modelParameter>
+  <ipxact:modelParameter><ipxact:name>PROG_ROM_WORDS</ipxact:name><ipxact:value>2048</ipxact:value></ipxact:modelParameter>
+  <ipxact:modelParameter><ipxact:name>PROG_ROM_ADD</ipxact:name><ipxact:value>11</ipxact:value></ipxact:modelParameter>  
+  <ipxact:modelParameter><ipxact:name>STARTUP</ipxact:name>
+       <ipxact:value>"opencores.org__fpgas/vga_startup_screen/vga_startup_screen.abs"</ipxact:value></ipxact:modelParameter>  
+         <ipxact:modelParameter><ipxact:name>FONT</ipxact:name>
+         <ipxact:value>"opencores.org__fpgas/vga_font/vga_font.abs"</ipxact:value></ipxact:modelParameter> 
+         <ipxact:modelParameter><ipxact:name>RAM_WORDS</ipxact:name><ipxact:value>2048</ipxact:value></ipxact:modelParameter>
+         <ipxact:modelParameter><ipxact:name>RAM_ADD</ipxact:name><ipxact:value>11</ipxact:value></ipxact:modelParameter>
+         <ipxact:modelParameter><ipxact:name>VEC_TABLE</ipxact:name><ipxact:value>8'hff</ipxact:value></ipxact:modelParameter>  
+         <ipxact:modelParameter><ipxact:name>UART_PRESCALE</ipxact:name><ipxact:value>5'b01100</ipxact:value></ipxact:modelParameter>  
+         <ipxact:modelParameter><ipxact:name>UART_PRE_SIZE</ipxact:name><ipxact:value>5</ipxact:value></ipxact:modelParameter>  
+         <ipxact:modelParameter><ipxact:name>UART_DIV</ipxact:name><ipxact:value>0</ipxact:value></ipxact:modelParameter>  
+
+
+
   
 </ipxact:modelParameters>
 
@@ -199,11 +255,10 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 <ipxact:fileSets>
 
+
+
    <ipxact:fileSet>
-      <ipxact:name>fs-common</ipxact:name>
-
-
-
+      <ipxact:name>fs-sim</ipxact:name>
 
       <ipxact:file>
         <ipxact:logicalName></ipxact:logicalName>
@@ -211,21 +266,16 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
         <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
       </ipxact:file>
 
-
-
-
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/sram.load</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
+      </ipxact:file>
+      
       <ipxact:file>
         <ipxact:name>../verilog</ipxact:name>
         <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
       </ipxact:file>
-
-
-
-   </ipxact:fileSet>
-
-
-   <ipxact:fileSet>
-      <ipxact:name>fs-sim</ipxact:name>
 
       <ipxact:file>
         <ipxact:logicalName></ipxact:logicalName>
@@ -235,18 +285,63 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
       <ipxact:file>
         <ipxact:logicalName></ipxact:logicalName>
-        <ipxact:name>../verilog/common/iceskate_core</ipxact:name>
+        <ipxact:name>../verilog/sim/iceskate_core</ipxact:name>
         <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
       </ipxact:file>
 
-      
-
-
-
+   
 
    </ipxact:fileSet>
 
 
+
+
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-syn</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/top</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
+      </ipxact:file>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/sram1.load</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
+      </ipxact:file>
+      
+      <ipxact:file>
+        <ipxact:name>../verilog</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/copyright</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
+      </ipxact:file>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/syn/iceskate_core</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+   
+
+   </ipxact:fileSet>
+
+
+
+
+   
+
+
+
+   
 
 
 

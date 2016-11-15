@@ -62,6 +62,21 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
          <socgen:version>default_tb</socgen:version>
          <socgen:version>default_lint</socgen:version>
          <socgen:parameters>
+	 <socgen:parameter><socgen:name>ROM_FILE</socgen:name>
+         <socgen:value>"opencores.org__Mos6502/table_tim1/table_tim1.abs16"</socgen:value></socgen:parameter>
+         <socgen:parameter><socgen:name>ROM_WORDS</socgen:name><socgen:value>128</socgen:value></socgen:parameter>
+         <socgen:parameter><socgen:name>ROM_ADD</socgen:name><socgen:value>7</socgen:value></socgen:parameter>
+         <socgen:parameter><socgen:name>PROG_ROM_FILE</socgen:name>
+         <socgen:value>"opencores.org__Mos6502/kim_2/kim_2.abs16"</socgen:value></socgen:parameter>
+         <socgen:parameter><socgen:name>PROG_ROM_WORDS</socgen:name><socgen:value>2048</socgen:value></socgen:parameter>
+         <socgen:parameter><socgen:name>PROG_ROM_ADD</socgen:name><socgen:value>11</socgen:value></socgen:parameter>  
+         <socgen:parameter><socgen:name>STARTUP</socgen:name>
+         <socgen:value>"opencores.org__fpgas/vga_startup_screen/vga_startup_screen.abs"</socgen:value></socgen:parameter>  
+         <socgen:parameter><socgen:name>FONT</socgen:name>
+         <socgen:value>"opencores.org__fpgas/vga_font/vga_font.abs"</socgen:value></socgen:parameter> 
+         <socgen:parameter><socgen:name>RAM_WORDS</socgen:name><socgen:value>2048</socgen:value></socgen:parameter>
+         <socgen:parameter><socgen:name>RAM_ADD</socgen:name><socgen:value>11</socgen:value></socgen:parameter>
+         <socgen:parameter><socgen:name>VEC_TABLE</socgen:name><socgen:value>8'hff</socgen:value></socgen:parameter>  
          <socgen:parameter><socgen:name>CLOCK_FREQ</socgen:name><socgen:value>50</socgen:value></socgen:parameter>    
          <socgen:parameter><socgen:name>CLOCK_PLL_MULT</socgen:name><socgen:value>2</socgen:value></socgen:parameter>    
          <socgen:parameter><socgen:name>CLOCK_PLL_DIV</socgen:name><socgen:value>4</socgen:value></socgen:parameter>    
@@ -73,6 +88,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
          <socgen:parameter><socgen:name>JTAG_USER2_WIDTH</socgen:name><socgen:value>8</socgen:value></socgen:parameter>  
          <socgen:parameter><socgen:name>JTAG_USER2_RESET</socgen:name><socgen:value>8'h78</socgen:value></socgen:parameter>  
 
+
+	 
 	 </socgen:parameters>
        </socgen:configuration>
 

@@ -1,0 +1,12 @@
+parameter PREFIX = `HOME ;     
+parameter CODE = `CODE ;     
+
+initial
+  begin
+   if( STARTUP       != "NONE") begin $readmemh({PREFIX,CODE,STARTUP}      , T6502.io_module.vga.vga_char_ctrl.char_ram.mem );end
+   if( FONT          != "NONE") begin $readmemh({PREFIX,CODE,FONT}         , T6502.io_module.vga.vga_char_ctrl.char_gen_rom.mem );end
+   if( PROG_ROM_FILE != "NONE") begin $readmemh({PREFIX,CODE,PROG_ROM_FILE}, T6502.cpu.prog_rom.mem );end
+   if( PROG_ROM_FILE != "NONE") begin $readmemh({PREFIX,CODE,PROG_ROM_FILE}, T6502.sh_prog_rom.mem );end
+   if(      ROM_FILE != "NONE") begin $readmemh({PREFIX,CODE,ROM_FILE}     , T6502.boot_rom.mem );end
+  end
+

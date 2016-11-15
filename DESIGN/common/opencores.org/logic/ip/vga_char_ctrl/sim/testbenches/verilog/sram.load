@@ -1,8 +1,10 @@
-parameter PREFIX ="../../../../../../../code/";   
+parameter PREFIX = `HOME ;   
+parameter CODE   = `CODE ;   
+
 
 initial
   begin
-  if( STARTUP != "NONE") begin $readmemh({PREFIX,STARTUP},dut.char_ram.mem); end
-  if( FONT    != "NONE") begin $readmemh({PREFIX,FONT}, dut.char_gen_rom.mem); end
+  if( STARTUP != "NONE") begin $readmemh({PREFIX,CODE,STARTUP},dut.char_ram.mem); end
+  if( FONT    != "NONE") begin $readmemh({PREFIX,CODE,FONT}, dut.char_gen_rom.mem); end
   end
    

@@ -1,0 +1,9 @@
+parameter PREFIX = `HOME;
+parameter CODE = `CODE;
+
+defparam T6502.io_module.vga.vga_char_ctrl.char_ram.MEM     = {PREFIX,CODE,STARTUP};
+defparam T6502.io_module.vga.vga_char_ctrl.char_gen_rom.MEM = {PREFIX,CODE,FONT};
+defparam T6502.sh_prog_rom.MEM                              = {PREFIX,CODE,PROG_ROM_FILE};
+defparam T6502.cpu.prog_rom.MEM                             = {PREFIX,CODE,PROG_ROM_FILE};
+defparam T6502.boot_rom.MEM                                 = {PREFIX,CODE,ROM_FILE};
+   
