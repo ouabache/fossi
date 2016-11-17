@@ -1819,7 +1819,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
 
  <ipxact:interconnection>                                                              
  <ipxact:name>MEMOE</ipxact:name>                                                
- <ipxact:activeInterface  componentRef="memoe_pad" busRef="pad_ring">        
+ <ipxact:activeInterface  componentRef="memoe_n_pad" busRef="pad_ring">        
     <ipxact:portMaps>                                                                  
           <ipxact:portMap>                                                             
 	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
@@ -1831,20 +1831,20 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
   </ipxact:interconnection>                                           
 
  <ipxact:interconnection>                                             
- <ipxact:name>memoe</ipxact:name>                                               
- <ipxact:activeInterface  componentRef="memoe_pad" busRef="pad">            
+ <ipxact:name>memoe_n</ipxact:name>                                               
+ <ipxact:activeInterface  componentRef="memoe_n_pad" busRef="pad">            
     <ipxact:portMaps>                                                                 
           <ipxact:portMap>                                                         
 	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
-          <ipxact:physicalPort><ipxact:name>memoe_pad_out</ipxact:name>                  
+          <ipxact:physicalPort><ipxact:name>memoe_n_pad_out</ipxact:name>                  
          </ipxact:physicalPort> </ipxact:portMap>                                          
     </ipxact:portMaps>                                                                   
   </ipxact:activeInterface>                                                 
- <ipxact:activeInterface  componentRef="core" busRef="memoe_pad">           
+ <ipxact:activeInterface  componentRef="core" busRef="memoe_n_pad">           
     <ipxact:portMaps>                                                                    
           <ipxact:portMap>                                                                 
-	  <ipxact:logicalPort><ipxact:name>memoe_pad_out</ipxact:name></ipxact:logicalPort>            
-          <ipxact:physicalPort><ipxact:name>memoe_pad_out</ipxact:name>              
+	  <ipxact:logicalPort><ipxact:name>memoe_n_pad_out</ipxact:name></ipxact:logicalPort>            
+          <ipxact:physicalPort><ipxact:name>memoe_n_pad_out</ipxact:name>              
        </ipxact:physicalPort>   </ipxact:portMap>                                           
     </ipxact:portMaps>                                                                               
   </ipxact:activeInterface>                                                 
@@ -3216,7 +3216,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  </ipxact:configurableElementValues>      
   </ipxact:componentInstance>                                                                                
 
- <ipxact:componentInstance>  <ipxact:instanceName>memoe_pad</ipxact:instanceName>      
+ <ipxact:componentInstance>  <ipxact:instanceName>memoe_n_pad</ipxact:instanceName>      
  <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
   </ipxact:componentInstance>                                                                                
 

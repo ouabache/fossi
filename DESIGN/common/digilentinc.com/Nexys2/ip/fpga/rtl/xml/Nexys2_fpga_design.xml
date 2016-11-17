@@ -247,74 +247,74 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>memadr_out</ipxact:name>
+      <ipxact:name>memadr_pad_out</ipxact:name>
            <ipxact:portReferences>
       <ipxact:externalPortReference  portRef=""/>
-      <ipxact:internalPortReference componentRef="core" portRef="memadr_out"/>
+      <ipxact:internalPortReference componentRef="core" portRef="memadr_pad_out"/>
         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>memdb_out</ipxact:name>
+      <ipxact:name>memdb_pad_out</ipxact:name>
            <ipxact:portReferences>
       <ipxact:externalPortReference  portRef=""/>
-      <ipxact:internalPortReference componentRef="core" portRef="memdb_out"/>
+      <ipxact:internalPortReference componentRef="core" portRef="memdb_pad_out"/>
         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>memdb_in</ipxact:name>
+      <ipxact:name>memdb_pad_in</ipxact:name>
            <ipxact:portReferences>
       <ipxact:externalPortReference  portRef=""/>
-      <ipxact:internalPortReference componentRef="core" portRef="memdb_in"/>
+      <ipxact:internalPortReference componentRef="core" portRef="memdb_pad_in"/>
         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>memdb_oe</ipxact:name>
+      <ipxact:name>memdb_pad_oe</ipxact:name>
            <ipxact:portReferences>
       <ipxact:externalPortReference  portRef=""/>
-      <ipxact:internalPortReference componentRef="core" portRef="memdb_oe"/>
+      <ipxact:internalPortReference componentRef="core" portRef="memdb_pad_oe"/>
         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>ramclk_out</ipxact:name>
+      <ipxact:name>ramclk_pad_out</ipxact:name>
            <ipxact:portReferences>
       <ipxact:externalPortReference  portRef=""/>
-      <ipxact:internalPortReference componentRef="core" portRef="ramclk_out"/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramclk_pad_out"/>
         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>ramcre_out</ipxact:name>
+      <ipxact:name>ramcre_pad_out</ipxact:name>
            <ipxact:portReferences>
       <ipxact:externalPortReference  portRef=""/>
-      <ipxact:internalPortReference componentRef="core" portRef="ramcre_out"/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramcre_pad_out"/>
         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>memoe_n_out</ipxact:name>
+      <ipxact:name>memoe_n_pad_out</ipxact:name>
            <ipxact:portReferences>
       <ipxact:externalPortReference  portRef=""/>
-      <ipxact:internalPortReference componentRef="core" portRef="memoe_n_out"/>
+      <ipxact:internalPortReference componentRef="core" portRef="memoe_n_pad_out"/>
         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>ramcs_n_out</ipxact:name>
+      <ipxact:name>ramcs_n_pad_out</ipxact:name>
            <ipxact:portReferences>
       <ipxact:externalPortReference  portRef=""/>
-      <ipxact:internalPortReference componentRef="core" portRef="ramcs_n_out"/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramcs_n_pad_out"/>
         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>ramlb_n_out</ipxact:name>
+      <ipxact:name>ramlb_n_pad_out</ipxact:name>
            <ipxact:portReferences>
       <ipxact:externalPortReference  portRef=""/>
-      <ipxact:internalPortReference componentRef="core" portRef="ramlb_n_out"/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramlb_n_pad_out"/>
         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
@@ -343,34 +343,34 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>ramwait_in</ipxact:name>
+      <ipxact:name>ramwait_pad_in</ipxact:name>
            <ipxact:portReferences>
       <ipxact:externalPortReference  portRef=""/>
-      <ipxact:internalPortReference componentRef="core" portRef="ramwait_in"/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramwait_pad_in"/>
         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>ramadv_n_out</ipxact:name>
+      <ipxact:name>ramadv_n_pad_out</ipxact:name>
            <ipxact:portReferences>
       <ipxact:externalPortReference  portRef=""/>
-      <ipxact:internalPortReference componentRef="core" portRef="ramadv_n_out"/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramadv_n_pad_out"/>
         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>ramub_n_out</ipxact:name>
+      <ipxact:name>ramub_n_pad_out</ipxact:name>
            <ipxact:portReferences>
       <ipxact:externalPortReference  portRef=""/>
-      <ipxact:internalPortReference componentRef="core" portRef="ramub_n_out"/>
+      <ipxact:internalPortReference componentRef="core" portRef="ramub_n_pad_out"/>
         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>memwr_n_out</ipxact:name>
+      <ipxact:name>memwr_n_pad_out</ipxact:name>
            <ipxact:portReferences>
       <ipxact:externalPortReference  portRef=""/>
-      <ipxact:internalPortReference componentRef="core" portRef="memwr_n_out"/>
+      <ipxact:internalPortReference componentRef="core" portRef="memwr_n_pad_out"/>
         </ipxact:portReferences>
     </ipxact:adHocConnection>
 
@@ -2622,7 +2622,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>memadr_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>memadr_pad_out</ipxact:name>
           <ipxact:wire><ipxact:vector><ipxact:left>23</ipxact:left><ipxact:right>1</ipxact:right></ipxact:vector></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
@@ -2638,21 +2638,21 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>memdb_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>memdb_pad_out</ipxact:name>
           <ipxact:wire><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>memdb_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>memdb_pad_in</ipxact:name>
           <ipxact:wire><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>memdb_oe</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>memdb_pad_oe</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>
@@ -2670,7 +2670,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>memoe_n_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>memoe_n_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>
@@ -2687,7 +2687,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>memwr_n_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>memwr_n_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>
@@ -2705,7 +2705,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramclk_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramclk_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>
@@ -2721,7 +2721,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramcre_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramcre_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>
@@ -2739,7 +2739,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramcs_n_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramcs_n_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>
@@ -2756,7 +2756,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramub_n_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramub_n_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>
@@ -2772,7 +2772,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramlb_n_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramlb_n_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>
@@ -2836,7 +2836,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramwait_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramwait_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>
@@ -2851,7 +2851,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramadv_n_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramadv_n_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
         </ipxact:portMaps>

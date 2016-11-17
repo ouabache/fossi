@@ -12,11 +12,11 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
 <ipxact:vendor>lattice.com</ipxact:vendor> 
 <ipxact:library>fpgas</ipxact:library> 
 <ipxact:name>iceskate</ipxact:name> 
-<ipxact:version>dut.design</ipxact:version> 
+<ipxact:version>padring_dut.design</ipxact:version> 
 <ipxact:componentInstances> 
 <ipxact:componentInstance> 
 <ipxact:instanceName>dut</ipxact:instanceName> 
-<ipxact:componentRef vendor="lattice.com" library="fpgas" name="iceskate" version="default" /> 
+<ipxact:componentRef vendor="lattice.com" library="fpgas" name="iceskate" version="padring" /> 
 <ipxact:configurableElementValues> 
 </ipxact:configurableElementValues> 
 </ipxact:componentInstance> 

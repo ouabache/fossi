@@ -658,10 +658,10 @@ close DESIGN_FILE;
 # Create core component file
 #
 
+my $u_core  = uc $core;
 
 
-
-my $outfile = "${xml_file}/${component}_${core}.xml";
+my $outfile = "${xml_file}/${component}_${u_core}.xml";
 
 my $cmd = "cp ${home}/tools/padring/component_boilerplate ${outfile}\n";
 
@@ -672,7 +672,7 @@ open COMP_FILE,">>$outfile" or die "unable to open $outfile";
 print COMP_FILE  "<ipxact:vendor>${vendor}</ipxact:vendor> \n";
 print COMP_FILE  "<ipxact:library>${library}</ipxact:library> \n";
 print COMP_FILE  "<ipxact:name>${component}</ipxact:name> \n";
-print COMP_FILE  "<ipxact:version>${core}</ipxact:version> \n";
+print COMP_FILE  "<ipxact:version>${u_core}</ipxact:version> \n";
 
 
 print COMP_FILE  "\n <ipxact:busInterfaces> \n";
@@ -927,11 +927,11 @@ foreach $pad (@pad_list) {
  $PIN_name = $Pad_name{$pin_name};
 if (${pin_type} eq "vector")
    {
-   print ISE_FILE  "NET  \"${PIN_name}<${pin_bit}>\"  lOC=\"${pin_ucf}\"; \n";
+   print ISE_FILE  "NET  \"${PIN_name}<${pin_bit}>\"  LOC = \"${pin_ucf}\";\n";
    }
  else
    {
-   print ISE_FILE  "NET  \"${PIN_name}\"  LOC=\"${pin_ucf}\";\n";
+   print ISE_FILE  "NET  \"${PIN_name}\"  LOC = \"${pin_ucf}\";\n";
    }
 
 

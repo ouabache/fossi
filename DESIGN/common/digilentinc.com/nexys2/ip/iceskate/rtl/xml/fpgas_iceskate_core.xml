@@ -61,11 +61,27 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
-    <ipxact:componentGenerator>
+  <ipxact:componentGenerator>
   <ipxact:name>gen_verilog_syn</ipxact:name>
   <ipxact:phase>104.0</ipxact:phase>
   <ipxact:apiType>none</ipxact:apiType>
   <ipxact:vendorExtensions><socgen:envIdentifier>:*Synthesis:*</socgen:envIdentifier></ipxact:vendorExtensions>
+  <ipxact:generatorExe>${SOCGEN_TOOLS}/verilog/gen_verilog</ipxact:generatorExe>
+  <ipxact:parameters>
+    <ipxact:parameter> 
+      <ipxact:name>destination</ipxact:name>
+      <ipxact:value>iceskate_core</ipxact:value>
+    </ipxact:parameter>
+  </ipxact:parameters>
+</ipxact:componentGenerator>
+
+
+
+  <ipxact:componentGenerator>
+  <ipxact:name>gen_verilog_lint</ipxact:name>
+  <ipxact:phase>104.0</ipxact:phase>
+  <ipxact:apiType>none</ipxact:apiType>
+  <ipxact:vendorExtensions><socgen:envIdentifier>:*Lint:*</socgen:envIdentifier></ipxact:vendorExtensions>
   <ipxact:generatorExe>${SOCGEN_TOOLS}/verilog/gen_verilog</ipxact:generatorExe>
   <ipxact:parameters>
     <ipxact:parameter> 
@@ -161,7 +177,21 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
                      </ipxact:fileSetRef>
               </ipxact:view>
 
-      </ipxact:views>
+
+              <ipxact:view>
+              <ipxact:name>lint</ipxact:name><ipxact:envIdentifier>:*Lint:*</ipxact:envIdentifier>
+              <ipxact:language>Verilog</ipxact:language>
+              <ipxact:modelName></ipxact:modelName>
+                     <ipxact:fileSetRef>
+                            <ipxact:localName>fs-lint</ipxact:localName>
+                     </ipxact:fileSetRef>
+              </ipxact:view>
+
+
+
+
+
+		</ipxact:views>
 
 
 <ipxact:modelParameters>
@@ -336,6 +366,43 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
 
+
+
+
+
+   <ipxact:fileSet>
+      <ipxact:name>fs-lint</ipxact:name>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/top</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>fragment</ipxact:userFileType>
+      </ipxact:file>
+
+      <ipxact:file>
+        <ipxact:name>../verilog</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>libraryDir</ipxact:userFileType>
+      </ipxact:file>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/copyright</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>include</ipxact:userFileType>
+      </ipxact:file>
+
+      <ipxact:file>
+        <ipxact:logicalName></ipxact:logicalName>
+        <ipxact:name>../verilog/lint/iceskate_core</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType><ipxact:userFileType>module</ipxact:userFileType>
+      </ipxact:file>
+
+   
+
+   </ipxact:fileSet>
+
+
+
+   
 
    
 

@@ -22,3 +22,25 @@ assign STOP = 1'b0;
 assign BAD = 1'b0;
 
 
+pullup pu_ramwait  ( RAMWAIT   );
+pullup pu_memdb_0  ( MEMDB[0]  );
+pullup pu_memdb_1  ( MEMDB[1]  );
+pullup pu_memdb_2  ( MEMDB[2]  );
+pullup pu_memdb_3  ( MEMDB[3]  );
+pullup pu_memdb_4  ( MEMDB[4]  );
+pullup pu_memdb_5  ( MEMDB[5]  );
+pullup pu_memdb_6  ( MEMDB[6]  );
+pullup pu_memdb_7  ( MEMDB[7]  );
+pullup pu_memdb_8  ( MEMDB[8]  );
+pullup pu_memdb_9  ( MEMDB[9]  );
+pullup pu_memdb_10 ( MEMDB[10] );
+pullup pu_memdb_11 ( MEMDB[11] );
+pullup pu_memdb_12 ( MEMDB[12] );
+pullup pu_memdb_13 ( MEMDB[13] );
+pullup pu_memdb_14 ( MEMDB[14] );
+pullup pu_memdb_15 ( MEMDB[15] );
+pullup pu_flashststs ( FLASHSTSTS );
+
+
+
+

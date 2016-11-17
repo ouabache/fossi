@@ -3,13 +3,14 @@ wire clk;
 wire reset;
 
 assign clk            = clk_pad_in;
-
+assign reset          = ! pmod_2_pad_in;
 
 reg [31:0] COUNTER;
 
 always@(posedge clk)
 begin
-               COUNTER <= COUNTER + 32'h00000001;
+if(reset)  COUNTER <= 32'h00000001;
+else       COUNTER <= COUNTER + 32'h00000001;
 end
 
 
@@ -20,18 +21,23 @@ end
 
 
 
-assign   led1_pad_out    = COUNTER[29];
-assign   led2_pad_out    = COUNTER[27];
+assign   led1_pad_out    = COUNTER[27];
+assign   led2_pad_out    = COUNTER[26];
 assign   led3_pad_out    = COUNTER[25];
-assign   led4_pad_out    = COUNTER[23];
-assign   led5_pad_out    = COUNTER[22];
+assign   led4_pad_out    = COUNTER[24];
+assign   led5_pad_out    = pmod_2_pad_in;
 
 
 
+
+assign  pmod_1_pad_out = 1'b1;
+
+assign  pmod_4_pad_out =  pmod_3_pad_in;
+ 
 
 assign   j1_10_pad_out = ctsn_pad_in ^ dcdn_pad_in ^ dsrn_pad_in ^ rs232_rx_pad_in ^ rxd_pad_in ;
-assign   dtrn_pad_out    = 1'b1;                         
-assign   j1_3_pad_out             = 1'b0;                  
+assign   dtrn_pad_out    =1'b0;                        
+assign   j1_3_pad_out    =  pmod_7_pad_in  ^ pmod_8_pad_in ^ pmod_9_pad_in ^ pmod_10_pad_in ;
 assign   j1_4_pad_out                      = 1'b0;         
 assign   j1_5_pad_out                               = 1'b0;
 assign   j1_6_pad_out                               = 1'b0;
@@ -46,14 +52,7 @@ assign   j3_6_pad_out                               = 1'b0;
 assign   j3_7_pad_out                               = 1'b0;
 assign   j3_8_pad_out                               = 1'b0;
 assign   j3_9_pad_out                               = 1'b0;
-assign   pmod_1_pad_out                               = 1'b0;
-assign   pmod_10_pad_out                               = 1'b0;
-assign   pmod_2_pad_out                               = 1'b0;
-assign   pmod_3_pad_out                               = 1'b0;
-assign   pmod_4_pad_out                               = 1'b0;
-assign   pmod_7_pad_out                               = 1'b0;
-assign   pmod_8_pad_out                               = 1'b0;
-assign   pmod_9_pad_out                               = 1'b0;
+
 assign   rs232_tx_pad_out                               = 1'b1;
 assign   rtsn_pad_out           = 1'b1;                  
 assign   sd_pad_out           = 1'b1; 

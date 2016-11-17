@@ -9,9 +9,9 @@ initial
  $display("          ===================================================");
  $display("              ");
 
- test.PMOD4_reg <= 1'b1;
+ test.PMOD_2_reg <= 1'b0;
  test.cg.next(100);
- test.PMOD4_reg <= 1'b0;
+ test.PMOD_2_reg <= 1'b1;
 
  test.cg.next(1000);
 

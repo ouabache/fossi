@@ -911,7 +911,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  <ipxact:activeInterface  componentRef="pmod_10_pad" busRef="pad_ring">        
     <ipxact:portMaps>                                                                  
           <ipxact:portMap>                                                             
-	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort> 
           <ipxact:physicalPort><ipxact:name>PMOD_10</ipxact:name>                  
        </ipxact:physicalPort>   </ipxact:portMap>                     
     </ipxact:portMaps>                                                
@@ -923,18 +923,18 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  <ipxact:name>pmod_10</ipxact:name>                                               
  <ipxact:activeInterface  componentRef="pmod_10_pad" busRef="pad">            
     <ipxact:portMaps>                                                                 
-          <ipxact:portMap>                                                         
-	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
-          <ipxact:physicalPort><ipxact:name>pmod_10_pad_out</ipxact:name>                  
-         </ipxact:physicalPort> </ipxact:portMap>                                          
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>pmod_10_pad_in</ipxact:name>                  
+     </ipxact:physicalPort>     </ipxact:portMap>                      
     </ipxact:portMaps>                                                                   
   </ipxact:activeInterface>                                                 
  <ipxact:activeInterface  componentRef="core" busRef="pmod_10_pad">           
     <ipxact:portMaps>                                                                    
-          <ipxact:portMap>                                                                 
-	  <ipxact:logicalPort><ipxact:name>pmod_10_pad_out</ipxact:name></ipxact:logicalPort>            
-          <ipxact:physicalPort><ipxact:name>pmod_10_pad_out</ipxact:name>              
-       </ipxact:physicalPort>   </ipxact:portMap>                                           
+          <ipxact:portMap>                                                               
+	  <ipxact:logicalPort><ipxact:name>pmod_10_pad_in</ipxact:name></ipxact:logicalPort>           
+          <ipxact:physicalPort><ipxact:name>pmod_10_pad_in</ipxact:name>             
+          </ipxact:physicalPort></ipxact:portMap>                                         
     </ipxact:portMaps>                                                                               
   </ipxact:activeInterface>                                                 
   </ipxact:interconnection>                                                                         
@@ -944,7 +944,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  <ipxact:activeInterface  componentRef="pmod_2_pad" busRef="pad_ring">        
     <ipxact:portMaps>                                                                  
           <ipxact:portMap>                                                             
-	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort> 
           <ipxact:physicalPort><ipxact:name>PMOD_2</ipxact:name>                  
        </ipxact:physicalPort>   </ipxact:portMap>                     
     </ipxact:portMaps>                                                
@@ -956,18 +956,18 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  <ipxact:name>pmod_2</ipxact:name>                                               
  <ipxact:activeInterface  componentRef="pmod_2_pad" busRef="pad">            
     <ipxact:portMaps>                                                                 
-          <ipxact:portMap>                                                         
-	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
-          <ipxact:physicalPort><ipxact:name>pmod_2_pad_out</ipxact:name>                  
-         </ipxact:physicalPort> </ipxact:portMap>                                          
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>pmod_2_pad_in</ipxact:name>                  
+     </ipxact:physicalPort>     </ipxact:portMap>                      
     </ipxact:portMaps>                                                                   
   </ipxact:activeInterface>                                                 
  <ipxact:activeInterface  componentRef="core" busRef="pmod_2_pad">           
     <ipxact:portMaps>                                                                    
-          <ipxact:portMap>                                                                 
-	  <ipxact:logicalPort><ipxact:name>pmod_2_pad_out</ipxact:name></ipxact:logicalPort>            
-          <ipxact:physicalPort><ipxact:name>pmod_2_pad_out</ipxact:name>              
-       </ipxact:physicalPort>   </ipxact:portMap>                                           
+          <ipxact:portMap>                                                               
+	  <ipxact:logicalPort><ipxact:name>pmod_2_pad_in</ipxact:name></ipxact:logicalPort>           
+          <ipxact:physicalPort><ipxact:name>pmod_2_pad_in</ipxact:name>             
+          </ipxact:physicalPort></ipxact:portMap>                                         
     </ipxact:portMaps>                                                                               
   </ipxact:activeInterface>                                                 
   </ipxact:interconnection>                                                                         
@@ -977,7 +977,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  <ipxact:activeInterface  componentRef="pmod_3_pad" busRef="pad_ring">        
     <ipxact:portMaps>                                                                  
           <ipxact:portMap>                                                             
-	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort> 
           <ipxact:physicalPort><ipxact:name>PMOD_3</ipxact:name>                  
        </ipxact:physicalPort>   </ipxact:portMap>                     
     </ipxact:portMaps>                                                
@@ -989,18 +989,18 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  <ipxact:name>pmod_3</ipxact:name>                                               
  <ipxact:activeInterface  componentRef="pmod_3_pad" busRef="pad">            
     <ipxact:portMaps>                                                                 
-          <ipxact:portMap>                                                         
-	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
-          <ipxact:physicalPort><ipxact:name>pmod_3_pad_out</ipxact:name>                  
-         </ipxact:physicalPort> </ipxact:portMap>                                          
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>pmod_3_pad_in</ipxact:name>                  
+     </ipxact:physicalPort>     </ipxact:portMap>                      
     </ipxact:portMaps>                                                                   
   </ipxact:activeInterface>                                                 
  <ipxact:activeInterface  componentRef="core" busRef="pmod_3_pad">           
     <ipxact:portMaps>                                                                    
-          <ipxact:portMap>                                                                 
-	  <ipxact:logicalPort><ipxact:name>pmod_3_pad_out</ipxact:name></ipxact:logicalPort>            
-          <ipxact:physicalPort><ipxact:name>pmod_3_pad_out</ipxact:name>              
-       </ipxact:physicalPort>   </ipxact:portMap>                                           
+          <ipxact:portMap>                                                               
+	  <ipxact:logicalPort><ipxact:name>pmod_3_pad_in</ipxact:name></ipxact:logicalPort>           
+          <ipxact:physicalPort><ipxact:name>pmod_3_pad_in</ipxact:name>             
+          </ipxact:physicalPort></ipxact:portMap>                                         
     </ipxact:portMaps>                                                                               
   </ipxact:activeInterface>                                                 
   </ipxact:interconnection>                                                                         
@@ -1043,7 +1043,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  <ipxact:activeInterface  componentRef="pmod_7_pad" busRef="pad_ring">        
     <ipxact:portMaps>                                                                  
           <ipxact:portMap>                                                             
-	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort> 
           <ipxact:physicalPort><ipxact:name>PMOD_7</ipxact:name>                  
        </ipxact:physicalPort>   </ipxact:portMap>                     
     </ipxact:portMaps>                                                
@@ -1055,18 +1055,18 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  <ipxact:name>pmod_7</ipxact:name>                                               
  <ipxact:activeInterface  componentRef="pmod_7_pad" busRef="pad">            
     <ipxact:portMaps>                                                                 
-          <ipxact:portMap>                                                         
-	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
-          <ipxact:physicalPort><ipxact:name>pmod_7_pad_out</ipxact:name>                  
-         </ipxact:physicalPort> </ipxact:portMap>                                          
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>pmod_7_pad_in</ipxact:name>                  
+     </ipxact:physicalPort>     </ipxact:portMap>                      
     </ipxact:portMaps>                                                                   
   </ipxact:activeInterface>                                                 
  <ipxact:activeInterface  componentRef="core" busRef="pmod_7_pad">           
     <ipxact:portMaps>                                                                    
-          <ipxact:portMap>                                                                 
-	  <ipxact:logicalPort><ipxact:name>pmod_7_pad_out</ipxact:name></ipxact:logicalPort>            
-          <ipxact:physicalPort><ipxact:name>pmod_7_pad_out</ipxact:name>              
-       </ipxact:physicalPort>   </ipxact:portMap>                                           
+          <ipxact:portMap>                                                               
+	  <ipxact:logicalPort><ipxact:name>pmod_7_pad_in</ipxact:name></ipxact:logicalPort>           
+          <ipxact:physicalPort><ipxact:name>pmod_7_pad_in</ipxact:name>             
+          </ipxact:physicalPort></ipxact:portMap>                                         
     </ipxact:portMaps>                                                                               
   </ipxact:activeInterface>                                                 
   </ipxact:interconnection>                                                                         
@@ -1076,7 +1076,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  <ipxact:activeInterface  componentRef="pmod_8_pad" busRef="pad_ring">        
     <ipxact:portMaps>                                                                  
           <ipxact:portMap>                                                             
-	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort> 
           <ipxact:physicalPort><ipxact:name>PMOD_8</ipxact:name>                  
        </ipxact:physicalPort>   </ipxact:portMap>                     
     </ipxact:portMaps>                                                
@@ -1088,18 +1088,18 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  <ipxact:name>pmod_8</ipxact:name>                                               
  <ipxact:activeInterface  componentRef="pmod_8_pad" busRef="pad">            
     <ipxact:portMaps>                                                                 
-          <ipxact:portMap>                                                         
-	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
-          <ipxact:physicalPort><ipxact:name>pmod_8_pad_out</ipxact:name>                  
-         </ipxact:physicalPort> </ipxact:portMap>                                          
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>pmod_8_pad_in</ipxact:name>                  
+     </ipxact:physicalPort>     </ipxact:portMap>                      
     </ipxact:portMaps>                                                                   
   </ipxact:activeInterface>                                                 
  <ipxact:activeInterface  componentRef="core" busRef="pmod_8_pad">           
     <ipxact:portMaps>                                                                    
-          <ipxact:portMap>                                                                 
-	  <ipxact:logicalPort><ipxact:name>pmod_8_pad_out</ipxact:name></ipxact:logicalPort>            
-          <ipxact:physicalPort><ipxact:name>pmod_8_pad_out</ipxact:name>              
-       </ipxact:physicalPort>   </ipxact:portMap>                                           
+          <ipxact:portMap>                                                               
+	  <ipxact:logicalPort><ipxact:name>pmod_8_pad_in</ipxact:name></ipxact:logicalPort>           
+          <ipxact:physicalPort><ipxact:name>pmod_8_pad_in</ipxact:name>             
+          </ipxact:physicalPort></ipxact:portMap>                                         
     </ipxact:portMaps>                                                                               
   </ipxact:activeInterface>                                                 
   </ipxact:interconnection>                                                                         
@@ -1109,7 +1109,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  <ipxact:activeInterface  componentRef="pmod_9_pad" busRef="pad_ring">        
     <ipxact:portMaps>                                                                  
           <ipxact:portMap>                                                             
-	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort> 
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort> 
           <ipxact:physicalPort><ipxact:name>PMOD_9</ipxact:name>                  
        </ipxact:physicalPort>   </ipxact:portMap>                     
     </ipxact:portMaps>                                                
@@ -1121,18 +1121,18 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  <ipxact:name>pmod_9</ipxact:name>                                               
  <ipxact:activeInterface  componentRef="pmod_9_pad" busRef="pad">            
     <ipxact:portMaps>                                                                 
-          <ipxact:portMap>                                                         
-	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>    
-          <ipxact:physicalPort><ipxact:name>pmod_9_pad_out</ipxact:name>                  
-         </ipxact:physicalPort> </ipxact:portMap>                                          
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>pmod_9_pad_in</ipxact:name>                  
+     </ipxact:physicalPort>     </ipxact:portMap>                      
     </ipxact:portMaps>                                                                   
   </ipxact:activeInterface>                                                 
  <ipxact:activeInterface  componentRef="core" busRef="pmod_9_pad">           
     <ipxact:portMaps>                                                                    
-          <ipxact:portMap>                                                                 
-	  <ipxact:logicalPort><ipxact:name>pmod_9_pad_out</ipxact:name></ipxact:logicalPort>            
-          <ipxact:physicalPort><ipxact:name>pmod_9_pad_out</ipxact:name>              
-       </ipxact:physicalPort>   </ipxact:portMap>                                           
+          <ipxact:portMap>                                                               
+	  <ipxact:logicalPort><ipxact:name>pmod_9_pad_in</ipxact:name></ipxact:logicalPort>           
+          <ipxact:physicalPort><ipxact:name>pmod_9_pad_in</ipxact:name>             
+          </ipxact:physicalPort></ipxact:portMap>                                         
     </ipxact:portMaps>                                                                               
   </ipxact:activeInterface>                                                 
   </ipxact:interconnection>                                                                         
@@ -1453,15 +1453,15 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
   </ipxact:componentInstance>                                                                                
 
  <ipxact:componentInstance>  <ipxact:instanceName>pmod_10_pad</ipxact:instanceName>      
- <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />         
   </ipxact:componentInstance>                                                                                
 
  <ipxact:componentInstance>  <ipxact:instanceName>pmod_2_pad</ipxact:instanceName>      
- <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />         
   </ipxact:componentInstance>                                                                                
 
  <ipxact:componentInstance>  <ipxact:instanceName>pmod_3_pad</ipxact:instanceName>      
- <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />         
   </ipxact:componentInstance>                                                                                
 
  <ipxact:componentInstance>  <ipxact:instanceName>pmod_4_pad</ipxact:instanceName>      
@@ -1469,15 +1469,15 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
   </ipxact:componentInstance>                                                                                
 
  <ipxact:componentInstance>  <ipxact:instanceName>pmod_7_pad</ipxact:instanceName>      
- <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />         
   </ipxact:componentInstance>                                                                                
 
  <ipxact:componentInstance>  <ipxact:instanceName>pmod_8_pad</ipxact:instanceName>      
- <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />         
   </ipxact:componentInstance>                                                                                
 
  <ipxact:componentInstance>  <ipxact:instanceName>pmod_9_pad</ipxact:instanceName>      
- <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="out_dig" />         
+ <ipxact:componentRef vendor="opencores.org" library="cde" name="pad" version="in_dig" />         
   </ipxact:componentInstance>                                                                                
 
  <ipxact:componentInstance>  <ipxact:instanceName>rs232_rx_pad</ipxact:instanceName>      

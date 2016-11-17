@@ -454,7 +454,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
   <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>  
     <ipxact:portMaps>                                                                                  
           <ipxact:portMap>                                                                             
-	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort>   
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort>   
           <ipxact:physicalPort><ipxact:name>PMOD_10</ipxact:name>         
           </ipxact:physicalPort>            
           </ipxact:portMap>                                                                            
@@ -470,7 +470,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
   <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>  
     <ipxact:portMaps>                                                                                  
           <ipxact:portMap>                                                                             
-	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort>   
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort>   
           <ipxact:physicalPort><ipxact:name>PMOD_2</ipxact:name>         
           </ipxact:physicalPort>            
           </ipxact:portMap>                                                                            
@@ -486,7 +486,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
   <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>  
     <ipxact:portMaps>                                                                                  
           <ipxact:portMap>                                                                             
-	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort>   
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort>   
           <ipxact:physicalPort><ipxact:name>PMOD_3</ipxact:name>         
           </ipxact:physicalPort>            
           </ipxact:portMap>                                                                            
@@ -518,7 +518,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
   <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>  
     <ipxact:portMaps>                                                                                  
           <ipxact:portMap>                                                                             
-	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort>   
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort>   
           <ipxact:physicalPort><ipxact:name>PMOD_7</ipxact:name>         
           </ipxact:physicalPort>            
           </ipxact:portMap>                                                                            
@@ -534,7 +534,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
   <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>  
     <ipxact:portMaps>                                                                                  
           <ipxact:portMap>                                                                             
-	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort>   
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort>   
           <ipxact:physicalPort><ipxact:name>PMOD_8</ipxact:name>         
           </ipxact:physicalPort>            
           </ipxact:portMap>                                                                            
@@ -550,7 +550,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
   <ipxact:abstractionRef  vendor="opencores.org" library="Busdefs" name="pad" version="ring"/>  
     <ipxact:portMaps>                                                                                  
           <ipxact:portMap>                                                                             
-	  <ipxact:logicalPort><ipxact:name>PAD_out</ipxact:name></ipxact:logicalPort>   
+	  <ipxact:logicalPort><ipxact:name>PAD_in</ipxact:name></ipxact:logicalPort>   
           <ipxact:physicalPort><ipxact:name>PMOD_9</ipxact:name>         
           </ipxact:physicalPort>            
           </ipxact:portMap>                                                                            
@@ -659,8 +659,7 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  </ipxact:busInterfaces> 
  
  <ipxact:model> 
-
-<ipxact:instantiations> 
+  <ipxact:instantiations> 
    <ipxact:designInstantiation> 
      <ipxact:name>Padring</ipxact:name> 
     <ipxact:designRef vendor="lattice.com" library="fpgas" name="iceskate" version="padring.design"/> 
@@ -668,15 +667,12 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
   </ipxact:instantiations> 
  
   <ipxact:views> 
-
     <ipxact:view> 
       <ipxact:name>Padring</ipxact:name> 
       <ipxact:designInstantiationRef>Padring</ipxact:designInstantiationRef> 
     </ipxact:view>   
- </ipxact:views> 
+  </ipxact:views> 
 
-
-  
  <ipxact:ports> 
  <ipxact:port>  <ipxact:name>CLK</ipxact:name>                                                 
  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>         
@@ -842,19 +838,19 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
 
  <ipxact:port>  <ipxact:name>PMOD_10</ipxact:name>                                                 
  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>         
-  <ipxact:direction>out</ipxact:direction>      
+  <ipxact:direction>in</ipxact:direction>      
    </ipxact:wire>         
   </ipxact:port>                                                                                
 
  <ipxact:port>  <ipxact:name>PMOD_2</ipxact:name>                                                 
  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>         
-  <ipxact:direction>out</ipxact:direction>      
+  <ipxact:direction>in</ipxact:direction>      
    </ipxact:wire>         
   </ipxact:port>                                                                                
 
  <ipxact:port>  <ipxact:name>PMOD_3</ipxact:name>                                                 
  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>         
-  <ipxact:direction>out</ipxact:direction>      
+  <ipxact:direction>in</ipxact:direction>      
    </ipxact:wire>         
   </ipxact:port>                                                                                
 
@@ -866,19 +862,19 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
 
  <ipxact:port>  <ipxact:name>PMOD_7</ipxact:name>                                                 
  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>         
-  <ipxact:direction>out</ipxact:direction>      
+  <ipxact:direction>in</ipxact:direction>      
    </ipxact:wire>         
   </ipxact:port>                                                                                
 
  <ipxact:port>  <ipxact:name>PMOD_8</ipxact:name>                                                 
  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>         
-  <ipxact:direction>out</ipxact:direction>      
+  <ipxact:direction>in</ipxact:direction>      
    </ipxact:wire>         
   </ipxact:port>                                                                                
 
  <ipxact:port>  <ipxact:name>PMOD_9</ipxact:name>                                                 
  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>         
-  <ipxact:direction>out</ipxact:direction>      
+  <ipxact:direction>in</ipxact:direction>      
    </ipxact:wire>         
   </ipxact:port>                                                                                
 

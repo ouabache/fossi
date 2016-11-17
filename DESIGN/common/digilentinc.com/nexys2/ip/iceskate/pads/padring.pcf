@@ -111,7 +111,7 @@ set_io MEMADR[22]  D1
 set_io MEMADR[23]  K6    
 set_io MEMDB[0]  L1    
 set_io MEMDB[1]  L4    
-set_io MEMDB[14]  L6    
+set_io MEMDB[2]  L6    
 set_io MEMDB[3]  M4    
 set_io MEMDB[4]  N5    
 set_io MEMDB[5]  P1    

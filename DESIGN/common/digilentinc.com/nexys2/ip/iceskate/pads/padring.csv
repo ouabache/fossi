@@ -74,7 +74,7 @@ rxd,rxd,in,z,N18
 txd,txd,out,z,P18
 rs_rx,rs_rx,in,z,U6
 rs_tx,rs_tx,out,z,P9
-memoe,memoe,out,z,T2
+memoe,memoe_n,out,z,T2
 memwr,memwr_n,out,z,N7
 ramadv,ramadv_n,out,z,J4
 ramcs,ramcs,out,z,R6
@@ -99,7 +99,7 @@ memadr[10],memadr,out,z,G3
 memadr[11],memadr,out,z,G6
 memadr[12],memadr,out,z,G5
 memadr[13],memadr,out,z,G4
-Memadr[14],memadr,out,z,F2
+memadr[14],memadr,out,z,F2
 memadr[15],memadr,out,z,E1
 memadr[16],memadr,out,z,M5
 memadr[17],memadr,out,z,E2
@@ -111,7 +111,7 @@ memadr[22],memadr,out,z,D1
 memadr[23],memadr,out,z,K6
 memdb[0],memdb,inout,z,L1
 memdb[1],memdb,inout,z,L4
-Memadr[14],memdb,inout,z,L6
+memdb[2],memdb,inout,z,L6
 memdb[3],memdb,inout,z,M4
 memdb[4],memdb,inout,z,N5
 memdb[5],memdb,inout,z,P1
@@ -121,7 +121,7 @@ memdb[8],memdb,inout,z,L3
 memdb[9],memdb,inout,z,L5
 memdb[10],memdb,inout,z,M3
 memdb[11],memdb,inout,z,M6
-Memdb[12],memdb,inout,z,L2
+memdb[12],memdb,inout,z,L2
 memdb[13],memdb,inout,z,N4
 memdb[14],memdb,inout,z,R3
 memdb[15],memdb,inout,z,T1

@@ -1,10 +1,10 @@
 assign CLK   = clk;
 
+reg    PMOD_2_reg;
+assign PMOD_2 = PMOD_2_reg;
 
 
 
-reg       PMOD4_reg;
-assign PMOD4 = PMOD4_reg;
 
 assign STOP = 1'b0;
 assign BAD = 1'b0;

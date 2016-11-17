@@ -1180,7 +1180,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>memadr_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>memadr_pad_out</ipxact:name>
           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>23</ipxact:left><ipxact:right>1</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
@@ -1200,20 +1200,20 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>memdb_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>memdb_pad_out</ipxact:name>
           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>memdb_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>memdb_pad_in</ipxact:name>
           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>15</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>memdb_oe</ipxact:name></ipxact:physicalPort>
+          <ipxact:physicalPort><ipxact:name>memdb_pad_oe</ipxact:name></ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
 	        </ipxact:abstractionType>
@@ -1236,7 +1236,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramclk_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramclk_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>	
@@ -1256,7 +1256,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramcre_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramcre_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>	
@@ -1275,7 +1275,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>memoe_n_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>memoe_n_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>	
@@ -1294,7 +1294,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>memwr_n_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>memwr_n_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1315,7 +1315,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramcs_n_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramcs_n_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>	
@@ -1335,7 +1335,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramlb_n_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramlb_n_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1355,7 +1355,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramub_n_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramub_n_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>	
@@ -1375,7 +1375,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramadv_n_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramadv_n_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1454,7 +1454,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>ramwait_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>ramwait_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -2305,73 +2305,73 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>memadr_out</ipxact:name>
+<ipxact:port><ipxact:name>memadr_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>memdb_out</ipxact:name>
+<ipxact:port><ipxact:name>memdb_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>memdb_in</ipxact:name>
+<ipxact:port><ipxact:name>memdb_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>memdb_oe</ipxact:name>
+<ipxact:port><ipxact:name>memdb_pad_oe</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>ramclk_out</ipxact:name>
+<ipxact:port><ipxact:name>ramclk_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>ramcre_out</ipxact:name>
+<ipxact:port><ipxact:name>ramcre_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>memoe_n_out</ipxact:name>
+<ipxact:port><ipxact:name>memoe_n_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>memwr_n_out</ipxact:name>
+<ipxact:port><ipxact:name>memwr_n_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>ramcs_n_out</ipxact:name>
+<ipxact:port><ipxact:name>ramcs_n_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>ramlb_n_out</ipxact:name>
+<ipxact:port><ipxact:name>ramlb_n_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>ramub_n_out</ipxact:name>
+<ipxact:port><ipxact:name>ramub_n_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>ramadv_n_out</ipxact:name>
+<ipxact:port><ipxact:name>ramadv_n_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
@@ -2395,7 +2395,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>ramwait_in</ipxact:name>
+<ipxact:port><ipxact:name>ramwait_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
