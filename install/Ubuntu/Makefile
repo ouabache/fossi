@@ -9,6 +9,7 @@ all:   install
 .PHONY install:
 install:
 	(\
+	sudo apt-get  install -y asciidoc;\
 	sudo apt-get  install -y autoconf;\
 	sudo apt-get  install -y bison;\
 	sudo apt-get  install -y build-essential;\
