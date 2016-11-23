@@ -81,6 +81,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <socgen:configuration>
             <socgen:name>default</socgen:name>
             <socgen:version>def</socgen:version>
+            <socgen:version>basic</socgen:version>
             <socgen:version>gpio</socgen:version>
             <socgen:version>mouse</socgen:version>
             <socgen:version>def_tb</socgen:version>

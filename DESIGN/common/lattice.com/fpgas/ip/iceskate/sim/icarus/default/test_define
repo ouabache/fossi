@@ -16,6 +16,44 @@ initial
  test.cg.next(1000);
 
 
+ test.cg.next(20);
+ test.uart_model.rx_parity_enable  <= 1'b0;
+ test.uart_model.txd_parity_enable <= 1'b0;
+ test.uart_model.rx_parity         <= 1'b0;
+ test.uart_model.txd_parity        <= 1'b0;
+
+fork
+
+ begin
+ test.cg.next(10);
+ test.uart_model.send_byte(8'h12);
+ test.cg.next(1000);
+ test.uart_model.send_byte(8'h34);
+ test.cg.next(1000);
+ test.uart_model.send_byte(8'h56);
+ test.cg.next(1000);
+ test.uart_model.send_byte(8'h78);
+ end
+
+
+ begin
+ test.cg.next(10);
+ test.uart_model.rcv_byte(8'h13);
+ test.cg.next(10);
+ test.uart_model.rcv_byte(8'h35);
+ test.cg.next(10);
+ test.uart_model.rcv_byte(8'h57);
+ test.cg.next(10);
+ test.uart_model.rcv_byte(8'h79);
+ test.cg.next(10);
+
+ end
+
+
+
+
+ join
+ test.cg.next(100);
 
  test.cg.exit;
 end

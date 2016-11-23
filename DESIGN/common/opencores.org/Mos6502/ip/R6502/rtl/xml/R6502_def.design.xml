@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+//                                                                        //
+// Author : John Eaton  Ouabache Designworks                              //
+//                                                                        //
+//   Copyright (C) 2010 Authors and OPENCORES.ORG			  //
+//  									  //
+//   This source file may be used and distributed without		  //
+//   restriction provided that this copyright statement is not		  //
+//   removed from the file and that any derivative work contains	  //
+//   the original copyright notice and the associated disclaimer.	  //
+//  									  //
+//   This source file is free software; you can redistribute it		  //
+//   and/or modify it under the terms of the GNU Lesser General		  //
+//   Public License as published by the Free Software Foundation;	  //
+//   either version 2.1 of the License, or (at your option) any		  //
+//   later version.							  //
+//  									  //
+//   This source is distributed in the hope that it will be		  //
+//   useful, but WITHOUT ANY WARRANTY; without even the implied		  //
+//   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR		  //
+//   PURPOSE. See the GNU Lesser General Public License for more	  //
+//   details.								  //
+//  									  //
+//   You should have received a copy of the GNU Lesser General		  //
+//   Public License along with this source; if not, download it		  //
+//   from http://www.opencores.org/lgpl.shtml				  //
+//  									  //
+-->
+<ipxact:design 
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>Mos6502</ipxact:library>
+<ipxact:name>R6502</ipxact:name>
+<ipxact:version>def.design</ipxact:version>  
+
+
+<ipxact:vendorExtensions>
+<socgen:nodes>
+
+<socgen:node>
+<ipxact:name>mem_addr</ipxact:name>
+<ipxact:busDef>cpu_addr</ipxact:busDef>
+<ipxact:typeName>wire</ipxact:typeName>
+<ipxact:wire><ipxact:vector><ipxact:left>CPU_ADD-1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:wire>
+</socgen:node>
+
+
+<socgen:node>
+<ipxact:name>data_addr</ipxact:name>
+<ipxact:typeName>wire</ipxact:typeName>
+<ipxact:wire><ipxact:vector><ipxact:left>RAM_ADD</ipxact:left><ipxact:right>1</ipxact:right></ipxact:vector></ipxact:wire>
+</socgen:node>
+
+
+
+
+
+
+
+</socgen:nodes>
+</ipxact:vendorExtensions>
+
+
+
+
+
+
+
+ <ipxact:interconnections>
+
+   <ipxact:interconnection>
+      <ipxact:name>uart</ipxact:name>
+       <ipxact:activeInterface componentRef="io_module" busRef="uart"></ipxact:activeInterface>
+    <ipxact:hierInterface busRef="uart"/>
+    </ipxact:interconnection>   
+
+   
+
+
+    <ipxact:interconnection>
+      <ipxact:name>mem</ipxact:name>
+      <ipxact:activeInterface componentRef="micro_bus" busRef="mem"></ipxact:activeInterface>
+      </ipxact:interconnection>
+
+
+    <ipxact:interconnection>
+      <ipxact:name>io_reg</ipxact:name>
+      <ipxact:activeInterface componentRef="micro_bus" busRef="io_reg"></ipxact:activeInterface>
+      <ipxact:activeInterface componentRef="io_module" busRef="reg_mb">
+      </ipxact:activeInterface>
+      </ipxact:interconnection>
+
+
+
+    <ipxact:interconnection>
+      <ipxact:name>prog_rom_mem</ipxact:name>
+      <ipxact:activeInterface componentRef="micro_bus" busRef="prog_rom_mem"></ipxact:activeInterface>
+      <ipxact:activeInterface componentRef="boot_rom"  busRef="mem"></ipxact:activeInterface>
+      </ipxact:interconnection>
+
+
+    <ipxact:interconnection>
+      <ipxact:name>sh_prog_rom_mem</ipxact:name>
+      <ipxact:activeInterface componentRef="micro_bus"    busRef="sh_prog_rom_mem"></ipxact:activeInterface>
+      <ipxact:activeInterface componentRef="sh_prog_rom"  busRef="mem"></ipxact:activeInterface>
+      </ipxact:interconnection>
+
+
+    <ipxact:interconnection>
+      <ipxact:name>data</ipxact:name>
+      <ipxact:activeInterface componentRef="micro_bus" busRef="data"></ipxact:activeInterface>
+      <ipxact:activeInterface componentRef="data_sram" busRef="mem"></ipxact:activeInterface>
+      </ipxact:interconnection>
+
+
+
+
+
+      <ipxact:interconnection>
+      <ipxact:name>cpu</ipxact:name>
+      <ipxact:activeInterface componentRef="cpu" busRef="cpu"></ipxact:activeInterface>
+      <ipxact:activeInterface componentRef="micro_bus" busRef="cpu"></ipxact:activeInterface>
+      </ipxact:interconnection>
+
+
+
+    </ipxact:interconnections>
+
+
+
+
+
+
+
+
+  <ipxact:adHocConnections>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>clk</ipxact:name>
+      <ipxact:externalPortReference portRef="slave_clk_clk"/>
+      <ipxact:internalPortReference componentRef="micro_bus" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="ctrl" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="cpu" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="boot_rom" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="sh_prog_rom" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="data_sram" portRef="clk"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="clk"/>
+
+
+    </ipxact:adHocConnection>
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>reset</ipxact:name>
+      <ipxact:externalPortReference portRef="slave_reset_reset"/>
+      <ipxact:internalPortReference componentRef="micro_bus" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="cpu" portRef="reset"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="reset"/>
+    </ipxact:adHocConnection>
+
+
+
+
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>mem_addr</ipxact:name>
+      <ipxact:externalPortReference portRef="mem_addr"  left="ROM_ADD"   right="1"      />
+      <ipxact:internalPortReference componentRef="boot_rom" portRef="addr" />
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>mem_addr</ipxact:name>
+      <ipxact:externalPortReference portRef="mem_addr"  left="PROG_ROM_ADD"   right="1"    />
+      <ipxact:internalPortReference componentRef="sh_prog_rom" portRef="addr" />
+    </ipxact:adHocConnection>
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>prog_rom_mem_rdata</ipxact:name>
+      <ipxact:internalPortReference componentRef="boot_rom" portRef="rdata"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>sh_prog_rom_mem_rdata</ipxact:name>
+      <ipxact:internalPortReference componentRef="sh_prog_rom" portRef="rdata"/>
+   </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>gpio_0_out</ipxact:name>
+      <ipxact:externalPortReference portRef="gpio_0_out"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="gpio_0_out"/>
+    </ipxact:adHocConnection>
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>gpio_0_oe</ipxact:name>
+      <ipxact:externalPortReference portRef="gpio_0_oe"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="gpio_0_oe"/>
+    </ipxact:adHocConnection>
+
+
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>gpio_0_in</ipxact:name>
+      <ipxact:externalPortReference portRef="gpio_0_in"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="gpio_0_in"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>gpio_1_out</ipxact:name>
+      <ipxact:externalPortReference portRef="gpio_1_out"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="gpio_1_out"/>
+    </ipxact:adHocConnection>
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>gpio_1_oe</ipxact:name>
+      <ipxact:externalPortReference portRef="gpio_1_oe"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="gpio_1_oe"/>
+    </ipxact:adHocConnection>
+
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>gpio_1_in</ipxact:name>
+      <ipxact:externalPortReference portRef="gpio_1_in"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="gpio_1_in"/>
+    </ipxact:adHocConnection>
+
+
+
+   <ipxact:adHocConnection>
+      <ipxact:name>cts_pad_in</ipxact:name>
+      <ipxact:externalPortReference portRef="cts_pad_in"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="cts_pad_in"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>rts_pad_out</ipxact:name>
+      <ipxact:externalPortReference portRef="rts_pad_out"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="rts_pad_out"/>
+    </ipxact:adHocConnection>
+
+
+
+
+
+
+
+
+
+
+
+
+    <ipxact:adHocConnection>  
+      <ipxact:name>alu_status</ipxact:name>
+      <ipxact:externalPortReference portRef="alu_status"  left="7"   right="0"    />
+      <ipxact:internalPortReference componentRef="cpu" portRef="alu_status"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>enable</ipxact:name>
+      <ipxact:externalPortReference portRef="enable"/>
+      <ipxact:internalPortReference componentRef="cpu" portRef="enable" />
+      <ipxact:internalPortReference componentRef="io_module" portRef="enable" />
+      <ipxact:internalPortReference componentRef="micro_bus" portRef="enable" />
+    </ipxact:adHocConnection>
+
+
+      <ipxact:adHocConnection>
+      <ipxact:name>pg0_add</ipxact:name>
+      <ipxact:externalPortReference portRef="pg0_add"/>
+      <ipxact:internalPortReference componentRef="cpu" portRef="pg0_add"/>
+      </ipxact:adHocConnection>
+
+
+
+      <ipxact:adHocConnection>
+      <ipxact:name>pg0_rd</ipxact:name>
+      <ipxact:externalPortReference portRef="pg0_rd"/>
+      <ipxact:internalPortReference componentRef="cpu" portRef="pg0_rd"/>
+      </ipxact:adHocConnection>
+
+      <ipxact:adHocConnection>
+      <ipxact:name>pg0_wr</ipxact:name>
+      <ipxact:externalPortReference portRef="pg0_wr"/>
+      <ipxact:internalPortReference componentRef="cpu" portRef="pg0_wr"/>
+      </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>cpu_pg0_data</ipxact:name>
+      <ipxact:externalPortReference portRef="cpu_pg0_data"  left="7"   right="0"    />
+      <ipxact:internalPortReference componentRef="cpu" portRef="pg0_data"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>vector</ipxact:name>
+      <ipxact:externalPortReference portRef="vector" left="7"   right="0"  />
+      <ipxact:internalPortReference componentRef="cpu" portRef="vec_int"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="vector"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>nmi_in</ipxact:name>
+      <ipxact:externalPortReference portRef="nmi_in"/>
+      <ipxact:internalPortReference componentRef="cpu" portRef="nmi"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="int_out"/>
+    </ipxact:adHocConnection>
+
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>mem_wdata</ipxact:name>
+      <ipxact:externalPortReference portRef="mem_wdata"/>
+      <ipxact:internalPortReference componentRef="sh_prog_rom" portRef="wdata"/>
+    </ipxact:adHocConnection>
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>rx_irq</ipxact:name>
+      <ipxact:externalPortReference portRef="rx_irq"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="rx_irq"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>tx_irq</ipxact:name>
+      <ipxact:externalPortReference portRef="tx_irq"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="tx_irq"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>io_module_pic_irq_in</ipxact:name>
+      <ipxact:externalPortReference portRef="io_module_pic_irq_in" left="7"   right="0"  />
+      <ipxact:internalPortReference componentRef="io_module" portRef="pic_irq_in"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>io_module_vic_irq_in</ipxact:name>
+      <ipxact:externalPortReference portRef="io_module_vic_irq_in" left="7"   right="0" />
+      <ipxact:internalPortReference componentRef="io_module" portRef="vic_irq_in"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>timer_irq</ipxact:name>
+      <ipxact:externalPortReference portRef="timer_irq"/>
+      <ipxact:internalPortReference componentRef="io_module" portRef="timer_irq"/>
+    </ipxact:adHocConnection>
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>mem_rd</ipxact:name>
+      <ipxact:externalPortReference portRef="mem_rd"/>
+      <ipxact:internalPortReference componentRef="ctrl" portRef="mem_rd"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>mem_wr</ipxact:name>
+      <ipxact:externalPortReference portRef="mem_wr"/>
+      <ipxact:internalPortReference componentRef="ctrl" portRef="mem_wr"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>pg0_rd</ipxact:name>
+      <ipxact:externalPortReference portRef="pg0_rd"/>
+      <ipxact:internalPortReference componentRef="ctrl" portRef="pg0_rd"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>pg0_wr</ipxact:name>
+      <ipxact:externalPortReference portRef="pg0_wr"/>
+      <ipxact:internalPortReference componentRef="ctrl" portRef="pg0_wr"/>
+    </ipxact:adHocConnection>
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>rx_irq</ipxact:name>
+      <ipxact:externalPortReference portRef="rx_irq"/>
+      <ipxact:internalPortReference componentRef="ctrl" portRef="rx_irq"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>timer_irq</ipxact:name>
+      <ipxact:externalPortReference portRef="timer_irq"  left="1"   right="0"    />
+      <ipxact:internalPortReference componentRef="ctrl" portRef="timer_irq"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>tx_irq</ipxact:name>
+      <ipxact:externalPortReference portRef="tx_irq"/>
+      <ipxact:internalPortReference componentRef="ctrl" portRef="tx_irq"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>mem_addr</ipxact:name>
+      <ipxact:externalPortReference portRef="mem_addr"  left="0"   right="0"    />
+      <ipxact:internalPortReference componentRef="ctrl" portRef="mem_addr"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>pg0_add</ipxact:name>
+      <ipxact:externalPortReference portRef="pg0_add"  left="7"   right="0"    />
+      <ipxact:internalPortReference componentRef="ctrl" portRef="pg0_add"/>
+    </ipxact:adHocConnection>
+
+    <ipxact:adHocConnection>
+      <ipxact:name>mem_rdata</ipxact:name>
+      <ipxact:externalPortReference portRef="mem_rdata"  left="15"   right="0"    />
+      <ipxact:internalPortReference componentRef="ctrl" portRef="mem_rdata"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>mem_wdata</ipxact:name>
+      <ipxact:externalPortReference portRef="mem_wdata"  left="15"   right="0"    />
+      <ipxact:internalPortReference componentRef="ctrl" portRef="mem_wdata"/>
+    </ipxact:adHocConnection>
+
+
+
+
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>mem_cs</ipxact:name>
+      <ipxact:externalPortReference portRef="mem_cs"  />
+      <ipxact:internalPortReference componentRef="ctrl" portRef="mem_cs"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>cpu_pg0_data</ipxact:name>
+      <ipxact:externalPortReference portRef="cpu_pg0_data"/>
+      <ipxact:internalPortReference componentRef="ctrl" portRef="cpu_pg0_data"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>io_module_pic_irq_in</ipxact:name>
+      <ipxact:externalPortReference portRef="io_module_pic_irq_in"/>
+      <ipxact:internalPortReference componentRef="ctrl" portRef="io_module_pic_irq_in"/>
+    </ipxact:adHocConnection>
+
+
+    <ipxact:adHocConnection>
+      <ipxact:name>io_module_vic_irq_in</ipxact:name>
+      <ipxact:externalPortReference portRef="io_module_vic_irq_in"/>
+      <ipxact:internalPortReference componentRef="ctrl" portRef="io_module_vic_irq_in"/>
+    </ipxact:adHocConnection>
+
+
+
+
+
+    <ipxact:adHocConnection tiedValue="16'h0000"  >
+      <ipxact:internalPortReference componentRef="boot_rom" portRef="wdata"/>
+    </ipxact:adHocConnection>
+
+
+</ipxact:adHocConnections>
+
+
+
+
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>io_module</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="io" name="io_module" version="basic"/>
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue referenceId="BASE_WIDTH">0</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="ADDR_WIDTH">8</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="UART_PRESCALE">UART_PRESCALE</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="UART_PRE_SIZE">UART_PRE_SIZE</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="UART_DIV">UART_DIV</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+  
+   
+<ipxact:componentInstance>
+<ipxact:instanceName>cpu</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="Mos6502" name="cpu" version="def"/>
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue referenceId="VEC_TABLE">VEC_TABLE</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="PROG_ROM_ADD">PROG_ROM_ADD</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="PROG_ROM_WORDS">PROG_ROM_WORDS</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+
+<ipxact:componentInstance>
+<ipxact:instanceName>micro_bus</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="logic" name="micro_bus" version="basic"/>
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue referenceId="ADD">CPU_ADD</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CH0_BITS">SPLIT_CH0_BITS</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CH0_MATCH">SPLIT_CH0_MATCH</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CH1_BITS">SPLIT_CH1_BITS</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CH1_MATCH">SPLIT_CH1_MATCH</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CH2_BITS">SPLIT_CH2_BITS</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CH2_MATCH">SPLIT_CH2_MATCH</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CH3_BITS">SPLIT_CH3_BITS</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CH3_MATCH">SPLIT_CH3_MATCH</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CH4_BITS">SPLIT_CH4_BITS</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CH4_MATCH">SPLIT_CH4_MATCH</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CH5_BITS">SPLIT_CH5_BITS</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="CH5_MATCH">SPLIT_CH5_MATCH</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+
+</ipxact:componentInstance>
+
+
+
+<ipxact:componentInstance>
+<ipxact:instanceName>boot_rom</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="cde" name="sram" version="def"/>
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue referenceId="WIDTH">BOOT_ROM_WIDTH</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="ADDR">ROM_ADD</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WORDS">ROM_WORDS</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WRITETHRU">ROM_WRITETHRU</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+
+
+<ipxact:componentInstance>
+<ipxact:instanceName>sh_prog_rom</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="cde" name="sram" version="def"/>
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue referenceId="WIDTH">BOOT_ROM_WIDTH</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="ADDR">PROG_ROM_ADD</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WORDS">PROG_ROM_WORDS</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WRITETHRU">ROM_WRITETHRU</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>data_sram</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="cde" name="sram" version="word"/>
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue referenceId="ADDR">RAM_ADD</ipxact:configurableElementValue>
+<ipxact:configurableElementValue referenceId="WORDS">RAM_WORDS</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>ctrl</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="Mos6502" name="R6502" version="ctrl"/>
+<ipxact:configurableElementValues>
+<ipxact:configurableElementValue referenceId="VEC_TABLE">VEC_TABLE</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+
+
+</ipxact:componentInstances>
+
+
+
+
+
+
+
+
+
+
+
+</ipxact:design>
+
+
+
+   
+
+

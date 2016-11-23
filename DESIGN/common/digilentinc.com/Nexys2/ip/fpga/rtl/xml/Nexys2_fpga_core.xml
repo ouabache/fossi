@@ -1474,7 +1474,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>eppastb_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>eppastb_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1493,7 +1493,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>eppdstb_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>eppdstb_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1513,19 +1513,19 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>eppwait_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>eppwait_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>eppwait_oe</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>eppwait_pad_oe</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>eppwait_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>eppwait_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1544,7 +1544,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>eppwr_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>eppwr_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1564,20 +1564,20 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>eppdb_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>eppdb_pad_in</ipxact:name>
           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>eppdb_oe</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>eppdb_pad_oe</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>eppdb_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>eppdb_pad_out</ipxact:name>
           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>7</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
@@ -1599,7 +1599,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbflag_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbflag_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1619,7 +1619,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbrdy_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbrdy_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1642,19 +1642,19 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbwr_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbwr_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbwr_oe</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbwr_pad_oe</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbwr_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbwr_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1673,19 +1673,19 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbmode_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbmode_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbmode_oe</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbmode_pad_oe</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbmode_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbmode_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1704,19 +1704,19 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usboe_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usboe_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usboe_oe</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usboe_pad_oe</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usboe_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usboe_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1737,20 +1737,20 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbadr_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbadr_pad_in</ipxact:name>
           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbadr_oe</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbadr_pad_oe</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbadr_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbadr_pad_out</ipxact:name>
           <ipxact:wire><ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors></ipxact:wire>
           </ipxact:physicalPort>
           </ipxact:portMap>
@@ -1772,19 +1772,19 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbpktend_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbpktend_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbpktend_oe</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbpktend_pad_oe</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbpktend_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbpktend_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1807,19 +1807,19 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbdir_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbdir_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbdir_oe</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbdir_pad_oe</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbdir_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbdir_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1838,19 +1838,19 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_in</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbclk_in</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbclk_pad_in</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbclk_oe</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbclk_pad_oe</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
           <ipxact:portMap>
           <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name>
           </ipxact:logicalPort>
-          <ipxact:physicalPort><ipxact:name>usbclk_out</ipxact:name>
+          <ipxact:physicalPort><ipxact:name>usbclk_pad_out</ipxact:name>
           </ipxact:physicalPort>
           </ipxact:portMap>
     </ipxact:portMaps>
@@ -1910,15 +1910,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:model>   
    
 <ipxact:ports>
-
-
-<ipxact:port><ipxact:name>A_CLK</ipxact:name>
-<ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
-<ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
-</ipxact:port>
-
-
-
 
 
 <ipxact:port><ipxact:name>jtag_test_logic_reset</ipxact:name>
@@ -2401,103 +2392,103 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>eppastb_in</ipxact:name>
+<ipxact:port><ipxact:name>eppastb_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>eppdstb_in</ipxact:name>
+<ipxact:port><ipxact:name>eppdstb_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>eppwait_in</ipxact:name>
+<ipxact:port><ipxact:name>eppwait_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>eppwait_oe</ipxact:name>
+<ipxact:port><ipxact:name>eppwait_pad_oe</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>eppwait_out</ipxact:name>
+<ipxact:port><ipxact:name>eppwait_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>eppwr_in</ipxact:name>
+<ipxact:port><ipxact:name>eppwr_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>eppdb_in</ipxact:name>
+<ipxact:port><ipxact:name>eppdb_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>eppdb_oe</ipxact:name>
+<ipxact:port><ipxact:name>eppdb_pad_oe</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>eppdb_out</ipxact:name>
+<ipxact:port><ipxact:name>eppdb_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbflag_in</ipxact:name>
+<ipxact:port><ipxact:name>usbflag_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbrdy_in</ipxact:name>
+<ipxact:port><ipxact:name>usbrdy_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbwr_in</ipxact:name>
+<ipxact:port><ipxact:name>usbwr_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbwr_oe</ipxact:name>
+<ipxact:port><ipxact:name>usbwr_pad_oe</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbwr_out</ipxact:name>
+<ipxact:port><ipxact:name>usbwr_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbmode_in</ipxact:name>
+<ipxact:port><ipxact:name>usbmode_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbmode_oe</ipxact:name>
+<ipxact:port><ipxact:name>usbmode_pad_oe</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbmode_out</ipxact:name>
+<ipxact:port><ipxact:name>usbmode_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
@@ -2509,13 +2500,13 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usboe_oe</ipxact:name>
+<ipxact:port><ipxact:name>usboe_pad_oe</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usboe_out</ipxact:name>
+<ipxact:port><ipxact:name>usboe_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
@@ -2527,67 +2518,67 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbadr_oe</ipxact:name>
+<ipxact:port><ipxact:name>usbadr_pad_oe</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbadr_out</ipxact:name>
+<ipxact:port><ipxact:name>usbadr_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbpktend_in</ipxact:name>
+<ipxact:port><ipxact:name>usbpktend_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbpktend_oe</ipxact:name>
+<ipxact:port><ipxact:name>usbpktend_pad_oe</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbpktend_out</ipxact:name>
+<ipxact:port><ipxact:name>usbpktend_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbdir_in</ipxact:name>
+<ipxact:port><ipxact:name>usbdir_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbdir_oe</ipxact:name>
+<ipxact:port><ipxact:name>usbdir_pad_oe</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbdir_out</ipxact:name>
+<ipxact:port><ipxact:name>usbdir_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbclk_in</ipxact:name>
+<ipxact:port><ipxact:name>usbclk_pad_in</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbclk_oe</ipxact:name>
+<ipxact:port><ipxact:name>usbclk_pad_oe</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>
 
 
-<ipxact:port><ipxact:name>usbclk_out</ipxact:name>
+<ipxact:port><ipxact:name>usbclk_pad_out</ipxact:name>
 <ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>
 <ipxact:wire><ipxact:direction>out</ipxact:direction></ipxact:wire>
 </ipxact:port>

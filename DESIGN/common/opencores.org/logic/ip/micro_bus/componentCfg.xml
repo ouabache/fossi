@@ -48,6 +48,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
          <socgen:configuration>
             <socgen:name>default</socgen:name>
             <socgen:version>def</socgen:version>
+            <socgen:version>basic</socgen:version>
             <socgen:parameters>
             <socgen:parameter><socgen:name>ADD</socgen:name><socgen:value>16</socgen:value></socgen:parameter>
             <socgen:parameter><socgen:name>CH0_BITS</socgen:name><socgen:value>4</socgen:value></socgen:parameter>

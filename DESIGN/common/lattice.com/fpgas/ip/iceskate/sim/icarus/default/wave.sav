@@ -1,19 +1,20 @@
 [*]
 [*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
-[*] Thu Nov 17 00:42:52 2016
+[*] Mon Nov 21 18:03:28 2016
 [*]
 [dumpfile] "/home/johne/socgen/work/lattice.com__fpgas/ip/iceskate/sim/icarus/default/TestBench.vcd"
-[dumpfile_mtime] "Thu Nov 17 00:40:27 2016"
-[dumpfile_size] 50395
+[dumpfile_mtime] "Mon Nov 21 17:59:55 2016"
+[dumpfile_size] 74569806
 [savefile] "/home/johne/socgen/Projects/lattice.com/fpgas/ip/iceskate/sim/icarus/default/wave.sav"
-[timestart] 0
+[timestart] 64507
 [size] 1674 1028
 [pos] -1 -1
-*-13.035568 1800000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-7.035568 64660 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TB.
 [treeopen] TB.test.
 [treeopen] TB.test.dut.
 [treeopen] TB.test.dut.core.
+[treeopen] TB.test.dut.core.uart.
 [sst_width] 473
 [signals_width] 241
 [sst_expanded] 1
@@ -24,7 +25,53 @@ TB.test.dut.clk_pad.PAD
 TB.test.dut.core.reset
 TB.test.dut.pmod_2_pad_in
 TB.test.dut.core.reset
-@23
+@22
 TB.test.dut.core.COUNTER[31:0]
+@28
+TB.test.PMOD_3
+TB.test.PMOD_4
+TB.test.dut.core.uart.serial_rcvr.baud_enable
+TB.test.dut.core.uart.serial_rcvr.clk
+TB.test.dut.core.uart.serial_rcvr.data_avail
+@22
+TB.test.dut.core.uart.serial_rcvr.data_out[7:0]
+@28
+TB.test.dut.core.uart.serial_rcvr.divider_reset
+TB.test.dut.core.uart.serial_rcvr.edge_enable
+TB.test.dut.core.uart.serial_rcvr.frame_avail
+@29
+TB.test.dut.core.uart.serial_rcvr.frame_error
+@28
+TB.test.dut.core.uart.serial_rcvr.frame_parity_error
+TB.test.dut.core.uart.serial_rcvr.frame_rdy
+TB.test.dut.core.uart.serial_rcvr.last_cnt
+TB.test.dut.core.uart.serial_rcvr.next_frame_error
+TB.test.dut.core.uart.serial_rcvr.next_parity_calc
+TB.test.dut.core.uart.serial_rcvr.next_parity_samp
+@22
+TB.test.dut.core.uart.serial_rcvr.next_shift_buffer[7:0]
+@28
+TB.test.dut.core.uart.serial_rcvr.pad_in
+TB.test.dut.core.uart.serial_rcvr.parity_calc
+TB.test.dut.core.uart.serial_rcvr.parity_enable
+TB.test.dut.core.uart.serial_rcvr.parity_error
+TB.test.dut.core.uart.serial_rcvr.parity_force
+TB.test.dut.core.uart.serial_rcvr.parity_samp
+TB.test.dut.core.uart.serial_rcvr.parity_type
+TB.test.dut.core.uart.serial_rcvr.rcv_stb
+TB.test.dut.core.uart.serial_rcvr.rdy_del[1:0]
+TB.test.dut.core.uart.serial_rcvr.reset
+TB.test.dut.core.uart.serial_rcvr.rxd_pad_sig
+@22
+TB.test.dut.core.uart.serial_rcvr.shift_buffer[7:0]
+@28
+TB.test.dut.core.uart.serial_rcvr.start_detect
+TB.test.dut.core.uart.serial_rcvr.stop_cnt
+TB.test.dut.core.uart.serial_rcvr.stop_error
+TB.test.dut.core.uart.rxd_parity
+TB.test.dut.core.uart.rxd_force_parity
+TB.test.dut.core.R_stb
+TB.test.dut.core.rxd_data_avail
+TB.test.dut.core.rxd_data_avail_stb
 [pattern_trace] 1
 [pattern_trace] 0

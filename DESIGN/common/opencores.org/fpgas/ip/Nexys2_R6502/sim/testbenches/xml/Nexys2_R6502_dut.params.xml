@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--                                                
+//                                                //
+//                 //
+//                                                //
+//       //
+//                                                //
+-->                                                 
+<ipxact:component
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>fpgas</ipxact:library>
+<ipxact:name>Nexys2_R6502</ipxact:name>
+<ipxact:version>default_dut.params</ipxact:version>
+<ipxact:model>
+
+      <ipxact:views>                                            
+                                   
+              <ipxact:view>                                   
+              <ipxact:name>Dut</ipxact:name>                                   
+                                                 
+              <ipxact:hierarchyRef ipxact:vendor="opencores.org"                                    
+                                   ipxact:library="fpgas"                                    
+                                   ipxact:name="Nexys2_R6502"                                    
+                                   ipxact:version="default_duth.design"/>                                   
+              </ipxact:view>                                   
+      </ipxact:views>                                   
+<ipxact:modelParameters>
+    <ipxact:modelParameter><ipxact:name>RAM_WORDS</ipxact:name><ipxact:value>2048</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>RAM_ADD</ipxact:name><ipxact:value>11</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>ROM_WORDS</ipxact:name><ipxact:value>128</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>ROM_ADD</ipxact:name><ipxact:value>7</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>ROM_FILE</ipxact:name><ipxact:value>"NONE"</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>PROG_ROM_FILE</ipxact:name><ipxact:value>"NONE"</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>PROG_ROM_WORDS</ipxact:name><ipxact:value>128</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>PROG_ROM_ADD</ipxact:name><ipxact:value>7</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>VEC_TABLE</ipxact:name><ipxact:value>8'hff</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>CLOCK_FREQ</ipxact:name><ipxact:value>50</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>CLOCK_PLL_MULT</ipxact:name><ipxact:value>2</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>CLOCK_PLL_DIV</ipxact:name><ipxact:value>4</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>CLOCK_PLL_SIZE</ipxact:name><ipxact:value>4</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>CLOCK_SRC</ipxact:name><ipxact:value>0</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>RESET_SENSE</ipxact:name><ipxact:value>0</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>UART_PRESCALE</ipxact:name><ipxact:value>5'b01100</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>UART_PRE_SIZE</ipxact:name><ipxact:value>5</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>UART_DIV</ipxact:name><ipxact:value>0</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>JTAG_USER1_WIDTH</ipxact:name><ipxact:value>8</ipxact:value></ipxact:modelParameter>
+    <ipxact:modelParameter><ipxact:name>JTAG_USER1_RESET</ipxact:name><ipxact:value>8'h12</ipxact:value></ipxact:modelParameter>
+</ipxact:modelParameters>
+</ipxact:model>
+</ipxact:component>

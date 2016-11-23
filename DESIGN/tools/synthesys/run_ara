@@ -89,19 +89,27 @@ my $chip_tool        = $ARGV[5];
 
 chdir  "./${prefix}/${vendor}__${library}${syn_library_path}/${chip_tool}/${chip_name}";
 
+
+$outfile ="./commands";
+open COMMAND_LOG,">$outfile" or die "unable to open $outfile";
+
+
 print "ARA Tool NOW  \n";
 
-
-$cmd= "yosys -p \"synth_ice40 -blif result.blif\" -s ./filelists/${chip_name}.ARA > ara.log \n";
+$cmd= "yosys -p \"synth_ice40 -blif result.blif\" -s ./filelists/${chip_name}.ARA > ${chip_name}.yosys.log  2> ${chip_name}.yosys.err.log \n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
-$cmd= "arachne-pnr -d 1k -p ./target/padring.pcf result.blif -o result.asc >> ara.log\n";
+$cmd= "arachne-pnr -d 1k -p ./target/padring.pcf result.blif -o result.asc > ${chip_name}.ara.log 2> ${chip_name}.ara.err.log   \n";
+print COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
-$cmd= "icepack result.asc Bits.bin >> ara.log \n";
+$cmd= "icepack result.asc Bits.bin > ${chip_name}.pack.log  2> ${chip_name}.pack.err.log  \n";
+print  COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
-$cmd = "icetime -tmd hx1k result.asc >> ara.log\n";
+$cmd = "icetime -tmd hx1k result.asc > ${chip_name}.time.log  2> ${chip_name}.time.err.log   \n";
+print  COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 

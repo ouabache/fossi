@@ -1,0 +1,27 @@
+sudo apt-get install autoconf
+sudo apt-get install automake
+sudo apt-get install autotools-dev
+sudo apt-get install curl
+sudo apt-get install libmpc-dev
+sudo apt-get install libmpfr-dev 
+sudo apt-get install libgmp-dev
+sudo apt-get install gawk
+sudo apt-get install build-essential
+sudo apt-get install bison
+sudo apt-get install flex
+sudo apt-get install texinfo
+sudo apt-get install gperf
+sudo apt-get install libtool
+sudo apt-get install patchutils
+sudo apt-get install bc
+sudo mkdir /opt/riscv32i
+sudo chown $USER /opt/riscv32i
+git clone https://github.com/riscv/riscv-gnu-toolchain riscv-gnu-toolchain-rv32i
+cd riscv-gnu-toolchain-rv32i
+git checkout 7e48594
+git submodule update --init --recursive
+mkdir build
+cd build
+../configure --with-arch=RV32I --prefix=/opt/riscv32i
+make -j$(nproc)
+cd ..

@@ -1,0 +1,346 @@
+<chapter id="chapter.start">
+  <title>Getting Started</title>
+
+  <sect1 id="section.start.methods">
+    <title>Methods for scoring the design</title>
+    <para>
+      Before you are ready to being scoring, merging and generating coverage reports from the design, you will first need to
+      decide whether you want to post-process VCD/LXT2/FST -formatted dumpfiles generated from simulation, co-process VCD/LXT2/FST -formatted
+      dumpfiles using two processes (one for the simulation process and one for the Covered process) and a Unix FIFO, or whether
+      you want to accummulate coverage information alongside the simulator using the simulator's VPI interface. There are advantages and
+      disadvantages to these methods, so select the method that will best work for you.
+    </para>
+
+    <sect2 id="section.start.methods.dumppost">
+      <title>Post-processing VCD/LXT2/FST dumpfiles</title>
+      <para>
+        Generating post-process coverage information from VCD/LXT2/FST -formatted dumpfiles requires three steps:
+      </para>
+      <para>
+        <orderedlist>
+          <listitem>
+            <para>Compile the simulator to dump in the specified format.</para>
+          </listitem>
+          <listitem>
+            <para>Run the simulation.</para>
+          </listitem>
+          <listitem>
+            <para>Run Covered's score command using the dumpfile as input along with the design.</para>
+          </listitem>
+        </orderedlist>
+      </para>
+      <para>
+        Performing these steps will generate the needed CDD file that can be used for merging or reporting.
+        The advantages to this approach is that the steps are fairly simple and are compiler/simulator -independent. However,
+        there are two main drawbacks. First, compiling with dumping enabled often slows simulation by some significant factor.
+        Second, the dumpfiles generated from simulation can often be quite large (especially for VCD dumping), consuming a lot
+        of disk space. Additionally, if your simulator dumps in a format different from VCD, LXT2 or FST, you will need to perform
+        an additional step in transforming the original dumpfile into one of these formats. This is often a time-consuming task
+        if the design and/or dumpfile is significantly large. If you are generating lots of dumpfiles for coverage (say from
+        running a regression), the amount of disk space needed to store these files can be tremendous, making this approach
+        almost not feasible.
+      </para>
+    </sect2>
+
+    <sect2 id="section.start.methods.dumpco">
+      <title>Co-processing VCD/LXT2/FST dumpfiles via FIFO</title>
+      <para>
+        Generating co-process coverage information from VCD/LXT2/FST -formatted dumpfiles requires four steps:
+      </para>
+      <para>
+        <orderedlist>
+          <listitem>
+            <para>Compile the simulator to dump in the specified format.</para>
+          </listitem>
+          <listitem>
+            <para>Create a Unix FIFO via the <code>mkfifo <emphasis>fifoname</emphasis></code> command.</para>
+          </listitem>
+          <listitem>
+            <para>Create an empty CDD file for the design using Covered's score command.</para>
+          </listitem>
+          <listitem>
+            <para>
+              Run the simulation and Covered's score command simultaneously.  The following is an example of a testbench and
+              command-line commands:
+            </para>
+            <para>
+              <example xml:id="example.start.methods.dumpco">
+                <title>Running Covered Alongside a Simulation Process Using a Unix FIFO to Pass Dumpfile Information</title>
+                <programlisting><![CDATA[
+  # Module listing for file "test.v"
+  module tb;
+    ...
+    initial begin
+            $dumpfile( "dump_fifo" );
+            $dumpvars( 0, tb );
+            ...
+    end
+    ...
+  endmodule
+
+  # Command-line output
+  > mkfifo dump_fifo
+  > vcs test.v
+  > covered score -t tb -v test.v -o test.cdd
+  > ./simv &
+  > covered score -cdd test.cdd -vcd dump_fifo
+                ]]></programlisting>
+              </example>
+            </para>
+          </listitem>
+        </orderedlist>
+      </para>
+      <para>
+        The end result of these steps is the same CDD file that results from using the dumpfile method described above.
+        The primary advantages of this approach are that no dumpfiles are actually created, saving on disk space, and
+        it does not significantly slow down the simulation process.  Because both simulation and coverage scoring
+        occur simultaneously, there should be a wall clock time improvement with this method.
+      </para>
+      <para>
+        The drawbacks of this approach are basically that the time improvement won't be significant if you are running
+        on a single processor/core system and that it is restricted to machines that support the Unix fifo (this may
+        not be an actual restriction, however).
+      </para>
+    </sect2>
+
+    <sect2 id="section.start.methods.vpi">
+      <title>Using the VPI interface to gather coverage information</title>
+      <para>
+        Generating coverage information using the VPI interface of the simulator requires three main steps:
+      </para>
+      <para>
+        <orderedlist>
+          <listitem>
+            <para>
+              Create a base CDD file from the design along with a top-level Verilog module and PLI table file (this second
+              file is needed for the commercial VCS compiler).
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Compile the simulator using the Covered VPI module (or shared object).
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Run the simulation.
+            </para>
+          </listitem>
+        </orderedlist>
+      </para>
+      <para>
+        The end result of these steps is the same CDD file that results from using the dumpfile method described
+        above. The primary advantage of this approach is that no dumpfiles are required, saving on disk space and dumpfile
+        processing time. The drawbacks of this approach are the following:
+      </para>
+      <para>
+        <orderedlist>
+          <listitem>
+            <para>
+              Simulation runs much slower using the VPI and Covered (most likely slower than creating dumpfiles from the
+              simulator).
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Covered VPI modules are only available for certain compilers (Icarus Verilog, Cver and VCS currently); however,
+              adding support for other compilers should not be a difficult thing to do.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              The VPI modules will only work for compilers that support the VPI interface (a Verilog-2001 feature).
+            </para>
+          </listitem>
+        </orderedlist>
+      </para>
+    </sect2>
+  </sect1>
+
+  <sect1 id="section.start.dump">
+    <title>What is needed for dumpfile scoring?</title>
+    <para>
+      Before Covered can be invoked for dumpfile scoring, you must have a simulatable Verilog design and a VCD, LXT2 or FST dumpfile
+      containing information from a simulation run of the design that dumps the module(s) that you want to check for coverage.
+      The VCD dumpfile style was chosen due to its universal support by Verilog simulators while the LXT2 and FST dumpfile styles were
+      chosen due to their compactness and growing support by other open source simulators and dumpfile readers.  Once you have
+      these two parts, you are ready to begin generating coverage results.
+    </para>
+
+    <sect2 id="section.start.dump.selecting">
+      <title>Selecting What to Dump</title>
+      <para>
+        If coverage is being scored via a VCD/LXT2/FST dumpfile, it is necessary for the user to setup $dumpfile and $dumpvars calls
+        to dump the various modules that are being scored.  Covered allows the user to do this in one of two ways.
+      </para>
+      <para>
+        First, the user may hand create these calls within their testbench.  If this approach is taken, it is necessary that all
+        modules being scored by Covered be included in the $dumpvars calls.  Eliminating scored modules from the dumpfile will result
+        in inaccurate coverage information.  Additionally, it is mandatory that the dumpfile start at time 0 and that all dump information
+        be included in the dumpfile (i.e., using the $dumplimit system task could cause dump information to be lost that will result
+        in inaccurate coverage results).
+      </para>
+      <para>
+        Second, the user may take advantage of Covered's -dumpvars option to the score command.  Adding this parameter (and the optional
+        -top_ts option) will create a top-level module file that can be compiled along with the testbench that will dump all of the parts
+        of the Covered design that are needed by Covered.  Using this approach will result in the best overall performance for dumpfile
+        coverage accumulation as all unnecessary dump information will be stripped, resulting in both faster simulation and faster
+        coverage scoring.
+      </para>
+      <para>
+        If the second approach is taken, simply use the score command to parse the design and output an unscored CDD and the dumpvars module,
+        using a command similar to the following:
+      </para>
+      <para>
+        <programlisting>
+  covered score -t top -v dut.v -dumpvars dut_dump.v -o dut.cdd
+        </programlisting>
+      </para>
+      <para>
+        If `timescale is specified at the top of dut.v, it may be necessary for compiling purposes to have the timescale specified at the top
+        of dut_dump.v.  To do this, simply specify the -top_ts option in the score command.  Note that the example command does not list either
+        the -vcd, -lxt or -fst options.  If either of these options are present on the score command-line, the dut_dump.v file will not be created
+        and the score command will attempt to score the design with the specified dumpfile.
+      </para>
+      <para>
+        After the dut_dump.v file has been created, simply compile it along with your DUT as a top-level module.  For example,
+      </para>
+      <para>
+        <programlisting>
+  iverilog dut.v dut_dump.v
+        </programlisting>
+      </para>
+      <para>
+        After the simulation has been compiled and run, a dumpfile called "dut_dump.vcd" (using the above example) will exist in the run
+        directory.  This dumpfile can then be used in a second call to the score command via the -vcd, -lxt or -fst options along with the
+        unscored CDD file to create a scored version of the CDD file.
+      </para>
+    </sect2>
+
+    <sect2 id="section.start.dump.vcd">
+      <title>Creating a VCD dumpfile</title>
+      <para>
+        By default, the $dumpfile system task call will create a file and populate it with VCD-style dumpfile information.  Simply
+        use the resulting VCD dumpfile in the -vcd option to the score command to obtain coverage for that design.
+      </para>
+    </sect2>
+
+    <sect2 id="section.start.dump.lxt">
+      <title>Creating an LXT2 dumpfile</title>
+      <para>
+        An LXT2 dumpfile can be created in several different ways depending on the Verilog simulation tool that you are using. If
+        you are using the <ulink url="http://www.icarus.com/eda/verilog">Icarus Verilog</ulink> open source simulator, you can
+        simply generate an LXT2-style dumpfile by specifying the -lxt2 option to the simulator command-line. For example, if you
+        had a file called "foo.v" that contained the same $dumpfile and $dumpvars commands used for VCD dumping and compiled it
+        with Icarus Verilog into a VVP file called "a.out", you could cause Icarus Verilog to generate an LXT2 dumpfile (instead
+        of a VCD dumpfile) by calling "vvp a.out -lxt2". This will cause an LXT2 style dumpfile instead of the standard VCD style
+        dumpfile.
+      </para>
+      <para>
+        You can also transform many different dumpfile formats into an LXT2 style dumpfile with the helper programs that come with
+        the <ulink url="http://home.nc.rr.com/gtkwave/">GtkWave</ulink> waveform viewer.
+      </para>
+    </sect2>
+
+    <sect2 id="section.start.dump.fst">
+      <title>Creating an FST dumpfile</title>
+      <para>
+        An FST dumpfile can be created in several different ways depending on the Verilog simulation tool that you are using. If
+        you are using the <ulink url="http://www.icarus.com/eda/verilog">Icarus Verilog</ulink> open source simulator, you can
+        simply generate an FST-style dumpfile by specifying the -fst option to the simulator command-line. For example, if you
+        had a file called "foo.v" that contained the same $dumpfile and $dumpvars commands used for VCD dumping and compiled it
+        with Icarus Verilog into a VVP file called "a.out", you could cause Icarus Verilog to generate an FST dumpfile (instead
+        of a VCD dumpfile) by calling "vvp a.out -fst". This will cause an FST style dumpfile instead of the standard VCD style
+        dumpfile.
+      </para>
+      <para>
+        You can also transform many different dumpfile formats into an FST style dumpfile with the helper programs that come with
+        the <ulink url="http://home.nc.rr.com/gtkwave/">GtkWave</ulink> waveform viewer.
+      </para>
+    </sect2>
+  </sect1>
+
+  <sect1 id="section.start.vpi">
+    <title>What is needed for VPI scoring?</title>
+    <para>
+      After Covered has been configured and built to include the creation of a VPI loadable module or shared object file (see
+      <xref linkend="section.installation.configuring"/> for details), Covered is capable of scoring during a simulation run by using the VPI
+      (Verilog Procedural Interface) access mechanism. This is done by loading the Covered VPI module (or shared object) into the
+      simulator executable prior to running (depending on the simulator being used). The following steps should be taken to create
+      a scored CDD file using this method.
+    </para>
+    <para>
+      <orderedlist>
+        <listitem>
+          <para>
+            Create the Verilog file that will be compiled as a top-level module in the design (alongside the actual top-level(s)).
+          </para>
+          <para>
+            This is done by running the score command with the -vpi option. The following example command-line shows how this step
+            is done, creating a file called "covered_vpi.v".
+          </para>
+          <para>
+            <code>> covered score -t top -vpi</code>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Compile the simulator executable, including the previously generated file and the Covered VPI module. See the compile
+            instructions for the Icarus Verilog, Cver or VCS simulators below.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Run the simulation. Once simulation is complete, the resulting CDD file will be a completely scored database, ready to be
+            merged with other CDD files from the same design or reported on.
+          </para>
+        </listitem>
+      </orderedlist>
+    </para>
+
+    <sect2 id="section.start.vpi.iv">
+      <title>Compiling for Icarus Verilog</title>
+      <para>
+        If you are compiling an Icarus Verilog simulation, simply add
+        <emphasis role="bold"><code>-m <emphasis>tool_install_root</emphasis>/libexec/covered.vpi covered_vpi.v</code></emphasis> to the command-line.
+      </para>
+    </sect2>
+
+    <sect2 id="section.start.vpi.cver">
+      <title>Compiling for Cver</title>
+      <para>
+        If you are compiling a Cver simulation, simply add
+        <emphasis role="bold"><code>+loadvpi=<emphasis>tool_install_root</emphasis>/libexec/covered.cver.so:vpi_compat_bootstrap covered_vpi.v</code></emphasis>
+        to the command-line.
+      </para>
+    </sect2>
+
+    <sect2 id="section.start.vpi.vcs">
+      <title>Compiling for VCS</title>
+      <para>
+        If you are compiling a VCS simulation, simply add
+        <emphasis role="bold"><code>+vpi -load <emphasis>tool_install_root</emphasis>/libexec/covered.vcs.so:covered_register covered_vpi.v</code></emphasis> to
+        the command-line.
+      </para>
+    </sect2>
+
+    <sect2 id="section.start.vpi.ncv">
+      <title>Compiling for NC-Verilog</title>
+      <para>
+        If you are compiling a NC-Verilog simulation, switch to NC-Verilog's irun command to load the covered shared object:
+        <emphasis role="bold"><code>-loadvpi <emphasis>tool_install_root</emphasis>/libexec/covered.ncv.so:covered_register</code></emphasis> and enable all
+        access with <emphasis role="bold"><code>-access +rwc</code></emphasis>.
+      </para>
+      <para>
+        You can hardcode the $covered_sim call into your RTL or you can run it dynamically using the CLI, by adding the 
+        <emphasis role="bold"><code>-input input.tcl</code></emphasis> switch to irun.  Where the input.tcl file looks like the following and tb.dut is
+        the coverage instance:
+      </para>
+      <para><programlisting><![CDATA[
+        call -systf {$covered_sim} {"scored.cdd"} tb.dut
+        run]]></programlisting>
+      </para>
+    </sect2>
+  </sect1>
+
+</chapter>

@@ -2557,7 +2557,19 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
    <ipxact:wire>         
    <ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector> 
    </ipxact:wire>         
+	  </ipxact:physicalPort>     </ipxact:portMap>
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>usbadr_pad_out</ipxact:name>                  
+   <ipxact:wire>         
+   <ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector> 
+   </ipxact:wire>         
      </ipxact:physicalPort>     </ipxact:portMap>                      
+          <ipxact:portMap>                                                             
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>         
+          <ipxact:physicalPort><ipxact:name>usbadr_pad_oe</ipxact:name>                  
+     </ipxact:physicalPort>     </ipxact:portMap>                      
+	  
     </ipxact:portMaps>                                                                   
   </ipxact:activeInterface>                                                 
  <ipxact:activeInterface  componentRef="core" busRef="usbadr_pad">           

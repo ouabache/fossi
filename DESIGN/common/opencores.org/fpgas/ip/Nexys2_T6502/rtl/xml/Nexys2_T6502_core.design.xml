@@ -518,210 +518,210 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>eppastb_in</ipxact:name>
+      <ipxact:name>eppastb_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="eppastb_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppastb_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppastb_pad_in"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>eppdstb_in</ipxact:name>
+      <ipxact:name>eppdstb_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="eppdstb_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppdstb_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppdstb_pad_in"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbflag_in</ipxact:name>
+      <ipxact:name>usbflag_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="usbflag_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbflag_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbflag_pad_in"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>eppwait_out</ipxact:name>
+      <ipxact:name>eppwait_pad_out</ipxact:name>
       <ipxact:externalPortReference portRef="eppwait_pad_pad_out"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppwait_out"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppwait_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>eppwait_in</ipxact:name>
+      <ipxact:name>eppwait_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="eppwait_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppwait_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppwait_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>eppwait_oe</ipxact:name>
+      <ipxact:name>eppwait_pad_oe</ipxact:name>
       <ipxact:externalPortReference portRef="eppwait_pad_pad_oe"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppwait_oe"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppwait_pad_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbwr_out</ipxact:name>
+      <ipxact:name>usbwr_pad_out</ipxact:name>
       <ipxact:externalPortReference portRef="usbwr_pad_pad_out"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbwr_out"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbwr_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbwr_oe</ipxact:name>
+      <ipxact:name>usbwr_pad_oe</ipxact:name>
       <ipxact:externalPortReference portRef="usbwr_pad_pad_oe"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbwr_oe"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbwr_pad_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbwr_in</ipxact:name>
+      <ipxact:name>usbwr_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="usbwr_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbwr_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbwr_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbmode_out</ipxact:name>
+      <ipxact:name>usbmode_pad_out</ipxact:name>
       <ipxact:externalPortReference portRef="usbmode_pad_pad_out"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbmode_out"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbmode_pad_out"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbmode_oe</ipxact:name>
+      <ipxact:name>usbmode_pad_oe</ipxact:name>
       <ipxact:externalPortReference portRef="usbmode_pad_pad_oe"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbmode_oe"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbmode_pad_oe"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbmode_in</ipxact:name>
+      <ipxact:name>usbmode_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="usbmode_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbmode_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbmode_pad_in"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>usboe_out</ipxact:name>
+      <ipxact:name>usboe_pad_out</ipxact:name>
       <ipxact:externalPortReference portRef="usboe_pad_pad_out"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usboe_out"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usboe_pad_out"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>usboe_oe</ipxact:name>
+      <ipxact:name>usboe_pad_oe</ipxact:name>
       <ipxact:externalPortReference portRef="usboe_pad_pad_oe"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usboe_oe"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usboe_pad_oe"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>usboe_in</ipxact:name>
+      <ipxact:name>usboe_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="usboe_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usboe_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usboe_pad_in"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbadr_out</ipxact:name>
+      <ipxact:name>usbadr_pad_out</ipxact:name>
       <ipxact:externalPortReference portRef="usbadr_pad_pad_out"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbadr_out"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbadr_pad_out"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbadr_oe</ipxact:name>
+      <ipxact:name>usbadr_pad_oe</ipxact:name>
       <ipxact:externalPortReference portRef="usbadr_pad_pad_oe"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbadr_oe"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbadr_pad_oe"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbadr_in</ipxact:name>
+      <ipxact:name>usbadr_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="usbadr_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbadr_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbadr_pad_in"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbpktend_out</ipxact:name>
+      <ipxact:name>usbpktend_pad_out</ipxact:name>
       <ipxact:externalPortReference portRef="usbpktend_pad_pad_out"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbpktend_out"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbpktend_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbpktend_oe</ipxact:name>
+      <ipxact:name>usbpktend_pad_oe</ipxact:name>
       <ipxact:externalPortReference portRef="usbpktend_pad_pad_oe"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbpktend_oe"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbpktend_pad_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbpktend_in</ipxact:name>
+      <ipxact:name>usbpktend_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="usbpktend_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbpktend_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbpktend_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbdir_out</ipxact:name>
+      <ipxact:name>usbdir_pad_out</ipxact:name>
       <ipxact:externalPortReference portRef="usbdir_pad_pad_out"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbdir_out"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbdir_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbdir_oe</ipxact:name>
+      <ipxact:name>usbdir_pad_oe</ipxact:name>
       <ipxact:externalPortReference portRef="usbdir_pad_pad_oe"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbdir_oe"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbdir_pad_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbdir_in</ipxact:name>
+      <ipxact:name>usbdir_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="usbdir_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbdir_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbdir_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>eppdb_in</ipxact:name>
+      <ipxact:name>eppdb_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="eppdb_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppdb_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppdb_pad_in"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>eppdb_out</ipxact:name>
+      <ipxact:name>eppdb_pad_out</ipxact:name>
       <ipxact:externalPortReference portRef="eppdb_pad_pad_out"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppdb_out"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppdb_pad_out"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>eppdb_oe</ipxact:name>
+      <ipxact:name>eppdb_pad_oe</ipxact:name>
       <ipxact:externalPortReference portRef="eppdb_pad_pad_oe"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppdb_oe"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppdb_pad_oe"/>
     </ipxact:adHocConnection>
 
 
     <ipxact:adHocConnection>
-      <ipxact:name>eppwr_in</ipxact:name>
+      <ipxact:name>eppwr_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="eppwr_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppwr_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="eppwr_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbclk_out</ipxact:name>
+      <ipxact:name>usbclk_pad_out</ipxact:name>
       <ipxact:externalPortReference portRef="usbclk_pad_pad_out"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbclk_out"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbclk_pad_out"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbclk_oe</ipxact:name>
+      <ipxact:name>usbclk_pad_oe</ipxact:name>
       <ipxact:externalPortReference portRef="usbclk_pad_pad_oe"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbclk_oe"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbclk_pad_oe"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbclk_in</ipxact:name>
+      <ipxact:name>usbclk_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="usbclk_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbclk_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbclk_pad_in"/>
     </ipxact:adHocConnection>
 
     <ipxact:adHocConnection>
-      <ipxact:name>usbrdy_in</ipxact:name>
+      <ipxact:name>usbrdy_pad_in</ipxact:name>
       <ipxact:externalPortReference portRef="usbrdy_pad_pad_in"/>
-      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbrdy_in"/>
+      <ipxact:internalPortReference componentRef="usb_epp" portRef="usbrdy_pad_in"/>
     </ipxact:adHocConnection>
 
 
@@ -795,19 +795,6 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 <ipxact:instanceName>usb_epp</ipxact:instanceName>
 <ipxact:componentRef vendor="opencores.org" library="logic" name="usb_epp" version="def" />
 </ipxact:componentInstance>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </ipxact:componentInstances>

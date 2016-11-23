@@ -1,11 +1,11 @@
 // Memory Array
 reg [7:0] mem [0:WORDS-1];
 
-initial 
-  begin
-  $display("SRAM byte %m.mem");
-  $display("  AddrBits=%d DataBits = 8  Words = %d  ",ADDR,WORDS);
-  end
+//initial 
+//  begin
+//  $display("SRAM byte %m.mem");
+//  $display("  AddrBits=%d DataBits = 8  Words = %d  ",ADDR,WORDS);
+//  end
 
 // Write function   
 always@(posedge clk)

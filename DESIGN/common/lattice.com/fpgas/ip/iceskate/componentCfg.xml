@@ -62,6 +62,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
          <socgen:version>default_tb</socgen:version>
          <socgen:version>default_lint</socgen:version>
          <socgen:parameters>
+
+
+	   
          <socgen:parameter><socgen:name>CLOCK_FREQ</socgen:name><socgen:value>50</socgen:value></socgen:parameter>    
          <socgen:parameter><socgen:name>CLOCK_PLL_MULT</socgen:name><socgen:value>2</socgen:value></socgen:parameter>    
          <socgen:parameter><socgen:name>CLOCK_PLL_DIV</socgen:name><socgen:value>4</socgen:value></socgen:parameter>    
@@ -83,11 +86,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
          <socgen:name>core</socgen:name>
          <socgen:version>core</socgen:version>
          <socgen:parameters>
-         <socgen:parameter><socgen:name>JTAG_USER1_WIDTH</socgen:name><socgen:value>8</socgen:value></socgen:parameter>  
-         <socgen:parameter><socgen:name>JTAG_USER1_RESET</socgen:name><socgen:value>8'h00</socgen:value></socgen:parameter>  
-         <socgen:parameter><socgen:name>JTAG_USER2_WIDTH</socgen:name><socgen:value>8</socgen:value></socgen:parameter>  
-         <socgen:parameter><socgen:name>JTAG_USER2_RESET</socgen:name><socgen:value>8'h00</socgen:value></socgen:parameter>  
-
+         <socgen:parameter><socgen:name>PRESCALE</socgen:name><socgen:value>5'b01100</socgen:value></socgen:parameter>
+         <socgen:parameter><socgen:name>PRE_SIZE</socgen:name><socgen:value>5</socgen:value></socgen:parameter>
+         <socgen:parameter><socgen:name>SIZE</socgen:name><socgen:value>8</socgen:value></socgen:parameter>
+         <socgen:parameter><socgen:name>DIV</socgen:name><socgen:value>0</socgen:value></socgen:parameter>
+         <socgen:parameter><socgen:name>DIV_SIZE</socgen:name><socgen:value>4</socgen:value></socgen:parameter>
 	 </socgen:parameters>
        </socgen:configuration>
 

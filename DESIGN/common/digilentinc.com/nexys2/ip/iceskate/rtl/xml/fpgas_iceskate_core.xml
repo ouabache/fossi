@@ -115,7 +115,7 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 		<ipxact:instantiations>
 			<ipxact:designInstantiation>
 				<ipxact:name>Hierarchical</ipxact:name>
-				<ipxact:designRef vendor="opencores.org" library="fpgas" name="Nexys2_T6502" version="core.design"/>
+				<ipxact:designRef vendor="opencores.org" library="fpgas" name="Nexys2_R6502" version="core.design"/>
 			</ipxact:designInstantiation>
 		</ipxact:instantiations>
 
@@ -214,20 +214,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
   <ipxact:value>"opencores.org__Mos6502/kim_2/kim_2.abs16"</ipxact:value></ipxact:modelParameter>
   <ipxact:modelParameter><ipxact:name>PROG_ROM_WORDS</ipxact:name><ipxact:value>2048</ipxact:value></ipxact:modelParameter>
   <ipxact:modelParameter><ipxact:name>PROG_ROM_ADD</ipxact:name><ipxact:value>11</ipxact:value></ipxact:modelParameter>  
-  <ipxact:modelParameter><ipxact:name>STARTUP</ipxact:name>
-       <ipxact:value>"opencores.org__fpgas/vga_startup_screen/vga_startup_screen.abs"</ipxact:value></ipxact:modelParameter>  
-         <ipxact:modelParameter><ipxact:name>FONT</ipxact:name>
-         <ipxact:value>"opencores.org__fpgas/vga_font/vga_font.abs"</ipxact:value></ipxact:modelParameter> 
-         <ipxact:modelParameter><ipxact:name>RAM_WORDS</ipxact:name><ipxact:value>2048</ipxact:value></ipxact:modelParameter>
-         <ipxact:modelParameter><ipxact:name>RAM_ADD</ipxact:name><ipxact:value>11</ipxact:value></ipxact:modelParameter>
-         <ipxact:modelParameter><ipxact:name>VEC_TABLE</ipxact:name><ipxact:value>8'hff</ipxact:value></ipxact:modelParameter>  
-         <ipxact:modelParameter><ipxact:name>UART_PRESCALE</ipxact:name><ipxact:value>5'b01100</ipxact:value></ipxact:modelParameter>  
-         <ipxact:modelParameter><ipxact:name>UART_PRE_SIZE</ipxact:name><ipxact:value>5</ipxact:value></ipxact:modelParameter>  
-         <ipxact:modelParameter><ipxact:name>UART_DIV</ipxact:name><ipxact:value>0</ipxact:value></ipxact:modelParameter>  
-
-
-
-  
+  <ipxact:modelParameter><ipxact:name>RAM_WORDS</ipxact:name><ipxact:value>2048</ipxact:value></ipxact:modelParameter>
+  <ipxact:modelParameter><ipxact:name>RAM_ADD</ipxact:name><ipxact:value>11</ipxact:value></ipxact:modelParameter>
+  <ipxact:modelParameter><ipxact:name>VEC_TABLE</ipxact:name><ipxact:value>8'hff</ipxact:value></ipxact:modelParameter>  
+  <ipxact:modelParameter><ipxact:name>UART_PRESCALE</ipxact:name><ipxact:value>5'b01100</ipxact:value></ipxact:modelParameter>  
+  <ipxact:modelParameter><ipxact:name>UART_PRE_SIZE</ipxact:name><ipxact:value>5</ipxact:value></ipxact:modelParameter>  
+  <ipxact:modelParameter><ipxact:name>UART_DIV</ipxact:name><ipxact:value>0</ipxact:value></ipxact:modelParameter>  
 </ipxact:modelParameters>
 
 

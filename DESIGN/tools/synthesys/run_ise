@@ -89,54 +89,77 @@ my $chip_tool        = $ARGV[5];
 print "CHANGING TO === ${prefix}/${vendor}__${library}${syn_library_path}/${chip_tool}/${chip_name} \n";
 chdir  "./${prefix}/${vendor}__${library}${syn_library_path}/${chip_tool}/${chip_name}";
 
+chdir  "./${prefix}/${vendor}__${library}${syn_library_path}/${chip_tool}/${chip_name}";
+
+$outfile ="./commands";
+open COMMAND_LOG,">$outfile" or die "unable to open $outfile";
+
+
+
+
 $cmd ="echo \"run -ifn ./filelists/${chip_name}.ISE -ifmt mixed -top $chip_name  -ofn  ${chip_name}.ngc -ofmt NGC  -p $chip_part -opt_mode Speed -opt_level 1 \" > Yst;   \n";
+
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
-$cmd = "xst -ifn ./Yst -ofn ${chip_name}.log\n";
+$cmd = "xst -ifn ./Yst -ofn ${chip_name}.log    > xst.log    2>xst.err.log   \n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
-$cmd ="ngdbuild -dd _ngo -nt timestamp -p ${chip_part}  -uc ./target/Pad_Ring.ucf ${chip_name}   >>${chip_name}.log \n";
-if (system($cmd)) {}
-
-
-$cmd ="map  -p  ${chip_part}   -ir off -pr off  -c 100 -o ${chip_name}_map.ncd ${chip_name}.ngd ${chip_name}.pcf >>${chip_name}.log\n";
-if (system($cmd)) {}
-
-$cmd ="par -w  -ol std  ${chip_name}_map.ncd ${chip_name}.ncd ${chip_name}.pcf  >>${chip_name}.log\n";
+$cmd ="ngdbuild -dd _ngo -nt timestamp -p ${chip_part}  -uc ./target/Pad_Ring.ucf ${chip_name}   >ngbuild.log  2>ngbuild.err.log \n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 
-$cmd ="trce -e 3  -xml ${chip_name} ${chip_name}.ncd -o ${chip_name}.twr ${chip_name}.pcf -ucf ../target/Pad_Ring.ucf >>${chip_name}.log\n";
+$cmd ="map  -p  ${chip_part}   -ir off -pr off  -c 100 -o ${chip_name}_map.ncd ${chip_name}.ngd ${chip_name}.pcf  >map.log  2>map.err.log\n";
+print   COMMAND_LOG "${cmd}";
+if (system($cmd)) {}
+
+$cmd ="par -w  -ol std  ${chip_name}_map.ncd ${chip_name}.ncd ${chip_name}.pcf  >par.log   2>par.err.log\n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 
-$cmd ="netgen    -pcf  ${chip_name}.pcf  -sdf_anno true -sdf_path \"./gate_sims/par\" -insert_glbl true -insert_pp_buffers true -w -dir ./gate_sims/par  -ofmt verilog -sim  ${chip_name}.ncd   ${chip_name}.v >>${chip_name}.log \n";
+$cmd ="trce -e 3  -xml ${chip_name} ${chip_name}.ncd -o ${chip_name}.twr ${chip_name}.pcf -ucf ../target/Pad_Ring.ucf   >trce.log  2>trce.err.log \n";
+print   COMMAND_LOG "${cmd}";
+if (system($cmd)) {}
 
+
+$cmd ="netgen    -pcf  ${chip_name}.pcf  -sdf_anno true -sdf_path \"./gate_sims/par\" -insert_glbl true -insert_pp_buffers true -w -dir ./gate_sims/par  -ofmt verilog -sim  ${chip_name}.ncd   ${chip_name}.v >netgen.log   2>netgen.err.log \n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 
 $cmd  ="bitgen -f ./target/cclk.ut  ${chip_name}.ncd >>${chip_name}.log \n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 $cmd ="mv ${chip_name}.bit Board_Design_cclk.bit \n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 $cmd ="promgen -w -u 0 Board_Design_cclk >>${chip_name}.log \n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 $cmd ="mv Board_Design_cclk.mcs ./debug \n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 $cmd ="bitgen -f ./target/jtag.ut  ${chip_name}.ncd  >>${chip_name}.log  \n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 $cmd ="mv ${chip_name}.bit Board_Design_jtag.bit \n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 $cmd ="impact -batch ./debug/impact_bat  >>${chip_name}.log  \n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 $cmd ="mv *.bit ./debug \n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 

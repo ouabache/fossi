@@ -1,0 +1,5 @@
+assign cts_pad_in           = 1'b0;
+assign uart_rxd_pad_in      = 1'b0;
+assign gpio_0_in            = 8'b0;
+assign gpio_1_in            = 8'b0;
+

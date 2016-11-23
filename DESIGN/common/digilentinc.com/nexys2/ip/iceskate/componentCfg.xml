@@ -70,10 +70,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
          <socgen:value>"opencores.org__Mos6502/kim_2/kim_2.abs16"</socgen:value></socgen:parameter>
          <socgen:parameter><socgen:name>PROG_ROM_WORDS</socgen:name><socgen:value>2048</socgen:value></socgen:parameter>
          <socgen:parameter><socgen:name>PROG_ROM_ADD</socgen:name><socgen:value>11</socgen:value></socgen:parameter>  
-         <socgen:parameter><socgen:name>STARTUP</socgen:name>
-         <socgen:value>"opencores.org__fpgas/vga_startup_screen/vga_startup_screen.abs"</socgen:value></socgen:parameter>  
-         <socgen:parameter><socgen:name>FONT</socgen:name>
-         <socgen:value>"opencores.org__fpgas/vga_font/vga_font.abs"</socgen:value></socgen:parameter> 
          <socgen:parameter><socgen:name>RAM_WORDS</socgen:name><socgen:value>2048</socgen:value></socgen:parameter>
          <socgen:parameter><socgen:name>RAM_ADD</socgen:name><socgen:value>11</socgen:value></socgen:parameter>
          <socgen:parameter><socgen:name>VEC_TABLE</socgen:name><socgen:value>8'hff</socgen:value></socgen:parameter>  

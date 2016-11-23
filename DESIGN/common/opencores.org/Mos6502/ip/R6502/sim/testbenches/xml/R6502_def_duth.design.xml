@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--           
+//                                                                                                    //
+// Generated File Do Not EDIT                                                                         //
+//                                                                                                    //
+// ./tools/verilog/gen_tb -vendor opencores.org -library Mos6502  -component R6502  -version def //
+//                                                                                                    //
+-->           
+<ipxact:design
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:socgen="http://opencores.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
+    http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>opencores.org</ipxact:vendor>
+<ipxact:library>Mos6502</ipxact:library>
+<ipxact:name>R6502</ipxact:name>
+<ipxact:version>def_duth.design</ipxact:version>
+<ipxact:adHocConnections>
+
+<ipxact:adHocConnection>
+<ipxact:name>alu_status</ipxact:name>
+<ipxact:portReferences>
+<ipxact:externalPortReference portRef="alu_status" left="7" right="0" />
+<ipxact:internalPortReference  componentRef="dut" portRef="alu_status" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>clk</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="clk" />
+<ipxact:internalPortReference  componentRef="dut" portRef="clk" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>cts_pad_in</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="cts_pad_in" />
+<ipxact:internalPortReference  componentRef="dut" portRef="cts_pad_in" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_0_in</ipxact:name>
+<ipxact:portReferences>
+<ipxact:externalPortReference portRef="gpio_0_in" left="7" right="0" />
+<ipxact:internalPortReference  componentRef="dut" portRef="gpio_0_in" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_0_oe</ipxact:name>
+<ipxact:portReferences>
+<ipxact:externalPortReference portRef="gpio_0_oe" left="7" right="0" />
+<ipxact:internalPortReference  componentRef="dut" portRef="gpio_0_oe" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_0_out</ipxact:name>
+<ipxact:portReferences>
+<ipxact:externalPortReference portRef="gpio_0_out" left="7" right="0" />
+<ipxact:internalPortReference  componentRef="dut" portRef="gpio_0_out" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_1_in</ipxact:name>
+<ipxact:portReferences>
+<ipxact:externalPortReference portRef="gpio_1_in" left="7" right="0" />
+<ipxact:internalPortReference  componentRef="dut" portRef="gpio_1_in" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_1_oe</ipxact:name>
+<ipxact:portReferences>
+<ipxact:externalPortReference portRef="gpio_1_oe" left="7" right="0" />
+<ipxact:internalPortReference  componentRef="dut" portRef="gpio_1_oe" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>gpio_1_out</ipxact:name>
+<ipxact:portReferences>
+<ipxact:externalPortReference portRef="gpio_1_out" left="7" right="0" />
+<ipxact:internalPortReference  componentRef="dut" portRef="gpio_1_out" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>reset</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="reset" />
+<ipxact:internalPortReference  componentRef="dut" portRef="reset" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>rts_pad_out</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="rts_pad_out" />
+<ipxact:internalPortReference  componentRef="dut" portRef="rts_pad_out" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>uart_rxd_pad_in</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="uart_rxd_pad_in" />
+<ipxact:internalPortReference  componentRef="dut" portRef="uart_rxd_pad_in" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+<ipxact:adHocConnection>
+<ipxact:name>uart_txd_pad_out</ipxact:name>
+ <ipxact:portReferences>
+<ipxact:externalPortReference  portRef="uart_txd_pad_out" />
+<ipxact:internalPortReference  componentRef="dut" portRef="uart_txd_pad_out" />
+</ipxact:portReferences>
+</ipxact:adHocConnection>
+
+</ipxact:adHocConnections>
+<ipxact:componentInstances>
+
+<ipxact:componentInstance>
+<ipxact:instanceName>dut</ipxact:instanceName>
+<ipxact:componentRef vendor="opencores.org" library="Mos6502" name="R6502" version="def" />
+<ipxact:configurableElementValues>
+ <ipxact:configurableElementValue referenceId="ADDR">ADDR</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="BOOT_ROM_WIDTH">BOOT_ROM_WIDTH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="CPU_ADD">CPU_ADD</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="PROG_ROM_ADD">PROG_ROM_ADD</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="PROG_ROM_WORDS">PROG_ROM_WORDS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="RAM_ADD">RAM_ADD</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="RAM_WORDS">RAM_WORDS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="ROM_ADD">ROM_ADD</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="ROM_WORDS">ROM_WORDS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="ROM_WRITETHRU">ROM_WRITETHRU</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SPLIT_CH0_BITS">SPLIT_CH0_BITS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SPLIT_CH0_MATCH">SPLIT_CH0_MATCH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SPLIT_CH1_BITS">SPLIT_CH1_BITS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SPLIT_CH1_MATCH">SPLIT_CH1_MATCH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SPLIT_CH2_BITS">SPLIT_CH2_BITS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SPLIT_CH2_MATCH">SPLIT_CH2_MATCH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SPLIT_CH3_BITS">SPLIT_CH3_BITS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SPLIT_CH3_MATCH">SPLIT_CH3_MATCH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SPLIT_CH4_BITS">SPLIT_CH4_BITS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SPLIT_CH4_MATCH">SPLIT_CH4_MATCH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SPLIT_CH5_BITS">SPLIT_CH5_BITS</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="SPLIT_CH5_MATCH">SPLIT_CH5_MATCH</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="UART_DIV">UART_DIV</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="UART_PRESCALE">UART_PRESCALE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="UART_PRE_SIZE">UART_PRE_SIZE</ipxact:configurableElementValue>
+ <ipxact:configurableElementValue referenceId="VEC_TABLE">VEC_TABLE</ipxact:configurableElementValue>
+</ipxact:configurableElementValues>
+</ipxact:componentInstance>
+</ipxact:componentInstances>
+</ipxact:design>

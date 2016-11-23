@@ -1,0 +1,7 @@
+/Users/trevorw/projects/release/covered-0.7.10/src/link.c:522 Warning: The following parameters of stmt_link_find_by_pos(unsigned int ppline, uint32 first_col, stmt_link *head) are not documented:
+  parameter 'ppline'
+/Users/trevorw/projects/release/covered-0.7.10/src/link.c:522 Warning: The following parameters of stmt_link_find_by_pos(unsigned int ppline, uint32 first_col, stmt_link *head) are not documented:
+  parameter 'ppline'
+/Users/trevorw/projects/release/covered-0.7.10/src/statement.c:183 Warning: argument 'next_true' of command @param is not found in the argument list of statement_queue_add(statement *stmt, int id, int type)
+/Users/trevorw/projects/release/covered-0.7.10/src/statement.c:183 Warning: The following parameters of statement_queue_add(statement *stmt, int id, int type) are not documented:
+  parameter 'type'

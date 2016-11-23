@@ -1,0 +1,7 @@
+parameter PREFIX = `HOME;
+parameter CODE = `CODE;
+
+   defparam core.R6502.sh_prog_rom.MEM={PREFIX,CODE,PROG_ROM_FILE};
+   defparam core.R6502.cpu.prog_rom.MEM={PREFIX,CODE,PROG_ROM_FILE};
+   defparam core.R6502.boot_rom.MEM={PREFIX,CODE,ROM_FILE};
+   

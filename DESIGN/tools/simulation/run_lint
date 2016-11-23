@@ -74,12 +74,20 @@ my $sim_variant       = $ARGV[4];
 
 chdir  "./${prefix}/${vendor}__${library}${sim_library_path}/rtl_check/${sim_name}";
 
+$outfile ="./commands";
+open COMMAND_LOG,">$outfile" or die "unable to open $outfile";
+
+
+
 print "  LINT     $sim_name        $sim_configuration   $sim_variant  \n "; 
-$cmd ="verilator -Wall --cc  -f  ../../testbenches/filelists/${sim_variant}.lint   --exe ../../../../../../../tools/lint/sim_main2.cpp -top-module TB -Wno-PINNOCONNECT -Wno-DECLFILENAME  -Wno-UNDRIVEN   -Wno-UNUSED  -Wno-PINMISSING  -Wno-LITENDIAN  -Wno-PINCONNECTEMPTY   2> lint.log \n";
+
+$cmd ="verilator -Wall --cc  -f  ../../testbenches/filelists/${sim_variant}.lint   --exe ../../../../../../../tools/lint/sim_main2.cpp -top-module TB -Wno-PINNOCONNECT -Wno-DECLFILENAME  -Wno-UNDRIVEN   -Wno-UNUSED  -Wno-PINMISSING  -Wno-LITENDIAN  -Wno-PINCONNECTEMPTY > verilator.log   2> lint.log \n";
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 
-$cmd ="yosys  -S  -s  ../../testbenches/filelists/${sim_variant}.yosys -l yosys.log -o yosys.v\n"; 
+$cmd ="yosys  -S  -s  ../../testbenches/filelists/${sim_variant}.yosys  -o yosys.v     >  yosys.log   2> yosys.err.log  \n"; 
+print   COMMAND_LOG "${cmd}";
 if (system($cmd)) {}
 
 chdir $home;

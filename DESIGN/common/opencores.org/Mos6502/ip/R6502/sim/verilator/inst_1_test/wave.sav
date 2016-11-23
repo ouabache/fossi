@@ -1,0 +1,36 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Fri Nov 18 14:50:03 2016
+[*]
+[dumpfile] "/home/johne/socgen/work/opencores.org__Mos6502/ip/R6502/sim/verilator/inst_1_test/TestBench.vcd"
+[dumpfile_mtime] "Fri Nov 18 06:10:00 2016"
+[dumpfile_size] 8305034
+[savefile] "/home/johne/socgen/work/opencores.org__Mos6502/ip/R6502/sim/verilator/inst_1_test/wave.sav"
+[timestart] 0
+[size] 1379 836
+[pos] -514 -381
+*-19.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[treeopen] TOP.v.
+[sst_width] 432
+[signals_width] 206
+[sst_expanded] 1
+[sst_vpaned_height] 243
+@22
+TOP.v.test.ADDR[31:0]
+TOP.v.test.CPU_ADD[31:0]
+TOP.v.test.ext_addr[23:1]
+TOP.v.test.ext_rdata[15:0]
+TOP.v.test.ext_wdata[15:0]
+@28
+TOP.v.test.reset
+TOP.v.test.vga_green_pad_out[2:0]
+TOP.v.test.wb_jsp_stb_i
+@22
+TOP.v.test.wb_jsp_dat_i[7:0]
+@28
+TOP.v.test.x_FAIL
+@29
+TOP.v.test.x_FINISH
+[pattern_trace] 1
+[pattern_trace] 0

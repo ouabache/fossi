@@ -4,7 +4,8 @@ reg    PMOD_2_reg;
 assign PMOD_2 = PMOD_2_reg;
 
 
-
+assign txd_pad_out   =    PMOD_4;
+assign PMOD_3        =    rxd_pad_in;
 
 assign STOP = 1'b0;
 assign BAD = 1'b0;

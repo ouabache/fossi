@@ -77,8 +77,14 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     
    <ipxact:designInstantiation>
      <ipxact:name>Dut</ipxact:name>
-<ipxact:designRef vendor="lattice.com" library="fpgas" name="iceskate" version="dut.design"/>
+     <ipxact:designRef vendor="lattice.com" library="fpgas" name="iceskate" version="dut.design"/>
    </ipxact:designInstantiation>
+
+   <ipxact:designInstantiation>
+     <ipxact:name>BFM</ipxact:name>
+     <ipxact:designRef vendor="lattice.com" library="fpgas" name="iceskate" version="bfm.design"/>
+   </ipxact:designInstantiation>
+   
 
 
 
@@ -102,6 +108,18 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
               </ipxact:view>            
 
 
+
+              <ipxact:view>                                   
+              <ipxact:name>BFM</ipxact:name>
+	      <ipxact:envIdentifier>:*Simulation:*</ipxact:envIdentifier>
+              <ipxact:designInstantiationRef>BFM</ipxact:designInstantiationRef>
+              </ipxact:view>            
+
+
+	      
+   
+
+	      
 
 
               <ipxact:view>
@@ -146,6 +164,12 @@ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
               </ipxact:view>
 
       </ipxact:views>
+
+
+<ipxact:modelParameters>
+<ipxact:modelParameter><ipxact:name>UART_MODEL_CLKCNT</ipxact:name><ipxact:value>4'hc</ipxact:value></ipxact:modelParameter>
+<ipxact:modelParameter><ipxact:name>UART_MODEL_SIZE</ipxact:name><ipxact:value>4</ipxact:value></ipxact:modelParameter>
+</ipxact:modelParameters>
 
 
 

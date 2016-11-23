@@ -1183,7 +1183,23 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
    <ipxact:wire>         
    <ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
    </ipxact:wire>         
-         </ipxact:physicalPort> </ipxact:portMap>                                                                             
+          </ipxact:physicalPort> </ipxact:portMap>
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_out</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>usbadr_pad_out</ipxact:name>      
+   <ipxact:wire>         
+   <ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+   </ipxact:wire>         
+          </ipxact:physicalPort> </ipxact:portMap>
+          <ipxact:portMap>                                                                              
+	  <ipxact:logicalPort><ipxact:name>pad_oe</ipxact:name></ipxact:logicalPort>                       
+          <ipxact:physicalPort><ipxact:name>usbadr_pad_oe</ipxact:name>      
+         </ipxact:physicalPort> </ipxact:portMap>                                                                             	  
+
+	  
+
+
+
     </ipxact:portMaps>                                                                                  
   </ipxact:abstractionType>     </ipxact:abstractionTypes>                                              
   <ipxact:master/>                                                                                      
@@ -2014,7 +2030,20 @@ xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014
  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
   <ipxact:direction>in</ipxact:direction>                                                    
    <ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
+ </ipxact:wire></ipxact:port>
+
+ <ipxact:port>  <ipxact:name>usbadr_pad_out</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+   <ipxact:vectors><ipxact:vector><ipxact:left>1</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>         
   </ipxact:wire></ipxact:port>                                                                                
+
+
+ <ipxact:port>  <ipxact:name>usbadr_pad_oe</ipxact:name>                             
+ <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
+  <ipxact:direction>out</ipxact:direction>                                                    
+  </ipxact:wire></ipxact:port>                                                                                
+  
 
  <ipxact:port>  <ipxact:name>usbclk_pad_in</ipxact:name>                             
  <ipxact:wire><ipxact:wireTypeDefs><ipxact:wireTypeDef><ipxact:typeName>wire</ipxact:typeName></ipxact:wireTypeDef></ipxact:wireTypeDefs>  
