@@ -4,9 +4,6 @@ cd ..
 cd ./IceStorm
 ./install
 cd ..
-cd ./yosys
-./install
-cd ..
 cd ./Arachne-PNR
 ./install
 cd ..

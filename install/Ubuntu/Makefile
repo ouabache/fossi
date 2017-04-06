@@ -9,6 +9,8 @@ all:   install
 .PHONY install:
 install:
 	(\
+	sudo add-apt-repository ppa:saltmakrell/ppa;\
+	sudo apt-get  update;\
 	sudo apt-get  install -y asciidoc;\
 	sudo apt-get  install -y autoconf;\
 	sudo apt-get  install -y bison;\
@@ -66,5 +68,6 @@ install:
 	sudo apt-get  install -y verilator;\
 	sudo apt-get  install -y xdot;\
 	sudo apt-get  install -y xutils-dev;\
+	sudo apt-get  install -y yosys;\
 	)
 
